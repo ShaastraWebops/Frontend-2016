@@ -1,11 +1,15 @@
+body{
+	overflow-x: hidden;
+	overflow-y: scroll; 
+}
 .container-fluid{
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .wrapper{
 	text-align: center;
 }
-#event-name{
+#event-category-name{
 	height: 70px;
 	width: 100%;
 	background-color: #000;
@@ -14,4 +18,60 @@
 	line-height: 70px;
 	display: inline-block;
 	vertical-align: middle;
+	font-size: 1.4em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;	
 }
+.events{
+	margin-top: 45px;
+	margin-bottom: 45px;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+.row{
+	height: 250px;
+	margin-top: 5px;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+.event-details{
+	font-size: 1.7em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;
+	padding-left: 15px;	
+	padding-right: 15px;
+	color: #fff;
+	background-color: #2E64FE;
+	height: 100%;
+	width: 100%;
+}
+.card{
+	height:250px;
+	perspective:600;
+	position: absolute;
+	transform-style:preserve-3d;
+	transition:all 0.75s ease-in-out;
+	width:98.5%;
+}
+.card:hover{
+	transform:rotateY(180deg);
+}
+.card .card-front{
+	backface-visibility:hidden;
+	height:100%;
+	position: absolute;
+	width: 100%;
+}
+.card .card-back{
+	transform:rotateY(180deg);
+	color:#fff;
+}
+.card-back{
+	height: 250px;
+}
+.event-card-container{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
