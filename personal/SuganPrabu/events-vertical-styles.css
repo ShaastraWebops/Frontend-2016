@@ -1,0 +1,19 @@
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+.wrapper{
+	text-align: center;
+}
+#event-name{
+	height: 70px;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	line-height: 70px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 5%;
+	font-size: 
+}
