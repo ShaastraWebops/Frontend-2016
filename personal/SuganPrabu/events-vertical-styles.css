@@ -49,10 +49,9 @@ body{
 .card{
 	height:250px;
 	perspective:600;
-	position: absolute;
 	transform-style:preserve-3d;
 	transition:all 0.75s ease-in-out;
-	width:98.5%;
+	width:100%;
 }
 .card:hover{
 	transform:rotateY(180deg);
@@ -60,7 +59,6 @@ body{
 .card .card-front{
 	backface-visibility:hidden;
 	height:100%;
-	position: absolute;
 	width: 100%;
 }
 .card .card-back{
@@ -71,7 +69,13 @@ body{
 	height: 250px;
 }
 .event-card-container{
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 3px;
+	padding-right: 3px;
+	position: relative;
 }
-
+.card .card-front{
+	position: absolute;
+}
+.event-details{
+	float: middle;
+}
