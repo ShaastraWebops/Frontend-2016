@@ -49,12 +49,16 @@ body{
 .card{
 	height:250px;
 	perspective:600;
-	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-o-transform-style:preserve-3d;
 	transition:all 0.75s ease-in-out;
 	width:100%;
 }
 .card:hover{
-	transform:rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
 }
 .card .card-front{
 	backface-visibility:hidden;
@@ -62,7 +66,9 @@ body{
 	width: 100%;
 }
 .card .card-back{
-	transform:rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
 	color:#fff;
 }
 .card-back{
