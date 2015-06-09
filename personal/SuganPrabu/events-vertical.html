@@ -31,17 +31,28 @@
 			</div>
 			<div class="container-fluid events">
 				<div class="row" ng-repeat="eventRow in eventsJSON.eventsRows">
-				<div class="col-md-4 event-card-container" ng-repeat="event in eventRow.row">
+					<div class="col-md-4 event-card-container" ng-repeat="event in eventRow.row">
 						<div class="card">
-							<div class="card-front event-details">
-									<span class="event-name">{{event.name}}</span>
-									<br>
-									<span class="event-date">{{event.date}}</span>
+							<div class="card-front">
+								<div class="event-details"> 
+									<span id="event-name">{{event.name}}</span>
+									<br><br>
+									<span id="event-date">{{event.date}}</span>
+								</div>
 							</div>
-							<div class="card-back" style="background:url('') no-repeat; background-size: 100% 98%;">
+							<div class="card-back">
+								<div class="event-details" ng-style="{'background-image':'url({{event.imageURL}})','background-size':'cover'}">
+									<span id="event-name">{{event.name}}</span>
+									<br><br>
+									<span id="event-date">{{event.date}}</span>
+								</div>
+									<a href="{{event.eventURL}}">
+									<button class="event-more-button">See More</button>
+									</a>
 							</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>

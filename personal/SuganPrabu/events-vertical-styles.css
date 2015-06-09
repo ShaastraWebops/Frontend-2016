@@ -22,6 +22,20 @@ body{
 	font-family: Verdana, Geneva, sans-serif;
 	font-variant: small-caps;	
 }
+#event-name{
+	font-size: 1.7em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;
+	color: #fff;
+	padding-left: 15px;
+}
+#event-date{
+	font-size: 1.7em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;
+	color: #fff;
+	padding-left: 15px;
+}
 .events{
 	margin-top: 45px;
 	margin-bottom: 45px;
@@ -36,11 +50,6 @@ body{
 	width: 100%;
 }
 .event-details{
-	font-size: 1.7em;
-	font-family: Verdana, Geneva, sans-serif;
-	font-variant: small-caps;
-	padding-left: 15px;	
-	padding-right: 15px;
 	color: #fff;
 	background-color: #2E64FE;
 	height: 100%;
@@ -82,8 +91,18 @@ body{
 .card .card-front{
 	position: absolute;
 }
-.event-details{
-	float: middle;
+.event-more-button{
+	position: absolute;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	width: 30%;
+	height: 17%;
+	bottom: 5px;
+	right: 5px;
+	border-style: solid;
+	border-color: #fff;
+	background-color: #5E610B;
+	color: #fff;
 }
 body::-webkit-scrollbar {
     width: 0.45em;
