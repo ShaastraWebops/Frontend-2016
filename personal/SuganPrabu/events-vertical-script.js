@@ -1,7 +1,15 @@
 var app = angular.module('eventsVerticalApp',[]);
-app.controller('eventsVerticalCtrl',function($scope){
+app.controller('eventsVerticalCtrl', ['$scope', '$location', '$anchorScroll', 
+	function($scope, $location, $anchorScroll){
+	$scope.scrollDown = function(element){
+		var temp = $location.hash();
+		$location.hash(element);
+		$anchorScroll();
+		$location.hash(temp);
+	}
 	$scope.eventsJSON={
 		eventCategoryName:'Coding Events',
+		eventCategoryImage: 'coding.png',
 		eventsRows:[
   	  {row:[
 				{
@@ -47,5 +55,4 @@ app.controller('eventsVerticalCtrl',function($scope){
 	  	}
 			]
   };
-});
-
+}]);

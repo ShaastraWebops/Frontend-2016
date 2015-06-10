@@ -16,11 +16,11 @@
 		<div class="main">
 	  	<div id="main-image">
 	    	<div class="wrapper">
-		  		<img id="event-category-image" src="coding.png" alt="coding"> <!--TODO change the image source -->
+		  		<img id="event-category-image" ng-src="{{eventsJSON.eventCategoryImage}}" alt="{{eventsJSON.eventCategoryName}}">
 				</div>
 	  	</div>
 	  	<div id="scroll-down">
-		  	<a href="#"><span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span></a>
+		  	<a ng-click="scrollDown('event-category-name')"><span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span></a>
 	  	</div>
 	  	<div id="event-category-name">
 				<span id="event-category-name">{{eventsJSON.eventCategoryName}}</span>

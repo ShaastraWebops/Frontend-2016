@@ -24,6 +24,7 @@ body{
 #scroll-glyphicon{
   color: #000;
   margin-top: 15px;
+  cursor: pointer;
 }
 #event-category-name{
   height: 70px;
