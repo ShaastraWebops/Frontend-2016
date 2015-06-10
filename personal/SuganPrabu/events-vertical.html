@@ -1,61 +1,57 @@
 <!Doctype html>
 <html ng-app="eventsVerticalApp">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="events-vertical-styles.css">
-	<title>Events</title>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="events-vertical-styles.css">
+  <title>Events</title>
 </head>
 <body ng-controller="eventsVerticalCtrl">
-	<div class="container-fluid">
-		<div class="top-bar">
+  <div class="container-fluid">
+    <div class="top-bar">
 		</div>
 		<div class="main">
-			<div id="main-image">
-				<div class="wrapper">
-					<img src="coding.png" alt="coding" style="width:450px;height:450px;"> <!--TODO change the image source -->
+	  	<div id="main-image">
+	    	<div class="wrapper">
+		  		<img id="event-category-image" src="coding.png" alt="coding"> <!--TODO change the image source -->
 				</div>
-			</div>
-			<div id="scroll-down">
-				<div class="wrapper">
-				<img src="" alt="scroll down">
-				</div>
-			</div>
-			<div id="event-category-name" style="margin-top:30px;">
+	  	</div>
+	  	<div id="scroll-down">
+		  	<a href="#"><span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span></a>
+	  	</div>
+	  	<div id="event-category-name">
 				<span id="event-category-name">{{eventsJSON.eventCategoryName}}</span>
-			</div>
-			<div class="container-fluid events">
+   	  </div>
+	  	<div class="container-fluid events">
 				<div class="row" ng-repeat="eventRow in eventsJSON.eventsRows">
-					<div class="col-md-4 event-card-container" ng-repeat="event in eventRow.row">
+	  	 		<div class="col-md-4 event-card-container" ng-repeat="event in eventRow.row">
 						<div class="card">
-							<div class="card-front">
-								<div class="event-details"> 
-									<span id="event-name">{{event.name}}</span>
-									<br><br>
-									<span id="event-date">{{event.date}}</span>
+		  	  		<div class="card-front">
+			    			<div class="event-details"> 
+				  				<span id="event-name">{{event.name}}</span>
+				  				<br><br>
+				  				<span id="event-date">{{event.date}}</span>
 								</div>
-							</div>
-							<div class="card-back">
-								<div class="event-details" ng-style="{'background-image':'url({{event.imageURL}})','background-size':'cover'}">
-									<span id="event-name">{{event.name}}</span>
-									<br><br>
-									<span id="event-date">{{event.date}}</span>
+			  			</div>
+			  			<div class="card-back">
+			    			<div class="event-details" ng-style="{'background-image': 'url({{event.imageURL}})','background-color': '#5E610B'}">
+				  				<span id="event-name">{{event.name}}</span>
+				  				<br><br>
+				  				<span id="event-date">{{event.date}}</span>
 								</div>
-									<a href="{{event.eventURL}}">
+				  			<a href="{{event.eventURL}}">
 									<button class="event-more-button">See More</button>
-									</a>
-							</div>
+				  			</a>
+			  			</div>
 						</div>
-					</div>
+		  		</div>
 				</div>
-			</div>
+	  	</div>
 		</div>
-	</div>
+  </div>
 <script type="text/javascript" src="events-vertical-script.js"></script>
 </body>
 </html>
