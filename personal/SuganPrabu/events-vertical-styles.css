@@ -1,6 +1,10 @@
 body{
 	overflow-x: hidden;
   overflow-y: scroll; 
+  background: url(background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .container-fluid{
   padding-left: 0px;
@@ -56,6 +60,11 @@ body{
   font-variant: small-caps;
   color: #fff;
   padding-left: 15px;
+}
+.min{
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 .events{
   margin-top: 45px;

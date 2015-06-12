@@ -1,6 +1,7 @@
 var app = angular.module('eventsVerticalApp',[]);
-app.controller('eventsVerticalCtrl', ['$scope', '$location', '$anchorScroll', 
-	function($scope, $location, $anchorScroll){
+app.controller('eventsVerticalCtrl', ['$scope', '$location', '$anchorScroll', '$window',
+	function($scope, $location, $anchorScroll, $window){
+	$scope.boolFixDiv = false;
 	$scope.scrollDown = function(element){
 		var temp = $location.hash();
 		$location.hash(element);
@@ -52,7 +53,44 @@ app.controller('eventsVerticalCtrl', ['$scope', '$location', '$anchorScroll',
 		  		eventURL: ''
 	    	}
 				]
+	  	},
+	  	{row:[
+				{
+		  		name: 'Hackfest',
+		  		date: '3/Jan, 2015',
+		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1024px-IIT_Madras_Logo.svg.png',
+		  		eventURL: ''
+				},
+				{
+		  		name: 'Online Programming Contest',
+		  		date: '3/Jan, 2015',
+		  		imageURL: 'http://www.iitk.ac.in/rfidlabs/images/logo6.png',
+		  		eventURL: ''
+				},
+				{
+		  		name: 'Reverse Coding',
+		  		date: '3/Jan, 2015',
+		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1024px-IIT_Madras_Logo.svg.png',
+		  		eventURL: ''
+	    	}
+				]
 	  	}
 			]
   };
 }]);
+app.directive("scroll", function($window){
+	return function(scope, element, attrs){
+		angular.element($window).bind("scroll", function(){
+				var ele = document.querySelector(".events");
+				var top = ele.getBoundingClientRect().top;
+				console.log(scope.boolFixDiv);
+				if(top<=115){	
+					scope.boolFixDiv = true;
+				}
+				else{
+					scope.boolFixDiv = false;
+				}
+				scope.$apply();
+		});
+	};
+});
