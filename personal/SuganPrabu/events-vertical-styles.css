@@ -61,10 +61,10 @@ body{
   color: #fff;
   padding-left: 15px;
 }
-.min{
+.fix{
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 1;
 }
 .events{
   margin-top: 45px;
@@ -74,9 +74,9 @@ body{
 }
 .row{
   height: 250px;
-  margin-top: 5px;
   margin-left: 0;
   margin-right: 0;
+  margin-top: 5px;
   width: 100%;
 }
 .event-details{
@@ -117,11 +117,13 @@ body{
   height: 100%;
   width: 100%;
 }
-.event-card-container{
-  padding-left: 3px;
-  padding-right: 3px;
-  position: relative;
+/* remove spacing between middle columns */
+.row.no-gutter [class*='col-'] {
+  padding-right:3px;
+  padding-left:3px;
 }
+/* remove right padding from first column */
+
 .card .card-front{
   position: absolute;
 }

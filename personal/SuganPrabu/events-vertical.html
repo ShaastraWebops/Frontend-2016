@@ -1,13 +1,14 @@
 <!Doctype html>
 <html ng-app="eventsVerticalApp">
 <head>
+	<script src="..\bower_components\jquery\dist\jquery.min.js"></script>
   <script src="..\bower_components\angular\angular.min.js"></script>
   <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="events-vertical-styles.css">
   <title>Events</title>
 </head>
-<body ng-controller="eventsVerticalCtrl" scroll>
+<body ng-controller="eventsVerticalCtrl" scroll ng-clock>
   <div class="container-fluid">
     <div class="top-bar">
 		</div>
@@ -20,12 +21,12 @@
 	  	<div id="scroll-down">
 		  	<a ng-click="scrollDown('event-category-name')"><span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span></a>
 	  	</div><!-- TODO check the class min in css and fix the div at the top-->
-	  	<div id="event-category-name" ng-class="{min: boolFixDiv}">
+	  	<div id="event-category-name" ng-class="{fix: boolFixDiv}">
 				<span id="event-category-name" ng-bind="eventsJSON.eventCategoryName"></span>
    	  </div>
 	  	<div class="container-fluid events">
-				<div class="row" ng-repeat="eventRow in eventsJSON.eventsRows">
-	  	 		<div class="col-md-4 event-card-container" ng-repeat="event in eventRow.row">
+				<div class="row no-gutter" ng-repeat="row in eventsJSON.events.chunk(noOfCols)">
+	  	 		<div class="col-md-4 col-xs-6 col-lg-4 col-sm-6 event-card-container" ng-repeat="event in row">
 						<div class="card">
 		  	  		<div class="card-front">
 			    			<div class="event-details"> 
