@@ -4,8 +4,10 @@
 <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 <title></title>
 <link rel="stylesheet" type="text/css" href="event.css">
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
 <body>
+<div ng-app="myApp" ng-controller="myCtrl">
 <div class="container-fluid" id="c">
 	<div class="row">	
 	<button type="button" class="btn btn-default btn-md bt hidden-sm hidden-md hidden-lg">
@@ -76,10 +78,7 @@
 				<br><br></div>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 				<p class="cont">
-					What is it?<br><br>
-					Reverse Coding is an event which tests logical thinking and basic programming skills. The idea behind this event is to figure out the "Black Box".In other words the participants are given an executable program and are asked to do reverse coding, that is to develop the source code. The event will test your basic logical skills along with pattern analysis and recognition
-					<img src="mic.jpg" class="im">
-					as you play with the code, identify the patterns and decipher it.</p>
+					{{tabs[i].data}}</p>
 				</div>
 				</div>
 			</div>
@@ -93,42 +92,42 @@
 		<br><br><br><br><br>
 			<div class="row">
 				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav about">
-					About
+					{{tabs[0].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
 				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav ef">
-					Event Format
+					{{tabs[1].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
 				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav ps">
-					Problem Statement
+					{{tabs[2].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
 				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav faq">
-					FAQ
+					{{tabs[3].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
 				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav pm">
-					Prize Money
+					{{tabs[4].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
 				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav cd">
-					Contact Details
+					{{tabs[5].name}}
 				</div></a>
 			</div>
 		</div></div></div>
 	</div>
-</div>
+</div></div></div>
 <div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
 <img src='background.jpg' style='width:100%;height:100%' alt='[]' />
 </div>
@@ -182,6 +181,13 @@ $(".bt").click(function(){
 	$(".nav1").animate({width:'0px'});
 	$("#cf").animate({opacity:'1'});
 });
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.tabs = [{ 'name': 'About', 'data': 'tab one data' }, { 'name': 'Event Format', 'data': 'tab two data' }, { 'name': 'Problem Statement', 'data': 'tab three data' }, { 'name': 'FAQ', 'data': 'tab four data' }, { 'name': 'Prize Money', 'data': 'tab five data' }, { 'name': 'Contact Details', 'data': 'tab six data' }];
+    $scope.i = 0;
 });
 </script>
 </body>
