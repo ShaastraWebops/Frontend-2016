@@ -1,151 +1,194 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<title></title>
-	<style type="text/css">
-	.evhead{
-		font-variant: small-caps;
-		font-family: arial;
-		font-size: 30px;
-		z-index: 1;
-		position: relative;
-	}
-	.evcontent{
-		background-color: white;
-		z-index: 1;
-		position: relative;
-		width: 100%;
-		height: 350px;
-	}
-	.cont{
-		font-size: 20px;
-		font-family: arial;
-	}
-	.im{
-		height: 100px;
-		width: 150px;
-	}
-	.nav{
-		font-variant: small-caps;
-		z-index: 1;
-		background-color: blue;
-		color: white;
-		width: 100%;
-		height: 35px;
-		font-family: arial;
-		font-size: 19px;
-		text-align: right;
-		border-bottom-left-radius: 5px;
-		border-top-left-radius: 5px;
-		padding-right: 30px;
-	}
-	.user{
-		z-index: 1;
-		position: relative;
-		font-size: 15px;
-
-	}
-	.menubar{
-		z-index: 1;
-		position: relative;
-		font-size: 20px;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<title></title>
+<link rel="stylesheet" type="text/css" href="event.css">
+<script src= "../bower_components/angularjs/angular.min.js"></script>
 </head>
 <body>
-<div class="container-fluid">
-		<div class="col-sm-2 col-md-2 col-lg-2">
+<div ng-app="myApp" ng-controller="myCtrl">
+<div class="container-fluid" id="c">
+	<div class="row">	
+	<button type="button" class="btn btn-default btn-md bt hidden-sm hidden-md hidden-lg">
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Close</button>
+		<div class="col-xs-12 hidden-sm hidden-md hidden-lg n">
+			<div class="row">
+				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 about">
+					About
+				</div></a>
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+					<br>
+				</div>
+				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 ef">
+					Event Format
+				</div></a>
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+					<br>
+				</div>
+				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 ps">
+					Problem Statement
+				</div></a>
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+					<br>
+				</div>
+				<a href=""><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 faq">
+					FAQ
+				</div></a>
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+					<br>
+				</div>
+				<a href=""><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 pm">
+					Prize Money
+				</div></a>
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+					<br>
+				</div>
+				<a href=""><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 cd">
+					Contact Details
+				</div></a>
+			</div>
+		</div></div>
+</div>
+<div class="container-fluid" id="cf">
+<div class="row">
+		<div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
 		<div class="menubar" class="btn btn-default">
-	<br>
-	 <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-	</div>
 		</div>
-		<div class="col-sm-8 col-md-8 col-lg-8">
-			<br><br><br><br><br><br>
-			<span class="evhead">Reverse Coding</span>
-			<br><br>
+		</div>
+		<div class="col-xs-10 hidden-sm hidden-md hidden-lg menubar">
+					<div class="user" class="btn btn-default">
+					<button type="button" class="btn btn-default btn-sm" id="left">
+  <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Menu
+</button>
+				</div>
+				</div>
+	
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+
+		<div><br><br></div>
+			<div class="hidden-xs"><br><br><br><br>
+			</div>
+			<div class="evhead">
+			<span>Reverse Coding</span>
+			</div>
 			<div class="evcontent">
 			<div class="row">
-				<div class="col-sm-0 col-md-0 col-lg-0"></div>
+				<div class="hidden-xs">
+				<br><br></div>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 				<p class="cont">
-					What is it?<br><br>
-					Reverse Coding is an event which tests logical thinking and basic programming skills. The idea behind this event is to figure out the "Black Box".</p>
-					</div>
-				<div class="col-sm-8 col-md-8 col-lg-8">
-				<p class="cont">
-					In other words the participants are given an executable program and are asked to do reverse coding, that is to develop the source code. The event will test your basic logical skills along with pattern analysis and recognition
-					</p>
-				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
-					<img src="mic.jpg" class="im">
-				</div>
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					<p class="cont">
-						as you play with the code, identify the patterns and decipher it.</p>
+					{{tabs[i].data}}</p>
 				</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-2 col-md-2 col-lg-2">
+		<div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
 		<div class="row">
 		<div class="col-sm-2 col-md-2 col-lg-2"></div>
 		<div class="col-sm-10 col-md-10 col-lg-10">
 		<div class="row">
-	<div class="user" class="btn btn-default">
-	<br><span class="glyphicon">Search</span>
-	 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="glyphicon"> Chinni</span>
- <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-
-	</div>
+	
 		<br><br><br><br><br>
 			<div class="row">
-				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav">
-					About
+				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav about">
+					{{tabs[0].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
-				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav">
-					Event Format
+				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav ef">
+					{{tabs[1].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
-				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav">
-					Problem Statement
+				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav ps">
+					{{tabs[2].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
-				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav">
-					FAQ
+				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav faq">
+					{{tabs[3].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
-				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav">
-					Prize Money
+				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav pm">
+					{{tabs[4].name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<br>
 				</div>
-				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav">
-					Contact Details
+				<a href=""><div class="col-sm-12 col-md-12 col-lg-12 nav cd">
+					{{tabs[5].name}}
 				</div></a>
 			</div>
 		</div></div></div>
 	</div>
-</div>
+</div></div></div>
 <div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
-  <img src='background.jpg' style='width:100%;height:100%' alt='[]' />
+<img src='background.jpg' style='width:100%;height:100%' alt='[]' />
 </div>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".about").mouseover(function(){
+    $(".about").css({color:'black'});
+ });
+$(".about").mouseleave(function(){
+    $(".about").css({color:'white'});
+});
+$(".ef").mouseover(function(){
+    $(".ef").css({color:'black'});
+ });
+$(".ef").mouseleave(function(){
+    $(".ef").css({color:'white'});
+});
+$(".ps").mouseover(function(){
+    $(".ps").css({color:'black'});
+ });
+$(".ps").mouseleave(function(){
+    $(".ps").css({color:'white'});
+});
+$(".faq").mouseover(function(){
+    $(".faq").css({color:'black'});
+ });
+$(".faq").mouseleave(function(){
+    $(".faq").css({color:'white'});
+});
+$(".pm").mouseover(function(){
+    $(".pm").css({color:'black'});
+ });
+$(".pm").mouseleave(function(){
+    $(".pm").css({color:'white'});
+});
+$(".cd").mouseover(function(){
+    $(".cd").css({color:'black'});
+ });
+$(".cd").mouseleave(function(){
+    $(".cd").css({color:'white'});
+});
+$("#left").click(function(){
+	$("#c").animate({opacity:'1'});
+	$(".nav1").animate({width:'250px'});
+	$("#cf").animate({opacity:'0'});
+});
+$(".bt").click(function(){
+	$("#c").animate({opacity:'0'});
+	$(".nav1").animate({width:'0px'});
+	$("#cf").animate({opacity:'1'});
+});
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.tabs = [{ 'name': 'About', 'data': 'tab one data' }, { 'name': 'Event Format', 'data': 'tab two data' }, { 'name': 'Problem Statement', 'data': 'tab three data' }, { 'name': 'FAQ', 'data': 'tab four data' }, { 'name': 'Prize Money', 'data': 'tab five data' }, { 'name': 'Contact Details', 'data': 'tab six data' }];
+    $scope.i = 0;
+});
 </script>
 </body>
 </html>
