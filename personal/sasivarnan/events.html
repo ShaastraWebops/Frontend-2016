@@ -13,40 +13,14 @@
 	<button type="button" class="btn btn-default btn-md bt hidden-sm hidden-md hidden-lg">
   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Close</button>
 		<div class="col-xs-12 hidden-sm hidden-md hidden-lg n">
-			<div class="row">
-				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 about">
-					About
+			<div class="row" ng-repeat="x in tabs">
+				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 {{$index}}" ng-click="data($index)">
+					{{x.name}}
 				</div></a>
 				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
 					<br>
 				</div>
-				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 ef">
-					Event Format
-				</div></a>
-				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-					<br>
-				</div>
-				<a href="#"><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 ps">
-					Problem Statement
-				</div></a>
-				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-					<br>
-				</div>
-				<a href=""><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 faq">
-					FAQ
-				</div></a>
-				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-					<br>
-				</div>
-				<a href=""><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 pm">
-					Prize Money
-				</div></a>
-				<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-					<br>
-				</div>
-				<a href=""><div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 cd">
-					Contact Details
-				</div></a>
+				
 			</div>
 		</div></div>
 </div>
@@ -91,7 +65,7 @@
 	
 		<br><br><br><br><br>
 			<div class="row" ng-repeat="x in tabs">
-				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav {{$index}}" ng-click="i=$index">
+				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav {{$index}}" ng-click="data($index)">
 					{{x.name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
@@ -162,6 +136,9 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.tabs = [{ 'name': 'About', 'data': 'tab one data' }, { 'name': 'Event Format', 'data': 'tab two data' }, { 'name': 'Problem Statement', 'data': 'tab three data' }, { 'name': 'FAQ', 'data': 'tab four data' }, { 'name': 'Prize Money', 'data': 'tab five data' }, { 'name': 'Contact Details', 'data': 'tab six data' }];
     $scope.i = 0;
+    $scope.data = function(ch){
+    	$scope.i=ch;
+    }
 });
 </script>
 </body>
