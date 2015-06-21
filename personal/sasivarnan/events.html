@@ -91,7 +91,7 @@
 	
 		<br><br><br><br><br>
 			<div class="row" ng-repeat="x in tabs">
-				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav about">
+				<a href="#"><div class="col-sm-12 col-md-12 col-lg-12 nav {{$index}}" ng-click="i=$index">
 					{{x.name}}
 				</div></a>
 				<div class="col-sm-12 col-md-12 col-lg-12">
@@ -109,41 +109,41 @@
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-$(".about").mouseover(function(){
-    $(".about").css({color:'black'});
+$(".0").mouseover(function(){
+    $(".0").css({color:'black'});
  });
-$(".about").mouseleave(function(){
-    $(".about").css({color:'white'});
+$(".0").mouseleave(function(){
+    $(".0").css({color:'white'});
 });
-$(".ef").mouseover(function(){
-    $(".ef").css({color:'black'});
+$(".1").mouseover(function(){
+    $(".1").css({color:'black'});
  });
-$(".ef").mouseleave(function(){
-    $(".ef").css({color:'white'});
+$(".1").mouseleave(function(){
+    $(".1").css({color:'white'});
 });
-$(".ps").mouseover(function(){
-    $(".ps").css({color:'black'});
+$(".2").mouseover(function(){
+    $(".2").css({color:'black'});
  });
-$(".ps").mouseleave(function(){
-    $(".ps").css({color:'white'});
+$(".2").mouseleave(function(){
+    $(".2").css({color:'white'});
 });
-$(".faq").mouseover(function(){
-    $(".faq").css({color:'black'});
+$(".3").mouseover(function(){
+    $(".3").css({color:'black'});
  });
-$(".faq").mouseleave(function(){
-    $(".faq").css({color:'white'});
+$(".3").mouseleave(function(){
+    $(".3").css({color:'white'});
 });
-$(".pm").mouseover(function(){
-    $(".pm").css({color:'black'});
+$(".4").mouseover(function(){
+    $(".4").css({color:'black'});
  });
-$(".pm").mouseleave(function(){
-    $(".pm").css({color:'white'});
+$(".4").mouseleave(function(){
+    $(".4").css({color:'white'});
 });
-$(".cd").mouseover(function(){
-    $(".cd").css({color:'black'});
+$(".5").mouseover(function(){
+    $(".5").css({color:'black'});
  });
-$(".cd").mouseleave(function(){
-    $(".cd").css({color:'white'});
+$(".5").mouseleave(function(){
+    $(".5").css({color:'white'});
 });
 $("#left").click(function(){
 	$("#c").animate({opacity:'1'});
