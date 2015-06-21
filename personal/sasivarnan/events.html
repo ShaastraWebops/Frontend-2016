@@ -119,6 +119,11 @@ $(".5").mouseover(function(){
 $(".5").mouseleave(function(){
     $(".5").css({color:'white'});
 });
+$(".nav1").click(function(){
+	$("#c").animate({opacity:'0'});
+	$(".nav1").animate({width:'0px'});
+	$("#cf").animate({opacity:'1'});
+})
 $("#left").click(function(){
 	$("#c").animate({opacity:'1'});
 	$(".nav1").animate({width:'250px'});
