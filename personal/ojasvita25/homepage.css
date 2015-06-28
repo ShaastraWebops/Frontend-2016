@@ -4,19 +4,18 @@
         src : url('CGFLocustResistance.ttf')format('truetype');
                 }
 
-#bgstyle{
-  position:absolute;
-  z-index:-1;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-        }
-#bgimg{   
+	#bgstyle{
+  		position:absolute;
+  		z-index:-1;
+  		left:0;
+  		top:0;
+  		width:100%;
+  		height:100%;
+        	}
+	#bgimg{   
           width:100%;
         height:100%;
-    
-      }     
+      	      }     
    div#elemboxleft,div#elemboxright{
 	            background-color:#6071EE;
 	            margin:20px;
