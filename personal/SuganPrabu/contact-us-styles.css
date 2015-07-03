@@ -1,0 +1,49 @@
+body{
+  overflow-x: hidden;
+  overflow-y: scroll; 
+  background: url(background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.wrapper{
+  text-align: center;
+}
+.main{
+	margin-top: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+#title{
+	position: fixed;
+	left: 50%;
+}
+#email{
+  margin-top: 10px;
+}
+#mobile{
+  margin-top: 10px;
+}
+#message{
+  margin-top: 10px;
+}
+#contact-submit-btn{
+  margin-top: 10px;
+  width: 20%;
+  position: absolute;
+  right: 15px;
+}
+#map{
+  height: 350px;
+  width: 350px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  border-radius: 1000px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}

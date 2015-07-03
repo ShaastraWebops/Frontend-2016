@@ -1,0 +1,48 @@
+<!Doctype html>
+<html ng-app="contactUsApp">
+<head>
+		<script src="..\bower_components\jquery\dist\jquery.min.js"></script>
+  <script src="..\bower_components\angular\angular.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+		<link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
+  <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="contact-us-styles.css">
+  <title>Contact Us</title>
+</head>
+<body ng-controller="contactUsCtrl" ng-clock ng-init="initialize()">
+	<div class="container-fluid">
+		<h1 id="title">Contact Us</h1>
+		<div class="container-fluid main">
+		<div class="row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<span><h3>Leave us a message</h3></span>
+			<div id="contact-form">
+				<form class="form-group" role="form" novalidate>
+				<div id="name" class="has-feedback">
+						<span class="form-control-feedback glyphicon glyphicon-user"></span>
+						<input type="text" class="form-control" placeholder="Name"/>
+				</div>
+				<div id="email" class="has-feedback">
+					<span class="form-control-feedback glyphicon glyphicon-envelope"></span>
+					<input type="text" class="form-control" placeholder="Email"/>
+				</div>
+				<div id="mobile" class="has-feedback">
+					<span class="form-control-feedback glyphicon glyphicon-iphone"></span>
+					<input type="text" class="form-control" placeholder="Mobile (optional)"/>
+				</div>
+				<div id="message">
+					<textarea rows="8" class="form-control" placeholder="Your message..."></textarea>
+				</div>
+				<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div id="map"></div>
+		</div>
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="contact-us-script.js"></script>
+</body>
+</html>
