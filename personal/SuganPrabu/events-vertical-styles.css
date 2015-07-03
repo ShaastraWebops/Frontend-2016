@@ -151,8 +151,8 @@ body{
 -o-transform: scale(1.1);
 transform: scale(1.1);
 opacity: 0;
--webkit-transition: all 0.7s ease;
-transition: all 0.7s ease;
+-webkit-transition: all 0.5s ease;
+transition: all 0.5s ease;
 height: 100%;
 width: 100%;
 color: #fff;
