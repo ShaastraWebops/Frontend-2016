@@ -1,161 +1,240 @@
- @font-face {
-        font-family:'CGF Locust Resistance';
-       
-        src : url('CGFLocustResistance.ttf')format('truetype');
-                }
-
-	#bgstyle{
-  		position:absolute;
-  		z-index:-1;
-  		left:0;
-  		top:0;
-  		width:100%;
-  		height:100%;
-        	}
-	#bgimg{   
+  @font-face {
+              font-family:'CGF Locust Resistance';
+         
+              src : url('CGFLocustResistance.ttf')format('truetype');
+             }
+  body{
+        overflow:hidden;
+      }
+  #bgstyle{
+    		    position:absolute;
+    		    z-index:-1;
+    		    left:0;
+    		    top:0;
+    		    width:100%;
+    		    height:100%;
+          }
+  #bgimg{   
           width:100%;
-        height:100%;
-      	      }     
-   div#elemboxleft,div#elemboxright{
-	            background-color:#6071EE;
-	            margin:20px;
-	            background-color:rgba(96,113,238,0.8);
-	            width:190px;
-	            height:120px;
-	            line-height:120px;
-	            text-align:center;
-		          cursor:pointer;
-		          position:relative;
-				      padding:0;
-             -webkit-box-shadow:0 0 10px rgba(0,0,0,0.6);
-             -moz-box-shadow:0 0 10px rgba(0,0,0,0.6);
-              box-shadow:0 0 10px rgba(0,0,0,0.6);
-
-			
-                }
+          height:100%;
+        } 
      
-    div#elemboxleft a,div#elemboxright a{ 
-                  display:block;
-                  padding: 45px 3px;
-                  vertical-align:middle;
-                  line-height:normal;
-  				  color: #ffffff;
-  				  font-family: 'Luckiest Guy', cursive;
-  			      letter-spacing: 2px;
-  				  font-size: 24px;
-  				  z-index: 400;
-  				  text-decoration: none;
-  				   }
+  div.elemboxleft,div.elemboxright{
+  	            background-color:#6071EE;
+  	            margin:20px;
+  	            background-color:rgba(96,113,238,0.7);
+  	            width:190px;
+  	            height:120px;
+  	            line-height:120px;
+  	            text-align:center;
+  		          cursor:pointer;
+                z-index:200;
+  		          position:relative;
+  				      padding:0;
+  			       overflow:hidden;
+               -webkit-transform: translateZ(0);
+               transform: translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+               -moz-transition:-moz-transform 0.2s ease-in; 
+              -webkit-transition:-webkit-transform 0.2s ease-in; 
+               -o-transition:-o-transform 0.2s ease-in;
+                                    }
+
+  .elemboxleft:before, .elemboxright:before {
+                content: '';
+                position: absolute;
+                border: white solid 4px;
+                top: 4px;
+                left: 4px;
+                right: 4px;
+                bottom: 4px;
+                opacity: 0;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: opacity;
+                transition-property: opacity;
+                                              }
+  .elemboxleft:hover:before, 
+  .elemboxleft:focus:before, 
+  .elemboxleft:active:before,
+  .elemboxright:hover:before,
+  .elemboxright:focus:before,
+   .elemboxright:active:before {
+                                opacity: 1;
+                                }
 
 
-  	div.shaastrabox{
-		  		    background-color: rgba(173, 216, 230, 0.4);
-		            margin:1px;
-		            width:380px;
-		            height:150px;
-		            line-height:150px;
-		            text-align:center;
-		            cursor:pointer;
-		            padding: 20px;
-		            border: 5px solid rgba(115, 117, 183, 0.2);
-		            z-index:900;
-		  	        position: relative;
-		  	        left:-32px;
-                -webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);
-                -moz-box-shadow:0 0 10px rgba(0,0,0,0.5);
-                  box-shadow:0 0 10px rgba(0,0,0,0.5);
-            }
-  	 div.shaastrabox a
-  	             { 
+  .elemboxleft:hover,.elemboxright:hover{
+                    -moz-transform:scale(1.2); 
+                    -webkit-transform:scale(1.2);
+                    -o-transform:scale(1.2);
+                                        }
+         
+  div.elemboxleft a,div.elemboxright a{ 
+                      		display:inline-block;
+                      		vertical-align:middle;
+                      		line-height:normal;
+      				            color: #ffffff;
+      				            font-family: 'Luckiest Guy', cursive;
+      			              letter-spacing: 2px;
+      				            font-size: 22px;
+      				            z-index: 400;
+      				            text-decoration: none;
+    				              overflow:hidden;
+      				                        }
+  .invisiblebox1{
+                display: block;
+                background-color: rgba(96,113,238,0);;
+                width: 520px;
+                height: 600px;
+                top:20%;
+                position: absolute;
+                z-index: 100;
+                 }             
+  .invisiblebox2{
+                  display: block;
+                  background-color: rgba(96,113,238,0);
+                  width: 550px;
+                  height: 600px;
+                  top:20%;
+                  right:0%;
+                  position: absolute;
+                  z-index: 100;
+                }              
+  .invisiblebox1 .elemboxleft #righthand,
+  .invisiblebox2 .elemboxright #lefthand{
+                                        display: none;
+                                        }
+.invisiblebox1:hover #righthand,
+.invisiblebox2:hover #lefthand {
+                                display:inline;
+                                position:absolute;
+                                }
+.elemboxright:hover #righthand{
+                              opacity: 0;
+                              }
 
-                    display:block;
+  .shaastrabox:hover{
+                    -moz-transform:scale(1.05); 
+                    -webkit-transform:scale(1.05);
+                    -o-transform:scale(1.05);
+                    }
+  .shaastrabox{
+  		  		      background-color: rgba(173, 216, 230, 0.4);
+  		            margin:1px;
+  		            width:380px;
+  		            height:150px;
+  		            line-height:150px;
+  		            text-align:center;
+  		            cursor:pointer;
+  		            padding: 20px;
+  		            border: 4px solid rgba(115, 117, 183, 0.2);
+  		            z-index:900;
+  		  	        position: relative;
+  		  	        left:-32px;
+                  -webkit-box-shadow:0 0 5px #888;
+                  -moz-box-shadow:0 0 5px #888;
+                  box-shadow:0 0 5px #888;
+                  -moz-transition:-moz-transform 0.2s ease-in; 
+                  -webkit-transition:-webkit-transform 0.2s ease-in; 
+                  -o-transition:-o-transform 0.2s ease-in;
+              }
+  .shaastrabox a{
+    	             display:inline-block;
                     vertical-align:middle;
                     line-height:normal;
-  					color: #000000;
-  					font-family: 'CGF Locust Resistance';
-  					letter-spacing: 1px;
-  					font-size: 18px;
-  					font-weight:bold;
-  					position:absolute;
-  					left:63px;
-  					top:90px;
-  				       }	
-  		
-  	img.robo{
-			  		position:fixed;
-			  		left:47%;
-			  		top:58%;
-			  		width: 1350px;
-			  		height:800px;
-			  		margin-left:-675px;
-			  		margin-top:-400px;
-			  	z-index: 0;
-  	         }
+    					      color: #000000;
+    					      font-family: 'CGF Locust Resistance';
+    					      letter-spacing: 1px;
+    					      font-size: 18px;
+    					      font-weight:bold;
+              			position:absolute;
+              			left:63px;
+              			top:90px;
+                    z-index:9999;
+                    text-decoration: no;
+    		  		  }	
+    		
+  img.robo{
+  			   position:fixed;
+  			  left:47%;
+  			  top:58%;
+  			  width: 1350px;
+  			  height:800px;
+  			  margin-left:-675px;
+  			  margin-top:-400px;
+  			  z-index: -1;
+    	     }
 
-  	 img.dice{
-	      			position:absolute;
-	      			left:110px;
-	      			top:20px;
-	      			width: 150px;
-	      			height:70px;
-	     			z-index:900;
- 		 	  } 
+  img.dice{
+  	      position:absolute;
+  	      left:110px;
+  	      top:20px;
+  	      width: 150px;
+  	      height:70px;
+  	     	z-index:900;
+   		 } 
 
-     .shaastra-blue {
-                	color : #00445e;
-                     }
-             
-    
-   	 p.text1{
-	    			position:absolute;
-	    			top:-60px;
-	    			left:140px;
-	    			font-size: 10px;
-    		}
-    .number{
-    				position:absolute;
-    				font-family: 'CGF Locust Resistance';
-  					letter-spacing: 1px;
-  					font-size: 19px;
-  					font-weight:bold;
-  					color : #00445e;
-  					top:25px;
-  					left:230px;
-    }
-    .underline{
-	    			text-decoration: none;
-	                background-color : #00445e;
-	                height: 2px;
-	                border-radius : 1px;
-	                width: 50%;
-	                margin: auto;
-					position:absolute;
-					top :110px; 
-					left: 90px; 			   
-				}
+  .shaastra-blue {
+                  color : #00445e;
+                  }
+               
+      
+  p.text1{
+  	    	position:absolute;
+  	    	top:-60px;
+  	    	left:140px;
+  	    	font-size: 10px;
+      		}
+  .number{
+      				position:absolute;
+      				font-family: 'CGF Locust Resistance';
+    					letter-spacing: 1px;
+    					font-size: 19px;
+    					font-weight:bold;
+    					color : #00445e;
+    					top:25px;
+    					left:230px;
+        }
+  .underline{
+  	    			text-decoration: none;
+  	          background-color : #00445e;
+  	          height: 2px;
+  	          border-radius : 1px;
+  	          width: 50%;
+  	          margin: auto;
+  					  position:absolute;
+  					  top :110px; 
+  					  left: 90px; 			   
+  				  }
 
-    .text2{
-    				position:absolute;
-    				font-family: 'CGF Locust Resistance';
-  					letter-spacing: 1px;
-  					top:50px;
-  					left:90px;
-  					font-size: 9px;
+  .text2{
+      		position:absolute;
+      		font-family: 'CGF Locust Resistance';
+    			letter-spacing: 1px;
+    			top:50px;
+    			left:90px;
+    			font-size: 9px;
+        }
 
-
-    		}
-
-#tooltipspan{
-	top:25%;
-	left:20%;
-	width:200px;
-	height:230px;
-	position:absolute;
-}
-#tooltipspanr{
-	top:45%;
-	left:70%;
+  #righthand{
+  	top:5%;
+  	left:40%;
+  	width:200px;
+  	height:230px;
+  	position:absolute;
+          
+  }
+  #lefthand{
+  	top:30%;
+  	left:30%;
     width:200px;
-	height:230px;
-	position:absolute;
-}
+  	height:230px;
+  	position:absolute;
+           
+  }
+  @media all and (max-width: 1000px) {
+    #righthand,#lefthand,.shaastrabox { display: none; }
+                                      }
