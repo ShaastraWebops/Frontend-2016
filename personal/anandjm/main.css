@@ -1,3 +1,7 @@
+html{
+  overflow:hidden;
+   margin:0; padding:0; height:100%; width:100%;
+}
 body{
     margin:0px 0px 0px 0px;
   	width:100%;
@@ -5,6 +9,7 @@ body{
 }
 
 #bgstyle{
+  background-color:#ffffff;
   		position:absolute;
   		z-index:-1;
   		left:0;
@@ -20,7 +25,6 @@ div{
     background-color:#0066ff;
 }
 ul{
-    overflow: auto;
     list-style-type: none;
     padding:0;
     margin: 0em 0em 0em 0em;
@@ -46,8 +50,13 @@ a{
 .menu{
     color:white;
     display:inline-block;
-    height:100%; 
-    width:11em;
+    background:#0066ff;
+     height:100%;
+}
+.mn-list{
+  position:relative;
+  height:100% ;
+  display : table;
 }
 .list{
     background-color:#0033ff;
@@ -74,7 +83,11 @@ ul li a i {
     -o-transition:all 0.3s;
     -ms-transition:all 0.3s;
     transition:all 0.3s;
- 
+}
+#mn-social{
+  display:table-row;
+  vertical-align:bottom;
+  height:1.2em;
 }
 .social{
     display:inline-block;
