@@ -1,10 +1,22 @@
 var app = angular.module('contactUsApp',[]);
 app.controller('contactUsCtrl', ['$scope', 
 	function($scope){
-		$scope.setRhombusParams = function(ele, height, width){
-			angular.element(ele).css('height', height);
-			angular.element(ele).css('width', width);
-		};
+		$scope.departmentsJSON = {
+			departments:[
+				{name: "Co-Curricular Affairs Secretary"}, 
+				{name: "Concept & Design"},
+				{name: "Events"},
+				{name: "Finance & Sales"},
+				{name: "Facilities & Catering"},
+				{name: "Sponsorship & Public Relations"},
+				{name: "Shows"},
+				{name: "Marketing & Student Relations"},
+				{name: "Quality Management Systems"},
+				{name: "Evolve"},
+				{name: "Envisage"},
+				{name: "Web Operations"}
+				]
+			};
 		$scope.initialize = function(){
 			var ele = document.querySelector("#map");
 			var options = {

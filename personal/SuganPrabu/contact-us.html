@@ -14,24 +14,33 @@
 		<h1 id="title">Contact Us</h1>
 		<div class="container-fluid main">
 		<div class="row">
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
+				<ul class="rhombus-grid">
+					<li class="rhombus" ng-repeat="department in departmentsJSON.departments">
+						<span ng-bind="department.name" class="rhombus-text"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row form-and-map">
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			<span><h3>Leave us a message</h3></span>
+			<p><h3>Leave us a message</h3></p>
 			<div id="contact-form">
 				<form class="form-group" role="form" novalidate>
 				<div id="name" class="has-feedback">
-						<span class="form-control-feedback glyphicon glyphicon-user"></span>
+						<span class="form-control-feedback glyphicon glyphicon-user input-icon"></span>
 						<input type="text" class="form-control" placeholder="Name"/>
 				</div>
 				<div id="email" class="has-feedback">
-					<span class="form-control-feedback glyphicon glyphicon-envelope"></span>
+					<span class="form-control-feedback glyphicon glyphicon-envelope input-icon"></span>
 					<input type="text" class="form-control" placeholder="Email"/>
 				</div>
 				<div id="mobile" class="has-feedback">
-					<span class="form-control-feedback glyphicon glyphicon-iphone"></span>
+					<span class="form-control-feedback glyphicon glyphicon-iphone input-icon"></span>
 					<input type="text" class="form-control" placeholder="Mobile (optional)"/>
 				</div>
 				<div id="message">
-					<textarea rows="8" class="form-control" placeholder="Your message..."></textarea>
+					<textarea rows="10" class="form-control" placeholder="Your message..."></textarea>
 				</div>
 				<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
 				</form>
