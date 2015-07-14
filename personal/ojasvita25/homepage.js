@@ -25,24 +25,24 @@
                       y = e.clientY;
           
                       //position according to mouse position
-                       leftHand.style.top = (y - 110) + 'px';
-                      leftHand.style.left = (x  - 820) + 'px';
+                       leftHand.style.top = (y + 0) + 'px';
+                      leftHand.style.left = (x  + 0) + 'px';
 
                   }); 
                    $(".invisiblebox1,.elemboxleft").mousemove(function(e) {
 
-                      x = e.clientX,
-                      y = e.clientY;
+                      x = e.pageX,
+                      y = e.pageY;
           
                       //position according to mouse position
-                      rightHand.style.top = (y -110) + 'px';
+                      rightHand.style.top = (y  +0) + 'px';
                       rightHand.style.left = (x - 200) + 'px'; 
                                       
                   });
                    $(".elemboxleft").click(function(){
 
-                      imagesource = $("#righthand").attr("src");
-                      if(imagesource == "hand1.png"){
+                      imagepath = $("#righthand").attr("src");
+                      if(imagepath == "hand1.png"){
                    $("#righthand").attr("src", "hand2.png");
 
                       }else{
@@ -51,8 +51,8 @@
                   });
                     $(".elemboxright").click(function(){
 
-                      imagesource = $("#lefthand").attr("src");
-                      if(imagesource == "hand3.png"){
+                      imagepath = $("#lefthand").attr("src");
+                      if(imagepath == "hand3.png"){
                    $("#lefthand").attr("src", "hand4.png");
 
                       }else{
