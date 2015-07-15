@@ -9,8 +9,7 @@ body{
 }
 
 #bgstyle{
-  background-color:#ffffff;
-  		position:absolute;
+    		position:absolute;
   		z-index:-1;
   		left:0;
   		top:0;
@@ -37,6 +36,11 @@ li{
 li:hover{
     background:#0033ff;
  		color:#ffffff;
+ 		-webkit-transition:all 0.3s;
+    -moz-transition:all 0.3s;
+    -o-transition:all 0.3s;
+    -ms-transition:all 0.3s;
+    transition:all 0.3s;
 }
 .social:hover{
     background:#0066ff;
@@ -59,11 +63,22 @@ a{
   display : table;
 }
 .list{
+  overflow:hidden;
     background-color:#0033ff;
-    display:none;
+    max-height:0;
+    -webkit-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+    -moz-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+    -o-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+    -ms-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+    transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
 }
 .clicked{
-    display:block;
+    max-height:9999px;
+    -webkit-transition:all 2s ease;
+    -moz-transition:all 2s ease;
+    -o-transition:all 2s ease;
+    -ms-transition:all 2s ease;
+    transition:all 2s ease;
 }
 .sel{
     background:#0033ff;

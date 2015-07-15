@@ -1,31 +1,25 @@
 var app = angular.module("myApp", []);
 // controller
-app.controller("MainController", function() {
-
+app.controller("MainController",function() {
+  
 });
 //directive
-app.directive('d',
-   function() {
+app.directive('down',
+  function() {
         return {
-            restrict: 'A',
+            restrict: 'C',
             link: function() {
-              $('.down').click(function(){
-        
-        if($(this).hasClass("sel"))
-        {
-            $('.sel>.list').removeClass("clicked");
-            $('.sel').removeClass("sel");
-        }
-        else
-        {
-            $('.down').removeClass("sel");
-            $('.list').removeClass("clicked");
-            $(this).addClass("sel");
-            $('.sel>.list').addClass("clicked");
-        }
-              
-                               });
+          $('.down a').click(function(){
+            $(this).next('.list').toggleClass("clicked");
+            if($(this).next('.list').hasClass("clicked"))
+            {
+              $(this).parent().css("padding-bottom","0");
+            }
+            else
+            {
+              $(this).parent().css("padding-bottom","0.5em");
+            }
+          });
                                }
                                };
 });
-                               
