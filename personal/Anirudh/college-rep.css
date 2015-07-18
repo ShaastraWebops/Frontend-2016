@@ -43,4 +43,61 @@ h2,h3,h4{
 	color:white;
 	font-size:25px;
 }
+/*.box_rotate {
+  -webkit-transform: rotate(180deg);  
+     -moz-transform: rotate(180deg);  
+      -ms-transform: rotate(180deg);  
+       -o-transform: rotate(180deg);  
+          transform: rotate(180deg);  
+}
+.box_transition {
+  -webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out;  
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out;  
+}*/
+
+/* Chrome, Safari, Opera */
+@-webkit-@keyframes handle_transition {
+    from {
+      -ms-transform: rotate(-180deg); /* IE 9 */
+      -webkit-transform: rotate(-180deg); /* Safari */
+      transform: rotate(-180deg); /* Standard syntax */
+      opacity:0;
+    }
+    to 
+    {
+      -ms-transform: rotate(0deg); /* IE 9 */
+      -webkit-transform: rotate(0deg); /* Safari */
+      transform: rotate(0deg); /* Standard syntax */
+      opacity:1;
+    }
+}
+
+/* Standard syntax */
+@keyframes handle_transition {
+    from {
+      -ms-transform: rotate(-180deg); /* IE 9 */
+      -webkit-transform: rotate(-180deg); /* Safari */
+      transform: rotate(-180deg); /* Standard syntax */
+      opacity:0;
+    }
+    to 
+    {
+      -ms-transform: rotate(0deg); /* IE 9 */
+      -webkit-transform: rotate(0deg); /* Safari */
+      transform: rotate(0deg); /* Standard syntax */
+      opacity:1;
+    }
+}
+
+.handle_anim
+{   opacity:1;
+    -webkit-animation-name: handle_transition; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-name: handle_transition;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
 

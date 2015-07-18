@@ -7,9 +7,17 @@
   <script src="..\bower_components\jquery\dist\jquery.min.js"></script>
   <script src="..\bower_components\angular\angular.min.js"></script>
   <script type="text/javascript" src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/parallax.js"></script>
+  <script type="text/javascript" src="js/parallax.min.js"></script>
   <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="spons-rep.css">
+  <script type="text/javascript">
+  /*$(document).ready(function()
+  {
+  	$(".intro").parallax()
+  });*/
+  </script>
   <style type="text/css">
   figure figcaption
   {
@@ -18,7 +26,7 @@
   </style>
 </head>
 <body>
-	<div class="intro" style="margin-bottom:100px">
+	<div class="intro" style="margin-bottom:100px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
 		<img src="spons_img/2.png" alt="Image Not Found :(" style="width:220px;height:200px;margin-top:100px" align="left">
 		<h1 style="color:white;font-size:200px;text-align:center;margin-top:5%;margin-bottom:5%;">Shaastra</h1>
 		<h2>The Annual Technical Festival of Indian Insitute of Technology,Madras</h2><br>
@@ -108,7 +116,7 @@
 			</figure>
 	</div>
 
-	<div class="statistics" >
+	<div class="statistics" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/8.png" data-speed="0.5">
 		<!--span style="margin-left:50px;margin-right:30px">
 			<p style="font-size:50px">225</p>
 			<p style="font-size:20px">percent increase in<br>
@@ -152,7 +160,7 @@
   			
 		</table>
 	</div>
-	<div class="ad_photos">
+	<div class="ad_photos" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png spons_img/2.png spons_img/3.png">
 
 	</div>
 	<div style="padding:55px;text-align:center;color:#3C3D43;font-size:50px">
@@ -166,7 +174,7 @@
 		<p style="color:white;font-size:40px;text-align:center;border:5px solid white;padding:50px;display:inline;margin-bottom:90px;margin-left:200px" align="center">CELEBRATE THE SPIRIT OF ENGINEERING</p>
 
 	</div>
-	<div class="normal_para" style="padding-top:40px;padding-right:5%;padding-left:90px;margin-bottom:60px">
+	<div class="normal_para" style="padding-top:40px;padding-right:5%;padding-left:90px;margin-bottom:60px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.5">
 			<img src="spons_img/normal.PNG" alt="Image not loaded :(" style="width:300px;height:300px;float:left;margin-right:80px">
 			<p style="font-size:20px;color:white;display:inline;padding-top:50px;font-family:Helvetica;font-weight:400">Since it's inception,Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai to visit this spectacle, Shaastra's reach is now beyond city,state and country and has a stake on international stage. Marquee events like IIT-M Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity,industry and academia.</p>
 			
@@ -194,7 +202,7 @@
 		</span-->
 		<div class="centered">
 		<div class="btn-group btn-group-lg " >
-    		<button type="button" class="btn btn-primary" data-toggle="tab" href="#vision" style="margin:auto">Our Vision</button>
+    		<button type="button" class="btn btn-primary btn-active" data-toggle="tab" href="#vision" style="margin:auto">Our Vision</button>
    			<button type="button" class="btn btn-primary" data-toggle="tab" href="#mission">Our Mission</button>
    			<button type="button" class="btn btn-primary" data-toggle="tab" href="#quality">Quality Policy</button>
   		</div>
@@ -214,7 +222,7 @@
  			</div>
 		</div>
 	</div>
-	<div class="humbly">
+	<div class="humbly" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.6">
 		<h2 style="color:white;font-size:35px;margin-bottom:100px;padding-top:150px" align="center">We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass roots level!</h2>
 		<h2 style="color:white;font-size:30px;margin-left:20px;margin-bottom:100px" >FOR SPONSORSHIP AND INDUSTRY RELATION,PLEASE CONTACT:</h2>
 

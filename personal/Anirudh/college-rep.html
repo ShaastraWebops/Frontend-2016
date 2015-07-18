@@ -4,12 +4,14 @@
   <title>Student Representative</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <script src="..\bower_components\jquery\dist\jquery.min.js"></script>
   <script src="..\bower_components\angular\angular.min.js"></script>
   <script type="text/javascript" src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
   <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="college-rep.css">
+  <link href="scrolling-nav.css" rel="stylesheet">
   <style type="text/css">
   .caption>h3
   {
@@ -78,6 +80,12 @@ th,td
   font-size: 20px;
   font-weight: 400;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
   </style>
   
   </head>
@@ -89,15 +97,15 @@ th,td
 	<h2>The Annual Technical Festival of Indian Insitute of Technology,Madras</h2><br>
 	<h3>It is the first ISO Certified festival of its kind. Shaastra returns in its 17<sup>th</sup>&nbsp;edition, bringing with it an experience of <b>Innovation,Competition and Learning</b>&nbsp;that has become it's hallmark over the years.</h3><br><br><br>
 	
-	<button class="btn btn-circle center-block" style="display:block;" title="Scroll Down to see more!"><i class="fa fa-angle-double-down fa-2x" style="color:#27003d;background-color:none"></i></button><br><br><br><br><br>
+	<a class="page-scroll" href="#c"><button class="btn btn-circle center-block" style="display:block;" title="Scroll Down to see more!"><i class="fa fa-angle-double-down fa-2x" style="color:#27003d;background-color:none"></i></button><br><br><br><br><br></a>
 </div>
 
 <div style="margin-bottom:180px">
-	<p style="font-size:30px;padding-top:30px;text-align:center">Come Join Us as</p><br>
-	<b><p style="font-size:50px;text-align:center">SHAASTRA<sup>'</sup>S&nbsp;&nbsp;COLLEGE REPRESENTATIVE</p></b>
+	<p style="font-size:30px;padding-top:30px;text-align:center" id="c">Come Join Us as</p><br>
+	<b><p style="font-size:50px;text-align:center" id="scroll1">SHAASTRA<sup>'</sup>S&nbsp;&nbsp;COLLEGE REPRESENTATIVE</p></b>
 </div>
 
-<b><p style="font-size:35px;text-align:center;margin-bottom:50px"> REASONS WHY YOU SHOULD BECOME A COLLEGE REPRESENTATIVE</p></b>
+<b><p style="font-size:35px;text-align:center;margin-bottom:50px" > REASONS WHY YOU SHOULD BECOME A COLLEGE REPRESENTATIVE</p></b>
 
 <div class="campaign_img" >
 	
@@ -140,32 +148,32 @@ th,td
 	
 </div>
 
-<b><p style="font-size:50px;text-align:center;margin-bottom:150px;color:black">YOU WILL BE HANDLING</p></b>
+<b><p style="font-size:50px;text-align:center;margin-bottom:150px;color:black" id="scroll2">YOU WILL BE HANDLING</p></b>
 
 <div class="handle_img">
 	<ul style="list-style-type:none;">
 		<li style="margin-bottom:80px">
-			<span>
-				<img src="college_img/6.png" alt="Image Not Found :(" style="float:left;padding-left:30px;padding-right:45px">
-				<p style="font-size:40px;padding-top:50px"><b>PUBLICITY</b></p>
+			<span id="one">
+				<img src="college_img/6.png" alt="Image Not Found :(" style="float:left;margin-left:30px;margin-right:45px" id="1">
+				<p style="font-size:40px;padding-top:30px"><b>PUBLICITY</b></p>
 				<p style="font-size:30px" align="left">Putting up posters of Shaastra on notice boards within<br> 3 days of receiving them</p>
 			</span>
 		</li>
-		<li style="margin-bottom:80px">
+		<li style="margin-bottom:80px" onscroll="handle_scroll(0)">
 			<span>
 				<img src="college_img/7.png" alt="Image Not Found :(" style="float:right;padding-left:30px;padding-right:45px">
 				<p style="font-size:40px;padding-top:50px" align="right"><b>MAILING</b></p>
 				<p style="font-size:30px;text-align:right">Forwarding Mails to the college mailing list</p>
 			</span>
 		</li>
-		<li style="margin-bottom:80px">
+		<li style="margin-bottom:80px" onscroll="handle_scroll(1)">
 			<span>
 				<img src="college_img/8.png" alt="Image Not Found :(" style="float:left;padding-left:30px;padding-right:45px">
 				<p style="font-size:40px;padding-top:50px" align="left"><b>MEDIA</b></p>
 				<p style="font-size:30px;text-align:left">Publicising the events of Shaastra on various social media<br>including print media by sharing links of the event.</p>
 			</span>
 		</li>
-		<li style="margin-bottom:100px">
+		<li style="margin-bottom:100px" onscroll="handle_scroll(2)">
 			<span>
 				<img src="college_img/8.png" alt="Image Not Found :(" style="float:right;padding-left:30px;padding-right:45px">
 				<p style="font-size:40px;padding-top:50px" align="right"><b>COORDINATION</b></p>
@@ -175,10 +183,10 @@ th,td
 	</ul>
 </div>
 
-<div class="incentives" style="background-color:#31CCDE;margin-bottom:100px">
+<div class="incentives" style="background-color:#31CCDE;margin-bottom:100px;height:850px">
 	<p style="font-size:40px;padding-top:100px;color:white" align="center">INCENTIVES</p>
 	<h4 style="color:white;font-size:25px;padding-bottom:40px">Several Incentives are awaiting you with this Responsibility</h4>
-	<ul style="padding-bottom:340px">
+	<ul style="padding-bottom:240px">
 		<li style="font-size:30px;margin-left:40px;color:white">
 			<span><p style="padding-right:20px;display:inline"><b>CERTIFICATE OF ORGANISATION</b></p>
 			<p style="float:right;font-size:20px;padding-right:15px">On behalf of Shaastra 2016,IIT Madras</p>
@@ -195,7 +203,7 @@ th,td
 			</span>
 		</li>
 	</ul>
-	<p align="center" style="border-width:6px;border-style:solid;border-color:black;color:white;font-size:30px;display:inline;margin-left:150px;padding:40px"><b>CHECK OUT THE BEST PR REPRESENTATIVES OF YOUR AREA<b></p>
+	<p align="center" style="border:6px solid white;color:white;font-size:30px;display:inline;margin-left:150px;padding:40px"><b>CHECK OUT THE BEST PR REPRESENTATIVES OF YOUR AREA<b></p>
 	
 </div>
 
@@ -333,5 +341,10 @@ th,td
 
   </div>
 </div>
+<script type="text/javascript" src="college-rep.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 </body>
 </html>
