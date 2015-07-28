@@ -1,10 +1,12 @@
 <!Doctype html>
 <html ng-app="contactUsApp">
 <head>
-		<script src="..\bower_components\jquery\dist\jquery.min.js"></script>
+  <script src="..\bower_components\jquery\dist\jquery.min.js"></script>
   <script src="..\bower_components\angular\angular.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
-		<link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
+  <script src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+  <script src="..\bower_components\ui-bootstrap\src\ui-bootstrap-tpls-0.13.1.js"></script>
+  <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="contact-us-styles.css">
   <title>Contact Us</title>
@@ -16,7 +18,7 @@
 		<div class="row">
 			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
 				<ul class="rhombus-grid">
-					<li class="rhombus" ng-repeat="department in departmentsJSON.departments">
+					<li class="rhombus" id="a" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
 						<span ng-bind="department.name" class="rhombus-text"></span>
 					</li>
 				</ul>
@@ -36,7 +38,7 @@
 					<input type="text" class="form-control" placeholder="Email"/>
 				</div>
 				<div id="mobile" class="has-feedback">
-					<span class="form-control-feedback glyphicon glyphicon-iphone input-icon"></span>
+					<span class="form-control-feedback glyphicon glyphicon-phone input-icon"></span>
 					<input type="text" class="form-control" placeholder="Mobile (optional)"/>
 				</div>
 				<div id="message">
@@ -51,6 +53,42 @@
 		</div>
 		</div>
 		</div>
+	</div>
+	<div>
+		<script type="text/ng-template" id="myModalContent.html">
+			<div class="modal-header">
+				<button type="button" class="close" ng-click="close()">&times;</button>
+				<h2 class="modal-title wrapper" ng-bind="department.name"></h2> 
+			</div>
+			<div class="modal-body">
+				<ul class="contact-modal-contents row">
+					<li ng-repeat="contact in department.contacts">
+						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
+							<li>
+								<h4><span ng-bind="contact.personName"></span></h4>
+							</li>
+							<li>
+								<p>
+									<span class="glyphicon glyphicon-phone"></span>
+									<span><strong>Contact : </strong></span>
+									<span ng-bind="contact.phone" id="contactPhone"></span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span class="glyphicon glyphicon-envelope"></span>
+									<span><strong>E-Mail : </strong></span>
+									<span ng-bind="contact.mail" id="contactMail"></span>
+								</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="close" ng-click="close()">Close</button>
+			</div>
+		</script>
 	</div>
 	<script type="text/javascript" src="contact-us-script.js"></script>
 </body>

@@ -7,6 +7,9 @@ body{
   background-size: contain;
   padding-bottom: 50px;
 }
+ul{
+  list-style-type: none;
+}
 .container-fluid{
   padding-left: 0px;
   padding-right: 0px;
@@ -36,6 +39,7 @@ body{
   overflow: hidden;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -116,6 +120,10 @@ body{
 .form-and-map{
   margin-top: 90px;
 }
+.contact-modal-contents{
+  display: block;
+  text-align: center;
+}
 #title{
 	position: fixed;
 	left: 50%;
@@ -157,4 +165,7 @@ body{
   position: fixed;
   margin-left: auto;
   margin-right: auto;
+}
+#contactPhone #contactMail{
+  padding-left: 5px;
 }
