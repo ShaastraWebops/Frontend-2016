@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html np-app="eventsListApp">
 <head>
 	<title>Events list</title>
 	<link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="..\bower_components\jquery\dist\jquery.min.js"></script>
+ 	<script src="..\bower_components\angular\angular.min.js"></script>
+ 	<script type="text/javascript" src="app.js"></script>
 </head>
-<body>
+<body ng-controller="eventsListCtrl">
 	<header>
 		<span id="menubar" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 		<div id="menu">
@@ -17,14 +20,14 @@
 	<article>
 		<div id="heading">Events</div>
 		<hr>
-		<nav id="top-nav">
-			<div class="wrapper">
-				<img src="images/aerofest.png">
+		<nav id="top-nav" class="row">
+			<div class="wrapper" ng-repeat="event in events">
+				<img ng-src="{{event.imgUrl}}">
 				<div class="slider">
 				</div>
-				<div class="event-name">Aerofest</div>
+				<div class="event-name">{{event.name}}</div>
 			</div>
-			<div class="wrapper">
+			<!--<div class="wrapper">
 				<img src="images/bevents.png">
 				<div class="slider">
 				</div>
@@ -72,7 +75,7 @@
 				</div>
 				<div class="event-name">Spotlight</div>
 			</div>
-			<div class="clear"></div>
+			<div class="clear"></div>-->
 		</nav>
 
 		<nav id="mid-nav">
