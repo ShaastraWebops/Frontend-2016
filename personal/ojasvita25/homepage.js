@@ -20,14 +20,15 @@
                  leftHand = document.getElementById("lefthand");
                 
                   $(".invisiblebox2,.elemboxright").mousemove(function(e) {
-   
+                  
                       x = e.clientX,
                       y = e.clientY;
           
                       //position according to mouse position
                        leftHand.style.top = (y + 0) + 'px';
                       leftHand.style.left = (x  + 0) + 'px';
-
+                      leftHand.style.top.animationTimingFunction="linear";
+                      leftHand.style.left.animationTimingFunction="linear";
                   }); 
                    $(".invisiblebox1,.elemboxleft").mousemove(function(e) {
 
@@ -35,10 +36,21 @@
                       y = e.pageY;
           
                       //position according to mouse position
-                      rightHand.style.top = (y  +0) + 'px';
-                      rightHand.style.left = (x - 200) + 'px'; 
-                                      
+                      rightHand.style.top = (y  + 0) + 'px';
+                      rightHand.style.left = (x - 155) +'px';
+                                  
                   });
+                   //moving back hand to original place
+                   $(".invisiblebox2,.elemboxright").mousemove(function(){
+                    rightHand.style.top="25%";
+                    rightHand.style.left="15%";
+                   });
+
+                   $(".invisiblebox1,.elemboxleft").mousemove(function(){
+                    leftHand.style.top="45%";
+                    leftHand.style.left="75%";
+                   });
+                   //red dot to appear
                    $(".elemboxleft").click(function(){
 
                       imagepath = $("#righthand").attr("src");

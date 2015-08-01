@@ -4,35 +4,30 @@ src : url('CGFLocustResistance.ttf')format('truetype');
              }
 html, body,{
 height: 100%;
-   
             }
 
 body{
 overflow-y:hidden;
 overflow-x:hidden;
-
-  } 
-  
- 
- #bgstyle{
+  }  
+#bgstyle{
 position:absolute;
 left:0;
 top:0;
 width:100%;
 height:100%;
-          }
-          
-html #bgimg{ 
+          }         
+#bgimg{ 
 width:100%;
 height:100%;
         } 
      
 div.elemboxleft,div.elemboxright{
-margin:5%;
+margin:3vh;
 background-color:rgba(96,113,238,0.7);
-width:60%;
-height:100%;
-line-height:9.9;
+width:35vh;
+height:22vh;
+line-height:22vh;
 text-align:center;
 cursor:pointer;
 z-index:200;
@@ -42,18 +37,18 @@ transform: translateZ(0);
 box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
--moz-transition:-moz-transform 0.2s ease-in; 
--webkit-transition:-webkit-transform 0.2s ease-in; 
--o-transition:-o-transform 0.2s ease-in;
+-moz-transition:-moz-transform 0.3s ease-in; 
+-webkit-transition:-webkit-transform 0.3s ease-in; 
+-o-transition:-o-transform 0.3s ease-in;
                                     }
 .elemboxleft:before, .elemboxright:before {
 content: '';
 position: absolute;
 border: white solid 4px;
-top: 4px;
-left: 4px;
-right: 4px;
-bottom: 4px;
+top: 3px;
+left: 3px;
+right: 3px;
+bottom: 3px;
 opacity: 0;
 -webkit-transition-duration: 0.3s;
 transition-duration: 0.3s;
@@ -71,9 +66,9 @@ transition-property: opacity;
 
 
 .elemboxleft:hover,.elemboxright:hover,.small-screen-heading:hover{
--moz-transform:scale(1.2); 
--webkit-transform:scale(1.2);
--o-transform:scale(1.2);
+-moz-transform:scale(1.05); 
+-webkit-transform:scale(1.05);
+-o-transform:scale(1.05);
                  
                                         }
          
@@ -82,16 +77,16 @@ display:inline-block;
 vertical-align:middle;
 line-height:normal;
 color: #ffffff;
-font-family: 'Luckiest Guy', cursive;
-letter-spacing: 0.05em;
-font-size: 1.7em;
+font-family: 'Orbitron', sans-serif;
+letter-spacing:0.05vh;
+font-size:4vh;
 z-index: 400;
+cursor:pointer;
 text-decoration: none;
 overflow: visible;
 position: relative;
+              }
 
-
-                                      }
 .invisiblebox1{
 background-color: rgba(96,113,238,0);
 width: 40%;
@@ -108,9 +103,6 @@ left:59%;
 position: absolute;
 z-index: 100;
                 }              
- 
-
-
 
 .shaastrabox:hover{
 -moz-transform:scale(1.05); 
@@ -119,17 +111,16 @@ z-index: 100;
                     }
 .shaastrabox{
 background-color: rgba(173, 216, 230, 0.4);
-margin: 0 auto 0 auto;
-width:400px;
-height:180px;
-line-height:150px;
+width:64vh;
+height:30vh;
+line-height:30vh;
 text-align:center;
 cursor:pointer;
-padding: 20px;
-border: 4px solid rgba(115, 117, 183, 0.2);
+padding: 10vh;
+border: 2px solid rgba(115, 117, 183, 0.2);
 z-index:900;
 position: relative;
-left:-25px;
+left: -3.6vh;
 -webkit-box-shadow:0 0 5px #888;
 -moz-box-shadow:0 0 5px #888;
 box-shadow:0 0 5px #888;
@@ -143,12 +134,11 @@ vertical-align:middle;
 line-height:normal;
 color: #000000;
 font-family: 'CGF Locust Resistance';
-letter-spacing: 0em;
-font-size: 1.5em;
+font-size:4vh;
 font-weight:bold;
 position:absolute;
-left:15%;
-top:64%;
+left:10%;
+top:64.5%;
 z-index:9999;
                   
                 } 
@@ -157,10 +147,10 @@ z-index:9999;
 color: #000000;
 font-family: 'CGF Locust Resistance';
 letter-spacing: 0;
-font-size: 2em;
+font-size: 5.2vh;
 font-weight:bold;
 position:relative;
-left:4%;
+left:0;
 top:0;
 opacity: 0;
 text-align: center;
@@ -180,7 +170,7 @@ position:absolute;
 left:28%;
 top:15%;
 width: 43%;
-height:50%;
+height:48%;
 z-index:900;
        } 
 
@@ -189,135 +179,102 @@ color : #00445e;
                   }
 p.text1{
 position:absolute;
-top:-60px;
-left:35%;
-font-size: 1em;
+top:-12vh;
+left:33%;
+font-size: 2.6vh;
           }
 
 .shaastrabox .number{
 position:absolute;
 font-family: 'CGF Locust Resistance';
-letter-spacing:0.05em;
-font-size: 1.5em;
+letter-spacing:0;
+font-size: 4vh;
 font-weight:bold;
 color : #00445e;
-top:28%;
-left:64%;
+top:20.8%;
+left:66%;
         }
 .shaastrabox .underline{
 text-decoration: none;
 background-color : #00445e;
-height: 2px;
-border-radius : 1px;
-width: 55%;
+height: 0.4vh;
+width: 40vh;
 margin: auto;
 position:absolute;
 top :80%; 
-left: 24%;          
+left: 18%;          
             }
 
 .shaastrabox .text3{
 position:absolute;
 font-family: 'CGF Locust Resistance';
-letter-spacing: 1px;
-top:45%;
-left:25%;
-font-size: 0.7em;
+letter-spacing: 0.17vh;
+top:40%;
+left:23.5%;
+font-size: 1.5vh;
         }
 
 #righthand{
 top:25%;
 left:15%;
-width:200px;
-height:230px;
+width:28vh;
+height:32vh;
 position:absolute;
 z-index:10;
           }
 #lefthand{
 top:45%;
 left:75%;
-width:200px;
-height:230px;
+width:28vh;
+height:32vh;
 position:absolute;
 z-index: 10;
-           
-  }
+           }
 
- @media all and (max-width: 991px) {
-.shaastrabox .text3{ 
-display: none;      }
+@media all and (max-width: 991px) {
+.shaastrabox .text3,#righthand,#lefthand,.invisiblebox2,.invisiblebox1,div.shaastrabox .underline{
+    display: none;
+  }
+ 
 div.shaastrabox{
-width: 230px;
-left:10%;       }
+width:35vh;
+height:28vh; 
+left:6.6vh;
+  }
 div.shaastrabox .text2{
-top:58%;
-left:1%;
-font-size: 1.8em;
+left:0;
+top:60%;
                       }
 div.shaastrabox .number{
-font-size: 1.8em;
-top:40%;
+top:30%;
 left: 29%;
                         }
 div.shaastrabox .dice{
 width: 60%;
 height: 40%;
-top:15%;
+top:18%;
 left:20%;
                       }
 .shaastrabox .text1{
-left:26%;
-                    }
-                                  
-                                      }
-@media all and (max-width: 767px) {
+left:20%;
+}
+
+div.elemboxright,div.elemboxleft{
+  width:31.5vh;
+}               
+}
+
+/*small screen view*/
+@media all and (max-width: 767px){
 #righthand,#lefthand,.invisiblebox2,.invisiblebox1,.robo{
 display: none;
                                                   }
-                                      }  
-@media all and ( max-width:1200px) {
-.shaastrabox .dice{
-width: 50%;
-left: 25%;
-                  }
-.shaastrabox{
-width: 350px;
-margin: -7px;
-            }
-.shaastrabox .number {
-top:40%;
-left:41%;
-                      } 
-.shaastrabox .underline{
-display: none;
-                        } 
-.shaastrabox .text2{
-left:24%;
-                    } 
-.shaastrabox .text3{
-top:50%;
-left:24%;
-font-size: 0.6em;
-                   } 
-.shaastrabox .text1{
-font-size: 0.9em;
-                  }      
-                                      } 
-
-@media all and (max-width: 991px){
-div.elemboxright,div.elemboxleft{
-width: 80%;
-                                }
-                              }
-              
-@media all and (max-width: 767px){
 div.elemboxleft,div.elemboxright{
-width:60%;
-line-height: 9.9; 
-left:20%;
-margin: 4%;
-
+width:80%;
+left: 8%;
+cursor: pointer;
                 }
+
 div.shaastrabox{
 display: none;
   }
@@ -326,22 +283,43 @@ height: 150%;
   }
 .small-screen-heading{
 opacity: 1;
+cursor: pointer;
   }
 
  }
+
+ /*hiding hand with height*/
+@media only screen and (max-height:450px){
+ #invisiblebox1,#invisiblebox2, #righthand,#lefthand{
+    display: none;
+  }
+}
 
 @media only screen and (max-width:767px){
 body{
 overflow-y:scroll;
     }
 }
-@media only screen and (max-height:600px){
-body{
-        overflow-y:scroll;
-    }
+@media all and (max-width:1200px){
+  .shaastrabox{
+    width:50vh;
+    left:4%;
+  }
+  .shaastrabox .number{
+    top:26%;
+    left: 40%;
+  }
+  img.dice{
+    height: 40%;
+  }
+  .shaastrabox .text2{
+    top:55%;
+    left: 20%;
+  }
+  .shaastrabox .underline{
+    display: none;
+  }
 }
-
-
    
 
 
