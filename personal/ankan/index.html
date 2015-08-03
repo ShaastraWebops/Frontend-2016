@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html np-app="eventsListApp">
+<html np-app="App">
 <head>
 	<title>Events list</title>
 	<link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script src="..\bower_components\jquery\dist\jquery.min.js"></script>
- 	<script src="..\bower_components\angular\angular.min.js"></script>
+	<script src="..\bower_components\jquery\dist\jquery.min.js" type="text/javascript"></script>
+ 	<script src="..\bower_components\angular\angular.min.js" type="text/javascript"></script>
  	<script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-controller="eventsListCtrl">
+<body >
 	<header>
 		<span id="menubar" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 		<div id="menu">
@@ -16,12 +16,12 @@
 			<div id="user">User <span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
 		</div>
 	</header>
-
+{{4+6}}
 	<article>
 		<div id="heading">Events</div>
 		<hr>
 		<nav id="top-nav" class="row">
-			<div class="wrapper" ng-repeat="event in events">
+			<div class="wrapper" ng-repeat="event in listed.events">
 				<img ng-src="{{event.imgUrl}}">
 				<div class="slider">
 				</div>
