@@ -216,17 +216,17 @@ font-size: 1.5vh;
 
 #righthand{
 top:25%;
-left:15%;
-width:28vh;
-height:32vh;
+left:18%;
+width:160px;
+height:190px;
 position:absolute;
 z-index:10;
           }
 #lefthand{
-top:45%;
+top:47%;
 left:75%;
-width:28vh;
-height:32vh;
+width:160px;
+height:190px;
 position:absolute;
 z-index: 10;
            }
@@ -288,12 +288,13 @@ cursor: pointer;
 
  }
 
- /*hiding hand with height*/
-@media only screen and (max-height:450px){
+ /*hiding hand with height of screen*/
+@media only screen and (max-height:490px){
  #invisiblebox1,#invisiblebox2, #righthand,#lefthand{
     display: none;
   }
 }
+
 
 @media only screen and (max-width:767px){
 body{

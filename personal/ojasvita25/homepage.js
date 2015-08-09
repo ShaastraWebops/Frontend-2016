@@ -40,35 +40,35 @@
                       rightHand.style.left = (x - 155) +'px';
                                   
                   });
-                   //moving back hand to original place
+                   //moving back hand to it's original place
                    $(".invisiblebox2,.elemboxright").mousemove(function(){
                     rightHand.style.top="25%";
-                    rightHand.style.left="15%";
+                    rightHand.style.left="18%";
                    });
 
                    $(".invisiblebox1,.elemboxleft").mousemove(function(){
-                    leftHand.style.top="45%";
+                    leftHand.style.top="47%";
                     leftHand.style.left="75%";
                    });
                    //red dot to appear
                    $(".elemboxleft").click(function(){
 
                       imagepath = $("#righthand").attr("src");
-                      if(imagepath == "hand1.png"){
-                   $("#righthand").attr("src", "hand2.png");
+                      if(imagepath == "handr.png"){
+                   $("#righthand").attr("src", "handr1.png");
 
                       }else{
-                  $("#righthand").attr("src", "hand1.png");
+                  $("#righthand").attr("src", "handr.png");
                            }
                   });
                     $(".elemboxright").click(function(){
 
                       imagepath = $("#lefthand").attr("src");
-                      if(imagepath == "hand3.png"){
-                   $("#lefthand").attr("src", "hand4.png");
+                      if(imagepath == "handl.png"){
+                   $("#lefthand").attr("src", "handl1.png");
 
                       }else{
-                  $("#lefthand").attr("src", "hand3.png");
+                  $("#lefthand").attr("src", "handl.png");
                            }
                   });
                    
