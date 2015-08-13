@@ -2,13 +2,14 @@
 <html np-app="eventsListApp">
 <head>
 	<title>Events list</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
 	<link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="..\bower_components\jquery\dist\jquery.min.js"></script>
  	<script src="..\bower_components\angular\angular.min.js"></script>
- 	<script type="text/javascript" src="app.js"></script>
+ 	<script type="text/javascript" src="app1.js"></script>
 </head>
-<body ng-controller="eventsListCtrl">
+<body ng-controller="eventsctrl as list">
 	<header>
 		<span id="menubar" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 		<div id="menu">
@@ -21,7 +22,7 @@
 		<div id="heading">Events</div>
 		<hr>
 		<nav id="top-nav" class="row">
-			<div class="wrapper" ng-repeat="event in events">
+			<div class="wrapper" ng-repeat="event in list.details">
 				<img ng-src="{{event.imgUrl}}">
 				<div class="slider">
 				</div>
@@ -77,8 +78,8 @@
 			</div>
 			<div class="clear"></div>-->
 		</nav>
-
-		<nav id="mid-nav">
+		<div class="hs">
+		<div id="mid-nav">
 			<div class="wrapper">
 				<img src="images/aerofest.png">
 				<div class="slider">
@@ -170,8 +171,8 @@
 				<div class="event-name">Spotlight</div>
 			</div>
 			<div class="clear"></div>
-		</nav>
-
+		</div>
+</div>
 		<div id="scroll">
 			Scroll or hit 
 			<button><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
