@@ -324,7 +324,7 @@ height: 92%;
 	#heading{
 			margin-top:5%;
 		}
-	#mid-nav{
+		#mid-nav{
 			width:400vh;
 			top: 20%;
 			}
