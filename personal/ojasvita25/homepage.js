@@ -3,8 +3,74 @@
 
   // controller
   app.controller("AppCtrl", function() {
+    $(".elemboxleft").click(function(){
+      var elem = $(this);
+      elem.animate({
+        top: $("#bgstyle").height() / 2 - elem.width() / 4 ,
+        left: $("#bgstyle").width() / 2 - elem.width() / 2,
+        zIndex: 500 
+      });
+      $("#righthand").animate({
+        top: $("#bgstyle").height() / 2 ,
+        left: $("#bgstyle").width() / 2 - elem.width() / 2
+      }, function(){
+            $(".shaastrabox").css({"display":"none"});
+            $("#righthand").animate({
+              top: "-=" + elem.height()/2,
+              left: "-=" + elem.width()/2
+            });
+            $("#lefthand").animate({
+              top: $("#bgstyle").height()/2 + elem.height() / 2,
+              left: $("#bgstyle").width() / 2 + elem.width() / 2
+            }, function(){
+                  elem.css({"transform":"scale(2)","-webkit-transform":"scale(2)"})
+                  $("#righthand").animate({
+                    top: "-=" + elem.height()/2,
+                    left: "-=" + elem.width()/2
+                   });
+                  $("#lefthand").animate({
+                    top: "+=" + elem.height() / 2,
+                    left: "+=" + elem.width() / 2
+                  });
+            });
+      });
+    });
+$(".elemboxright").click(function(){
+      var elem = $(this);
+      elem.animate({
+        top: $("#bgstyle").height() / 2 - elem.width() / 4 ,
+        right: $("#bgstyle").width() / 2 - elem.width() / 2,
+        zIndex: 500 
+      });
+      $("#lefthand").animate({
+        top: $("#bgstyle").height() / 2 ,
+        left: $("#bgstyle").width() / 2 - elem.width() / 2
+      }, function(){
+            $(".shaastrabox").css({"display":"none"});
+            $("#righthand").animate({
+              top: $("#bgstyle").height() / 2 - elem.height() / 2,
+              left: $("#bgstyle").width() / 2 - elem.width()
+            });
+            $("#lefthand").animate({
+              top: $("#bgstyle").height()/2 + elem.height() / 2,
+              left: $("#bgstyle").width() / 2 + elem.width() / 2
+            }, function(){
+                  elem.css({"transform":"scale(2)","-webkit-transform":"scale(2)"})
+                  $("#righthand").animate({
+                    top: "-=" + elem.height()/2,
+                    left: "-=" + elem.width()/2
+                   });
+                  $("#lefthand").animate({
+                    top: "+=" + elem.height() / 2,
+                    left: "+=" + elem.width() / 2
+                  });
+            });
+      });
+    });
 
   });
+
+
   //tooltip Directive
   app.directive('tooltip',  
       function() {
