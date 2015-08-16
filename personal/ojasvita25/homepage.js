@@ -23,7 +23,10 @@
               top: $("#bgstyle").height()/2 + elem.height() / 2,
               left: $("#bgstyle").width() / 2 + elem.width() / 2
             }, function(){
-                  elem.css({"transform":"scale(2)","-webkit-transform":"scale(2)"})
+                  elem.css({"transform":"scale(2)",
+                    "-webkit-transform":"scale(2)",
+                    "-moz-transform":"scale(2)",
+                    "-o-transform":"scale(2)"});
                   $("#righthand").animate({
                     top: "-=" + elem.height()/2,
                     left: "-=" + elem.width()/2
@@ -55,7 +58,10 @@ $(".elemboxright").click(function(){
               top: $("#bgstyle").height()/2 + elem.height() / 2,
               left: $("#bgstyle").width() / 2 + elem.width() / 2
             }, function(){
-                  elem.css({"transform":"scale(2)","-webkit-transform":"scale(2)"})
+                  elem.css({"transform":"scale(2)",
+                    "-webkit-transform":"scale(2)",
+                    "-moz-transform":"scale(2)",
+                    "-o-transform":"scale(2)"});
                   $("#righthand").animate({
                     top: "-=" + elem.height()/2,
                     left: "-=" + elem.width()/2
