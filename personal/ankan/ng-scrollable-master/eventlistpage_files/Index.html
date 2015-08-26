@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events list</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../min/ng-scrollable.min.css" rel="stylesheet">
+       
+	<link rel="stylesheet" type="text/css" href="styles.css">
+ 	<script type="text/javascript" src="app1.js"></script>
+ 	
+ 	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="../min/ng-scrollable.min.js"></script>
+        
+
+</head>
+<body>
+
+	
+
+
+<article ng-app="eventslist">
+		<div id="heading">Events</div>
+		
+<div ng-controller="eventsctrl as eventslist">
+<nav id="top-nav" class="row">
+
+			<div class="wrapper"  ng-repeat="detail in eventslist.details" >
+				
+				<img ng-init=""  ng-class="{'active' : toggleObject.item == $index}" ng-src="{{detail.imgUrl}}"/>
+				<div class="slider">
+				</div>
+				<div class="event-name">{{detail.name}}</div></div>
+			
+			
+</nav></div>
+        
+		
+		<div class="hs" ng-scrollable="{scrollX:'bottom',scrollY:'none'}" ng-controller="eventsctrl as eventslist">
+		<div id="mid-nav">
+			<div class="wrapper"  ng-repeat="detail in eventslist.details">
+				<img ng-src="{{detail.imgUrl}}"/>
+				
+				<span class="two-dots">
+					<div></div>
+					<div></div>
+				</span>
+				<div class="event-name">{{detail.name}}</div>
+			</div></div></div>
+			
+			<div class="clear"></div>
+		</div>
+</div>
+		<div id="scroll">
+			Scroll or hit 
+			<button><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
+			<button><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
+			to navigate
+		</div>
+	</article>
+
+	<!--section>
+		<img id="hand-left" src="images/hand.png">
+		<img id="robot-body" src="images/robot body.png">
+		<img id="hand-right" src="images/hand right.png">
+	</section>
+
+	<footer>
+		<nav id="social">
+			<div class="logo" id="facebook">
+				<img src="images/facebook_white.png">
+			</div>
+			<div class="logo" id="twitter">
+				<img src="images/twitter_white.png">
+			</div>
+			<div class="logo" id="youtube">
+				<img src="images/youtube_white.png">
+			</div>
+			<div class="logo" id="linkedin">
+				<img src="images/linkedin_white.png">
+			</div>
+			<div class="clear"></div>
+		</nav>	
+
+		<nav id="other-links">
+			<div id="saarang">
+				<img src="images/saarang_white.png">
+			</div>
+			<div id="iitm">
+				<img src="images/iitm_logo.png">
+			</div>
+			<div id="iso">
+				<img src="images/iso_white.png">
+			</div>
+		</nav>
+	</footer>
+</body>
+</html>

@@ -1,9 +1,23 @@
-(function(){
-var app = angular.module('eventslist', []);
-app.controller('eventsctrl',function(){
-	this.details=lists;
-});
-var lists=[
+
+var app = angular.module('eventlist', ['ngScrollable']);
+
+app.controller('demo', function ($scope) {
+	'use strict';
+	$scope.details = lists;
+
+	$scope.posX = 0;
+	$scope.posY = 0;
+
+	$scope.moveX = function (pixels) {
+		$scope.posX = $scope.posX +  pixels;
+	};
+	$scope.moveY = function (pixels) {
+		$scope.posY = $scope.posY + pixels;
+	};
+	$scope.$evalAsync(function () {
+		$scope.$broadcast('content.changed', 10000);
+	});
+	var lists=[
 {
 		    name: "Aerofest",
 		    imgUrl: "images/aerofest.png",
@@ -37,8 +51,9 @@ var lists=[
 		    imgUrl: "images/aerofest.png",
 		},
 		{
-		    'name': 'Spotlight',
-		    'imgUrl': 'images/aerofest.png'
+		    name: "Spotlight",
+		    imgUrl: "images/aerofest.png",
 		},
+		
 ];
-})();
+});

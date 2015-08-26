@@ -9,23 +9,15 @@ html{
 		background-size: cover;
 		background-attachment: fixed;
 		height: 100%;
-		overflow:hidden;
+		overflow-y:hidden;
 
 			}
-	.hs::-webkit-scrollbar { 
-    display: none; 
-}
 	header {
 		width: 100%;
 		height: 6%;	
 		position: relative;
 
 	}
-	.active {
-		 border-bottom: 4px solid #333;
-		 
-	}
-
 	#menubar {
 		position: absolute;
 		left: 2%;
@@ -48,53 +40,36 @@ html{
 	article {
 		position: relative;
 		width: 100%;
-		height: 80%;	
+		height: 83%;	
 	}
 	#heading {
-		margin-top: 2%;
 		height: 45px;
-		font-size: 8vh;
+		font-size: 3em;
 		text-align: center;
 		line-height: 1;
-		font-family: 'Orbitron', sans-serif;
 	}
-hr{
-		
-		width: 87%;
- 		margin: 0 auto;
-		margin-left: 5%;
-		height: 3px;
- 		background: black;
-
- 	}
- 	
-
 	#top-nav {
-		width: 95%;
-		height: 10.117%;
-		margin-left:5% ;
-		margin-top: 2px;
-		position: absolute;
-		z-index:9999;
-
+		width: 76.096%;
+		height: 8.117%;
+		margin: 0 auto;
+		margin-left: 5%;
 	}
-.wrapper {
+	.wrapper {
 		float: left;
-		position:relative;
+		position: relative;
 		overflow: hidden;
 	}
 	.wrapper img {
 		width: 100%;
 		height: 100%;
 		left: 0;
-		opacity: 1;
 		top: 0;
 		position: absolute;
 	}
 	.slider {
 		width: 100%;
 		height: 100%;
-		background: #000080	;
+		background: #00527A;
 		opacity: 0.7;
 		position: absolute;
 		-webkit-transition : -webkit-transform 0.3s ease-out;
@@ -104,7 +79,7 @@ hr{
 	}
 	
 	#top-nav .wrapper {
-		width: 10.160%;
+		width: 11.112%;
 		height: 100%;
 		cursor: pointer;
 	}
@@ -115,7 +90,6 @@ hr{
 		text-align: center;
 		top: 50%;
 		font-weight: bold;
-		font-size: 2vh;
 		-webkit-transform: translateY(-50%);
 		-moz-transform: translateY(-50%);
 		-o-transform: translateY(-50%);
@@ -125,27 +99,13 @@ hr{
 		-o-transition : -o-transform 0.3s ease-out;
 		transition : transform 0.3s ease-out;
 	}
+	hr {
+		width: 90%;
+		margin: 0 auto;
+		height: 1px;
+		background: black;
+	}
 	
-.hs::-webkit-scrollbar 
-{
-   width: 10px;
-   height: 5px;
-}
-.hs::-webkit-scrollbar-track 
-{
-   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-   border-radius:10px;
-}
-.hs::-webkit-scrollbar-thumb
-{  
-	
-    border: 5px solid transparent;
-    border-radius: 9px;
-    background-clip: content-box;
-   background-color: rgba(96,113,238,1);
-     -webkit-border-radius: 10px;
-    
-}
 
 
 .hs{
@@ -154,16 +114,18 @@ overflow:scroll;
 overflow-y:hidden;
 z-index:800;
 position: relative;
-height: 93%;
+height: 92%;
+
+
 }
-
-
 
 #mid-nav {
 		width: 314.931%;
-		height: 60.11%;
+		height: 54.11%;
 		left: 30%;
-		top: 40%;
+		top: 20%;
+		overflow:auto;
+		overflow-y:hidden;
 		z-index:300;
 		position:absolute;
 		}
@@ -174,7 +136,6 @@ height: 93%;
 	#mid-nav .wrapper img {
 		height: 75%;
 		cursor: pointer;
-		opacity: 1;
 	}
 	 #mid-nav .wrapper .slider {
 	 	top:-10%;
@@ -193,8 +154,8 @@ height: 93%;
 		transform: translate(-50%);
 	}
 	.two-dots div {
-		width: 1vh;
-		height: 23.334%;
+		width: 100%;
+		height: 33.334%;
 		border-radius: 50%;
 		background: #000;
 		margin-top: 50%;
@@ -204,13 +165,85 @@ height: 93%;
 		width: 100%;
 		bottom: 0;
 		top: 85%;
-		font-weight:bold; 
 		text-align: center;
-		font-size: 4vh;
+		font-size: 6vh;
 	}
 	.clear {
 		clear: both;
 	}
+
+
+	@import "bourbon";
+
+* { font-family: 'Crimson Text', serif; box-sizing: border-box; }
+body, ul, li { padding: 0; margin: 0; }
+
+ul {
+  list-style: none;
+  margin-left: 25px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+nav {
+  background: black;
+  color: white;
+  transition: opacity 1s ease;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  transition: all 0.5s ease;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+nav:hover {
+  opacity: 1;
+}
+
+.scrolled {
+  opacity: 0.8;
+  height: 50px;
+  line-height: 50px;
+}
+
+section {
+  max-width: 600px;
+  padding: 0 25px;
+  margin: 0 auto;
+  margin-top: 150px;
+  font-size: 1.2em;
+      line-height: 1.5;
+}
+
+h1, li a, footer p {
+  font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 { 
+	padding-top: 20%;
+  border-bottom: 1px solid #ccc;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 45px;
+  height: 50px;
+}
 	#top-nav .wrapper:hover .slider {
 			-webkit-transform : translateY(-100%);
 			-moz-transform : translateY(-100%);
@@ -229,16 +262,9 @@ height: 93%;
 			-o-transform : translateY(110%);
 			transform : translateY(110%);
 		}
-		/*#mid-nav .wrapper img {
-	opacity: 0.8;
-	filter: alpha(opacity=70);
-	}	
-	
-#mid-nav .wrapper img:hover {
-	opacity: 1;
-	filter: alpha(opacity=100);
-	}*/
-	
+	#mid-nav .wrapper:hover .event-name {
+		color: #000;	
+		}
 	section {
 		position: absolute;
 		width: 53.805%;
@@ -255,7 +281,7 @@ height: 93%;
 		position: absolute;
 		width: 14.286%;
 		height: 31.25%;
-		top: 20%;
+		top: 9%;
 	}
 	#hand-left {
 		left: 0px;
@@ -267,7 +293,6 @@ height: 93%;
 		position: absolute;
 		width: 50%;
 		height: 100%;
-		top:8%;
 		left: 50%;
 		-webkit-transform: translate(-50%);
 		-moz-transform: translate(-50%);
@@ -278,8 +303,8 @@ height: 93%;
 		position: absolute;
 		z-index: 800;
 		left:50%;
-		top: 108%;
-		font-size: 3vh;
+		top: 95%;
+		font-size: 4vh;
 		-webkit-transform: translate(-50%);
 		-moz-transform: translate(-50%);
 		-o-transform: translate(-50%);
@@ -295,7 +320,7 @@ height: 93%;
 		width: 140px;
 		position: absolute;
 		left: 2%;
-		top: 60%;
+		top: 2%;
 	}
 	.logo {
 		width: 30px;
@@ -325,7 +350,7 @@ height: 93%;
 	#other-links {
 		position: absolute;
 		right: 2%;
-		top:30%;
+		top:-40%;
 	}
 	#saarang, #iitm, #iso {
 		float: left;
@@ -346,9 +371,6 @@ height: 93%;
 		border-radius: 50%;
 		background: #000;
 	}
-	
-
-
 	@media all and (max-width: 767px){
 	#other-links {
 	display: none;
@@ -356,20 +378,5 @@ height: 93%;
 	}
 	@media all and (max-width: 958px){
 	#iitm, #iitm img, #iso, #iso img {
-		display: none;}
-		
+		display: none;
 	}
-	@media all and (max-width: 600px){
-	#top-nav,hr,#scroll,#robot-body,#hand-left ,#hand-right {
-			display: none;
-		}
-	#heading{
-			margin-top:5%;
-		}
-	#mid-nav{
-			width:400vh;
-			top: 20%;
-			}
-		}
-
-	

@@ -21,10 +21,7 @@ html{
 		position: relative;
 
 	}
-	.active {
-		 border-bottom: 4px solid #333;
-		 
-	}
+	
 
 	#menubar {
 		position: absolute;
@@ -58,15 +55,7 @@ html{
 		line-height: 1;
 		font-family: 'Orbitron', sans-serif;
 	}
-hr{
-		
-		width: 87%;
- 		margin: 0 auto;
-		margin-left: 5%;
-		height: 3px;
- 		background: black;
 
- 	}
  	
 
 	#top-nav {
@@ -107,6 +96,7 @@ hr{
 		width: 10.160%;
 		height: 100%;
 		cursor: pointer;
+		border-top: 3.5px solid #000;
 	}
 	#top-nav .wrapper .event-name {
 		width: 100%;
@@ -218,10 +208,10 @@ height: 93%;
 			transform : translateY(-100%);
 		}
 	#top-nav .wrapper:hover .event-name {
-			-webkit-transform : translateY(90%);
-			-moz-transform : translateY(90%);
-			-o-transform : translateY(90%);
-			transform : translateY(90%);
+			-webkit-transform : translateY(140%);
+			-moz-transform : translateY(140%);
+			-o-transform : translateY(140%);
+			transform : translateY(140%);
 		}
 	#mid-nav .wrapper:hover .slider {
 			-webkit-transform : translateY(110%);
