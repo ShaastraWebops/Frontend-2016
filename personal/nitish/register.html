@@ -21,6 +21,7 @@ body {
     height: 10%;
     width: 300px;   
     min-width: 300px;
+    margin-top: 50px;
 }
 #password{
     position: relative;
@@ -52,23 +53,24 @@ body {
     position: relative;
     bottom: 48%;
     width: 150px;
-    min-width: 150px;   
+    min-width: 150px; 
+    margin-top: 30px;  
 }
 #tab{
     position: relative;
-    width: 400px;
-    padding-bottom: 20px;
+    width: 80px;
+    margin-top: 100px;
 }
 </style>
 <body>
+<div class="container" ng-app="loginApp" ng-controller="loginCtrl">
+<center><center>
+
 <div>
-<center>
-<center>
-<div id="tab" ng-app="RegistrationApp" ng-controller="registrationCtrl">    
-    <ul class="nav nav-tabs" id="btnupr" class="btn btn-md btn-primary">
-        <li  data-toggle="tab"><a href="Login.html">Login</a></li>
-        <li class="active" data-toggle="tab"><a href="Register.html">Register</a></li>
-   </ul>
+<div  class="btn-group" role="group">
+  <a href="Login.html" id="tab" type="button" class="btn btn-default">Login</a>
+  <a href="Register.html"id="tab" type="button" class="btn btn-primary">Register</a>
+</div>
 
 </div></center>
 <div id= "username"class="input-group">
