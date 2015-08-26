@@ -2,93 +2,83 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SHAASTRA 2016</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-	<script src="homepage.js"></script>
-	<link rel="stylesheet" type="text/css" href="homepage.css">
-	
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+  <title>Shaastra 2016 | IIT Madras Techfest | Chennai</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="homepage.js"></script>
+  <link rel="stylesheet" type="text/css" href="homepage.css">
+  
 </head>
-  <body>
-    <div id="bgstyle"> 
-        <img src='background.jpg' id="bgimg" />
+<body>  
+<div id="bgstyle">
+<img id="bgimg" src="background.jpg" alt="" />
+</div>    
+<img id="lefthand" src="handl.png"/>
+<img src="robotbody.png" class="robo"/>
+<img id="righthand" src="handr.png"/>
+<div ng-app="MyApp" ng-controller="AppCtrl" class="invisiblebox1" tooltip>
+</div>
+<div ng-app="MyApp" ng-controller="AppCtrl" class="invisiblebox2" tooltip>
+</div>
+    <br>
+  <div class="container" ng-app="MyApp" ng-controller="AppCtrl" tooltip>
+    <div class="small-screen-heading">SHAASTRA 2016
     </div>
-    <div ng-app="MyApp" ng-controller="AppCtrl" class="invisiblebox2"  tooltip >
-        <img id="lefthand" src="hand3.png"/>
-    </div>
-    <img src="robotbody.png" class="robo"/>
-    <div ng-app="MyApp" ng-controller="AppCtrl" class="invisiblebox1"  tooltip >
-        <img id="righthand" src="hand1.png"/>
-    </div>
-    <br><br><br><br><br>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-2">
-          <div onclick="location.href='';" ng-app="MyApp" ng-controller="AppCtrl" class="elemboxleft" tooltip>
-            <a href="">Events
-             </a>
+          <div class="elemboxleft top-1">
+           <p> Events
+             </p>
           </div>
-        </div>
-        <div class="col-sm-4 col-sm-push-1">
-  	     <div onclick="location.href='';"  class="elemboxright" >
-  	        <a href="">Shows and Exhibition
-  	         </a>
-  	     </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4 col-sm-push-1">
-          <div onclick="location.href='';" ng-app="MyApp" ng-controller="AppCtrl" class="elemboxleft" tooltip>
-            <a href="">Workshops
-            </a>
+  
+         <div  class="elemboxright top-2" >
+           <p> Shows and Exhibition
+             </p>
+         </div>
+        
+          <div class="elemboxleft mid-1">
+           <p> Workshops
+            </p>
           </div>
-        </div>
-        <div class="col-sm-4">       
-          <div onclick="location.href='https://www.iitm.ac.in/';" class="shaastrabox">
+     
+          <div class="shaastrabox">
             <p class="text1">
               <span class="shaastra-blue">
-                <b>iit madras</b>
+                <a href=""><b>iit madras</b></a>
               </span>presents
             </p>
             <img src="diceimage.png" class="dice">
             </img>
-            <a href="">SHAASTRA 
-            </a>
+            <div class="text2">SHAASTRA 
+            </div>
             <span class="number">2016
             </span>
-            <div class="underline">	
+            <div class="underline"> 
             </div>
-            <p class="text2">THE SPIRIT OF ENGINEERING
+            <p class="text3">THE SPIRIT OF ENGINEERING
             </p>
           </div>
-        </div>
-        <div class="col-sm-4  ">
-  		    <div onclick="location.href='';" class="elemboxright" >
-  				    <a>Lectures
-  						</a>
-  		    </div>
-        </div>
-      </div>
-      <div class="row">
-  		  <div class="col-sm-4 col-sm-offset-2">
-  			   <div onclick="location.href='';"  class="elemboxleft">
-  				    <a href="">Social <br/>Cause
-  				    </a>
-  		     </div>
-  	    </div>
-  		  <div class="col-sm-4 col-sm-push-1">
-  			     <div onclick="location.href='';" class="elemboxright">
-  					   <a>Pre-Shaastra Activities
-  					   </a> 
-  			     </div>
-  		  </div>
-      </div> 
+       
+          <div class="elemboxright mid-2" >
+              <p>Lectures
+              </p>
+          </div>
+    
+           <div   class="elemboxleft botm-1">
+              <p>Social <br/>Cause
+              </p>
+           </div>
+     
+
+             <div  class="elemboxright botm-2">
+               <p>Pre-Shaastra Activities
+               </p> 
+             </div>
+      
     </div>
+   
 </body>
 </html>
 
@@ -96,3 +86,11 @@
 
 
 
+
+
+
+
+
+
+
+  

@@ -1,4 +1,4 @@
-	html{
+html{
 		height: 100%;
 	}
 	body {
@@ -9,11 +9,14 @@
 		background-size: cover;
 		background-attachment: fixed;
 		height: 100%;
+		overflow-y:hidden;
+
 			}
 	header {
 		width: 100%;
 		height: 6%;	
 		position: relative;
+
 	}
 	#menubar {
 		position: absolute;
@@ -37,30 +40,36 @@
 	article {
 		position: relative;
 		width: 100%;
-		height: 83%;	
+		height: 80%;	
 	}
 	#heading {
 		height: 45px;
-		font-size: 3em;
+		font-size: 8vh;
 		text-align: center;
 		line-height: 1;
+		font-family: 'Orbitron', sans-serif;
 	}
+
 	#top-nav {
-		width: 76.096%;
+		width: 81%;
 		height: 8.117%;
-		margin: 0 auto;
+		margin-left:8% ;
+		position: absolute;
+		z-index:9999;
+
 	}
-	.wrapper {
+	article .wrapper {
 		float: left;
-		position: relative;
+		position:relative;
 		overflow: hidden;
 	}
 	.wrapper img {
 		width: 100%;
 		height: 100%;
-		position: absolute;
 		left: 0;
+		opacity: 0.7;
 		top: 0;
+		position: absolute;
 	}
 	.slider {
 		width: 100%;
@@ -73,6 +82,7 @@
 		-o-transition : -o-transform 0.3s ease-out;
 		transition : transform 0.3s ease-out;
 	}
+	
 	#top-nav .wrapper {
 		width: 11.112%;
 		height: 100%;
@@ -85,6 +95,7 @@
 		text-align: center;
 		top: 50%;
 		font-weight: bold;
+		font-size: 2vh;
 		-webkit-transform: translateY(-50%);
 		-moz-transform: translateY(-50%);
 		-o-transform: translateY(-50%);
@@ -95,19 +106,38 @@
 		transition : transform 0.3s ease-out;
 	}
 	hr {
-		width: 90%;
+		width: 81%;
 		margin: 0 auto;
-		height: 1px;
+		margin-left: 8%;
+		height: 1.8px;
 		background: black;
 	}
-	#mid-nav {
+	
+
+
+.hs{
+	
+overflow:scroll;
+overflow-y:hidden;
+z-index:800;
+position: relative;
+height: 92%;
+
+
+}
+
+#mid-nav {
 		width: 314.931%;
-		height: 54.11%;
-		position: absolute;
-		left: 50%;
-		top: 37%;
-	}
-	#mid-nav .wrapper {
+		height: 60.11%;
+		left: 30%;
+		top: 35%;
+		overflow:auto;
+		overflow-y:hidden;
+		z-index:300;
+		position:absolute;
+
+		}
+#mid-nav .wrapper {
 		width: 10.983%;
 		height: 100%;
 	}
@@ -115,8 +145,9 @@
 		height: 75%;
 		cursor: pointer;
 	}
-	#mid-nav .wrapper .slider {
-		height: 75%;
+	 #mid-nav .wrapper .slider {
+	 	top:-10%;
+		height: 85%;
 		cursor: pointer;
 	}
 	#mid-nav .wrapper .two-dots {
@@ -131,8 +162,8 @@
 		transform: translate(-50%);
 	}
 	.two-dots div {
-		width: 100%;
-		height: 33.334%;
+		width: 1vh;
+		height: 23.334%;
 		border-radius: 50%;
 		background: #000;
 		margin-top: 50%;
@@ -141,8 +172,9 @@
 		position: absolute;
 		width: 100%;
 		bottom: 0;
+		top: 85%;
 		text-align: center;
-		font-size: 1.7em;
+		font-size: 4vh;
 	}
 	.clear {
 		clear: both;
@@ -160,10 +192,10 @@
 			transform : translateY(90%);
 		}
 	#mid-nav .wrapper:hover .slider {
-			-webkit-transform : translateY(118%);
-			-moz-transform : translateY(118%);
-			-o-transform : translateY(118%);
-			transform : translateY(118%);
+			-webkit-transform : translateY(110%);
+			-moz-transform : translateY(110%);
+			-o-transform : translateY(110%);
+			transform : translateY(110%);
 		}
 	#mid-nav .wrapper:hover .event-name {
 		color: #fff;	
@@ -184,7 +216,7 @@
 		position: absolute;
 		width: 14.286%;
 		height: 31.25%;
-		top: 9%;
+		top: 20%;
 	}
 	#hand-left {
 		left: 0px;
@@ -196,6 +228,7 @@
 		position: absolute;
 		width: 50%;
 		height: 100%;
+		top:8%;
 		left: 50%;
 		-webkit-transform: translate(-50%);
 		-moz-transform: translate(-50%);
@@ -204,9 +237,10 @@
 	}
 	#scroll {
 		position: absolute;
+		z-index: 800;
 		left:50%;
-		top: 95%;
-		font-size: 1.2em;
+		top: 108%;
+		font-size: 3vh;
 		-webkit-transform: translate(-50%);
 		-moz-transform: translate(-50%);
 		-o-transform: translate(-50%);
@@ -216,12 +250,13 @@
 		width: 100%;
 		height: 11%;
 		position: relative;
+		
 	}
 	#social {
 		width: 140px;
 		position: absolute;
 		left: 2%;
-		top: 25%;
+		top: 60%;
 	}
 	.logo {
 		width: 30px;
@@ -251,21 +286,48 @@
 	#other-links {
 		position: absolute;
 		right: 2%;
+		top:30%;
 	}
 	#saarang, #iitm, #iso {
 		float: left;
 		margin-left: 10px;
+        
 		cursor: pointer;
 	}
 	#saarang {
 		margin-top: 2%;
 		background: #000;
+		
 	}
 	#iitm, #iitm img, #iso, #iso img {
-		width: 60px;
-		height: 60px;
+		width: 10vh;
+		height: 8vh;
 	}
 	#iso {
 		border-radius: 50%;
 		background: #000;
 	}
+	@media all and (max-width: 767px){
+	#other-links {
+	display: none;
+				}
+	}
+	@media all and (max-width: 958px){
+	#iitm, #iitm img, #iso, #iso img {
+		display: none;}
+		
+	}
+	@media all and (max-width: 600px){
+	#top-nav,hr,#scroll,#robot-body,#hand-left ,#hand-right {
+			display: none;
+		}
+	#heading{
+			margin-top:5%;
+		}
+	#mid-nav{
+			width:400vh;
+			top: 20%;
+			}
+		}
+
+	

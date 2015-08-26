@@ -1,0 +1,43 @@
+
+<html ng-app>
+<head>
+</head>
+<title>
+</title>
+<link href="bootstrap.min.css" rel="stylesheet" />
+<link href ="style.css" type="text/css" rel="stylesheet"/>
+<script src="angular.min.js"></script>
+<body>
+<div class="container" ng-app="loginApp" ng-controller="loginCtrl">
+<center><center>
+<div>
+<div  class="btn-group" role="group">
+  <a href="Login.html" id="tab" type="button" class="btn btn-default">Login</a>
+  <a href="Register.html"id="tab" type="button" class="btn btn-primary">Register</a>
+</div>
+
+</div></center>
+<div id= "username"class="input-group">
+  <span class="input-group-addon" id="sizing-addon2"><img src="human.png" alt="at" height="20px" width="20px"></img></span>
+  <input type="text" ng-model="UserName" class="form-control" placeholder="User name or email or shaastra id" aria-describedby="sizing-addon2">
+
+<div id= "password"class="input-group">
+  <input type="text" ng-model="Password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+</div></div>
+<br>
+
+<div id= "email" class="input-group">
+  <span class="input-group-addon"><img src="at.png" alt="at" height="20px" width="20px"></img></span>
+  <input type="text"  ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
+</div>
+
+<div id= "repassword" class="input-group">
+  <span class="input-group-addon"><img src="lock.png" alt="at" height="20px" width="20px"></img></span>
+  <input type="Password" class="form-control" ng-model="repassword" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2">
+</div>
+<br>
+
+<a id="btndownr" class="btn btn-md btn-primary">Register</a>
+</center>
+</body>
+</html>
