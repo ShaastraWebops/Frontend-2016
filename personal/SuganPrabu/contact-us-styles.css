@@ -7,6 +7,9 @@ body{
   background-size: contain;
   padding-bottom: 50px;
 }
+ul{
+  list-style-type: none;
+}
 .container-fluid{
   padding-left: 0px;
   padding-right: 0px;
@@ -36,11 +39,31 @@ body{
   overflow: hidden;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.rhombus:hover{
+   animation: opacity .5s;
+}
+@keyframes opacity{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.rhombus-front{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #E6E6E6;
+  visibility: hidden; 
+  z-index: 2;
 }
 .rhombus-text{
   -webkit-transform: rotate(-45deg);
@@ -54,6 +77,23 @@ body{
   display: table-cell;
   font-size: 1.5em;
   vertical-align: middle;
+  z-index: 2;
+}
+.rhombus-top{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.rhombus-bottom{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 .rhombus-grid > .rhombus:nth-child(1) {
   height: 320px;
@@ -116,6 +156,10 @@ body{
 .form-and-map{
   margin-top: 90px;
 }
+.contact-modal-contents{
+  display: block;
+  text-align: center;
+}
 #title{
 	position: fixed;
 	left: 50%;
@@ -157,4 +201,7 @@ body{
   position: fixed;
   margin-left: auto;
   margin-right: auto;
+}
+#contactPhone #contactMail{
+  padding-left: 5px;
 }

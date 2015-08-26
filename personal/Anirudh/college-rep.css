@@ -37,11 +37,16 @@ h2,h3,h4{
 .thumbnail
 {
 	border:0 none;
+  background-color: none;
 }
 .apply>ul>li>h3,h2
 {
 	color:white;
 	font-size:25px;
+}
+.caption
+{
+  cursor:pointer;
 }
 /*.box_rotate {
   -webkit-transform: rotate(180deg);  
@@ -99,5 +104,13 @@ h2,h3,h4{
     animation-name: handle_transition;
     animation-duration: 1s;
     animation-iteration-count: 1;
+}
+.btn-default
+{
+
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+
 }
 
