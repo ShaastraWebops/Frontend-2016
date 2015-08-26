@@ -133,3 +133,6 @@ app.controller("ModalInstanceCtrl", function($scope, $modalInstance, department)
 		$modalInstance.dismiss('cancel');
 	}
 });
+$('.rhombus').hover(function(){
+	//$('.rhombus-front').animate({opacity : })
+});

@@ -46,6 +46,25 @@ ul{
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+.rhombus:hover{
+   animation: opacity .5s;
+}
+@keyframes opacity{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.rhombus-front{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #E6E6E6;
+  visibility: hidden; 
+  z-index: 2;
+}
 .rhombus-text{
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -58,6 +77,23 @@ ul{
   display: table-cell;
   font-size: 1.5em;
   vertical-align: middle;
+  z-index: 2;
+}
+.rhombus-top{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.rhombus-bottom{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 .rhombus-grid > .rhombus:nth-child(1) {
   height: 320px;
