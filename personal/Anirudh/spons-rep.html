@@ -4,35 +4,522 @@
   <title>Sponsorship Representative</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="..\bower_components\jquery\dist\jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!--script src="..\bower_components\jquery\dist\jquery.min.js"></script-->
   <script src="..\bower_components\angular\angular.min.js"></script>
   <script type="text/javascript" src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
   <script type="text/javascript" src="js/parallax.js"></script>
   <script type="text/javascript" src="js/parallax.min.js"></script>
   <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
+  
   <link rel="stylesheet" type="text/css" href="spons-rep.css">
-  <script type="text/javascript">
-  /*$(document).ready(function()
-  {
-  	$(".intro").parallax()
-  });*/
-  </script>
+  
   <style type="text/css">
+  .motto
+  {
+    background-color:#35C8B6;
+    height:450px;
+  }
+  .motto>p:first-child
+  {
+    color:white;
+    /*font-size:40px;*/
+    text-align:center;
+    padding-top:90px;
+    padding-bottom:90px;
+  }
+  .motto>p:nth-child(2)
+  {
+  color:white;
+  /*font-size:40px;*/
+  text-align:center;
+  border:5px solid white;
+  padding:50px;
+  display:inline;
+  margin-bottom:90px;
+  margin-left:15%;
+  }
+  #await
+  {
+    padding:55px;
+    text-align:center;
+    color:#3C3D43;
+    font-size:50px;
+  }
+  .thumbnail
+  {
+    text-align:center;
+    background-color:transparent;
+    border:1px solid white;
+    margin:0px;
+  }
+
+  .caption>p
+  {
+    font-family: Arial;
+    color: white;
+  }
+  /*.caption>p:nth-child(1)
+  {
+    font-size: 30px;
+  }*/
+  .one
+  {
+  	font-size: 50px;
+  }
+  .two
+  {
+  	font-size: 20px;
+  }
+  #three
+  {
+  	font-weight:bold;
+  	font-size: 15px;
+  }
   figure figcaption
   {
   	text-align: center;
   }
+  h1
+  {
+  	font-size: 32px;
+   }
+   #object_1
+   {
+   	font-size:200px;
+   }
+   #img_1
+   {
+   	width:220px;
+   	height:200px;
+   	margin-top:100px;
+   }
+   h2
+   {
+   	font-size: 24px;
+   }
+   #first
+   {
+   	font-size:40px;
+   	text-align:center;
+   	margin:30px;
+   	margin-bottom:50px
+   }
+   figure>img
+   {
+   	width:200px;
+   	height:140px;
+   }
+   @media only screen and (min-width: 1200px) and (max-width: 1400px){
+   	h1
+   	{
+   		font-size: 32px;
+   	}
+   	#object_1
+   {
+   	font-size:200px;
+   }
+   #img_1
+   {
+   	width: 220px;
+   	height:200px;
+   }
+   h2
+   {
+   	font-size: 24px;
+   }
+   #first
+   {
+   	font-size: 40px;
+   }
+   figure>img
+   {
+   	width:200px;
+   	height:140px;
+   }
+   .one
+   {
+   	font-size: 50px;
+   }
+   .two
+   {
+   	font-size: 20px;
+    }
+    #three
+    {
+    font-size: 15px;
+    }
+    #await
+    {
+      font-size: 50px;
+    }
+    .motto>p
+    {
+      font-size: 40px;
+    }
+   }
+   @media only screen and (min-width: 1000px) and (max-width: 1200px){
+   	h1
+   	{
+   		font-size: 28px;
+   	}
+   	#object_1
+   	{
+   	font-size:180px;
+   	}
+   	#img_1
+   {
+   	width: 200px;
+   	height:180px;
+   }
+   h2
+   {
+   	font-size: 21px;
+   }
+   #first
+   {
+   	font-size: 40px;
+   }
+   figure>img
+   {
+   	width:180px;
+   	height:120px;
+   }
+    .one
+   {
+   	font-size: 65px;
+   }
+   .two
+   {
+   	font-size: 17px;
+    }
+    #three
+    {
+    font-size: 13px;
+    }
+    #await
+    {
+      font-size: 45px;
+    }
+    
+   }
+   @media only screen and (min-width: 1100px) and (max-width:1200px) {
+    .motto>p
+    {
+      font-size: 35px;
+    }
+   }
+  @media only screen and (min-width: 1000px) and (max-width:1100px) {
+    .motto>p
+    {
+      font-size: 32px;
+    }
+   }
+   @media only screen and (min-width: 900px) and (max-width: 1000px){
+    .motto>p
+    {
+      font-size: 27px;
+    }
+   }
+   @media only screen and (min-width: 850px) and (max-width: 900px){
+    .motto>p
+    {
+      font-size: 24px;
+    }
+   }
+   @media only screen and (min-width: 820px) and (max-width: 850px){
+    .motto>p
+    {
+      font-size: 22px;
+    }
+   }
+   @media only screen and (min-width: 800px) and (max-width: 820px){
+    .motto>p
+    {
+      font-size: 20px;
+    }
+   }
+   @media only screen and (min-width: 800px) and (max-width: 1000px){
+   	h1
+   	{
+   		font-size: 24px;
+   	}
+   	 #object_1
+   {
+   	font-size:160px;
+   }
+   #img_1
+   {
+   	width: 180px;
+   	height:160px;
+   }
+   h2
+   {
+   	font-size: 18px;
+   }
+   #first
+   {
+   	font-size: 35px;
+   }
+   figure>img
+   {
+   	width:160px;
+   	height:110px;
+   }
+    .one
+   {
+   	font-size: 60px;
+   }
+   .two
+   {
+   	font-size: 15px;
+    }
+    #three
+    {
+    font-size: 12px;
+    }
+    #await
+    {
+      font-size: 40px;
+    }
+    
+   }
+   @media only screen and (min-width: 700px) and (max-width :800px) {
+    .motto>p
+    {
+      font-size: 18px;
+    }
+   }
+   @media only screen and (min-width: 500px) and (max-width :700px) {
+    .motto>p
+    {
+      font-size: 14px;
+    }
+   }
+   @media only screen and (min-width: 350px) and (max-width :500px) {
+    .motto>p
+    {
+      font-size: 10px;
+    }
+   }
+   @media only screen and (min-width: 295px) and (max-width :350px) {
+    .motto>p
+    {
+      font-size: 8px;
+      border:none;
+      padding:20px;
+    }
+   }
+   @media only screen and (min-width: 600px) and (max-width: 800px){
+   	h1
+   	{
+   		font-size: 20px;
+   	}
+   	#object_1
+   {
+   	font-size:140px;
+   }
+   #img_1
+   {
+   	width: 160px;
+   	height:140px;
+   }
+   h2
+   {
+   	font-size: 16px;
+   }
+   #first
+   {
+   	font-size: 30px;
+   }
+   figure>img
+   {
+   	width:150px;
+   	height:100px;
+   }
+    .one
+   {
+   	font-size: 55px;
+   }
+   .two
+   {
+   	font-size: 13px;
+    }
+    #three
+    {
+    font-size: 10px;
+    }
+    #await
+    {
+      font-size: 35px;
+    }
+    
+   }
+   @media only screen and (min-width: 510px) and (max-width: 600px){
+   	h1
+   	{
+   		font-size: 16px;
+   	}
+   	#object_1
+   {
+   	font-size:120px;
+   }
+   #img_1
+   {
+   	width: 140px;
+   	height:120px;
+   }
+   h2
+   {
+   	font-size: 14px;
+   }
+   #first
+   {
+   	font-size: 27px;
+   }
+   figure>img
+   {
+   	width:130px;
+   	height:90px;
+   	display: block;
+   	margin:0 auto;
+   	text-align: center;
+   }
+    .one
+   {
+   	font-size: 50px;
+   }
+   .two
+   {
+   	font-size: 12px;
+    }
+    #three
+    {
+    font-size: 8px;
+    }
+    #await
+    {
+      font-size: 30px;
+    }
+    
+   }
+   @media only screen and (min-width:350px) and (max-width: 510px){
+   	h1
+   	{
+   		font-size: 12px;
+   	}
+   	#object_1
+   {
+   	font-size:80px;
+   }
+   #img_1
+   {
+   	width: 120px;
+   	height:100px;
+   }
+   h2
+   {
+   	font-size: 14px;
+   }
+   #first
+   {
+   	font-size: 25px;
+   }
+   figure>img
+   {
+   	width:110px;
+   	height:80px;
+   	display: block;
+   	margin:0 auto;
+   	text-align:center;
+   }
+    .one
+   {
+   	font-size: 45px;
+   }
+   .two
+   {
+   	font-size: 12px;
+    }
+    #three
+    {
+    font-size: 10px;
+    }
+    #await
+    {
+      font-size: 25px;
+    }
+    
+   }
+   @media only screen and (min-width:200px) and (max-width: 350px){
+   	h1
+   	{
+   		font-size: 10px;
+   	}
+   	#object_1
+   {
+   	font-size:60px;
+   }
+   #img_1
+   {
+   	width: 100px;
+   	height:100px;
+   }
+   h2
+   {
+   	font-size: 14px;
+   }
+   #first
+   {
+   	font-size: 20px;
+   }
+   figure>img
+   {
+   	width:100px;
+   	height:70px;
+   	display: block;
+   	margin:0 auto;
+   	text-align:center;
+   }
+    .one
+   {
+   	font-size: 35px;
+   }
+   .two
+   {
+   	font-size: 12px;
+    }
+    #three
+    {
+    font-size: 10px;
+    }
+    #await
+    {
+      font-size: 20px;
+    }
+   
+   }
   </style>
+  <script type="text/javascript">
+  $(document).ready(function()
+  {
+    console.log(screen.width);
+  //alert($(".motto>p:nth-child(2)").text());
+  //console.log(str);
+  //console.log($(".motto>p").attr("font-size"));
+  });
+  
+  </script>
 </head>
 <body>
 	<div class="intro" style="margin-bottom:100px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
-		<img src="spons_img/2.png" alt="Image Not Found :(" style="width:220px;height:200px;margin-top:100px" align="left">
-		<h1 style="color:white;font-size:200px;text-align:center;margin-top:5%;margin-bottom:5%;">Shaastra</h1>
+		<img src="spons_img/2.png" alt="Image Not Found :(" align="left" id="img_1">
+		<h1 style="color:white;text-align:center;margin-top:5%;margin-bottom:5%;" id="object_1">Shaastra</h1>
 		<h2>The Annual Technical Festival of Indian Insitute of Technology,Madras</h2><br>
-		<h3>Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.<br><br><b> We are THE Spirit of Engineering</h3><br>
+		<h2>Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.<br><br><b> We are THE Spirit of Engineering</h2><br>
 	</div>
-	<p style="font-size:40px;text-align:center;margin:30px;margin-bottom:50px">The First Student Organised Fest, in the world to be ISO 9001:2008 certified.</p>
+	<p id="first">The First Student Organised Fest, in the world to be ISO 9001:2008 certified.</p>
 
 	<div class="certification" style="margin-bottom:80px">
 		<div class="row">
@@ -117,40 +604,21 @@
 	</div>
 
 	<div class="statistics" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/8.png" data-speed="0.5">
-		<!--span style="margin-left:50px;margin-right:30px">
-			<p style="font-size:50px">225</p>
-			<p style="font-size:20px">percent increase in<br>
-			AVERAGE DAILY REACH</p>
-		</span>
-		<span style="margin-left:50px;margin-right:30px">
-			<p style="font-size:50px">16000</p>
-			<p style="font-size:20px">students impacted through<br>
-			EVENTS AND WORKSHOPS</p>
-		</span>
-		<span style="margin-left:50px;margin-right:30px">
-			<p style="font-size:50px">384</p>
-			<p style="font-size:20px">schools reached through <br>
-			OUTREACH ACTIVITIES</p>
-		</span>
-		<span style="margin-left:50px;margin-right:30px">
-			<p style="font-size:50px">155</p>
-			<p style="font-size:20px">percent increase in time<br>
-			PEOPLE ENGAGED ON DAILY BASIS</p>
-		</span-->
-		<table style="width:100%;margin-bottom:50px">
-  			<tr style="font-size:70px">
+		
+		<!--table style="width:100%;margin-bottom:50px">
+  			<tr  id="one">
     			<td>225</td>
     			<td>16000</td> 
     			<td>384</td>
     			<td>155</td>
   			</tr>
-  			<tr style="font-size:20px">
+  			<tr  id="two">
     			<td>percent increase in</td>
     			<td>students impacted through</td> 
     			<td>schools reached through</td>
     			<td>percent increase in time</td>
   			</tr>
-  			<tr style="font-size:15px;font-weight:bold;">
+  			<tr  id="three">
     			<td>AVERAGE DAILY REACH</td>
     			<td>EVENTS AND WORKSHOPS</td> 
     			<td>OUTREACH ACTIVITIES</td>
@@ -158,20 +626,66 @@
     			<br><br>
   			</tr>
   			
-		</table>
+		</table-->
+  <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      
+      <div class="caption" style="margin-left:30px">
+        <p class="one">225</p>
+        <p class="two">percent increase in</p>
+        <p class="two">AVERAGE DAILY REACH</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" >
+      
+      <div class="caption" >
+        <p class="one">16000</p>
+        <p class="two">students impacted through</p>
+        <p class="two">EVENTS AND WORKSHOPS</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" >
+      
+      <div class="caption" >
+        <p class="one">384</p>
+        <p class="two">schools reached through</p>
+        <p class="two">OUTREACH ACTIVITIES</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" >
+      
+      <div class="caption" >
+        <p class="one">155</p>
+        <p class="two">percent increase in time</p>
+        <p class="two">PEOPLE ENGAGED ON DAILY BASIS</p>
+      </div>
+    </div>
+  </div>
+
+</div>
 	</div>
 	<div class="ad_photos" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png spons_img/2.png spons_img/3.png">
 
 	</div>
-	<div style="padding:55px;text-align:center;color:#3C3D43;font-size:50px">
+	<div style="" id="await">
 		<p>SHAASTRA'S 17<sup>th</sup>&nbsp;EDITION AWAITS YOU</p>
 	</div>
 	<div class="ad_photos">
 
 	</div>
-	<div class="motto" style="background-color:#35C8B6;height:450px">
-		<p style="color:white;font-size:40px;text-align:center;padding-top:90px;padding-bottom:90px">THE MOTTO IS STILL THE SAME</p>
-		<p style="color:white;font-size:40px;text-align:center;border:5px solid white;padding:50px;display:inline;margin-bottom:90px;margin-left:200px" align="center">CELEBRATE THE SPIRIT OF ENGINEERING</p>
+	<div class="motto" style="">
+		<p style="" id="motto1">THE MOTTO IS STILL THE SAME</p>
+		<p style="" align="center">CELEBRATE THE SPIRIT OF ENGINEERING</p>
 
 	</div>
 	<div class="normal_para" style="padding-top:40px;padding-right:5%;padding-left:90px;margin-bottom:60px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.5">

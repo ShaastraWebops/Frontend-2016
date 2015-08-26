@@ -1,5 +1,6 @@
 $(document).ready(function()
-{
+{	//console.log($(".incentives>p:first-child").text(),$(".incentives>h4").text());
+	//console.log($(".apply>.row>.caption:eq(0)>h3").text());
 	/*var thumb_scroll=$("#reasons");
 	var thumb_top=thumb_scroll.offset().top;*/
 	var i_thumb=0;
@@ -129,5 +130,91 @@ $(document).ready(function()
 		else if ($(".handle_img>ul>li:eq(3)").offset().top>$(document).scrollTop()&&i_incentives==0) {
 			$(".incentives>ul").css("opacity",0);
 		};
+	});
+
+// Beginning of Leader modal
+
+var ctr;
+var cities = [ [   
+                                { "Name" : "Tejaswin P",  
+                                  "College"  : "IIT",
+                                  "points"       : 234 },
+
+                                { "Name" : "Shiva Prasad",  
+                                  "College"  : "IIT",
+                                  "points"       : 212 },
+
+                                 { "Name" : "Bala TK",  
+                                  "College"  : "IIT",
+                                  "points"       : 134 }
+                              ],                                
+              		 [ 
+                                { "Name" : "test",  
+                                  "College"  : "IIT-B",
+                                  "points"       : 2345 },
+
+                                { "Name" : "best",  
+                                  "College"  : "IIT-B",
+                                  "points"       : 2346 }
+                              ] 
+            ];
+            $("#pro").click(function()
+            {
+            	$("#leaderModal1").modal("hide");
+            	$("#leaderModal2").modal("show");
+            	//alert('here');
+            });
+            $("#back").click(function()
+            {
+            	$("#leaderModal2").modal("hide");
+            	$("#leaderModal1").modal("show");
+            	for(var i = 0; i < leaderTable.rows.length;)
+					{   
+   						leaderTable.deleteRow(i);
+					}
+            });
+            $("#leaderModal2").on('show.bs.modal', function () {
+            //alert('The modal is about to be shown.');
+    		});
+	//$("#leaderModal1>.modal-dialog>.modal-content>.modal-body>select").change(function()
+		$("#pro").click(function()
+	{	var ctr=Number($("#leaderModal1>.modal-dialog>.modal-content>.modal-body>select").val());
+		var table=document.getElementById("leaderTable");
+		var i;
+		//console.log(ctr,typeof ctr,cities[ctr].length,cities[ctr][0].Name,typeof cities[ctr][0].Name);
+		
+			console.log(ctr);
+			var begin=table.insertRow(0);
+			begin.insertCell(0).innerHTML="Name";
+			begin.insertCell(1).innerHTML="College";
+			begin.insertCell(2).innerHTML="Points";
+			for(i=1;i<=cities[ctr].length;i++)
+			{
+				var row=table.insertRow(i);
+				
+				row.insertCell(0).innerHTML=cities[ctr][i-1].Name;
+				row.insertCell(1).innerHTML=cities[ctr][i-1].College;
+				row.insertCell(2).innerHTML=cities[ctr][i-1].points;
+				//console.log(typeof row.insertCell(0).innerHTML,cities[ctr][i].Name);
+			}
+	
+	});
+	$("#saurabh").popover(
+	{
+		title: "<h5>Saurabh's Profile</h5>",
+		content:function(){return $("#saurabh_text").html();},
+		placement:"auto",
+		trigger:"click",
+		html:true,
+		viewport:"#viewport"
+	});
+	$("#tejaswin").popover(
+	{
+		title: "<h5>Tejaswin's Profile</h5>",
+		content:function(){return $("#tejaswin_text").html();},
+		placement:"auto",
+		trigger:"click",
+		html:true,
+		viewport:"#viewport"
 	});
 });
