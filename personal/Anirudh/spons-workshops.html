@@ -2,171 +2,56 @@
 <html lang="en">
 <head>
   <title>Sponsorship Representative</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="..\bower_components\jquery\dist\jquery.min.js"></script>
-  <script src="..\bower_components\angular\angular.min.js"></script>
-  <script type="text/javascript" src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/parallax.js"></script>
   <script type="text/javascript" src="js/parallax.min.js"></script>
-  <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
-  <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
-  <style type="text/css">
-
-
-  </style>
-  <style>
-    .workshop_info>img
-    {
-      margin-right:10%;margin-left:10%;
-    }
-    .workshop_info>h2
-    {
-      font-weight: bold;
-    }
-    .workshop_info>p
-    {
-      font-family: Arial;
-      font-size: 20px;
-      margin-bottom: 80px;
-    }
-    .workshop_info>p:nth-child(odd)
-    {
-      margin-left: 10%;
-    }
-    .workshop_info>p:nth-child(even)
-    {
-      margin-right: 10%;
-    }
-    .workshop_info>img
-    {
-      width: 300px;
-      height: 300px;
-    }
-    .workshop_info>img:nth-child(odd)
-    {
-      float:right;
-    }
-    .workshop_info>img:nth-child(even)
-    {
-      float:left;
-    }
-    /*.workshop_info>h2:nth-child(odd)
-    {
-      margin-left: 10%;
-    }
-    .workshop_info>h2:nth-child(even)
-    {
-      margin-right: 10%;
-    }*/
-    @media only screen and (min-width:1200px){
-      .workshop_info>img
-      {
-        width:300px;
-        height: 300px;
-
-      }
-      .workshop_info>p
-      {
-        font-size: 20px;
-      }
-      .workshop_info>h2
-      {
-        font-size: 24px;
-      }
-    }
-    @media only screen and (min-width:900px) and (max-width: 1200px){
-      .workshop_info>img
-      {
-        width:250px;
-        height: 250px;
-
-      }
-      .workshop_info>p
-      {
-        font-size: 17px;
-      }
-      .workshop_info>h2
-      {
-        font-size: 20px;
-      }
-    }
-    @media only screen and (min-width:700px) and (max-width: 900px){
-      .workshop_info>img
-      {
-        width:200px;
-        height: 200px;
-
-      }
-      .workshop_info>p
-      {
-        font-size: 15px;
-      }
-      .workshop_info>h2
-      {
-        font-size: 17px;
-      }
-    }
-    @media only screen and (min-width:400px) and (max-width: 700px){
-      .workshop_info>img
-      {
-        width:175px;
-        height: 175px;
-
-      }
-      .workshop_info>p
-      {
-        font-size: 13px;
-      }
-      .workshop_info>h2
-      {
-        font-size: 25px;
-      }
-    }
-    @media only screen and (max-width:400px){
-      .workshop_info>img
-      {
-        width:150px;
-        height: 150px;
-
-      }
-      .workshop_info>p
-      {
-        font-size: 13px;
-      }
-      .workshop_info>h2
-      {
-        font-size: 15px;
-      }
-    }
-    </style>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/cssfont-awesome.min.css">
+  <link rel="stylesheet" href="./spons-workshops.css">
 </head>
-<body>
+
+<body class="col col-sm-offset-1 col-sm-10">
   <div class="container-fluid">
-    <h1 style="text-align:center">Workshop</h1><br>
-    <img src="spons_img/workshop1.PNG" alt="Image Not Found :(" style="width:100%;padding-bottom:50px">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 title">Workshops</h1>
+    <img class="col-md-12 col-sm-12 col-xs-12" src="spons_img/workshop1.png" alt="Image Not Found">
 
-    <div class="workshop_info">
-      <img src="spons_img/workshop2.PNG" >
-      <h2 style="margin-left: 10%;">Android App Workshop</h2>
-      <p>Do you get excited when you try to explore the features of a new Android App?Spent sleepless nights trying to figure out how they work? Want to know what it takes to build an android app on your own? Shaastra in association with ________ brings you the android app workshop which is a great opportunity for you to start building apps. We will show you how to design, develop and manage apps. Join us and watch your hidden creativity take form.</p>
-    
-     <img src="spons_img/workshop3.PNG" >
-      <h2 >Chuck Glider Workshop</h2>
-      <p stye="float:right">The two day chuck glider workshop in association with _______ and Shaastra unfolds the intricacies of an integral part of aero modelling. The rudiments of chuck gliding in terms of functions of various parts of the glider, their design and assembling the part, the science hidden in their movement and finding their trajectory etc. will be eluciated in a lucis manner. It is followed by an open contest on chuck gliding to assess the efforts of the participants by providing them a level playing field with prizes, to be seized by the ones with endeavour. It captivates not only the masses but also ignites the intellect of budding talent across the globe.</p>
+    <div class="container-fluid workshop-info">
+      <div style="padding:5%;">
+        <div class="row">
+          <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/workshop2.png" alt="Image Not Found">
+          <h2 class="col-md-7 col-sm-12 col-xs-12">Android App Workshop</h2>
+          <p class="content col-md-7 col-sm-12 col-xs-12">Do you get excited when you try to explore the features of a new Android App?Spent sleepless nights trying to figure out how they work? Want to know what it takes to build an android app on your own? Shaastra in association with ________ brings you the android app workshop which is a great opportunity for you to start building apps. We will show you how to design, develop and manage apps. Join us and watch your hidden creativity take form.</p>
+        </div>
+        <br />
+        <div class="row">
+          <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/workshop2.png" alt="Image Not Found">
+          <h2 class="col-md-7 col-sm-12 col-xs-12">Android App Workshop</h2>
+          <p class="content col-md-7 col-sm-12 col-xs-12">Do you get excited when you try to explore the features of a new Android App?Spent sleepless nights trying to figure out how they work? Want to know what it takes to build an android app on your own? Shaastra in association with ________ brings you the android app workshop which is a great opportunity for you to start building apps. We will show you how to design, develop and manage apps. Join us and watch your hidden creativity take form.</p>
+        </div>
+        <br />
+        <div class="row">
+          <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/workshop3.png" alt="Image Not Found">
+          <h2 class="col-md-7 col-sm-12 col-xs-12">Android App Workshop</h2>
+          <p class="content col-md-7 col-sm-12 col-xs-12">Do you get excited when you try to explore the features of a new Android App?Spent sleepless nights trying to figure out how they work? Want to know what it takes to build an android app on your own? Shaastra in association with ________ brings you the android app workshop which is a great opportunity for you to start building apps. We will show you how to design, develop and manage apps. Join us and watch your hidden creativity take form.</p>
+        </div>
+        <br />
+        <div class="row">
+          <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/workshop2.png" alt="Image Not Found">
+          <h2 class="col-md-7 col-sm-12 col-xs-12">Android App Workshop</h2>
+          <p class="content col-md-7 col-sm-12 col-xs-12">Do you get excited when you try to explore the features of a new Android App?Spent sleepless nights trying to figure out how they work? Want to know what it takes to build an android app on your own? Shaastra in association with ________ brings you the android app workshop which is a great opportunity for you to start building apps. We will show you how to design, develop and manage apps. Join us and watch your hidden creativity take form.</p>
+        </div>
+        <br />
+        <div class="row">
+          <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/robo-oceana.jpg" alt="Image Not Found">
+          <h2 class="col-md-7 col-sm-12 col-xs-12">Android App Workshop</h2>
+          <p class="content col-md-7 col-sm-12 col-xs-12">Do you get excited when you try to explore the features of a new Android App?Spent sleepless nights trying to figure out how they work? Want to know what it takes to build an android app on your own? Shaastra in association with ________ brings you the android app workshop which is a great opportunity for you to start building apps. We will show you how to design, develop and manage apps. Join us and watch your hidden creativity take form.</p>
+        </div>
+        <br />
+      </div>
 
-      <img src="spons_img/workshop2.PNG" >
-      <h2 style="margin-left: 10%;">IoT Workshop</h2>
-      <p>Do you know that in the age of modern technology we are inceasingly using our devices to communicate among themselves? Join for a two day workshop conducted by Shaastra in colloboration with ____________. IoT, the internet of things, where you extend the benefit of regular internet ---- constant connectivity, regular control, share data, trigger alerts and so on ---- to goods in the physical world viz. appliances,electric gadgets and even food. You make them talk to each other through a maze of local and global networks with embedded sensors. </p>
-
-      <img src="spons_img/workshop2.PNG" >
-      <h2 >Line Following Hovercraft Workshop</h2>
-      <p>Hovercraft, the most popular class of ACV's(Air Cushion Vehicles) that generate lift independent of thrust and as the name suggests, it hovers. Once challenged widely and noted with skepticism for its bold design, it was claimed to be another outlandish model on paper, yet another flying car with no practical application. Today, beating all odds, hovercraft is being used in all military rescue operations. This workshop is brought by Shaastra in association with ___________. It provides an opportunity for explorers to devise their own line follower hovercraft hands-on and to know all principles of aircraft governing the machine.</p>
-
-      <img src="spons_img/robo oceana.jpg" >
-      <h2 style="margin-left: 10%;">Robo Oceana Workshop</h2>
-      <p>Shaastra 2016 brings you a workshop on Marine robotics in colloboration with ___________-, Shaastra Robo-Oceana Workshop. This workshop gives you a basic understanding of robotics, its components, mechanisms and robotics. Build your first remote controlled robot. Learn the concept of differential drive, build a robot from scratch using a floating chassis, motor powered propellers, connect the neural networks of robots by wiring the motors to the remote control and the battery and make the marine robot go forward and backward or tun on the spot and splash water. </p>
-  </div>
+    </div>
   </div>
 </body>
 </html>
