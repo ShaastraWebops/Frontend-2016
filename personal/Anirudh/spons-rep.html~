@@ -821,6 +821,13 @@
 
 	</div>
 
-
+<script>
+	
+	$(document).ready(function() {
+		
+		console.log('here');
+	});
+	
+</script>
   </body>
 </html>
