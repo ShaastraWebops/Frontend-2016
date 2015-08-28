@@ -13,6 +13,10 @@
 	padding: 1%;
 }
 
+.sub-title {
+	font-weight: bold;
+}
+
 .content {
 	font-family: 'roboto-font';
 	font-size: 1.3em;
