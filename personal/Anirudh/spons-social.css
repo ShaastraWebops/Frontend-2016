@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'robust-font';
+	src: url('fonts/CGF-Locust-Resistance.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'roboto-font';
+	src: url('Roboto-Regular-webfont.woff') format('woff');
+}
+
+.title {
+	font-family: 'robust-font';
+	padding: 1%;
+}
+
+.content {
+	font-family: 'roboto-font';
+	font-size: 1.3em;
+}
