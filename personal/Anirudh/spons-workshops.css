@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'robust-font';
-	src: url('fonts/CGF-Locust-Resistance.woff') format('woff');
+	src: url('./fonts/CGF-Locust-Resistance.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'roboto-font';
-	src: url('Roboto-Regular-webfont.woff') format('woff');
+	src: url('./fonts/Roboto-Regular-webfont.woff') format('woff');
 }
 
 .title {
@@ -15,11 +15,13 @@
 
 .sub-title {
 	font-weight: bold;
+	color: black;
 }
 
 .content {
 	font-family: 'roboto-font';
 	font-size: 1.3em;
+	color: black;
 }
 
 .workshop-info > img:nth-child(odd) {
