@@ -90,13 +90,7 @@ body {
 	overflow: visible;
 	position: relative;
 }
-/*svg {
-	
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%);
-}*/
+
 .invisiblebox1 {
 	background-color: rgba(96,113,238,0);
 	width: 40%;
@@ -161,6 +155,41 @@ body {
 }
 .mid-1 {
   left: 13%;
+}
+
+.path1, .path2 {
+		stroke: #fff;
+		stroke-width: 6;
+		fill: none;
+		stroke-dasharray: 40;
+		stroke-dashoffset: 40;
+		transition: stroke-dashoffset 0.3s ease;
+	}
+.elemboxleft:hover .path1 {
+	stroke-dashoffset: 0;
+}
+.elemboxleft:hover .path2 {
+	stroke-dashoffset: 0;
+}
+.elemboxright:hover .path1 {
+	stroke-dashoffset: 0;
+}
+.elemboxright:hover .path2 {
+	stroke-dashoffset: 0;
+}
+.svg-lines {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+	-moz-tarnsform: translate(-50%);
+	-o-transform: translate(-50%);
+} 
+.top-1 .svg-lines, .mid-1 .svg-lines, .mid-2 .svg-lines, .botm-1 .svg-lines {
+	top: 57%;
+}
+.top-2 .svg-lines, .botm-2 .svg-lines {
+	top: 67%;
 }
 .small-screen-heading {
 	color: #000000;
