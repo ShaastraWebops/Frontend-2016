@@ -20,8 +20,12 @@
 
 .content {
 	font-family: 'roboto-font';
-	font-size: 1.3em;
+	font-size: 1.1em;
 	color: black;
+}
+
+.text-right {
+	text-align: right;
 }
 
 .workshop-info > img:nth-child(odd) {
