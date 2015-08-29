@@ -2,11 +2,12 @@
 <html lang="en">
     <head>
         <title>ng-scrollable</title>
-        <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="../min/ng-scrollable.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+         <link rel="stylesheet" type="text/css" href="styles.css">
+ 	    <script type="text/javascript" src="app1.js"></script>
+
 
        
         <style>
@@ -31,7 +32,7 @@
            
     img {
     max-width: 550px;
-    margin-left: 40%;
+    margin-left: 20%;
     height: auto;
     width: auto\9;
 /* ie8 */
@@ -56,19 +57,67 @@
 .wrapperz{
     height: auto;
 }
+.glyphicon
+{
+    display: inline-block;
+    
+    text-align: center;
+     width:70px;
+     line-height: 70px;
+    background-color: rgba(205,201,201,0.5);
+    font-size: 30px;
+    position: relative;
+     -moz-border-radius: 70px; 
+   -webkit-border-radius: 70px; 
+   border-radius: 70px;
+    z-index: 2000;
+
+}
+article .glyphicon:hover {background-color:rgba(128,128,128,0.7); 
+	cursor: pointer; 
+
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 1000ms linear;
+}
+
+/*.wrap{
+  position: relative;
+  
+  display:table;
+}
+
+.wrap .left-icon{
+  position: absolute;
+  right: 0px;
+
+  
+
+
+    /* must be equal to parent's right padding */
+}
+
+
+
+
 
            </style>
     
     </head>
     <body ng-app="eventlist" >
+
    
        <div id="heading">Events</div>
        <article ng-controller="demo"> 
                         <div ng-scrollable="{scrollX:'bottom',scrollY:'none'}" class="scrollarea"  spy-x="posX" spy-y="posY">
            <div class="wrap">
+           
         <div class="wrapperz">
+
             <img src="images/aerofest.png"/>
-        </div>
+            </div>
          <div class="wrapperz">
             <img src="images/bevents.png" />
         </div>
@@ -93,17 +142,13 @@
         <div class="wrapperz">
             <img src="images/aerofest.png" />
         </div>
+
     
                       </div></div>
-         
-<div style="margin-left:50%">
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-lg" ng-click="moveX(-500)">LEFT</button>
-
-                                <button class="btn btn-primary btn-lg" ng-click="moveX(500)">RIGHT</button>
-                            </div>
-                           
-                        </div>  </article>      
+                        <span  style = "float:left ;margin-top:-190px;margin-left:10px;" class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
+                        <span   style = "float:right; margin-top:-190px;"class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
+                      
+  </article>      
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
         <script src="../min/ng-scrollable.min.js"></script>
         <script src="demo.js"></script>
