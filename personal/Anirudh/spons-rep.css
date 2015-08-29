@@ -41,7 +41,7 @@ h2,h3,h4{
 {
 	/*background: url(spons_img/8.png) no-repeat center center scroll;*/
 	color: white;
-	height:300px;
+	
 	list-style-type: none;
 }
 
@@ -67,7 +67,7 @@ table
 .normal_para
 {
 	/*background: url(spons_img/14.png) no-repeat center center scroll;*/
-	height:340px;
+	/*height:340px;*/
 }
 .events>div img
 {
