@@ -1,0 +1,46 @@
+section {
+  background: #eee;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.module {
+  min-height: 200px;
+  position: relative;
+  float: left;
+  padding: 20px;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.come-in {
+  -webkit-transform: translateY(150px);
+  -webkit-animation: come-in 0.8s ease forwards;
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.already-visible {
+  -webkit-transform: translateY(0);
+  -webkit-animation: none;
+  transform: translateY(0);
+  animation: none;
+}
+
+@-webkit-keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }  
+}
+
+
+@keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
