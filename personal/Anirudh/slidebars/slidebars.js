@@ -28,6 +28,7 @@
 		// ----------------------
 		// 001 - Default Settings
 
+
 		var settings = $.extend( {
 			siteClose: true, // true or false - Enable closing of Slidebars by clicking on #sb-site.
 			scrollLock: false, // true or false - Prevent scrolling of site when a Slidebar is open.
@@ -247,6 +248,10 @@
 				}, 400 );
 			}
 		}
+		
+		$('body').click(function(){
+			close();
+		});
 		
 		// Toggle either Slidebar
 		function toggle( side ) {

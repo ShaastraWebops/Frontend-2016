@@ -142,6 +142,35 @@
   .caption{
     color: black;
   }
+
+  #side-menu {
+    position:absolute;
+    height: 100%;
+    left:0;
+    top:0;
+      list-style-type: none;
+      margin: 0;
+      
+      padding: 0;
+    width:100%;
+    background-color: white;
+  }
+  #side-menu li{
+      display: block;
+      width: 100%;  
+    text-align:center;
+  }
+  #side-menu a{
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  hr { 
+    margin-top: 17px; 
+    margin-bottom: 17px; 
+  }
+
   </style>
 
 
@@ -158,6 +187,9 @@
             $('#ticks').removeClass('initialAdjustment');
         }
     });
+  $('body').click(function(){
+    
+  });
 
   });
   
@@ -399,35 +431,23 @@
 	</div>
 	
 	<!-- Side bar content -->
-	<div class="sb-slidebar sb-right">
-		<table class="table">
-                  <thead>
-		  <tr>
-		    <th ><h3 style="color:white;">Categories</h3></th>
-		  </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <th><a href="spons-why.html"><i class="fa fa-question-circle fa-x"></i>&nbsp;&nbsp;&nbsp;Why Spons</a></th>
-		    </tr>
-		    <tr>
-		      <th><a href="spons-workshops.html"><i class="fa fa-table fa-x"></i>&nbsp;&nbsp;&nbsp;Workshops</a></th>
-		    </tr>
-		    <tr>
-		      <th><a href="spons-events.html"><i class="fa fa-trophy fa-x"></i>&nbsp;&nbsp;&nbsp;Events</a></th>
-		    </tr>
-		    <tr>
-		      <th><a href="spons-social.html"><i class="fa fa-tasks fa-x"></i>&nbsp;&nbsp;&nbsp;Social</a></th>
-		    </tr>
-		    <tr>
-		      <th><a href="spons-quotes.html"><i class="fa fa-comment fa-x"></i>&nbsp;&nbsp;&nbsp;Quotes</a></th>
-		    </tr>
-		    <tr>
-		      <th><a href="spons-publicity.html"><i class="fa fa-users fa-x"></i>&nbsp;&nbsp;&nbsp;Publicity</a></th>
-		    </tr>
+	<div class="sb-slidebar sb-right" style="background-color:white">
+		<ul id="side-menu"><br>
+      <li><a href="#"><div class="headings"><b>SPONSORSHIP BRONCHURE</b></div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>Q</b>uality <b>M</b>anagement <b>S</b>ystem</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>E</b>vents</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>W</b>orkshops</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>S</b>ocial <b>C</b>ause</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>W</b>hy <b>S</b>ponsor <b>S</b>haastra</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>P</b>ublicity</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>A</b>venues <b>F</b>or <b>S</b>ponsorship</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>Q</b>uotes <b>F</b>rom <b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>M</b>ap</div></a></li><hr>
+      <li><a href="#"><div class="headings"><b>Q</b>uotes <b>F</b>rom <b>P</b>artcipants</div></a></li><hr>
+  </ul>
 		    
-		  </tbody>
-		</table>
+		  
 
 	</div>
 
