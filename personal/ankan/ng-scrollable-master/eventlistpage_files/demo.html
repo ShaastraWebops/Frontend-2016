@@ -4,6 +4,7 @@
         <title>ng-scrollable</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="../min/ng-scrollable.min.css" rel="stylesheet">
+        <link href=""
         <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
          <link rel="stylesheet" type="text/css" href="styles.css">
  	    <script type="text/javascript" src="app1.js"></script>
@@ -24,12 +25,13 @@
        
             }
         article {
-        margin-top:0;
+        margin-top:0.2%;
         position: relative;
         height: 80%;
     }
     .scrollarea { 
-    	width: 100%; 
+
+    	width: 105%; 
     	height: 91%;
     	 margin:0 auto;
     	}
@@ -40,7 +42,7 @@
      	font-size: 0;
      } 
      .top-nav img{
-    width: 20vh;
+    width: 19.9vh;
    bottom: 35%;
     height: auto;
     border-top: 3.9px solid #000;
@@ -87,7 +89,7 @@
         font-family: 'Orbitron', sans-serif;
     }
 .wrap{width: 300%;
-margin-left: 20%; } 
+margin-left: 30%; } 
 
 .wrapperz{
     height: auto;
@@ -223,7 +225,7 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
         <div class="wrapperz" >
  <div class="slider">
 				</div>
-            <img ng-click="moveX(-500)" src="images/aerofest.png"/>
+            <img  src="images/aerofest.png"/>
            
 		  <p class="event-name">Aerofest 
             </p></div>
@@ -282,7 +284,7 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
     
                       </div></div>
        <article ng-controller="demo"> 
-                        <div ng-scrollable="{scrollX:'bottom',scrollY:'none'}" class="scrollarea"  spy-x="posX" spy-y="posY">
+                        <div ng-scrollable="{scrollX:'top',scrollY:'none'}" class="scrollarea"  spy-x="posX" spy-y="posY">
            <div class="wrap">
            
         <div class="wrapperz" >
@@ -360,7 +362,7 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
                       
   </article>      
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-        <script src="../min/ng-scrollable.min.js"></script>
+        <script src="../src/ng-scrollable.js"></script>
         <script src="demo.js"></script>
         
     </body>

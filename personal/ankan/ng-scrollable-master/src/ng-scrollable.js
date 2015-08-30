@@ -100,7 +100,7 @@ angular.module('ngScrollable', [])
         },
         isXActive = false,
         isYActive = false,
-        containerWidth = 0,
+        containerWidth =0,
         containerHeight = 0,
         contentWidth = 0,
         contentHeight = 0,
@@ -442,7 +442,7 @@ angular.module('ngScrollable', [])
             deltaX = -s;
             break;
           case 38: // up
-            deltaY = s;
+            deltaY = s ;
             break;
           case 39: // right
             deltaX = s;

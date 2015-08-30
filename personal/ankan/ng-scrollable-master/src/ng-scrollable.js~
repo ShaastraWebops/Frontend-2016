@@ -100,7 +100,7 @@ angular.module('ngScrollable', [])
         },
         isXActive = false,
         isYActive = false,
-        containerWidth = 0,
+        containerWidth =0,
         containerHeight = 0,
         contentWidth = 0,
         contentHeight = 0,
@@ -138,7 +138,7 @@ angular.module('ngScrollable', [])
         updateSliderX = function () {
           // adjust container width by the amount of border pixels so that the
           // slider does not extend outside the bar region
-          var cw = containerWidth - 3;
+          var cw = containerWidth - 600;
           if (isXActive) {
             xSliderWidth = Math.max(config.minSliderLength, parseInt(cw * cw / contentWidth, 10));
             xSliderLeft = parseInt(contentLeft * (cw - xSliderWidth) / (contentWidth - cw), 10);
@@ -442,7 +442,7 @@ angular.module('ngScrollable', [])
             deltaX = -s;
             break;
           case 38: // up
-            deltaY = s;
+            deltaY = s ;
             break;
           case 39: // right
             deltaX = s;

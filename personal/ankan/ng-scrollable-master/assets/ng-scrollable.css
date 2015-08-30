@@ -30,6 +30,7 @@
 */
 
 /* if any element is fixed and displayed at full window size, this rule becomes handy */
+
 .fullwindow .scrollable-content {
     transform: none !important;
 }

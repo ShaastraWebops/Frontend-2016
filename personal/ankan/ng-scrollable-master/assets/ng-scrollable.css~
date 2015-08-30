@@ -30,6 +30,9 @@
 */
 
 /* if any element is fixed and displayed at full window size, this rule becomes handy */
+.scrollable-content.scrollable-top {
+    margin-top: 150px;
+}
 .fullwindow .scrollable-content {
     transform: none !important;
 }
