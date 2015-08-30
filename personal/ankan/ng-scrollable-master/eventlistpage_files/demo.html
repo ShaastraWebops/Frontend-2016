@@ -23,16 +23,16 @@
       
        
             }
-                article {
+        article {
         margin-top:0;
         position: relative;
-		
         height: 80%;
-
-       
-        
     }
-    .scrollarea { width: 100%; height: 90%; margin:0 auto;}
+    .scrollarea { 
+    	width: 100%; 
+    	height: 91%;
+    	 margin:0 auto;
+    	}
      .top-nav{
      	width:100%;
      	height: 10%;
@@ -41,7 +41,7 @@
      } 
      .top-nav img{
     width: 20vh;
-   bottom: 30%;
+   bottom: 35%;
     height: auto;
     border-top: 3.9px solid #000;
     overflow: hidden;
@@ -49,12 +49,12 @@
     width: auto\9;/* ie8 */
      }     
    .wrap img {
-    width: 80vh;
+    width: 70vh;
     margin-top: 35%;
    cursor: pointer;
    bottom: 30%;
+   line-height: 20%;
     height: auto;
-
 
     width: auto\9;
 /* ie8 */
@@ -62,7 +62,7 @@
 
 .wrapperz{
     display:block;
-    
+   
     height: auto;
     position: relative;
     z-index: 999;
@@ -91,11 +91,12 @@ margin-left: 20%; }
 
 .wrapperz{
     height: auto;
-    overflow: hidden;
-
-
+  
 }
- p.event-name {
+ .top-nav .wrapperz{
+ 	overflow: hidden;
+ }
+ .wrap1 p.event-name {
 		width: 100%;
 		color: white;
 		position: absolute;
@@ -132,12 +133,21 @@ img .slider {
 
 		}
 	.top-nav .wrapperz:hover .event-name {
-			-webkit-transform : translateY(150%);
-			-moz-transform : translateY(150%);
-			-o-transform : translateY(150%);
-			transform : translateY(150%);
+			-webkit-transform : translateY(180%);
+			-moz-transform : translateY(180%);
+			-o-transform : translateY(180%);
+			transform : translateY(180%);
 		}
-	 
+	.wrap p.event-name {
+		position: relative;
+		width: 100%;
+		bottom: 0;
+		margin-top: 10%;
+	
+		font-weight:bold; 
+		text-align: center;
+		font-size: 4vh;
+	}
 .glyphicon
 {
     display: inline-block;
@@ -162,6 +172,24 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
     -ms-transition: background-color 100ms linear;
     transition: background-color 1000ms linear;
 }
+ .scrollarea span.two-dots {
+		position: absolute;
+		height: 10%;
+		width: 2.223%;
+		top: 80%;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		transform: translate(-50%);
+	}
+	.two-dots div {
+		width: 1vh;
+		height: 23.334%;
+		border-radius: 50%;
+		background: #000;
+		margin-top: 90%;
+	}
 
 /*.wrap{
   position: relative;
@@ -189,16 +217,16 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
     <body ng-app="eventlist" >
        <div id="heading">Events</div>
        <br>
-       <div class="top-nav">
+       <div  class="top-nav">
        <div class="wrap1">
            
         <div class="wrapperz" >
  <div class="slider">
 				</div>
-            <img src="images/aerofest.png"/>
+            <img ng-click="moveX(-500)" src="images/aerofest.png"/>
            
-		  <p class="event-name">Aerofest</p> 
-            </div>
+		  <p class="event-name">Aerofest 
+            </p></div>
          <div class="wrapperz">
           <div class="slider">
 				</div>
@@ -258,38 +286,77 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
            <div class="wrap">
            
         <div class="wrapperz" >
-
             <img src="images/aerofest.png"/>
+            <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					<p class="event-name">Aerofest</p> 
             </div>
          <div class="wrapperz">
             <img src="images/bevents.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">B-events</p> 
+					
         </div>
          <div class="wrapperz">
             <img src="images/coding.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					
+					 <p class="event-name">Coding</p> 
+            
         </div>
          <div class="wrapperz">
             <img src="images/design and build.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Design And Build</p>
+
         </div>
          <div class="wrapperz">
             <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Department Flagship</p>
         </div>
          <div class="wrapperz">
             <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Electronic Fest</p>
         </div>
          <div class="wrapperz">
             <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Involve</p>
         </div>
          <div class="wrapperz">
             <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					  <p class="event-name">Quizzing</p>
         </div>
         <div class="wrapperz">
             <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Spotlight</p>
         </div>
 
     
                       </div></div>
-                        <span  style = "float:left ;margin-top:-190px;margin-left:10px;" class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
-                        <span   style = "float:right; margin-top:-190px;"class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
+                        <span  style = "float:left ;margin-top:-210px;margin-left:10px;" class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
+                        <span   style = "float:right; margin-top:-210px;"class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
                       
   </article>      
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
