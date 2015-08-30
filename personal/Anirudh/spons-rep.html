@@ -4,7 +4,7 @@
   <title>Sponsorship Representative</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
   <!--script src="..\bower_components\jquery\dist\jquery.min.js"></script-->
   <script src="..\bower_components\angular\angular.min.js"></script>
   <script type="text/javascript" src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
@@ -21,7 +21,7 @@
   .motto
   {
     background-color:#35C8B6;
-    height:450px;
+    height:300px;
   }
   .motto>p:first-child
   {
@@ -107,11 +107,7 @@
    	margin:30px;
    	margin-bottom:50px
    }
-   figure>img
-   {
-   	width:200px;
-   	height:140px;
-   }
+   
    
   tbody>tr>th>a,tbody>tr>th>a:link,tbody>tr>th>a:visited,tbody>tr>th>a:hover,tbody>tr>th>a:active
   {
@@ -138,13 +134,10 @@
     cursor:pointer;
   }
 
-  .anim{
-    -webkit-transform:translate(0,-500px);
+  .initialAdjustment{
+    -webkit-transform: translate(0,500px);
   }
-  #ticks{
-    position: relative;
-    top:0;
-    left: 0;
+  #ticks{ 
     -webkit-transition: -webkit-transform 1s ease-in-out;
   }
   .caption{
@@ -158,10 +151,12 @@
   {
     console.log(screen.width);
   $.slidebars();
+  $("#ticks").addClass('initialAdjustment');
   var topOfOthDiv = $("#about-shaastra").offset().top;  
   $(window).scroll(function () {
         if ($(window).scrollTop() > topOfOthDiv) {
-            $("#ticks").addClass('anim');
+
+            $('#ticks').removeClass('initialAdjustment');
         }
     });
 
@@ -183,9 +178,41 @@
 		<h2 id="shaastra-paragraph">Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.<br><br><b> We are THE Spirit of Engineering</h2><br>
 		
 	</div>
-	<p id="first">The First Student Organised Fest, in the world to be ISO 9001:2008 certified.</p>
+	<p id="first">The First Student Organised Fest, in the world to be ISO 9001:2008 certified.</p><br><br><br>
+<!-- <div id="easing" data-0="top:100%" data-200="bottom:50%"> -->
+<div class="certification" style="margin-bottom:100px">
+  <div class="row" id="ticks">
+      <div class="col-sm-6 col-md-4" >
+        <div class="thumbnail" >
+          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
+          <div>
+            <h2 class="caption"><b>Planning</b></h2>
+          </div>
+        </div>
+      </div>
 
-	<div class="certification" style="margin-bottom:300px">
+      <div class="col-sm-6 col-md-4" >
+        <div class="thumbnail" >
+          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
+          <div>
+            <h2 class="caption"><b>Innovation</b></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4" >
+        <div class="thumbnail" >
+          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
+          <div>
+            <h2 class="caption"><b>Execution</b></h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- </div> -->
+
+	
 		
 	</div>
 
@@ -227,35 +254,7 @@
   				<figcaption >Industry</figcaption>
 			</figure>
 			<br><br>
-      <div class="row" id="ticks">
-      <div class="col-sm-6 col-md-4" >
-        <div class="thumbnail" >
-          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
-          <div>
-            <h2 class="caption"><b>Planning</b></h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4" >
-        <div class="thumbnail" >
-          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
-          <div>
-            <h2 class="caption"><b>Innovation</b></h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4" >
-        <div class="thumbnail" >
-          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
-          <div>
-            <h2 class="caption"><b>Execution</b></h2>
-          </div>
-        </div>
-      </div>
-
-    </div>
+      
 
 			<figure align="center">
   				<img src="spons_img/4.png" alt="The Pulpit Rock" width="304" height="228"><br>
@@ -349,27 +348,27 @@
 
 	</div>
 	<div class="motto" style="">
-		<p style="" id="motto1">THE MOTTO IS STILL THE SAME</p>
-		<p style="" align="center">CELEBRATE THE SPIRIT OF ENGINEERING</p>
+		<p style="position:relative;top:-10%" id="motto1">THE MOTTO IS STILL THE SAME</p>
+		<p style="position:relative;top:0%;left:19%" align="center">CELEBRATE THE SPIRIT OF ENGINEERING! </p>
 
 	</div>
 	<div class="normal_para" style="padding-top:40px;padding-right:5%;padding-left:90px;margin-bottom:60px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.5">
-			<img src="spons_img/normal.PNG" alt="Image not loaded :(" style="width:300px;height:300px;float:left;margin-right:80px">
+			<img src="spons_img/normal.png" alt="Image not loaded :(" style="width:300px;height:250px;float:left;margin-right:80px">
 			<p style="font-size:20px;color:white;display:inline;padding-top:50px;font-family:Helvetica;font-weight:400">Since it's inception,Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai to visit this spectacle, Shaastra's reach is now beyond city,state and country and has a stake on international stage. Marquee events like IIT-M Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity,industry and academia.</p>
 			
 	</div>
 	<div class="events">
 		<p style="font-size:50px;text-align:center;margin-bottom:40px">EVENTS</p>
 		<div style="display:inline-block;margin-top:60px;margin-left:60px">
-			<img src="spons_img/13_1.PNG" alt="Image Not Found :(" >
-			<img src="spons_img/13_2.PNG" alt="Image Not Found :(" >
-			<img src="spons_img/13_3.PNG" alt="Image Not Found :(" >
-			<img src="spons_img/13_4.PNG" alt="Image Not Found :(" >
-			<img src="spons_img/13_5.PNG" alt="Image Not Found :(" >
-			<img src="spons_img/13_6.PNG" alt="Image Not Found :(" >
-			<img src="spons_img/13_7.PNG" alt="Image Not Found :(" style="margin-bottom:150px">
-			<img src="spons_img/13_8.PNG" alt="Image Not Found :(" style="margin-bottom:150px">
-			<img src="spons_img/13_9.PNG" alt="Image Not Found :(" style="margin-bottom:150px">
+			<img src="spons_img/13_1.png" alt="Image Not Found :(" >
+			<img src="spons_img/13_2.png" alt="Image Not Found :(" >
+			<img src="spons_img/13_3.png" alt="Image Not Found :(" >
+			<img src="spons_img/13_4.png" alt="Image Not Found :(" >
+			<img src="spons_img/13_5.png" alt="Image Not Found :(" >
+			<img src="spons_img/13_6.png" alt="Image Not Found :(" >
+			<img src="spons_img/13_7.png" alt="Image Not Found :(" style="margin-bottom:150px">
+			<img src="spons_img/13_8.png" alt="Image Not Found :(" style="margin-bottom:150px">
+			<img src="spons_img/13_9.png" alt="Image Not Found :(" style="margin-bottom:150px">
 
 
 		</div>
@@ -401,19 +400,19 @@
  			</div>
 		</div>
 	</div>
-	<div class="humbly" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.6">
-		<h2 style="color:white;font-size:35px;margin-bottom:100px;padding-top:150px" align="center">We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass roots level!</h2>
-		<h2 style="color:white;font-size:30px;margin-left:20px;margin-bottom:100px" >FOR SPONSORSHIP AND INDUSTRY RELATION,PLEASE CONTACT:</h2>
+	<div class="humbly" style="background-image: url('spons_img/14.png');">
+		<h2 style="color:white;font-size:35px;margin-bottom:100px;padding-top:100px" align="center">We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass roots level!</h2>
+		<h2 style="color:white;font-size:30px;margin-left:100px;margin-bottom:100px;text-align:center" >FOR SPONSORSHIP AND INDUSTRY RELATION,PLEASE CONTACT</h2>
 
 		<ul class="list-inline" >
-			<li style="width:33%">
+			<li style="width:32%">
 				<h2>BHAVIK RASAYARA</h2>
 				<h3>Core Team Member</h3>
 				<h3>Sponsorship and PR</h3>
 				<h3><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</h3>
 				<h3><i class="fa fa-envelope"></i>&nbsp;&nbsp;bhavik@shaastra.org</h3>
 			</li>
-			<li style="width:35%">
+			<li style="width:37%">
 				<h2>SHASHANKA RAO</h2>
 				<h3>Core Team Member</h3>
 				<h3>Sponsorship and PR</h3>
