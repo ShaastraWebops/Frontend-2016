@@ -1,9 +1,19 @@
 (function(){
-var app = angular.module('eventslist', []);
+var app = angular.module('eventslist',['ngScrollable']);
 app.controller('eventsctrl',function($scope){   
-
+	
       this.details=lists;
-      
+      $scope.posX = 0;
+	$scope.posY = 0;
+
+	$scope.moveX = function (pixels) {
+		$scope.posX = $scope.posX +  pixels;
+	};
+	$scope.moveY = function (pixels) {
+		$scope.posY = $scope.posY + pixels;
+	};
+	$scope.$evalAsync(function () {
+		$scope.$broadcast('content.changed', 1000);
   		
 });
 var lists=[

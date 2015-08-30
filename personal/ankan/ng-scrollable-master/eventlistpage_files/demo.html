@@ -20,29 +20,63 @@
         background-size: cover;
         background-attachment: fixed;
         height: 100%;
+      
        
             }
-                article {
-        margin-top:13%;
+        article {
+        margin-top:0;
         position: relative;
-       
-        
+        height: 80%;
     }
-    .scrollarea { width: 100%; height: 300px; margin:0 auto;}
-           
-    img {
-    max-width: 550px;
-    margin-left: 20%;
+    .scrollarea { 
+    	width: 100%; 
+    	height: 91%;
+    	 margin:0 auto;
+    	}
+     .top-nav{
+     	width:100%;
+     	height: 10%;
+     	margin-left: 10%;
+     	font-size: 0;
+     } 
+     .top-nav img{
+    width: 20vh;
+   bottom: 35%;
     height: auto;
+    border-top: 3.9px solid #000;
+    overflow: hidden;
+    cursor: pointer;
+    width: auto\9;/* ie8 */
+     }     
+   .wrap img {
+    width: 70vh;
+    margin-top: 35%;
+   cursor: pointer;
+   bottom: 30%;
+   line-height: 20%;
+    height: auto;
+
     width: auto\9;
 /* ie8 */
 }
-.wrap,.wrapperz{
-    display: inline-block;
+
+.wrapperz{
+    display:block;
+   
+    height: auto;
+    position: relative;
+    z-index: 999;
+    float: left;
+
+}
+
+.wrap1,.wrap{
+	display: inline-block;
     white-space: nowrap;
     height: auto;
     position: relative;
     z-index: 999;
+
 }
 #heading {
         margin-top: 2%;
@@ -50,17 +84,73 @@
         font-size: 9vh;
         text-align: center;
         line-height: 1;
-       
         font-family: 'Orbitron', sans-serif;
     }
-.wrap{max-width: 550px;} 
+.wrap{width: 300%;
+margin-left: 20%; } 
+
 .wrapperz{
     height: auto;
+  
 }
+ .top-nav .wrapperz{
+ 	overflow: hidden;
+ }
+ .wrap1 p.event-name {
+		width: 100%;
+		color: white;
+		position: absolute;
+		text-align: center;
+		top:50%;
+		font-weight: bold;
+		font-size: 2vh;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-transition : -webkit-transform 0.3s ease-out;
+		-moz-transition : -moz-transform 0.3s ease-out;
+		-o-transition : -o-transform 0.3s ease-out;
+		transition : transform 0.3s ease-out;
+	}
+img .slider {
+
+		width: 1%;
+		height: 100%;
+		background: #000080	;
+		opacity: 0.7;
+		position: absolute;
+		-webkit-transition : -webkit-transform 0.3s ease-out;
+		-moz-transition : -moz-transform 0.3s ease-out;
+		-o-transition : -o-transform 0.3s ease-out;
+		transition : transform 0.3s ease-out;
+	}
+	.top-nav .wrapperz:hover .slider {
+			-webkit-transform : translateY(-100%);
+			-moz-transform : translateY(-100%);
+			-o-transform : translateY(-100%);
+			transform : translateY(-100%);
+
+		}
+	.top-nav .wrapperz:hover .event-name {
+			-webkit-transform : translateY(180%);
+			-moz-transform : translateY(180%);
+			-o-transform : translateY(180%);
+			transform : translateY(180%);
+		}
+	.wrap p.event-name {
+		position: relative;
+		width: 100%;
+		bottom: 0;
+		margin-top: 10%;
+	
+		font-weight:bold; 
+		text-align: center;
+		font-size: 4vh;
+	}
 .glyphicon
 {
     display: inline-block;
-    
     text-align: center;
      width:70px;
      line-height: 70px;
@@ -82,6 +172,24 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
     -ms-transition: background-color 100ms linear;
     transition: background-color 1000ms linear;
 }
+ .scrollarea span.two-dots {
+		position: absolute;
+		height: 10%;
+		width: 2.223%;
+		top: 80%;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		transform: translate(-50%);
+	}
+	.two-dots div {
+		width: 1vh;
+		height: 23.334%;
+		border-radius: 50%;
+		background: #000;
+		margin-top: 90%;
+	}
 
 /*.wrap{
   position: relative;
@@ -93,11 +201,11 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
   position: absolute;
   right: 0px;
 
-  
+  }
 
 
     /* must be equal to parent's right padding */
-}
+
 
 
 
@@ -107,46 +215,148 @@ article .glyphicon:hover {background-color:rgba(128,128,128,0.7);
     
     </head>
     <body ng-app="eventlist" >
-
-   
        <div id="heading">Events</div>
-       <article ng-controller="demo"> 
-                        <div ng-scrollable="{scrollX:'bottom',scrollY:'none'}" class="scrollarea"  spy-x="posX" spy-y="posY">
-           <div class="wrap">
+       <br>
+       <div  class="top-nav">
+       <div class="wrap1">
            
-        <div class="wrapperz">
-
-            <img src="images/aerofest.png"/>
-            </div>
+        <div class="wrapperz" >
+ <div class="slider">
+				</div>
+            <img ng-click="moveX(-500)" src="images/aerofest.png"/>
+           
+		  <p class="event-name">Aerofest 
+            </p></div>
          <div class="wrapperz">
+          <div class="slider">
+				</div>
             <img src="images/bevents.png" />
+             <p class="event-name">B-events</p> 
+            
+				
         </div>
          <div class="wrapperz">
+
+          <div class="slider">
+				</div>
             <img src="images/coding.png" />
+             <p class="event-name">Coding</p> 
         </div>
          <div class="wrapperz">
+          <div class="slider">
+				</div>
             <img src="images/design and build.png" />
+            <p class="event-name">Design And Build</p>
         </div>
          <div class="wrapperz">
+          <div class="slider">
+				</div>
             <img src="images/aerofest.png" />
+             <p class="event-name">Department Flagship</p>
         </div>
          <div class="wrapperz">
+          <div class="slider">
+				</div>
             <img src="images/aerofest.png" />
+             <p class="event-name">Electronic Fest</p>
         </div>
          <div class="wrapperz">
+          <div class="slider">
+				</div>
             <img src="images/aerofest.png" />
+             <p class="event-name">Involve</p>
         </div>
          <div class="wrapperz">
+          <div class="slider">
+				</div>
             <img src="images/aerofest.png" />
+             <p class="event-name">Quizzing</p>
         </div>
         <div class="wrapperz">
+         <div class="slider">
+				</div>
             <img src="images/aerofest.png" />
+             <p class="event-name">Spotlight</p>
         </div>
 
     
                       </div></div>
-                        <span  style = "float:left ;margin-top:-190px;margin-left:10px;" class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
-                        <span   style = "float:right; margin-top:-190px;"class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
+       <article ng-controller="demo"> 
+                        <div ng-scrollable="{scrollX:'bottom',scrollY:'none'}" class="scrollarea"  spy-x="posX" spy-y="posY">
+           <div class="wrap">
+           
+        <div class="wrapperz" >
+            <img src="images/aerofest.png"/>
+            <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					<p class="event-name">Aerofest</p> 
+            </div>
+         <div class="wrapperz">
+            <img src="images/bevents.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">B-events</p> 
+					
+        </div>
+         <div class="wrapperz">
+            <img src="images/coding.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					
+					 <p class="event-name">Coding</p> 
+            
+        </div>
+         <div class="wrapperz">
+            <img src="images/design and build.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Design And Build</p>
+
+        </div>
+         <div class="wrapperz">
+            <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Department Flagship</p>
+        </div>
+         <div class="wrapperz">
+            <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Electronic Fest</p>
+        </div>
+         <div class="wrapperz">
+            <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Involve</p>
+        </div>
+         <div class="wrapperz">
+            <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					  <p class="event-name">Quizzing</p>
+        </div>
+        <div class="wrapperz">
+            <img src="images/aerofest.png" />
+             <span class="two-dots">
+					<div></div>
+					<div></div></span>
+					 <p class="event-name">Spotlight</p>
+        </div>
+
+    
+                      </div></div>
+                        <span  style = "float:left ;margin-top:-210px;margin-left:10px;" class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
+                        <span   style = "float:right; margin-top:-210px;"class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
                       
   </article>      
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>

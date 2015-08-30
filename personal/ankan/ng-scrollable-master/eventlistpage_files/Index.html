@@ -41,8 +41,8 @@
 </nav></div>
         
 		
-		<div class="hs" ng-scrollable="{scrollX:'bottom',scrollY:'none'}" ng-controller="eventsctrl as eventslist">
-		<div id="mid-nav">
+		<div class="hs"  ng-scrollable="{scrollX:'bottom',scrollY:'none'}" >
+		<div id="mid-nav" ng-controller="eventsctrl as eventslist">
 			<div class="wrapper"  ng-repeat="detail in eventslist.details">
 				<img ng-src="{{detail.imgUrl}}"/>
 				<div class="slider"></div>

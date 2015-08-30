@@ -1,9 +1,10 @@
 (function(){
-var app = angular.module('eventslist', []);
-app.controller('eventctrl',function($scope){   
-
+var app = angular.module('eventslist',['ngScrollable']);
+app.controller('eventsctrl',function($scope){   
+	
       this.details=lists;
-      
+      this.posX = 0;
+	
   		
 });
 var lists=[

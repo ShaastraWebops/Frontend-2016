@@ -3,7 +3,7 @@ var app = angular.module('eventlist', ['ngScrollable']);
 
 app.controller('demo', function ($scope) {
 	'use strict';
-	$scope.details = lists;
+	this.details = lists;
 
 	$scope.posX = 0;
 	$scope.posY = 0;
