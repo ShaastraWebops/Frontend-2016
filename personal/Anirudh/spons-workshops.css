@@ -11,6 +11,10 @@
 .title {
 	font-family: 'robust-font';
 	padding: 1%;
+}
+
+.sub-title {
+	font-weight: bold;
 	color: black;
 }
 
@@ -18,4 +22,16 @@
 	font-family: 'roboto-font';
 	font-size: 1.1em;
 	color: black;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.workshop-info > img:nth-child(odd) {
+	float: right;
+}
+
+.workshop-info > img:nth-child(even) {
+	float: left;
 }

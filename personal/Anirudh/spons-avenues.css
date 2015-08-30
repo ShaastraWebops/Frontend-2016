@@ -14,6 +14,11 @@
 	color: black;
 }
 
+.sub-title {
+	font-weight: bold;
+	color: #DBFF00;
+}
+
 .content {
 	font-family: 'roboto-font';
 	font-size: 1.1em;

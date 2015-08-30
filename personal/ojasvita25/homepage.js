@@ -2,79 +2,192 @@
   var app = angular.module("MyApp", []);
 
   // controller
-  app.controller("AppCtrl", function() {
-    $(".elemboxleft").click(function(){
+  app.controller("AppCtrl", ["$scope", "$location", function($scope, $location) {
+  	$scope.name = "events";
+
+  	$(".top-1").click(function(){
+  		$scope.name = "events";
+  	});
+  	$(".top-2").click(function(){
+  		$scope.name = "shows";
+  	});
+  	$(".mid-1").click(function(){
+  		$scope.name = "workshops";
+  	});
+  	$(".shaastrabox").click(function(){
+  		$scope.name = "contact-us";
+  	});
+  	$(".mid-2").click(function(){
+  		$scope.name = "lectures";
+  	});
+  	$(".botm-1").click(function(){
+  		$scope.name = "social";
+  	});
+  	$(".botm-2").click(function(){
+  		$scope.name = "pre-shaastra";
+  	});
+
+    $(".elemboxleft").click(function() {
       var elem = $(this);
-      elem.animate({
-        top: $("#bgstyle").height() / 2 - elem.width() / 4 ,
-        left: $("#bgstyle").width() / 2 - elem.width() / 2,
+      elem.css({
+        top: $(".container").height() / 2 - elem.width() / 4 ,
+        left: $(".container").width() / 2 - elem.width() / 2,
         zIndex: 500 
       });
       $("#righthand").animate({
-        top: $("#bgstyle").height() / 2 ,
-        left: $("#bgstyle").width() / 2 - elem.width() / 2
+        top: $(".container").height() / 2 ,
+        left: $(".container").width() / 2 - elem.width() / 2
       }, function(){
-            $(".shaastrabox").css({"display":"none"});
             $("#righthand").animate({
               top: "-=" + elem.height()/2,
               left: "-=" + elem.width()/2
             });
             $("#lefthand").animate({
-              top: $("#bgstyle").height()/2 + elem.height() / 2,
-              left: $("#bgstyle").width() / 2 + elem.width() / 2
+              top: $(".container").height()/2 + elem.height() / 2,
+              left: $(".container").width()/2 + elem.width() / 2
             }, function(){
-                  elem.css({"transform":"scale(2)",
-                    "-webkit-transform":"scale(2)",
-                    "-moz-transform":"scale(2)",
-                    "-o-transform":"scale(2)"});
+            		elem.css ({
+            			"width" : "100%",
+            			"height" : "100%",
+            			"top": "0",
+            			"left" : "0",
+            			"line-height": elem.height()/12,
+            			"font-size" : "8vh"});
                   $("#righthand").animate({
-                    top: "-=" + elem.height()/2,
-                    left: "-=" + elem.width()/2
+                    top: 0,
+                    left: -157
+                   }, function(){
+                   		$('#righthand').css({
+                   			"position" : "static"
+                   		});
                    });
                   $("#lefthand").animate({
-                    top: "+=" + elem.height() / 2,
-                    left: "+=" + elem.width() / 2
+                    top: $(".container").height(),
+                    left: $(".container").width()
+                  }, function(){
+                  	$('#lefthand').css({
+                   			"position" : "static"
+                   		});
+                  	$(location).attr('href','https://www.google.co.in/');
+                  	console.log($scope.name);
                   });
             });
       });
     });
 $(".elemboxright").click(function(){
       var elem = $(this);
-      elem.animate({
-        top: $("#bgstyle").height() / 2 - elem.width() / 4 ,
-        right: $("#bgstyle").width() / 2 - elem.width() / 2,
+      elem.css({
+        top: $(".container").height() / 2 - elem.width() / 4 ,
+        right: $(".container").width() / 2 - elem.width() / 2,
         zIndex: 500 
       });
       $("#lefthand").animate({
-        top: $("#bgstyle").height() / 2 ,
-        left: $("#bgstyle").width() / 2 - elem.width() / 2
+        top: $(".container").height() / 2 ,
+        left: $(".container").width() / 2 - elem.width() / 2
       }, function(){
-            $(".shaastrabox").css({"display":"none"});
             $("#righthand").animate({
-              top: $("#bgstyle").height() / 2 - elem.height() / 2,
-              left: $("#bgstyle").width() / 2 - elem.width()
+              top: $(".container").height() / 2 - elem.height() / 2,
+              left: $(".container").width() / 2 - elem.width()
             });
             $("#lefthand").animate({
-              top: $("#bgstyle").height()/2 + elem.height() / 2,
-              left: $("#bgstyle").width() / 2 + elem.width() / 2
+              top: $(".container").height()/2 + elem.height() / 2,
+              left: $(".container").width() / 2 + elem.width() / 2
             }, function(){
-                  elem.css({"transform":"scale(2)",
-                    "-webkit-transform":"scale(2)",
-                    "-moz-transform":"scale(2)",
-                    "-o-transform":"scale(2)"});
+                  elem.css ({
+            			"width" : "100%",
+            			"height" : "100%",
+            			"top": "0",
+            			"right" : "0",
+            			"line-height": elem.height()/12,
+            			"font-size" : "8vh"});
                   $("#righthand").animate({
-                    top: "-=" + elem.height()/2,
-                    left: "-=" + elem.width()/2
+                    top: 0,
+                    left: -157
+                   }, function(){
+                   		$('#righthand').css({
+                   			"position" : "static"
+                   		});
                    });
                   $("#lefthand").animate({
-                    top: "+=" + elem.height() / 2,
-                    left: "+=" + elem.width() / 2
+                  	top: $(".container").height(),
+                    left: $(".container").width()
+                  }, function(){
+                  		$('#lefthand').css({
+                   			"position" : "static"
+                   		});
+                  		$(location).attr('href','https://www.google.com/');
+                  		console.log($scope.name);
                   });
             });
       });
     });
 
+$(".shaastrabox").click(function(){
+      var elem = $(this);
+        $("#righthand").animate({
+          top: $(".container").height() / 2 - elem.height() / 2,
+          left: $(".container").width() / 2 - elem.width()
+        });
+        $("#lefthand").animate({
+          top: $(".container").height()/2 + elem.height() / 2,
+          left: $(".container").width() / 2 + elem.width() / 2
+        }, function(){
+              elem.css ({
+    			"width" : "100%",
+    			"height" : "100%",
+    			"top": "0",
+    			"left" : "0",
+    			"margin-left": "0"});
+              $(".text1").css({
+              	"top" : "-5vh",
+              	"left" : "51%",
+              	"transform" : "translate(-50%)",
+              	"font-size" : "4vh" 
+              });
+              $(".text2").css({
+              	"top" : "65%",
+              	"left" : "35%",
+              	"font-size" : "5vh"
+              });
+              $(".number").css({
+              	"top" : "52.9%",
+              	"left" : "57%",
+              	"font-size" : "5vh"
+              });
+              $(".underline").css({
+              	"top" : "71%",
+              	"left" : "50%",
+              	"width" : "50vh",
+              	"transform" : "translate(-50%)"
+              });
+              $(".text3").css({
+              	"top" : "63%",
+              	"left" : "50%",
+              	"font-size" : "2vh",
+              	"transform" : "translate(-50%)"
+              });
+              $("#righthand").animate({
+                top: 0,
+                left: -157
+               }, function(){
+               		$('#righthand').css({
+                   			"position" : "static"
+                   		});
+               });
+              $("#lefthand").animate({
+              	top: $(".container").height(),
+                left: $(".container").width()
+              }, function(){
+              		$('#lefthand').css({
+                   			"position" : "static"
+                   		});
+                  	$(location).attr('href','https://www.google.com/');
+                  	console.log($scope.name);
+              });
+        });
   });
+}]);
+ 
 
 
   //tooltip Directive

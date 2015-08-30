@@ -11,7 +11,11 @@
 .title {
 	font-family: 'robust-font';
 	padding: 1%;
-	color: black;
+}
+
+.sub-title {
+	font-weight: bold;
+	color: #DBFF00;
 }
 
 .content {
