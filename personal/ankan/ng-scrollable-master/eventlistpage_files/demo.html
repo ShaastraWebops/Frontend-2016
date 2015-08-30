@@ -37,12 +37,13 @@
      	width:100%;
      	height: 10%;
      	margin-left: 10%;
+     	font-size: 0;
      } 
      .top-nav img{
-     	 width: 20vh;
+    width: 20vh;
    bottom: 30%;
     height: auto;
-    border-top: 3.5px solid #000;
+    border-top: 3.9px solid #000;
     overflow: hidden;
     cursor: pointer;
     width: auto\9;/* ie8 */
@@ -59,18 +60,17 @@
 /* ie8 */
 }
 
-.wrap,.wrapperz{
-    display: inline-block;
-    white-space: nowrap;
+.wrapperz{
+    display:block;
+    
     height: auto;
     position: relative;
     z-index: 999;
+    float: left;
 
 }
-.wrap{
-	left: 30%;
-}
-.wrap1{
+
+.wrap1,.wrap{
 	display: inline-block;
     white-space: nowrap;
     height: auto;
@@ -84,10 +84,10 @@
         font-size: 9vh;
         text-align: center;
         line-height: 1;
-       
         font-family: 'Orbitron', sans-serif;
     }
-.wrap{width: 80vh; } 
+.wrap{width: 300%;
+margin-left: 20%; } 
 
 .wrapperz{
     height: auto;
@@ -114,7 +114,7 @@
 	}
 img .slider {
 
-		width: 100%;
+		width: 1%;
 		height: 100%;
 		background: #000080	;
 		opacity: 0.7;
@@ -141,7 +141,6 @@ img .slider {
 .glyphicon
 {
     display: inline-block;
-    
     text-align: center;
      width:70px;
      line-height: 70px;
