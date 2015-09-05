@@ -5,217 +5,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-  <!--script src="..\bower_components\jquery\dist\jquery.min.js"></script-->
   <script src="..\bower_components\angular\angular.min.js"></script>
   <script type="text/javascript" src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
   <script type="text/javascript" src="js/parallax.js"></script>
   <script type="text/javascript" src="js/parallax.min.js"></script>
   <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
+  
   <!-- Slidebars CSS -->
   <link rel="stylesheet" href="slidebars/slidebars.css">
 		
   <link rel="stylesheet" type="text/css" href="spons-rep.css">
   <script src="slidebars/slidebars.js"></script>
-  <style type="text/css">
-  .motto
-  {
-    background-color:#35C8B6;
-    
-  }
-  .motto>p:first-child
-  {
-    color:white;
-    /*font-size:40px;*/
-    text-align:center;
-    padding-top:90px;
-    padding-bottom:90px;
-  }
-  .motto>p:nth-child(2)
-  {
-  color:white;
-  /*font-size:40px;*/
-  text-align:center;
-  border:5px solid white;
-  padding:50px;
-  margin-bottom:90px;
   
-  }
-  #await
-  {
-    
-    text-align:center;
-    color:#3C3D43;
-    font-size:50px;
-  }
-  .thumbnail
-  {
-    text-align:center;
-    background-color:transparent;
-    border:1px solid white;
-    margin:0px;
-  }
-
-  .caption>p
-  {
-    font-family: Arial;
-    color: white;
-  }
-  /*.caption>p:nth-child(1)
-  {
-    font-size: 30px;
-  }*/
-  .one
-  {
-  	font-size: 50px;
-  }
-  .two
-  {
-  	font-size: 20px;
-  }
-  #three
-  {
-  	font-weight:bold;
-  	font-size: 15px;
-  }
-  figure figcaption
-  {
-  	text-align: center;
-  }
-  h1
-  {
-  	font-size: 32px;
-   }
-   #object_1
-   {
-   	font-size:200px;
-   }
-   #img_1
-   {
-   	height:2%;
-    position: absolute;
-   }
-   h2
-   {
-   	font-size: 24px;
-   }
-   #first
-   {
-   	font-size:40px;
-   	text-align:center;
-   	margin:30px;
-   	margin-bottom:50px
-   }
-   
-   
-  tbody>tr>th>a,tbody>tr>th>a:link,tbody>tr>th>a:visited,tbody>tr>th>a:hover,tbody>tr>th>a:active
-  {
-	color:white;
-	text-decoration:none;
-	font-family: "Arial";
-	font-size:20px;
-  }
-  .sb-slidebar
-  {
-	background-color:#33CC33;
-  }
-  tbody>tr:nth-child(odd)
-  {
-	/*background-color:rgba(50,204,51,0.5);*/
-	opacity:0.5;
-  }
-
-  #menu-bars{
-    float: right;
-    margin-right: 2%;
-    margin-top: 2%;
-    color:white;
-    cursor:pointer;
-  }
-
-  .initialAdjustment{
-    -webkit-transform: translate(0,500px);
-  }
-  #ticks{ 
-    -webkit-transition: -webkit-transform 1s ease-in-out;
-  }
-  .caption{
-    color: black;
-  }
-
-  #side-menu {
-    position:absolute;
-    height: 100%;
-    left:0;
-    top:0;
-      list-style-type: none;
-      margin: 0;
-      
-      padding: 0;
-    width:100%;
-    background-color: white;
-  }
-  #side-menu li{
-      display: block;
-      width: 100%;  
-    text-align:center;
-  }
-  #side-menu a{
-    color: black;
-    text-decoration: none;
-    font-weight: normal;
-  }
-
-  hr { 
-    margin-top: 17px; 
-    margin-bottom: 17px; 
-  }
-
-  </style>
-
-
   <script type="text/javascript">
-  $(document).ready(function()
-  {
-    console.log(screen.width);
-  $.slidebars();
-  $("#ticks").addClass('initialAdjustment');
-  var topOfOthDiv = $("#about-shaastra").offset().top;  
-  $(window).scroll(function () {
+    $(document).ready(function(){
+      console.log(screen.width);
+      $.slidebars();
+      $("#ticks").addClass('initialAdjustment');
+      var topOfOthDiv = $("#about-shaastra").offset().top;  
+      $(window).scroll(function () {
         if ($(window).scrollTop() > topOfOthDiv) {
-
-            $('#ticks').removeClass('initialAdjustment');
+          $('#ticks').removeClass('initialAdjustment');
         }
+      });
     });
-  $('body').click(function(){
-    
-  });
-
-  });
-  
-		
-		
   </script>
 
 </head>
 <body>
 	
-
-	<div class="intro" style="margin-bottom:100px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
+  <div class="intro" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
     <div class="row" class="col-xs-12">
-		<i class="fa fa-bars fa-3x sb-toggle-right"  id="menu-bars" title="Click to see sponsorship categories"></i>
-		<img class="col-xs-2 col-sm-2" src="spons_img/2.png" alt="Image Not Found :(" align="left" >
+		  <i class="fa fa-bars fa-3x sb-toggle-right"  id="menu-bars" title="Click to see sponsorship categories"></i>
+		  <img class="col-xs-2 col-sm-2" src="spons_img/2.png" alt="Image Not Found :(" align="left" >
     </div>
     <div class="row" class="col-xs-12">
-		<h1 style="color:white;text-align:center;margin-top:5%;margin-bottom:5%;" >Shaastra</h1>
-		<h2 id="about-shaastra">The Annual Technical Festival of Indian Insitute of Technology,Madras</h2><br>
-		<h2 id="shaastra-paragraph">Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.<br><br><b> We are THE Spirit of Engineering</h2><br>
+		  <h1 id="shaastraMainHeading" >Shaastra</h1>
+		  <h2 id="about-shaastra">The Annual Technical Festival of Indian Insitute of Technology,Madras</h2><br>
+		  <h2 id="shaastra-paragraph">Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.<br><br><b> We are THE Spirit of Engineering</h2><br>
 		</div>
 	</div>
 	<p id="first">The First Student Organised Fest, in the world to be ISO 9001:2008 certified.</p><br><br><br>
-<!-- <div id="easing" data-0="top:100%" data-200="bottom:50%"> -->
-<div class="certification" style="margin-bottom:100px">
-  <div class="row" id="ticks">
+
+  <div class="certification">
+    <div class="row" id="ticks">
       <div class="col-sm-6 col-md-4" >
         <div class="thumbnail" >
           <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
@@ -224,7 +58,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-sm-6 col-md-4" >
         <div class="thumbnail" >
           <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
@@ -233,7 +66,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-sm-6 col-md-4" >
         <div class="thumbnail" >
           <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
@@ -242,168 +74,128 @@
           </div>
         </div>
       </div>
-
     </div>
-    <!-- </div> -->
+  </div>
 
-	
-		
-	</div>
-
-	<div class="acheivements" style="background-color:#35C8B6;">
-
-		<!--div class="col-sm-6 col-md-4" >
-    			<div class="thumbnail" style="margin-left:40px">
-      				<img src="spons_img/6.png" alt="Opportunity 1 Image not found! :(">
-      					<div class="caption">
-        					<h3><b>Media</b></h3>
-        	      		</div>
-    			</div>
- 		</div>		
-
- 		<div class="col-sm-6 col-md-4" >
-    			<div class="thumbnail" style="margin-left:200px">
-      				<img src="spons_img/7.png" alt="Opportunity 1 Image not found! :(">
-      					<div class="caption">
-        					<h3><b>Industry</b></h3>
-        	      		</div>
-    			</div>
- 		</div>		
- 		<br><br><br>
-
-		<div class="col-sm-6 col-md-4" >
-    			<div class="thumbnail" style="margin-left:200px" align="center">
-      				<img src="spons_img/4.png" alt="Opportunity 1 Image not found! :(">
-      					
-    			</div>
- 		</div-->
- 		
- 			<figure style="font-size:30px;display:inline-block;padding-top:60px">
-  				<img src="spons_img/6.png" alt="The Pulpit Rock" width="200" height="140">
-  				<figcaption >Media</figcaption>
+	<div class="acheivements">
+ 		<div class="row">
+ 			<figure id="figure1" class="col-xs-12 col-md-2 col-md-offset-1">
+  			<img src="spons_img/6.png" alt="The Pulpit Rock" width="200" height="140">
+  			<figcaption >Media</figcaption>
 			</figure>
 
-			<figure style="font-size:30px;display:inline-block;padding-top:60px">
+			<figure id="figure2" class="col-xs-12 col-md-2 col-md-offset-6">
   				<img src="spons_img/7.png" alt="The Pulpit Rock" width="200" height="140">
   				<figcaption >Industry</figcaption>
 			</figure>
-			<br><br>
-      
+    </div>
+		<br><br>  
 
-			<figure align="center">
-  				<img src="spons_img/4.png" alt="The Pulpit Rock" width="304" height="228"><br>
-  				
-			</figure>
+		<figure align="center">
+  		<img src="spons_img/4.png" alt="The Pulpit Rock" width="304" height="228"><br>		
+		</figure>
 
-			<figure align="center" >
-  				<img src="spons_img/5.png" alt="The Pulpit Rock" width="200" height="140">
-  				<figcaption style="font-size:30px">Academia</figcaption>
-			</figure>
+		<figure align="center" >
+  		<img src="spons_img/5.png" alt="The Pulpit Rock" width="200" height="140">
+  		<figcaption>Academia</figcaption>
+		</figure>
 	</div>
 
 	<div class="statistics" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/8.png" data-speed="0.5">
-  <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-3"  style="margin-top:50px;">      
-      <div >
-        <p class="one" style="text-align:center">225</p>
-        <p class="two" style="text-align:center">percent increase in</p>
-        <p class="two" style="text-align:center">AVERAGE DAILY REACH</p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3" class="statisticsText">      
+        <div>
+          <p class="one">225</p>
+          <p class="two">percent increase in</p>
+          <p class="two">AVERAGE DAILY REACH</p>
+        </div>
       </div>
-  </div>
-
-  <div class="col-xs-12 col-sm-6 col-md-3"  style="margin-top:50px;">
-      <div>
-        <p class="one" style="text-align:center">16000</p>
-        <p class="two" style="text-align:center">students impacted through</p>
-        <p class="two" style="text-align:center">EVENTS AND WORKSHOPS</p>
+      <div class="col-xs-12 col-sm-6 col-md-3" class="statisticsText">
+        <div>
+          <p class="one">16000</p>
+          <p class="two">students impacted through</p>
+          <p class="two">EVENTS AND WORKSHOPS</p>
+        </div>
       </div>
-  </div>
-
-  <div class="col-xs-12 col-sm-6 col-md-3" style="margin-top:50px;">
-      
-      <div>
-        <p class="one" style="text-align:center">384</p>
-        <p class="two" style="text-align:center">schools reached through</p>
-        <p class="two" style="text-align:center">OUTREACH ACTIVITIES</p>
+      <div class="col-xs-12 col-sm-6 col-md-3" class="statisticsText">    
+        <div>
+          <p class="one">384</p>
+          <p class="two">schools reached through</p>
+          <p class="two">OUTREACH ACTIVITIES</p>
+        </div>
       </div>
-  </div>
-
-  <div class="col-xs-12 col-sm-6 col-md-3" style="margin-top:50px;">
-      
-      <div>
-        <p class="one" style="text-align:center">155</p>
-        <p class="two" style="text-align:center">percent increase in time</p>
-        <p class="two" style="text-align:center">PEOPLE ENGAGED ON DAILY BASIS</p>
+      <div class="col-xs-12 col-sm-6 col-md-3" class="statisticsText">
+        <div>
+          <p class="one">155</p>
+          <p class="two">percent increase in time</p>
+          <p class="two">PEOPLE ENGAGED ON DAILY BASIS</p>
+        </div>
       </div>
-  </div>
-
-</div>
+    </div>
 	</div>
+
 	<div class="ad_photos" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png spons_img/2.png spons_img/3.png">
-
 	</div>
-	<div style="" id="await">
+
+	<div id="await">
 		<p>SHAASTRA'S 17<sup>th</sup>&nbsp;EDITION AWAITS YOU</p>
 	</div>
-	<div class="ad_photos">
 
+	<div class="ad_photos">
 	</div>
-	<div class="motto row" style="">
+
+	<div class="motto row">
 		<p  id="motto1">THE MOTTO IS STILL THE SAME</p>
 		<p class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">CELEBRATE THE SPIRIT OF ENGINEERING! </p>
+	</div>
 
+	<div class="normal_para row" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.5">
+		<img class="col-xs-12 col-md-offset-1 col-md-3" src="spons_img/normal.png" alt="Image not loaded :(">
+		<p id="shaastraActivity">Since it's inception,Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai to visit this spectacle, Shaastra's reach is now beyond city,state and country and has a stake on international stage. Marquee events like IIT-M Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity,industry and academia.</p>	
 	</div>
-	<div class="normal_para row" style="padding-top:40px;margin-bottom:60px" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/14.png" data-speed="0.5">
-			<img class="col-xs-12 col-md-offset-1 col-md-3" src="spons_img/normal.png" alt="Image not loaded :(" style="">
-			<p class="" style="font-size:20px;color:white;display:inline;padding-top:50px;font-family:Helvetica;font-weight:400">Since it's inception,Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai to visit this spectacle, Shaastra's reach is now beyond city,state and country and has a stake on international stage. Marquee events like IIT-M Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity,industry and academia.</p>
-			
-	</div>
+
 	<div class="events">
-		<p style="font-size:50px;text-align:center;margin-bottom:40px">EVENTS</p>
-		<div style="display:inline-block;margin-top:60px;margin-left:2%">
+		<p id="eventsHeading">EVENTS</p>
+		<div id="eventsImageContainer">
 			<img src="spons_img/13_1.png" alt="Image Not Found :(" >
 			<img src="spons_img/13_2.png" alt="Image Not Found :(" >
 			<img src="spons_img/13_3.png" alt="Image Not Found :(" >
 			<img src="spons_img/13_4.png" alt="Image Not Found :(" >
 			<img src="spons_img/13_5.png" alt="Image Not Found :(" >
 			<img src="spons_img/13_6.png" alt="Image Not Found :(" >
-			<img src="spons_img/13_7.png" alt="Image Not Found :(" style="margin-bottom:150px">
-			<img src="spons_img/13_8.png" alt="Image Not Found :(" style="margin-bottom:150px">
-			<img src="spons_img/13_9.png" alt="Image Not Found :(" style="margin-bottom:150px">
-
-
+			<img src="spons_img/13_7.png" alt="Image Not Found :(" class="lastImages">
+			<img src="spons_img/13_8.png" alt="Image Not Found :(" class="lastImages">
+			<img src="spons_img/13_9.png" alt="Image Not Found :(" class="lastImages">
 		</div>
 	</div>
+
 	<div class="mission" >
-		<!--span style="border:1px solid black;margin-right:50%;">
-			<caption style="font-size:50px;text-align:left">SHAASTRA'S VISION</caption>
-			<p style="margin:50px;margin-right:50%;">Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
-		</span-->
-		<div class="centered">
-		<div class="btn-group btn-group-lg " >
-    		<button type="button" class="btn btn-primary btn-active" data-toggle="tab" href="#vision" style="margin:auto">Our Vision</button>
+    <div class="centered">
+		  <div class="btn-group btn-group-lg " >
+    		<button id="firstButton" type="button" class="btn btn-primary btn-active" data-toggle="tab" href="#vision">Our Vision</button>
    			<button type="button" class="btn btn-primary" data-toggle="tab" href="#mission">Our Mission</button>
    			<button type="button" class="btn btn-primary" data-toggle="tab" href="#quality">Quality Policy</button>
   		</div>
+  	</div>
+  	<div class="tab-content" align="center">
+  		<div id="vision" class="tab-pane fade in active">
+    		<h2 class="shaastraHeadings">SHAASTRA'S VISION</h2>
+    		<p>Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
   		</div>
-  		<div class="tab-content" align="center">
-  			<div id="vision" class="tab-pane fade in active">
-    			<h2 style="color:black">SHAASTRA'S VISION</h2>
-    			<p>Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
-  			</div>
-  			<div id="mission" class="tab-pane fade">
-    			<h2 style="color:black">SHAASTRA'S MISSION</h2>
-   				 <p>Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
- 			 </div>
+  		<div id="mission" class="tab-pane fade">
+    		<h2 class="shaastraHeadings">SHAASTRA'S MISSION</h2>
+   			<p>Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
+ 			</div>
  			<div id="quality" class="tab-pane fade">
-    			<h2 style="color:black">QUALITY POLICY</h2>
-   				 <p>Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
+    		<h2 class="shaastraHeadings">QUALITY POLICY</h2>
+   			<p>Motivation is a theoretical construct used to explain behavior. It represents the reasons for people's actions, desires, and needs. Motivation can also be defined as one's direction to behavior or what causes a person to want to repeat a behavior and vice versa.[1] A motive is what prompts the person to act in a certain way or at least develop an inclination for specific behavior.[2] For example, when someone eats food to satisfy the need of hunger, or when a student does his/her work in school because he/she wants a good grade. Both show a similar connection between what we do and why we do it. According to Maehr and Meyer, "Motivation is a word that is part of the popular culture as few other psychological concepts are".[3] Wikipedia readers will have a motive (or motives) for reading an article, even if such motives are complex and difficult to pinpoint. At the other end of the range of complexity, hunger is frequently the motive for seeking out and consuming food.</p>
  			</div>
 		</div>
 	</div>
-	<div class="humbly" style="background-image: url('spons_img/14.png');">
-		<h2 style="color:white;font-size:35px;margin-bottom:100px;padding-top:100px" align="center">We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass roots level!</h2>
-		<h2 style="color:white;font-size:30px;margin-bottom:100px;text-align:center" >FOR SPONSORSHIP AND INDUSTRY RELATION,PLEASE CONTACT</h2>
+
+	<div class="humbly">
+		<h2 id="humblyText" align="center">We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass roots level!</h2>
+		<h2 id="contactHeading">FOR SPONSORSHIP AND INDUSTRY RELATION,PLEASE CONTACT</h2>
 
 		<ul class="list-inline row" >
 			<li class="col-xs-12 col-md-4">
@@ -431,7 +223,7 @@
 	</div>
 	
 	<!-- Side bar content -->
-	<div class="sb-slidebar sb-right" style="background-color:white">
+	<div class="sb-slidebar sb-right">
 		<ul id="side-menu"><br>
       <li><a href="#"><div class="headings"><b>SPONSORSHIP BRONCHURE</b></div></a></li><hr>
       <li><a href="#"><div class="headings"><b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
@@ -445,12 +237,8 @@
       <li><a href="#"><div class="headings"><b>Q</b>uotes <b>F</b>rom <b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
       <li><a href="#"><div class="headings"><b>M</b>ap</div></a></li><hr>
       <li><a href="#"><div class="headings"><b>Q</b>uotes <b>F</b>rom <b>P</b>artcipants</div></a></li><hr>
-  </ul>
-		    
-		  
-
+    </ul>    
 	</div>
-
 
   </body>
 </html>
