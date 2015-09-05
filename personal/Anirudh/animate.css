@@ -1,11 +1,3 @@
-section {
-  background: #eee;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  overflow: hidden;
-}
-
 .module {
   min-height: 200px;
   position: relative;

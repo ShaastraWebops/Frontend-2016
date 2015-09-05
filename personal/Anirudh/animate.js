@@ -22,7 +22,7 @@
     var compareTop    = partial === true ? _bottom : _top;
     var compareBottom = partial === true ? _top : _bottom;
   
-    console.log('compareBottom', compareBottom, 'viewBottom', viewBottom, 'compareTop', compareTop, 'viewTop', viewTop);
+    // console.log('compareBottom', compareBottom, 'viewBottom', viewBottom, 'compareTop', compareTop, 'viewTop', viewTop);
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
     // return ((compareTop <= viewBottom) && (compareTop >= viewTop));
 
@@ -42,21 +42,21 @@ $(document).ready(function () {
   allMods.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
-      console.log('element', i);
+      // console.log('element', i);
       el.addClass("already-visible"); 
       if(firstNode < i)
         firstNode = i;
     } 
   });
 
-  console.log(firstNode);
+  // console.log(firstNode);
 
   // to ensure that all the elements before the first element in view port have been added class already-visible
   allMods.each(function(i, el) {
     
     var el = $(el);
     if (i <= firstNode) {
-      console.log('check', i);
+      // console.log('check', i);
       el.addClass("already-visible"); 
     } 
   });
