@@ -1,19 +1,25 @@
-.motto{
-	background-color:#35C8B6; 
+.motto {
+  color: white;
+	background-color: #35C8B6; 
+	padding: 5%;
+	text-transform: uppercase;
 }
-.motto>p:first-child{
-  color:white;
-  text-align:center;
-  padding-top:90px;
-  padding-bottom:90px;
+
+.motto > div:first-child > p {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 2em;
 }
-.motto>p:nth-child(2){
-  color:white;
-  text-align:center;
-  border:5px solid white;
-  padding:50px;
-  margin-bottom:90px;
+
+.motto-box {
+  text-align: center;
+  border: 3px solid white;
+  padding: 3%;
+  margin-top: 3%;
+  font-size: 2em;
 }
+
 #await {    
   text-align: center;
   color: #3C3D43;
