@@ -155,21 +155,7 @@ hr {
   -o-background-size: cover;
   margin-bottom:100px
 }
-h1
-{
-	color:black;
-	text-align: center ;
-	font-family: Helvetica,sans-serif;
-	font-size: 200px;
-	text-shadow: 4px 4px 4px #aaa;
-}
-h2,h3,h4{
-	color:black;
-	text-align: center ;
-	font-family: Helvetica,sans-serif;
-	margin-left: 15%;
-	margin-right: 15%;
-}
+
 .intro>h1,.intro>h2,.intro>h3
 {
 	color:white;
@@ -205,12 +191,22 @@ table
 	background-size: auto,auto,auto;
 	height: 300px;
 }
-.events>div img
-{
-	width:350px;height: auto;
-	margin-right:55px;
-	margin-bottom: 70px;
+
+.events {
+	color: black;
+	text-align: center;
+	font-size: 2.5em;
+	padding: 5%;
+	text-transform: uppercase;
 }
+
+.mission {
+	background-color: #35C8B6;
+	color: white;
+	padding: 10% 5% 5% 5%;
+	font-size: 1.2em;
+}
+
 .tab-content>div p
 {
 	margin-left:10%;
@@ -271,7 +267,6 @@ table
 
 .shaastra-aim {
 	padding: 5% 5% 0px 0px;
-	margin-bottom: 60px;
 	color: white;
 	font-size: 1.2em;
 }
@@ -284,6 +279,7 @@ table
 .lastImages{
 	margin-bottom:150px;
 }
+
 #firstButton{
 	margin:auto;
 }
