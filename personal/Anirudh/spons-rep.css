@@ -47,10 +47,15 @@
  	font-weight:bold;
  	font-size: 15px;
   }
-figure figcaption
-  {
+figure {
+	display: inline-block;
  	text-align: center;
-  }
+}
+
+figcaption {
+	font-size: 1.2em;
+}
+
 h1
   {
  	font-size: 32px;
@@ -253,18 +258,9 @@ table
 	margin-bottom:100px;
 }
 .acheivements{
-	background-color:#35C8B6;
+	background-color: #35C8B6;
 }
-#figure1{
-	font-size:30px;
-	display:inline-block;
-	padding-top:60px;
-}
-#figure2{
-	font-size:30px;
-	display:inline-block;
-	padding-top:60px;
-}
+
 .normal_para{
 	padding-top:40px;
 	margin-bottom:60px;
