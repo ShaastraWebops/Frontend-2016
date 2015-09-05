@@ -269,18 +269,13 @@ table
 	background-color: #35C8B6;
 }
 
-.normal_para{
-	padding-top:40px;
-	margin-bottom:60px;
+.shaastra-aim {
+	padding: 5% 5% 0px 0px;
+	margin-bottom: 60px;
+	color: white;
+	font-size: 1.2em;
 }
-#shaastraActivity{
-	font-size:20px;
-	color:white;
-	display:inline;
-	padding-top:50px;
-	font-family:Helvetica;
-	font-weight:400;
-}
+
 #eventsHeading{
 	font-size:50px;
 	text-align:center;
