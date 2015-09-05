@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   var allMods = $(".module");
   var firstNode = 0;
-  console.log(firstNode);
+  // console.log(firstNode);
 
   // to add class already-visible to the elements which are in the viewport on loading and finding the first element in the viewport
   allMods.each(function(i, el) {

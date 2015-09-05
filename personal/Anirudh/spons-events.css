@@ -36,6 +36,10 @@
 	padding: 0px;
 }
 
+.remove-margin {
+	margin: 0px;
+}
+
 .text-right {
 	text-align: right;
 }
