@@ -1,13 +1,10 @@
-@font-face {
-	font-family: 'robust-font';
-	src: url('./fonts/CGF-Locust-Resistance.woff') format('woff');
-}
-
 .motto {
   color: white;
 	background-color: #35C8B6; 
 	padding: 5%;
 	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'myriad-pro-font';
 }
 
 .motto > div:first-child > p {
@@ -20,9 +17,9 @@
 .motto-box {
   text-align: center;
   border: 3px solid white;
-  padding: 3%;
   margin-top: 3%;
   font-size: 2em;
+  height: auto;
 }
 
 #await {    
@@ -30,6 +27,8 @@
   color: #3C3D43;
   font-size: 2.5em;
   padding: 2%;
+  font-family: 'myriad-pro-font';
+  font-weight: bold;
 }
 
 .thumbnail
@@ -60,6 +59,7 @@
  	font-weight:bold;
  	font-size: 15px;
   }
+
 figure {
 	display: inline-block;
  	text-align: center;
@@ -91,9 +91,10 @@ h2
 	color: black;
 	text-transform: uppercase;
  	font-size: 2.5em;
+ 	font-weight: bold;
+ 	font-family: 'myriad-pro-font';
  	text-align: center;
- 	margin: 30px;
- 	margin-bottom: 50px
+ 	padding: 5%;
 }   
 
 tbody>tr>th>a,tbody>tr>th>a:link,tbody>tr>th>a:visited,tbody>tr>th>a:hover,tbody>tr>th>a:active
@@ -152,7 +153,7 @@ hr {
   margin-top: 17px; 
   margin-bottom: 17px; 
 }
-.intro
+/*.intro
 {
 	display:table;
 	width: 100%;
@@ -168,6 +169,7 @@ hr {
 {
 	color:white;
 }
+*/
 .thumbnail
 {
 	border:0 none;
@@ -260,8 +262,7 @@ table
 #shaastraMainHeading {
 	color: white;
 	text-align: center;
-	margin-top: 15%;
-	font-size: 5em;
+	font-size: 4em;
 	text-transform: uppercase;
 	font-family: 'robust-font';
 }
@@ -270,18 +271,24 @@ table
 	color: white;
 	text-align: center;
 	font-size: 2em;
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
 }
 
 #about-shaastra-two {
 	color: white;
 	text-align: center;
 	font-size: 1.5em;
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
 }
 
 .shaastra-paragraph {
 	color: white;
 	text-align: center;
 	font-size: 1.1em;
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
 }
 
 .certification {
