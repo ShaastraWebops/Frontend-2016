@@ -225,10 +225,6 @@ table
 	text-align:center;
 	margin-bottom:70px;
 }
-.humbly>ul>li>h3,h2
-{
-	color:white;
-}
 
 .parallax-window {
 	padding: 5%;
@@ -286,18 +282,6 @@ table
 .shaastraHeadings{
 	color:black;
 }
-#humblyText{
-	color:white;
-	font-size:35px;
-	margin-bottom:100px;
-	padding-top:100px;
-}
-#contactHeading{
-	color:white;
-	font-size:30px;
-	margin-bottom:100px;
-	text-align:center;
-}
 #statisticsText{
 	margin-top:50px;
 }
@@ -308,4 +292,27 @@ table
 }
 .humbly{
 	background-image: url('spons_img/14.png');
+}
+
+.footer {
+	color: white;
+}
+
+.footer-top {
+	background-image: url('spons_img/14.png');
+	text-align: center;
+	padding: 5%;
+}
+
+.footer-middle {
+	background-image: url('spons_img/14.png');
+	text-transform: uppercase;
+	text-align: center;
+	padding: 3%;
+}
+
+.footer-bottom {
+	background-image: url('spons_img/14.png');
+	padding: 10%;
+	font-size: 1.2em;
 }
