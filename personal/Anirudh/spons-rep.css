@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'robust-font';
+	src: url('./fonts/CGF-Locust-Resistance.woff') format('woff');
+}
+
 .motto {
   color: white;
 	background-color: #35C8B6; 
@@ -81,13 +86,16 @@ h2
   {
  	font-size: 24px;
   }
-#first
-  {
- 	font-size:40px;
- 	text-align:center;
- 	margin:30px;
- 	margin-bottom:50px
-  }   
+
+#first {
+	color: black;
+	text-transform: uppercase;
+ 	font-size: 2.5em;
+ 	text-align: center;
+ 	margin: 30px;
+ 	margin-bottom: 50px
+}   
+
 tbody>tr>th>a,tbody>tr>th>a:link,tbody>tr>th>a:visited,tbody>tr>th>a:hover,tbody>tr>th>a:active
   {
 	color:white;
@@ -248,16 +256,39 @@ table
   animation-name: events_hover;
   animation-duration: 4s;
 }
-#shaastraMainHeading{
-	color:white;
-	text-align:center;
-	margin-top:5%;
-	margin-bottom:5%;
+
+#shaastraMainHeading {
+	color: white;
+	text-align: center;
+	margin-top: 15%;
+	font-size: 5em;
+	text-transform: uppercase;
+	font-family: 'robust-font';
 }
-.certification{
-	margin-bottom:100px;
+
+#about-shaastra-one {
+	color: white;
+	text-align: center;
+	font-size: 2em;
 }
-.acheivements{
+
+#about-shaastra-two {
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.shaastra-paragraph {
+	color: white;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.certification {
+	margin-bottom: 100px;
+}
+
+.acheivements {
 	background-color: #35C8B6;
 }
 
@@ -296,23 +327,23 @@ table
 
 .footer {
 	color: white;
+	background-image: url('spons_img/00000.png');
+	padding: 0%;
 }
 
 .footer-top {
-	background-image: url('spons_img/14.png');
 	text-align: center;
 	padding: 5%;
 }
 
 .footer-middle {
-	background-image: url('spons_img/14.png');
+	background-color: rgba(128, 128, 128, 0.1);
 	text-transform: uppercase;
 	text-align: center;
-	padding: 3%;
+	padding: 3% 0%;
 }
 
 .footer-bottom {
-	background-image: url('spons_img/14.png');
 	padding: 10%;
 	font-size: 1.2em;
 }

@@ -20,7 +20,7 @@
       console.log(screen.width);
       $.slidebars();
       $("#ticks").addClass('initialAdjustment');
-      var topOfOthDiv = $("#about-shaastra").offset().top;  
+      var topOfOthDiv = $("#about-shaastra-two").offset().top;  
       $(window).scroll(function () {
         if ($(window).scrollTop() > topOfOthDiv) {
           $('#ticks').removeClass('initialAdjustment');
@@ -32,24 +32,26 @@
 </head>
 
 <body class="col col-sm-offset-1 col-sm-10">	
-  <div class="intro" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
+  <div class="container-fluid intro parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
     <div class="row" class="col-xs-12">
 		  <i class="fa fa-bars fa-3x sb-toggle-right"  id="menu-bars" title="Click to see sponsorship categories"></i>
 		  <img class="col-xs-2 col-sm-2" src="spons_img/2.png" alt="Image Not Found :(" align="left" >
     </div>
     <div class="row" class="col-xs-12">
 		  <h1 id="shaastraMainHeading">Shaastra</h1>
-		  <h2 id="about-shaastra">The Annual Technical Festival of Indian Insitute of Technology,Madras</h2><br>
-		  <h2 id="shaastra-paragraph">Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.<br><br><b> We are THE Spirit of Engineering</h2><br>
+		  <p id="about-shaastra-one">The annual technical festival</p>
+      <p id="about-shaastra-two">of Indian Insitute of Technology Madras, Chennai, India</p>
+		  <p class="shaastra-paragraph">Shaastra, the fiesta of Science,Technology and Entertainment, ever since its inception in the year 2000 has always strove to make a difference in the world we live in through significant creative and innovative advancements in every walk of life, acheived by the very people who come, witness and involve themselves with us through out the days of shaastra. We provide a huge platform to everyone for simply acheiving perfection, for discovering ther talents and designing their dreams by breaking all boundaries.</p>
+      <p class="shaastra-paragraph">We are the SPIRIT OF ENGINEERING</p>
 		</div>
 	</div>
-	<p id="first">The First Student Organised Fest, in the world to be ISO 9001:2008 certified.</p><br><br><br>
+	<p id="first">The First Student Organised event in the world to be ISO 9001:2008 certified.</p><br><br><br>
 
   <div class="certification">
     <div class="row" id="ticks">
-      <div class="col-sm-6 col-md-4" >
+      <div class="col-sm-6 col-md-4">
         <div class="thumbnail" >
-          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
+          <img src="./spons_img/3.png" alt="Image not found!">
           <div>
             <h2 class="caption"><b>Planning</b></h2>
           </div>
@@ -57,7 +59,7 @@
       </div>
       <div class="col-sm-6 col-md-4" >
         <div class="thumbnail" >
-          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
+          <img src="spons_img/3.png" alt="Image not found!">
           <div>
             <h2 class="caption"><b>Innovation</b></h2>
           </div>
@@ -65,7 +67,7 @@
       </div>
       <div class="col-sm-6 col-md-4" >
         <div class="thumbnail" >
-          <img src="spons_img/3.png" alt="Opportunity 1 Image not found! :(">
+          <img src="spons_img/3.png" alt="Image not found!">
           <div>
             <h2 class="caption"><b>Execution</b></h2>
           </div>
@@ -313,47 +315,49 @@
 	</div>
  -->
 
-  <div class="container-fluid footer footer-top">
-    <div class="row">
-      <h2>We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass-root level.</h2>
+  <div class="container-fluid footer">
+    <div class="footer-top">
+      <div class="row">
+        <h2>We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass-root level.</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="container-fluid footer footer-middle">
-    <div class="row">
-      <h2>For Sponsorship and Industry relation, please contact</h2>
+    <div class="footer-middle">
+      <div class="row">
+        <h2>For Sponsorship and Industry relation, please contact</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="container-fluid footer footer-bottom">
-    <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-12">
-        <h2>BHAVIK RASYARA</h2>
-        <p>Core team member</p>
-        <p>Sponsorship and PR</p>
-        <p>Shaastra 2016</p>
-        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
-        <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;bhavik@shaastra.org</p>
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
-        <h2>SHASHANKA RAO</h2>
-        <p>Core team member</p>
-        <p>Sponsorship and PR</p>
-        <p>Shaastra 2016</p>
-        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
-        <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;shashanka@shaastra.org</p>
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
-        <h2>MAHESH KURUP</h2>
-        <p>Core team member</p>
-        <p>Sponsorship and PR</p>
-        <p>Shaastra 2016</p>
-        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
-        <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;kurup@shaastra.org</p>
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <h2>BHAVIK RASYARA</h2>
+          <p>Core team member</p>
+          <p>Sponsorship and PR</p>
+          <p>Shaastra 2016</p>
+          <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
+          <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;bhavik@shaastra.org</p>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <h2>SHASHANKA RAO</h2>
+          <p>Core team member</p>
+          <p>Sponsorship and PR</p>
+          <p>Shaastra 2016</p>
+          <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
+          <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;shashanka@shaastra.org</p>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <h2>MAHESH KURUP</h2>
+          <p>Core team member</p>
+          <p>Sponsorship and PR</p>
+          <p>Shaastra 2016</p>
+          <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
+          <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;kurup@shaastra.org</p>
+        </div>
       </div>
     </div>
   </div>
-	
+  
 	<!-- Side bar content -->
 	<div class="sb-slidebar sb-right">
 		<ul id="side-menu"><br>
