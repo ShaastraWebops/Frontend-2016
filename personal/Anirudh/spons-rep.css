@@ -208,6 +208,8 @@ table
 	font-size: 2.5em;
 	padding: 5%;
 	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'myriad-pro-font';
 }
 
 .mission {
@@ -215,6 +217,8 @@ table
 	color: white;
 	padding: 10% 5% 5% 5%;
 	font-size: 1.2em;
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
 }
 
 .tab-content>div p
@@ -302,7 +306,8 @@ table
 .shaastra-aim {
 	padding: 5% 5% 0px 0px;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.4em;
+	font-family: 'myriad-pro-font';
 }
 
 #eventsHeading{
@@ -336,6 +341,7 @@ table
 	color: white;
 	background-image: url('spons_img/00000.png');
 	padding: 0%;
+	font-family: 'myriad-pro-font';
 }
 
 .footer-top {
@@ -352,5 +358,5 @@ table
 
 .footer-bottom {
 	padding: 10%;
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
