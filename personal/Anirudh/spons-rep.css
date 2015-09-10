@@ -107,6 +107,7 @@ tbody>tr>th>a,tbody>tr>th>a:link,tbody>tr>th>a:visited,tbody>tr>th>a:hover,tbody
 .sb-slidebar
   {
 	background-color:white;
+	width: 30%;
   }
 tbody>tr:nth-child(odd)
   {
@@ -136,7 +137,7 @@ tbody>tr:nth-child(odd)
   list-style-type: none;
   margin: 0;  
   padding: 0;
-  width:100%;
+  width:75%;
   background-color: white;
 }
 #side-menu li{
