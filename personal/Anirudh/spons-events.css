@@ -38,8 +38,10 @@
 
 .navbar-default .navbar-nav > li > a {
   color: black;
-  font-family: 'roboto-font';
+  font-family: 'myriad-pro-font';
+  font-size: 1.1em;
   font-weight: bold;
+  padding: 1em;
 }
 
 .navbar-default .navbar-nav > li > a:hover,

@@ -44,16 +44,6 @@
   color: white;
   }
 
-.one {
- 	font-size: 4em;
- 	text-align: center;
-}
-
-.two {
-	font-size: 1.1em;
-	text-align: center;
-}
-
 #three
   {
  	font-weight:bold;
@@ -119,69 +109,73 @@ tbody>tr:nth-child(odd)
   color:white;
   cursor:pointer;
 }
+
 .initialAdjustment{
-  -webkit-transform: translate(0,500px);
-}
-#ticks{ 
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-}
-.caption{
-  color: black;
-}
-#side-menu {
-  position:absolute;
-  height: 100%;
-  left:0;
-  top:0;
-  list-style-type: none;
-  margin: 0;  
-  padding: 0;
-  width:100%;
-  background-color: white;
-}
-#side-menu li{
-  display: block;
-  width: 100%;  
-  text-align:center;
-}
-#side-menu a{
-  color: black;
-  text-decoration: none;
-  font-weight: normal;
-}
-hr { 
-  margin-top: 17px; 
-  margin-bottom: 17px; 
-}
-/*.intro
-{
-	display:table;
-	width: 100%;
-	height:100%;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  margin-bottom:100px
+  -webkit-transform: translate(0, 500px);
 }
 
-.intro>h1,.intro>h2,.intro>h3
-{
-	color:white;
+#ticks { 
+  -webkit-transition: -webkit-transform 1s ease-in-out;
 }
-*/
-.thumbnail
-{
-	border:0 none;
+
+.certification {
+	padding: 5%;
+	color: black;
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
 }
-.thumbnail>img
-{
-	width:150px;
-	height: 150px;
+
+#side-menu {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  list-style-type: none;
+  margin: 10% 0 0 0;  
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+#side-menu li {
+  display: block;
+  width: 100%;  
+  text-align: center;
+  margin: 0; 
+}
+
+#side-menu a {
+  color: black;
+  text-decoration: none;
+  margin: 0; 
+  font-weight: normal;
+}
+
+hr { 
+  /*margin-top: 17px; */
+  /*margin-bottom: 17px; */
 }
 
 .statistics {
 	color: white;	
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
+}
+
+.statistics p {
+	margin: 0em;
+}
+
+.one {
+ 	font-size: 4em;
+ 	text-align: center;
+}
+
+.two {
+	font-size: 1.1em;
+	text-align: center;
 }
 
 table
@@ -212,9 +206,18 @@ table
 	font-family: 'myriad-pro-font';
 }
 
+.events-list{
+	color: black;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'myriad-pro-font';
+}
+
 .mission {
 	background-color: #35C8B6;
 	color: white;
+	margin-top: 5%; 
 	padding: 10% 5% 5% 5%;
 	font-size: 1.2em;
 	font-family: 'myriad-pro-font';
@@ -295,12 +298,10 @@ table
 	font-weight: bold;
 }
 
-.certification {
-	margin-bottom: 100px;
-}
-
 .acheivements {
 	background-color: #35C8B6;
+	font-family: 'myriad-pro-font';
+	font-weight: bold;
 }
 
 .shaastra-aim {
@@ -325,9 +326,7 @@ table
 .shaastraHeadings{
 	color:black;
 }
-#statisticsText{
-	margin-top:50px;
-}
+
 #eventsImageContainer{
 	display:inline-block;
 	margin-top:60px;
