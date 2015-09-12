@@ -207,6 +207,11 @@ hr{
       opacity: 0;
     }
   }
+#shaastra-menu-logo{
+	position: absolute;
+	height: 5%;
+	left: 0;
+}  
 .motto {
   color: white;
 	background-color: #35C8B6; 
