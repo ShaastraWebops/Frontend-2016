@@ -35,9 +35,9 @@ angular
         controller: 'loginCtrl',
         controllerAs: 'register'
       })      
-      .when('/home', {
-        templateUrl: 'views/home.html',
-        controller: 'eventsListCtrl',
+      .when('/eventsList', {
+        templateUrl: 'views/eventList.html',
+        controller: 'eventListCtrl',
         controllerAs: 'eventsList'
       })
       .when('/events', {
