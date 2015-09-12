@@ -22,16 +22,16 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'MainController',
         controllerAs: 'main'
       })
-      .when('/home', {
-        templateUrl: 'views/home.html',
+      .when('/', {
+        templateUrl: 'views/homepage.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })      
-      .when('/homePage', {
-        templateUrl: 'views/homepage.html',
+      .when('/home', {
+        templateUrl: 'views/home.html',
         controller: 'eventsListCtrl',
         controllerAs: 'eventsList'
       })

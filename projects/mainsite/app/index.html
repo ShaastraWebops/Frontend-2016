@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -17,14 +18,7 @@
     <link rel="stylesheet" href="styles/event.css">
     <link rel="stylesheet" href="styles/contact-us-styles.css">
     <link rel="stylesheet" href="styles/login-register.css">
- <!--    <link rel="stylesheet" href="styles/home_styles.css"> -->
     <link rel="stylesheet" href="styles/home_style.css">
-    <!-- endbuild -->
-      <title>SHAASTRA 2016</title>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="app.js"></script>
   </head>
   <body ng-app="shaastra2016App">
     <!--[if lte IE 8]>
@@ -32,7 +26,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+<!--     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -65,7 +59,7 @@
     <div class="container">
     <div ng-view=""></div>
     </div>
-
+ -->
 <!--     <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -74,6 +68,71 @@
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <header>
+    
+    <div id="omnbars" class="o inblock" ng-controller="MainController">
+      <span class="bars" id="bar1"></span>
+      <span class="bars" id="bar2"></span>
+      <span class="bars" id="bar3"></span>
+      <span class="bars" id="bar4"></span>
+    </div>
+    
+    <div id="cmnbars" class="c none" ng-controller="MainController">
+      <span class="bars" id="bar5"></span>
+      <span class="bars" id="bar6"></span>
+    </div>
+    <div class="top-menu" ng-controller="MainController">
+      <p class="search"><span class="s scl">Search</span><span class="scl glyphicon glyphicon-search"></span><span class="inp"><input class="none si" type="search" name="Search"><span class="none si sic glyphicon glyphicon-remove"></span></span></p>
+      <p class="account"><span class="ac">Account</span><a id="login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
+    </div>
+    </header>
+
+  <div class="menu " ng-controller="MainController">
+    <ul class="mn-list">
+      <span id="menuscroll">
+      <li><a href="#">Log In/Register</a></li>
+      <li><a href="#">Pre-Shaastra</a></li>
+      <li class="down"><a class="d" href="#">Events<span class="fa fa-caret-right"></span></a>
+        <ul class="list">
+          <li><a href="#">Aero</a></li>
+          <li><a href="#">Aero</a></li>
+          <li><a href="#">Aero</a></li>
+        </ul>
+      </li>
+      <li class="down" ><a  class="d" href="#">Workshops<span class="fa fa-caret-right"></span></a>
+        <ul class="list">
+          <li><a href="#">Aero</a></li>
+          <li><a href="#">Aero</a></li>
+          <li><a href="#">Aero</a></li>
+        </ul>
+      </li>
+      <li class="down" ><a class="d" href="#">Lectures<span class="fa fa-caret-right"></span></a>
+        <ul class="list">
+          <li><a href="#">Aero</a></li>
+          <li><a href="#">Aero</a></li>
+          <li><a href="#">Aero</a></li>
+
+        </ul>
+      </li>
+      <li><a href="#">Sponsors</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      </span>
+    </ul>
+  </div>
+  <div style="position: absolute;top: 25px;left: 145px; width:1000px;height:600px"  ng-controller="MainController"> 
+    <div ng-view="">
+    </div>
+    </div>
+  <footer>
+    <ul class="out mn-social">
+      <li class="social"><a id="fb" href="#"><i class="fa fa-facebook"><span></span></i></a></li>
+      <li class="social"><a id="tw" href="#"><i class="fa fa-twitter"><span></span></i></a></li>
+      <li class="social"><a id="you" href="#"><i class="fa fa-youtube-play"><span></span></i></a></li>
+      <li class="social"><a id="li" href="#"><i class="fa fa-linkedin"><span></span></i></a></li>
+      </ul>
+  </footer>
+
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),

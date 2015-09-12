@@ -241,21 +241,21 @@ $(".shaastrabox").click(function(){
                    $(".elemboxleft").click(function(){
 
                       imagepath = $("#righthand").attr("src");
-                      if(imagepath == "handr.png"){
-                   $("#righthand").attr("src", "handr1.png");
+                      if(imagepath == "images/handr.png"){
+                   $("#righthand").attr("src", "images/handr1.png");
 
                       }else{
-                  $("#righthand").attr("src", "handr.png");
+                  $("#righthand").attr("src", "images/handr.png");
                            }
                   });
                     $(".elemboxright").click(function(){
 
                       imagepath = $("#lefthand").attr("src");
-                      if(imagepath == "handl.png"){
-                   $("#lefthand").attr("src", "handl1.png");
+                      if(imagepath == "images/handl.png"){
+                   $("#lefthand").attr("src", "images/handl1.png");
 
                       }else{
-                  $("#lefthand").attr("src", "handl.png");
+                  $("#lefthand").attr("src", "images/handl.png");
                            }
                   });
                    
