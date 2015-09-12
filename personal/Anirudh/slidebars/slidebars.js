@@ -168,7 +168,11 @@
 				if ( amount === '0px' ) {
 					removeAnimation();
 				} else {
+					console.log(selector);
+					//selector.css( '-webkit-transition', 'all 4s' );
 					selector.css( 'transform', 'translate( ' + amount + ' )' ); // Apply the animation.
+
+					console.log(amount);
 				}
 
 			} else if ( animation === 'side' ) {
