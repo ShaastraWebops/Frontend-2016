@@ -18,15 +18,253 @@
   <link rel="stylesheet" href="./spons-common.css">
   <link rel="stylesheet" type="text/css" href="./spons-rep.css">
   <script src="./slidebars/slidebars.js"></script>
+
+  <style type="text/css">
+    hr{
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+    ul {
+    position:absolute;
+    right:-200px;
+    top:0;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    width:200px;
+    background-color: #fff;
+    z-index: 50;
+  }
+  li{
+      display: block;
+      width: 200px;
+    padding-top: 5px;
+    padding-bottom:0px;
+    text-align:center;
+    letter-spacing: 3px;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+  }
+  .headings{
+    -webkit-transition: all 0.3s;
+  }
+  #closemenu{
+    position:absolute;
+    right:30px;
+    color: white;
+    cursor: pointer;
+  }
+  .line{
+    background-color: white;
+    width: 30px;
+    height: 3px;
+  }
+  #firstline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:12px;
+    -webkit-animation:appear1 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+  }
+  #secondline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:18px;
+    -webkit-animation:appear1 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.1s;
+  }
+  #thirdline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:24px;
+    -webkit-animation:appear1 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.2s;
+  }
+  #fourthline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:30px;
+    opacity: 0;
+  }
+  
+  #closefirstline{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top:20px;
+    -webkit-transform:rotate(45deg);
+    -webkit-animation:rotationback1 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+  }
+  #closesecondline{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top:20px;
+    -webkit-transform:rotate(-45deg);
+    -webkit-animation:rotationback2 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+  }
+  #closeiconcontainer{
+    position: absolute;
+    top:0;
+    right: 120px;
+    width: 30px;
+    height: 40px;
+  }
+  #closeiconcontainer:hover #closefirstline{
+    -webkit-animation:rotation1 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+  }
+  #closeiconcontainer:hover #closesecondline{
+    -webkit-animation:rotation2 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+  }
+  #openiconcontainer{
+    height: 40px;
+    width: 30px;
+  }
+  #openiconcontainer:hover #firstline{
+    opacity: 0;
+    -webkit-animation:disappear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+  }
+  #openiconcontainer:hover #secondline{
+    opacity: 0;
+    -webkit-animation:appear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.1s;
+  }
+  #openiconcontainer:hover #thirdline{
+    opacity: 0;
+    -webkit-animation:appear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.2s;
+  }
+  #openiconcontainer:hover #fourthline{
+    opacity: 0;
+    -webkit-animation:appear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.3s;
+  }
+  @-webkit-keyframes rotation1{
+    0%{
+      -webkit-transform:rotateZ(45deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(135deg);
+    }
+  }
+  @-webkit-keyframes rotation2{
+    0%{
+      -webkit-transform:rotateZ(-45deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(45deg);
+    }
+  }
+  @-webkit-keyframes rotationback1{
+    0%{
+      -webkit-transform:rotateZ(135deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(45deg);
+    }
+  }
+  @-webkit-keyframes rotationback2{
+    0%{
+      -webkit-transform:rotateZ(45deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(-45deg);
+    }
+  }
+  @-webkit-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  </style>
   
   <script type="text/javascript">
     $(document).ready(function() {
-      $.slidebars();
       $("#ticks").addClass('initialAdjustment');
       var topOfOthDiv = $("#about-shaastra-two").offset().top;  
       $(window).scroll(function () {
         if ($(window).scrollTop() > topOfOthDiv) {
           $('#ticks').removeClass('initialAdjustment');
+        }
+      });
+      var count=0;
+      $("#closemenu").click(function(){
+        if(count==1){
+          $("ul").animate({right: '-200px'});
+          $("#closemenu").animate({right: '30px'});
+          $("#closeiconcontainer").css("display","none");
+          $("#closefirstline").css("display","none");
+          $("#closesecondline").css("display","none");
+          $("#firstline").css("display","block");
+          $("#secondline").css("display","block");
+          $("#thirdline").css("display","block");
+          $("#fourthline").css("display","block");
+          count=count-1;
+        }
+        else{
+          $("ul").animate({right: '0px'});
+          $("#closemenu").animate({right: '120px'});
+          $("#closeiconcontainer").css("display","block");
+          $("#closefirstline").css("display","block");
+          $("#closesecondline").css("display","block");
+          $("#firstline").css("display","none");
+          $("#secondline").css("display","none");
+          $("#thirdline").css("display","none");
+          $("#fourthline").css("display","none");
+          count=count+1;
         }
       });
     });
@@ -35,9 +273,36 @@
 </head>
 
 <body class="col col-sm-offset-1 col-sm-10">	
+
+  <ul>
+    <li><a href="#"><div class="headings">HOME</div></a></li><hr>
+    <li><a href="#"><div class="headings">DASHBOARD</div></a></li><hr>
+    <li><a href="#"><div class="headings">PRE SHAASTRA</div></a></li><hr>
+    <li><a href="#"><div class="headings">EVENTS</div></a></li><hr>
+    <li><a href="#"><div class="headings">WORKSHOPS</div></a></li><hr>
+    <li><a href="#"><div class="headings">LECTURES</div></a></li><hr>
+    <li><a href="#"><div class="headings">EXHIBITIONS</div></a></li><hr>
+    <li><a href="#"><div class="headings">HOSPITALITY</div></a></li><hr>
+    <li><a href="#"><div class="headings">SPONSORS</div></a></li><hr>
+    <li><a href="#"><div class="headings">ABOUT US</div></a></li><hr>
+    <li><a href="#"><div class="headings">CONTACT US</div></a></li><hr>
+  </ul>
+  <div id="closemenu">
+    <div id="openiconcontainer">
+      <span id="firstline" class="line"></span>
+      <span id="secondline" class="line"></span>
+      <span id="thirdline" class="line"></span>
+      <span id="fourthline" class="line"></span>
+    </div>
+    <div id="closeiconcontainer">
+      <span id="closefirstline" class="line"></span>
+      <span id="closesecondline" class="line"></span>
+    </div>
+  </div>
+
+
   <div class="col-xs-12 col-sm-12 col-md-12">
-    <img class="col-xs-2 col-sm-2 col-md-2 img-responsive" src="spons_img/2.png" alt="Image Not Found" align="left" >
-    <i class="fa fa-bars fa-2x sb-toggle-right" id="menu-bars" title="Click to see sponsorship categories"></i>
+    
   </div>
   <div class="container-fluid intro parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
     <div class="row" style="margin-top:15%">
@@ -316,24 +581,6 @@
       </div>
     </div>
   </div>
-  
-	<!-- Side bar content -->
-	<div class="sb-slidebar sb-right">
-		<ul id="side-menu">
-      <li><img class="img-resonsive col-md-5" src="./spons_img/shaastra-blue-logo.png"><a href="#"><div><b>SPONSORSHIP BRONCHURE</b></div></a></li><hr>
-      <li><a href="#"><div><b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
-      <li><a href="#"><div><b>Q</b>uality <b>M</b>anagement <b>S</b>ystem</div></a></li><hr>
-      <li><a href="#"><div><b>E</b>vents</div></a></li><hr>
-      <li><a href="#"><div><b>W</b>orkshops</div></a></li><hr>
-      <li><a href="#"><div><b>S</b>ocial <b>C</b>ause</div></a></li><hr>
-      <li><a href="#"><div><b>W</b>hy <b>S</b>ponsor <b>S</b>haastra</div></a></li><hr>
-      <li><a href="#"><div><b>P</b>ublicity</div></a></li><hr>
-      <li><a href="#"><div><b>A</b>venues <b>F</b>or <b>S</b>ponsorship</div></a></li><hr>
-      <li><a href="#"><div><b>Q</b>uotes <b>F</b>rom <b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
-      <li><a href="#"><div><b>M</b>ap</div></a></li><hr>
-      <li><a href="#"><div><b>Q</b>uotes <b>F</b>rom <b>P</b>artcipants</div></a></li><hr>
-    </ul>    
-	</div>
 
 </body>
 </html>
