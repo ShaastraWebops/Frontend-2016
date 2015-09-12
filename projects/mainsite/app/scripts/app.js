@@ -29,6 +29,11 @@ angular
         templateUrl: 'views/homepage.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
+      })
+      .when('/register', {
+        templateUrl: 'views/Register.html',
+        controller: 'loginCtrl',
+        controllerAs: 'register'
       })      
       .when('/home', {
         templateUrl: 'views/home.html',

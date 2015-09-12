@@ -83,16 +83,16 @@
     </div>
     <div class="top-menu" ng-controller="MainController">
       <p class="search"><span class="s scl">Search</span><span class="scl glyphicon glyphicon-search"></span><span class="inp"><input class="none si" type="search" name="Search"><span class="none si sic glyphicon glyphicon-remove"></span></span></p>
-      <p class="account"><span class="ac">Account</span><a id="login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
+      <p class="account"><span class="ac">Account</span><a id="login" href="#/loginRegister"class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
     </div>
     </header>
 
   <div class="menu " ng-controller="MainController">
     <ul class="mn-list">
       <span id="menuscroll">
-      <li><a href="#">Log In/Register</a></li>
-      <li><a href="#">Pre-Shaastra</a></li>
-      <li class="down"><a class="d" href="#">Events<span class="fa fa-caret-right"></span></a>
+      <li><a href="#/loginRegister">Log In/Register</a></li>
+      <li><a href="#/preShaastra">Pre-Shaastra</a></li>
+      <li class="down"><a class="d" href="#/events">Events<span class="fa fa-caret-right"></span></a>
         <ul class="list">
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
@@ -116,11 +116,11 @@
       </li>
       <li><a href="#">Sponsors</a></li>
       <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="#/contactUs">Contact Us</a></li>
       </span>
     </ul>
   </div>
-  <div style="position: absolute;top: 25px;left: 145px; width:1000px;height:600px"  ng-controller="MainController"> 
+  <div style="position: absolute;top: 35px;left: 145px; width:1075px;height:600px;overflow:scroll"  ng-controller="MainController"> 
     <div ng-view="">
     </div>
     </div>
