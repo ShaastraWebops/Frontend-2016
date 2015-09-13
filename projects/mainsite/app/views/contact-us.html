@@ -1,27 +1,29 @@
-<!Doctype html>
-<html ng-app="contactUsApp">
-<head>
-  <script src="..\bower_components\jquery\dist\jquery.min.js"></script>
-  <script src="..\bower_components\angular\angular.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
-  <script src="..\bower_components\ui-bootstrap\src\ui-bootstrap-tpls-0.13.1.js"></script>
-  <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">
-  <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="contact-us-styles.css">
-  <title>Contact Us</title>
-</head>
-<body ng-controller="contactUsCtrl" ng-clock ng-init="initialize()">
+<!--<!Doctype html>-->
+<!--<html ng-app="contactUsApp">-->
+<!--<head>-->
+<!--  <script src="..\bower_components\jquery\dist\jquery.min.js"></script>-->
+<!--  <script src="..\bower_components\angular\angular.min.js"></script>-->
+<!--  <script src="https://maps.googleapis.com/maps/api/js"></script>-->
+<!--  <script src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>-->
+<!--  <script src="..\bower_components\ui-bootstrap\src\ui-bootstrap-tpls-0.13.1.js"></script>-->
+<!--  <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">-->
+<!--  <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">-->
+<!--  <link rel="stylesheet" type="text/css" href="contact-us-styles.css">-->
+<!--  <title>Contact Us</title>-->
+<!--</head>-->
+<!--<body ng-controller="contactUsCtrl" ng-clock ng-init="initialize()">-->
 	<div class="container-fluid">
-		<h1 id="title">Contact Us</h1>
+		<h1 style="aligh:center">Contact Us</h1>
 		<div class="container-fluid main">
 		<div class="row">
 			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
 				<ul class="rhombus-grid">
 					<li class="rhombus" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
-						<div class="rhombus-top"></div>
-						<span ng-bind="department.name" class="rhombus-text"></span>
-						<div class="rhombus-bottom"></div>
+						<div class="rhombus-front">
+							<span ng-bind="department.name" class="rhombus-text"></span>
+						</div>
+						<div class="rhombus-back">
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -92,6 +94,6 @@
 			</div>
 		</script>
 	</div>
-	<script type="text/javascript" src="contact-us-script.js"></script>
-</body>
-</html>
+<!--	<script type="text/javascript" src="contact-us-script.js"></script>-->
+<!--</body>-->
+<!--</html>-->
