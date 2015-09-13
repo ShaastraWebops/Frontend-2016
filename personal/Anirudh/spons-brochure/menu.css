@@ -1,11 +1,11 @@
-hr{
+#menu-container hr{
       margin-top: 18px;
       margin-bottom: 18px;
     }
-a:hover{
+#menu-container a:hover{
       text-decoration: none;
     }
-ul {
+#menu-container {
     position:absolute;
     right:-200px;
     top:0;
@@ -16,7 +16,7 @@ ul {
     background-color: #fff;
     z-index: 50;
   }
-li{
+#menu-container li{
       display: block;
       width: 200px;
     padding-top: 5px;
@@ -24,7 +24,7 @@ li{
     text-align:center;
     letter-spacing: 3px;
   }
-  a{
+#menu-container a{
     color: black;
     text-decoration: none;
   }
@@ -38,7 +38,7 @@ li{
     cursor: pointer;
   }
   .line{
-    background-color: white;
+    background-color: black;
     width: 30px;
     height: 3px;
   }
@@ -51,6 +51,15 @@ li{
     -webkit-animation:appear1 0.3s 1;
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
+    -moz-animation:appear1 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:appear1 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:appear1 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
   }
   #secondline{
     display: block;
@@ -62,6 +71,18 @@ li{
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
     -webkit-animation-delay:0.1s;
+    -moz-animation:appear1 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.1s;
+    -ms-animation:appear1 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.1s;
+    -o-animation:appear1 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.1s;
   }
   #thirdline{
     display: block;
@@ -73,6 +94,18 @@ li{
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
     -webkit-animation-delay:0.2s;
+    -moz-animation:appear1 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.2s;
+    -ms-animation:appear1 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.2s;
+    -o-animation:appear1 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.2s;
   }
   #fourthline{
     display: block;
@@ -92,6 +125,18 @@ li{
     -webkit-animation:rotationback1 0.2s 1;
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
+    -moz-transform:rotate(45deg);
+    -moz-animation:rotationback1 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-transform:rotate(45deg);
+    -ms-animation:rotationback1 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-transform:rotate(45deg);
+    -o-animation:rotationback1 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
   }
   #closesecondline{
     display: none;
@@ -102,6 +147,18 @@ li{
     -webkit-animation:rotationback2 0.2s 1;
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
+    -moz-transform:rotate(-45deg);
+    -moz-animation:rotationback2 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-transform:rotate(-45deg);
+    -ms-animation:rotationback2 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-transform:rotate(-45deg);
+    -o-animation:rotationback2 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
   }
   #closeiconcontainer{
     position: absolute;
@@ -114,14 +171,32 @@ li{
     -webkit-animation:rotation1 0.2s 1;
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
+    -moz-animation:rotation1 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:rotation1 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:rotation1 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
   }
   #closeiconcontainer:hover #closesecondline{
     -webkit-animation:rotation2 0.2s 1;
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
+    -moz-animation:rotation2 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:rotation2 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:rotation2 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
   }
   #openiconcontainer{
-    height: 40px;
+    height: 50px;
     width: 30px;
   }
   #openiconcontainer:hover #firstline{
@@ -129,6 +204,15 @@ li{
     -webkit-animation:disappear 0.3s 1;
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
+    -moz-animation:disappear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:disappear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:disappear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
   }
   #openiconcontainer:hover #secondline{
     opacity: 0;
@@ -136,6 +220,18 @@ li{
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
     -webkit-animation-delay:0.1s;
+    -moz-animation:appear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.1s;
+    -ms-animation:appear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.1s;
+    -o-animation:appear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.1s;
   }
   #openiconcontainer:hover #thirdline{
     opacity: 0;
@@ -143,6 +239,18 @@ li{
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
     -webkit-animation-delay:0.2s;
+    -moz-animation:appear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.2s;
+    -ms-animation:appear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.2s;
+    -o-animation:appear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.2s;
   }
   #openiconcontainer:hover #fourthline{
     opacity: 0;
@@ -150,6 +258,18 @@ li{
     -webkit-animation-timing-function:linear;
     -webkit-animation-fill-mode:forwards;
     -webkit-animation-delay:0.3s;
+    -moz-animation:appear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.3s;
+    -ms-animation:appear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.3s;
+    -o-animation:appear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.3s;
   }
   @-webkit-keyframes rotation1{
     0%{
