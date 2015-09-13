@@ -13,9 +13,18 @@
   <link rel="stylesheet" href="./fonts.css">
   <link rel="stylesheet" href="./spons-common.css">
   <link rel="stylesheet" href="./spons-events.css">
+  <link rel="stylesheet" href="./menu.css">
+  <script src="./menu.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#menu").load('http://localhost:8081/menu.html');
+    });
+  </script>
 </head>
 
 <body class="col col-sm-offset-1 col-sm-10">
+  <div id="menu"></div>
   <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Events</h1>
   <div class="container-fluid">
 

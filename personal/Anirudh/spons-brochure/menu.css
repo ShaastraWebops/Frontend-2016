@@ -207,6 +207,176 @@ li{
       opacity: 0;
     }
   }
+
+
+  @-moz-keyframes rotation1{
+    0%{
+      -moz-transform:rotateZ(45deg);
+    }
+    100%{
+      -moz-transform:rotateZ(135deg);
+    }
+  }
+  @-moz-keyframes rotation2{
+    0%{
+      -moz-transform:rotateZ(-45deg);
+    }
+    100%{
+      -moz-transform:rotateZ(45deg);
+    }
+  }
+  @-moz-keyframes rotationback1{
+    0%{
+      -moz-transform:rotateZ(135deg);
+    }
+    100%{
+      -moz-transform:rotateZ(45deg);
+    }
+  }
+  @-moz-keyframes rotationback2{
+    0%{
+      -moz-transform:rotateZ(45deg);
+    }
+    100%{
+      -moz-transform:rotateZ(-45deg);
+    }
+  }
+  @-moz-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @-ms-keyframes rotation1{
+    0%{
+      -ms-transform:rotateZ(45deg);
+    }
+    100%{
+      -ms-transform:rotateZ(135deg);
+    }
+  }
+  @-ms-keyframes rotation2{
+    0%{
+      -ms-transform:rotateZ(-45deg);
+    }
+    100%{
+      -ms-transform:rotateZ(45deg);
+    }
+  }
+  @-ms-keyframes rotationback1{
+    0%{
+      -ms-transform:rotateZ(135deg);
+    }
+    100%{
+      -ms-transform:rotateZ(45deg);
+    }
+  }
+  @-ms-keyframes rotationback2{
+    0%{
+      -ms-transform:rotateZ(45deg);
+    }
+    100%{
+      -ms-transform:rotateZ(-45deg);
+    }
+  }
+  @-ms-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @-o-keyframes rotation1{
+    0%{
+      -o-transform:rotateZ(45deg);
+    }
+    100%{
+      -o-transform:rotateZ(135deg);
+    }
+  }
+  @-o-keyframes rotation2{
+    0%{
+      -o-transform:rotateZ(-45deg);
+    }
+    100%{
+      -o-transform:rotateZ(45deg);
+    }
+  }
+  @-o-keyframes rotationback1{
+    0%{
+      -o-transform:rotateZ(135deg);
+    }
+    100%{
+      -o-transform:rotateZ(45deg);
+    }
+  }
+  @-o-keyframes rotationback2{
+    0%{
+      -o-transform:rotateZ(45deg);
+    }
+    100%{
+      -o-transform:rotateZ(-45deg);
+    }
+  }
+  @-o-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-o-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-o-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
 #shaastra-menu-logo{
 	position: absolute;
 	height: 5%;

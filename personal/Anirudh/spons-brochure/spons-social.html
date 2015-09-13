@@ -11,9 +11,18 @@
   <link rel="stylesheet" href="./fonts.css">
   <link rel="stylesheet" href="./spons-common.css">
   <link rel="stylesheet" href="./spons-social.css">
+  <link rel="stylesheet" href="./menu.css">
+  <script src="./menu.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#menu").load('http://localhost:8081/menu.html');
+    });
+  </script>
 </head>
 
 <body class="col col-sm-offset-1 col-sm-10">
+  <div id="menu"></div>
   <div class="container-fluid">
     <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Social Cause</h1>
     <img class="col-md-12 col-sm-12 col-xs-12" src="./spons_img/social1.png" height="400" alt="Image Not Found">
