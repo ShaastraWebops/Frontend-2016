@@ -1,7 +1,7 @@
+'use strict';
 
  angular.module('shaastra2016App')
 .controller('eventListCtrl', function ($scope) {
-	'use strict';
 	this.details = lists;
 
 	$scope.posX = 0;
