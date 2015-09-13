@@ -16,28 +16,44 @@
   <link rel="stylesheet" href="./slidebars/slidebars.css">
 		
   <link rel="stylesheet" href="./spons-common.css">
+  <link rel="stylesheet" href="./menu.css">
   <link rel="stylesheet" type="text/css" href="./spons-rep.css">
+  <script src="./menu.js"></script>
   <script src="./slidebars/slidebars.js"></script>
   
   <script type="text/javascript">
     $(document).ready(function() {
-      $.slidebars();
-      $("#ticks").addClass('initialAdjustment');
-      var topOfOthDiv = $("#about-shaastra-two").offset().top;  
+      // $("#menu").load('menu.html');
+      // $("#ticks").addClass('initialAdjustment');
+      // var topOfOthDiv = $("#about-shaastra-two").offset().top;  
+      // $(window).scroll(function () {
+      //   if ($(window).scrollTop() > topOfOthDiv) {
+      //     $('#ticks').removeClass('initialAdjustment');
+      //   }
+      // });
+
+      $("#menu").load('menu.html');
+      var ticks = $(".tt");
+      var topOfOthDiv = $("#about-shaastra-two").offset().top - 100;  
+      ticks.hide();
       $(window).scroll(function () {
         if ($(window).scrollTop() > topOfOthDiv) {
-          $('#ticks').removeClass('initialAdjustment');
+          ticks.fadeIn(1000);
         }
       });
+      
     });
   </script>
 
 </head>
 
 <body class="col col-sm-offset-1 col-sm-10">	
+
+  <div id="menu"></div>
+
+
   <div class="col-xs-12 col-sm-12 col-md-12">
-    <img class="col-xs-2 col-sm-2 col-md-2 img-responsive" src="spons_img/2.png" alt="Image Not Found" align="left" >
-    <i class="fa fa-bars fa-2x sb-toggle-right" id="menu-bars" title="Click to see sponsorship categories"></i>
+    
   </div>
   <div class="container-fluid intro parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png" data-speed="0.2">
     <div class="row" style="margin-top:15%">
@@ -61,15 +77,15 @@
     <div class="certification">
       <div class="row" id="ticks">
       <!-- <div class="row"> -->
-        <div class="col-sm-6 col-md-offset-1 col-md-2">
+        <div class="col-sm-6 col-md-offset-1 col-md-2 tt">
           <img class="img-responsive" src="./spons_img/3.png" alt="Image not found">
           <h1>Planning</h1>
         </div>
-        <div class="col-sm-6 col-md-offset-2 col-md-2">
+        <div class="col-sm-6 col-md-offset-2 col-md-2 tt">
           <img class="img-responsive" src="spons_img/3.png" alt="Image not found">
           <h1>Innovation</h1>
         </div>
-        <div class="col-sm-6 col-md-offset-2 col-md-2">
+        <div class="col-sm-6 col-md-offset-2 col-md-2 tt">
           <img class="img-responsive" src="spons_img/3.png" alt="Image not found">
           <h1>Execution</h1>
         </div>
@@ -102,7 +118,7 @@
     </div>
 	</div>
 
-	<div class="container-fluid statistics parallax-window" data-parallax="scroll" data-image-src="spons_img/8.png" data-speed="0.5">
+	<div class="container-fluid statistics">
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-3">      
         <div>
@@ -175,7 +191,7 @@
     </div>
   </div>
 
-  <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="spons_img/0000.png" data-speed="0.5">
+  <div class="container-fluid aim">
     <div class="row shaastra-aim">
       <img class="img-responsive col-md-5 col-sm-5 col-xs-12" src="spons_img/000.png" alt="Image not loaded">
       <p class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6 col-xs-12" id="shaastraActivity">Since it's inception, Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's-on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai every year in January to witness this spectacle, Shaastra's reach is now beyond city, state and country and has a stake on international stage. Marquee events like IITM Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity, industry and academia.</p> 
@@ -316,24 +332,6 @@
       </div>
     </div>
   </div>
-  
-	<!-- Side bar content -->
-	<div class="sb-slidebar sb-right">
-		<ul id="side-menu">
-      <li><img class="img-resonsive col-md-5" src="./spons_img/shaastra-blue-logo.png"><a href="#"><div><b>SPONSORSHIP BRONCHURE</b></div></a></li><hr>
-      <li><a href="#"><div><b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
-      <li><a href="#"><div><b>Q</b>uality <b>M</b>anagement <b>S</b>ystem</div></a></li><hr>
-      <li><a href="#"><div><b>E</b>vents</div></a></li><hr>
-      <li><a href="#"><div><b>W</b>orkshops</div></a></li><hr>
-      <li><a href="#"><div><b>S</b>ocial <b>C</b>ause</div></a></li><hr>
-      <li><a href="#"><div><b>W</b>hy <b>S</b>ponsor <b>S</b>haastra</div></a></li><hr>
-      <li><a href="#"><div><b>P</b>ublicity</div></a></li><hr>
-      <li><a href="#"><div><b>A</b>venues <b>F</b>or <b>S</b>ponsorship</div></a></li><hr>
-      <li><a href="#"><div><b>Q</b>uotes <b>F</b>rom <b>P</b>revious <b>S</b>ponsors</div></a></li><hr>
-      <li><a href="#"><div><b>M</b>ap</div></a></li><hr>
-      <li><a href="#"><div><b>Q</b>uotes <b>F</b>rom <b>P</b>artcipants</div></a></li><hr>
-    </ul>    
-	</div>
 
 </body>
 </html>

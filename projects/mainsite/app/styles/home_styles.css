@@ -1,0 +1,375 @@
+html{
+		height: 100%;
+	}
+	body {
+		background: url("images/background.jpg") no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 100%;
+		overflow:hidden;
+
+			}
+	.hs::-webkit-scrollbar { 
+    display: none; 
+}
+	header {
+		width: 100%;
+		height: 6%;	
+		position: relative;
+
+	}
+	.active {
+		 border-bottom: 4px solid #333;
+		 
+	}
+
+	#home-menubar {
+		position: absolute;
+		left: 2%;
+		top: 50%;
+		cursor: pointer;
+	}
+	#home-menu {
+		width: 140px;
+		position: absolute;
+		right: 2%;
+		top: 40%;
+		cursor: pointer;	
+	}
+	#search {
+		float: left;
+	}
+	#user {
+		float: right;
+	}
+	article {
+		position: relative;
+		width: 100%;
+		height: 80%;	
+	}
+	#heading {
+		margin-top: 2%;
+		height: 45px;
+		font-size: 8vh;
+		text-align: center;
+		line-height: 1;
+		font-family: 'Orbitron', sans-serif;
+	}
+hr{
+		
+		width: 87%;
+ 		margin: 0 auto;
+		margin-left: 5%;
+		height: 3px;
+ 		background: black;
+
+ 	}
+ 	
+
+	#top-nav {
+		width: 95%;
+		height: 10.117%;
+		margin-left:5% ;
+		margin-top: 2px;
+		position: absolute;
+		z-index:9999;
+
+	}
+.wrapper {
+		float: left;
+		position:relative;
+		overflow: hidden;
+	}
+	.wrapper img {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		opacity: 1;
+		top: 0;
+		position: absolute;
+	}
+	.slider {
+		width: 100%;
+		height: 100%;
+		background: #000080	;
+		opacity: 0.7;
+		position: absolute;
+		-webkit-transition : -webkit-transform 0.3s ease-out;
+		-moz-transition : -moz-transform 0.3s ease-out;
+		-o-transition : -o-transform 0.3s ease-out;
+		transition : transform 0.3s ease-out;
+	}
+	
+	#top-nav .wrapper {
+		width: 10.160%;
+		height: 100%;
+		cursor: pointer;
+	}
+	#top-nav .wrapper .event-name {
+		width: 100%;
+		color: white;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		font-weight: bold;
+		font-size: 2vh;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-transition : -webkit-transform 0.3s ease-out;
+		-moz-transition : -moz-transform 0.3s ease-out;
+		-o-transition : -o-transform 0.3s ease-out;
+		transition : transform 0.3s ease-out;
+	}
+	
+.hs::-webkit-scrollbar 
+{
+   width: 10px;
+   height: 5px;
+}
+.hs::-webkit-scrollbar-track 
+{
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   border-radius:10px;
+}
+.hs::-webkit-scrollbar-thumb
+{  
+	
+    border: 5px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+   background-color: rgba(96,113,238,1);
+     -webkit-border-radius: 10px;
+    
+}
+
+
+.hs{
+	
+overflow:scroll;
+overflow-y:hidden;
+z-index:800;
+position: relative;
+height: 93%;
+}
+
+
+
+#mid-nav {
+		width: 314.931%;
+		height: 60.11%;
+		left: 30%;
+		top: 40%;
+		z-index:300;
+		position:absolute;
+		}
+#mid-nav .wrapper {
+		width: 10.983%;
+		height: 100%;
+	}
+	#mid-nav .wrapper img {
+		height: 75%;
+		cursor: pointer;
+		opacity: 1;
+	}
+	 #mid-nav .wrapper .slider {
+	 	top:-10%;
+		height: 85%;
+		cursor: pointer;
+	}
+	#mid-nav .wrapper .two-dots {
+		position: absolute;
+		height: 10%;
+		width: 2.223%;
+		top: 77%;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		transform: translate(-50%);
+	}
+	.two-dots div {
+		width: 1vh;
+		height: 23.334%;
+		border-radius: 50%;
+		background: #000;
+		margin-top: 50%;
+	}
+	#mid-nav .wrapper .event-name {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		top: 85%;
+		font-weight:bold; 
+		text-align: center;
+		font-size: 4vh;
+	}
+	.clear {
+		clear: both;
+	}
+	#top-nav .wrapper:hover .slider {
+			-webkit-transform : translateY(-100%);
+			-moz-transform : translateY(-100%);
+			-o-transform : translateY(-100%);
+			transform : translateY(-100%);
+		}
+	#top-nav .wrapper:hover .event-name {
+			-webkit-transform : translateY(90%);
+			-moz-transform : translateY(90%);
+			-o-transform : translateY(90%);
+			transform : translateY(90%);
+		}
+	#mid-nav .wrapper:hover .slider {
+			-webkit-transform : translateY(110%);
+			-moz-transform : translateY(110%);
+			-o-transform : translateY(110%);
+			transform : translateY(110%);
+		}
+		/*#mid-nav .wrapper img {
+	opacity: 0.8;
+	filter: alpha(opacity=70);
+	}	
+	
+#mid-nav .wrapper img:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	}*/
+	
+	section {
+		position: absolute;
+		width: 53.805%;
+		height: 59.881%;
+		top: 11.5%;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		transform: translate(-50%);
+		z-index: -1;
+	}
+	#hand-left, #hand-right {
+		position: absolute;
+		width: 14.286%;
+		height: 31.25%;
+		top: 20%;
+	}
+	#hand-left {
+		left: 0px;
+	}
+	#hand-right {
+		right: 0px;
+	}
+	#robot-body {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		top:8%;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		transform: translate(-50%);
+	}
+	#scroll {
+		position: absolute;
+		z-index: 800;
+		left:50%;
+		top: 108%;
+		font-size: 3vh;
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		transform: translate(-50%);
+	}
+	footer {
+		width: 100%;
+		height: 11%;
+		position: relative;
+		
+	}
+	#social {
+		width: 140px;
+		position: absolute;
+		left: 2%;
+		top: 60%;
+	}
+	.logo {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		float: left;
+		margin-right: 5px;
+	}
+	.logo img {
+		width: 20px;
+		height: 20px;
+		margin: 5px;
+		cursor: pointer;
+	}
+	#facebook {
+		background: #5473a3;
+	}
+	#twitter {
+		background: #56acef;
+	}
+	#youtube {
+		background: #e52d27;
+	}
+	#linkedin {
+		background: #4875B4;
+	}
+	#other-links {
+		position: absolute;
+		right: 2%;
+		top:30%;
+	}
+	#saarang, #iitm, #iso {
+		float: left;
+		margin-left: 10px;
+        
+		cursor: pointer;
+	}
+	#saarang {
+		margin-top: 2%;
+		background: #000;
+		
+	}
+	#iitm, #iitm img, #iso, #iso img {
+		width: 10vh;
+		height: 8vh;
+	}
+	#iso {
+		border-radius: 50%;
+		background: #000;
+	}
+	
+
+
+	@media all and (max-width: 767px){
+	#other-links {
+	display: none;
+				}
+	}
+	@media all and (max-width: 958px){
+	#iitm, #iitm img, #iso, #iso img {
+		display: none;}
+		
+	}
+	@media all and (max-width: 600px){
+	#top-nav,hr,#scroll,#robot-body,#hand-left ,#hand-right {
+			display: none;
+		}
+	#heading{
+			margin-top:5%;
+		}
+	#mid-nav{
+			width:400vh;
+			top: 20%;
+			}
+		}
+
+	

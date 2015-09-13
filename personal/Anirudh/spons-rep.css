@@ -111,12 +111,20 @@ tbody>tr:nth-child(odd)
   cursor:pointer;
 }
 
-.initialAdjustment{
+/*.initialAdjustment {
   -webkit-transform: translate(0, 500px);
 }
+*/
+.initialAdjustment {
+	opacity: 0;
+}
 
-#ticks { 
+/*#ticks { 
   -webkit-transition: -webkit-transform 1s ease-in-out;
+}
+*/
+#ticks { 
+	opacity: 1;
 }
 
 .certification {
@@ -163,10 +171,17 @@ hr {
 	color: white;	
 	font-family: 'myriad-pro-font';
 	font-weight: bold;
+	background-image: url('./spons_img/8.png');
+	padding: 5%;
 }
 
 .statistics p {
 	margin: 0em;
+}
+
+.aim {
+	padding: 3%;
+	background-image: url('./spons_img/0000.png');
 }
 
 .one {

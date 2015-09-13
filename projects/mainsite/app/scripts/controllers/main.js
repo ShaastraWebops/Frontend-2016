@@ -1,17 +1,106 @@
-'use strict';
-
-/**
- * @ngdoc function
- * @name shaastra2016App.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the shaastra2016App
- */
 angular.module('shaastra2016App')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller("MainController",function() {
+  
+});
+//directive
+angular.module('shaastra2016App')
+  .directive('down',
+  function() {
+        return {
+            restrict: 'C',
+            link: function() {
+          $('.down .d').click(function(){
+            $(this).next('.list').toggleClass("clicked");
+            if($(this).next('.list').hasClass("clicked"))
+            {
+              $(this).parent().css("padding-bottom","0em");
+            }
+            
+          });
+                               }
+                               };
+});
+angular.module('shaastra2016App')
+  .directive('o',
+  function() {
+        return {
+            restrict: 'C',
+            link: function() {
+          $('.o').click(function(){
+            $('.o').addClass("none");
+            $('.o').removeClass("inblock");
+            $('.menu').addClass("mnopen");
+            //$('.menu').show(0);
+            $('.c').addClass("block");
+            $('.mn-social').removeClass("out");
+            $('.o').animate({left:"+=141px"},0);
+          });
+                               }
+                               };
+});
+
+angular.module('shaastra2016App')
+  .directive('c',
+  function() {
+        return {
+            restrict: 'C',
+            link: function() {
+          $('.c').click(function(){
+            $('.down .list').removeClass("clicked");
+            $('.mn-social').addClass("out");
+            $('.menu').removeClass("mnopen");
+            $('.c').removeClass("block");
+            $('.o').removeClass("none");
+            $('.o').addClass("inblock");
+            $('.o').animate({left:"-=141px"},200);
+          });
+                               }
+                               };
+});
+angular.module('shaastra2016App')
+  .directive('scl',
+  function() {
+        return {
+            restrict: 'C',
+            link: function() {
+          $('.scl').click(function(){
+            $('.s').hide(0);
+            $('.si').show(200);
+          });
+                               }
+                               };
+});
+angular.module('shaastra2016App')
+  .directive('sic',
+  function() {
+        return {
+            restrict: 'C',
+            link: function() {
+          $('.sic').click(function(){
+            $('.si').hide(200);
+            $('.s').show(200);
+            /*$('.s').removeClass("none");
+            $('.si').addClass("none");*/
+          });
+                               }
+                               };
+});
+angular.module('shaastra2016App')
+  .directive('account',
+  function() {
+        return {
+            restrict: 'C',
+            link: function() {
+          $('.account').hover(
+            function(){
+            $('.ac').fadeOut(0);
+            $('.ai').fadeIn(0);
+            },
+            function(){
+              $('.ai').fadeOut(0);
+            $('.ac').fadeIn(0);
+            }
+          );
+                               }
+                               };
+});
