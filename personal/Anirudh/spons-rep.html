@@ -16,11 +16,14 @@
   <link rel="stylesheet" href="./slidebars/slidebars.css">
 		
   <link rel="stylesheet" href="./spons-common.css">
+  <link rel="stylesheet" href="./menu.css">
   <link rel="stylesheet" type="text/css" href="./spons-rep.css">
+  <script src="./menu.js"></script>
   <script src="./slidebars/slidebars.js"></script>
   
   <script type="text/javascript">
     $(document).ready(function() {
+      $("#menu").load('menu.html');
       $("#ticks").addClass('initialAdjustment');
       var topOfOthDiv = $("#about-shaastra-two").offset().top;  
       $(window).scroll(function () {
@@ -28,33 +31,7 @@
           $('#ticks').removeClass('initialAdjustment');
         }
       });
-      var count=0;
-      $("#closemenu").click(function(){
-        if(count==1){
-          $("ul").animate({right: '-200px'});
-          $("#closemenu").animate({right: '30px'});
-          $("#closeiconcontainer").css("display","none");
-          $("#closefirstline").css("display","none");
-          $("#closesecondline").css("display","none");
-          $("#firstline").css("display","block");
-          $("#secondline").css("display","block");
-          $("#thirdline").css("display","block");
-          $("#fourthline").css("display","block");
-          count=count-1;
-        }
-        else{
-          $("ul").animate({right: '0px'});
-          $("#closemenu").animate({right: '120px'});
-          $("#closeiconcontainer").css("display","block");
-          $("#closefirstline").css("display","block");
-          $("#closesecondline").css("display","block");
-          $("#firstline").css("display","none");
-          $("#secondline").css("display","none");
-          $("#thirdline").css("display","none");
-          $("#fourthline").css("display","none");
-          count=count+1;
-        }
-      });
+      
     });
   </script>
 
@@ -62,31 +39,7 @@
 
 <body class="col col-sm-offset-1 col-sm-10">	
 
-  <ul>
-    <li><a href="#"><div class="headings"><img id="shaastra-menu-logo" src="spons_img/shaastra-blue-logo.png">HOME</div></a></li><hr>
-    <li><a href="#"><div class="headings">DASHBOARD</div></a></li><hr>
-    <li><a href="#"><div class="headings">PRE SHAASTRA</div></a></li><hr>
-    <li><a href="#"><div class="headings">EVENTS</div></a></li><hr>
-    <li><a href="#"><div class="headings">WORKSHOPS</div></a></li><hr>
-    <li><a href="#"><div class="headings">LECTURES</div></a></li><hr>
-    <li><a href="#"><div class="headings">EXHIBITIONS</div></a></li><hr>
-    <li><a href="#"><div class="headings">HOSPITALITY</div></a></li><hr>
-    <li><a href="#"><div class="headings">SPONSORS</div></a></li><hr>
-    <li><a href="#"><div class="headings">ABOUT US</div></a></li><hr>
-    <li><a href="#"><div class="headings">CONTACT US</div></a></li><hr>
-  </ul>
-  <div id="closemenu">
-    <div id="openiconcontainer">
-      <span id="firstline" class="line"></span>
-      <span id="secondline" class="line"></span>
-      <span id="thirdline" class="line"></span>
-      <span id="fourthline" class="line"></span>
-    </div>
-    <div id="closeiconcontainer">
-      <span id="closefirstline" class="line"></span>
-      <span id="closesecondline" class="line"></span>
-    </div>
-  </div>
+  <div id="menu"></div>
 
 
   <div class="col-xs-12 col-sm-12 col-md-12">
