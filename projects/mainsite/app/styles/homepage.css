@@ -243,14 +243,14 @@ color: #00445e;
 	z-index: 9999;
 }
 .number {
-	position: absolute;
+	/*position: absolute;*/
 	font-family: 'CGF Locust Resistance';
 	letter-spacing: 0;
 	font-size: 4vh;
 	font-weight: bold;
 	color: #00445e;
-	top: 22%;
-	left: 66%;
+	/*top: 22%;*/
+	/*left: 66%;*/
 }
 .underline {
 	text-decoration: none;
