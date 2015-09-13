@@ -81,21 +81,4 @@ app.directive('sic',
                                }
                                };
 });
-app.directive('account',
-  function() {
-        return {
-            restrict: 'C',
-            link: function() {
-          $('.account').hover(
-            function(){
-            $('.ac').fadeOut(0);
-            $('.ai').fadeIn(0);
-            },
-            function(){
-              $('.ai').fadeOut(0);
-            $('.ac').fadeIn(0);
-            }
-          );
-                               }
-                               };
-});
+
