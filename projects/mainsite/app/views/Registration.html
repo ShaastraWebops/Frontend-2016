@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<link href="bootstrap.min.css" rel="stylesheet" />
+<script src="angular.min.js"></script>
+<style type="text/css">
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+}
+#box1{
+	position: absolute;
+    top: 25%;
+    width: 30%;
+    left: 40%;	
+}
+#box2{
+	position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+#box3{
+	
+	position: absolute;
+    top: 42%;
+    width: 30%;
+    left: 40%;;
+}
+#box4{
+	
+	position: absolute;
+    top: 52%;
+    width: 30%;
+    left: 40%;
+}#btnupr{
+  position: absolute;
+    top: 14%;
+    left: 50%;
+}
+#btndownr{
+  position: absolute;
+    bottom: 30%;
+    left: 53%;
+      
+}
+#btnupl{
+  position: absolute;
+    top: 14%;
+    left: 55.5%;
+    opacity: 0.5;
+      
+}
+</style>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+ <a id="btnupl" href="login.html" class="btn btn-md btn-primary">Login</a>
+	<a id="btnupr"  href="Registration.html" class="btn btn-md btn-primary">Register</a>
+
+
+
+
+<div id= "box1"class="input-group input-group-lg col-lg-3">
+  <span class="input-group-addon"><img src="human.png" alt="at" height="20px" width="20px"></img></span>
+ <input type="text" ng-model="firstName" class="form-control" placeholder="First Name" aria-describedby="sizing-addon2">
+ <div id= "box2"class="input-group input-group-lg ">
+ <input type="text" ng-model="lastName" class="form-control" placeholder="LastName" aria-describedby="sizing-addon2">
+</div>
+</div>
+
+
+
+<div id= "box3" class="input-group input-group-lg col-lg-3">
+  <span class="input-group-addon"><img src="at.png" alt="at" height="20px" width="20px"></img></span>
+  <input type="text" ng-model="Email-id" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
+</div>
+
+<div id= "box4" class="input-group input-group-lg col-lg-3">
+  <span class="input-group-addon"><img src="lock.png" alt="at" height="20px" width="20px"></img></span>
+  <input type="Password" ng-model="Password" class="form-control" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2">
+</div>
+<br>
+<a id="btndownr"href="" class="btn btn-md btn-primary">Register</a>
+</center>
+</img>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName = "";
+    $scope.lastName = "";
+     $scope.Email-id = "";
+      $scope.Password = "";
+});
+</script>
+
+
+</body>
+</html>

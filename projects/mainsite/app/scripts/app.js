@@ -22,17 +22,22 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'MainController',
         controllerAs: 'main'
       })
-      .when('/home', {
-        templateUrl: 'views/home.html',
+      .when('/', {
+        templateUrl: 'views/homepage.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
+      })
+      .when('/register', {
+        templateUrl: 'views/Register.html',
+        controller: 'loginCtrl',
+        controllerAs: 'register'
       })      
-      .when('/homePage', {
-        templateUrl: 'views/homepage.html',
-        controller: 'eventsListCtrl',
+      .when('/eventsList', {
+        templateUrl: 'views/eventList.html',
+        controller: 'eventListCtrl',
         controllerAs: 'eventsList'
       })
       .when('/events', {
