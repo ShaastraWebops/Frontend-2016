@@ -11,6 +11,12 @@
 .come-in {
   -webkit-transform: translateY(150px);
   -webkit-animation: come-in 0.8s ease forwards;
+  -moz-transform: translateY(150px);
+  -moz-animation: come-in 0.8s ease forwards;
+  -ms-transform: translateY(150px);
+  -ms-animation: come-in 0.8s ease forwards;
+  -o-transform: translateY(150px);
+  -o-animation: come-in 0.8s ease forwards;
   transform: translateY(150px);
   animation: come-in 0.8s ease forwards;
 }
@@ -18,6 +24,12 @@
 .already-visible {
   -webkit-transform: translateY(0);
   -webkit-animation: none;
+  -moz-transform: translateY(0);
+  -moz-animation: none;
+  -ms-transform: translateY(0);
+  -ms-animation: none;
+  -o-transform: translateY(0);
+  -o-animation: none;
   transform: translateY(0);
   animation: none;
 }
@@ -29,10 +41,33 @@
   }  
 }
 
+@-moz-keyframes come-in {
+  to {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }  
+}
+
+@-ms-keyframes come-in {
+  to {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }  
+}
+
+@-o-keyframes come-in {
+  to {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }  
+}
 
 @keyframes come-in {
   to {
     -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
