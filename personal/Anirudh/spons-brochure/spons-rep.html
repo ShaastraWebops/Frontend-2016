@@ -33,7 +33,9 @@
       //   }
       // });
 
-      $("#menu").load('menu.html');
+      $("#menu").load('http://localhost:8081/menu.html', function() {
+        // alert('load is done');
+      });
       var ticks = $(".tt");
       var topOfOthDiv = $("#about-shaastra-two").offset().top - 100;  
       ticks.hide();
