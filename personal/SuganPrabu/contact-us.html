@@ -19,9 +19,11 @@
 			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
 				<ul class="rhombus-grid">
 					<li class="rhombus" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
-						<div class="rhombus-top"></div>
-						<span ng-bind="department.name" class="rhombus-text"></span>
-						<div class="rhombus-bottom"></div>
+						<div class="rhombus-front">
+							<span ng-bind="department.name" class="rhombus-text"></span>
+						</div>
+						<div class="rhombus-back">
+						</div>
 					</li>
 				</ul>
 			</div>

@@ -7,97 +7,147 @@ app.controller('contactUsCtrl', ['$scope', '$modal',
 				 name: "Co-Curricular Affairs Secretary",
 				 contacts: [
 				 {
-				 	personName: "SIDDHARTH DIALANI",
-				 	phone: "9884308764",
-				 	mail: "siddharth@shaastra.org"
+				 	personName: "Shivaprasad T R",
+				 	phone: "9176014050",
+				 	mail: "trshivaprasad@gmail.com"
 				 }]}, 
 				{id: 1,
 			     name: "Concept & Design",
 			 	 contacts: [
 				 {
-				 	personName: "ASHAY MAKIM",
-				 	phone: "9043812193",
-				 	mail: "ashay@shaastra.org"
+				 	personName: "Naman Garg",
+				 	phone: "9092603977",
+				 	mail: "nmngrg3a@gmail.com"
+				 },
+				 {
+				 	personName: "Bhagyesh Chaturvedi",
+				 	phone: "9884182442",
+				 	mail: "bhagyesh.chaturvedi94@gmail.com"
 				 }]},
 				{id: 2, 
 				 name: "Events",
 				 contacts: [
 				 {
-				 	personName: "SHIVAPRASAD TR",
-				 	phone: "9176014050",
-				 	mail: "shiva@shaastra.org"
+				 	personName: "Siddharth Ahuja",
+				 	phone: "8695108319",
+				 	mail: "sahuja0302@gmail.com"
+				 },
+				 {
+				 	personName: "TK Balasaravanan",
+				 	phone: "9840892717",
+				 	mail: "balatk95@gmail.com"
+				 },
+				 {
+				 	personName: "Ajinkya",
+				 	phone: "9087863454",
+				 	mail: "ajinkya1mane@gmail.com"
 				 }]},
 				{id: 3,
-				 name: "Finance & Sales",
+				 name: "Finance",
 				 contacts: [
 				 {
-				 	personName: "VINAY CHITTETI",
-				 	phone: "7845604564",
-				 	mail: "vinay@shaastra.org"
+				 	personName: "Botcha Pavana Kumar",
+				 	phone: "9092006577",
+				 	mail: "pavankmr1994@gmail.com"
+				 },
+				 {
+				 	personName: "Ravi Kumar G.D",
+				 	phone: "9043814198",
+				 	mail: "ravigollapudi94@gmail.com"
 				 }]},
 				{id: 4,
-				 name: "Facilities & Catering",
+				 name: "Facilities",
 				 contacts: [
 				 {
-				 	personName: "ABHISHEK SHARMA",
-				 	phone: "9940116444",
-				 	mail: "abhishek@shaastra.org"
+				 	personName: "Amit Kumar Jha",
+				 	phone: "9677161556",
+				 	mail: "ajhaamit39@gmail.com"
+				 },
+				 {
+				 	personName: "Geo Davis",
+				 	phone: "7845657286",
+				 	mail: "geodavis88@gmail.com"
 				 }]},
 				{id: 5,
 				 name: "Sponsorship & Public Relations",
 				 contacts: [
 				 {
-				 	personName: "SHUBHAM JAIN",
-				 	phone: "9962035992",
-				 	mail: "shubham@shaastra.org"
+				 	personName: "Bhavik Rasyara",
+				 	phone: "8939317150",
+				 	mail: ""
+				 },
+				 {
+				 	personName: "Shashanka Rao",
+				 	phone: "9498098063",
+				 	mail: ""
+				 },
+				 {
+				 	personName: "Mahesh Kurup U",
+				 	phone: "9444443592",
+				 	mail: "mku1990@gmail.com"
 				 }]},
 				{id: 6,
-				 name: "Shows",
+				 name: "Shows and Exhibitions",
 				 contacts: [
 				 {
-				 	personName: "",
-				 	phone: "",
-				 	mail: ""
+				 	personName: "Animesh Bagora",
+				 	phone: "9884299639",
+				 	mail: "animesh.bagora@gmail.com"
 				 }]},
 				{id: 7,
-				 name: "Marketing & Student Relations",
+				 name: "Student Relations",
 				 contacts: [
 				 {
-				 	personName: "NAMIT CHAUDHARY",
-				 	phone: "9962878704",
-				 	mail: "namit@shaastra.org"
+				 	personName: "Saurabh Awatade",
+				 	phone: "9043808645",
+				 	mail: "saurabhawatade@gmail.com"
+				 },
+				 {
+				 	personName: "Tejaswin P",
+				 	phone: "8056112645",
+				 	mail: "tejaswin.sarathy@gmail.com"
+				 },
+				 {
+				 	personName: "NEHA AGARWAL",
+				 	phone: "8754508380",
+				 	mail: "nehaag.500@gmail.com"
 				 }]},
 				{id: 8,
 				 name: "Quality Management Systems",
 				 contacts: [
 				 {
-				 	personName: "DHRUVA KATREKAR",
-				 	phone: "9962303153",
-				 	mail: "dhruva@shaastra.org"
+				 	personName: "Sachin Arakeri",
+				 	phone: "8056102482",
+				 	mail: "sachin.ua.140594@gmail.com"
 				 }]},
 				{id: 9,
 				 name: "Evolve",
 				 contacts: [
 				 {
-				 	personName: "",
-				 	phone: "",
-				 	mail: ""
+				 	personName: "Vedant Agrawal",
+				 	phone: "9884299316",
+				 	mail: "vedant.agrawal13@gmail.com"
+				 },
+				 {
+				 	personName: "Ayesha",
+				 	phone: "9566533966",
+				 	mail: "ayesha2891@gmail.com"
 				 }]},
 				{id: 10,
 				 name: "Envisage",
 				 contacts: [
 				 {
-				 	personName: "SANDEEP KRISHNA",
-				 	phone: "9789808683",
-				 	mail: "sandeep@shaastra.org"
+				 	personName: "Yashwanth I",
+				 	phone: "8056070391",
+				 	mail: "yashwanthmech25@gmail.com"
 				 }]},
 				{id: 11,
-				 name: "Web Operations",
+				 name: "Web and Mobile Operations",
 				 contacts: [
 				 {
-				 	personName: "",
-				 	phone: "",
-				 	mail: ""
+				 	personName: "Chinni Chaitanya",
+				 	phone: "9003106573",
+				 	mail: "chchaitanya95@gmail.com"
 				 }]}
 				]
 			};
