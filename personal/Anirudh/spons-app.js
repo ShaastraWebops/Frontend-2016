@@ -37,7 +37,7 @@ app.get('/aerofest', function (req, res) {
 });
 
 app.get('/b-events', function (req, res) {
-	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-events-b-events.html'));
+	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-events-B-events.html'));
 });
 
 app.get('/department-flagship', function (req, res) {
