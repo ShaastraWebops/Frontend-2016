@@ -23,12 +23,22 @@
   
   <script type="text/javascript">
     $(document).ready(function() {
+      // $("#menu").load('menu.html');
+      // $("#ticks").addClass('initialAdjustment');
+      // var topOfOthDiv = $("#about-shaastra-two").offset().top;  
+      // $(window).scroll(function () {
+      //   if ($(window).scrollTop() > topOfOthDiv) {
+      //     $('#ticks').removeClass('initialAdjustment');
+      //   }
+      // });
+
       $("#menu").load('menu.html');
-      $("#ticks").addClass('initialAdjustment');
-      var topOfOthDiv = $("#about-shaastra-two").offset().top;  
+      var ticks = $(".tt");
+      var topOfOthDiv = $("#about-shaastra-two").offset().top - 100;  
+      ticks.hide();
       $(window).scroll(function () {
         if ($(window).scrollTop() > topOfOthDiv) {
-          $('#ticks').removeClass('initialAdjustment');
+          ticks.fadeIn(1000);
         }
       });
       
@@ -67,15 +77,15 @@
     <div class="certification">
       <div class="row" id="ticks">
       <!-- <div class="row"> -->
-        <div class="col-sm-6 col-md-offset-1 col-md-2">
+        <div class="col-sm-6 col-md-offset-1 col-md-2 tt">
           <img class="img-responsive" src="./spons_img/3.png" alt="Image not found">
           <h1>Planning</h1>
         </div>
-        <div class="col-sm-6 col-md-offset-2 col-md-2">
+        <div class="col-sm-6 col-md-offset-2 col-md-2 tt">
           <img class="img-responsive" src="spons_img/3.png" alt="Image not found">
           <h1>Innovation</h1>
         </div>
-        <div class="col-sm-6 col-md-offset-2 col-md-2">
+        <div class="col-sm-6 col-md-offset-2 col-md-2 tt">
           <img class="img-responsive" src="spons_img/3.png" alt="Image not found">
           <h1>Execution</h1>
         </div>
@@ -108,7 +118,7 @@
     </div>
 	</div>
 
-	<div class="container-fluid statistics parallax-window" data-parallax="scroll" data-image-src="spons_img/8.png" data-speed="0.5">
+	<div class="container-fluid statistics">
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-3">      
         <div>
@@ -181,7 +191,7 @@
     </div>
   </div>
 
-  <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="spons_img/0000.png" data-speed="0.5">
+  <div class="container-fluid aim">
     <div class="row shaastra-aim">
       <img class="img-responsive col-md-5 col-sm-5 col-xs-12" src="spons_img/000.png" alt="Image not loaded">
       <p class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6 col-xs-12" id="shaastraActivity">Since it's inception, Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's-on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai every year in January to witness this spectacle, Shaastra's reach is now beyond city, state and country and has a stake on international stage. Marquee events like IITM Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity, industry and academia.</p> 
