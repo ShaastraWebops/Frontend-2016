@@ -207,9 +207,8 @@ $(".shaastrabox").click(function(){
                  leftHand = document.getElementById("lefthand");
                 
                   $(".invisiblebox2,.elemboxright").mousemove(function(e) {
-                  
-                      x = e.clientX,
-                      y = e.clientY;
+                      x = (e.clientX-$('.invisiblebox1').offset().left),
+                      y = (e.clientY-$('.invisiblebox1').offset().top);
           
                       //position according to mouse position
                        leftHand.style.top = (y + 0) + 'px';
@@ -219,8 +218,8 @@ $(".shaastrabox").click(function(){
                   }); 
                    $(".invisiblebox1,.elemboxleft").mousemove(function(e) {
 
-                      x = e.pageX,
-                      y = e.pageY;
+                      x = (e.pageX-$('.invisiblebox1').offset().left),
+                      y = (e.pageY-$('.invisiblebox1').offset().top);
           
                       //position according to mouse position
                       rightHand.style.top = (y  + 0) + 'px';
