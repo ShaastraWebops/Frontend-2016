@@ -1,8 +1,8 @@
-#menu-container hr{
+.horizontalRule{
       margin-top: 18px;
       margin-bottom: 18px;
     }
-#menu-container a:hover{
+.menu-link:hover{
       text-decoration: none;
     }
 #menu-container {
@@ -16,7 +16,7 @@
     background-color: #fff;
     z-index: 50;
   }
-#menu-container li{
+.menu-list{
       display: block;
       width: 200px;
     padding-top: 5px;
@@ -24,7 +24,7 @@
     text-align:center;
     letter-spacing: 3px;
   }
-#menu-container a{
+.menu-link{
     color: black;
     text-decoration: none;
   }

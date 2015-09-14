@@ -28,3 +28,9 @@
 	font-size: 1.1em;
 	color: black;
 }
+.right-column{
+	position:absolute;
+	height:100%;
+	background-color:white;
+	z-index:100;
+}
