@@ -10,9 +10,34 @@ html{
         background-size: cover;
         background-attachment: fixed;
         height: 100%;
-      overflow: hidden;
-       
-            }
+      overflow: hidden;}
+
+.scrollable .scrollable-bar,.scrollable .scrollable-slider{
+    border-radius:6px;
+   } 
+.scrollable .scrollable-bar{position:absolute;
+    box-sizing:border-box;
+    opacity:1;
+    background-color:#f0f0f0;
+    background-color:rgba(0,0,0,0.8);
+    height:1px;
+    max-width:1137.2px;
+    margin-left:9.5%;
+    border:1.2px solid transparent}
+.scrollable .scrollable-bar:hover,
+.scrollable.active .scrollable-bar{opacity:1}
+.scrollable .scrollable-slider{
+        max-width:36px; 
+        background-color:rgba(32,32,32,0.6);
+        background-image:linear-gradient(to right,rgba(32,32,32,0.6);rgba(32,32,32,1));
+        }
+.scrollable .scrollable-bar-x 
+.scrollable-slider{
+            height:8px;
+            margin-left:4%;}
+.scrollable .scrollable-bar-y .scrollable-slider{
+        width:8px;}   
+            
         article {
         margin-top:-0.2%;
         position: relative;
@@ -162,7 +187,6 @@ margin-left: 20%; }
 		width: 100%;
 		bottom: 0;
 		margin-top: 10%;
-	
 		font-weight:bold; 
 		text-align: center;
 		font-size: 4vh;
