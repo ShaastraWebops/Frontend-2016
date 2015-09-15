@@ -1,4 +1,4 @@
-var app = angular.module('contactUsApp',['ui.bootstrap']);
+var app = angular.module('shaastra2016App');
 app.controller('contactUsCtrl', ['$scope', '$modal',
 	function($scope, $modal){
 		$scope.departmentsJSON = {
