@@ -2,7 +2,7 @@ $(document).ready(function(){
 var count=0;
 $("#closemenu").click(function(){
   if(count==1){
-    $("#menu-container").animate({right: '-200px'});
+    $("#menu-container").animate({right: '-200px', opacity: '0'});
     $("#closemenu").animate({right: '30px'});
     $("#closeiconcontainer").css("display","none");
     $("#closefirstline").css("display","none");
@@ -14,7 +14,7 @@ $("#closemenu").click(function(){
     count=count-1;
   }
   else{
-    $("#menu-container").animate({right: '0px'});
+    $("#menu-container").animate({right: '0px', opacity: '1'});
     $("#closemenu").animate({right: '120px'});
     $("#closeiconcontainer").css("display","block");
     $("#closefirstline").css("display","block");
