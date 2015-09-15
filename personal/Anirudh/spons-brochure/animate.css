@@ -1,7 +1,7 @@
 .module {
   min-height: 200px;
   position: relative;
-  float: left;
+  /*float: left;*/
   padding: 20px;
   margin-right: 4%;
   margin-bottom: 4%;

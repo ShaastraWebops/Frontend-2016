@@ -16,8 +16,12 @@ app.get('/publicity', function (req, res) {
 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-publicity.html'));
 });
 
-app.get('/quotes', function (req, res) {
-	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-quotes.html'));
+app.get('/sponsors-quotes', function (req, res) {
+	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-sponsors-quotes.html'));
+});
+
+app.get('/participants-quotes', function (req, res) {
+	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-participants-quotes.html'));
 });
 
 app.get('/social', function (req, res) {
