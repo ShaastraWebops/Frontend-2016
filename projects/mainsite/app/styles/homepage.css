@@ -1,14 +1,7 @@
-/*@font-face {
+@font-face {
 	font-family: 'CGF Locust Resistance';
-	src: url('CGFLocustResistance.ttf')format('truetype');
-}*/
-html, body {
-	height: 100%;
+	src: url('./CGFLocustResistance.ttf')format('truetype');
 }
-body {
-	overflow-y: hidden;
-	overflow-x: hidden;
-} 
 .container {
 	padding: 0;
 	width: 100%;
@@ -38,7 +31,6 @@ body {
 	transform: translateZ(0);
 	-moz-transform: translateZ(0);
 	-o-transform: translateZ(0);
-	border-radius: 15px;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 	font-size: 4vh;
 	-webkit-backface-visibility: hidden;
@@ -52,7 +44,6 @@ body {
 	content: '';
 	position: absolute;
 	border: white solid 4px;
-	border-radius: 15px;
 	top: 3px;
 	left: 3px;
 	right: 3px;
@@ -115,7 +106,7 @@ body {
 }
 .shaastrabox {
 	background-color: rgba(173, 216, 230, 0.4);
-	width: 64vh;
+	width: 65vh;
 	height: 30vh;
 	line-height: 30vh;
 	text-align: center;
@@ -124,7 +115,7 @@ body {
 	border: 2px solid rgba(115, 117, 183, 0.2);
 	z-index: 400;
 	position: absolute;
-	top: 40%;
+	top: 38%;
 	left: 50%;
 	margin-left: -32vh;
 	-webkit-box-shadow: 0 0 5px #888;
@@ -136,10 +127,10 @@ body {
 	transition: transform 0.3s ease-in, top 0.4s, left 0.4s, right 0.4s, width 0.4s, height 0.4s;
 }
 .top-1, .top-2 {
-  top: 15%;
+  top: 10%;
 }
 .mid-1, .mid-2 {
-  top: 44%;
+  top: 43%;
 } 
 .botm-1,.botm-2 {
   top: 73%;
