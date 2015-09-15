@@ -17,7 +17,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngScrollable'
+    'ngScrollable',
+    'ui.bootstrap',
   ])
   .config(function ($routeProvider) {
     $routeProvider
