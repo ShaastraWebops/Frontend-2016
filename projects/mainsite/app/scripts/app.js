@@ -22,11 +22,6 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/', {
         templateUrl: 'views/homepage.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
@@ -46,7 +41,7 @@ angular
         controller: 'EventsCtrl',
         controllerAs: 'events'
       })
-      .when('/loginRegister', {
+      .when('/login', {
         templateUrl: 'views/Login.html',
         controller: 'loginCtrl',
         controllerAs: 'login'
