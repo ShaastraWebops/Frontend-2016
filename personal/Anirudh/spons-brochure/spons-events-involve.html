@@ -15,92 +15,113 @@
   <link rel="stylesheet" href="./spons-events.css">
   <link rel="stylesheet" href="./menu.css">
   <script src="./menu.js"></script>
-  
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#menu").load('http://localhost:8081/menu.html');
-    });
-  </script>
 </head>
 
 <body>
   <div class="col col-sm-offset-1 col-sm-10">
-  <div id="menu"></div>
-  <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Events</h1>
-  <div class="container-fluid">
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid remove-padding">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed toggle-btn-custom" data-toggle="collapse" data-target="#nav-copmonents" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div>
+      <ul id="menu-container" style="opacity:0; z-index:101">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/"><div class="headings"><img id="shaastra-menu-logo" src="./spons_img/shaastra-blue-logo.png">HEAD</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOME</div></a></li><hr class="horizontalRule"> 
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">PRE SHAASTRA</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/aerofest"><div class="headings">EVENTS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/workshops"><div class="headings">WORKSHOPS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">LECTURES</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">EXHIBITIONS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOSPITALITY</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">SPONSORS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">ABOUT US</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">CONTACT US</div></a></li><hr class="horizontalRule">
+      </ul>
+      <div id="closemenu" style="z-index:100">
+        <div id="openiconcontainer">
+          <span id="firstline" class="line"></span>
+            <span id="secondline" class="line"></span>
+            <span id="thirdline" class="line"></span>
+          <span id="fourthline" class="line"></span>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="nav-copmonents">
-          <ul class="nav navbar-nav">
-            <li><a href="http://localhost:8081/aerofest">Aerofest</a></li>
-            <li><a href="http://localhost:8081/b-events">B-Events</a></li>
-            <li><a href="http://localhost:8081/coding">Coding</a></li>
-            <li><a href="http://localhost:8081/design-and-build">Design and Build</a></li>
-            <li><a href="http://localhost:8081/electronics-fest">Electronics Fest</a></li>
-            <li><a href="http://localhost:8081/department-flagship">Department Flagship</a></li>
-            <li class="active"><a href="#">Involve</a></li>
-            <li><a href="http://localhost:8081/quizzing">Quizzing</a></li>
-            <li><a href="http://localhost:8081/research">Research</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-        <img class="img-responsive" src="./spons_img/involve.png" alt="Image Not Found">
-
-      </div><!-- /.container-fluid -->
-    </nav>
-
-    <div class="container-fluid event-info">
-      <div style="padding:5%;">
-
-        <div class="row module">
-          <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/project x.jpg" alt="Image Not Found">
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="sub-title">Project X</h2>
-            <p class="content">The colossal event involves solving intriguing problems using ordinary materials. Exhibiting powers of creativity, enthusiasm and craftsmanship that everyone bears, the participation exceeds the 1000 mark. With such a huge number of people from diverse age groups, the Student Activity Center (SAC), where the event is held is one of the busiest hub at Shaastra.</p>
-          </div>
+        <div id="closeiconcontainer">
+            <span id="closefirstline" class="line"></span>
+            <span id="closesecondline" class="line"></span>
         </div>
-        <br />
-        <div class="row text-right module">
-          <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/shaastra cube open.jpg" alt="Image Not Found">
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="sub-title">Shaastra Cube Open</h2>
-            <p class="content">Affiliated to the World Cubic Association, it is one of the largest international speedcubing competitions in India, with global participation that smashes national records each year. A highlight event of Shaastra where world class cuber’s interact with young cubing enthusiasts.</p>
-          </div>
-        </div>
-        <br />
-        <div class="row module">
-          <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/puzzle champ.jpg" alt="Image Not Found">
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="sub-title">Puzzle Champ</h2>
-            <p class="content">Testing analytical, tactical and logical abilities with set of thought provoking and mind boggling puzzles, the event promises an overwhelming participation on all three days, participants and audience alike.</p>
-          </div>
-        </div>
-        <br />
-        <div class="row module">
-          <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/how things work.jpg" alt="Image Not Found">
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="sub-title">How Things Work</h2>
-            <p class="content">Progress without understanding the fundamental concepts of a field is a myth. It is this understanding of the basic concepts that is tested in HTW. Garnering interest from avid quizzers to tech enthusiasts alike, this has been one of Shaastra’s mainstay events since the past decade. The prerequisites are only high school science, common sense and trust in one’s gut feeling. Promoting the spirit of scientific enquiry minus the boring equations or bland academic rigour, HTW is arguably the most unique quiz in the country.</p>
-          </div>
-          <button class="btn btn-default btn-custom col-md-3 col-sm-6 col-xs-12"><b>Check Statistics</b></button>
-        </div>
-
       </div>
-      
+    </div>
+    
+    <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Events</h1>
+    <div class="container-fluid">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid remove-padding">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed toggle-btn-custom" data-toggle="collapse" data-target="#nav-copmonents" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="nav-copmonents">
+            <ul class="nav navbar-nav">
+              <li><a href="http://localhost:8081/aerofest">Aerofest</a></li>
+              <li><a href="http://localhost:8081/b-events">B-Events</a></li>
+              <li><a href="http://localhost:8081/coding">Coding</a></li>
+              <li><a href="http://localhost:8081/design-and-build">Design and Build</a></li>
+              <li><a href="http://localhost:8081/electronics-fest">Electronics Fest</a></li>
+              <li><a href="http://localhost:8081/department-flagship">Department Flagship</a></li>
+              <li class="active"><a href="#">Involve</a></li>
+              <li><a href="http://localhost:8081/quizzing">Quizzing</a></li>
+              <li><a href="http://localhost:8081/research">Research</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+          <img class="img-responsive" src="./spons_img/involve.png" alt="Image Not Found">
+
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="container-fluid event-info">
+        <div style="padding:5%;">
+
+          <div class="row module">
+            <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/project x.jpg" alt="Image Not Found">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+              <h2 class="sub-title">Project X</h2>
+              <p class="content">The colossal event involves solving intriguing problems using ordinary materials. Exhibiting powers of creativity, enthusiasm and craftsmanship that everyone bears, the participation exceeds the 1000 mark. With such a huge number of people from diverse age groups, the Student Activity Center (SAC), where the event is held is one of the busiest hub at Shaastra.</p>
+            </div>
+          </div>
+          <br />
+          <div class="row text-right module">
+            <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/shaastra cube open.jpg" alt="Image Not Found">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+              <h2 class="sub-title">Shaastra Cube Open</h2>
+              <p class="content">Affiliated to the World Cubic Association, it is one of the largest international speedcubing competitions in India, with global participation that smashes national records each year. A highlight event of Shaastra where world class cuber’s interact with young cubing enthusiasts.</p>
+            </div>
+          </div>
+          <br />
+          <div class="row module">
+            <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/puzzle champ.jpg" alt="Image Not Found">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+              <h2 class="sub-title">Puzzle Champ</h2>
+              <p class="content">Testing analytical, tactical and logical abilities with set of thought provoking and mind boggling puzzles, the event promises an overwhelming participation on all three days, participants and audience alike.</p>
+            </div>
+          </div>
+          <br />
+          <div class="row module">
+            <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/how things work.jpg" alt="Image Not Found">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+              <h2 class="sub-title">How Things Work</h2>
+              <p class="content">Progress without understanding the fundamental concepts of a field is a myth. It is this understanding of the basic concepts that is tested in HTW. Garnering interest from avid quizzers to tech enthusiasts alike, this has been one of Shaastra’s mainstay events since the past decade. The prerequisites are only high school science, common sense and trust in one’s gut feeling. Promoting the spirit of scientific enquiry minus the boring equations or bland academic rigour, HTW is arguably the most unique quiz in the country.</p>
+            </div>
+            <button class="btn btn-default btn-custom col-md-3 col-sm-6 col-xs-12"><b>Check Statistics</b></button>
+          </div>
+
+        </div>
+        
+      </div>
     </div>
   </div>
-  </div>
-  <div class="col col-sm-offset-11 col-sm-1" class="right-column">
-  </div>
 </body>
+</html>

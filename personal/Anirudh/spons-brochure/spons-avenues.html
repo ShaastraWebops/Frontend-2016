@@ -13,73 +13,93 @@
   <link rel="stylesheet" href="./spons-avenues.css">
   <link rel="stylesheet" href="./menu.css">
   <script src="./menu.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#menu").load('http://localhost:8081/menu.html');
-    });
-  </script>
 </head>
 
 <body>
   <div class="col col-sm-offset-1 col-sm-10">
-  <div id="menu"></div>
-  <div class="container-fluid">
-    <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Avenues for Sponsorship</h1>
-    <img class="col-md-12 col-sm-12 col-xs-12" src="./spons_img/30.png" height="400" alt="Image Not Found">
 
-    <div class="container-fluid">
-      <div style="padding:5%;">
-        <div class="row module">
-          <img style="float:left;" class="col-md-3 col-sm-3 col-xs-3" src="./spons_img/21.png" alt="Image Not Found">
-          <div class="col-md-7 col-sm-7 col-xs-7">
-            <h2 class="sub-title-three">Contribute</h2>
-            <p class="content">15 million hits (actually it is 2.4 :P)</p>
-          </div>
+    <div>
+      <ul id="menu-container" style="opacity:0; z-index:101">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/"><div class="headings"><img id="shaastra-menu-logo" src="./spons_img/shaastra-blue-logo.png">HEAD</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOME</div></a></li><hr class="horizontalRule"> 
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">PRE SHAASTRA</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/aerofest"><div class="headings">EVENTS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/workshops"><div class="headings">WORKSHOPS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">LECTURES</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">EXHIBITIONS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOSPITALITY</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">SPONSORS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">ABOUT US</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">CONTACT US</div></a></li><hr class="horizontalRule">
+      </ul>
+      <div id="closemenu" style="z-index:100">
+        <div id="openiconcontainer">
+          <span id="firstline" class="line"></span>
+            <span id="secondline" class="line"></span>
+            <span id="thirdline" class="line"></span>
+          <span id="fourthline" class="line"></span>
         </div>
-        <br /> <br />
-  
-        <div class="row module">
-          <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/17.png" alt="Image Not Found">
-          <div class="col-md-7 col-sm-7 col-xs-7">
-            <h2 class="sub-title-three">Contribute</h2>
-            <p class="content">15 million hits (actually it is 2.4 :P)</p>
-          </div>
+        <div id="closeiconcontainer">
+            <span id="closefirstline" class="line"></span>
+            <span id="closesecondline" class="line"></span>
         </div>
-        <br /> <br />
-
-        <div class="row module">
-          <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/20.png" alt="Image Not Found">
-          <div class="col-md-7 col-sm-7 col-xs-7">
-            <h2 class="sub-title-three">Contribute</h2>
-            <p class="content">15 million hits (actually it is 2.4 :P)</p>
-          </div>
-        </div>
-        <br /> <br />
-
-        <div class="row module">
-          <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/19.png" alt="Image Not Found">
-          <div class="col-md-7 col-sm-7 col-xs-7">
-            <h2 class="sub-title-three">Contribute</h2>
-            <p class="content">15 million hits (actually it is 2.4 :P)</p>
-          </div>
-        </div>
-        <br /> <br />
-
-        <div class="row module">
-          <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/18.png" alt="Image Not Found">
-          <div class="col-md-7 col-sm-7 col-xs-7">
-            <h2 class="sub-title-three">Contribute</h2>
-            <p class="content">15 million hits (actually it is 2.4 :P)</p>
-          </div>
-        </div>
-        <br /> <br />
       </div>
     </div>
-  
-  </div>
-  </div>
-  <div class="col col-sm-offset-11 col-sm-1" class="right-column">
+
+    <div class="container-fluid">
+      <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Avenues for Sponsorship</h1>
+      <img class="col-md-12 col-sm-12 col-xs-12" src="./spons_img/30.png" height="400" alt="Image Not Found">
+
+      <div class="container-fluid">
+        <div style="padding:5%;">
+          <div class="row module">
+            <img style="float:left;" class="col-md-3 col-sm-3 col-xs-3" src="./spons_img/21.png" alt="Image Not Found">
+            <div class="col-md-7 col-sm-7 col-xs-7">
+              <h2 class="sub-title-three">Contribute</h2>
+              <p class="content">15 million hits (actually it is 2.4 :P)</p>
+            </div>
+          </div>
+          <br /> <br />
+    
+          <div class="row module">
+            <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/17.png" alt="Image Not Found">
+            <div class="col-md-7 col-sm-7 col-xs-7">
+              <h2 class="sub-title-three">Contribute</h2>
+              <p class="content">15 million hits (actually it is 2.4 :P)</p>
+            </div>
+          </div>
+          <br /> <br />
+
+          <div class="row module">
+            <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/20.png" alt="Image Not Found">
+            <div class="col-md-7 col-sm-7 col-xs-7">
+              <h2 class="sub-title-three">Contribute</h2>
+              <p class="content">15 million hits (actually it is 2.4 :P)</p>
+            </div>
+          </div>
+          <br /> <br />
+
+          <div class="row module">
+            <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/19.png" alt="Image Not Found">
+            <div class="col-md-7 col-sm-7 col-xs-7">
+              <h2 class="sub-title-three">Contribute</h2>
+              <p class="content">15 million hits (actually it is 2.4 :P)</p>
+            </div>
+          </div>
+          <br /> <br />
+
+          <div class="row module">
+            <img style="float:left;" class="col-md-3 col-sm-10 col-xs-10" src="./spons_img/18.png" alt="Image Not Found">
+            <div class="col-md-7 col-sm-7 col-xs-7">
+              <h2 class="sub-title-three">Contribute</h2>
+              <p class="content">15 million hits (actually it is 2.4 :P)</p>
+            </div>
+          </div>
+          <br /> <br />
+        </div>
+      </div>
+    
+    </div>
   </div>
 </body>
 </html>

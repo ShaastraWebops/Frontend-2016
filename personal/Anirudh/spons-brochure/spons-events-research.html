@@ -15,77 +15,98 @@
   <link rel="stylesheet" href="./spons-events.css">
   <link rel="stylesheet" href="./menu.css">
   <script src="./menu.js"></script>
-  
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#menu").load('http://localhost:8081/menu.html');
-    });
-  </script>
 </head>
 
 <body>
   <div class="col col-sm-offset-1 col-sm-10">
-  <div id="menu"></div>
-  <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Events</h1>
-  <div class="container-fluid">
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid remove-padding">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed toggle-btn-custom" data-toggle="collapse" data-target="#nav-copmonents" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div>
+      <ul id="menu-container" style="opacity:0; z-index:101">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/"><div class="headings"><img id="shaastra-menu-logo" src="./spons_img/shaastra-blue-logo.png">HEAD</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOME</div></a></li><hr class="horizontalRule"> 
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">PRE SHAASTRA</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/aerofest"><div class="headings">EVENTS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="http://localhost:8081/workshops"><div class="headings">WORKSHOPS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">LECTURES</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">EXHIBITIONS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOSPITALITY</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">SPONSORS</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">ABOUT US</div></a></li><hr class="horizontalRule">
+          <li class="menu-list"><a class="menu-link" href="#"><div class="headings">CONTACT US</div></a></li><hr class="horizontalRule">
+      </ul>
+      <div id="closemenu" style="z-index:100">
+        <div id="openiconcontainer">
+          <span id="firstline" class="line"></span>
+            <span id="secondline" class="line"></span>
+            <span id="thirdline" class="line"></span>
+          <span id="fourthline" class="line"></span>
         </div>
+        <div id="closeiconcontainer">
+            <span id="closefirstline" class="line"></span>
+            <span id="closesecondline" class="line"></span>
+        </div>
+      </div>
+    </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="nav-copmonents">
-          <ul class="nav navbar-nav">
-            <li><a href="http://localhost:8081/aerofest">Aerofest</a></li>
-            <li><a href="http://localhost:8081/b-events">B-Events</a></li>
-            <li><a href="http://localhost:8081/coding">Coding</a></li>
-            <li><a href="http://localhost:8081/design-and-build">Design and Build</a></li>
-            <li><a href="http://localhost:8081/electronics-fest">Electronics Fest</a></li>
-            <li><a href="http://localhost:8081/department-flagship">Department Flagship</a></li>
-            <li><a href="http://localhost:8081/involve">Involve</a></li>
-            <li><a href="http://localhost:8081/quizzing">Quizzing</a></li>
-            <li class="active"><a href="#">Research</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-        <img class="img-responsive" src="./spons_img/research.png" alt="Image Not Found">
+    <h1 class="col-md-offset-1 col-md-11 col-sm-offset-1 col-sm-11 col-xs-offset-1 col-xs-11 title">Events</h1>
+    <div class="container-fluid">
 
-      </div><!-- /.container-fluid -->
-    </nav>
-
-    <div class="container-fluid event-info">
-      <div style="padding:5%;">
-
-        <div class="row module">
-          <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/paper and poster presentation.jpg" alt="Image Not Found">
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="sub-title">Research Paper Presentation</h2>
-            <p class="content">IIT Madras is the hotbed of innovation and in an effort to nurture this further, Shaastra 2016 opens its door for all researchers to ignite their imagery and present their novel work with the potential to change the world by solving its real life problems. This amalgamation of the brightest researchers at one place is the perfect place to explore all the recent developments in technology.</p>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid remove-padding">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed toggle-btn-custom" data-toggle="collapse" data-target="#nav-copmonents" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
-        </div>
-        <br />
-        <div class="row text-right module">
-          <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/industry defined problem.jpg" alt="Image Not Found">
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="sub-title">Industry Defined Problem</h2>
-            <p class="content">One of the most sought after events where the best minds at Shaastra battle it out to delve deep to ideate, innovate, conceptualise and provide feasible solutions with prototype or a detailed plan to the myriads of problems faced in the industry. Previous associations included GE, Shell, Cerner, Eaton etc. The diverse and multidisciplinary problems warrants sheer academic brilliance in all aspects of engineering with emphasis on creativity and practicality. This is one event proves to be the mother of all battles in providing true industrial solutions to the most challenging problems.</p>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="nav-copmonents">
+            <ul class="nav navbar-nav">
+              <li><a href="http://localhost:8081/aerofest">Aerofest</a></li>
+              <li><a href="http://localhost:8081/b-events">B-Events</a></li>
+              <li><a href="http://localhost:8081/coding">Coding</a></li>
+              <li><a href="http://localhost:8081/design-and-build">Design and Build</a></li>
+              <li><a href="http://localhost:8081/electronics-fest">Electronics Fest</a></li>
+              <li><a href="http://localhost:8081/department-flagship">Department Flagship</a></li>
+              <li><a href="http://localhost:8081/involve">Involve</a></li>
+              <li><a href="http://localhost:8081/quizzing">Quizzing</a></li>
+              <li class="active"><a href="#">Research</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+          <img class="img-responsive" src="./spons_img/research.png" alt="Image Not Found">
+
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="container-fluid event-info">
+        <div style="padding:5%;">
+
+          <div class="row module">
+            <img style="float:right;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/paper and poster presentation.jpg" alt="Image Not Found">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+              <h2 class="sub-title">Research Paper Presentation</h2>
+              <p class="content">IIT Madras is the hotbed of innovation and in an effort to nurture this further, Shaastra 2016 opens its door for all researchers to ignite their imagery and present their novel work with the potential to change the world by solving its real life problems. This amalgamation of the brightest researchers at one place is the perfect place to explore all the recent developments in technology.</p>
+            </div>
           </div>
-          <button class="btn btn-default btn-custom col-md-3 col-sm-6 col-xs-12"><b>Check Statistics</b></button>
+          <br />
+          <div class="row text-right module">
+            <img style="float:left;" class="col-md-4 col-sm-12 col-xs-12" src="./spons_img/events/industry defined problem.jpg" alt="Image Not Found">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+              <h2 class="sub-title">Industry Defined Problem</h2>
+              <p class="content">One of the most sought after events where the best minds at Shaastra battle it out to delve deep to ideate, innovate, conceptualise and provide feasible solutions with prototype or a detailed plan to the myriads of problems faced in the industry. Previous associations included GE, Shell, Cerner, Eaton etc. The diverse and multidisciplinary problems warrants sheer academic brilliance in all aspects of engineering with emphasis on creativity and practicality. This is one event proves to be the mother of all battles in providing true industrial solutions to the most challenging problems.</p>
+            </div>
+            <button class="btn btn-default btn-custom col-md-3 col-sm-6 col-xs-12"><b>Check Statistics</b></button>
+          </div>
+          <br />
+          
         </div>
-        <br />
         
       </div>
-      
     </div>
   </div>
-  </div>
-  <div class="col col-sm-offset-11 col-sm-1" class="right-column">
-  </div>
 </body>
+</html>

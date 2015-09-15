@@ -64,6 +64,16 @@ app.get('/research', function (req, res) {
 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-events-research.html'));
 });
 
+// app.get('/*', function (req, res) {
+// 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-404.html'));
+// });
+  app.route('/*')
+    .get(function (req, res) {
+      // console.log(app.get('appPath'));
+      // res.sendfile(app.get('appPath') + '/index.html');
+      res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-error.html'));
+    });
+
 app.use(express.static(__dirname + '/spons-brochure', { maxAge: tenDays }));
 
 app.listen(8081);

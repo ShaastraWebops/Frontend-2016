@@ -33,9 +33,6 @@
       //   }
       // });
 
-      $("#menu").load('http://localhost:8081/menu.html', function() {
-        // alert('load is done');
-      });
       var ticks = $(".tt");
       var topOfOthDiv = $("#about-shaastra-two").offset().top - 100;  
       ticks.hide();
@@ -52,7 +49,33 @@
 
 <body class="col col-sm-offset-1 col-sm-10">	
 
-  <div id="menu"></div>
+  <div>
+    <ul id="menu-container" style="opacity:0; z-index:101">
+        <li class="menu-list"><a class="menu-link" href="http://localhost:8081/"><div class="headings"><img id="shaastra-menu-logo" src="./spons_img/shaastra-blue-logo.png">HEAD</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOME</div></a></li><hr class="horizontalRule"> 
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">PRE SHAASTRA</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="http://localhost:8081/aerofest"><div class="headings">EVENTS</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="http://localhost:8081/workshops"><div class="headings">WORKSHOPS</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">LECTURES</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">EXHIBITIONS</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">HOSPITALITY</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">SPONSORS</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">ABOUT US</div></a></li><hr class="horizontalRule">
+        <li class="menu-list"><a class="menu-link" href="#"><div class="headings">CONTACT US</div></a></li><hr class="horizontalRule">
+    </ul>
+    <div id="closemenu" style="z-index:100;">
+      <div id="openiconcontainer">
+        <span id="firstline" class="line" style="background-color:white"></span>
+        <span id="secondline" class="line" style="background-color:white"></span>
+        <span id="thirdline" class="line" style="background-color:white"></span>
+        <span id="fourthline" class="line" style="background-color:white"></span>
+      </div>
+      <div id="closeiconcontainer">
+        <span id="closefirstline" class="line" style="background-color:white"></span>
+        <span id="closesecondline" class="line" style="background-color:white"></span>
+      </div>
+    </div>
+  </div>
 
   <div class="container-fluid intro parallax-window" data-parallax="scroll" data-image-src="./spons_img/1.png" data-speed="0.2">
     <div class="row" style="margin-top:15%">
