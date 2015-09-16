@@ -144,7 +144,7 @@ margin-left: 20%; }
  	overflow: hidden;
  }
  .wrap1 p.event-name {
-        text-align: justify;
+        
 		width: 100%;
 		color: white;
 		position: absolute;
@@ -203,7 +203,7 @@ article .glyphicon
 {
     display: inline-block;
     text-align: center;
-     width:70px;
+     width:6%;
      line-height: 70px;
     background-color: rgba(119,158,203,0.9);
     font-size: 30px;
@@ -240,8 +240,8 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
 	}
 
 #left-arrow{
-float:left ;margin-top:-18.5%;margin-left:10px;color:white;
+float:left ;margin-top:-18.5%;margin-left:0.5%;color:white;
 }
 #right-arrow{
-float:right; margin-top:-18.5%;margin-right:40px;color:white;}
+float:right; margin-top:-18.5%;margin-right:0.5%;color:white;}
 
