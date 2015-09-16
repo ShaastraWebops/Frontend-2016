@@ -1,9 +1,9 @@
 'use strict';
-
+(function(){
  angular.module('shaastra2016App')
 .controller('eventListCtrl', function ($scope) {
-	this.details = lists;
 
+	this.details = lists;
 	$scope.posX = 0;
 	$scope.posY = 0;
 
@@ -13,8 +13,7 @@
 	$scope.moveY = function (pixels) {
 		$scope.posY = $scope.posY + pixels;
 	};
-	$scope.$evalAsync(function () {
-		$scope.$broadcast('content.changed', 1000);
+	
 	});
 	var lists=[
 {
@@ -31,28 +30,28 @@
 		},
 		{
 		    name: "Design And Build",
-		    imgUrl: "images/design and build.png",
+		    imgUrl: "images/coding.png",
 		},
 		{
 		    name: "Department Flagship",
-		    imgUrl: "images/aerofest.png",
+		    imgUrl: "images/Department-Flagship.jpg",
 		},
 		{
 		    name: "Electronic Fest",
-		    imgUrl: "images/aerofest.png",
+		    imgUrl: "images/Electronics.jpg",
 		},
 		{
 		    name: "Involve",
-		    imgUrl: "images/aerofest.png",
+		    imgUrl: "images/Involve.jpg",
 		},
 		{
 		    name: "Quizzing",
-		    imgUrl: "images/aerofest.png",
+		    imgUrl: "images/Quizzing.jpg",
 		},
 		{
 		    name: "Spotlight",
-		    imgUrl: "images/aerofest.png",
+		    imgUrl: "images/Spotlight.jpg",
 		},
 		
 ];
-});
+})();
