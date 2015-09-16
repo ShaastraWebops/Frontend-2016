@@ -34,14 +34,97 @@
       // });
 
       var ticks = $(".tt");
-      var topOfOthDiv = $("#about-shaastra-two").offset().top - 100;  
-      ticks.hide();
+      var ticks_topOfOthDiv = $("#about-shaastra-two").offset().top - 100;  
+      ticks.css({"opacity": '0'});
+
+      var acheivements = $(".ach");
+      var acheivements_topOfthDiv = $("#ticks").offset().top - 100;
+      acheivements.css({"opacity": '0'});
+
+      var stats = $(".sta");
+      var stats_topOfthDiv = $("#acheivements-last").offset().top - 200;
+      stats.css({"opacity": '0'});
+
+      var awaits = $(".awaits");
+      var awaits_topOfthDiv = $("#statistics").offset().top - 200;
+      awaits.css({"opacity": '0'});
+
+      var motto = $(".motto");
+      var motto_topOfthDiv = $("#awaits-last").offset().top;
+      motto.css({"opacity": '0'});
+
+      var aim = $(".aaa");
+      var aim_topOfthDiv = $("#motto").offset().top;
+      aim.css({"opacity": '0'});
+
+      var events = $(".eve");
+      var events_topOfthDiv = $("#shaastraActivity").offset().top + 100;
+      events.css({"opacity": '0'});
+
+      var misVis = $(".misVis");
+      var misVis_topOfthDiv = $("#events-last").offset().top - 200;
+      misVis.css({"opacity": '0'});
+
+      var humble = $(".humble");
+      var humble_topOfthDiv = $("#mission").offset().top + 500;
+      humble.css({"opacity": '0'});
+
+      var cores = $(".cores");
+      var cores_topOfthDiv = $("#foot-mid").offset().top - 300;
+      cores.css({"opacity": '0'});
+
       $(window).scroll(function () {
-        if ($(window).scrollTop() > topOfOthDiv) {
-          ticks.fadeIn(1000);
+        if ($(window).scrollTop() > ticks_topOfOthDiv) {
+          ticks.each(function (i) {
+            $(this).delay((i++)*250).fadeTo(1000, 1);
+          });
         }
-      });
-      
+        if ($(window).scrollTop() > acheivements_topOfthDiv) {
+          acheivements.each(function (i) {
+            $(this).delay((i++)*250).fadeTo(500, 1);
+          });
+        }
+        if ($(window).scrollTop() > stats_topOfthDiv) {
+          stats.each(function (i) {
+            $(this).delay((i++)*250).fadeTo(750, 1);
+          });
+        }
+        if ($(window).scrollTop() > awaits_topOfthDiv) {
+          awaits.each(function (i) {
+            $(this).delay((i++)*500).fadeTo(1000, 1);
+          });
+        }
+        if ($(window).scrollTop() > motto_topOfthDiv) {
+          motto.each(function (i) {
+            $(this).delay((i++)*500).fadeTo(1000, 1);
+          });
+        }
+        if ($(window).scrollTop() > aim_topOfthDiv) {
+          aim.each(function (i) {
+            $(this).delay((i++)*250).fadeTo(1000, 1);
+          });
+        }
+        if ($(window).scrollTop() > events_topOfthDiv) {
+          events.each(function (i) {
+            $(this).delay((i++)*500).fadeTo(1000, 1);
+          });
+        }
+        if ($(window).scrollTop() > misVis_topOfthDiv) {
+          misVis.each(function (i) {
+            $(this).delay((i++)*500).fadeTo(1000, 1);
+          });
+        }
+        if ($(window).scrollTop() > humble_topOfthDiv) {
+          humble.each(function (i) {
+            $(this).delay((i++)*250).fadeTo(1000, 1);
+          });
+        }
+        if ($(window).scrollTop() > cores_topOfthDiv) {
+          cores.each(function (i) {
+            $(this).delay((i++)*250).fadeTo(1000, 1);
+          });
+        }
+      });      
     });
   </script>
 
@@ -116,21 +199,21 @@
 	<div class="container-fluid acheivements">
     <div style="padding:5%">
       <div class="row">
-        <figure class="col-xs-6 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2">
+        <figure class="col-xs-6 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2 ach">
           <img class="img-responsive" src="spons_img/6.png" alt="Image not found">
           <figcaption>MEDIA</figcaption>
         </figure>
 
-        <figure class="col-xs-6 col-md-2 col-sm-2 col-sm-offset-4 col-md-offset-4">
+        <figure class="col-xs-6 col-md-2 col-sm-2 col-sm-offset-4 col-md-offset-4 ach">
           <img class="img-responsive" src="spons_img/7.png" alt="Image not found">
           <figcaption>INDUSTRY</figcaption>
         </figure>
 
-        <figure class="col-xs-6 col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4">
+        <figure class="col-xs-6 col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4 ach">
           <img class="img-responsive" src="spons_img/4.png" alt="Image not found"><br>    
         </figure>
     
-        <figure class="col-xs-6 col-md-2 col-sm-2 col-sm-offset-5 col-md-offset-5">
+        <figure class="col-xs-6 col-md-2 col-sm-2 col-sm-offset-5 col-md-offset-5 ach" id="acheivements-last">
           <img class="img-responsive" src="spons_img/5.png" alt="Image not found">
           <figcaption>ACADEMIA</figcaption>
         </figure>
@@ -138,31 +221,31 @@
     </div>
 	</div>
 
-	<div class="container-fluid statistics">
+	<div id="statistics" class="container-fluid statistics">
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-3">      
-        <div>
+        <div class="sta">
           <p class="one">225</p>
           <p class="two">percent increase in</p>
           <p class="two">AVERAGE DAILY REACH</p>
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3">
-        <div>
+        <div class="sta">
           <p class="one">16000</p>
           <p class="two">students impacted through</p>
           <p class="two">EVENTS AND WORKSHOPS</p>
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3">    
-        <div>
+        <div class="sta">
           <p class="one">384</p>
           <p class="two">schools reached through</p>
           <p class="two">OUTREACH ACTIVITIES</p>
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3">
-        <div>
+        <div class="sta">
           <p class="one">155</p>
           <p class="two">percent increase in time</p>
           <p class="two">PEOPLE ENGAGED ON DAILY BASIS</p>
@@ -171,7 +254,7 @@
     </div>
 	</div>
 
-  <div class="container-fluid">
+  <div class="container-fluid awaits">
     <div class="row">
       <img class="img-responsive col-xs-12 col-sm-12 col-md-12" style="padding:0;" src="./spons_img/00.png" alt="Image not found">
       <!-- <img class="img-responsive col-xs-12 col-sm-4 col-md-4" style="padding:0;" src="./spons_img/ad_2.png" alt="Image not found"> -->
@@ -181,13 +264,13 @@
 
 <!-- 	<div class="ad_photos" class="parallax-window" data-parallax="scroll" data-image-src="spons_img/1.png spons_img/2.png spons_img/3.png">
 	</div> -->
-  <div class="container-fluid">
+  <div class="container-fluid awaits">
     <div class="row" id="await">
       <p>SHAASTRA'S 17<sup>th</sup>&nbsp;EDITION AWAITS YOU!!</p>
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div id="awaits-last" class="container-fluid awaits">
     <div class="row">
       <img class="img-responsive col-xs-12 col-sm-12 col-md-12" style="padding:0;" src="./spons_img/0.png" alt="Image not found">
       <!-- <img class="img-responsive col-xs-12 col-sm-4 col-md-4" style="padding:0;" src="./spons_img/ad_2.png" alt="Image not found"> -->
@@ -198,7 +281,7 @@
 <!-- 	<div class="ad_photos">
 	</div> -->
 
-  <div class="container-fluid motto">
+  <div id="motto" class="container-fluid motto">
     <div class="row">
       <p>The motto is still the same</p>
     </div>
@@ -213,74 +296,74 @@
 
   <div class="container-fluid aim">
     <div class="row shaastra-aim">
-      <img class="img-responsive col-md-5 col-sm-5 col-xs-12" src="spons_img/000.png" alt="Image not loaded">
-      <p class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6 col-xs-12" id="shaastraActivity">Since it's inception, Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's-on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai every year in January to witness this spectacle, Shaastra's reach is now beyond city, state and country and has a stake on international stage. Marquee events like IITM Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity, industry and academia.</p> 
+      <img class="img-responsive col-md-5 col-sm-5 col-xs-12 aaa" src="spons_img/000.png" alt="Image not loaded">
+      <p class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6 col-xs-12 aaa" id="shaastraActivity">Since it's inception, Shaastra's aim has been to explore activity outside the classroom and to spark creative, innovative and hand's-on approaches to a variety of problems from varying fields relating to technology. Over the years, the festival has evolved and now the grandeur and scale of events, is for all to behold. With thousands of people coming down to Chennai every year in January to witness this spectacle, Shaastra's reach is now beyond city, state and country and has a stake on international stage. Marquee events like IITM Research Expo and Industrial Open House remain the pillars of interaction between the student fraternity, industry and academia.</p> 
     </div>
   </div>
 
   <div class="container-fluid">
-    <div class="row events">
+    <div class="row events eve">
       <p>Shaastra's Events</p>
     </div>
-    <div class="row events-list">
+    <div class="row events-list eve">
       <div class="col-md-4 col-sm-4 col-xs-12">
         <a href="http://ebrochure.shaastra.org/aerofest"><img class="img-responsive" style="padding:2%" src="spons_img/13_1.png" alt="Image Not Found"></a>
         <p>Aerofest</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/b-events"><img class="img-responsive" style="padding:2%" src="spons_img/13_2.png" alt="Image Not Found"></a>
         <p>B - Events</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/coding"><img class="img-responsive" style="padding:2%" src="spons_img/13_3.png" alt="Image Not Found"></a>
         <p>Coding</p>
       </div>
     </div>
 
     <div class="row events-list">
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/department-flagship"><img class="img-responsive" style="padding:2%" src="spons_img/13_4.png" alt="Image Not Found"></a>
         <p>Department Flagship</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/electronics-fest"><img class="img-responsive" style="padding:2%" src="spons_img/13_5.png" alt="Image Not Found"></a>
         <p>Electronic Fest</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/design-and-build"><img class="img-responsive" style="padding:2%" src="spons_img/13_6.png" alt="Image Not Found"></a>
         <p>Design and Build</p>
       </div>
     </div>
 
-    <div class="row events-list">
-      <div class="col-md-4 col-sm-4 col-xs-12">
+    <div id="events-last" class="row events-list">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/involve"><img class="img-responsive" style="padding:2%" src="spons_img/13_7.png" alt="Image Not Found"></a>
         <p>Involve</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/quizzing"><img class="img-responsive" style="padding:2%" src="spons_img/13_8.png" alt="Image Not Found"></a>
         <p>Quizzing</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 eve">
         <a href="http://ebrochure.shaastra.org/research"><img class="img-responsive" style="padding:2%" src="spons_img/13_9.png" alt="Image Not Found"></a>
         <p>Research</p>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid mission">
+  <div id="mission" class="container-fluid mission">
     <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 misVis">
         <h1>Shaastra's Vision</h1>
         <p>To be a world-class technical festival under its parent institution continuously striving to push the boundaries in the spheres of technology, engineering and innovation. Shaastra aims to provide a platform for continuous faculty-student-academic collaboration and interaction as well as promoting new frontiers of thought by the student community.</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 misVis">
         <h1>Shaastra's Mission</h1>
         <p>To create and sustain a community that encourages thought and learning in which students can acquire knowledge through interaction with fellow students as well as the industry.</p>
         <p>To encourage students to explore new frontiers in technical as well as management process.</p>
         <p>To create and sustain a culture that enables the industry to recognize and reard talent in engineering.</p>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-4 col-xs-12 misVis">
         <h1>Quality Policy</h1>
         <p>To pursue excellence in all activities pertaining to Shaastra namely technical event creation and management, outreach activities, management, Corporate relations and website management through the process of constant re evaluation and self improvement.</p>
         <p>Shaastra is the ISO 9001 :2008 certified student organized technical festival. A dedicated division will be responsible for implementation of the ISO 9001 standards at Shaastra. Enhancing and driving efficiency in the processes of inter- departmental collaboration and implementing exhaustive documenting policies are the approaches adopted to ensure quality and transparency in the system. Certification stands for the quality of perfection Shaastra has achieved with its present system and the attitude towards continual improvement which is made possible by the professionalism and overwhelming enthusiasm of the Shaastra organizing team.</p>
@@ -314,13 +397,13 @@
  -->
 
   <div class="container-fluid footer">
-    <div class="footer-top">
+    <div class="footer-top humble">
       <div class="row">
         <h2>We humbly approach you for support in the hope of meeting those who share our vision of celebrating technology at a grass-root level.</h2>
       </div>
     </div>
 
-    <div class="footer-middle">
+    <div id="foot-mid" class="footer-middle humble">
       <div class="row">
         <h2>For Sponsorship and Industry relation, please contact</h2>
       </div>
@@ -328,7 +411,7 @@
 
     <div class="footer-bottom">
       <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12 cores">
           <h2>BHAVIK RASYARA</h2>
           <p>Core team member</p>
           <p>Sponsorship and PR</p>
@@ -336,7 +419,7 @@
           <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
           <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;bhavik@shaastra.org</p>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12 cores">
           <h2>SHASHANKA RAO</h2>
           <p>Core team member</p>
           <p>Sponsorship and PR</p>
@@ -344,7 +427,7 @@
           <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9999999999</p>
           <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;shashanka@shaastra.org</p>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12 cores">
           <h2>MAHESH KURUP</h2>
           <p>Core team member</p>
           <p>Sponsorship and PR</p>
