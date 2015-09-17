@@ -2,18 +2,21 @@
 	font-family: 'CGF Locust Resistance';
 	src: url('./CGFLocustResistance.ttf')format('truetype');
 }
-.container {
+.home {
 	padding: 0;
 	width: 100%;
-	height: 100%;
+	height: 90%;
+	overflow: hidden;
 }
+
 #bgstyle {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
-          }         
+}         
+
 #bgimg { 
 	width: 100%;
 	height: 100%;
@@ -83,6 +86,7 @@
 }
 
 .invisiblebox1 {
+	display: block;
 	background-color: rgba(96,113,238,0);
 	width: 40%;
 	height: 100%;
@@ -115,7 +119,7 @@
 	border: 2px solid rgba(115, 117, 183, 0.2);
 	z-index: 400;
 	position: absolute;
-	top: 38%;
+	top: 33%;
 	left: 50%;
 	margin-left: -32vh;
 	-webkit-box-shadow: 0 0 5px #888;
@@ -127,13 +131,13 @@
 	transition: transform 0.3s ease-in, top 0.4s, left 0.4s, right 0.4s, width 0.4s, height 0.4s;
 }
 .top-1, .top-2 {
-  top: 10%;
+  top: 6%;
 }
 .mid-1, .mid-2 {
-  top: 43%;
+  top: 38%;
 } 
 .botm-1,.botm-2 {
-  top: 73%;
+  top: 68%;
 }
 .top-2, .botm-2 {
   right: 22%;
@@ -200,7 +204,7 @@
 	left: -1%;
 	top: 0;
 	width: 100%;
-	height: 110%;
+	height: 100%;
 	z-index: 100;
 }
 .dice {
@@ -280,13 +284,18 @@ color: #00445e;
 
 @media all and (max-width: 991px) {
 	.text3, #righthand, #lefthand, .invisiblebox2, .invisiblebox1, .underline{
-    display: none;
- 	}
+	    display: none;
+	}
+
+	.home {
+		overflow: auto;
+	}
+
 	.shaastrabox {
 		width: 35vh;
 		height: 28vh;
 		margin-left: -17.5vh; 
-  }
+	}
 	.text2 {
 		left:0;
 		top:60%;
@@ -294,42 +303,47 @@ color: #00445e;
 	.number {
 		top:30%;
 		left: 29%;
-  }
+	}
 	.dice {
 		width: 60%;
 		height: 40%;
 		top: 18%;
 		left: 20%;
-  }
+	}
 	.text1 {
 		left: 20%;
 	}
 	.elemboxright, .elemboxleft {
-  	width: 31.5vh;
+		width: 31.5vh;
 	}               
 }
 
 /*small screen view*/
 @media all and (max-width: 767px) {
+	.home {
+		overflow: auto;
+	}
+
 	#righthand, #lefthand, .invisiblebox2, .invisiblebox1, .robo {
 		display: none;
-  }
+	}
 	.top-1, .top-2, .mid-1, .mid-2, .botm-1, .botm-2 {
 		top: 0;
 	}
 	.elemboxleft, .elemboxright{
-		width: 80%;
+		width: 40%;
 		left: 8%;
-		margin: 3vh;
+		float: left;
+		margin: 1vh;
 		position: relative;
 		cursor: pointer;
-  }
+	}
 	.shaastrabox {
 		display: none;
-  }
+	}
 	#bgstyle {
 		height: 150%;
-	  }
+	}
 	.small-screen-heading {
 		opacity: 1;
 		cursor: pointer;
@@ -338,15 +352,12 @@ color: #00445e;
 
  /*hiding hand with height of screen*/
 @media only screen and (max-height:490px) {
- #invisiblebox1, #invisiblebox2, #righthand, #lefthand {
-    display: none;
-  }
-}
+	.home {
+		overflow: auto;
+	}
 
-
-@media only screen and (max-width:767px) {
-	body{
-		overflow-y:scroll;
+	#invisiblebox1, #invisiblebox2, #righthand, #lefthand {
+		display: none;
 	}
 }
 
