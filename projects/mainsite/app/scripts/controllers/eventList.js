@@ -17,11 +17,11 @@
 	});
 	var lists=[
 {
-		    name: "Aerofest",
+		    name: "AeroFest",
 		    imgUrl: "images/aerofest.png",
 		},
 		{
-		    name: "B-events",
+		    name: "B-Events",
 		    imgUrl: "images/bevents.png",
 		},
 		{
