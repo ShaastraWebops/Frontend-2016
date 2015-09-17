@@ -73,11 +73,10 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--backgrnd image-->
-  <div id="bgstyle">
+    <div id="bgstyle">
     <img id="bgimg" src="images/background.jpg" alt="" />
   </div>
      <header>
-
     
     <div id="omnbars" class="o inblock" ng-controller="MainController">
       <span class="bars" id="bar1"></span>
@@ -96,14 +95,13 @@
     </div>
     </header>
 
-
-  <div class="menu " ng-controller="MainController">
+  <div class="menu" ng-controller="MainController">
     <ul class="mn-list">
       <span id="menuscroll">
       <li><a href="#/">Home</a></li>
       <li><a href="#/loginRegister">Log In/Register</a></li>
       <li><a href="#/preShaastra">Pre-Shaastra</a></li>
-      <li class="down"><a class="d" href="#/eventsList">Events<span class="fa fa-caret-right"></span></a>
+      <li class="down"><a class="d" href="http://localhost:9000/#/eventsList">Events<span class="fa fa-caret-right"></span></a>
         <ul class="list">
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
@@ -131,13 +129,15 @@
       </span>
     </ul>
   </div>
+  <div id="main-container" style="position: absolute;top: 35px; width:100%;height:100%;overflow:hidden;"> 
 
-  <div style="position: absolute;top: 35px; width:100%;height:100%;"  ng-controller="MainController"> 
     <div ng-view="">
     </div>
-  </div>
-  
-  <footer>
+    </div>
+
+    <div id="backdrop"></div>
+
+  <footer style="z-index:300">
     <ul class="out mn-social">
       <li class="social"><a id="fb" href="#"><i class="fa fa-facebook"><span></span></i></a></li>
       <li class="social"><a id="tw" href="#"><i class="fa fa-twitter"><span></span></i></a></li>

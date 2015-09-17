@@ -34,6 +34,7 @@ angular.module('shaastra2016App')
             $('.c').addClass("block");
             $('.mn-social').removeClass("out");
             $('.o').animate({left:"+=141px"},0);
+            $('#backdrop').css("display", "block");
           });
                                }
                                };
@@ -53,6 +54,7 @@ angular.module('shaastra2016App')
             $('.o').removeClass("none");
             $('.o').addClass("inblock");
             $('.o').animate({left:"-=141px"},200);
+            $('#backdrop').css("display", "none");
           });
                                }
                                };

@@ -117,7 +117,7 @@
 	cursor: pointer;
 	padding: 10vh;
 	border: 2px solid rgba(115, 117, 183, 0.2);
-	z-index: 400;
+	z-index: 200;
 	position: absolute;
 	top: 33%;
 	left: 50%;
