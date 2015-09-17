@@ -73,10 +73,11 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--backgrnd image-->
-    <div id="bgstyle">
+  <div id="bgstyle">
     <img id="bgimg" src="images/background.jpg" alt="" />
   </div>
      <header>
+
     
     <div id="omnbars" class="o inblock" ng-controller="MainController">
       <span class="bars" id="bar1"></span>
@@ -94,6 +95,7 @@
       <p class="account"><span class="ac">Account</span><a id="login" ng-href="#/login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
     </div>
     </header>
+
 
   <div class="menu " ng-controller="MainController">
     <ul class="mn-list">
@@ -129,11 +131,12 @@
       </span>
     </ul>
   </div>
-  <div style="position: absolute;top: 35px; width:100%;height:100%;overflow:hidden;"  ng-controller="MainController"> 
 
+  <div style="position: absolute;top: 35px; width:100%;height:100%;"  ng-controller="MainController"> 
     <div ng-view="">
     </div>
-    </div>
+  </div>
+  
   <footer>
     <ul class="out mn-social">
       <li class="social"><a id="fb" href="#"><i class="fa fa-facebook"><span></span></i></a></li>
