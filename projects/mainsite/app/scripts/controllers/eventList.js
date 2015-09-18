@@ -1,70 +1,58 @@
-'use strict';
-(function(){
- angular.module('shaastra2016App')
-.controller('eventListCtrl', function ($scope) {
+angular.module('shaastra2016App')
+	.controller('eventListCtrl', ["$scope", function ($scope, $timeout) {
 
+		this.details = lists;
+		$scope.posX = 0;
+		$scope.posY = 0;
 
-	$scope.safeApply = function(fn) {
-	  var phase = this.$root.$$phase;
-	  if(phase == '$apply' || phase == '$digest') {
-	    if(fn && (typeof(fn) === 'function')) {
-	      fn();
-	    }
-	  } else {
-	    this.$apply(fn);
-	  }
-	};
-	$scope.safeApply();
-
-	this.details = lists;
-	$scope.posX = 0;
-	$scope.posY = 0;
-
-	$scope.moveX = function (pixels) {
-		$scope.posX = $scope.posX +  pixels;
-	};
-	$scope.moveY = function (pixels) {
-		$scope.posY = $scope.posY + pixels;
-	};
-	
-	});
-	var lists=[
-{
-		    name: "AeroFest",
-		    imgUrl: "images/aerofest.png",
-		},
-		{
-		    name: "B-Events",
-		    imgUrl: "images/bevents.png",
-		},
-		{
-		    name: "Coding",
-		    imgUrl: "images/coding.png",
-		},
-		{
-		    name: "Design And Build",
-		    imgUrl: "images/coding.png",
-		},
-		{
-		    name: "Department Flagship",
-		    imgUrl: "images/Department-Flagship.jpg",
-		},
-		{
-		    name: "Electronic Fest",
-		    imgUrl: "images/Electronics.jpg",
-		},
-		{
-		    name: "Involve",
-		    imgUrl: "images/Involve.jpg",
-		},
-		{
-		    name: "Quizzing",
-		    imgUrl: "images/Quizzing.jpg",
-		},
-		{
-		    name: "Spotlight",
-		    imgUrl: "images/Spotlight.jpg",
-		},
+		$scope.moveX = function (pixels) {
+			$scope.posX = $scope.posX +  pixels;
+		};
+		$scope.moveY = function (pixels) {
+			$scope.posY = $scope.posY + pixels;
+		};
 		
-];
-})();
+		$scope.updateDOM = function() {
+			$scope.$broadcast('content.reload');
+		}
+		// $scope.$digest();
+		// $timeout(refresh, 1000);
+	}]);
+
+	var lists=[{
+	    name: "AeroFest",
+	    imgUrl: "images/aerofest.png",
+		},
+		{
+	    name: "B-Events",
+	    imgUrl: "images/bevents.png",
+		},
+		{
+	    name: "Coding",
+	    imgUrl: "images/coding.png",
+		},
+		{
+	    name: "Design And Build",
+	    imgUrl: "images/coding.png",
+		},
+		{
+	    name: "Department Flagship",
+	    imgUrl: "images/Department-Flagship.jpg",
+		},
+		{
+	    name: "Electronic Fest",
+	    imgUrl: "images/Electronics.jpg",
+		},
+		{
+	    name: "Involve",
+	    imgUrl: "images/Involve.jpg",
+		},
+		{
+	    name: "Quizzing",
+	    imgUrl: "images/Quizzing.jpg",
+		},
+		{
+	    name: "Spotlight",
+	    imgUrl: "images/Spotlight.jpg",
+		},
+	];
