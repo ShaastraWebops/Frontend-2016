@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background: url("../images/background.jpg") no-repeat center center;
+/*  background: url("../images/background.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -12,7 +12,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  overflow: hidden;
+*/  
+  /*overflow: hidden;*/
 }
 
 .scrollable .scrollable-bar,.scrollable .scrollable-slider {

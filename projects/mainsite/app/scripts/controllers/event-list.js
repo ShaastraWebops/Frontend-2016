@@ -1,5 +1,8 @@
+'use-strict';
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', ["$scope", function ($scope, $timeout) {
+	.controller('eventListCtrl', function ($scope, $timeout, $rootScope) {
+
+		$rootScope.pageClass = "page-eventList"
 
 		this.details = lists;
 		$scope.posX = 0;
@@ -17,7 +20,7 @@ angular.module('shaastra2016App')
 		}
 		// $scope.$digest();
 		// $timeout(refresh, 1000);
-	}]);
+	});
 
 	var lists=[{
 	    name: "AeroFest",

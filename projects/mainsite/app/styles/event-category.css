@@ -1,0 +1,201 @@
+/*body {
+  overflow: scroll;
+}
+*/
+.page-eventCategory {
+  overflow: scroll;
+}
+
+.category {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.category-wrapper {
+  text-align: center;
+}
+
+#scroll-down {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 20%;
+  background-color: #6E6E6E;
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
+
+#scroll-glyphicon {
+  color: #000;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#event-category-name {
+  height: 70px;
+  width: 101%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4em;
+  font-family: Verdana, Geneva, sans-serif;
+  font-variant: small-caps;	
+}
+
+#event-category-image {
+  width:450px;
+  height:450px;
+}
+
+#event-name {
+  font-size: 1.7em;
+  font-family: Verdana, Geneva, sans-serif;
+  font-variant: small-caps;
+  color: #fff;
+  padding-left: 15px;
+}
+
+#event-date {
+  font-size: 1.7em;
+  font-family: Verdana, Geneva, sans-serif;
+  font-variant: small-caps;
+  color: #fff;
+  padding-left: 15px;
+}
+
+.fix {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.events {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.row {
+  height: 250px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.event-details {
+  color: #fff;
+  background-color: #2E64FE;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Code for flip animation */
+/*.card{
+  height:250px;
+  perspective:600;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  transition:all 0.5s ease-in-out;
+  width:100%;
+}
+.card:hover{
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.card .card-front{
+  backface-visibility:hidden;
+  height:100%;
+  width: 100%;
+}
+.card .card-back{
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  color:#fff;
+  height: 100%;
+  width: 100%;
+}
+*/
+/* Code for flip animation ends */
+
+/*Code for zoom in animation */
+
+.card {
+  height: 250px;
+  width: 100%;
+  perspective:600;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card:hover .card-back {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card-back {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+
+/*Code ends for zoom in animation */
+
+/* remove spacing between middle columns */
+.row.no-gutter [class*='col-'] {
+  padding-right:3px;
+  padding-left:3px;
+}
+/* remove right padding from first column */
+
+.card .card-front {
+  position: absolute;
+}
+
+.event-more-button {
+  position: absolute;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  width: 30%;
+  height: 17%;
+  bottom: 5px;
+  right: 5px;
+  border-style: solid;
+  border-color: #fff;
+  background-color: #5E610B;
+  color: #fff;
+}

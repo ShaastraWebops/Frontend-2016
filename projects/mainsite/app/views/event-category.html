@@ -1,0 +1,43 @@
+<div ng-controller="eventsCategoryCtrl" scroll ng-clock>
+  <div class="container-fluid category">
+    <div class="top-bar"></div>
+		<div class="main">
+	  	<div id="main-image">
+	    	<div class="category-wrapper">
+		  		<img id="event-category-image" ng-src="{{eventsJSON.eventCategoryImage}}">
+				</div>
+	  	</div>
+	  	<div id="scroll-down">
+		  	<a ng-click="scrollDown('event-category-name')"><span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span></a>
+	  	</div><!-- TODO check the class min in css and fix the div at the top-->
+	  	<div id="event-category-name" ng-class="{fix: boolFixDiv}">
+				<span id="event-category-name" ng-bind="eventsJSON.eventCategoryName"></span>
+   	  </div>
+	  	<div class="container-fluid events">
+				<div class="row no-gutter" ng-repeat="row in val">
+	  	 		<div class="col-md-4 col-xs-6 col-lg-4 col-sm-6 event-card-container" ng-repeat="event in row">
+						<div class="card">
+		  	  		<div class="card-front">
+			    			<div class="event-details"> 
+				  				<span id="event-name" ng-bind="event.name"></span>
+				  				<br><br>
+				  				<span id="event-date" ng-bind="event.date"></span>
+								</div>
+			  			</div>
+			  			<div class="card-back">
+			    			<div class="event-details" ng-style="{'background-image': 'url({{event.imageURL}})','background-color': '#5E610B'}">
+				  				<!-- <span id="event-name" ng-bind="event.name"></span>
+				  				<br><br>
+				  				<span id="event-date" ng-bind="event.date"></span> -->
+								</div>
+				  			<a href="{{event.eventURL}}">
+									<button class="event-more-button">See More</button>
+				  			</a>
+			  			</div>
+						</div>
+		  		</div>
+				</div>
+	  	</div>
+		</div>
+  </div>
+</div>

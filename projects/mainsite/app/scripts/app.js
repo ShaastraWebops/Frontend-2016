@@ -32,12 +32,17 @@ angular
         controller: 'loginCtrl',
         controllerAs: 'register'
       })      
-      .when('/events', {
+      .when('/event-list', {
         templateUrl: 'views/event-list.html',
         controller: 'eventListCtrl',
         controllerAs: 'eventsList'
       })
-      .when('/event/:id', {
+      .when('/event-category/:eventId', {
+        templateUrl: 'views/event-category.html',
+        controller: 'eventsCategoryCtrl',
+        controllerAs: 'eventsCategory'
+      })
+      .when('/event/:eventId/:id', {
         templateUrl: 'views/event-details.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'

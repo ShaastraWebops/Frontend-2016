@@ -1,9 +1,10 @@
 body {
-  overflow-x: hidden; 
-  /*background: url(background.jpg);*/
+/*  overflow-x: hidden; 
+  background: url(background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+*/  
   padding-left: 10px;
 }
 #username{

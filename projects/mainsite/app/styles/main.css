@@ -18,7 +18,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 
 /*menu*/
