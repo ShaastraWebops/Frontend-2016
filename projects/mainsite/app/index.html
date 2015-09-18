@@ -73,11 +73,11 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--backgrnd image-->
-    <div id="bgstyle">
+  <div id="bgstyle">
     <img id="bgimg" src="images/background.jpg" alt="" />
   </div>
-     <header>
-    
+
+  <header>
     <div id="omnbars" class="o inblock" ng-controller="MainController">
       <span class="bars" id="bar1"></span>
       <span class="bars" id="bar2"></span>
@@ -93,7 +93,7 @@
       <p class="search"><span class="s scl">Search</span><span class="scl glyphicon glyphicon-search"></span><span class="inp"><input class="none si" type="search" name="Search"><span class="none si sic glyphicon glyphicon-remove"></span></span></p>
       <p class="account"><span class="ac">Account</span><a id="login" ng-href="#/login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
     </div>
-    </header>
+  </header>
 
   <div class="menu" ng-controller="MainController">
     <ul class="mn-list">
@@ -101,26 +101,25 @@
       <li><a href="#/">Home</a></li>
       <li><a href="#/loginRegister">Log In/Register</a></li>
       <li><a href="#/preShaastra">Pre-Shaastra</a></li>
-      <li class="down"><a class="d" href="http://localhost:9000/#/eventsList">Events<span class="fa fa-caret-right"></span></a>
+      <li class="down"><a class="d" href="#/eventsList">Events<span class="fa fa-caret-right"></span></a>
         <ul class="list">
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
         </ul>
       </li>
-      <li class="down" ><a  class="d" href="#">Workshops<span class="fa fa-caret-right"></span></a>
+      <li class="down"><a  class="d" href="#">Workshops<span class="fa fa-caret-right"></span></a>
         <ul class="list">
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
         </ul>
       </li>
-      <li class="down" ><a class="d" href="#">Lectures<span class="fa fa-caret-right"></span></a>
+      <li class="down"><a class="d" href="#">Lectures<span class="fa fa-caret-right"></span></a>
         <ul class="list">
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
           <li><a href="#">Aero</a></li>
-
         </ul>
       </li>
       <li><a href="#">Sponsors</a></li>
@@ -129,31 +128,29 @@
       </span>
     </ul>
   </div>
-  <div id="main-container" style="position: absolute;top: 35px; width:100%;height:100%;"> 
+  <div id="main-container" style="position:absolute; top:35px; width:100%; height:100%;"> 
+    <div ng-view=""></div>
+  </div>
 
-    <div ng-view="">
-    </div>
-    </div>
-
-    <div id="backdrop"></div>
+  <div id="backdrop"></div>
 
   <footer style="z-index:300">
-    <ul class="out mn-social">
-      <li class="social"><a id="fb" href="#"><i class="fa fa-facebook"><span></span></i></a></li>
-      <li class="social"><a id="tw" href="#"><i class="fa fa-twitter"><span></span></i></a></li>
-      <li class="social"><a id="you" href="#"><i class="fa fa-youtube-play"><span></span></i></a></li>
-      <li class="social"><a id="li" href="#"><i class="fa fa-linkedin"><span></span></i></a></li>
-      </ul>
+    <ul class="out mn-social"><!-- 
+       --><li class="social"><a id="fb" href="#"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
+       --><li class="social"><a id="tw" href="#"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
+       --><li class="social"><a id="you" href="#"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
+       --><li class="social"><a id="li" href="#"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
+     --></ul>
   </footer>
 
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+      (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+      r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+      }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->

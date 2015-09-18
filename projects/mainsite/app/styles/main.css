@@ -3,28 +3,27 @@ html{
   margin:0; padding:0; height:100%; width:100%;
 }
 body{
-    margin:0px 0px 0px 0px;
-    padding:0 !important;
-  	width:100%;
-  	height:100%;
-  	background: url("../images/background.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-y: hidden;
-  	
+  margin:0px 0px 0px 0px;
+  padding:0 !important;
+	width:100%;
+	height:100%;
+	background: url("../images/background.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: hidden;
 }
 /*menu*/
 ul{
-    list-style-type: none;
-    padding:0;
-    margin: 0em 0em 0em 0em;
-    font-size:1.2em;
+  list-style-type: none;
+  padding:0;
+  margin: 0em 0em 0em 0em;
+  font-size:1.2em;
 }
 li{
-    cursor:pointer;
+  cursor:pointer;
 }
 /*backgrnd*/
 #bgstyle {
@@ -38,22 +37,22 @@ li{
   width: 100%;
   height: 100%;
 }
-#menuscroll li:hover{
-    background:#0033ff;
- 		color:#ffffff;
- 		-webkit-transition:all 0.3s;
-    -moz-transition:all 0.3s;
-    -o-transition:all 0.3s;
-    -ms-transition:all 0.3s;
-    transition:all 0.3s;
+#menuscroll li:hover{ 
+  background:#0033ff;
+	color:#ffffff;
+	-webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  -o-transition:all 0.3s;
+  -ms-transition:all 0.3s;
+  transition:all 0.3s;
 }
 .menu a{
-    display:block;
-    padding:0.5em 0em 0.5em 0.2em;
-    color:white !important;
-    text-decoration:none !important;
-    font-family: Verdana, Geneva, sans-serif;
-    font-variant: small-caps;
+  display:block;
+  padding:0.5em 0em 0.5em 0.2em;
+  color:white !important;
+  text-decoration:none !important;
+  font-family: Verdana, Geneva, sans-serif;
+  font-variant: small-caps;
 }
 .account a{
   color:black !important;
@@ -61,29 +60,29 @@ li{
   font-weight:bold;
 }
 .menu{
-    color:#fff;
-    display:inline-block;
-    height:100%;
-    padding:0 !important;
-    max-width:0;
-    overflow:hidden;
-     width:145px;
-    -webkit-transition:all 0.15s ease;
-    -moz-transition:all 0.15s ease;
-    -o-transition:all 0.15s ease;
-    -ms-transition:all 0.15s ease;
-    transition:all 0.15s ease;
+  color:#fff;
+  display:inline-block;
+  height:100%;
+  padding:0 !important;
+  max-width:0;
+  overflow:hidden;
+   width:145px;
+  -webkit-transition:all 0.15s ease;
+  -moz-transition:all 0.15s ease;
+  -o-transition:all 0.15s ease;
+  -ms-transition:all 0.15s ease;
+  transition:all 0.15s ease;
 }
 #menuscroll{
   background-color: #0066ff !important;
 }
 .mnopen{
   max-width:100%;
-    -webkit-transition:all 0.5s ease;
-    -moz-transition:all 0.5s ease;
-    -o-transition:all 0.5s ease;
-    -ms-transition:all 0.5s ease;
-    transition:all 0.5s ease;
+  -webkit-transition:all 0.5s ease;
+  -moz-transition:all 0.5s ease;
+  -o-transition:all 0.5s ease;
+  -ms-transition:all 0.5s ease;
+  transition:all 0.5s ease;
 }
 #menuscroll{
   display:block;
@@ -101,24 +100,24 @@ li{
 }
 .list{
   overflow:hidden;
-    background-color:#0033ff;
-    max-height:0;
-    -webkit-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
-    -moz-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
-    -o-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
-    -ms-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
-    transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+  background-color:#0033ff;
+  max-height:0;
+  -webkit-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+  -moz-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+  -o-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+  -ms-transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
+  transition:all 0.3s cubic-bezier(.95,.09,.51,.91);
 }
 .clicked{
-    max-height:9999px;
-    -webkit-transition:all 3s ease;
-    -moz-transition:all 3s ease;
-    -o-transition:all 3s ease;
-    -ms-transition:all 3s ease;
-    transition:all 3s ease;
+  max-height:9999px;
+  -webkit-transition:all 3s ease;
+  -moz-transition:all 3s ease;
+  -o-transition:all 3s ease;
+  -ms-transition:all 3s ease;
+  transition:all 3s ease;
 }
 .sel{
-    background:#0033ff;
+  background:#0033ff;
 } 
 /*social*/
 footer{
@@ -126,24 +125,24 @@ footer{
   bottom:0;
 }
 ul li a i {
-   display:table-row;
+  display:table-row;
 }
 .mn-social li a{
- display:table;
- background: #ffffff;
- width: 30px;
- height: 30px;
- border-radius: 15px;
- font-size: 20px;
- text-align: center;
- margin-left:3px;
- margin-right:3px;
- padding:0;
- -webkit-transition:all 0.3s;
-    -moz-transition:all 0.3s;
-    -o-transition:all 0.3s;
-    -ms-transition:all 0.3s;
-    transition:all 0.3s;
+  display:table;
+  background: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  text-align: center;
+  margin-left:3px;
+  margin-right:3px;
+  padding:0;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  -o-transition:all 0.3s;
+  -ms-transition:all 0.3s;
+  transition:all 0.3s;
 }
 /*.mn-social li{
   background:#ffffff;
@@ -168,7 +167,7 @@ ul li a i {
   height:1.2em;
 }
 .social{
-    display:inline-block;
+  display:inline-block;
 }
 /*social icons menu open*/
 .fa-facebook {
@@ -243,85 +242,86 @@ ul li #you:hover {
 }*/
 
 .fa-caret-right{
-   float:right;
-    margin-right:0.2em
+  float:right;
+  margin-right:0.2em
 }
 .fa-caret-down{
-    float:right;
-    margin-right:0.2em
+  float:right;
+  margin-right:0.2em
 }
 /*hamburger*/
 #omnbars{
-   cursor:pointer;
-   position:absolute;
-   left:4px;
-   top:5px;
-   width:25px;
-   height:33px;
+  cursor:pointer;
+  position:absolute;
+  left:10px;
+  top:10px;
+  width:25px;
+  height:33px;
 }
 
 #omnbars:hover .bars{
-    -ms-transform: translate3d(0, -5px, 0);
-    -webkit-transform: translate3d(0, -5px, 0);
-    -moz-transform: translate3d(0, -5px, 0);
-    -o-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
+  -ms-transform: translate3d(0, -5px, 0);
+  -webkit-transform: translate3d(0, -5px, 0);
+  -moz-transform: translate3d(0, -5px, 0);
+  -o-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
 }
 #omnbars:hover #bar4{
   opacity: 1;
-    -webkit-transition-delay:210ms;
-    -moz-transition-delay: 210ms;
-    -o-transition-delay: 210ms;
-    transition-delay: 210ms;
+  -webkit-transition-delay:210ms;
+  -moz-transition-delay: 210ms;
+  -o-transition-delay: 210ms;
+  transition-delay: 210ms;
 }
 #omnbars:hover #bar1{
   opacity: 0;
-    -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
 #omnbars:hover .open{
   opacity: 1;
-    -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
 #cmnbars{
- position:absolute;
- padding:5px;
+  position:absolute;
+  padding:5px;
   cursor:pointer;
   top:2px;
   left:145px;
   webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #cmnbars:hover #bar5{
   -o-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+
   -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms;
-  
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
 #cmnbars:hover #bar6{
   -o-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+
   -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms;
-  
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
 }
+
 .bars{
   z-index: 300;
   display:block;
@@ -330,9 +330,9 @@ ul li #you:hover {
   background:black;
   position:relative;
   -webkit-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
-    -moz-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
-    -o-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
-    transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+  -moz-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+  -o-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+  transition: all 300ms cubic-bezier(0.215,.61,.355,1);
 }
 #bar1{
   top:0;
@@ -352,19 +352,19 @@ ul li #you:hover {
 }
 #bar5{
   top:10px;
-    -o-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 #bar6{
   top:7px;
-    -o-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .none{
   display:none;
@@ -379,6 +379,7 @@ ul li #you:hover {
 /*top menu*/
 .top-menu{
   position:absolute;
+  top: 10px;
   font-weight:bold;
   right:2%;
 }
