@@ -2,6 +2,11 @@
   overflow: scroll;
 }
 */
+
+.event-category {
+  z-index: 1;
+}
+
 .page-eventCategory {
   overflow: scroll;
 }
