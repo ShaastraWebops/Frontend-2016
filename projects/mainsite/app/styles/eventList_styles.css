@@ -15,7 +15,7 @@ body {
   overflow: hidden;
 }
 
-.scrollable .scrollable-bar,.scrollable .scrollable-slider{
+.scrollable .scrollable-bar,.scrollable .scrollable-slider {
   border-radius: 5px;
 } 
 
