@@ -97,6 +97,7 @@ li{
   display : table;
   padding:0 !important;
   z-index: 300;
+  background-color: #0066ff;
 }
 .list{
   overflow:hidden;
