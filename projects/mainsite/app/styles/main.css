@@ -168,6 +168,8 @@ ul li a i {
 }
 .social{
   display:inline-block;
+  display: -moz-inline-stack;
+  *display: inline;
 }
 /*social icons menu open*/
 .fa-facebook {
