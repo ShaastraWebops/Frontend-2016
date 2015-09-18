@@ -5,7 +5,7 @@
 	.evhead{
 		font-variant: small-caps;
 		font-family: arial;
-		font-size: 30px;
+		font-size: 35px;
 		z-index: 1;
 		position: relative;
 	}
@@ -15,6 +15,8 @@
 		position: relative;
 		width: 100%;
 		height: 350px;
+		overflow-x:hidden;
+		overflow-y: auto;
 	}
 	.bt{
 		position: absolute;
@@ -26,6 +28,10 @@
 		color: white;
 		border-radius: 5px;
 	}
+	.imag{
+		height: 50px;
+		width: 150px;
+	}
 	.cont{
 		font-size: 20px;
 		font-family: arial;
@@ -34,21 +40,60 @@
 		height: 100px;
 		width: 150px;
 	}
-	
-	.nav{
+	.evfoot{
+		z-index: 10;
+		position: relative;
+		color: black;
+	}
+	@media screen and (min-width: 1700px){
+		.nav{
 		font-variant: small-caps;
 		z-index: 1;
 		background-color: blue;
 		color: white;
 		width: 100%;
-		height: 35px;
+		height: 45px;
+		vertical-align: middle;
 		font-family: arial;
-		font-size: 19px;
+		font-size: 25px;
 		text-align: right;
 		border-bottom-left-radius: 5px;
 		border-top-left-radius: 5px;
-		padding-right: 30px;
+		padding-right: 50px;
 	}
+	 }
+	@media screen and (min-width: 1400px) and (max-width: 1700px){
+		.nav{
+		font-variant: small-caps;
+		z-index: 1;
+		background-color: blue;
+		color: white;
+		width: 100%;
+		height: 45px;vertical-align: middle;
+		font-family: arial;
+		font-size: 20px;
+		text-align: right;
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
+		padding-right: 50px;
+	}
+	 }
+		@media screen and (max-width: 1400px){
+		.nav{
+		font-variant: small-caps;
+		z-index: 1;
+		background-color: blue;
+		color: white;
+		width: 100%;
+		height: 45px;vertical-align: middle;
+		font-family: arial;
+		font-size: 15px;
+		text-align: right;
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
+		padding-right: 50px;
+	}
+	 }
 	#c{
 		position: absolute;
 		top: 30px;
