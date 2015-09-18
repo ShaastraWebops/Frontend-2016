@@ -1,9 +1,7 @@
-  // MyApp module
-/*  var app = angular.module("shaastra2016App", []);*/
+angular.module('shaastra2016App')
+  .controller("HomeCtrl", ["$scope", "$location", "$rootScope", function ($scope, $rootScope, $location) {
+    $rootScope.pageClass = "page-homepage";
 
-  // controller
-  angular.module('shaastra2016App')
-  .controller("HomeCtrl", ["$scope", "$location", function($scope, $location) {
   	$scope.name = "events";
 
   	$(".top-1").click(function(){

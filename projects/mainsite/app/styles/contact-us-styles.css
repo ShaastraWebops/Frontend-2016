@@ -1,12 +1,3 @@
-body{
-  overflow-x: hidden;
-  overflow-y: scroll; 
-  /*background: url(background.jpg);*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-bottom: 50px;
-}
 ul{
   list-style-type: none;
 }

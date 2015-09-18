@@ -3,6 +3,10 @@
 	src: url('./CGFLocustResistance.ttf')format('truetype');
 }
 
+.page-homepage {
+	overflow: hidden;
+}
+
 .home {
 	padding: 0;
 	width: 100%;

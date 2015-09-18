@@ -1,7 +1,7 @@
 'use-strict';
 angular.module('shaastra2016App')
 	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window) {
-		$rootScope = "page-eventCategory";
+		$rootScope.pageClass = "page-eventCategory";
 
 		$scope.boolFixDiv = false;
 	
