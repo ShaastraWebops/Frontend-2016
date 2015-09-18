@@ -32,13 +32,13 @@ angular
         controller: 'loginCtrl',
         controllerAs: 'register'
       })      
-      .when('/eventsList', {
-        templateUrl: 'views/eventList.html',
+      .when('/events', {
+        templateUrl: 'views/event-list.html',
         controller: 'eventListCtrl',
         controllerAs: 'eventsList'
       })
-      .when('/events', {
-        templateUrl: 'views/events.html',
+      .when('/event/:id', {
+        templateUrl: 'views/event-details.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'
       })
