@@ -77,7 +77,7 @@
     <img id="bgimg" src="images/background.jpg" alt="" />
   </div>
 
-  <header>
+  <header style="position:fixed; z-index:350">
     <div id="omnbars" class="o inblock" ng-controller="MainController">
       <span class="bars" id="bar1"></span>
       <span class="bars" id="bar2"></span>
@@ -89,13 +89,18 @@
       <span class="bars" id="bar5"></span>
       <span class="bars" id="bar6"></span>
     </div>
-    <div class="top-menu" ng-controller="MainController">
-      <p class="search"><span class="s scl">Search</span><span class="scl glyphicon glyphicon-search"></span><span class="inp"><input class="none si" type="search" name="Search"><span class="none si sic glyphicon glyphicon-remove"></span></span></p>
-      <p class="account"><span class="ac">Account</span><a id="login" ng-href="#/login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
-    </div>
   </header>
 
-  <div class="menu" ng-controller="MainController">
+  <div style="position:fixed; z-index:900; top:2%; right:2%;">
+    <header style="">
+      <div class="top-menu" ng-controller="MainController">
+        <p class="search"><span class="s scl">Search</span><span class="scl glyphicon glyphicon-search"></span><span class="inp"><input class="none si" type="search" name="Search"><span class="none si sic glyphicon glyphicon-remove"></span></span></p>
+        <p class="account"><span class="ac">Account</span><a id="login" ng-href="#/login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
+      </div>
+    </header>
+  </div>
+
+  <div class="menu" style="position:fixed; z-index:350" ng-controller="MainController">
     <ul class="mn-list">
       <span id="menuscroll">
       <li><a href="#/">Home</a></li>
@@ -134,7 +139,7 @@
   </div>
   <div id="backdrop"></div>
 
-  <footer style="z-index:300">
+  <footer style="position:fixed; z-index:350;">
     <ul class="out mn-social"><!-- 
        --><li class="social"><a id="fb" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
        --><li class="social"><a id="tw" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 

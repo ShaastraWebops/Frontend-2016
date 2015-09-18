@@ -1,5 +1,5 @@
 html {
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0; 
   padding:0; 
   height:100%; 
@@ -79,7 +79,7 @@ li {
   padding: 0 !important;
   max-width: 0;
   overflow: hidden;
-   width: 145px;
+  width: 145px;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -ms-transition: all 0.15s ease;
@@ -439,16 +439,19 @@ ul li #you:hover {
 
 /*top menu*/
 .top-menu {
-  position: absolute;
-  top: 10px;
   font-weight: bold;
-  right: 2%;
+  margin-right: 0%;
 }
 
 .search {
   float: left;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.inp {
+  padding-bottom: 5px;
+  border-bottom: solid #D3D3D3;
 }
 
 input[type=search] {
@@ -458,11 +461,6 @@ input[type=search] {
 
 input[type=search]:focus {
   outline: none;
-}
-
-.inp {
-  padding-bottom: 5px;
-  border-bottom: solid #D3D3D3;
 }
 
 .glyphicon {
