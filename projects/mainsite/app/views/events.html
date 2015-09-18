@@ -1,3 +1,4 @@
+<!-- 
 <div class="container-fluid" id="c">
 	<div class="row">	
 		<button type="button" class="btn btn-default btn-md bt hidden-sm hidden-md hidden-lg">
@@ -5,7 +6,7 @@
  		</button>
 		<div class="col-xs-12 hidden-sm hidden-md hidden-lg n">
 			<div class="row" ng-repeat="x in tabs track by $index">
-				<a href="#">
+				<a href="">
 					<div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 {{$index}}" ng-click="data($index)">
 						{{x.name}}
 					</div>
@@ -15,7 +16,7 @@
 		</div>
 	</div>
 </div>
-
+ -->
 <div class="container-fluid" id="cf">
 	<div class="row">
 <!-- 
@@ -38,8 +39,12 @@
 			</div>
 
 			<div class="row">
-				<div class="col-xs-6 hidden-sm hidden-md hidden-lg" ng-repeat="x in tabs">
-					<div class="event-nav-xs">{{x.name}}</div>
+				<div class="col-xs-6 hidden-sm hidden-md hidden-lg" ng-repeat="x in tabs track by $index">
+					<a event-nav-hyperlink href="" ng-click="data($index)">
+						<div class="event-nav-xs" ng-class="{'event-nav-selected':(i === $index)}">
+							{{x.name}}
+						</div>
+					</a>
 				</div>
 			</div>
 
@@ -63,8 +68,8 @@
 					<div class="row">
 						<br><br><br><br><br>
 						<div class="row" id="event-nav-box" ng-repeat="x in tabs track by $index">
-							<a href="#">
-								<div class="col-sm-12 col-md-12 col-lg-12 nav {{$index}}" id="event-nav" ng-click="data($index)">
+							<a event-nav-hyperlink href="" ng-click="data($index)">
+								<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(i === $index)}" ng-click="data($index)">
 									<span id="event-nav-span">{{x.name}}</span>
 								</div>
 							</a>

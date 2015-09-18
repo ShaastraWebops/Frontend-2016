@@ -1,7 +1,7 @@
-.c {
+/*.c {
 	background-color: transparent;
 }
-
+*/
 .evhead {
 	font-variant: small-caps;
 	font-family: arial;
@@ -18,7 +18,11 @@
 	height: 350px;
 }
 
-.bt {
+a[event-nav-hyperlink] {
+	text-decoration: none;
+}
+
+/*.bt {
 	position: absolute;
 	z-index: 5;
 	right: 210px;
@@ -27,15 +31,10 @@
 	color: white;
 	border-radius: 5px;
 }
-
+*/
 .cont {
 	font-size: 20px;
 	font-family: arial;
-}
-
-.im {
-	height: 100px;
-	width: 150px;
 }
 
 /*#event-nav-box {
@@ -63,7 +62,11 @@
 	border-radius: 5px 0 0 5px;
 }
 
-#event-nav {
+.event-nav-xs:hover {
+	color: black;
+}
+
+.event-nav {
 	display: table-cell;
 	vertical-align: middle;
 	font-variant: small-caps;
@@ -81,14 +84,22 @@
 	/*padding-right: 30px;*/
 }
 
-#c {
+.event-nav:hover {
+	color: black;
+}
+
+.event-nav-selected {
+	color: black;
+}
+
+/*#c {
 	position: absolute;
 	top: 30px;
 	right: 0px;
 	opacity: 0;
 }
-
-.nav1 {
+*/
+/*.nav1 {
 	font-variant: small-caps;
 	z-index: 5;
 	background-color: blue;
@@ -102,27 +113,28 @@
 	border-top-left-radius: 5px;
 	padding-right: 30px;
 }
-
-.user {
+*/
+/*.user {
 	z-index: 1;
 	position: relative;
 	font-size: 15px;
 }
-
-.n {
+*/
+/*.n {
 	position: absolute;
 	right: 170px;
 	width: -500px;
 }
-
-#left {
+*/
+/*#left {
 	position: absolute;
 	top: 15px;
 	right: -35px;
 }
-
-.event-menubar {
+*/
+/*.event-menubar {
 	z-index: 1;
 	position: relative;
 	font-size: 20px;
 }
+*/
