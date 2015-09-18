@@ -33,7 +33,7 @@ angular.module('shaastra2016App')
             //$('.menu').show(0);
             $('.c').addClass("block");
             $('.mn-social').removeClass("out");
-            $('.o').animate({left:"+=141px"},0);
+            $('.o').animate({left:"+=145px"},0);
             $('#backdrop').css("display", "block");
           });
                                }

@@ -27,7 +27,7 @@ body {
   height:1px;
   max-width:1137.2px;
   margin-left:9.5%;
-  z-index: 9900;
+  z-index: 199;
   position: absolute;
   border:2px solid transparent
 }
@@ -96,7 +96,7 @@ article {
   z-index: 0;
   display: inline-block;
   float: left;
-  width: 9.4%;
+  width: 9.5%;
   border-top:2px solid black;
 }
 
