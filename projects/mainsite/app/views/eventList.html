@@ -1,56 +1,32 @@
-<!-- <!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <title>ng-scrollable</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../min/ng-scrollable.min.css" rel="stylesheet">
-        <link href=""
-        <link href='http://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
-         <link rel="stylesheet" type="text/css" href="styles.css">
-           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-        <script src="../src/ng-scrollable.js"></script>
-        <script src="demo.js"></script>
-    
-    </head> -->
-<!--     <body  > -->
-
-<div  ng-controller="eventListCtrl as eventslist">
-       <div id="heading"><b>Events</div>
-       <br>
-       <div  class="event-list-top-nav">
-       <div class="wrap1">
-           
-        <div class="wrapperz" ng-repeat="detail in eventslist.details" >
- <div class="slider">
-				</div>
-            <img  ng-src="{{detail.imgUrl}}"/>
-           
-		  <p class="event-name">{{detail.name}}
-            </p></div>
-         
-
-    
-        </div></div>
-       <article> 
-                        <div ng-scrollable="{scrollX:'top',scrollY:'none'}" class="scrollarea"  spy-x="posX" spy-y="posY">
-           <div class="wrap">
-           
+<div ng-controller="eventListCtrl as eventslist">
+  <div id="heading"><b>Events</div>
+  <br>
+  <div  class="event-list-top-nav">
+    <div class="wrap1">
+      <div class="wrapperz" ng-repeat="detail in eventslist.details">
+        <div class="slider"></div>
+        <img  ng-src="{{detail.imgUrl}}"/>
+		    <p class="event-name">{{detail.name}}</p>
+      </div>
+    </div>
+  </div>
+       
+  <article> 
+    <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
+      <div class="wrap">
         <div class="wrapperz" ng-repeat="detail in eventslist.details">
-            <img ng-src="{{detail.imgUrl}}"/>
-            <span class="two-dots">
-					<div></div>
-					<div></div></span>
-					<p class="event-name">{{detail.name}}</p> 
-            </div>
-         
-
-    
-                      </div></div>
-                        <span id="left-arrow"  class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
-                        <span  id="right-arrow" class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
-                      
-  </article>      </div>
-      
-        
-<!--     </body>
-</html> -->
+          <img ng-src="{{detail.imgUrl}}"/>
+          <span class="two-dots">
+				    <div></div>
+			      <div></div>
+          </span>
+					
+          <p class="event-name">{{detail.name}}</p> 
+        </div>
+      </div>
+    </div>
+                        
+    <span id="left-arrow"  class="glyphicon glyphicon-chevron-left" ng-click="moveX(-500);"></span>
+    <span  id="right-arrow" class="glyphicon glyphicon-chevron-right" ng-click="moveX(500)"></span>
+  </article>      
+</div>

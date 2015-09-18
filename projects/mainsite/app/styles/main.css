@@ -75,7 +75,7 @@ li{
     transition:all 0.15s ease;
 }
 #menuscroll{
-  background-color: #0066ff;
+  background-color: #0066ff !important;
 }
 .mnopen{
   max-width:100%;

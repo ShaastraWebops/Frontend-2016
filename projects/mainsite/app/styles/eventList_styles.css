@@ -240,9 +240,18 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
 		margin-top: 90%;
 	}
 
-#left-arrow{
-float:left ;margin-top:-18.5%;margin-left:0.5%;color:white;
+#left-arrow {
+    float:left;
+    margin-top:-18.5%;
+    margin-left:0.5%;
+    color:white;
+    z-index: 100;
 }
-#right-arrow{
-float:right; margin-top:-18.5%;margin-right:0.5%;color:white;}
+#right-arrow {
+    float:right; 
+    margin-top:-18.5%;
+    margin-right:0.5%;
+    color:white;
+    z-index: 100;
+}
 
