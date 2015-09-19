@@ -269,6 +269,21 @@ table
   to {opacity: 0.4;}
 }
 
+@-moz-keyframes events_hover {
+  from {opacity:1;}
+  to {opacity: 0.4;}
+}
+
+@-ms-keyframes events_hover {
+  from {opacity:1;}
+  to {opacity: 0.4;}
+}
+
+@-o-keyframes events_hover {
+  from {opacity:1;}
+  to {opacity: 0.4;}
+}
+
 /* Standard syntax */
 @keyframes events_hover {
   from {filter: alpha(opacity=100); /* For IE8 and earlier */}
@@ -278,6 +293,12 @@ table
 {
 	-webkit-animation-name: events_hover; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+	-moz-animation-name: events_hover; /* Chrome, Safari, Opera */
+  -moz-animation-duration: 4s; /* Chrome, Safari, Opera */
+	-ms-animation-name: events_hover; /* Chrome, Safari, Opera */
+  -ms-animation-duration: 4s; /* Chrome, Safari, Opera */
+	-o-animation-name: events_hover; /* Chrome, Safari, Opera */
+  -o-animation-duration: 4s; /* Chrome, Safari, Opera */
   animation-name: events_hover;
   animation-duration: 4s;
 }
