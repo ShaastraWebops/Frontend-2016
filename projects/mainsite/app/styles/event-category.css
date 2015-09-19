@@ -8,7 +8,7 @@
 }
 
 .page-eventCategory {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .category {
@@ -41,14 +41,14 @@
 
 #event-category-name {
   height: 70px;
-  width: 101%;
+  width: 100%;
   background-color: #000;
   color: #fff;
   text-align: center;
   line-height: 70px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 1.4em;
+  font-size: 2em;
   font-family: Verdana, Geneva, sans-serif;
   font-variant: small-caps;	
 }
@@ -74,12 +74,12 @@
   padding-left: 15px;
 }
 
-.fix {
+/*.fix {
   position: fixed;
   top: 0;
   z-index: 1;
 }
-
+*/
 .events {
   margin-top: 45px;
   margin-bottom: 45px;
@@ -148,6 +148,7 @@
   -moz-transform-style:preserve-3d;
   -o-transform-style:preserve-3d;
   backface-visibility: hidden;
+  margin: 1%;
 }
 
 .card-front {

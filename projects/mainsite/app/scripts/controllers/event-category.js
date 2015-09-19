@@ -3,8 +3,6 @@ angular.module('shaastra2016App')
 	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window) {
 		$rootScope.pageClass = "page-eventCategory";
 
-		console.log($location);
-
 		$scope.boolFixDiv = false;
 	
 		$scope.eventsJSON = {

@@ -11,12 +11,18 @@
 		  	<div id="scroll-down">
 			  	<a ng-click="scrollDown('event-category-name')"><span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span></a>
 		  	</div><!-- TODO check the class min in css and fix the div at the top-->
+<!-- 
 		  	<div id="event-category-name" ng-class="{fix: boolFixDiv}">
 					<span id="event-category-name" ng-bind="eventsJSON.eventCategoryName"></span>
 	   	  </div>
+ -->
+		  	<div id="event-category-name">
+					<span ng-bind="eventsJSON.eventCategoryName"></span>
+	   	  </div>
+
 		  	<div class="container-fluid events">
-					<div class="row no-gutter" ng-repeat="row in val">
-		  	 		<div class="col-md-4 col-xs-6 col-lg-4 col-sm-6 event-card-container" ng-repeat="event in row">
+					<div class="row no-gutter" ng-repeat="row in val track by $index">
+		  	 		<div class="col-md-4 col-xs-6 col-lg-4 col-sm-6 event-card-container" ng-repeat="event in row track by $index">
 							<div class="card">
 			  	  		<div class="card-front">
 				    			<div class="event-details"> 
