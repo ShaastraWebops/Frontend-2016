@@ -16,3 +16,14 @@
 	font-size: 1.5em;
 	margin-top: 5%;
 }
+.fonts{
+	font-size:1.5em;
+}
+#scroll {
+background:#A3CBE0;
+border:2px solid #000;
+border-radius: 2%;
+overflow:auto;
+white-space:nowrap;
+box-shadow:0 0 5px #000;
+}

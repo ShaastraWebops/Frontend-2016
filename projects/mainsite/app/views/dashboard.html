@@ -1,22 +1,24 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
 	<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1">
 		<div class="form-group ">
-  	<label for="sel1"><div class="panel-heading" id="hding">Register Events</div></label>
-  	<select class="form-control selectEvent" id="sel1">
-	    <option>Manual Robotics</option>
-	    <option>dghbhdb</option>
-	    <option>dhgvudb</option>
-	    <option>uhgdgjgn</option>
+  	<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
+  	<select class="form-control selectEvent"  ng-model="selection" id="sel1">
+	    <option ng-repeat="registered in events.eventsList" ng-click="eventDetails">{{registered.eventName}}</option>
  		 </select>
 	</div>
+
+	
 </div>
-	<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1">
+<!-- ////////////////////////////////////////////////// 
+
+<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2"><!--  ng-switch on="selection" --> 
+	 <div ng-switch-when="">
 	  <div class="form-group">
     	<label id="teamName" for="TeamRegister">Team name</label>
     	<input type="text" class="form-control"  placeholder="Team Name">
   	</div>
 		<!-- <span id="teamName">Team name:</span>
-		<input type="text" class="form-control" placeholder="Team name"> -->
+		<input type="text" class="form-control" placeholder="Team name">-->
 		<div class="form-group">
     		<label>Team memeber1:</label>
     		<input type="text" class="form-control" placeholder="ShaastraId">
@@ -31,7 +33,45 @@
   		</div>
 		</div>
 	</div>
-<div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="recommend">
-<div class="panel-heading"><b>Recommended Events</b></div>
+	<!-- <div ng-switch-when="selection">
+		Team Members:
+		<ul ng-repeat="event in events.eventsList|filter:selection">
+				<li>{{event.name}}</li>
+		</ul>
+	</div>
+	<div ng-switch-default="selection">
+		Team Members:kjnjkn
+		<ul ng-repeat="">
+				<li>{{eventsList.name|filter:selection.name}}</li>bjbjh
+		</ul>
+	</div>
+</div> -->
+	<!-- ///////////////////////////////////////////////////////////// -->
+	
+<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1" id="recommend">
+	<div class="panel-heading"><b>Recommended Events</b></div>
+</div>
+	<div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="scroll">
+   <!-- <div ng-repeat="eve in eventsJSON.events">
+   	<img class="img-responsive" ng-src="{{eve.imgURL}}"/>
+	</div> -->
+	<!-- <div ng-repeat="event in eventsJSON.events">
+	<div class="event-details" ng-style="{'background-image': 'url({{event.imageURL}})','background-color': '#5E610B'}">
+	</div> -->
+	<img src="images/aerofest.png" style="height:100%;width:20%" >
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	<img src="images/aerofest.png" style="height:100%;width:20%">
+	
+	
 </div>
 </div>

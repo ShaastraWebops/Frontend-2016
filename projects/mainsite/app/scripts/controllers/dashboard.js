@@ -2,9 +2,9 @@ var app = angular.module('shaastra2016App');
 app.controller('dashboardCtrl',function($scope)
 {
 ($scope).events={
-events_list:[
+eventsList:[
 {
-	eventName:"manualrobotics",
+	eventName:"Manual Robotics",
 	teamname:"superbot",
 	teammembers:[
 {
@@ -12,12 +12,17 @@ events_list:[
 	teammember2:"djgbjsd"
 }]},
 {
-	eventName:"autonomousrobotics",
+	eventName:"Autonomous Robotics",
 	teamname:"super1bot",
 	teammembers:[
 {
 		teammember1:"gfsbjbv",
 		teammember2:"djgbjsd"
 }]},
-]}
+]};
+$scope.eventDetails=function(){
+$("p").replaceWith("<b>changed</b>");
+console.log("hi");
+};
+
 });
