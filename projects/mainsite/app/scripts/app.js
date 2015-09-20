@@ -57,6 +57,11 @@ angular
         controller: 'contactUsCtrl',
         controllerAs: 'contactUs'
       })
+      .when('/dashboard', {
+        templateUrl: 'views/dashboard.html',
+        controller: 'dashboardCtrl',
+        controllerAs: 'dashboard'
+      })
       .otherwise({
         redirectTo: '/'
       });
