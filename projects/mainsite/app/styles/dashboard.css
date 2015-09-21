@@ -14,7 +14,8 @@
 #recommend
 {
 	font-size: 1.5em;
-	margin-top: 50%;
+	margin-top: 15%;
+	display: table-row;
 }
 .fonts{
 	font-size:1.5em;
