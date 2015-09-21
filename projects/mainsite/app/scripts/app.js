@@ -18,7 +18,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngScrollable',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'md.chips.select',
   ])
   .config(function ($routeProvider) {
     $routeProvider

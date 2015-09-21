@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/ng-scrollable/min/ng-scrollable.min.css" />
+    <link rel="stylesheet" href="bower_components/md-chips-select/md-chips-select.css" />
+    
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -134,7 +136,7 @@
     </ul>
   </div>
   
-  <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
+  <div id="main-container" style="position:absolute; width:100%; height:100%;overflow:scroll"> 
     <div ng-view=""></div>
   </div>
   <div id="backdrop"></div>
@@ -174,6 +176,13 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/ng-scrollable/min/ng-scrollable.min.js"></script>
+    <script src="/bower_components/md-chips-select/md-chips-select.js"></script>
+
+
+    <!--Google Maps api required for contact us page-->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- -->
+    
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -189,6 +198,7 @@
         <script src="scripts/controllers/event-list.js"></script>
         <script src="scripts/controllers/event-category.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
