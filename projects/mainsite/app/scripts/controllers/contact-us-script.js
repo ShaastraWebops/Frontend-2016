@@ -1,6 +1,10 @@
 var app = angular.module('shaastra2016App');
 app.controller('contactUsCtrl', ['$scope', '$modal',
 	function($scope, $modal){
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow-y': 'scroll'});
+
 		$scope.departmentsJSON = {
 			departments:[
 				{id: 0,
