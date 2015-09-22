@@ -1,6 +1,6 @@
 'use-strict';
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', function ($scope, $timeout, $rootScope) {
+	.controller('eventListCtrl', function ($scope, $timeout, Auth) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});

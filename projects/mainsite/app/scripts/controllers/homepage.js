@@ -1,6 +1,6 @@
 'use-strict';
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", ["$scope", "$location", "$rootScope", function ($scope, $rootScope, $location) {
+  .controller("HomeCtrl", function ($scope, Auth, $location, $http) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
@@ -209,7 +209,7 @@ $(".shaastrabox").click(function(){
               });
         });
   });
-}]);
+});
  
 
 
