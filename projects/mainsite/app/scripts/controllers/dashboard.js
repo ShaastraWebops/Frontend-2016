@@ -1,3 +1,4 @@
+
 var app = angular.module('shaastra2016App');
 app.controller('dashboardCtrl',function($scope)
 { $scope.i = 0;

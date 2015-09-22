@@ -1,22 +1,20 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
-	<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1">
+	<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1" class="list">
 		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
 		<!-- <div class="form-group ">
   	<md-chips-select ng-model="myItems" select-items="events.eventsList" main-title="eventName"></md-chips-select>
     </div> -->
     <div  class="panel-heading" ng-repeat="event in events.eventsList track by $index">
-    		<div><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)}">{{event.eventName}}</div></a></div>
+    		<div><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.eventName}}</div></a></div>
     </div>
 	</div>
   
-	
-
 <!-- ////////////////////////////////////////////////// -->
 
-<div class="col-md-5 col-sm-4 col-md-offset-2 col-sm-offset-2" id="place">
+<div class="col-md-5 col-sm-4 col-md-offset-2 col-sm-offset-2" id="teamDetails">
 			<div class="panel panel-default fonts" style="">
 					<span style="margin-left:3%">{{events.eventsList[i].teamname}}</span></div>
-				<div class="panel-body">
+				<div class="panel-body fontNormal">
 					Event : {{events.eventsList[i].eventName}}
 					<div>
 					Team  : <ul style="margin-left:14%"><li ng-repeat="teammate in events.eventsList[i].teammembers">{{teammate}}</li></ul>
@@ -25,9 +23,11 @@
 				<button id="contact-submit-btn" class="btn btn-primary">Add Member</button>
 		</div>
 	<!-- ///////////////////////////////////////////////////////////// -->
-        <!-- <div  class="col-md-8 col-sm-10" 	id="scroll" style="display: table-row;width:100%">
-        		<div ng-repeat="detail in lists" style="float:right;display: table-cell;height:30%;width:40%">
-        			<img  ng-src="{{lists[0].imgUrl}}"style="height:20%;width:10%"}}	/>
-        		</div>
-        </div> -->
+        <div  class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="place" >
+        		<div id="scroll">
+<ul>
+<li ng-repeat="list in lists"><a href=""><img ng-src="{{list.imgUrl}}" style="height:100px;width:170px" alt=""><span>{{list.name}}</span></a></li>
+</ul>
+</div>
+        </div>
       </div>
