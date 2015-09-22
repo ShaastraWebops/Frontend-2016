@@ -27,10 +27,10 @@ eventsList:[
 	eventName:"eventName",
 	teamname:"teamname",
 	teammembers:[
-	'teammember1',
-	'teammember1',
-	'teammember1',
-	'teammember1',
+	'teamvmember1',
+	'teammdember1',
+	'tedammember1',
+	'teammembeer1',
 	
 ]},
 ]};

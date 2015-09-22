@@ -1,6 +1,9 @@
+'use-strict';
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", ["$scope", "$location", "$rootScope", function ($scope, $rootScope, $location) {
-    $rootScope.pageClass = "page-homepage";
+  .controller("HomeCtrl", function ($scope, Auth, $location, $http) {
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow': 'hidden'});
 
     $scope.name = "events";
 
@@ -206,7 +209,7 @@ $(".shaastrabox").click(function(){
               });
         });
   });
-}]);
+});
  
 
 

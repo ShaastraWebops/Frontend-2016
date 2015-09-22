@@ -1,8 +1,9 @@
 'use-strict';
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', function ($scope, $timeout, $rootScope) {
+	.controller('eventListCtrl', function ($scope, $timeout, Auth) {
 
-		$rootScope.pageClass = "page-eventList"
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow': 'hidden'});
 
 		this.details = lists;
 		$scope.posX = 0;

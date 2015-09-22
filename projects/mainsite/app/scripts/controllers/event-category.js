@@ -1,7 +1,9 @@
 'use-strict';
 angular.module('shaastra2016App')
-	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window) {
-		$rootScope.pageClass = "page-eventCategory";
+	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window, Auth) {
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow-y': 'scroll'});
 
 		$scope.boolFixDiv = false;
 	
