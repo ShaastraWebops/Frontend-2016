@@ -34,6 +34,15 @@ eventsList:[
 	
 ]},
 ]};
+$scope.unregister=function(idx)
+{
+	console.log("hello");
+	var evnt=$scope.events.eventsList[idx];
+	if(idx!=-1)
+	{
+		$scope.events.eventsList.splice(idx,1);
+	}
+};
 $scope.lists=[{
 	    name: "AeroFest",
 	    imgUrl: "images/aerofest.png",
