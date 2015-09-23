@@ -1,5 +1,6 @@
-var app = angular.module('shaastra2016App');
-app.controller('contactUsCtrl', ['$scope', '$modal',
+'use-strict';
+angular.module('shaastra2016App')
+.controller('contactUsCtrl', ['$scope', '$modal',
 	function($scope, $modal){
 
     var html = angular.element(document.getElementById('body'));
@@ -186,7 +187,9 @@ app.controller('contactUsCtrl', ['$scope', '$modal',
       	});
 	}
 	}]);
-app.controller("ModalInstanceCtrl", function($scope, $modalInstance, department){
+
+angular.module('shaastra2016App')
+.controller("ModalInstanceCtrl", function($scope, $modalInstance, department){
 	$scope.department = department;
 	$scope.close = function(){
 		$modalInstance.dismiss('cancel');

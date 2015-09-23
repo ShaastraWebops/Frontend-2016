@@ -121,7 +121,8 @@ angular.module('shaastra2016App')
 
 	});
 
-	app.directive("scroll", function($window) {
+angular.module('shaastra2016App')
+.directive("scroll", function($window) {
 		return function(scope, element, attrs) {
 			angular.element($window).bind("scroll", function() {
 					var ele = document.querySelector(".events");

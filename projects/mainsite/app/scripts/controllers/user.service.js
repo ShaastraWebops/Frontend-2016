@@ -2,7 +2,7 @@
 
 angular.module('shaastra2016App')
   .factory('User', function ($resource) {
-    return $resource('http://0.0.0.0:8001/api/website-users/:id/:controller', {
+    return $resource('http://0.0.0.0:8001/api/websiteUsers/:id/:controller', {
       id: '@_id'
     },
     {

@@ -1,4 +1,4 @@
-angular.module('shaastra2016App');
+angular.module('shaastra2016App')
 	.controller('dashboardCtrl', function ($scope, Auth) { 
 		$scope.i = 0;
 		$scope.data = function(ch) {

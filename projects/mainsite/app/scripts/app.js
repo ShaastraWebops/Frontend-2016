@@ -30,7 +30,7 @@ angular
       })
       .when('/register', {
         templateUrl: 'views/Register.html',
-        controller: 'loginCtrl',
+        controller: 'registerCtrl',
         controllerAs: 'register'
       })      
       .when('/event-list', {

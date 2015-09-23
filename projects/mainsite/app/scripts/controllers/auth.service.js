@@ -25,11 +25,15 @@ angular.module('shaastra2016App')
           password: user.password
         }).
         success(function(data) {
+          console.log(data);
           $cookieStore.put('token', data.token);
+          console.log($cookieStore);
           currentUser = User.get(function() {
+            console.log(data);
             deferred.resolve(data);
             return cb();
           });
+          console.log(currentUser);
         }).
         error(function(err) {
           this.logout();
