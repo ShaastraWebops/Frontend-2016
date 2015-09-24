@@ -144,23 +144,24 @@
   right: 22%;
 }
 .mid-2 {
-  right: 13%;
+  right: 10%;
 }
 .top-1, .botm-1 {
   left: 22%;
 }
 .mid-1 {
-  left: 13%;
+  left: 10%;
 }
 
 .path1, .path2 {
-		stroke: #fff;
-		stroke-width: 6;
-		fill: none;
-		stroke-dasharray: 40;
-		stroke-dashoffset: 40;
-		transition: stroke-dashoffset 0.3s ease;
-	}
+	stroke: #fff;
+	stroke-width: 6;
+	fill: none;
+	stroke-dasharray: 40;
+	stroke-dashoffset: 40;
+	transition: stroke-dashoffset 0.3s ease;
+}
+
 .elemboxleft:hover .path1 {
 	stroke-dashoffset: 0;
 }
@@ -208,21 +209,23 @@
 	height: 100%;
 	z-index: 100;
 }
+
 .dice {
-position: absolute;
-left: 28%;
-top: 15%;
-width: 43%;
-height: 48%;
-z-index: 900;
+	position: absolute;
+	left: 24%;
+	top: 15%;
+	width: 50%;
+	height: 50%;
+	z-index: 200;
 } 
+
 .shaastra-blue {
-color: #00445e;
+	color: #00445e;
 }
 .text1 {
 	position: absolute;
 	top: -12vh;
-	left: 33%;
+	left: 31%;
 	font-size: 2.6vh;
 }
 .text2 {
@@ -234,8 +237,8 @@ color: #00445e;
 	font-size: 4vh;
 	font-weight: bold;
 	position: absolute;
-	left: 23%;
-	top: 64.5%;
+	left: 13%;
+	top: 65%;
 	z-index: 9999;
 }
 .number {
@@ -256,14 +259,14 @@ color: #00445e;
 	margin: auto;
 	position: absolute;
 	top: 80%; 
-	left: 18%;
+	left: 19%;
 }
 .text3 {
 	position: absolute;
 	font-family: 'CGF Locust Resistance';
 	letter-spacing: 0.17vh;
 	top: 40%;
-	left: 23.5%;
+	left: 25%;
 	font-size: 1.5vh;
 }
 #righthand {
@@ -283,9 +286,65 @@ color: #00445e;
 	z-index: 10;
 }
 
+@media all and (max-width:1200px){
+  .shaastrabox {
+    width: 60vh;
+    margin-left: -30vh;
+  }
+  .text1 {
+  	left: 30%;
+  }
+  .number {
+    top: 26%;
+    left: 40%;
+  }
+  .dice {
+    height: 40%;
+  }
+  .text2 {
+    top: 55%;
+    left: 11%;
+  }
+  .underline {
+		text-decoration: none;
+		background-color: #00445e;
+		height: 0.4vh;
+		width: 40vh;
+		margin: auto;
+		position: absolute;
+		top: 70%; 
+		left: 17%;
+  }
+  .text3 {
+    top: 30%;
+  }
+}
+   
 @media all and (max-width: 991px) {
-	.text3, #righthand, #lefthand, .invisiblebox2, .invisiblebox1, .underline{
+	#righthand, #lefthand, .invisiblebox2, .invisiblebox1 {
 	    display: none;
+	}
+
+	.top-1, .top-2 {
+	  top: 6%;
+	}
+	.mid-1, .mid-2 {
+	  top: 38%;
+	} 
+	.botm-1,.botm-2 {
+	  top: 68%;
+	}
+	.top-2, .botm-2 {
+	  right: 20%;
+	}
+	.mid-2 {
+	  right: 2%;
+	}
+	.top-1, .botm-1 {
+	  left: 20%;
+	}
+	.mid-1 {
+	  left: 2%;
 	}
 
 	.home {
@@ -293,13 +352,14 @@ color: #00445e;
 	}
 
 	.shaastrabox {
-		width: 35vh;
+		width: 56vh;
 		height: 28vh;
-		margin-left: -17.5vh; 
+		margin-left: -28vh; 
+		top: 35%;
 	}
 	.text2 {
-		left:0;
-		top:60%;
+		left: 8%;
+		top: 60%;
 	}
 	.number {
 		top:30%;
@@ -312,8 +372,23 @@ color: #00445e;
 		left: 20%;
 	}
 	.text1 {
-		left: 20%;
+		left: 30%;
 	}
+  .underline {
+		text-decoration: none;
+		background-color: #00445e;
+		height: 0.4vh;
+		width: 40vh;
+		margin: auto;
+		position: absolute;
+		top: 77%; 
+		left: 14%;
+  }
+  .text3 {
+    top: 28%;
+    left: 21%;
+  }
+
 	.elemboxright, .elemboxleft {
 		width: 31.5vh;
 	}               
@@ -323,6 +398,28 @@ color: #00445e;
 @media all and (max-width: 767px) {
 	.home {
 		overflow: auto;
+	}
+
+	.top-1, .top-2 {
+	  top: 6%;
+	}
+	.mid-1, .mid-2 {
+	  top: 38%;
+	} 
+	.botm-1,.botm-2 {
+	  top: 68%;
+	}
+	.top-2, .botm-2 {
+	  right: 22%;
+	}
+	.mid-2 {
+	  right: 10%;
+	}
+	.top-1, .botm-1 {
+	  left: 22%;
+	}
+	.mid-1 {
+	  left: 10%;
 	}
 
 	#righthand, #lefthand, .invisiblebox2, .invisiblebox1, .robo {
@@ -362,27 +459,6 @@ color: #00445e;
 	}
 }
 
-@media all and (max-width:1200px){
-  .shaastrabox {
-    width: 50vh;
-    margin-left: -25vh;
-  }
-  .number {
-    top: 26%;
-    left: 40%;
-  }
-  .dice {
-    height: 40%;
-  }
-  .text2{
-    top:55%;
-    left: 20%;
-  }
-  .underline{
-    display: none;
-  }
-}
-   
 
 
    
