@@ -68,6 +68,10 @@ app.get('/research', function (req, res) {
 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-events-research.html'));
 });
 
+app.get('/coding', function (req, res) {
+	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-events-coding.html'));
+});
+
 // app.get('/*', function (req, res) {
 // 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-404.html'));
 // });
