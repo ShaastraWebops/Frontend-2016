@@ -8,11 +8,12 @@
   opacity: 1;
   background-color: #f0f0f0;
   background-color: rgba(0, 0, 0, 0);
-  height: 1px;
-  max-width: 1138px;
-  margin-left: 9.5%;
+  height: 3%;
+  max-width: 95%;
+  margin-bottom: 10%;
+  margin-left: 0;
+  margin-left: 8%;
   z-index: 199;
-  position: absolute;
   border:2px solid transparent
 }
 
@@ -21,7 +22,7 @@
 }
 
 .scrollable .scrollable-slider {
-  max-width: 27px; 
+  max-width: 2%; 
   background: rgba(32, 32, 32, 1);
   background: linear-gradient(to right, rgba(32,32,32,1), rgba(32,32,32,1));
 }
@@ -30,7 +31,7 @@
   opacity: 1;
 }
 .scrollable .scrollable-bar-x .scrollable-slider {
-  height: 8px;
+  height: 1vh;
   margin-left: 4%;
 }
 
@@ -45,15 +46,16 @@ article {
 }
 
 .scrollarea { 
+  
   margin-left: -2%;
-  width: 110%; 
+  width: 100%; 
   height: 93%;
 }
 
 .event-list-top-nav {
- 	width: 100%;
- 	height: 10%;
- 	margin-left: 7%;
+ 	width: 110%;
+ 	height: 11%;
+ 	margin-left: 2.5%;
  	font-size: 0;
 } 
     
@@ -207,14 +209,14 @@ article {
 }
 
 article .glyphicon {
-  display: inline-block;
+ display: inline-block;
   text-align: center;
-  width:6%;
-  line-height: 70px;
+  line-height:280%;
+  top:50%;
   background-color: rgba(119,158,203,0.9);
-  font-size: 30px;
+  font-size: 100%;
   position: relative;
-  z-index: 0;
+  z-index: 200;
 }
 
 article .glyphicon:hover {background-color:rgba(255,105,97,1); 
@@ -244,7 +246,7 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
 }
 
 #left-arrow {
-  float:left;
+  
   margin-top:-18.5%;
   margin-left:0.5%;
   color:white;
@@ -252,7 +254,8 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
 }
 
 #right-arrow {
-  float:right; 
+  
+  left: 90%;
   margin-top:-18.5%;
   margin-right:0.5%;
   color:white;
