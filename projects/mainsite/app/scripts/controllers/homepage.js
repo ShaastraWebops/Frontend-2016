@@ -73,19 +73,20 @@ angular.module('shaastra2016App')
     //   $scope.name = "pre-shaastra";
     // });
     
-    $scope.mouseDown=$("#main-container").mousedown(function(e){
+    $scope.mouseDown=$("#main-container").mousedown(function (e) {
       if(e.clientX<=$('.invisiblebox2').offset().left)
-        $("#righthand").attr("src","images/handr1.png");
+        $("#righthand").attr("src", "images/handr1.png");
       else 
-        $("#lefthand").attr("src","images/handl1.png");
+        $("#lefthand").attr("src", "images/handl1.png");
     });
     
-    $scope.mouseUp=$("#main-container").mouseup(function(e){
-      if(e.clientX<=$('.invisiblebox2').offset().left)
+    $scope.mouseUp=$("#main-container").mouseup(function (e) {
+      if(e.clientX<=$('.invisiblebox1').offset().left)
         $("#righthand").attr("src","images/handr.png");
       else 
         $("#lefthand").attr("src","images/handl.png");
     });
+
     /*$scope.mouseDownR=$(".elemboxright").mousedown(function(){
     ("#lefthand").attr("src","images/handl1.png")
      });
@@ -96,7 +97,7 @@ angular.module('shaastra2016App')
     ("#lefthand").attr("src","images/handl.png")
      });*/
 
-    $(".elemboxleft").click(function() {
+    $(".elemboxleft").click(function () {
       var elem = $(this);
       elem.css({
         top: $(".container").height() / 2 - elem.width() / 4 ,
@@ -106,44 +107,46 @@ angular.module('shaastra2016App')
       $("#righthand").animate({
         top: $(".container").height() / 2 ,
         left: $(".container").width() / 2 - elem.width() / 2
-      }, function(){
-            $("#righthand").animate({
-              top: "-=" + elem.height()/2,
-              left: "-=" + elem.width()/2
-            });
-            $("#lefthand").animate({
-              top: $(".container").height()/2 + elem.height() / 2,
-              left: $(".container").width()/2 + elem.width() / 2
-            }, function(){
-                elem.css ({
-                  "width" : "100%",
-                  "height" : "100%",
-                  "top": "0",
-                  "left" : "0",
-                  "line-height": elem.height()/12,
-                  "font-size" : "8vh"});
-                  $("#righthand").animate({
-                    top: 0,
-                    left: -157
-                   }, function(){
-                      $('#righthand').css({
-                        "position" : "static"
-                      });
-                   });
-                  $("#lefthand").animate({
-                    top: $(".container").height(),
-                    left: $(".container").width()
-                  }, function(){
+      }, function () {
+          $("#righthand").animate({
+            top: "-=" + elem.height()/2,
+            left: "-=" + elem.width()/2
+          });
+          $("#lefthand").animate({
+            top: $(".container").height()/2 + elem.height() / 2,
+            left: $(".container").width()/2 + elem.width() / 2
+          }, function () {
+              elem.css ({
+                "width" : "100%",
+                "height" : "100%",
+                "top": "0",
+                "left" : "0",
+                "line-height": elem.height()/12,
+                "font-size" : "8vh"
+              });
+              $("#righthand").animate({
+                top: 0,
+                left: -157
+              }, function () {
+                  $('#righthand').css({
+                    "position" : "static"
+                  });
+                });
+                $("#lefthand").animate({
+                  top: $(".container").height(),
+                  left: $(".container").width()
+                }, function () {
                     $('#lefthand').css({
-                        "position" : "static"
-                      });
+                      "position" : "static"
+                    });
                     $(location).attr('href','https://www.google.co.in/');
                     console.log($scope.name);
                   });
             });
-      });
+        });
     });
-$(".elemboxright").click(function(){
+
+    $(".elemboxright").click(function () {
       var elem = $(this);
       elem.css({
         top: $(".container").height() / 2 - elem.width() / 4 ,
@@ -153,45 +156,46 @@ $(".elemboxright").click(function(){
       $("#lefthand").animate({
         top: $(".container").height() / 2 ,
         left: $(".container").width() / 2 - elem.width() / 2
-      }, function(){
-            $("#righthand").animate({
-              top: $(".container").height() / 2 - elem.height() / 2,
-              left: $(".container").width() / 2 - elem.width()
-            });
-            $("#lefthand").animate({
-              top: $(".container").height()/2 + elem.height() / 2,
-              left: $(".container").width() / 2 + elem.width() / 2
-            }, function(){
-                  elem.css ({
-                  "width" : "100%",
-                  "height" : "100%",
-                  "top": "0",
-                  "right" : "0",
-                  "line-height": elem.height()/12,
-                  "font-size" : "8vh"});
-                  $("#righthand").animate({
-                    top: 0,
-                    left: -157
-                   }, function(){
-                      $('#righthand').css({
-                        "position" : "static"
-                      });
-                   });
-                  $("#lefthand").animate({
-                    top: $(".container").height(),
-                    left: $(".container").width()
-                  }, function(){
-                      $('#lefthand').css({
-                        "position" : "static"
-                      });
-                      $(location).attr('href','https://www.google.com/');
-                      console.log($scope.name);
+      }, function () {
+          $("#righthand").animate({
+            top: $(".container").height() / 2 - elem.height() / 2,
+            left: $(".container").width() / 2 - elem.width()
+          });
+          $("#lefthand").animate({
+            top: $(".container").height()/2 + elem.height() / 2,
+            left: $(".container").width() / 2 + elem.width() / 2
+          }, function () {
+              elem.css ({
+                "width" : "100%",
+                "height" : "100%",
+                "top": "0",
+                "right" : "0",
+                "line-height": elem.height()/12,
+                "font-size" : "8vh"
+              });
+              $("#righthand").animate({
+                top: 0,
+                left: -157
+               }, function () {
+                  $('#righthand').css({
+                    "position" : "static"
                   });
+                });
+                $("#lefthand").animate({
+                  top: $(".container").height(),
+                  left: $(".container").width()
+                }, function () {
+                    $('#lefthand').css({
+                      "position" : "static"
+                    });
+                    $(location).attr('href','https://www.google.com/');
+                    console.log($scope.name);
+                });
             });
-      });
+        });
     });
 
-$(".shaastrabox").click(function(){
+    $(".shaastrabox").click(function () {
       var elem = $(this);
         $("#righthand").animate({
           top: $(".container").height() / 2 - elem.height() / 2,
@@ -200,114 +204,112 @@ $(".shaastrabox").click(function(){
         $("#lefthand").animate({
           top: $(".container").height()/2 + elem.height() / 2,
           left: $(".container").width() / 2 + elem.width() / 2
-        }, function(){
-              elem.css ({
-          "width" : "100%",
-          "height" : "100%",
-          "top": "0",
-          "left" : "0",
-          "margin-left": "0"});
-              $(".text1").css({
-                "top" : "-5vh",
-                "left" : "51%",
-                "transform" : "translate(-50%)",
-                "font-size" : "4vh" 
+        }, function () {
+            elem.css ({
+              "width" : "100%",
+              "height" : "100%",
+              "top": "0",
+              "left" : "0",
+              "margin-left": "0"
+            });
+            $(".text1").css({
+              "top" : "-5vh",
+              "left" : "51%",
+              "transform" : "translate(-50%)",
+              "font-size" : "4vh" 
+            });
+            $(".text2").css({
+              "top" : "65%",
+              "left" : "35%",
+              "font-size" : "5vh"
+            });
+            $(".number").css({
+              "top" : "52.9%",
+              "left" : "57%",
+              "font-size" : "5vh"
+            });
+            $(".underline").css({
+              "top" : "71%",
+              "left" : "50%",
+              "width" : "50vh",
+              "transform" : "translate(-50%)"
+            });
+            $(".text3").css({
+              "top" : "63%",
+              "left" : "50%",
+              "font-size" : "2vh",
+              "transform" : "translate(-50%)"
+            });
+            $("#righthand").animate({
+              top: 0,
+              left: -157
+            }, function () {
+                $('#righthand').css({
+                  "position" : "static"
+                });
               });
-              $(".text2").css({
-                "top" : "65%",
-                "left" : "35%",
-                "font-size" : "5vh"
-              });
-              $(".number").css({
-                "top" : "52.9%",
-                "left" : "57%",
-                "font-size" : "5vh"
-              });
-              $(".underline").css({
-                "top" : "71%",
-                "left" : "50%",
-                "width" : "50vh",
-                "transform" : "translate(-50%)"
-              });
-              $(".text3").css({
-                "top" : "63%",
-                "left" : "50%",
-                "font-size" : "2vh",
-                "transform" : "translate(-50%)"
-              });
-              $("#righthand").animate({
-                top: 0,
-                left: -157
-               }, function(){
-                  $('#righthand').css({
-                        "position" : "static"
-                      });
-               });
               $("#lefthand").animate({
                 top: $(".container").height(),
                 left: $(".container").width()
-              }, function(){
+              }, function () {
                   $('#lefthand').css({
-                        "position" : "static"
-                      });
-                    $(location).attr('href','https://www.google.com/');
-                    console.log($scope.name);
-              });
-        });
-  });
+                    "position" : "static"
+                  });
+                  $(location).attr('href','https://www.google.com/');
+                  console.log($scope.name);
+                });
+          });
+    });
+
 });
  
-
-
-  //tooltip Directive
-  angular.module('shaastra2016App')
-  .directive('tooltip',  
-      function() {
-          return {
-              restrict: 'A',
-              link: function() {
-                  var  
-                  rightHand,
-                  leftHand,
-                      x,
-                      y;
-                 rightHand = document.getElementById("righthand");
-                 leftHand = document.getElementById("lefthand");
+//tooltip Directive
+angular.module('shaastra2016App')
+  .directive('tooltip', function () {
+    return {
+      restrict: 'A',
+      link: function () {
+        var rightHand;
+        var leftHand;
+        var x;
+        var y;
+        
+        rightHand = document.getElementById("righthand");
+        leftHand = document.getElementById("lefthand");
                 
-                  $(".invisiblebox2,.elemboxright").mousemove(function(e) {
-                      x = (e.clientX-$('.invisiblebox1').offset().left),
-                      y = (e.clientY-$('.invisiblebox1').offset().top);
-          
-                      //position according to mouse position
-                       leftHand.style.top = (y + 0) + 'px';
-                      leftHand.style.left = (x  + 0) + 'px';
-                      leftHand.style.top.animationTimingFunction="linear";
-                      leftHand.style.left.animationTimingFunction="linear";
-                  }); 
-                   $(".invisiblebox1,.elemboxleft").mousemove(function(e) {
+        $(".invisiblebox2,.elemboxright").mousemove(function (e) {
+          x = (e.clientX-$('.invisiblebox1').offset().left),
+          y = (e.clientY-$('.invisiblebox1').offset().top);
 
-                      x = (e.pageX-$('.invisiblebox1').offset().left),
-                      y = (e.pageY-$('.invisiblebox1').offset().top);
-          
-                      //position according to mouse position
-                      rightHand.style.top = (y  + 0) + 'px';
-                      rightHand.style.left = (x - 155) +'px';
-                                  
-                  });
-                   //moving back hand to it's original place
-                   $(".invisiblebox2,.elemboxright").mousemove(function(){
-                    rightHand.style.top="25%";
-                    rightHand.style.left="18%";
-                   });
+          //position according to mouse position
+          leftHand.style.top = (y + 0) + 'px';
+          leftHand.style.left = (x  + 0) + 'px';
+          leftHand.style.top.animationTimingFunction = "linear";
+          leftHand.style.left.animationTimingFunction = "linear";
+        }); 
+        
+        $(".invisiblebox1,.elemboxleft").mousemove(function (e) {
 
-                   $(".invisiblebox1,.elemboxleft").mousemove(function(){
-                    leftHand.style.top="47%";
-                    leftHand.style.left="75%";
-                   });
-                   //red dot to appear
+          x = (e.pageX-$('.invisiblebox1').offset().left),
+          y = (e.pageY-$('.invisiblebox1').offset().top);
 
-                   
-                     
-                              }
-              };
-      });
+          //position according to mouse position
+          rightHand.style.top = (y  + 0) + 'px';
+          rightHand.style.left = (x - 155) +'px';
+        });
+
+        //moving back hand to it's original place
+        $(".invisiblebox2,.elemboxright").mousemove(function () {
+          rightHand.style.top = "25%";
+          rightHand.style.left = "18%";
+        });
+
+        $(".invisiblebox1,.elemboxleft").mousemove(function () {
+          leftHand.style.top = "47%";
+          leftHand.style.left = "75%";
+        });
+
+        //red dot to appear
+      }
+    };
+  });
