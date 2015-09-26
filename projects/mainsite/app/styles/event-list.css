@@ -255,7 +255,9 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
 line-height: 2.5;
 }
 }
+
 @media all and (max-width:1150px){
-.scrollarea{
-  margin-top: -10.6%;
+  .scrollarea{
+    margin-top: -10.6%;
+  }
 }
