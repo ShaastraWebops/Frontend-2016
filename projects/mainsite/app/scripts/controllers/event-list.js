@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', function ($scope) {
+	.controller('eventListCtrl', function ($scope, $interval) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
@@ -59,5 +59,13 @@ angular.module('shaastra2016App')
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);
+		var i = 0;
+		var refresh = $interval(function (i) {
+			$scope.$broadcast('content.reload');
+			i += 5;
+		}, 100*i);
+		$scope.$on('destroy', function () {
+			$interval.cancel(refresh);
+		});
 	});
 
