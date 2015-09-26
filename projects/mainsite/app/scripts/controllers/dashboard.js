@@ -1,51 +1,54 @@
 'use-strict';
 angular.module('shaastra2016App')
 	.controller('dashboardCtrl', function ($scope, Auth) { 
- $scope.i = 0;
-	$scope.data = function(ch) {
+		$scope.i = 0;
+		$scope.data = function(ch) {
     	$scope.i = ch;
     }
-	$scope.myItems = [];
-($scope).events={
-eventsList:[
-{
-	eventName:"Manual Robotics",
-	teamname:"SuperBot",
-	teammembers:[
-	'fgsgdbjds',
-	'djkhgushdj',
-	'ojfksakf'
-]},
-{
-	eventName:"Autonomous Robotics",
-	teamname:"Super1Bot",
-	teammembers:[
-		'gfsbjbv',
-		'djgbjsd',
-]},
-{
-	eventName:"eventName",
-	teamname:"teamname",
-	teammembers:[
-	'teamvmember1',
-	'teammdember1',
-	'tedammember1',
-	'teammembeer1',
-	
-]},
-]};
-$scope.unregister=function(idx)
-{
-	console.log("hello");
-	var evnt=$scope.events.eventsList[idx];
-	if(idx!=-1)
-	{
-		$scope.events.eventsList.splice(idx,1);
-	}
-};
-$scope.lists=[{
+
+		$scope.myItems = [];
+		$scope.events = {
+			eventsList:[{
+					eventName:"Manual Robotics",
+					teamname:"SuperBot",
+					teammembers:[
+						'fgsgdbjds',
+						'djkhgushdj',
+						'ojfksakf'
+					]
+				},
+				{
+					eventName:"Autonomous Robotics",
+					teamname:"Super1Bot",
+					teammembers:[
+						'gfsbjbv',
+						'djgbjsd',
+					]
+				},
+				{
+					eventName:"eventName",
+					teamname:"teamname",
+					teammembers:[
+						'teamvmember1',
+						'teammdember1',
+						'tedammember1',
+						'teammembeer1',
+					]
+				}
+			]
+		};
+
+	$scope.unregister = function (idx) {
+		console.log("hello");
+		var evnt=$scope.events.eventsList[idx];
+		if(idx!=-1) {
+			$scope.events.eventsList.splice(idx, 1);
+		}
+	};
+
+	$scope.lists=[{
 	    name: "AeroFest",
-	    imgUrl: "images/aerofest.png",
+  	  imgUrl: "images/aerofest.png",
 		},
 		{
 	    name: "B-Events",
@@ -78,6 +81,7 @@ $scope.lists=[{
 		{
 	    name: "Spotlight",
 	    imgUrl: "images/Spotlight.jpg",
-		},
+		}
 	];
+
 });
