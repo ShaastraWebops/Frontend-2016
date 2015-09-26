@@ -23,7 +23,7 @@ angular.module('shaastra2016App')
 		// $timeout(refresh, 1000);
 	});
 
-	var lists=[{
+	var lists = [{
 	    name: "AeroFest",
 	    imgUrl: "images/aerofest.png",
 		},
