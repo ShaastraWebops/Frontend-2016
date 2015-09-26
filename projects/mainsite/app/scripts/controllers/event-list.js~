@@ -40,7 +40,8 @@ angular.module('shaastra2016App')
 	    imgUrl: "images/coding.png",
 		},
 		{
-	    name: "Department Flagship",
+	    name: "Department\n" + 
+                  "Flagship",
 	    imgUrl: "images/Department-Flagship.jpg",
 		},
 		{
