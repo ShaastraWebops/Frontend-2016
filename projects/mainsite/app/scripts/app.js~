@@ -11,21 +11,18 @@
 angular
   .module('shaastra2016App', [
     'ngAnimate',
+    'ngScrollable',
     'ngCookies',
     'ngMessages',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngScrollable'
+    'ui.bootstrap',
+    'md.chips.select',
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
       .when('/', {
         templateUrl: 'views/homepage.html',
         controller: 'HomeCtrl',
@@ -33,20 +30,25 @@ angular
       })
       .when('/register', {
         templateUrl: 'views/Register.html',
-        controller: 'loginCtrl',
+        controller: 'registerCtrl',
         controllerAs: 'register'
       })      
-      .when('/eventsList', {
-        templateUrl: 'views/eventList.html',
+      .when('/event-list', {
+        templateUrl: 'views/event-list.html',
         controller: 'eventListCtrl',
         controllerAs: 'eventsList'
       })
-      .when('/events', {
-        templateUrl: 'views/events.html',
+      .when('/event-category/:eventId', {
+        templateUrl: 'views/event-category.html',
+        controller: 'eventsCategoryCtrl',
+        controllerAs: 'eventsCategory'
+      })
+      .when('/event/:eventId/:id', {
+        templateUrl: 'views/event-details.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'
       })
-      .when('/loginRegister', {
+      .when('/login', {
         templateUrl: 'views/Login.html',
         controller: 'loginCtrl',
         controllerAs: 'login'
@@ -55,6 +57,11 @@ angular
         templateUrl: 'views/contact-us.html',
         controller: 'contactUsCtrl',
         controllerAs: 'contactUs'
+      })
+      .when('/dashboard', {
+        templateUrl: 'views/dashboard.html',
+        controller: 'dashboardCtrl',
+        controllerAs: 'dashboard'
       })
       .otherwise({
         redirectTo: '/'
