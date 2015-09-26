@@ -1,4 +1,6 @@
-/*global google */
+/* global google */
+/* jshint unused: false */
+
 'use strict';
 angular.module('shaastra2016App')
 	.controller('contactUsCtrl', function ($scope, $modal) {
