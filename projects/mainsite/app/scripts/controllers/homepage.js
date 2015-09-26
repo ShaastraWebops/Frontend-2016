@@ -1,7 +1,7 @@
-'use-strict';
+'use strict';
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope, Auth, $location, $http) {
+  .controller("HomeCtrl", function ($scope) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
@@ -16,38 +16,38 @@ angular.module('shaastra2016App')
     var botm1 = angular.element(document.getElementsByClassName('.botm11'));
     var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
 
-    var elemboxright = angular.element(document.getElementsByClassName('.elemboxright'));
-    var elemboxleft = angular.element(document.getElementsByClassName('.elemboxleft'));
+    // var elemboxright = angular.element(document.getElementsByClassName('.elemboxright'));
+    // var elemboxleft = angular.element(document.getElementsByClassName('.elemboxleft'));
     
-    var container = angular.element(document.getElementsByClassName('.container'));
+    // var container = angular.element(document.getElementsByClassName('.container'));
 
-    var invisiblebox1 = angular.element(document.getElementsByClassName('.invisiblebox1'));
-    var invisiblebox2 = angular.element(document.getElementsByClassName('.invisiblebox2'));
+    // var invisiblebox1 = angular.element(document.getElementsByClassName('.invisiblebox1'));
+    // var invisiblebox2 = angular.element(document.getElementsByClassName('.invisiblebox2'));
 
-    var lefthand = angular.element(document.getElementById('#lefthand'));
-    var righthand = angular.element(document.getElementById('#righthand'));
+    // var lefthand = angular.element(document.getElementById('#lefthand'));
+    // var righthand = angular.element(document.getElementById('#righthand'));
 
-    var mainContainer = angular.element(document.getElementById('#main-container'));
+    // var mainContainer = angular.element(document.getElementById('#main-container'));
 
-    top1.click(function(){
+    top1.click(function () {
       $scope.name = "events";
     });
-    top2.click(function(){
+    top2.click(function () {
       $scope.name = "shows";
     });
-    mid1.click(function(){
+    mid1.click(function () {
       $scope.name = "workshops";
     });
-    shaastrabox.click(function(){
+    shaastrabox.click(function () {
       $scope.name = "contact-us";
     });
-    mid2.click(function(){
+    mid2.click(function () {
       $scope.name = "lectures";
     });
-    botm1.click(function(){
+    botm1.click(function () {
       $scope.name = "social";
     });
-    botm2.click(function(){
+    botm2.click(function () {
       $scope.name = "pre-shaastra";
     });
 
@@ -74,17 +74,19 @@ angular.module('shaastra2016App')
     // });
     
     $scope.mouseDown=$("#main-container").mousedown(function (e) {
-      if(e.clientX<=$('.invisiblebox2').offset().left)
+      if(e.clientX<=$('.invisiblebox2').offset().left) {
         $("#righthand").attr("src", "images/handr1.png");
-      else 
+      } else {
         $("#lefthand").attr("src", "images/handl1.png");
+      }
     });
     
     $scope.mouseUp=$("#main-container").mouseup(function (e) {
-      if(e.clientX<=$('.invisiblebox1').offset().left)
+      if(e.clientX<=$('.invisiblebox1').offset().left) {
         $("#righthand").attr("src","images/handr.png");
-      else 
+      } else {
         $("#lefthand").attr("src","images/handl.png");
+      } 
     });
 
     /*$scope.mouseDownR=$(".elemboxright").mousedown(function(){
@@ -271,8 +273,8 @@ angular.module('shaastra2016App')
       link: function () {
         var rightHand;
         var leftHand;
-        var x;
-        var y;
+        var x = 0;
+        var y = 0;
         
         rightHand = document.getElementById("righthand");
         leftHand = document.getElementById("lefthand");

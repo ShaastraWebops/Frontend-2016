@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 angular.module('shaastra2016App')
   .controller('loginCtrl', function ($scope, Auth, $location) {
     $scope.UserName = "";

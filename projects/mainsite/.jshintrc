@@ -10,8 +10,13 @@
   "strict": true,
   "undef": true,
   "unused": true,
+  "expr": true,
   "globals": {
     "angular": false,
     "$": false
-  }
+  },
+  "predef": [
+    "define",
+    "require"
+  ]
 }

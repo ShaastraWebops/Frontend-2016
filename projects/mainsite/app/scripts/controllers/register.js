@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 angular.module('shaastra2016App')
   .controller('registerCtrl', function ($scope, Auth, $location) {
     $scope.UserName = "";
@@ -24,10 +24,10 @@ angular.module('shaastra2016App')
           $scope.errors = {};
 
           // Update validity of form fields that match the mongoose errors
-          angular.forEach(err.errors, function(error, field) {
-            form[field].$setValidity('mongoose', false);
-            $scope.errors[field] = error.message;
-          });
+          // angular.forEach(err.errors, function(error, field) {
+          //   form[field].$setValidity('mongoose', false);
+          //   $scope.errors[field] = error.message;
+          // });
         });
 
 });

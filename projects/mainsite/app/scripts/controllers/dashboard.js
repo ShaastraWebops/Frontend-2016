@@ -1,10 +1,10 @@
-'use-strict';
+'use strict';
 angular.module('shaastra2016App')
-	.controller('dashboardCtrl', function ($scope, Auth) { 
+	.controller('dashboardCtrl', function ($scope) { 
 		$scope.i = 0;
-		$scope.data = function(ch) {
+		$scope.data = function (ch) {
     	$scope.i = ch;
-    }
+    };
 
 		$scope.myItems = [];
 		$scope.events = {
@@ -40,8 +40,7 @@ angular.module('shaastra2016App')
 
 	$scope.unregister = function (idx) {
 		console.log("hello");
-		var evnt=$scope.events.eventsList[idx];
-		if(idx!=-1) {
+		if(idx !== -1) {
 			$scope.events.eventsList.splice(idx, 1);
 		}
 	};

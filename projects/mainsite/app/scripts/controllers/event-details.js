@@ -1,5 +1,6 @@
+'use strict';
 angular.module('shaastra2016App')
-  .controller('EventsCtrl', function ($scope, Auth) {
+  .controller('EventsCtrl', function ($scope) {
     $scope.tabs = [{ 
 	    	'name': 'About', 
 	    	'data': 'tab one data' 
@@ -30,6 +31,6 @@ angular.module('shaastra2016App')
     
     $scope.data = function(ch) {
     	$scope.i = ch;
-    }
+    };
   
   });

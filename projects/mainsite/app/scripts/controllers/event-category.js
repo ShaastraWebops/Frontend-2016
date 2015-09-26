@@ -1,6 +1,6 @@
-'use-strict';
+'use strict';
 angular.module('shaastra2016App')
-	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window, Auth) {
+	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'scroll'});
