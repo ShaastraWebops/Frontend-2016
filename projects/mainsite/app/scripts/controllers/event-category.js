@@ -121,19 +121,19 @@ angular.module('shaastra2016App')
 
 	});
 
-angular.module('shaastra2016App')
-.directive("scroll", function($window) {
-		return function(scope, element, attrs) {
-			angular.element($window).bind("scroll", function() {
-					var ele = document.querySelector(".events");
-					var top = ele.getBoundingClientRect().top;
-					//115 is sum of event category div height and marginTop of events div - 5px for better display
-					if(top <= 115) {	
-						scope.boolFixDiv = true;
-					} else {
-						scope.boolFixDiv = false;
-					}
-					scope.$apply();
-			});
-		};
-	});
+// angular.module('shaastra2016App')
+// 	.directive("scroll", function ($window) {
+// 		return function (scope, element, attrs) {
+// 			angular.element($window).bind("scroll", function() {
+// 				var ele = document.querySelector(".events");
+// 				var top = ele.getBoundingClientRect().top;
+// 				//115 is sum of event category div height and marginTop of events div - 5px for better display
+// 				if(top <= 115) {	
+// 					scope.boolFixDiv = true;
+// 				} else {
+// 					scope.boolFixDiv = false;
+// 				}
+// 				scope.$apply();
+// 			});
+// 		};
+// 	});
