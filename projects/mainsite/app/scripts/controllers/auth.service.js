@@ -24,11 +24,11 @@ angular.module('shaastra2016App')
           email: user.email,
           password: user.password
         }).
-        success(function(data) {
+        success(function (data) {
           console.log(data);
           $cookieStore.put('token', data.token);
           console.log($cookieStore);
-          currentUser = User.get(function() {
+          currentUser = User.get(function () {
             console.log(data);
             deferred.resolve(data);
             return cb();
@@ -75,8 +75,8 @@ angular.module('shaastra2016App')
           },
           function (err) {
             this.logout();
-            return cb(err);
             deferred.reject(err);
+            return cb(err);
           });
         return deferred.promise;
       },
@@ -162,10 +162,10 @@ angular.module('shaastra2016App')
        * @return {Boolean}
        */
       isAdmin: function() {
-        return currentUser.role == 'admin';
+        return currentUser.role === 'admin';
       },
       hasRoleCore: function() {
-        return currentUser.role == 'core' || currentUser.role == 'admin';
+        return currentUser.role === 'core' || currentUser.role === 'admin';
       },
 
       /**
