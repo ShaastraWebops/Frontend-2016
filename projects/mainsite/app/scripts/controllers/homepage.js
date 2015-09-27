@@ -286,8 +286,8 @@ angular.module('shaastra2016App')
           //position according to mouse position
           leftHand.style.top = (y + 0) + 'px';
           leftHand.style.left = (x  + 0) + 'px';
-          leftHand.style.top.animationTimingFunction = "linear";
-          leftHand.style.left.animationTimingFunction = "linear";
+          // leftHand.style.top.animationTimingFunction = "linear";
+          // leftHand.style.left.animationTimingFunction = "linear";
         }); 
         
         $(".invisiblebox1,.elemboxleft").mousemove(function (e) {

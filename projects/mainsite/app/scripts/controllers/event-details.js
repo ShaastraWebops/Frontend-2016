@@ -1,7 +1,8 @@
 'use strict';
+
 angular.module('shaastra2016App')
-  .controller('EventsCtrl', function ($scope) {
-    $scope.tabs = [{ 
+  .controller('EventsCtrl', function ($scope, $http, $routeParams) {
+    $scope.tabsTemp = [{ 
 	    	'name': 'About', 
 	    	'data': 'tab one data' 
     	}, 
@@ -27,9 +28,15 @@ angular.module('shaastra2016App')
   		}
 		];
     
+    $http.get('http://0.0.0.0:8001/api/events/showWeb/' + $routeParams.eventId)
+      .then(function (response) {
+        $scope.tabs = response.data.eventTabs;
+        console.log(response.data);
+      });
+
     $scope.i = 0;
     
-    $scope.data = function(ch) {
+    $scope.info = function (ch) {
     	$scope.i = ch;
     };
   

@@ -1,13 +1,35 @@
 'use strict';
+
 angular.module('shaastra2016App')
-	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window) {
+	.directive('backgroundImageDirective', function () {
+    return function (scope, element, attrs) {
+      element.css({
+        'background-image': 'url(' + attrs.backgroundImageDirective + ')',
+        'background-repeat': 'no-repeat',
+        'background-color': '#5E610B'
+      });
+    };
+	});
+
+angular.module('shaastra2016App')
+	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window, $http, $routeParams) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'scroll'});
 
 		$scope.boolFixDiv = false;
-	
-		$scope.eventsJSON = {
+
+		var eventCategoryId = $routeParams.eventCategoryId;
+		$http.get('http://0.0.0.0:8001/api/eventLists/' + eventCategoryId)
+			.then(function (response) {
+				var num = response.data.events.length;
+				for(var i=0; i<num; i++) {
+					response.data.events[i].imageURL = 'http://0.0.0.0:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
+				}
+				$scope.eventsJSON = response.data;
+			});
+
+		$scope.eventsJSON2 = {
 			eventCategoryName:'Coding Events',
 			eventCategoryImage: 'images/coding.png',
 			events:[{
@@ -67,45 +89,49 @@ angular.module('shaastra2016App')
 			]
   	};
 
-	  $scope.scrollDown = function(element) {
+  	$scope.gotoEventDetails = function (index) {
+  		$location.path('event/' + $scope.eventsJSON.events[index]._id);
+  	};
+
+	  $scope.scrollDown = function (element) {
 			var temp = $location.hash();
 			$location.hash(element);
 			$anchorScroll();
 			$location.hash(temp);
 		};
 
-		var winWidth = $(window).width();
+		// var winWidth = $(window).width();
 
-		if(winWidth < 768 ) {
-   		$scope.bootClassUsed = 'xs';
-   		$scope.noOfCols = 2;
-    } else if( winWidth >= 768 && winWidth <= 991) {
-      console.log($scope.bootClassUsed);
-   		$scope.noOfCols = 2;
-    } else if( winWidth >= 992 && winWidth <= 1199) {
-   		$scope.bootClassUsed = 'md';
-   		$scope.noOfCols = 3;
-    } else if( winWidth >= 1200 ) {
-   		$scope.bootClassUsed = 'lg';
-   		$scope.noOfCols = 3;
-    }
+		// if(winWidth < 768 ) {
+  //  		$scope.bootClassUsed = 'xs';
+  //  		$scope.noOfCols = 2;
+  //   } else if( winWidth >= 768 && winWidth <= 991) {
+  //     console.log($scope.bootClassUsed);
+  //  		$scope.noOfCols = 2;
+  //   } else if( winWidth >= 992 && winWidth <= 1199) {
+  //  		$scope.bootClassUsed = 'md';
+  //  		$scope.noOfCols = 3;
+  //   } else if( winWidth >= 1200 ) {
+  //  		$scope.bootClassUsed = 'lg';
+  //  		$scope.noOfCols = 3;
+  //   }
 
-		angular.element($window).bind("resize", function() {
-			var winWidth =  $(window).width();
-			if(winWidth < 768 ) {
-				$scope.bootClassUsed = 'xs';
-				$scope.noOfCols = 2;
-			} else if( winWidth >= 768 && winWidth <= 991) {
-			  console.log($scope.bootClassUsed);
-			  $scope.noOfCols = 2;
-			} else if( winWidth >= 992 && winWidth <= 1199) {
-				$scope.bootClassUsed = 'md';
-				$scope.noOfCols = 3;
-			} else if( winWidth >= 1200 ) {
-				$scope.bootClassUsed = 'lg';
-				$scope.noOfCols = 3;
-			}
-  	});
+		// angular.element($window).bind("resize", function() {
+		// 	var winWidth =  $(window).width();
+		// 	if(winWidth < 768 ) {
+		// 		$scope.bootClassUsed = 'xs';
+		// 		$scope.noOfCols = 2;
+		// 	} else if( winWidth >= 768 && winWidth <= 991) {
+		// 	  console.log($scope.bootClassUsed);
+		// 	  $scope.noOfCols = 2;
+		// 	} else if( winWidth >= 992 && winWidth <= 1199) {
+		// 		$scope.bootClassUsed = 'md';
+		// 		$scope.noOfCols = 3;
+		// 	} else if( winWidth >= 1200 ) {
+		// 		$scope.bootClassUsed = 'lg';
+		// 		$scope.noOfCols = 3;
+		// 	}
+  // 	});
 
 
 		Array.prototype.chunk = function(chunkSize) {
@@ -117,7 +143,7 @@ angular.module('shaastra2016App')
 	    );
 		};
 	
-		$scope.val = $scope.eventsJSON.events.chunk($scope.noOfCols);
+		// $scope.val = $scope.eventsJSON.events.chunk($scope.noOfCols);
 
 	});
 

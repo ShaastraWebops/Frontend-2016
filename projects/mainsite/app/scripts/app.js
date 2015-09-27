@@ -38,12 +38,12 @@ angular
         controller: 'eventListCtrl',
         controllerAs: 'eventsList'
       })
-      .when('/event-category/:eventId', {
+      .when('/event-category/:eventCategoryId', {
         templateUrl: 'views/event-category.html',
         controller: 'eventsCategoryCtrl',
         controllerAs: 'eventsCategory'
       })
-      .when('/event/:eventId/:id', {
+      .when('/event/:eventId', {
         templateUrl: 'views/event-details.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'

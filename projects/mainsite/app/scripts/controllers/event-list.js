@@ -1,11 +1,13 @@
+/* jshint unused: false */
+
 'use strict';
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', function ($scope, $interval) {
+	.controller('eventListCtrl', function ($scope, $interval, $http, $location) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
 
-		var lists = [{
+		var lists2 = [{
 		    name: "AeroFest",
 		    imgUrl: "images/aerofest.png",
 			},
@@ -43,9 +45,14 @@ angular.module('shaastra2016App')
 			},
 		];
 
-		this.details = lists;
+		// this.details = lists;
 		$scope.posX = 0;
 		$scope.posY = 0;
+
+		$http.get('http://0.0.0.0:8001/api/eventLists')
+			.then(function (response) {
+				$scope.eventList = response.data;
+			});
 
 		$scope.moveX = function (pixels) {
 			$scope.posX = $scope.posX +  pixels;
@@ -56,6 +63,11 @@ angular.module('shaastra2016App')
 		
 		$scope.updateDOM = function() {
 			$scope.$broadcast('content.reload');
+		};
+
+		$scope.gotoEventList = function (index) {
+			// $location.path('#/event-category/asd');
+			$location.path('event-category/' + $scope.eventList[index]._id);
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);

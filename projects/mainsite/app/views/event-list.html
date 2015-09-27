@@ -4,10 +4,10 @@
     <br>
    
       <div class="wrap1">
-        <div class="wrapperz" ng-repeat="detail in eventslist.details">
+        <div class="wrapperz" ng-repeat="category in eventList track by $index">
           <div class="slider"></div>
-          <img  ng-src="{{detail.imgUrl}}"/>
-          <p class="event-name">{{detail.name}}</p>
+          <img  ng-src="http://0.0.0.0:8001/api/uploads/{{category.imageid}}/{{category.imagename}}"/>
+          <p class="event-name">{{ category.title }}</p>
         </div>
       </div>
     </div>
@@ -15,17 +15,19 @@
     <article> 
       <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
         <div class="wrap">
-          <div class="wrapperz" ng-repeat="detail in eventslist.details">
-            <img ng-src="{{detail.imgUrl}}"/>
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-            <p class="event-name">{{detail.name}}</p> 
+          <div class="wrapperz" ng-repeat="category in eventList track by $index">
+            <div ng-click="gotoEventList($index)">
+              <img ng-src="http://0.0.0.0:8001/api/uploads/{{category.imageid}}/{{category.imagename}}" width="100" height="100"/>
+              <div class="dot1"></div>
+              <div class="dot2"></div>
+              <p class="event-name">{{ category.title }}</p> 
+            </div>
           </div>
         </div>
       </div>
                           
       <span id="left-arrow" class="glyphicon glyphicon-chevron-left" ng-click="moveX(-440);"></span>
       <span  id="right-arrow" class="glyphicon glyphicon-chevron-right" ng-click="moveX(440)"></span>
-    </article>      
+    </article>
   </div>
 </div>

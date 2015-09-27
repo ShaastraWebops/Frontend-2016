@@ -7,7 +7,7 @@
 		<div class="col-xs-12 hidden-sm hidden-md hidden-lg n">
 			<div class="row" ng-repeat="x in tabs track by $index">
 				<a href="">
-					<div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 {{$index}}" ng-click="data($index)">
+					<div class="col-xs-12 hidden-sm hidden-md hidden-lg nav1 {{$index}}" ng-click="info($index)">
 						{{x.name}}
 					</div>
 				</a>
@@ -40,7 +40,7 @@
 
 			<div class="row">
 				<div class="col-xs-6 hidden-sm hidden-md hidden-lg" ng-repeat="x in tabs track by $index">
-					<a event-nav-hyperlink href="" ng-click="data($index)">
+					<a event-nav-hyperlink href="" ng-click="info($index)">
 						<div class="event-nav-xs" ng-class="{'event-nav-selected':(i === $index)}">
 							{{x.name}}
 						</div>
@@ -53,7 +53,7 @@
 					<div class="hidden-xs"><br><br></div>
 					<div class="col-sm-12 col-md-12 col-lg-12">
 						<p class="cont">
-							{{tabs[i].data}}
+							{{tabs[i].info}}
 						</p>
 					</div>
 				</div>
@@ -68,8 +68,8 @@
 					<div class="row">
 						<br><br><br><br><br>
 						<div class="row" id="event-nav-box" ng-repeat="x in tabs track by $index">
-							<a event-nav-hyperlink href="" ng-click="data($index)">
-								<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(i === $index)}" ng-click="data($index)">
+							<a event-nav-hyperlink href="" ng-click="info($index)">
+								<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(i === $index)}" ng-click="info($index)">
 									<span id="event-nav-span">{{x.name}}</span>
 								</div>
 							</a>
