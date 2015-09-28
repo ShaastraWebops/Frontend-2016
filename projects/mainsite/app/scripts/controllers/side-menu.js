@@ -1,7 +1,24 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller("MainController", function() {
+  .controller("MainController", function ($scope, $location, Auth) {
+
+    $scope.isLoggedIn = Auth.isLoggedIn;
+    $scope.isAdmin = Auth.isAdmin;
+    $scope.isCore = Auth.isCore;
+    $scope.isSuperCoord = Auth.isSuperCoord;
+    $scope.getCurrentUser = Auth.getCurrentUser;
+    
+
+    $scope.logout = function () {
+      Auth.logout();
+      // $location.url('/login'); 
+      $location.path('/login');
+    };
+
+    $scope.isActive = function (route) {
+      return route === $location.path();
+    };
   
 });
   
