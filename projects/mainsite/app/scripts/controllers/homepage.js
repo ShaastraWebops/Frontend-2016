@@ -74,19 +74,23 @@ angular.module('shaastra2016App')
     // });
     
     $scope.mouseDown=$("#main-container").mousedown(function (e) {
-      if(e.clientX<=$('.invisiblebox2').offset().left) {
-        $("#righthand").attr("src", "images/handr1.png");
-      } else {
-        $("#lefthand").attr("src", "images/handl1.png");
-      }
+      if($('.invisiblebox2').offset()) {
+        if(e.clientX<=$('.invisiblebox2').offset().left) {
+          $("#righthand").attr("src", "images/handr1.png");
+        } else {
+          $("#lefthand").attr("src", "images/handl1.png");
+        }
+      } 
     });
     
     $scope.mouseUp=$("#main-container").mouseup(function (e) {
-      if(e.clientX<=$('.invisiblebox1').offset().left) {
-        $("#righthand").attr("src","images/handr.png");
-      } else {
-        $("#lefthand").attr("src","images/handl.png");
-      } 
+      if($('.invisiblebox1').offset()) {
+        if(e.clientX<=$('.invisiblebox1').offset().left) {
+          $("#righthand").attr("src","images/handr.png");
+        } else {
+          $("#lefthand").attr("src","images/handl.png");
+        } 
+      }
     });
 
     /*$scope.mouseDownR=$(".elemboxright").mousedown(function(){
