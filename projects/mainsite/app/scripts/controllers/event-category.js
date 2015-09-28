@@ -25,7 +25,11 @@ angular.module('shaastra2016App')
 			.then(function (response) {
 				var num = response.data.events.length;
 				for(var i=0; i<num; i++) {
-					response.data.events[i].imageURL = 'http://0.0.0.0:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
+					if(response.data.events[i].acceptedByAdmin === true) {
+						response.data.events[i].imageURL = 'http://0.0.0.0:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
+					} else {
+						response.data.events.splice(i, 1);
+					}
 				}
 				$scope.eventsJSON = response.data;
 			});
