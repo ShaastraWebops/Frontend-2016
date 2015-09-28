@@ -7,14 +7,14 @@
         <div class="wrapperz" ng-repeat="category in eventList track by $index">
           <div class="slider"></div>
           <img ng-click="gotoEventList($index)" ng-src="http://0.0.0.0:8001/api/uploads/{{category.imageid}}/{{category.imagename}}"/>
-          <p class="event-name">{{ category.title }}</p>
+          <p class="event-name"><b>{{ category.title }}</b></p>
         </div>
       </div>
     </div>
     
     <article ng-if="!eventList.length">
       <div class="makeCenter">
-        <h1>Stay tuned for Updates!</h1>
+        <h1><b>Stay tuned for Updates!</b></h1>
       </div>
     </article>  
     

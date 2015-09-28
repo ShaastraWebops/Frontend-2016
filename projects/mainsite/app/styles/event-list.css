@@ -5,6 +5,8 @@
 
 .makeCenter {
   text-align: center;
+  font-family: 'Lato';
+  font-weight: bolder;
 }
 
 .scrollable .scrollable-bar,.scrollable .scrollable-slider {
@@ -134,13 +136,14 @@ article {
 
 .wrap1 p.event-name {
   width: 99%;
+  font-family: 'Lato';
   color: white;
   position: absolute;
   text-align: center;
   top: 50%;
   z-index: 350;
   font-weight: bolder;
-  font-size: 2vh;
+  font-size: 2.5vh;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
