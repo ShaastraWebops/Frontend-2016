@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'CGF Locust Resistance';
-	src: url('./CGFLocustResistance.ttf')format('truetype');
+	src: url('../styles/fonts/CGFLocustResistance.ttf') format('truetype');
 }
 
 .home {

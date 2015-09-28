@@ -76,7 +76,7 @@ article {
 .wrap1 .wrapperz img {
   width: 100%;
   height: 10%;
-   line-height: 3;
+  line-height: 3;
   cursor: pointer;
   position:relative;
   z-index: 0;
@@ -85,11 +85,10 @@ article {
 
 .wrap img {
   width: 70vh;
-   margin-top: 40%;
+  margin-top: 40%;
   position: relative;
   cursor: pointer;
   height: auto;
-  width: auto/9;
 /* ie8 */
 }
 
@@ -162,8 +161,6 @@ article {
 	transform : translateY(-100%);
 }
 
-
-
 .wrap1 .wrapperz:hover .event-name {
 	-webkit-transform : translateY(220%);
   -moz-transform : translateY(220%);
@@ -229,35 +226,36 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
   z-index: 100;
 }
 /*media queries*/
-@media all and (max-width:750px){
-  .wrap1{
+@media all and (max-width:750px) {
+  .wrap1 {
     display: none;
   }
   .wrap img {
-  width: 78vh;}
+    width: 78vh;
+  }
   .scrollable .scrollable-bar,.scrollable .scrollable-bar:hover, .scrollable.active .scrollable-bar {
     opacity: 0;
   }
-  .scrollarea:hover .scrollable .scrollable-slider,
-   .scrollable:hover .scrollable-bar{
-  opacity: 0;  
-}
-#right-arrow{
-  left:88%;
-  top: 45%;
-}
-#left-arrow{
-  top:45%;
-}
-.wrap { 
-  padding-left: 13%;}
-#heading{
-line-height: 2.5;
-}
+  .scrollarea:hover .scrollable .scrollable-slider, .scrollable:hover .scrollable-bar {
+    opacity: 0;  
+  }
+  #right-arrow {
+    left:88%;
+    top: 45%;
+  }
+  #left-arrow {
+    top:45%;
+  }
+  .wrap { 
+    padding-left: 13%;
+  }
+  #heading {
+    line-height: 2.5;
+  }
 }
 
-@media all and (max-width:1150px){
-  .scrollarea{
+@media all and (max-width:1150px) {
+  .scrollarea {
     margin-top: -10.6%;
   }
 }
