@@ -1,9 +1,9 @@
 ul{
   list-style-type: none;
 }
-.container-fluid{
-  padding-left: 0px;
-  padding-right: 0px;
+.heading {
+  font-size: 10vh;
+  margin-top: 3%;
 }
 .wrapper{
   text-align: center;

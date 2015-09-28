@@ -1,10 +1,10 @@
 .event-category {
   z-index: 1;
-  margin: 5% 0;
+  margin: 3% 0;
 }
 
 .category-image {
-  height: 375px;
+  height: auto;
   width: 100%;
 }
 
