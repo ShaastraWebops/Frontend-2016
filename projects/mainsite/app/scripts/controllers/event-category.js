@@ -90,7 +90,7 @@ angular.module('shaastra2016App')
   	};
 
   	$scope.gotoEventDetails = function (index) {
-  		$location.path('event/' + $scope.eventsJSON.events[index]._id);
+  		$location.path('#/event/' + $scope.eventsJSON.events[index]._id);
   	};
 
 	  $scope.scrollDown = function (element) {

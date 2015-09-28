@@ -67,7 +67,7 @@ angular.module('shaastra2016App')
 
 		$scope.gotoEventList = function (index) {
 			// $location.path('#/event-category/asd');
-			$location.path('event-category/' + $scope.eventList[index]._id);
+			$location.path('#/event-category/' + $scope.eventList[index]._id);
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);
