@@ -3,6 +3,11 @@
   margin: 5% 0;
 }
 
+.category-image {
+  height: 375px;
+  width: 100%;
+}
+
 .category-wrapper {
   text-align: center;
 }

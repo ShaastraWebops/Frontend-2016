@@ -49,6 +49,7 @@ angular.module('shaastra2016App')
 		$scope.posX = 0;
 		$scope.posY = 0;
 
+		$scope.eventList = [];
 		$http.get('http://0.0.0.0:8001/api/eventLists')
 			.then(function (response) {
 				$scope.eventList = response.data;
@@ -67,7 +68,7 @@ angular.module('shaastra2016App')
 
 		$scope.gotoEventList = function (index) {
 			// $location.path('#/event-category/asd');
-			$location.path('#/event-category/' + $scope.eventList[index]._id);
+			$location.path('event-category/' + $scope.eventList[index]._id);
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);

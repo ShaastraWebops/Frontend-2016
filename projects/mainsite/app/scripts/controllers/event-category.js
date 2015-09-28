@@ -20,6 +20,7 @@ angular.module('shaastra2016App')
 		$scope.boolFixDiv = false;
 
 		var eventCategoryId = $routeParams.eventCategoryId;
+		$scope.eventsJSON = [];
 		$http.get('http://0.0.0.0:8001/api/eventLists/' + eventCategoryId)
 			.then(function (response) {
 				var num = response.data.events.length;
@@ -90,7 +91,7 @@ angular.module('shaastra2016App')
   	};
 
   	$scope.gotoEventDetails = function (index) {
-  		$location.path('#/event/' + $scope.eventsJSON.events[index]._id);
+  		$location.path('event/' + $scope.eventsJSON.events[index]._id);
   	};
 
 	  $scope.scrollDown = function (element) {
