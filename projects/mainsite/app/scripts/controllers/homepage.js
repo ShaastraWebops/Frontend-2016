@@ -102,7 +102,7 @@ angular.module('shaastra2016App')
     $(".elemboxleft").click(function () {
       var elem = $(this);
       elem.css({
-        top: $(".container").height() / 2 - elem.width() / 4 ,
+        top: $(".container").height() / 2 - elem.width() / 16 ,
         left: $(".container").width() / 2 - elem.width() / 2,
         zIndex: 500 
       });
@@ -121,7 +121,7 @@ angular.module('shaastra2016App')
               elem.css ({
                 "width" : "100%",
                 "height" : "100%",
-                "top": "0",
+                "top": "1%",
                 "left" : "0",
                 "line-height": elem.height()/12,
                 "font-size" : "8vh"
@@ -141,7 +141,7 @@ angular.module('shaastra2016App')
                     $('#lefthand').css({
                       "position" : "static"
                     });
-                    $(location).attr('href','https://www.google.co.in/');
+                    // $(location).attr('href','https://www.google.co.in/');
                     console.log($scope.name);
                   });
             });
@@ -151,7 +151,7 @@ angular.module('shaastra2016App')
     $(".elemboxright").click(function () {
       var elem = $(this);
       elem.css({
-        top: $(".container").height() / 2 - elem.width() / 4 ,
+        top: $(".container").height() / 2 - elem.width() / 16 ,
         right: $(".container").width() / 2 - elem.width() / 2,
         zIndex: 500 
       });
@@ -170,14 +170,14 @@ angular.module('shaastra2016App')
               elem.css ({
                 "width" : "100%",
                 "height" : "100%",
-                "top": "0",
+                "top": "1%",
                 "right" : "0",
                 "line-height": elem.height()/12,
                 "font-size" : "8vh"
               });
               $("#righthand").animate({
                 top: 0,
-                left: -157
+                right: -157
                }, function () {
                   $('#righthand').css({
                     "position" : "static"
@@ -190,7 +190,7 @@ angular.module('shaastra2016App')
                     $('#lefthand').css({
                       "position" : "static"
                     });
-                    $(location).attr('href','https://www.google.com/');
+                    // $(location).attr('href','https://www.google.com/');
                     console.log($scope.name);
                 });
             });
@@ -198,70 +198,75 @@ angular.module('shaastra2016App')
     });
 
     $(".shaastrabox").click(function () {
-      var elem = $(this);
-        $("#righthand").animate({
-          top: $(".container").height() / 2 - elem.height() / 2,
-          left: $(".container").width() / 2 - elem.width()
-        });
-        $("#lefthand").animate({
-          top: $(".container").height()/2 + elem.height() / 2,
-          left: $(".container").width() / 2 + elem.width() / 2
-        }, function () {
-            elem.css ({
-              "width" : "100%",
-              "height" : "100%",
-              "top": "0",
-              "left" : "0",
-              "margin-left": "0"
-            });
-            $(".text1").css({
-              "top" : "-5vh",
-              "left" : "51%",
-              "transform" : "translate(-50%)",
-              "font-size" : "4vh" 
-            });
-            $(".text2").css({
-              "top" : "65%",
-              "left" : "35%",
-              "font-size" : "5vh"
-            });
-            $(".number").css({
-              "top" : "52.9%",
-              "left" : "57%",
-              "font-size" : "5vh"
-            });
-            $(".underline").css({
-              "top" : "71%",
-              "left" : "50%",
-              "width" : "50vh",
-              "transform" : "translate(-50%)"
-            });
-            $(".text3").css({
-              "top" : "63%",
-              "left" : "50%",
-              "font-size" : "2vh",
-              "transform" : "translate(-50%)"
-            });
-            $("#righthand").animate({
-              top: 0,
-              left: -157
-            }, function () {
-                $('#righthand').css({
-                  "position" : "static"
-                });
-              });
-              $("#lefthand").animate({
-                top: $(".container").height(),
-                left: $(".container").width()
-              }, function () {
-                  $('#lefthand').css({
-                    "position" : "static"
-                  });
-                  $(location).attr('href','https://www.google.com/');
-                  console.log($scope.name);
-                });
-          });
+      $(location).attr('href','https://www.google.com/');
+      console.log($scope.name);
     });
+
+    // $(".shaastrabox").click(function () {
+    //   var elem = $(this);
+    //     $("#righthand").animate({
+    //       top: $(".container").height() / 2 - elem.height() / 2,
+    //       left: $(".container").width() / 2 - elem.width()
+    //     });
+    //     $("#lefthand").animate({
+    //       top: $(".container").height()/2 + elem.height() / 2,
+    //       left: $(".container").width() / 2 + elem.width() / 2
+    //     }, function () {
+    //         elem.css ({
+    //           "width" : "100%",
+    //           "height" : "100%",
+    //           "top": "0",
+    //           "left" : "0",
+    //           "margin-left": "0"
+    //         });
+    //         $(".text1").css({
+    //           "top" : "-5vh",
+    //           "left" : "51%",
+    //           "transform" : "translate(-50%)",
+    //           "font-size" : "4vh" 
+    //         });
+    //         $(".text2").css({
+    //           "top" : "65%",
+    //           "left" : "35%",
+    //           "font-size" : "5vh"
+    //         });
+    //         $(".number").css({
+    //           "top" : "52.9%",
+    //           "left" : "57%",
+    //           "font-size" : "5vh"
+    //         });
+    //         $(".underline").css({
+    //           "top" : "71%",
+    //           "left" : "50%",
+    //           "width" : "50vh",
+    //           "transform" : "translate(-50%)"
+    //         });
+    //         $(".text3").css({
+    //           "top" : "63%",
+    //           "left" : "50%",
+    //           "font-size" : "2vh",
+    //           "transform" : "translate(-50%)"
+    //         });
+    //         $("#righthand").animate({
+    //           top: 0,
+    //           left: -157
+    //         }, function () {
+    //             $('#righthand').css({
+    //               "position" : "static"
+    //             });
+    //           });
+    //           $("#lefthand").animate({
+    //             top: $(".container").height(),
+    //             left: $(".container").width()
+    //           }, function () {
+    //               $('#lefthand').css({
+    //                 "position" : "static"
+    //               });
+    //               $(location).attr('href','https://www.google.com/');
+    //               console.log($scope.name);
+    //             });
+    //       });
+    // });
 
 });
  
