@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+}
+
 html {
   margin: 0; 
   padding:0; 
@@ -127,7 +132,7 @@ li {
   -o-transition: all 3s ease;
   transition: all 3s ease;
 }
-.sel{
+.sel {
   background :#0033ff;
 } 
 
@@ -431,8 +436,9 @@ ul li #you:hover {
 
 /*top menu*/
 .top-menu {
-  font-weight: bold;
   margin-right: 0%;
+  font-family: 'Lato';
+  font-weight: bolder;
 }
 
 .search {

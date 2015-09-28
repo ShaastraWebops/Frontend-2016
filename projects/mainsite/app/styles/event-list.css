@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+}
+
 .makeCenter {
   text-align: center;
 }
@@ -5,6 +10,7 @@
 .scrollable .scrollable-bar,.scrollable .scrollable-slider {
   border-radius: 5px;
  }
+
 .scrollable .scrollable-bar {
   position:absolute;
   box-sizing: border-box;
@@ -19,18 +25,21 @@
   padding: -5px;
   border:2px solid transparent;
 }
+
 .scrollable .scrollable-bar:hover, .scrollable:hover .scrollable-bar ,.scrollable.active .scrollable-bar {
   opacity:1;
 }
+
 .scrollable .scrollable-slider {
   max-width: 2%; 
   background: rgba(32, 32, 32, 1);
   background: linear-gradient(to right, rgba(32,32,32,1), rgba(32,32,32,1));
 }
+
 .scrollarea:hover .scrollable .scrollable-slider {
   opacity: 1;
-
 }
+
 .scrollable .scrollable-bar-x .scrollable-slider {
   height: 1vh;
   margin-left: 4%;
@@ -109,25 +118,26 @@ article {
 }
 
 #heading {
-  position:relative;
+  position: relative;
+  margin-top: 3%;
   height: 45px;
   font-size: 10vh;
   line-height: 1;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Lato';
   text-align: center;
 }
 
 .wrap {
   width: 780vh;
   padding-left: 32%;
- 
-} 
+}
+
 .wrap1 p.event-name {
   width: 99%;
   color: white;
   position: absolute;
   text-align: center;
-  top:50%;
+  top: 50%;
   z-index: 350;
   font-weight: bolder;
   font-size: 2vh;
@@ -180,6 +190,7 @@ article {
   margin-top: 3%;
   font-weight:bold; 
   text-align: center;
+  font-family: 'Lato';
   font-size: 4.5vh;
 }
 
@@ -188,21 +199,22 @@ article .glyphicon {
   text-align: center;
   background-color: rgba(119,158,203,0.9);
   line-height: 3em;
-  width:3em;
-  font-size:4vh;
+  width: 3em;
+  font-size: 4vh;
   position: relative;
   z-index: 200;
 }
 
-article .glyphicon:hover {background-color:rgba(255,105,97,1); 
+article .glyphicon:hover {
+  background-color: rgba(255,105,97,1); 
   cursor: pointer; 
-
   -webkit-transition: background-color 10ms linear;
   -moz-transition: background-color 10ms linear;
   -ms-transition: background-color 10ms linear;
   -o-transition: background-color 10ms linear;
   transition: background-color 10ms linear;
 }
+
 .wrapperz .dot1,.wrapperz .dot2 {
   background: #000000;
   width: 10px;
@@ -213,7 +225,7 @@ article .glyphicon:hover {background-color:rgba(255,105,97,1);
   border-radius: 50%;
 }
 
-#left-arrow{
+#left-arrow {
  position: absolute;
   left: 0.5%;
   top:38%;

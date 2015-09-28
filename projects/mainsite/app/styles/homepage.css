@@ -1,6 +1,10 @@
 @font-face {
 	font-family: 'CGF Locust Resistance';
-	src: url('../styles/fonts/CGFLocustResistance.ttf')format('truetype');
+	src: url('../styles/fonts/CGFLocustResistance.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
 }
 
 .home {
@@ -78,8 +82,9 @@
 	vertical-align: middle;
 	line-height: normal;
 	color: #ffffff;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Lato';
 	letter-spacing: 0.05vh;
+	font-weight: bold;
 	z-index: 400;
 	text-decoration: none;
 	overflow: visible;
