@@ -66,9 +66,9 @@ angular.module('shaastra2016App')
 			$scope.$broadcast('content.reload');
 		};
 
-		$scope.gotoEventList = function (index) {
+		$scope.gotoWorkshopList = function (index) {
 			// $location.path('#/event-category/asd');
-			$location.path('event-category/' + $scope.eventList[index]._id);
+			$location.path('workshop-category/' + $scope.eventList[index]._id);
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);

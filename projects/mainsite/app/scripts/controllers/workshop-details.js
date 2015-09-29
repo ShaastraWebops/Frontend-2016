@@ -31,6 +31,11 @@ angular.module('shaastra2016App')
     $scope.eve = [];
     $http.get('http://0.0.0.0:8001/api/events/showWeb/' + $routeParams.workshopId)
       .then(function (response) {
+        // console.log(response.data);
+        if(response.data.eventTabs.length) {
+          // Add contact info here
+          // response.data.eventTabs.push()
+        }
         $scope.eve = response.data;
       });
 
