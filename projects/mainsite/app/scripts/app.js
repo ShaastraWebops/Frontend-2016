@@ -52,6 +52,21 @@ angular
         controller: 'EventsCtrl',
         controllerAs: 'events'
       })
+      .when('/workshop-list', {
+        templateUrl: 'views/workshop-list.html',
+        controller: 'workshopListCtrl',
+        controllerAs: 'workshopsList'
+      })
+      .when('/workshop-category/:workshopCategoryId', {
+        templateUrl: 'views/workshop-category.html',
+        controller: 'workshopsCategoryCtrl',
+        controllerAs: 'workshopsCategory'
+      })
+      .when('/workshop/:workshopId', {
+        templateUrl: 'views/workshop-details.html',
+        controller: 'WorkshopsCtrl',
+        controllerAs: 'workshops'
+      })
       .when('/login', {
         templateUrl: 'views/Login.html',
         controller: 'loginCtrl',

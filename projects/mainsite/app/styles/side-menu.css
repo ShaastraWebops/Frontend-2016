@@ -30,6 +30,10 @@ li {
   cursor: pointer;
 }
 
+.si {
+  background-color: transparent;
+}
+
 /*backgrnd*/
 #bgstyle {
   position: absolute;

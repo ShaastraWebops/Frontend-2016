@@ -1,0 +1,58 @@
+<div class="event-category">
+	<div ng-controller="workshopsCategoryCtrl" scroll ng-clock>
+
+	  <div class="container-fluid category">
+	  	<div class="row">
+	    	<div class="category-wrapper col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-ls-offset-1">
+	    	<!-- <div class="category-wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12"> -->
+		  		<img class="img-responsive category-image" id="event-category-image" ng-src="http://0.0.0.0:8001/api/uploads/{{workshopsJSON.imageid}}/{{workshopsJSON.imagename}}">
+				</div>
+	  	</div>
+	  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
+		  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
+	  	</div><!-- TODO check the class min in css and fix the div at the top-->
+		</div>
+<!-- 
+		  	<div id="event-category-name" ng-class="{fix: boolFixDiv}">
+					<span id="event-category-name" ng-bind="workshopsJSON.eventCategoryName"></span>
+	   	  </div>
+ -->
+		<div class="container-fluid">
+			<div class="row">
+	  		<div id="event-category-name" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+						<span ng-bind="workshopsJSON.title"></span>
+	   	  </div>
+			</div>
+
+			<div class="makeCenter" ng-if="!workshopsJSON.events.length">
+				<h1>Stay tuned for Updates!</h1>
+			</div>
+
+			<div class="row" ng-if="workshopsJSON.events.length">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in workshopsJSON.events track by $index">
+
+					<div class="card">
+	  	  		<div class="card-front">
+		    			<div class="event-details"> 
+			  				<span id="event-name" ng-bind="event.name"></span>
+			  				<br><br>
+			  				<span id="event-date" ng-bind="event.eventDate"></span>
+							</div>
+		  			</div>
+		  			<div class="card-back">
+		    			<div class="event-details" ng-style="{'background-image': 'url({{event.imageURL}})', 'background-color': '#5E610B'}">
+			  				<!-- <span id="event-name" ng-bind="event.name"></span>
+			  				<br><br>
+			  				<span id="event-date" ng-bind="event.date"></span> -->
+							</div>
+							<button ng-click="gotoWorkshopDetails($index)" class="event-more-button">See More</button>
+		  			</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

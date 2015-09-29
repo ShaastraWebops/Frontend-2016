@@ -2,7 +2,7 @@
 
 'use strict';
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', function ($scope, $interval, $http, $location) {
+	.controller('workshopListCtrl', function ($scope, $interval, $http, $location) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
@@ -50,7 +50,7 @@ angular.module('shaastra2016App')
 		$scope.posY = 0;
 
 		$scope.eventList = [];
-		$http.get('http://0.0.0.0:8001/api/eventLists/events')
+		$http.get('http://0.0.0.0:8001/api/eventLists/workshops')
 			.then(function (response) {
 				$scope.eventList = response.data;
 			});
