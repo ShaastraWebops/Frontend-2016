@@ -31,67 +31,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<!--     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">shaastra2016</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Main</a></li>
-              <li><a ng-href="#/homePage">Home Page</a></li>
-              <li><a ng-href="#/home">Home</a></li>
-              <li><a ng-href="#/events">Events</a></li>
-              <li><a ng-href="#/loginRegister">Login/Register</a></li>
-              <li><a ng-href="#/contactUs">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div id="bgstyle">
+      <img id="bgimg" src="images/background.jpg" alt="" />
     </div>
 
-    <div class="container">
-    <div ng-view=""></div>
+    <div ng-include="'views/top-nav.html'"></div>
+    
+    <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
+      <div ng-view=""></div>
     </div>
- -->
-<!--     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div> -->
+    <div id="backdrop"></div>
 
-
-  <!--backgrnd image-->
-  <div id="bgstyle">
-    <img id="bgimg" src="images/background.jpg" alt="" />
-  </div>
-
-  <div ng-include="'views/top-nav.html'"></div>
-  
-  <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
-    <div ng-view=""></div>
-  </div>
-  <div id="backdrop"></div>
-
-  <footer style="position:fixed; z-index:350; width:100%;">
-    <ul class="out mn-social"><!-- 
-       --><li class="social"><a id="fb" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
-       --><li class="social"><a id="tw" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
-       --><li class="social"><a id="you" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
-       --><li class="social"><a id="li" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
-     --></ul>
-  </footer>
+    <footer style="position:fixed; z-index:350; width:100%;">
+      <ul class="out mn-social"><!-- 
+         --><li class="social"><a id="fb" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
+         --><li class="social"><a id="tw" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
+         --><li class="social"><a id="you" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
+         --><li class="social"><a id="li" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
+       --></ul>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>

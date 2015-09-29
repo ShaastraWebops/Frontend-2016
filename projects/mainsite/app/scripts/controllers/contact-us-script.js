@@ -170,13 +170,6 @@ angular.module('shaastra2016App')
 		};
 		
 		$scope.init_map = function () {
-			// 	var ele = document.querySelector("#map");
-			// 	var options = {
-			// 		center: new google.maps.LatLng(12.9915, 80.2336),
-			// 		zoom: 15,
-			// 		mapTypeId: google.maps.MapTypeId.ROADMAP
-			// 	};
-			// 	var map = new google.maps.Map(ele, options);
 			var map = new google.maps.Map(document.getElementById('map'), {
 	    	center: { lat: 12.9915, lng: 80.2336 },
 	    	zoom: 15,

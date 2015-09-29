@@ -12,7 +12,6 @@ angular.module('shaastra2016App')
 
     $scope.logout = function () {
       Auth.logout();
-      // $location.url('/login'); 
       $location.path('/login');
     };
 
@@ -97,8 +96,6 @@ angular.module('shaastra2016App')
         $('.sic').click(function() {
           $('.si').hide(200);
           $('.s').show(200);
-          /*$('.s').removeClass("none");
-          $('.si').addClass("none");*/
         });
       }
     };

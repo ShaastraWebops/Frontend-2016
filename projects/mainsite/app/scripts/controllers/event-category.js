@@ -94,40 +94,6 @@ angular.module('shaastra2016App')
 			$location.hash(temp);
 		};
 
-		// var winWidth = $(window).width();
-
-		// if(winWidth < 768 ) {
-  //  		$scope.bootClassUsed = 'xs';
-  //  		$scope.noOfCols = 2;
-  //   } else if( winWidth >= 768 && winWidth <= 991) {
-  //     console.log($scope.bootClassUsed);
-  //  		$scope.noOfCols = 2;
-  //   } else if( winWidth >= 992 && winWidth <= 1199) {
-  //  		$scope.bootClassUsed = 'md';
-  //  		$scope.noOfCols = 3;
-  //   } else if( winWidth >= 1200 ) {
-  //  		$scope.bootClassUsed = 'lg';
-  //  		$scope.noOfCols = 3;
-  //   }
-
-		// angular.element($window).bind("resize", function() {
-		// 	var winWidth =  $(window).width();
-		// 	if(winWidth < 768 ) {
-		// 		$scope.bootClassUsed = 'xs';
-		// 		$scope.noOfCols = 2;
-		// 	} else if( winWidth >= 768 && winWidth <= 991) {
-		// 	  console.log($scope.bootClassUsed);
-		// 	  $scope.noOfCols = 2;
-		// 	} else if( winWidth >= 992 && winWidth <= 1199) {
-		// 		$scope.bootClassUsed = 'md';
-		// 		$scope.noOfCols = 3;
-		// 	} else if( winWidth >= 1200 ) {
-		// 		$scope.bootClassUsed = 'lg';
-		// 		$scope.noOfCols = 3;
-		// 	}
-  // 	});
-
-
 		Array.prototype.chunk = function(chunkSize) {
 	    var array = this;
 	    return [].concat.apply([],
@@ -137,23 +103,4 @@ angular.module('shaastra2016App')
 	    );
 		};
 	
-		// $scope.val = $scope.eventsJSON.events.chunk($scope.noOfCols);
-
 	});
-
-// angular.module('shaastra2016App')
-// 	.directive("scroll", function ($window) {
-// 		return function (scope, element, attrs) {
-// 			angular.element($window).bind("scroll", function() {
-// 				var ele = document.querySelector(".events");
-// 				var top = ele.getBoundingClientRect().top;
-// 				//115 is sum of event category div height and marginTop of events div - 5px for better display
-// 				if(top <= 115) {	
-// 					scope.boolFixDiv = true;
-// 				} else {
-// 					scope.boolFixDiv = false;
-// 				}
-// 				scope.$apply();
-// 			});
-// 		};
-// 	});

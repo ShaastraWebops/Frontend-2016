@@ -14,19 +14,6 @@ angular.module('shaastra2016App')
     var botm1 = angular.element(document.getElementsByClassName('.botm-1'));
     var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
 
-    // var elemboxright = angular.element(document.getElementsByClassName('.elemboxright'));
-    // var elemboxleft = angular.element(document.getElementsByClassName('.elemboxleft'));
-    
-    // var container = angular.element(document.getElementsByClassName('.container'));
-
-    // var invisiblebox1 = angular.element(document.getElementsByClassName('.invisiblebox1'));
-    // var invisiblebox2 = angular.element(document.getElementsByClassName('.invisiblebox2'));
-
-    // var lefthand = angular.element(document.getElementById('#lefthand'));
-    // var righthand = angular.element(document.getElementById('#righthand'));
-
-    // var mainContainer = angular.element(document.getElementById('#main-container'));
-
     top1.click(function () {
       $scope.name = "events";
     });
@@ -48,28 +35,6 @@ angular.module('shaastra2016App')
     botm2.click(function () {
       $scope.name = "pre-shaastra";
     });
-
-    // $(".top-1").click(function(){
-    //   $scope.name = "events";
-    // });
-    // $(".top-2").click(function(){
-    //   $scope.name = "shows";
-    // });
-    // $(".mid-1").click(function(){
-    //   $scope.name = "workshops";
-    // });
-    // $(".shaastrabox").click(function(){
-    //   $scope.name = "contact-us";
-    // });
-    // $(".mid-2").click(function(){
-    //   $scope.name = "lectures";
-    // });
-    // $(".botm-1").click(function(){
-    //   $scope.name = "social";
-    // });
-    // $(".botm-2").click(function(){
-    //   $scope.name = "pre-shaastra";
-    // });
     
     $scope.mouseDown=$("#main-container").mousedown(function (e) {
       if($('.invisiblebox2').offset()) {
@@ -91,19 +56,9 @@ angular.module('shaastra2016App')
       }
     });
 
-    /*$scope.mouseDownR=$(".elemboxright").mousedown(function(){
-    ("#lefthand").attr("src","images/handl1.png")
-     });
-    $scope.mouseUpL=$(".elemboxleft").mouseup(function(){
-    $("#righthand").attr("src","images/handr.png")
-     });*/
-/*    $scope.mouseUpR=$(".elemboxright").mouseup(function(){
-    ("#lefthand").attr("src","images/handl.png")
-     });*/
-
     $(".elemboxleft").click(function () {
       var elem = $(this);
-      var redirectTo = elem.context.attributes[1].nodeValue;
+      var redirectTo = elem.attr('link');
       elem.css({
         top: $(".container").height() / 2 - elem.width() / 16 ,
         left: $(".container").width() / 2 - elem.width() / 2,
@@ -145,7 +100,6 @@ angular.module('shaastra2016App')
                       "position" : "static"
                     });
                     $(location).attr('href', redirectTo);
-                    // $location.path(redirectTo);
                   });
             });
         });
@@ -153,7 +107,7 @@ angular.module('shaastra2016App')
 
     $(".elemboxright").click(function () {
       var elem = $(this);
-      var redirectTo = elem.context.attributes[1].nodeValue;
+      var redirectTo = elem.attr('link');
       elem.css({
         top: $(".container").height() / 2 - elem.width() / 16 ,
         right: $(".container").width() / 2 - elem.width() / 2,
@@ -195,7 +149,6 @@ angular.module('shaastra2016App')
                       "position" : "static"
                     });
                     $(location).attr('href', redirectTo);
-                    // $(location).attr('href','https://www.google.com/');
                 });
             });
         });
@@ -203,76 +156,10 @@ angular.module('shaastra2016App')
 
     $(".shaastrabox").click(function () {
       var elem = $(this);
-      var redirectTo = elem.context.attributes[1].nodeValue;
+      var redirectTo = elem.attr('link');
       $(location).attr('href', redirectTo);
       console.log($scope.name);
     });
-
-    // $(".shaastrabox").click(function () {
-    //   var elem = $(this);
-    //     $("#righthand").animate({
-    //       top: $(".container").height() / 2 - elem.height() / 2,
-    //       left: $(".container").width() / 2 - elem.width()
-    //     });
-    //     $("#lefthand").animate({
-    //       top: $(".container").height()/2 + elem.height() / 2,
-    //       left: $(".container").width() / 2 + elem.width() / 2
-    //     }, function () {
-    //         elem.css ({
-    //           "width" : "100%",
-    //           "height" : "100%",
-    //           "top": "0",
-    //           "left" : "0",
-    //           "margin-left": "0"
-    //         });
-    //         $(".text1").css({
-    //           "top" : "-5vh",
-    //           "left" : "51%",
-    //           "transform" : "translate(-50%)",
-    //           "font-size" : "4vh" 
-    //         });
-    //         $(".text2").css({
-    //           "top" : "65%",
-    //           "left" : "35%",
-    //           "font-size" : "5vh"
-    //         });
-    //         $(".number").css({
-    //           "top" : "52.9%",
-    //           "left" : "57%",
-    //           "font-size" : "5vh"
-    //         });
-    //         $(".underline").css({
-    //           "top" : "71%",
-    //           "left" : "50%",
-    //           "width" : "50vh",
-    //           "transform" : "translate(-50%)"
-    //         });
-    //         $(".text3").css({
-    //           "top" : "63%",
-    //           "left" : "50%",
-    //           "font-size" : "2vh",
-    //           "transform" : "translate(-50%)"
-    //         });
-    //         $("#righthand").animate({
-    //           top: 0,
-    //           left: -157
-    //         }, function () {
-    //             $('#righthand').css({
-    //               "position" : "static"
-    //             });
-    //           });
-    //           $("#lefthand").animate({
-    //             top: $(".container").height(),
-    //             left: $(".container").width()
-    //           }, function () {
-    //               $('#lefthand').css({
-    //                 "position" : "static"
-    //               });
-    //               $(location).attr('href','https://www.google.com/');
-    //               console.log($scope.name);
-    //             });
-    //       });
-    // });
 
 });
  
@@ -297,8 +184,6 @@ angular.module('shaastra2016App')
           //position according to mouse position
           leftHand.style.top = (y + 0) + 'px';
           leftHand.style.left = (x  + 0) + 'px';
-          // leftHand.style.top.animationTimingFunction = "linear";
-          // leftHand.style.left.animationTimingFunction = "linear";
         }); 
         
         $(".invisiblebox1,.elemboxleft").mousemove(function (e) {
@@ -321,8 +206,6 @@ angular.module('shaastra2016App')
           leftHand.style.top = "47%";
           leftHand.style.left = "75%";
         });
-
-        //red dot to appear
       }
     };
   });
