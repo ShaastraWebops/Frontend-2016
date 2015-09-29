@@ -27,9 +27,9 @@ angular.module('shaastra2016App')
     $scope.mouseUp=$("#main-container").mouseup(function (e) {
       if($('.invisiblebox1').offset()) {
         if(e.clientX<=$('.invisiblebox1').offset().left) {
-          $("#righthand").attr("src","images/handr.png");
+          $("#righthand").attr("src", "images/handr.png");
         } else {
-          $("#lefthand").attr("src","images/handl.png");
+          $("#lefthand").attr("src", "images/handl.png");
         } 
       }
     });
