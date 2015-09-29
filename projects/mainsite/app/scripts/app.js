@@ -72,7 +72,7 @@ angular
         controller: 'loginCtrl',
         controllerAs: 'login'
       })
-      .when('/contactUs', {
+      .when('/contact-us', {
         templateUrl: 'views/contact-us.html',
         controller: 'contactUsCtrl',
         controllerAs: 'contactUs'
@@ -81,6 +81,31 @@ angular
         templateUrl: 'views/dashboard.html',
         controller: 'dashboardCtrl',
         controllerAs: 'dashboard'
+      })
+      .when('/lectures', {
+        templateUrl: 'views/lectures.html',
+        controller: 'lecturesCtrl',
+        controllerAs: 'lectures'
+      })
+      .when('/pre-shaastra', {
+        templateUrl: 'views/pre-shaastra.html',
+        controller: 'preShaastraCtrl',
+        controllerAs: 'preShaastra'
+      })
+      .when('/shows-and-exhibitions', {
+        templateUrl: 'views/shows-and-exhibitions.html',
+        controller: 'showsExhibitonsCtrl',
+        controllerAs: 'showsExhibitons'
+      })
+      .when('/about-us', {
+        templateUrl: 'views/about-us.html',
+        controller: 'aboutUsCtrl',
+        controllerAs: 'aboutUs'
+      })
+      .when('/sponsors', {
+        templateUrl: 'views/sponsors.html',
+        controller: 'sponsorsCtrl',
+        controllerAs: 'sponsors'
       })
       .otherwise({
         redirectTo: '/'
