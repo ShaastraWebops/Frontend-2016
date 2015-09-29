@@ -150,15 +150,14 @@ angular
         }
       });
 
-      // console.log($('.c'));
-      if($('.c').length !== 0) {
+      if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");
         $('.mn-social').addClass("out");
         $('.menu').removeClass("mnopen");
         $('.c').removeClass("block");
         $('.o').removeClass("none");
         $('.o').addClass("inblock");
-        $('.o').animate({left:"-=145px"},200);
+        $('.o').animate({left:"-=145px"}, 200);
         $('#backdrop').css("display", "none");        
       } 
 
