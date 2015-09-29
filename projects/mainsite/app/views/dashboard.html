@@ -1,3 +1,4 @@
+<!-- <div class="container-fluid " style="overflow:scroll"> -->
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
 	<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1" class="list">
 		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
@@ -6,7 +7,7 @@
 				<tr ng-repeat="event in events.eventsList track by $index">
 					<th scope="row">{{$index+1}}</th>
 					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.eventName}}</div></a></td>
-					<td><a href="" ng-click="unregister($index)" class="fontNormal">unregister</a></td>
+					<td><div ng-click="unregister($index)" class="fontNormal btn btn-primary">unregister</div></td>
 				</tr>
 			</tbody>
     </table>
@@ -17,7 +18,7 @@
 				<tr ng-repeat="event in events.eventsList track by $index">
 					<th scope="row">{{$index+1}}</th>
 					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.teamname}}</div></a></td>
-					<td><a href="" ng-click="unregister($index)" class="fontNormal">leave</a></td>
+					<td><div  ng-click="unregister($index)" class="fontNormal btn btn-primary">leave</div></td>
 				</tr>
 			</tbody>
     </table>
@@ -49,3 +50,4 @@
 		</div>
   </div>
 </div>
+<!-- </div> -->
