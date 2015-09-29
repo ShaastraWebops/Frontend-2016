@@ -6,79 +6,75 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
 
-    var top1 = angular.element(document.getElementsByClassName('.top-1'));
-    var top2 = angular.element(document.getElementsByClassName('.top-2'));
-    var mid1 = angular.element(document.getElementsByClassName('.mid-1'));
-    var shaastrabox = angular.element(document.getElementsByClassName('.shaastrabox'));
-    var mid2 = angular.element(document.getElementsByClassName('.mid-2'));
-    var botm1 = angular.element(document.getElementsByClassName('.botm-1'));
-    var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
+    // var top1 = angular.element(document.getElementsByClassName('.top-1'));
+    // var top2 = angular.element(document.getElementsByClassName('.top-2'));
+    // var mid1 = angular.element(document.getElementsByClassName('.mid-1'));
+    // var shaastrabox = angular.element(document.getElementsByClassName('.shaastrabox'));
+    // var mid2 = angular.element(document.getElementsByClassName('.mid-2'));
+    // var botm1 = angular.element(document.getElementsByClassName('.botm-1'));
+    // var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
 
-    $scope.mouseDown=$("#main-container").mousedown(function (e) {
-      if($('.invisiblebox2').offset()) {
-        if(e.clientX<=$('.invisiblebox2').offset().left) {
-          $("#righthand").attr("src", "images/handr1.png");
-        } else {
-          $("#lefthand").attr("src", "images/handl1.png");
-        }
-      } 
-    });
+    // $scope.mouseDown=$("#main-container").mousedown(function (e) {
+    //   if($('.invisiblebox2').offset()) {
+    //     if(e.clientX<=$('.invisiblebox2').offset().left) {
+    //       $("#righthand").attr("src", "images/handr1.png");
+    //     } else {
+    //       $("#lefthand").attr("src", "images/handl1.png");
+    //     }
+    //   } 
+    // });
     
-    $scope.mouseUp=$("#main-container").mouseup(function (e) {
-      if($('.invisiblebox1').offset()) {
-        if(e.clientX<=$('.invisiblebox1').offset().left) {
-          $("#righthand").attr("src", "images/handr.png");
-        } else {
-          $("#lefthand").attr("src", "images/handl.png");
-        } 
-      }
-    });
+    // $scope.mouseUp=$("#main-container").mouseup(function (e) {
+    //   if($('.invisiblebox1').offset()) {
+    //     if(e.clientX<=$('.invisiblebox1').offset().left) {
+    //       $("#righthand").attr("src", "images/handr.png");
+    //     } else {
+    //       $("#lefthand").attr("src", "images/handl.png");
+    //     } 
+    //   }
+    // });
 
     $(".elemboxleft").click(function () {
       var elem = $(this);
       var redirectTo = elem.attr('link');
       elem.css({
-        top: $(".container").height() / 2 - elem.width() / 16 ,
-        left: $(".container").width() / 2 - elem.width() / 2,
+        top: $("#main-container").height()/2 - elem.width()/2,
+        left: $("#main-container").width()/2 - elem.width()/2,
         zIndex: 500 
       });
       $("#righthand").animate({
-        top: $(".container").height() / 2 ,
-        left: $(".container").width() / 2 - elem.width() / 2
+        top: $("#main-container").height()/2 - elem.width()/2,
+        left: $("#main-container").width()/2 - elem.width()
       }, function () {
-          $("#righthand").animate({
-            top: "-=" + elem.height()/2,
-            left: "-=" + elem.width()/2
-          });
-          $("#lefthand").animate({
-            top: $(".container").height()/2 + elem.height() / 2,
-            left: $(".container").width()/2 + elem.width() / 2
-          }, function () {
-              elem.css ({
-                "width" : "100%",
-                "height" : "100%",
-                "top": "1%",
-                "left" : "0",
-                "line-height": elem.height()/12,
-                "font-size" : "8vh"
-              });
-              $("#righthand").animate({
-                top: 0,
-                left: -157
-              }, function () {
-                  $('#righthand').css({
-                    "position" : "static"
-                  });
+        $("#lefthand").animate({
+          top: $("#main-container").height()/2 + elem.height()/2,
+          left: $("#main-container").width()/2 + elem.width()/2
+        }, function () {
+            elem.css ({
+              "width" : "100%",
+              "height" : "100%",
+              "top": "10px",
+              "left" : "0",
+              "line-height": elem.height()/12,
+              "font-size" : "8vh"
+            });
+            $("#righthand").animate({
+              top: 0,
+              left: 0
+            }, function () {
+                $('#righthand').css({
+                  "position" : "fixed"
                 });
-                $("#lefthand").animate({
-                  top: $(".container").height(),
-                  left: $(".container").width()
-                }, function () {
-                    $('#lefthand').css({
-                      "position" : "static"
-                    });
-                    $(location).attr('href', redirectTo);
+              });
+              $("#lefthand").animate({
+                top: $("#main-container").height(),
+                left: $("#main-container").width()
+              }, function () {
+                  $('#lefthand').css({
+                    "position" : "fixed"
                   });
+                  $(location).attr('href', redirectTo);
+                });
             });
         });
     });
@@ -87,46 +83,42 @@ angular.module('shaastra2016App')
       var elem = $(this);
       var redirectTo = elem.attr('link');
       elem.css({
-        top: $(".container").height() / 2 - elem.width() / 16 ,
-        right: $(".container").width() / 2 - elem.width() / 2,
+        top: $("#main-container").height()/2 - elem.width()/2,
+        right: $("#main-container").width()/2 - elem.width()/2,
         zIndex: 500 
       });
-      $("#lefthand").animate({
-        top: $(".container").height() / 2 ,
-        left: $(".container").width() / 2 - elem.width() / 2
+      $("#righthand").animate({
+        top: $("#main-container").height()/2 - elem.width()/2,
+        left: $("#main-container").width()/2 - elem.width()
       }, function () {
-          $("#righthand").animate({
-            top: $(".container").height() / 2 - elem.height() / 2,
-            left: $(".container").width() / 2 - elem.width()
-          });
-          $("#lefthand").animate({
-            top: $(".container").height()/2 + elem.height() / 2,
-            left: $(".container").width() / 2 + elem.width() / 2
-          }, function () {
-              elem.css ({
-                "width" : "100%",
-                "height" : "100%",
-                "top": "1%",
-                "right" : "0",
-                "line-height": elem.height()/12,
-                "font-size" : "8vh"
-              });
-              $("#righthand").animate({
-                top: 0,
-                right: -157
-               }, function () {
-                  $('#righthand').css({
-                    "position" : "static"
-                  });
+        $("#lefthand").animate({
+          top: $("#main-container").height()/2 + elem.height()/2,
+          left: $("#main-container").width()/2 + elem.width()/2
+        }, function () {
+            elem.css ({
+              "width" : "100%",
+              "height" : "100%",
+              "top": "10px",
+              "left" : "0",
+              "line-height": elem.height()/12,
+              "font-size" : "8vh"
+            });
+            $("#righthand").animate({
+              top: 0,
+              left: 0
+            }, function () {
+                $('#righthand').css({
+                  "position" : "fixed"
                 });
-                $("#lefthand").animate({
-                  top: $(".container").height(),
-                  left: $(".container").width()
-                }, function () {
-                    $('#lefthand').css({
-                      "position" : "static"
-                    });
-                    $(location).attr('href', redirectTo);
+              });
+              $("#lefthand").animate({
+                top: $("#main-container").height(),
+                left: $("#main-container").width()
+              }, function () {
+                  $('#lefthand').css({
+                    "position" : "fixed"
+                  });
+                  $(location).attr('href', redirectTo);
                 });
             });
         });
