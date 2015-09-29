@@ -6,14 +6,12 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
 
-    $scope.name = "events";
-
     var top1 = angular.element(document.getElementsByClassName('.top-1'));
     var top2 = angular.element(document.getElementsByClassName('.top-2'));
     var mid1 = angular.element(document.getElementsByClassName('.mid-1'));
     var shaastrabox = angular.element(document.getElementsByClassName('.shaastrabox'));
     var mid2 = angular.element(document.getElementsByClassName('.mid-2'));
-    var botm1 = angular.element(document.getElementsByClassName('.botm11'));
+    var botm1 = angular.element(document.getElementsByClassName('.botm-1'));
     var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
 
     // var elemboxright = angular.element(document.getElementsByClassName('.elemboxright'));
@@ -105,6 +103,7 @@ angular.module('shaastra2016App')
 
     $(".elemboxleft").click(function () {
       var elem = $(this);
+      var redirectTo = elem.context.attributes[1].nodeValue;
       elem.css({
         top: $(".container").height() / 2 - elem.width() / 16 ,
         left: $(".container").width() / 2 - elem.width() / 2,
@@ -145,8 +144,8 @@ angular.module('shaastra2016App')
                     $('#lefthand').css({
                       "position" : "static"
                     });
-                    // $(location).attr('href','https://www.google.co.in/');
-                    console.log($scope.name);
+                    $(location).attr('href', redirectTo);
+                    // $location.path(redirectTo);
                   });
             });
         });
@@ -154,6 +153,7 @@ angular.module('shaastra2016App')
 
     $(".elemboxright").click(function () {
       var elem = $(this);
+      var redirectTo = elem.context.attributes[1].nodeValue;
       elem.css({
         top: $(".container").height() / 2 - elem.width() / 16 ,
         right: $(".container").width() / 2 - elem.width() / 2,
@@ -194,15 +194,17 @@ angular.module('shaastra2016App')
                     $('#lefthand').css({
                       "position" : "static"
                     });
+                    $(location).attr('href', redirectTo);
                     // $(location).attr('href','https://www.google.com/');
-                    console.log($scope.name);
                 });
             });
         });
     });
 
     $(".shaastrabox").click(function () {
-      $(location).attr('href','https://www.google.com/');
+      var elem = $(this);
+      var redirectTo = elem.context.attributes[1].nodeValue;
+      $(location).attr('href', redirectTo);
       console.log($scope.name);
     });
 

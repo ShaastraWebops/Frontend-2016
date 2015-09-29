@@ -107,6 +107,11 @@ angular
         controller: 'sponsorsCtrl',
         controllerAs: 'sponsors'
       })
+      .when('/social', {
+        templateUrl: 'views/social.html',
+        controller: 'socialCtrl',
+        controllerAs: 'social'
+      })
       .otherwise({
         redirectTo: '/'
       });
