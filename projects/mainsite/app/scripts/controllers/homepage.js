@@ -14,28 +14,6 @@ angular.module('shaastra2016App')
     var botm1 = angular.element(document.getElementsByClassName('.botm-1'));
     var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
 
-    top1.click(function () {
-      $scope.name = "events";
-    });
-    top2.click(function () {
-      $scope.name = "shows";
-    });
-    mid1.click(function () {
-      $scope.name = "workshops";
-    });
-    shaastrabox.click(function () {
-      $scope.name = "contact-us";
-    });
-    mid2.click(function () {
-      $scope.name = "lectures";
-    });
-    botm1.click(function () {
-      $scope.name = "social";
-    });
-    botm2.click(function () {
-      $scope.name = "pre-shaastra";
-    });
-    
     $scope.mouseDown=$("#main-container").mousedown(function (e) {
       if($('.invisiblebox2').offset()) {
         if(e.clientX<=$('.invisiblebox2').offset().left) {
