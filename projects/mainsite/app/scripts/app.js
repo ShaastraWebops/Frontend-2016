@@ -143,12 +143,25 @@ angular
   })
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
-    $rootScope.$on('$stateChangeStart', function (event, next) {
+    $rootScope.$on('$routeChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {
         if (next.authenticate && !loggedIn) {
           $location.url('/login');
         }
       });
+
+      // console.log($('.c'));
+      if($('.c').length !== 0) {
+        $('.down .list').removeClass("clicked");
+        $('.mn-social').addClass("out");
+        $('.menu').removeClass("mnopen");
+        $('.c').removeClass("block");
+        $('.o').removeClass("none");
+        $('.o').addClass("inblock");
+        $('.o').animate({left:"-=145px"},200);
+        $('#backdrop').css("display", "none");        
+      } 
+
     });
   });
 
