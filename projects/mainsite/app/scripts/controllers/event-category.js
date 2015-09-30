@@ -10,12 +10,12 @@ angular.module('shaastra2016App')
 
 		var eventCategoryId = $routeParams.eventCategoryId;
 		$scope.eventsJSON = [];
-		$http.get('http://0.0.0.0:8001/api/eventLists/events/' + eventCategoryId)
+		$http.get('http://shaastra.org:8001/api/eventLists/events/' + eventCategoryId)
 			.then(function (response) {
 				var num = response.data.events.length;
 				for(var i=0; i<num; i++) {
 					if(response.data.events[i].acceptedByAdmin === true) {
-						response.data.events[i].imageURL = 'http://0.0.0.0:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
+						response.data.events[i].imageURL = 'http://shaastra.org:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
 					} else {
 						response.data.events.splice(i, 1);
 					}

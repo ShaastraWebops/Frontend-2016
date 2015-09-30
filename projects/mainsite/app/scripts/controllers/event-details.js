@@ -29,7 +29,7 @@ angular.module('shaastra2016App')
 		];
     
     $scope.eve = [];
-    $http.get('http://0.0.0.0:8001/api/events/showWeb/' + $routeParams.eventId)
+    $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.eventId)
       .then(function (response) {
         $scope.eve = response.data;
       });

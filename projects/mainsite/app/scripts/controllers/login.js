@@ -11,7 +11,7 @@ angular.module('shaastra2016App')
     .then( function() {
       // Logged in, redirect to home
       $location.path('/dashboard');
-      $http.get('http://0.0.0.0:8001/api/users/me')
+      $http.get('http://shaastra.org:8001/api/users/me')
         .then(function (response) {
           console.log(response.data);
         });

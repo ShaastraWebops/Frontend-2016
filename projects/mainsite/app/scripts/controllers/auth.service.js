@@ -20,7 +20,7 @@ angular.module('shaastra2016App')
         var cb = callback || angular.noop;
         var deferred = $q.defer();
 
-        $http.post('http://0.0.0.0:8001/auth/local', {
+        $http.post('http://shaastra.org:8001/auth/local', {
           email: user.email,
           password: user.password
         }).

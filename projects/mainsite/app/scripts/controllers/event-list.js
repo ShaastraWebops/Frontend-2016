@@ -50,9 +50,10 @@ angular.module('shaastra2016App')
 		$scope.posY = 0;
 
 		$scope.eventList = [];
-		$http.get('http://0.0.0.0:8001/api/eventLists/events')
+		$http.get('http://shaastra.org:8001/api/eventLists/events')
 			.then(function (response) {
 				$scope.eventList = response.data;
+				console.log(response);
 			});
 
 		$scope.moveX = function (pixels) {
