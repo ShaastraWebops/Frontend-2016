@@ -1,0 +1,65 @@
+.event-info > img:nth-child(odd) {
+	float: right;
+}
+
+.event-info > img:nth-child(even) {
+	float: left;
+}
+
+.remove-padding {
+	padding: 0px;
+}
+
+.remove-margin {
+	margin: 0px;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.btn-custom {
+	border: 3px solid #35C8B6;	
+	padding: 15px 30px 15px 30px;
+	border-radius: 0px !important;
+}
+
+.btn-custom:hover {
+	background-color: #35C8B6;
+	border: 3px solid #35C8B6;
+}
+
+.navbar-default {
+  background-color: #35C8B6;
+  padding-top: 15px;
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: black;
+  font-family: 'myriad-pro-font';
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: white;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #35C8B6;
+  color: white;
+}
+
+.navbar-nav > li {
+  text-align: center;
+}
+
+.toggle-btn-custom {
+	margin-right: 5%;
+}

@@ -1,0 +1,504 @@
+.horizontalRule{
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+.menu-link:hover{
+      text-decoration: none;
+    }
+#menu-container {
+    position:absolute;
+    right:-200px;
+    top:0;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    width:200px;
+    background-color: #fff;
+    z-index: 50;
+  }
+.menu-list{
+      display: block;
+      width: 200px;
+    padding-top: 5px;
+    padding-bottom:0px;
+    text-align:center;
+    letter-spacing: 3px;
+  }
+.menu-link{
+    color: black;
+    text-decoration: none;
+  }
+  .headings{
+    -webkit-transition: all 0.3s;
+  }
+  #closemenu{
+    position:absolute;
+    right:30px;
+    color: white;
+    cursor: pointer;
+  }
+  .line{
+    background-color: black;
+    width: 30px;
+    height: 3px;
+  }
+  #firstline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:12px;
+    -webkit-animation:appear1 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation:appear1 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:appear1 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:appear1 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+  }
+  #secondline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:18px;
+    -webkit-animation:appear1 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.1s;
+    -moz-animation:appear1 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.1s;
+    -ms-animation:appear1 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.1s;
+    -o-animation:appear1 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.1s;
+  }
+  #thirdline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:24px;
+    -webkit-animation:appear1 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.2s;
+    -moz-animation:appear1 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.2s;
+    -ms-animation:appear1 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.2s;
+    -o-animation:appear1 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.2s;
+  }
+  #fourthline{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top:30px;
+    opacity: 0;
+  }
+  
+  #closefirstline{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top:20px;
+    -webkit-transform:rotate(45deg);
+    -webkit-animation:rotationback1 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -moz-transform:rotate(45deg);
+    -moz-animation:rotationback1 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-transform:rotate(45deg);
+    -ms-animation:rotationback1 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-transform:rotate(45deg);
+    -o-animation:rotationback1 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+  }
+  #closesecondline{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top:20px;
+    -webkit-transform:rotate(-45deg);
+    -webkit-animation:rotationback2 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -moz-transform:rotate(-45deg);
+    -moz-animation:rotationback2 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-transform:rotate(-45deg);
+    -ms-animation:rotationback2 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-transform:rotate(-45deg);
+    -o-animation:rotationback2 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+  }
+  #closeiconcontainer{
+    position: absolute;
+    top:0;
+    right: 120px;
+    width: 30px;
+    height: 40px;
+  }
+  #closeiconcontainer:hover #closefirstline{
+    -webkit-animation:rotation1 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation:rotation1 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:rotation1 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:rotation1 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+  }
+  #closeiconcontainer:hover #closesecondline{
+    -webkit-animation:rotation2 0.2s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation:rotation2 0.2s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:rotation2 0.2s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:rotation2 0.2s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+  }
+  #openiconcontainer{
+    height: 50px;
+    width: 30px;
+  }
+  #openiconcontainer:hover #firstline{
+    opacity: 0;
+    -webkit-animation:disappear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation:disappear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation:disappear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -o-animation:disappear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+  }
+  #openiconcontainer:hover #secondline{
+    opacity: 0;
+    -webkit-animation:appear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.1s;
+    -moz-animation:appear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.1s;
+    -ms-animation:appear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.1s;
+    -o-animation:appear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.1s;
+  }
+  #openiconcontainer:hover #thirdline{
+    opacity: 0;
+    -webkit-animation:appear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.2s;
+    -moz-animation:appear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.2s;
+    -ms-animation:appear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.2s;
+    -o-animation:appear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.2s;
+  }
+  #openiconcontainer:hover #fourthline{
+    opacity: 0;
+    -webkit-animation:appear 0.3s 1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:0.3s;
+    -moz-animation:appear 0.3s 1;
+    -moz-animation-timing-function:linear;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-delay:0.3s;
+    -ms-animation:appear 0.3s 1;
+    -ms-animation-timing-function:linear;
+    -ms-animation-fill-mode:forwards;
+    -ms-animation-delay:0.3s;
+    -o-animation:appear 0.3s 1;
+    -o-animation-timing-function:linear;
+    -o-animation-fill-mode:forwards;
+    -o-animation-delay:0.3s;
+  }
+  @-webkit-keyframes rotation1{
+    0%{
+      -webkit-transform:rotateZ(45deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(135deg);
+    }
+  }
+  @-webkit-keyframes rotation2{
+    0%{
+      -webkit-transform:rotateZ(-45deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(45deg);
+    }
+  }
+  @-webkit-keyframes rotationback1{
+    0%{
+      -webkit-transform:rotateZ(135deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(45deg);
+    }
+  }
+  @-webkit-keyframes rotationback2{
+    0%{
+      -webkit-transform:rotateZ(45deg);
+    }
+    100%{
+      -webkit-transform:rotateZ(-45deg);
+    }
+  }
+  @-webkit-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
+
+  @-moz-keyframes rotation1{
+    0%{
+      -moz-transform:rotateZ(45deg);
+    }
+    100%{
+      -moz-transform:rotateZ(135deg);
+    }
+  }
+  @-moz-keyframes rotation2{
+    0%{
+      -moz-transform:rotateZ(-45deg);
+    }
+    100%{
+      -moz-transform:rotateZ(45deg);
+    }
+  }
+  @-moz-keyframes rotationback1{
+    0%{
+      -moz-transform:rotateZ(135deg);
+    }
+    100%{
+      -moz-transform:rotateZ(45deg);
+    }
+  }
+  @-moz-keyframes rotationback2{
+    0%{
+      -moz-transform:rotateZ(45deg);
+    }
+    100%{
+      -moz-transform:rotateZ(-45deg);
+    }
+  }
+  @-moz-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @-ms-keyframes rotation1{
+    0%{
+      -ms-transform:rotateZ(45deg);
+    }
+    100%{
+      -ms-transform:rotateZ(135deg);
+    }
+  }
+  @-ms-keyframes rotation2{
+    0%{
+      -ms-transform:rotateZ(-45deg);
+    }
+    100%{
+      -ms-transform:rotateZ(45deg);
+    }
+  }
+  @-ms-keyframes rotationback1{
+    0%{
+      -ms-transform:rotateZ(135deg);
+    }
+    100%{
+      -ms-transform:rotateZ(45deg);
+    }
+  }
+  @-ms-keyframes rotationback2{
+    0%{
+      -ms-transform:rotateZ(45deg);
+    }
+    100%{
+      -ms-transform:rotateZ(-45deg);
+    }
+  }
+  @-ms-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @-o-keyframes rotation1{
+    0%{
+      -o-transform:rotateZ(45deg);
+    }
+    100%{
+      -o-transform:rotateZ(135deg);
+    }
+  }
+  @-o-keyframes rotation2{
+    0%{
+      -o-transform:rotateZ(-45deg);
+    }
+    100%{
+      -o-transform:rotateZ(45deg);
+    }
+  }
+  @-o-keyframes rotationback1{
+    0%{
+      -o-transform:rotateZ(135deg);
+    }
+    100%{
+      -o-transform:rotateZ(45deg);
+    }
+  }
+  @-o-keyframes rotationback2{
+    0%{
+      -o-transform:rotateZ(45deg);
+    }
+    100%{
+      -o-transform:rotateZ(-45deg);
+    }
+  }
+  @-o-keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-o-keyframes appear1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @-o-keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+#shaastra-menu-logo{
+	position: absolute;
+	height: 5%;
+	left: 0;
+}

@@ -1,0 +1,11 @@
+.text-right {
+	text-align: right;
+}
+
+.workshop-info > img:nth-child(odd) {
+	float: right;
+}
+
+.workshop-info > img:nth-child(even) {
+	float: left;
+}
