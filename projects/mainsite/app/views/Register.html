@@ -16,6 +16,20 @@
 		</div></div>
 		<br>
 
+		<div id="college" class="input-group">
+			<input type="text" ng-model="college.name" class="form-control" placeholder="Enter your college" auto-complete>
+			<ul ng-if="suggestCollegeBool" ng-style="{'position': 'absolute', 'z-index': '10', 'padding-top': '60px'}">
+				<li ng-repeat="college in collegeSuggestions" ng-click="selectSuggestedCollege(college)" ng-style="{'margin-top':'10px'}">
+					<p ng-bind="college.name"></p>
+				</li>
+			</ul>
+			<p ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here to add college if it is not shown</p>
+			<div ng-hide="existingCollege">
+				<input type="text" ng-model="college.name" id="college" class="form-control" placeholder="Enter your college">
+				<button class="btn btn-success" ng-click="addCollege()">Add</button>
+			</div>
+		</div>
+
 		<div id="email" class="input-group">
 		  <span class="input-group-addon"><img src="images/at.png" alt="at" height="20px" width="20px"></img></span>
 		  <input type="text"  ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
