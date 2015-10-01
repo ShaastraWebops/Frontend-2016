@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-  .controller('registerCtrl', function ($scope, Auth, $location) {
+  .controller('registerCtrl', function ($scope) {
     $scope.UserName = "";
     $scope.Password = "";
     $scope.email = "";
