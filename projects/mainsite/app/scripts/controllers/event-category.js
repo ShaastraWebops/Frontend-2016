@@ -7,7 +7,7 @@ angular.module('shaastra2016App')
     html.css({'overflow-y': 'scroll'});
 
 		$scope.boolFixDiv = false;
-
+    $scope.message = 'Loading...';
 		var eventCategoryId = $routeParams.eventCategoryId;
 		$scope.eventsJSON = [];
 		$http.get('http://shaastra.org:8001/api/eventLists/events/' + eventCategoryId)
@@ -21,6 +21,7 @@ angular.module('shaastra2016App')
 					}
 				}
 				$scope.eventsJSON = response.data;
+				$scope.message = 'Stay tuned for Updates!';
 			});
 
 		$scope.eventsJSON2 = {
