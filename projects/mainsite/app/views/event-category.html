@@ -7,20 +7,22 @@
 		  		<img class="img-responsive category-image" id="event-category-image" ng-src="http://shaastra.org:8001/api/uploads/{{eventsJSON.imageid}}/{{eventsJSON.imagename}}">
 				</div>
 	  	</div>
-	  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
+	  	<div id="scroll-down"  ng-click="scrollDown('event-category-name')">
 		  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
 	  	</div>
 		</div>
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row" ng-if="eventsJSON.events.length">
 	  		<div id="event-category-name" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 						<span ng-bind="eventsJSON.title"></span>
 	   	  </div>
 			</div>
 
-			<div class="makeCenter" ng-if="!eventsJSON.events.length">
-				<h1>Stay tuned for Updates!</h1>
-			</div>
+			<article ng-if="!eventsJSON.events.length">
+      	<div class="makeCenter">
+        	<h1><b>{{ message }}</b></h1>
+      	</div>
+    	</article> 
 
 			<div class="row" ng-if="eventsJSON.events.length">
 				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">

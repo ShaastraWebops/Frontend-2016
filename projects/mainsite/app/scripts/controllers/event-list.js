@@ -50,10 +50,11 @@ angular.module('shaastra2016App')
 		$scope.posY = 0;
 
 		$scope.eventList = [];
+		$scope.message = 'Loading...';
 		$http.get('http://shaastra.org:8001/api/eventLists/events')
 			.then(function (response) {
 				$scope.eventList = response.data;
-				console.log(response);
+				$scope.message = 'Stay tuned for Updates!';
 			});
 
 		$scope.moveX = function (pixels) {
