@@ -149,7 +149,9 @@ article {
   -o-transition : -o-transform 0.3s ease-out;
   transition : transform 0.3s ease-out;
 }
-
+.wrap1{
+  width:100%;
+}
 .slider {
   width: 105%;
   height: 100%;
