@@ -44,7 +44,10 @@ angular.module('shaastra2016App')
 		    imgUrl: "images/Spotlight.jpg",
 			},
 		];
-
+		$scope.width_adjust=function(len){
+			len=(len*90)vh;
+			document.getElementById('flow').css({'width':'len'})
+		};
 		// this.details = lists;
 		$scope.posX = 0;
 		$scope.posY = 0;
