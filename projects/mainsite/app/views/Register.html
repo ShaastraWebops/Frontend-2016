@@ -18,11 +18,13 @@
 
 		<div id="college" class="input-group">
 			<input type="text" ng-model="college.name" class="form-control" placeholder="Enter your college" auto-complete>
-			<ul ng-if="suggestCollegeBool" ng-style="{'position': 'absolute', 'z-index': '10', 'padding-top': '60px'}">
-				<li ng-repeat="college in collegeSuggestions" ng-click="selectSuggestedCollege(college)" ng-style="{'margin-top':'10px'}">
+			<div id="college-suggestions" class="container-fluid" ng-if="suggestCollegeBool">
+			<ul>
+				<li ng-repeat="college in collegeSuggestions" ng-click="selectSuggestedCollege(college)" class="col-sug-ele">
 					<p ng-bind="college.name"></p>
 				</li>
 			</ul>
+			</div>
 			<p ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here to add college if it is not shown</p>
 			<div ng-hide="existingCollege">
 				<input type="text" ng-model="college.name" id="college" class="form-control" placeholder="Enter your college">

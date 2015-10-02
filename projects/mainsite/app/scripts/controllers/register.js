@@ -23,6 +23,7 @@ angular.module('shaastra2016App')
         else{
             scope.suggestCollegeBool = false;
         }
+        console.log(scope.collegesList);
     });
     };
    })
@@ -72,7 +73,9 @@ angular.module('shaastra2016App')
     }
 
     $scope.selectSuggestedCollege = function(college){
-        $scope.college = college;
+        $scope.college = {};
+        $scope.college.name = college.name;
+        $scope.college.id = college.id;
         $scope.suggestCollegeBool = false;
     }
 

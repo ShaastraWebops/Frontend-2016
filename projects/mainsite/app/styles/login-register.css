@@ -13,6 +13,39 @@
     width: 300px;
     min-width: 300px;
 }
+#college{
+    position: relative;
+    margin-top: 2%;
+    width: 350px;
+    min-width: 350px;
+}
+#college-suggestions{
+    position: absolute;
+    z-index: 10;
+    margin-top: 9.5%;
+    border-color: #848484;
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+    height: 0 auto;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    background-color: #ffffff;
+}
+.col-sug-ele{
+    padding-top: 0px; 
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    width: 100%;    
+}
+.col-sug-ele:hover{
+    background-color: #E2E2E2;
+}
 #email{
     position: relative;
     top: 2%;
