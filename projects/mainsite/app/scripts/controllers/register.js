@@ -1,10 +1,87 @@
 'use strict';
+
 angular.module('shaastra2016App')
-  .controller('registerCtrl', function ($scope) {
+   .directive('autoComplete', function(){
+    return function(scope){
+        scope.$watch('college.name', function(){
+        var suggestions = [];
+        var matchTerm = new RegExp(scope.college.name.toUpperCase(), 'g');
+        for(var i=0; i<scope.collegesList.length; i++){
+            var match = scope.collegesList[i].name.toUpperCase().match(matchTerm);
+            if(match && match.length>0){
+                suggestions.push(scope.collegesList[i]);
+            }
+        };
+        scope.collegeSuggestions = suggestions;
+        if(suggestions && suggestions.length>0 && scope.college.name!=''){
+            if(suggestions[0].name.toUpperCase()==scope.college.name.toUpperCase()){
+                scope.suggestCollegeBool = false;
+            }
+            else
+                scope.suggestCollegeBool = true;
+        }
+        else{
+            scope.suggestCollegeBool = false;
+        }
+        console.log(scope.collegesList);
+    });
+    };
+   })
+   .controller('registerCtrl', function ($scope) {
+
     $scope.UserName = "";
     $scope.Password = "";
     $scope.email = "";
+    $scope.college = {};
+    $scope.college.name = "";
+    $scope.college.id = "";
+    $scope.collegeSuggestions = [];
     $scope.repassword = "";
+    $scope.existingCollege = 1;
+    
+    $scope.collegesList = [
+    {
+        'id' : 1,
+        'name' : 'Chennai'
+    },
+    {
+        'id' : 2,
+        'name' :'Mumbai'
+    },
+    {
+        'id' : 3,
+        'name' : 'Delhi'
+    },
+    {
+        'id' : 4,
+        'name' :'Kanpur'
+    },
+    {
+        'id' : 5,
+        'name' : 'Kharaghpur'
+    }
+    ];
+
+    $scope.toggleNewCollegeDiv = function(){
+        $scope.existingCollege = !$scope.existingCollege;
+        var text = document.getElementById("toggleCollegeText");
+        if($scope.existingCollege){
+        }
+        else{
+            text.innerHTML = "Click here to add college if it is not shown";
+        }
+    }
+
+    $scope.selectSuggestedCollege = function(college){
+        $scope.college = {};
+        $scope.college.name = college.name;
+        $scope.college.id = college.id;
+        $scope.suggestCollegeBool = false;
+    }
+
+    $scope.addCollege = function(){
+        //Make http request to store the details
+    }
 
     // Auth.createUser({
     //   name: '234',
