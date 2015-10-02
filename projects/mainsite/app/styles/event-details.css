@@ -1,3 +1,14 @@
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #000000; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #ffffff; 
+}
 .evhead {
 	font-variant: small-caps;
 	font-family: arial;
