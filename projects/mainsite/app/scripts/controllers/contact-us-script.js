@@ -15,7 +15,7 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Shivaprasad T R",
 			 		phone: "9176014050",
-			 		mail: "trshivaprasad@gmail.com"
+			 		mail: "shiva@shaastra.org"
 			  }]
 			}, 
 			{
@@ -24,12 +24,12 @@ angular.module('shaastra2016App')
 		 	  contacts: [{
 		 			personName: "Naman Garg",
 		 			phone: "9092603977",
-		 			mail: "nmngrg3a@gmail.com"
+		 			mail: "naman@shaastra.org"
 	 			},
 		 		{
 		 			personName: "Bhagyesh Chaturvedi",
 		 			phone: "9884182442",
-		 			mail: "bhagyesh.chaturvedi94@gmail.com"
+		 			mail: "bhagyesh@shaastra.org"
 		 		}]
 		 	},
 			{
@@ -38,17 +38,17 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Siddharth Ahuja",
 			 		phone: "8695108319",
-			 		mail: "sahuja0302@gmail.com"
+			 		mail: "sid@shaastra.org"
 			 	},
 			 	{
 			 		personName: "TK Balasaravanan",
 			 		phone: "9840892717",
-			 		mail: "balatk95@gmail.com"
+			 		mail: "bala@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Ajinkya",
 			 		phone: "9087863454",
-			 		mail: "ajinkya1mane@gmail.com"
+			 		mail: "ajinkya@shaastra.org"
 			 	}]
 			},
 			{
@@ -57,12 +57,12 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Botcha Pavana Kumar",
 			 		phone: "9092006577",
-			 		mail: "pavankmr1994@gmail.com"
+			 		mail: "pavan@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Ravi Kumar G.D",
 			 		phone: "9043814198",
-			 		mail: "ravigollapudi94@gmail.com"
+			 		mail: "ravi@shaastra.org"
 			 	}]
 			},
 			{
@@ -71,12 +71,12 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Amit Kumar Jha",
 			 		phone: "9677161556",
-			 		mail: "ajhaamit39@gmail.com"
+			 		mail: "amit@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Geo Davis",
 			 		phone: "7845657286",
-			 		mail: "geodavis88@gmail.com"
+			 		mail: "geo@shaastra.org"
 			 	}]
 			},
 			{
@@ -85,17 +85,17 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Bhavik Rasyara",
 			 		phone: "8939317150",
-			 		mail: ""
+			 		mail: "bhavik@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Shashanka Rao",
 			 		phone: "9498098063",
-			 		mail: ""
+			 		mail: "shashanka@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Mahesh Kurup U",
 			 		phone: "9444443592",
-			 		mail: "mku1990@gmail.com"
+			 		mail: "kurup@shaastra.org"
 			 	}]
 			},
 			{
@@ -104,7 +104,7 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Animesh Bagora",
 			 		phone: "9884299639",
-			 		mail: "animesh.bagora@gmail.com"
+			 		mail: "animesh.bagora@shaastra.org"
 			 	}]
 			},
 			{
@@ -113,17 +113,17 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Saurabh Awatade",
 			 		phone: "9043808645",
-			 		mail: "saurabhawatade@gmail.com"
+			 		mail: "saurabh@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Tejaswin P",
 			 		phone: "8056112645",
-			 		mail: "tejaswin.sarathy@gmail.com"
+			 		mail: "tejaswin@shaastra.org"
 			 	},
 			 	{
 			 		personName: "NEHA AGARWAL",
 			 		phone: "8754508380",
-			 		mail: "nehaag.500@gmail.com"
+			 		mail: "nehaag@shaastra.org"
 			 	}]
 			},
 			{
@@ -132,7 +132,7 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Sachin Arakeri",
 			 		phone: "8056102482",
-			 		mail: "sachin.ua.140594@gmail.com"
+			 		mail: "sachin@shaastra.org"
 			 	}]
 			},
 			{
@@ -141,12 +141,12 @@ angular.module('shaastra2016App')
 			 	contacts: [{
 			 		personName: "Vedant Agrawal",
 			 		phone: "9884299316",
-			 		mail: "vedant.agrawal13@gmail.com"
+			 		mail: "vedantagr@shaastra.org"
 			 	},
 			 	{
 			 		personName: "Ayesha",
 			 		phone: "9566533966",
-			 		mail: "ayesha2891@gmail.com"
+			 		mail: "ayesha@shaastra.org"
 			 	}]
 			},
 			{
@@ -155,7 +155,7 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Yashwanth I",
 			 		phone: "8056070391",
-			 		mail: "yashwanthmech25@gmail.com"
+			 		mail: "yashwanth.envi@shaastra.org"
 			 	}]
 			},
 			{
@@ -164,7 +164,7 @@ angular.module('shaastra2016App')
 			  contacts: [{
 			 		personName: "Chinni Chaitanya",
 			 		phone: "9003106573",
-			 		mail: "chchaitanya95@gmail.com"
+			 		mail: "chinni@shaastra.org"
 			 	}]
 			}]
 		};
