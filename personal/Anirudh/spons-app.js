@@ -28,6 +28,10 @@ app.get('/social', function (req, res) {
 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-social.html'));
 });
 
+app.get('/lectures', function (req, res) {
+	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-social.html'));
+});
+
 app.get('/why-shaastra', function (req, res) {
 	res.sendFile(path.join(__dirname, '/spons-brochure', 'spons-why.html'));
 });
