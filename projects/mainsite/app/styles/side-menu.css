@@ -73,10 +73,17 @@ li {
   font-weight: bold;
 }
 
+.side-menu-dice {
+  width: 130px;
+  margin-left: 17%;
+  margin-top: 20%;
+}
+
 .menu {
   color: #fff;
   display: inline-block;
   height: 100%;
+  background-color: #0066ff;
   padding: 0 !important;
   max-width: 0;
   overflow: hidden;
@@ -92,6 +99,9 @@ li {
   background-color: #0066ff !important;
 }
 
+#menuscroll li {
+  padding-left: 10px;
+}
 .mnopen {
   max-width: 100%;
   -webkit-transition: all 0.5s ease;
