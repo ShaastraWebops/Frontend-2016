@@ -80,7 +80,7 @@ li {
   padding: 0 !important;
   max-width: 0;
   overflow: hidden;
-  width: 145px;
+  width: 200px;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -ms-transition: all 0.15s ease;
@@ -305,7 +305,7 @@ ul li #you:hover {
   padding: 5px;
   cursor: pointer;
   top: 2px;
-  left: 145px;
+  left: 200px;
   webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
