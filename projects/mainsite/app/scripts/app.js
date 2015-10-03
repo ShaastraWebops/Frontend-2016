@@ -158,7 +158,7 @@ angular
         $('.o').removeClass("none");
         $('.o').addClass("inblock");
         $('.o').animate({left:"-=200px"}, 200);
-        $('#backdrop').css("display", "none");        
+        $('#backdrop').css("display", "none");
       } 
 
     });
