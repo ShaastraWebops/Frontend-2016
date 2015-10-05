@@ -325,7 +325,8 @@ ul li #you:hover {
   position: absolute;
   padding: 5px;
   cursor: pointer;
-  top: 2px;
+  top: 0px;
+  height: 30px;
   left: 200px;
   webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
