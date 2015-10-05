@@ -18,7 +18,8 @@
       </div>
     </article>  
     
-    <article ng-show="eventList.length" ng-init="widthadjust(eventList.length)"> 
+    <!-- <article ng-show="eventList.length" ng-init="widthadjust(eventList.length)">  -->
+    <article ng-show="eventList.length"> 
       <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
         <div class="wrap" id="flow" >
           <div class="wrapperz" ng-repeat="category in eventList track by $index">
