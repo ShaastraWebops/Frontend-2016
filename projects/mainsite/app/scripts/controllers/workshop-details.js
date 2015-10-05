@@ -2,6 +2,10 @@
 
 angular.module('shaastra2016App')
   .controller('WorkshopsCtrl', function ($scope, $http, $routeParams) {
+
+    var backButton = $('#back-button');
+    backButton.attr('link', '/workshop-category/' + $routeParams.eventId);
+
     $scope.tabsTemp = [{ 
 	    	'name': 'About', 
 	    	'data': 'tab one data' 

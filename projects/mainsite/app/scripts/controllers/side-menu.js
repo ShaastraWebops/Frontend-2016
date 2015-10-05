@@ -18,6 +18,11 @@ angular.module('shaastra2016App')
     $scope.isActive = function (route) {
       return route === $location.path();
     };
+
+    $scope.backButton = function () {
+      var loc = $('#back-button').attr('link');
+      $location.path(loc);
+    };
   
 });
   

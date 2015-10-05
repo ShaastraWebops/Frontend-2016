@@ -2,5 +2,9 @@
 
 angular.module('shaastra2016App')
   .controller('aboutUsCtrl', function ($scope) {
+
+		var backButton = $('#back-button');
+		backButton.attr('link', '/');
+
     $scope.message = "hello";
   });

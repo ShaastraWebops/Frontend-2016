@@ -6,6 +6,9 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'scroll'});
 
+		var backButton = $('#back-button');
+		backButton.attr('link', '/event-list');
+
 		$scope.boolFixDiv = false;
 		$scope.message = 'Loading...';
 		var eventCategoryId = $routeParams.eventCategoryId;

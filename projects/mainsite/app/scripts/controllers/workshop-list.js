@@ -7,6 +7,9 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
 
+		var backButton = $('#back-button');
+		backButton.attr('link', '/');
+
 		var lists2 = [{
 		    name: "AeroFest",
 		    imgUrl: "images/aerofest.png",

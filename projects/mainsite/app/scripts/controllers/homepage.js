@@ -6,6 +6,9 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
 
+    var backButton = $('#back-button');
+    backButton.attr('link', '/');
+
     // var top1 = angular.element(document.getElementsByClassName('.top-1'));
     // var top2 = angular.element(document.getElementsByClassName('.top-2'));
     // var mid1 = angular.element(document.getElementsByClassName('.mid-1'));

@@ -29,6 +29,9 @@ angular.module('shaastra2016App')
    })
    .controller('registerCtrl', function ($scope) {
 
+    var backButton = $('#back-button');
+    backButton.attr('link', '/');
+
     $scope.UserName = "";
     $scope.Password = "";
     $scope.email = "";
