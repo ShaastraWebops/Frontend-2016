@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope) {
+  .controller("HomeCtrl", function () {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
@@ -36,7 +36,7 @@ angular.module('shaastra2016App')
     //     } 
     //   }
     // });
-
+    // $.easing.def = "easeOutBack";
     $(".elemboxleft").click(function () {
       var elem = $(this);
       var redirectTo = elem.attr('link');
@@ -48,11 +48,11 @@ angular.module('shaastra2016App')
       $("#righthand").animate({
         top: $("#main-container").height()/2 - elem.width()/2,
         left: $("#main-container").width()/2 - elem.width()
-      }, function () {
+      }, 'swing', function () {
         $("#lefthand").animate({
           top: $("#main-container").height()/2 + elem.height()/2,
           left: $("#main-container").width()/2 + elem.width()/2
-        }, function () {
+        }, 'swing', function () {
             elem.css ({
               "width" : "100%",
               "height" : "100%",
@@ -64,7 +64,7 @@ angular.module('shaastra2016App')
             $("#righthand").animate({
               top: 0,
               left: 0
-            }, function () {
+            }, 'swing', function () {
                 $('#righthand').css({
                   "position" : "fixed"
                 });
@@ -72,7 +72,7 @@ angular.module('shaastra2016App')
               $("#lefthand").animate({
                 top: $("#main-container").height(),
                 left: $("#main-container").width()
-              }, function () {
+              }, 'swing', function () {
                   $('#lefthand').css({
                     "position" : "fixed"
                   });
@@ -93,11 +93,11 @@ angular.module('shaastra2016App')
       $("#righthand").animate({
         top: $("#main-container").height()/2 - elem.width()/2,
         left: $("#main-container").width()/2 - elem.width()
-      }, function () {
+      }, 'swing', function () {
         $("#lefthand").animate({
           top: $("#main-container").height()/2 + elem.height()/2,
           left: $("#main-container").width()/2 + elem.width()/2
-        }, function () {
+        }, 'swing', function () {
             elem.css ({
               "width" : "100%",
               "height" : "100%",
@@ -109,7 +109,7 @@ angular.module('shaastra2016App')
             $("#righthand").animate({
               top: 0,
               left: 0
-            }, function () {
+            }, 'swing', function () {
                 $('#righthand').css({
                   "position" : "fixed"
                 });
@@ -117,7 +117,7 @@ angular.module('shaastra2016App')
               $("#lefthand").animate({
                 top: $("#main-container").height(),
                 left: $("#main-container").width()
-              }, function () {
+              }, 'swing', function () {
                   $('#lefthand').css({
                     "position" : "fixed"
                   });
@@ -131,7 +131,6 @@ angular.module('shaastra2016App')
       var elem = $(this);
       var redirectTo = elem.attr('link');
       $(location).attr('href', redirectTo);
-      console.log($scope.name);
     });
 
 });
@@ -169,16 +168,35 @@ angular.module('shaastra2016App')
           rightHand.style.left = (x - 155) +'px';
         });
 
-        //moving back hand to it's original place
-        $(".invisiblebox2,.elemboxright").mousemove(function () {
-          rightHand.style.top = "25%";
-          rightHand.style.left = "18%";
-        });
+        // //moving back hand to it's original place
+        // $(".invisiblebox2,.elemboxright").mousemove(function () {
+        //   rightHand.style.top = "25%";
+        //   rightHand.style.left = "18%";
+        // });
 
-        $(".invisiblebox1,.elemboxleft").mousemove(function () {
-          leftHand.style.top = "47%";
-          leftHand.style.left = "75%";
-        });
+        // $(".invisiblebox1,.elemboxleft").mousemove(function () {
+        //   leftHand.style.top = "47%";
+        //   leftHand.style.left = "75%";
+        //   // $('#lefthand').animate({
+        //     // top: "47%",
+        //     // left: "75%"
+        //   // });
+        // });
+        
+        // $(".invisiblebox2,.elemboxright").mouseenter(function (e) {
+        //   $('#righthand').animate({
+        //     top: 47,
+        //     left: 75
+        //   });
+        // });
+
+        // $(".invisiblebox1, .elemboxleft").mouseenter(function (e) {
+        //   $('#lefthand').animate({
+        //     top: 47,
+        //     left: 300
+        //   });          
+        // });
+
       }
     };
   });
