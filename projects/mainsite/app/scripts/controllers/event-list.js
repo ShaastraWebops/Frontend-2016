@@ -89,5 +89,10 @@ angular.module('shaastra2016App')
 		$scope.$on('destroy', function () {
 			$interval.cancel(refresh);
 		});
+
+		$scope.loadScroll = function () {
+			$scope.$broadcast('content.reload');
+		};
+
 	});
 

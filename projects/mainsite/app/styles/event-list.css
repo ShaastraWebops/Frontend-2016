@@ -1,15 +1,3 @@
-::-webkit-scrollbar {
-    width: 0.5em;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #000000; 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: #ffffff; 
-}
-
 @font-face {
   font-family: 'Lato';
   src: url('../styles/fonts/LatoLight.ttf') format('truetype');
@@ -191,7 +179,7 @@ article {
   -moz-transform : translateY(220%);
   -ms-transform : translateY(220%);
   -o-transform : translateY(220%);
-  transform : translateY(180%);
+  transform : translateY(220%);
 }
 
 .wrap p.event-name {
