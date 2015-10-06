@@ -95,7 +95,6 @@ article {
 
 .wrap img {
   width: 70vh;
-  /*margin-top: 40%;*/
   position: relative;
   cursor: pointer;
   height: 200px;
@@ -222,15 +221,17 @@ article .glyphicon:hover {
 .wrapperz figure {
   background: black;
 }
-.wrapperz figure img {
+.wrapperz figure div {
   opacity: 0.5;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+
+  /*-webkit-backface-visibility: visible;*/
 }
-.wrapperz figure:hover img {
+.wrapperz figure:hover div {
   opacity: 1;
 }
 
