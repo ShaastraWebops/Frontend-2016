@@ -6,6 +6,10 @@
   font-family: 'Lato';
   src: url('../styles/fonts/LatoLight.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/RobotoRegular.ttf') format('truetype');
+}
 
 .home {
 	padding: 0;
@@ -270,10 +274,10 @@
 }
 .text3 {
 	position: absolute;
-	font-family: 'CGF Locust Resistance';
+	font-family: 'MyraidPro';
 	letter-spacing: 0.17vh;
 	top: 40%;
-	left: 25%;
+	left: 31%;
 	font-size: 1.5vh;
 }
 #righthand {
@@ -393,7 +397,7 @@
   }
   .text3 {
     top: 28%;
-    left: 21%;
+    left: 30%;
   }
 
 	.elemboxright, .elemboxleft {
