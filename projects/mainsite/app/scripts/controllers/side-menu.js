@@ -9,7 +9,6 @@ angular.module('shaastra2016App')
     $scope.isSuperCoord = Auth.isSuperCoord;
     $scope.getCurrentUser = Auth.getCurrentUser;
     
-
     $scope.logout = function () {
       Auth.logout();
       $location.path('/login');

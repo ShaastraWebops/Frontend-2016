@@ -151,6 +151,8 @@ angular
         }
       });
 
+      $rootScope.showBackButton = (next.$$route.originalPath !== '/');
+
       if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");
         $('.mn-social').addClass("out");
