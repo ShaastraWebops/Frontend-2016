@@ -22,7 +22,7 @@
   height: 1%;
   margin-left: 8%;
   margin-top:0%;
-  z-index: 199;
+  z-index: 260;
   width: 100%;
   padding: -5px;
   border:2px solid transparent;
@@ -105,6 +105,7 @@ article {
   height: auto;
   float: left;
   overflow: hidden;
+  z-index: 260;
 }
 
 .wrap1,.wrap {
@@ -151,6 +152,7 @@ article {
 }
 .wrap1{
   width:100%;
+  z-index: 250;
 }
 .slider {
   width: 105%;
@@ -214,6 +216,18 @@ article .glyphicon:hover {
   transition: background-color 10ms linear;
 }
 
+/*.wrapperz figure {
+  background: #1abc9c;
+}
+.wrapperz figure img {
+  opacity: 0.5;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.wrapperz figure:hover img {
+  opacity: 1;
+}
+*/
 .wrapperz .dot1,.wrapperz .dot2 {
   background: #000000;
   width: 10px;
