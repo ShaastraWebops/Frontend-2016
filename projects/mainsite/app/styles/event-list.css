@@ -197,7 +197,7 @@ article {
   font-size: 4.5vh;
 }
 
-article .glyphicon {
+article .arrow {
  display: inline-block;
   text-align: center;
   background-color: rgba(119,158,203,0.9);
@@ -208,7 +208,7 @@ article .glyphicon {
   z-index: 200;
 }
 
-article .glyphicon:hover {
+article .arrow:hover {
   background-color: rgba(255,105,97,1); 
   cursor: pointer; 
   -webkit-transition: background-color 10ms linear;
@@ -246,19 +246,19 @@ article .glyphicon:hover {
 }
 
 #left-arrow {
- position: absolute;
+  position: absolute;
   left: 0.5%;
-  top:38%;
+  top: 38%;
   margin-left: 0.5%;
-  color:white;
+  color: black;
   z-index: 100;
 }
 
 #right-arrow {
   position: absolute;
   left: 92%;
-  top:38%;
-  color:white;
+  top: 38%;
+  color: black;
   z-index: 100;
 }
 /*media queries*/
