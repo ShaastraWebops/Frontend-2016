@@ -11,6 +11,18 @@
   src: url('../styles/fonts/MyriadProRegular.otf');
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #000000; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #ffffff; 
+}
+
 .shaastraText {
 	font-family: 'CGF Locust Resistance';
 }
@@ -18,7 +30,7 @@
 .aboutUsContent {
 	position: absolute;
 	background-color: white;
-	min-height: 300px;
+	min-height: 350px;
 }
 
 .aboutUsHeading {
