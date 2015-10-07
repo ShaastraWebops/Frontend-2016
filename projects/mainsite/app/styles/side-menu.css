@@ -183,6 +183,20 @@ footer {
   bottom: 0;
 }
 
+.logo-links-ul {
+  display: table-row;
+}
+
+.logo-links-ul li a {
+  display: table;
+}
+
+.logo-links-li {
+  display: inline-block;
+  display: -moz-inline-stack;
+  *display: inline;
+}
+
 ul li a i {
   display: table-row;
 }
