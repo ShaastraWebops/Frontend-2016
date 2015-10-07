@@ -10,52 +10,16 @@ angular.module('shaastra2016App')
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 
-		var lists2 = [{
-		    name: "AeroFest",
-		    imgUrl: "images/aerofest.png",
-			},
-			{
-		    name: "B-Events",
-		    imgUrl: "images/bevents.png",
-			},
-			{
-		    name: "Coding",
-		    imgUrl: "images/coding.png",
-			},
-			{
-		    name: "Design And Build",
-		    imgUrl: "images/coding.png",
-			},
-			{
-		    name: "Department Flagship",
-		    imgUrl: "images/Department-Flagship.jpg",
-			},
-			{
-		    name: "Electronic Fest",
-		    imgUrl: "images/Electronics.jpg",
-			},
-			{
-		    name: "Involve",
-		    imgUrl: "images/Involve.jpg",
-			},
-			{
-		    name: "Quizzing",
-		    imgUrl: "images/Quizzing.jpg",
-			},
-			{
-		    name: "Spotlight",
-		    imgUrl: "images/Spotlight.jpg",
-			},
-		];
-
 		// this.details = lists;
 		$scope.posX = 0;
 		$scope.posY = 0;
 
 		$scope.eventList = [];
+		$scope.message = 'Loading...';
 		$http.get('http://shaastra.org:8001/api/eventLists/workshops')
 			.then(function (response) {
 				$scope.eventList = response.data;
+				$scope.message = 'Stay tuned for Updates!';
 			});
 
 		$scope.moveX = function (pixels) {
