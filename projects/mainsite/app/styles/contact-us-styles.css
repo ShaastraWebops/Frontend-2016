@@ -20,6 +20,7 @@ div.contact-img {
   height: 350px;
   width: 350px;
   text-align: center;
+  background-color: #fffff6;
 }
 div.contact-img:hover {
   cursor: pointer;
