@@ -4,7 +4,8 @@
     <br>
    
       <div class="wrap1" ng-if="eventList.length">
-        <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index">
+        <!-- <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index"> -->
+        <div class="wrapperz" ng-repeat="category in eventList track by $index">
           <div class="slider"></div>
           <img ng-click="gotoEventList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}"/>
           <p class="event-name"><b>{{ category.title }}</b></p>
@@ -21,7 +22,8 @@
     <article ng-show="eventList.length"> 
       <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
         <div class="wrap">
-          <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index">
+          <!-- <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index"> -->
+          <div class="wrapperz" ng-repeat="category in eventList track by $index">
             <div>
               <figure><div><img ng-click="gotoWorkshopList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}" width="100" height="100"/></div></figure>
               <div class="dot1"></div>
