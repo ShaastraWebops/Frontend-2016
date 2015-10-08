@@ -19,7 +19,6 @@ angular
     'ngTouch',
     'ngScrollable',
     'ui.bootstrap',
-    'md.chips.select',
     'LocalStorageModule',
     'cgBusy'
   ])
