@@ -17,7 +17,7 @@ angular.module('shaastra2016App')
   	}, 
   	{ 
   		'name': 'Moving Planetorium',	
-  		'info': "The marvels of the vast, never ending space above us, brought to you in a truck. The moving planetarium, from the TamilNadu Science and Technology Centre, is simply a delight to all star gazers. With shows everyday, it is the best space tour a person can get, and come experience that only at Shaastra 2015" 
+  		'info': "The marvels of the vast, never ending space above us, brought to you in a truck. The moving planetarium, from the TamilNadu Science and Technology Centre, is simply a delight to all star gazers. With shows everyday, it is the best space tour a person can get, and come experience that only at Shaastra 2016" 
   	}];
 
 		var backButton = $('#back-button');
