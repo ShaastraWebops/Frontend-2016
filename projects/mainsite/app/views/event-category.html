@@ -4,7 +4,7 @@
 	  <div class="container-fluid category">
 	  	<div class="row">
 	    	<div class="category-wrapper col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-ls-offset-1">
-		  		<img class="img-responsive category-image" id="event-category-image" ng-src="http://shaastra.org:8001/api/uploads/{{eventsJSON.imageid}}/{{eventsJSON.imagename}}">
+		  		<img class="img-responsive category-image" id="event-category-image" ng-src="http://shaastra.org:8001/api/uploads/{{eventsJSON.imageid}}/{{eventsJSON.imagename}}" width="300" height="300">
 				</div>
 	  	</div>
 	  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
@@ -30,7 +30,7 @@
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in eventsJSON.events track by $index">
 					<!-- <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in eventsJSON.events | orderBy: 'name' track by $index"> -->
 
-					<div class="card">
+					<div class="card" ng-if="acceptedByAdmin==true">
 	  	  		<div class="card-front">
 		    			<div class="event-details"> 
 			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
