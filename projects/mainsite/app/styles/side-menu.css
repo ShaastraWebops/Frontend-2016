@@ -189,6 +189,8 @@ footer {
 
 .logo-links-ul li a {
   display: table;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .logo-links-li {
