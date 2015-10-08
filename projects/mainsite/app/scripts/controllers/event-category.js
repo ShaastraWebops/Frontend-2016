@@ -25,7 +25,6 @@ angular.module('shaastra2016App')
 				// 		response.data.events.splice(i, 1);
 				// 	}
 				// }
-				response.data.events.forEach(func);
 				function func(elem, index, array) {
 					if(elem.acceptedByAdmin === true) {
 						elem.imageURL = 'http://shaastra.org:8001/api/uploads/' + elem.imageid + '/' + elem.imagename;
@@ -33,6 +32,7 @@ angular.module('shaastra2016App')
 						response.data.events.splice(index, 1);
 					}
 				}
+				// response.data.events.forEach(func);
 				// response.data.events = array;
 				$scope.eventsJSON = response.data;
 				console.log($scope.eventsJSON);
