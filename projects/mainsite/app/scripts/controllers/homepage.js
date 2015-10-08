@@ -40,6 +40,10 @@ angular.module('shaastra2016App')
     $(".elemboxleft").click(function () {
       var elem = $(this);
       var redirectTo = elem.attr('link');
+
+      // put red dot
+      $("#righthand").attr('src', 'images/handr-dot.png');
+      $("#lefthand").attr('src', 'images/handl-dot.png');
       elem.css({
         top: $("#main-container").height()/2 - elem.width()/2,
         left: $("#main-container").width()/2 - elem.width()/2,
@@ -85,6 +89,10 @@ angular.module('shaastra2016App')
     $(".elemboxright").click(function () {
       var elem = $(this);
       var redirectTo = elem.attr('link');
+      
+      // put red dot
+      $("#righthand").attr('src', 'images/handr-dot.png');
+      $("#lefthand").attr('src', 'images/handl-dot.png');
       elem.css({
         top: $("#main-container").height()/2 - elem.width()/2,
         right: $("#main-container").width()/2 - elem.width()/2,
