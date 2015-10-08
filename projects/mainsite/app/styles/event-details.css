@@ -60,13 +60,14 @@ a[event-nav-hyperlink] {
 	background-color: blue;
 	color: white;
 	width: 100%;
-	height: 35px;
+	height: auto;
 	line-height: 35px;
 	font-family: arial;
 	font-size: 20px;
 	text-align: right;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
+	table-layout: fixed;
 }
 
 .event-nav:hover {
@@ -75,4 +76,8 @@ a[event-nav-hyperlink] {
 
 .event-nav-selected {
 	color: black;
+}
+
+#event-nav-box {
+
 }
