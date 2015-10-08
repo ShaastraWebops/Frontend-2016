@@ -48,12 +48,12 @@ angular.module('shaastra2016App')
       $("#righthand").animate({
         top: $("#main-container").height()/2 - elem.width()/2 - elem.width()/10,
         left: $("#main-container").width()/2 - elem.width() - elem.width()/5
-      }, 'swing', function () {
+      }, 600, 'swing', function () {
         $("#lefthand").animate({
           top: $("#main-container").height()/2 + elem.height()/2 - elem.width()/5,
           left: $("#main-container").width()/2 + elem.width()/2
-        }, 'swing', function () {
-            elem.css ({
+        }, 600, 'swing', function () {
+            elem.animate({
               "width" : "100%",
               "height" : "100%",
               "top": "10px",
@@ -93,11 +93,11 @@ angular.module('shaastra2016App')
       $("#righthand").animate({
         top: $("#main-container").height()/2 - elem.width()/2 - elem.width()/10,
         left: $("#main-container").width()/2 - elem.width() - elem.width()/5
-      }, 'swing', function () {
+      }, 600, 'swing', function () {
         $("#lefthand").animate({
           top: $("#main-container").height()/2 + elem.height()/2 - elem.width()/5,
           left: $("#main-container").width()/2 + elem.width()/2
-        }, 'swing', function () {
+        }, 600, 'swing', function () {
             elem.css ({
               "width" : "100%",
               "height" : "100%",
