@@ -5,6 +5,9 @@ angular.module('shaastra2016App')
 
     var backButton = $('#back-button');
     backButton.attr('link', '/event-category/' + $routeParams.eventId);
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow-y': 'auto'});
     
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.eventId)

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/MyriadProRegular.otf');
+}
+
 ::-webkit-scrollbar {
     width: 0.5em;
 }
@@ -11,7 +16,7 @@
 }
 .evhead {
 	font-variant: small-caps;
-	font-family: arial;
+	font-family: 'MyraidPro';
 	font-size: 30px;
 	z-index: 1;
 	position: relative;
@@ -20,9 +25,11 @@
 .evcontent {
 	background-color: white;
 	z-index: 1;
+	font-family: 'MyraidPro';
 	position: relative;
 	width: 100%;
 	min-height: 350px;
+	padding: 20px 50px 20px 50px;
 }
 
 a[event-nav-hyperlink] {
@@ -31,7 +38,6 @@ a[event-nav-hyperlink] {
 
 .cont {
 	font-size: 20px;
-	font-family: arial;
 }
 
 .event-nav-xs {
@@ -39,10 +45,10 @@ a[event-nav-hyperlink] {
 	background-color: blue;
 	color: white;
 	height: 35px;
-	font-family: arial;
+	font-family: 'MyraidPro';
 	margin: 1%;
 	line-height: 35px;
-	font-size: 15px;
+	font-size: 25px;
 	text-align: right;
 	padding-right: 5%;
 	border-radius: 5px 0 0 5px;
@@ -62,8 +68,8 @@ a[event-nav-hyperlink] {
 	width: 100%;
 	height: auto;
 	line-height: 35px;
-	font-family: arial;
-	font-size: 20px;
+	font-family: 'MyraidPro';
+	font-size: 23px;
 	text-align: right;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
@@ -79,5 +85,5 @@ a[event-nav-hyperlink] {
 }
 
 #event-nav-box {
-
+	font-family: 'MyraidPro';
 }
