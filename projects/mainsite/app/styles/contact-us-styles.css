@@ -12,27 +12,28 @@
 
 div.contact-img {
   margin: 5px;
-  padding: 5px;
+  /*padding: 5px;*/
   /*border: 1px solid #000000;*/
   height: auto;
   width: auto;
   float: left;
-  height: 350px;
-  width: 350px;
+  /*height: 350px;*/
+  /*width: 350px;*/
   text-align: center;
   background-color: #fffff6;
+  box-shadow: -3px 3px 2px #888888;
 }
 div.contact-img:hover {
   cursor: pointer;
 }
 div.contact-img img {
   display: inline;
-  margin: 5px;
-  border: 1px solid #ffffff;
+  /*margin: 5px;*/
+  /*border: 1px solid #ffffff;*/
   /*border-radius: 50%;*/
 }
 div.contact-img:hover img {
-  border:1px solid #000000;
+  /*border:1px solid #000000;*/
 }
 div.contact-img-desc {
   text-align: center;
