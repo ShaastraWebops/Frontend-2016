@@ -1,5 +1,5 @@
 <div ng-controller="eventListCtrl as eventslist">
-  <div ng-mouseenter="loadScroll()">
+  <div ng-mouseenter="loadScroll()" >
     <div id="heading"><b>Events</div>
     <br>
    
@@ -11,15 +11,15 @@
         </div>
       </div>
     </div>
-    
-    <article ng-if="!eventList.length">
+    <div  cg-busy="{promise:promise,templateUrl:'views/loading.html'}" ng-init="demo()"></div>
+    <!-- <article ng-if="!eventList.length">
       <div class="makeCenter">
         <h1><b>{{ message }}</b></h1>
       </div>
-    </article>  
+    </article> -->  
     
     <!-- <article ng-show="eventList.length" ng-init="widthadjust(eventList.length)">  -->
-    <article ng-show="eventList.length"> 
+    <article ng-show="eventList.length" > 
       <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
         <div class="wrap" id="flow" >
           <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index">
