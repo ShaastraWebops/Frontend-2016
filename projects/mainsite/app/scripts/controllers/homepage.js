@@ -91,11 +91,11 @@ angular.module('shaastra2016App')
         zIndex: 500 
       });
       $("#righthand").animate({
-        top: $("#main-container").height()/2 - elem.width()/2,
-        left: $("#main-container").width()/2 - elem.width()
+        top: $("#main-container").height()/2 - elem.width()/2 - elem.width()/10,
+        left: $("#main-container").width()/2 - elem.width() - elem.width()/5
       }, 'swing', function () {
         $("#lefthand").animate({
-          top: $("#main-container").height()/2 + elem.height()/2,
+          top: $("#main-container").height()/2 + elem.height()/2 - elem.width()/5,
           left: $("#main-container").width()/2 + elem.width()/2
         }, 'swing', function () {
             elem.css ({
