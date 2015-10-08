@@ -152,6 +152,7 @@ angular
       });
 
       $rootScope.showBackButton = (next.$$route.originalPath !== '/');
+      $rootScope.showLogos = (next.$$route.originalPath === '/');
 
       if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");
