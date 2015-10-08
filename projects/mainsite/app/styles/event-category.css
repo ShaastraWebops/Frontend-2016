@@ -21,20 +21,25 @@
 
 .category-wrapper {
   text-align: center;
+  position: relative;
 }
 
 #scroll-down {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  /*margin-top: 20px;*/
+  /*margin-bottom: 50px;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  margin: 0 auto;
   height: 50px;
   width: 20%;
+  top: 85%;
+  left: 40%;
   background-color: #6E6E6E;
   border-color: #000;
   border-style: solid;
   text-align: center;
   cursor: pointer;
+  position: absolute;
 }
 
 #scroll-glyphicon {
@@ -155,4 +160,10 @@
   border-color: #fff;
   background-color: #5E610B;
   color: #fff;
+}
+
+@media all and (max-width: 767px) {
+  #scroll-down {
+    top: 70%;
+  }
 }
