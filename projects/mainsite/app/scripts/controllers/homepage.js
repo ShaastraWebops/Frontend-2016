@@ -53,7 +53,7 @@ angular.module('shaastra2016App')
           top: $("#main-container").height()/2 + elem.height()/2 - elem.width()/5,
           left: $("#main-container").width()/2 + elem.width()/2
         }, 600, 'swing', function () {
-            elem.animate({
+            elem.css({
               "width" : "100%",
               "height" : "100%",
               "top": "10px",
