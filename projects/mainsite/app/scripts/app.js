@@ -20,7 +20,8 @@ angular
     'ngScrollable',
     'ui.bootstrap',
     'md.chips.select',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'cgBusy'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);

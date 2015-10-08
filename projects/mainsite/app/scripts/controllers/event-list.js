@@ -1,6 +1,9 @@
 /* jshint unused: false */
 
 'use strict';
+// angular.module('shaastra2016App').value('cgBusyDefualts',{
+// 	templateUrl:'loading.html',
+// });
 angular.module('shaastra2016App')
 	.controller('eventListCtrl', function ($scope, $interval, $http, $location) {
 
@@ -47,6 +50,11 @@ angular.module('shaastra2016App')
 		    imgUrl: "images/Spotlight.jpg",
 			},
 		];
+		$scope.promise = null;
+		$scope.templateUrl=null;
+		$scope.demo = function(){
+			$scope.promise = $http.get('http://httpbin.org/delay/3');
+		};
 		// $scope.widthadjust=function(len){
 		// 	len=len*900;//must be vh
 		// 	var styling=angular.element(document.getElementsByClassName('wrap'));
@@ -55,13 +63,13 @@ angular.module('shaastra2016App')
 		// this.details = lists;
 		$scope.posX = 0;
 		$scope.posY = 0;
-
+		$scope.templateUrl='views/loading.html';
 		$scope.eventList = [];
 		$scope.message = 'Loading...';
 		$http.get('http://shaastra.org:8001/api/eventLists/events')
 			.then(function (response) {
 				$scope.eventList = response.data;
-				$scope.message = 'Stay tuned for Updates!';
+				$scope.message = 'Loading..';
 			});
 
 		$scope.moveX = function (pixels) {
@@ -95,4 +103,5 @@ angular.module('shaastra2016App')
 		};
 
 	});
+
 
