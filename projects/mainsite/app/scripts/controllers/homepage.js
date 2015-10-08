@@ -165,7 +165,7 @@ angular.module('shaastra2016App')
         rightHand = document.getElementById("righthand");
         leftHand = document.getElementById("lefthand");
                 
-        $(".invisiblebox2,.elemboxright").mousemove(function (e) {
+        $(".invisiblebox2, .elemboxright").mousemove(function (e) {
           x = (e.clientX-$('.invisiblebox1').offset().left),
           y = (e.clientY-$('.invisiblebox1').offset().top);
 
@@ -174,7 +174,7 @@ angular.module('shaastra2016App')
           leftHand.style.left = (x  + 0) + 'px';
         }); 
         
-        $(".invisiblebox1,.elemboxleft").mousemove(function (e) {
+        $(".invisiblebox1, .elemboxleft").mousemove(function (e) {
 
           x = (e.pageX-$('.invisiblebox1').offset().left),
           y = (e.pageY-$('.invisiblebox1').offset().top);

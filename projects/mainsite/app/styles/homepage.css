@@ -101,19 +101,19 @@
 .invisiblebox1 {
 	display: block;
 	background-color: rgba(96,113,238,0);
-	width: 40%;
+	width: 50%;
 	height: 100%;
 	position: absolute;
-	z-index: 100; 
+	z-index: 160; 
 }             
 .invisiblebox2 {
 	display: block;
 	background-color: rgba(96,113,238,0);
-	width: 40%;
+	width: 50%;
 	height: 100%;
 	right: 0;
 	position: absolute;
-	z-index: 100;
+	z-index: 160;
 }          
 .shaastrabox:hover {
 	-moz-transform: scale(1.05); 
@@ -130,7 +130,7 @@
 	cursor: pointer;
 	padding: 10vh;
 	border: 2px solid rgba(115, 117, 183, 0.2);
-	z-index: 200;
+	z-index: 150;
 	position: absolute;
 	top: 33%;
 	left: 50%;
