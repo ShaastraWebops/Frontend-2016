@@ -15,9 +15,9 @@ angular.module('shaastra2016App')
 
 
 		$scope.promise = null;
-		$scope.templateUrl=null;
-		$scope.demo = function(){
-			$scope.promise = $http.get('http://httpbin.org/delay/3');
+		$scope.templateUrl = null;
+		$scope.demo = function () {
+			// $scope.promise = $http.get('http://shaastra.org:8001/api/eventLists/events');
 		};
 
 		// $scope.widthadjust=function(len){
@@ -28,7 +28,7 @@ angular.module('shaastra2016App')
 		// this.details = lists;
 		$scope.posX = 0;
 		$scope.posY = 0;
-		$scope.templateUrl='views/loading.html';
+		$scope.templateUrl = 'views/loading.html';
 		$scope.eventList = [];
 		$scope.message = 'Loading...';
 		$http.get('http://shaastra.org:8001/api/eventLists/events')

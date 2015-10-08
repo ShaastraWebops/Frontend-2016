@@ -33,5 +33,9 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "resolutions": {
+    "angular-animate": "^1.3.0",
+    "angular": "1.4.5"
   }
 }

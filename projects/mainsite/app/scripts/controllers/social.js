@@ -24,6 +24,6 @@ angular.module('shaastra2016App')
     $scope.i = 0;
     $scope.info = function (ch) {
     	$scope.i = ch;
-    }
+    };
 
   });
