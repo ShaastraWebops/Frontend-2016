@@ -1,6 +1,7 @@
 	<div class="container-fluid makeCenter">
 		<h1 class="heading"><b>Contact Us</b></h1>
-		<div class="container-fluid main">
+		<div class="main">
+<!-- 
 			<div class="row">
 				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
 					<ul class="rhombus-grid">
@@ -14,7 +15,20 @@
 					</ul>
 				</div>
 			</div>
-			
+ -->			
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div ng-repeat="department in departmentsJSON.departments">
+						<div class="contact-img" ng-click="displayModal(department)">
+							<img src="{{department.image}}" alt="" height="250" width="250">
+							<div class="contact-img-desc"><h4>{{ department.contacts.personName }}</h4></div>
+							<div class="contact-img-desc"><h4>({{ department.name }})</h4></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="row form-and-map">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<p><h3>Leave us a message</h3></p>
@@ -54,23 +68,23 @@
 			</div>
 			<div class="modal-body">
 				<ul class="contact-modal-contents row">
-					<li ng-repeat="contact in department.contacts">
+					<li>
 						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
 							<li>
-								<h4><span ng-bind="contact.personName"></span></h4>
+								<h4><span ng-bind="department.contacts.personName"></span></h4>
 							</li>
 							<li>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
 									<span><strong>Contact : </strong></span>
-									<span ng-bind="contact.phone" id="contactPhone"></span>
+									<span ng-bind="department.contacts.phone" id="contactPhone"></span>
 								</p>
 							</li>
 							<li>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
 									<span><strong>E-Mail : </strong></span>
-									<span ng-bind="contact.mail" id="contactMail"></span>
+									<span ng-bind="department.contacts.mail" id="contactMail"></span>
 								</p>
 							</li>
 						</ul>

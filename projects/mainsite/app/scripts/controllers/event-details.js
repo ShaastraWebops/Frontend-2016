@@ -5,32 +5,6 @@ angular.module('shaastra2016App')
 
     var backButton = $('#back-button');
     backButton.attr('link', '/event-category/' + $routeParams.eventId);
-
-    $scope.tabsTemp = [{ 
-	    	'name': 'About', 
-	    	'data': 'tab one data' 
-    	}, 
-    	{ 
-    		'name': 'Event Format', 
-    		'data': 'tab two data' 
-    	}, 
-    	{ 
-    		'name': 'Problem Statement',
-  			'data': 'tab three data' 
-  		}, 
-  		{ 
-  			'name': 'FAQ', 
-  			'data': 'tab four data' 
-  		}, 
-  		{ 
-  			'name': 'Prize Money', 
-  			'data': 'tab five data' 
-  		}, 
-  		{ 
-  			'name': 'Contact Details', 
-  			'data': 'tab six data' 
-  		}
-		];
     
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.eventId)

@@ -13,48 +13,13 @@ angular.module('shaastra2016App')
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 
-		var lists2 = [{
-		    name: "AeroFest",
-		    imgUrl: "images/aerofest.png",
-			},
-			{
-		    name: "B-Events",
-		    imgUrl: "images/bevents.png",
-			},
-			{
-		    name: "Coding",
-		    imgUrl: "images/coding.png",
-			},
-			{
-		    name: "Design And Build",
-		    imgUrl: "images/coding.png",
-			},
-			{
-		    name: "Department Flagship",
-		    imgUrl: "images/Department-Flagship.jpg",
-			},
-			{
-		    name: "Electronic Fest",
-		    imgUrl: "images/Electronics.jpg",
-			},
-			{
-		    name: "Involve",
-		    imgUrl: "images/Involve.jpg",
-			},
-			{
-		    name: "Quizzing",
-		    imgUrl: "images/Quizzing.jpg",
-			},
-			{
-		    name: "Spotlight",
-		    imgUrl: "images/Spotlight.jpg",
-			},
-		];
+
 		$scope.promise = null;
 		$scope.templateUrl=null;
 		$scope.demo = function(){
 			$scope.promise = $http.get('http://httpbin.org/delay/3');
 		};
+
 		// $scope.widthadjust=function(len){
 		// 	len=len*900;//must be vh
 		// 	var styling=angular.element(document.getElementsByClassName('wrap'));

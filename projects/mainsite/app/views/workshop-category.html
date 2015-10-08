@@ -19,12 +19,12 @@
 			</div>
 
 			<div class="makeCenter" ng-if="!workshopsJSON.events.length">
-				<h1>Stay tuned for Updates!</h1>
+				<h1>{{ message }}</h1>
 			</div>
 
 			<div class="row" ng-if="workshopsJSON.events.length">
 				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in workshopsJSON.events track by $index">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in workshopsJSON.events | orderBy: 'name' track by $index">
 
 					<div class="card">
 	  	  		<div class="card-front">
