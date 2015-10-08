@@ -277,8 +277,8 @@
 	font-family: 'MyraidPro';
 	letter-spacing: 0.17vh;
 	top: 40%;
-	left: 33%;
-	font-size: 1.5vh;
+	left: 29%;
+	font-size: 2vh;
 }
 #righthand {
 	top: 25%;
@@ -328,6 +328,7 @@
   }
   .text3 {
     top: 30%;
+    left: 27%;
   }
 }
    
@@ -397,7 +398,7 @@
   }
   .text3 {
     top: 28%;
-    left: 30%;
+    left: 26%;
   }
 
 	.elemboxright, .elemboxleft {
