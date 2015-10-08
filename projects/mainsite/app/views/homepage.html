@@ -3,9 +3,8 @@
   <img src="images/robotbody.png" class="robo"/>
   <img id="righthand" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" src="images/handr.png" image-cache-directive/>
 
-   
-  <div class="invisiblebox1" tooltip> </div>
-  <div class="invisiblebox2" tooltip> </div>
+  <div ng-if="showTooltip" class="invisiblebox1" tooltip> </div>
+  <div ng-if="showTooltip" class="invisiblebox2" tooltip> </div>
   
   <div class="container home">
 

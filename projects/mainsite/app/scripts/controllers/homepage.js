@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function () {
+  .controller("HomeCtrl", function ($scope) {
+
+    $scope.showTooltip = true;
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
@@ -38,6 +40,9 @@ angular.module('shaastra2016App')
     // });
     // $.easing.def = "easeOutBack";
     $(".elemboxleft").click(function () {
+      // remove hand following
+      $scope.showTooltip = false;
+
       var elem = $(this);
       var redirectTo = elem.attr('link');
 
@@ -87,9 +92,12 @@ angular.module('shaastra2016App')
     });
 
     $(".elemboxright").click(function () {
+      // remove hand following
+      $scope.showTooltip = false;
+
       var elem = $(this);
       var redirectTo = elem.attr('link');
-      
+
       // put red dot
       $("#righthand").attr('src', 'images/handr-dot.png');
       $("#lefthand").attr('src', 'images/handl-dot.png');
