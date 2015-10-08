@@ -27,10 +27,15 @@
 	font-family: 'CGF Locust Resistance';
 }
 
+#aboutUs h3 {
+	font-size: 3vh;
+}
+
 .aboutUsContent {
 	position: absolute;
 	background-color: white;
 	min-height: 350px;
+	padding: 50px 100px 50px 100px;
 }
 
 .aboutUsHeading {
