@@ -48,7 +48,7 @@ angular
         controller: 'eventsCategoryCtrl',
         controllerAs: 'eventsCategory'
       })
-      .when('/event/:eventId', {
+      .when('/event/:eventCategoryId/:eventId', {
         templateUrl: 'views/event-details.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'
@@ -63,7 +63,7 @@ angular
         controller: 'workshopsCategoryCtrl',
         controllerAs: 'workshopsCategory'
       })
-      .when('/workshop/:workshopId', {
+      .when('/workshop/:workshopCategoryId/:workshopId', {
         templateUrl: 'views/workshop-details.html',
         controller: 'WorkshopsCtrl',
         controllerAs: 'workshops'

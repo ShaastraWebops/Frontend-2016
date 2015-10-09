@@ -4,7 +4,7 @@ angular.module('shaastra2016App')
   .controller('WorkshopsCtrl', function ($scope, $http, $routeParams) {
 
     var backButton = $('#back-button');
-    backButton.attr('link', '/workshop-category/' + $routeParams.eventId);
+    backButton.attr('link', '/workshop-category/' + $routeParams.workshopCategoryId);
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'auto'});

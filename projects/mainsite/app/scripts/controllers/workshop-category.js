@@ -28,7 +28,7 @@ angular.module('shaastra2016App')
 			});
 		
   	$scope.gotoWorkshopDetails = function (index) {
-  		$location.path('workshop/' + $scope.workshopsJSON[index]._id);
+  		$location.path('workshop/' + workshopCategoryId + '/' + $scope.workshopsJSON[index]._id);
   	};
 
 	  $scope.scrollDown = function (element) {
