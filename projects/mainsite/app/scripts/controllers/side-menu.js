@@ -53,7 +53,7 @@ angular.module('shaastra2016App')
           //$('.menu').show(0);
           $('.c').addClass("block");
           $('.mn-social').removeClass("out");
-          $('.o').animate({left:"+=200px"},0);
+          $('.o').animate({left:"+=220px"},0);
           $('#backdrop').css("display", "block");
         });
       }
@@ -72,7 +72,7 @@ angular.module('shaastra2016App')
           $('.c').removeClass("block");
           $('.o').removeClass("none");
           $('.o').addClass("inblock");
-          $('.o').animate({left:"-=200px"},200);
+          $('.o').animate({left:"-=220px"},200);
           $('#backdrop').css("display", "none");
         });
       }

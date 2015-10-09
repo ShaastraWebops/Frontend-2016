@@ -93,7 +93,7 @@ li {
 
 .side-menu-dice {
   width: 130px;
-  margin-left: 17%;
+  margin-left: 19%;
   margin-top: 20%;
 }
 
@@ -105,7 +105,7 @@ li {
   padding: 0 !important;
   max-width: 0;
   overflow: hidden;
-  width: 200px;
+  width: 220px;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -ms-transition: all 0.15s ease;
@@ -202,8 +202,8 @@ ul li a i {
   border-radius: 50%;
   font-size: 20px;
   text-align: center;
-  margin-left:3px;
-  margin-right:3px;
+  margin-left: 3px;
+  margin-right: 3px;
   padding:0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -350,7 +350,7 @@ ul li #you:hover {
   cursor: pointer;
   top: 0px;
   height: 30px;
-  left: 200px;
+  left: 220px;
   webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
