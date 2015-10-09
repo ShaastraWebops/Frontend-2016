@@ -13,34 +13,22 @@ angular.module('shaastra2016App')
 		$scope.message = 'Loading...';
 		var eventCategoryId = $routeParams.eventCategoryId;
 		$scope.eventsJSON = [];
+		$scope.eventList = [];
 		$http.get('http://shaastra.org:8001/api/eventLists/events/' + eventCategoryId)
 			.then(function (response) {
+				$scope.eventList = response.data;
 				var num = response.data.events.length;
-				console.log(response.data.events);
-				console.log(num);
-				// for(var i=0; i<num; i++) {
-				// 	if(response.data.events[i].acceptedByAdmin === true) {
-				// 		response.data.events[i].imageURL = 'http://shaastra.org:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
-				// 	} else {
-				// 		response.data.events.splice(i, 1);
-				// 	}
-				// }
-				function func(elem, index, array) {
-					if(elem.acceptedByAdmin === true) {
-						elem.imageURL = 'http://shaastra.org:8001/api/uploads/' + elem.imageid + '/' + elem.imagename;
-					} else {
-						response.data.events.splice(index, 1);
+				for(var i=0; i<num; i++) {
+					if(response.data.events[i].acceptedByAdmin === true) {
+						response.data.events[i].imageURL = 'http://shaastra.org:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
+						$scope.eventsJSON.push(response.data.events[i]);
 					}
 				}
-				// response.data.events.forEach(func);
-				// response.data.events = array;
-				$scope.eventsJSON = response.data;
-				console.log($scope.eventsJSON);
 				$scope.message = 'Stay tuned for Updates!';
 			});
 
   	$scope.gotoEventDetails = function (index) {
-  		$location.path('event/' + $scope.eventsJSON.events[index]._id);
+  		$location.path('event/' + $scope.eventsJSON[index]._id);
   	};
 
 	  $scope.scrollDown = function (element) {
