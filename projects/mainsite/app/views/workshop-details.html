@@ -21,9 +21,7 @@
 				<div class="row">
 					<div class="hidden-xs"><br><br></div>
 					<div class="col-sm-12 col-md-12 col-lg-12">
-						<p class="cont">
-							{{eve.eventTabs[i].info}}
-						</p>
+						<div v-html="input | marked" ng-bind-html="xmark(eve.eventTabs[i].info)" class="cont"></div>
 					</div>
 				</div>
 			</div>

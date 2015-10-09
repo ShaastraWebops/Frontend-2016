@@ -5,14 +5,18 @@ angular.module('shaastra2016App')
 
     var backButton = $('#back-button');
     backButton.attr('link', '/workshop-category/' + $routeParams.eventId);
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow-y': 'auto'});
+    
+    var converter = new showdown.Converter();
+    $scope.xmark = function (b) {
+      return converter.makeHtml(b);
+    };
     
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.workshopId)
       .then(function (response) {
-        if(response.data.eventTabs.length) {
-          // Add contact info here
-          // response.data.eventTabs.push()
-        }
         $scope.eve = response.data;
       });
 
