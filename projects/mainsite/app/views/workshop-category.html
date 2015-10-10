@@ -33,7 +33,7 @@
 		    			<div class="event-details"> 
 			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
 			  				<br><br>
-			  				<span id="event-date" ng-bind="event.eventDate"></span>
+			  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
 							</div>
 		  			</div>
 		  			<div class="card-back" ng-style="{'position' : 'relative'}">
@@ -41,7 +41,7 @@
 							<div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
 			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
 			  				<br><br>
-			  				<span id="event-date" ng-bind="event.eventDate"></span>
+			  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
 							</div>
 							<button ng-click="gotoWorkshopDetails($index)" class="event-more-button" ng-style="{'z-index' : '2'}">See More</button>
 		  			</div>
