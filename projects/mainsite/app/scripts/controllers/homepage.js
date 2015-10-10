@@ -136,25 +136,26 @@ angular.module('shaastra2016App')
         
         rightHand = document.getElementById("righthand");
         leftHand = document.getElementById("lefthand");
-                
-        $(".invisiblebox2, .elemboxright").mousemove(function (e) {
-          x = (e.clientX-$('.invisiblebox1').offset().left),
-          y = (e.clientY-$('.invisiblebox1').offset().top);
 
-          //position according to mouse position
-          leftHand.style.top = (y + 0) + 'px';
-          leftHand.style.left = (x  + 0) + 'px';
-        }); 
+        if($(".invisiblebox2") && $(".invisiblebox1")) {
+          $(".invisiblebox2, .elemboxright").mousemove(function (e) {
+            x = (e.clientX-$('.invisiblebox1').offset().left),
+            y = (e.clientY-$('.invisiblebox1').offset().top);
+
+            //position according to mouse position
+            leftHand.style.top = (y + 0) + 'px';
+            leftHand.style.left = (x  + 0) + 'px';
+          }); 
         
-        $(".invisiblebox1, .elemboxleft").mousemove(function (e) {
+          $(".invisiblebox1, .elemboxleft").mousemove(function (e) {
+            x = (e.pageX-$('.invisiblebox1').offset().left),
+            y = (e.pageY-$('.invisiblebox1').offset().top);
 
-          x = (e.pageX-$('.invisiblebox1').offset().left),
-          y = (e.pageY-$('.invisiblebox1').offset().top);
-
-          //position according to mouse position
-          rightHand.style.top = (y  + 0) + 'px';
-          rightHand.style.left = (x - 155) +'px';
-        });
+            //position according to mouse position
+            rightHand.style.top = (y  + 0) + 'px';
+            rightHand.style.left = (x - 155) +'px';
+          });
+        }                
 
         // //moving back hand to it's original place
         // $(".invisiblebox2,.elemboxright").mousemove(function () {
