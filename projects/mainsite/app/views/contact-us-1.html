@@ -1,15 +1,29 @@
 	<div class="container-fluid makeCenter">
 		<h1 class="heading"><b>Contact Us</b></h1>
 		<div class="main">
+<!-- 
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
+					<ul class="rhombus-grid">
+						<li class="rhombus" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
+							<div class="rhombus-front">
+								<span ng-bind="department.name" class="rhombus-text"></span>
+							</div>
+							<div class="rhombus-back">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+ -->			
+
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="contact-div row" ng-repeat="department in departmentsJSON.departments track by $index">
-						<div class="contact-img-desc"><h2>{{ department.name }}</h2></div>
-						<div ng-class="department.offset">
-							<div class="act-div" ng-class="department.col" ng-repeat="contact in department.contacts track by $index">
-								<img src="{{contact.image}}" ng-click="displayModal(department)" alt="shaastra-team-member" height="200" width="200">
-								<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
-							</div>
+					<div ng-repeat="department in departmentsJSON.departments">
+						<div class="contact-img" ng-click="displayModal(department)">
+							<img src="{{department.image}}" alt="" height="250" width="250">
+							<div class="contact-img-desc"><h4>{{ department.contacts.personName }}</h4></div>
+							<div class="contact-img-desc"><h4>({{ department.name }})</h4></div>
 						</div>
 					</div>
 				</div>
