@@ -7,7 +7,7 @@ angular.module('shaastra2016App')
     html.css({'overflow-y': 'scroll'});
 
     var backButton = $('#back-button');
-    backButton.attr('link', '/workshop-list');
+    backButton.attr('link', '/');
 
 		$scope.boolFixDiv = false;
 		$scope.message = 'Loading...';
