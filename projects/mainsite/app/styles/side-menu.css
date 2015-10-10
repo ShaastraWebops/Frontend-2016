@@ -30,14 +30,14 @@ body {
 }
 
 /*menu*/
-ul {
+.menu ul {
   list-style-type: none;
   padding: 0;
   margin: 0em 0em 0em 0em;
   font-size: 1.2em;
 }
 
-li {
+.menu li {
   cursor: pointer;
 }
 

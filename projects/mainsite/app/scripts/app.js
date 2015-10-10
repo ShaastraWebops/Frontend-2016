@@ -118,6 +118,16 @@ angular
         controller: 'internationalSummitCtrl',
         controllerAs: 'summit'
       })
+      .when('/samparks', {
+        templateUrl: 'views/sampark-category.html',
+        controller: 'samparksCategoryCtrl',
+        controllerAs: 'samparksCategory'
+      })
+      .when('/samparks/:index/:city', {
+        templateUrl: 'views/sampark-details.html',
+        controller: 'samparksCtrl',
+        controllerAs: 'samparks'
+      })
       .otherwise({
         redirectTo: '/'
       });

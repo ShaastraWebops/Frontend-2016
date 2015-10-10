@@ -1,0 +1,14 @@
+<div>
+  <div class="container-fluid makeCenter">
+		<div class="row samparkHeading"><b>{{sampark.name}} Sampark</b></div>
+	</div>
+
+  <div id="samparkDetails" class="container-fluid font-myraid">
+	  <article>
+	  	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 samparkContent">
+				<div v-html="input | marked" ng-bind-html="sampark.info"></div>
+	  	</div>
+	  </article>  
+  </div>
+  
+</div>
