@@ -18,6 +18,11 @@ angular.module('shaastra2016App')
 		$scope.message = 'Loading...';
 		$http.get('http://shaastra.org:8001/api/eventLists/workshops')
 			.then(function (response) {
+				response.data.sort(function (a, b) {
+					if(a.title < b.title) { return -1 }
+					if(a.title > b.title) { return 1 }
+					return 0;
+				});
 				$scope.eventList = response.data;
 				$scope.message = 'Stay tuned for Updates!';
 			});

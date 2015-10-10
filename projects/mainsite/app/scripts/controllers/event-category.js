@@ -17,6 +17,11 @@ angular.module('shaastra2016App')
 		$http.get('http://shaastra.org:8001/api/eventLists/events/' + eventCategoryId)
 			.then(function (response) {
 				$scope.eventList = response.data;
+				response.data.events.sort(function (a, b) {
+					if(a.name < b.name) { return -1 }
+					if(a.name > b.name) { return 1 }
+					return 0;
+				});
 				var num = response.data.events.length;
 				for(var i=0; i<num; i++) {
 					if(response.data.events[i].acceptedByAdmin === true) {
