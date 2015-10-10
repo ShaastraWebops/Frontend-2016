@@ -23,7 +23,7 @@ angular.module('shaastra2016App')
         var contact = {
           'name': 'Contact Details',
           'info': '<p><b>For further details, please contact,</b></p>'
-        }
+        };
         for(var i=0; i<numAssignees; i++) {
           contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
         }
