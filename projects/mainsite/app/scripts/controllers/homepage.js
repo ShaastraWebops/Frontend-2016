@@ -11,34 +11,6 @@ angular.module('shaastra2016App')
     var backButton = $('#back-button');
     backButton.attr('link', '/');
 
-    // var top1 = angular.element(document.getElementsByClassName('.top-1'));
-    // var top2 = angular.element(document.getElementsByClassName('.top-2'));
-    // var mid1 = angular.element(document.getElementsByClassName('.mid-1'));
-    // var shaastrabox = angular.element(document.getElementsByClassName('.shaastrabox'));
-    // var mid2 = angular.element(document.getElementsByClassName('.mid-2'));
-    // var botm1 = angular.element(document.getElementsByClassName('.botm-1'));
-    // var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
-
-    // $scope.mouseDown=$("#main-container").mousedown(function (e) {
-    //   if($('.invisiblebox2').offset()) {
-    //     if(e.clientX<=$('.invisiblebox2').offset().left) {
-    //       $("#righthand").attr("src", "images/handr1.png");
-    //     } else {
-    //       $("#lefthand").attr("src", "images/handl1.png");
-    //     }
-    //   } 
-    // });
-    
-    // $scope.mouseUp=$("#main-container").mouseup(function (e) {
-    //   if($('.invisiblebox1').offset()) {
-    //     if(e.clientX<=$('.invisiblebox1').offset().left) {
-    //       $("#righthand").attr("src", "images/handr.png");
-    //     } else {
-    //       $("#lefthand").attr("src", "images/handl.png");
-    //     } 
-    //   }
-    // });
-    // $.easing.def = "easeOutBack";
     $(".elemboxleft").click(function () {
       // remove hand following
       $scope.showTooltip = false;
@@ -47,8 +19,8 @@ angular.module('shaastra2016App')
       var redirectTo = elem.attr('link');
 
       // put red dot
-      $("#righthand").attr('src', 'images/handr-dot.png');
-      $("#lefthand").attr('src', 'images/handl-dot.png');
+      // $("#righthand").attr('src', 'images/handr-dot.png');
+      // $("#lefthand").attr('src', 'images/handl-dot.png');
       elem.css({
         top: $("#main-container").height()/2 - elem.width()/2,
         left: $("#main-container").width()/2 - elem.width()/2,
@@ -99,8 +71,8 @@ angular.module('shaastra2016App')
       var redirectTo = elem.attr('link');
 
       // put red dot
-      $("#righthand").attr('src', 'images/handr-dot.png');
-      $("#lefthand").attr('src', 'images/handl-dot.png');
+      // $("#righthand").attr('src', 'images/handr-dot.png');
+      // $("#lefthand").attr('src', 'images/handl-dot.png');
       elem.css({
         top: $("#main-container").height()/2 - elem.width()/2,
         right: $("#main-container").width()/2 - elem.width()/2,
