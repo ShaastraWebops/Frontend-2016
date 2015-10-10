@@ -9,6 +9,8 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'auto'});
     
+    $scope.message = 'Loading...';
+
     var converter = new showdown.Converter();
     $scope.xmark = function (b) {
       return converter.makeHtml(b);
@@ -26,6 +28,7 @@ angular.module('shaastra2016App')
           contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
         }
         response.data.eventTabs.push(contact);
+        $scope.message = 'Stay tuned for Updates!';
         $scope.eve = response.data;
       });
 

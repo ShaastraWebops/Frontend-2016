@@ -7,7 +7,7 @@
 				<span>{{eve.name}}</span>
 			</div>
 
-			<div class="row">
+			<div ng-if="eve.eventTabs.length" class="row">
 				<div class="col-xs-6 hidden-sm hidden-md hidden-lg" ng-repeat="x in eve.eventTabs track by $index">
 					<a event-nav-hyperlink href="" ng-click="info($index)">
 						<div class="event-nav-xs" ng-class="{'event-nav-selected':(i === $index)}">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 
-			<div class="evcontent">
+			<div ng-if="eve.eventTabs.length" class="evcontent">
 				<div class="row">
 					<div class="hidden-xs"><br><br></div>
 					<div class="col-sm-12 col-md-12 col-lg-12">
@@ -25,10 +25,13 @@
 					</div>
 				</div>
 			</div>
+			<div ng-if="!eve.eventTabs.length" class="makeCenter">
+				<h1>Stay tuned for Updates!</h1>
+			</div>
 
 		</div>
 		
-		<div class="hidden-xs col-sm-3 col-md-2 col-lg-2">
+		<div ng-if="eve.eventTabs.length" class="hidden-xs col-sm-3 col-md-2 col-lg-2">
 			<div class="row">
 				<div class="col-sm-4 col-md-4 col-lg-4"></div>
 				<div class="col-sm-10 col-md-10 col-lg-10">
