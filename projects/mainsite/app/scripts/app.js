@@ -113,6 +113,11 @@ angular
         controller: 'socialCtrl',
         controllerAs: 'social'
       })
+      .when('/international-summit', {
+        templateUrl: 'views/international-summit.html',
+        controller: 'internationalSummitCtrl',
+        controllerAs: 'summit'
+      })
       .otherwise({
         redirectTo: '/'
       });
