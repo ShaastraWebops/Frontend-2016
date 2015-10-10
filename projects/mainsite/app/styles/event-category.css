@@ -67,7 +67,6 @@
   font-family: Verdana, Geneva, sans-serif;
   font-variant: small-caps;
   color: #fff;
-  padding-left: 15px;
 }
 
 #event-date {
@@ -75,7 +74,6 @@
   font-family: Verdana, Geneva, sans-serif;
   font-variant: small-caps;
   color: #fff;
-  padding-left: 15px;
 }
 
 .events {
@@ -94,6 +92,7 @@
   background-position: center;
   height: 100%;
   width: 100%;
+  padding-left: 15px;
 }
 
 .card {
