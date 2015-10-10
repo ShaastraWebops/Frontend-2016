@@ -54,8 +54,11 @@ angular.module('shaastra2016App')
 		};
 
 		$scope.gotoEventList = function (index) {
-			// $location.path('#/event-category/asd');
-			$location.path('event-category/' + $scope.eventList[index]._id);
+			if($scope.eventList[index].title[0] === 'W' || $scope.eventList[index].title[0] === 'w') {
+				$location.path('workshop-category/561567aac8d15f6e1252ebee');
+			} else {
+				$location.path('event-category/' + $scope.eventList[index]._id);
+			}
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);
