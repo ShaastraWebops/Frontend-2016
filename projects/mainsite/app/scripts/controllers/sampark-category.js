@@ -19,11 +19,13 @@ angular.module('shaastra2016App')
   	{ 
       'id': 2,
   		'name': 'Trichy', 
+      'image': 'images/Trichy.jpg',
   		'eventDate': "" 
   	},
     { 
       'id': 3,
       'name': 'Coimbatore', 
+      'image': 'images/Coimbatore.jpg',
       'eventDate': "" 
     },
     { 
@@ -44,11 +46,13 @@ angular.module('shaastra2016App')
     { 
       'id': 7,
       'name': 'Hyderabad', 
+      'image': 'images/Hyderabad.jpg',
       'eventDate': "" 
     },
     { 
       'id': 8,
       'name': 'Pune', 
+      'image': 'images/Pune.jpg',
       'eventDate': "" 
     }];
 
