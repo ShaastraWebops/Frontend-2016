@@ -2,6 +2,10 @@
   font-family: 'MyraidPro';
   src: url('../styles/fonts/MyriadProRegular.otf');
 }
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+}
 
 ::-webkit-scrollbar {
     width: 0.5em;
@@ -45,7 +49,7 @@ a[event-nav-hyperlink] {
 	background-color: blue;
 	color: white;
 	height: 35px;
-	font-family: 'MyraidPro';
+	font-family: 'Lato';
 	margin: 1%;
 	line-height: 35px;
 	font-size: 25px;
@@ -68,7 +72,7 @@ a[event-nav-hyperlink] {
 	width: 100%;
 	height: auto;
 	line-height: 35px;
-	font-family: 'MyraidPro';
+	font-family: 'Lato';
 	font-size: 23px;
 	text-align: right;
 	border-bottom-left-radius: 5px;
@@ -85,7 +89,7 @@ a[event-nav-hyperlink] {
 }
 
 #event-nav-box {
-	font-family: 'MyraidPro';
+	font-family: 'Lato';
 }
 
 @media all and (max-width: 767px) {
