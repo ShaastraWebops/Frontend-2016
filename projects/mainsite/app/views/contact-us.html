@@ -7,7 +7,7 @@
 						<div class="contact-img-desc"><h2>{{ department.name }}</h2></div>
 						<div ng-class="department.offset">
 							<div class="act-div" ng-class="department.col" ng-repeat="contact in department.contacts track by $index">
-								<img src="{{contact.image}}" ng-click="displayModal(department)" alt="shaastra-team-member" height="200" width="200">
+								<img src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member" height="200" width="200">
 								<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
 							</div>
 						</div>
@@ -57,20 +57,20 @@
 					<li>
 						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
 							<li>
-								<h4><span ng-bind="department.contacts.personName"></span></h4>
+								<h4><span ng-bind="department.selected.personName"></span></h4>
 							</li>
 							<li>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
 									<span><strong>Contact : </strong></span>
-									<span ng-bind="department.contacts.phone" id="contactPhone"></span>
+									<span ng-bind="department.selected.phone" id="contactPhone"></span>
 								</p>
 							</li>
 							<li>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
 									<span><strong>E-Mail : </strong></span>
-									<span ng-bind="department.contacts.mail" id="contactMail"></span>
+									<span ng-bind="department.selected.mail" id="contactMail"></span>
 								</p>
 							</li>
 						</ul>

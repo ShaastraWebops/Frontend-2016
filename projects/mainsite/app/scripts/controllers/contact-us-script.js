@@ -226,7 +226,8 @@ angular.module('shaastra2016App')
 	  	});
 		};
 		
-		$scope.displayModal = function (department) {
+		$scope.displayModal = function (department, index) {
+			department.selected = department.contacts[index];
 			// console.log("Clicked");
 			var modalInstance = $modal.open({
 	  		templateUrl: 'myModalContent.html',
