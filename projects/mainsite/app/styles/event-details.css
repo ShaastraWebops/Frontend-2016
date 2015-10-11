@@ -87,3 +87,12 @@ a[event-nav-hyperlink] {
 #event-nav-box {
 	font-family: 'MyraidPro';
 }
+
+@media all and (max-width: 767px) {
+	.event-nav-xs {
+		font-size: 15px;
+	}
+	.evcontent {
+		padding: 10px 5px 10px 5px;
+	}
+}
