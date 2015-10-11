@@ -30,7 +30,7 @@
 .scrollable .scrollable-bar {
   position:absolute;
   box-sizing: border-box;
-  opacity: 1;
+  opacity: 0;
   background-color: #f0f0f0;
   background-color: rgba(0, 0, 0, 0);
   height: 1%;
@@ -43,7 +43,7 @@
 }
 
 .scrollable .scrollable-bar:hover, .scrollable:hover .scrollable-bar ,.scrollable.active .scrollable-bar {
-  opacity:1;
+  opacity: 0;
 }
 
 .scrollable .scrollable-slider {
@@ -53,7 +53,7 @@
 }
 
 .scrollarea:hover .scrollable .scrollable-slider {
-  opacity: 1;
+  opacity: 0;
 }
 
 .scrollable .scrollable-bar-x .scrollable-slider {
@@ -74,7 +74,7 @@ article {
 .scrollarea { 
   width: 101%; 
   height: 90%;
-  margin-top: -10.3%;
+  margin-top: -10%;
 }
 .wrap1{
   width:100%;
@@ -98,11 +98,11 @@ article {
 }
 
 .wrap1 .wrapperz img {
-  width: 100%;
-  height: 62px;
+  width: 101%;
+  height: 65px;
   line-height: 3;
   cursor: pointer;
-  position:relative;
+  position: relative;
   z-index: 0;
   vertical-align: middle;
 }
@@ -154,7 +154,7 @@ article {
   top: 50%;
   z-index: 350;
   font-weight: bolder;
-  font-size: 2.5vh;
+  font-size: 2.3vh;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
