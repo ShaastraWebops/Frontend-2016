@@ -7,7 +7,7 @@
 						<div class="contact-img-desc"><h2>{{ department.name }}</h2></div>
 						<div ng-class="department.offset">
 							<div class="act-div" ng-class="department.col" ng-repeat="contact in department.contacts track by $index">
-								<img src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member" height="200" width="200">
+								<img src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
 								<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
 							</div>
 						</div>
@@ -16,30 +16,30 @@
 			</div>
 
 			<div class="row form-and-map">
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<p><h3>Leave us a message</h3></p>
 					<div id="contact-form">
 						<form class="form-group" role="form" novalidate>
-						<div id="name" class="has-feedback">
-								<span class="form-control-feedback glyphicon glyphicon-user input-icon"></span>
+						<div id="cname" class="has-feedback">
+								<!-- <span class="form-control-feedback glyphicon glyphicon-user input-icon hidden-xs hidden-sm"></span> -->
 								<input type="text" class="form-control" placeholder="Name"/>
 						</div>
-						<div id="email" class="has-feedback">
-							<span class="form-control-feedback glyphicon glyphicon-envelope input-icon"></span>
+						<div id="cemail" class="has-feedback">
+							<!-- <span class="form-control-feedback glyphicon glyphicon-envelope input-icon hidden-xs hidden-sm"></span> -->
 							<input type="text" class="form-control" placeholder="Email"/>
 						</div>
-						<div id="mobile" class="has-feedback">
-							<span class="form-control-feedback glyphicon glyphicon-phone input-icon"></span>
+						<div id="cmobile" class="has-feedback">
+							<!-- <span class="form-control-feedback glyphicon glyphicon-phone input-icon hidden-xs hidden-sm"></span> -->
 							<input type="text" class="form-control" placeholder="Mobile (optional)"/>
 						</div>
-						<div id="message">
+						<div id="cmessage">
 							<textarea rows="10" class="form-control" placeholder="Your message..."></textarea>
 						</div>
 						<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
 						</form>
 					</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-init="init_map()">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 small-devices-map" ng-init="init_map()">
 					<div id="map"></div>
 				</div>
 			</div>
