@@ -57,6 +57,11 @@ angular.module('shaastra2016App')
       'name': 'Pune', 
       'image': 'images/Pune.jpg',
       'info': "<h2>Shaastra comes to Oxford of the East</h2><p>On 11th September , Pune experienced technical extravaganza organized by Shaastra, the technical festival of IIT Madras. Being one of the biggest technical festival, Shaastra has a mission to empower youth with technology, which it has been successfully accomplishing since its inception.</p><p>Sampark is a venture by Shaastra that aims to increase awareness about role of technology in betterment of human lives. Hosting plethora of events like lectures, workshops and various competitions, the events organized give wild card entry to the winners to the finals of respective events which will be conducted in first week of January as a part of Shaastra.</p><p>Pune Sampark was one of the series of Samparks that will happen all over India. It was organized in collaboration with Meteor, Sinhgad college’s fest in Pune. It was highly successful in terms of quantity and quality of the participants. With footfall of 1600+ , Pune witnessed  various events like manual robotics workshop, how things work quiz and puzzle champ quiz.</p><p>The participants were very3 enthusiastic about the event and it was a jammed packed event. There were participants from cities as long as Mumbai, Nashik and Kolhapur for the event. One participant from Nashik said, <b><i>We specifically came to be a part of the event and we are very happy with it. We will come next year as well with better preparation.</i></b></p><p>Shaastra thanks Pune for such enthusiastic response and promises to be back next year with even better Sampark.</p>" 
+    },
+    { 
+      'id': 9,
+      'name': 'Chennai', 
+      'info': "<h3><b>Data mining workshop</b></h3><p>On 25th September, students from all over Chennai city gathered at MNM Jain Engineering College to become data miners, as part of the data mining workshop conducted by Shaastra.</p><h3><b>Wireless motion controller Workshop</b></h3><p>As part of Sampark, Shaastra conducted a wireless motion controller workshop at SRM University on 25th September. It was attended by budding engineers from all over chennai and proved to be a fun filled educational event.</p>" 
     }];
 
     $scope.sampark = allSamparks[$routeParams.index];

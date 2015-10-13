@@ -54,6 +54,11 @@ angular.module('shaastra2016App')
       'name': 'Pune', 
       'image': 'images/Pune.jpg',
       'eventDate': "" 
+    },
+    { 
+      'id': 7,
+      'name': 'Chennai', 
+      'eventDate': "" 
     }];
 
     $scope.gotoSamparkDetails = function (index) {
