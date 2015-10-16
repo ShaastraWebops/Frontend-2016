@@ -20,15 +20,13 @@
 			<div ng-if="eve.eventTabs.length" class="evcontent">
 				<div class="row">
 					<div class="hidden-xs"><br><br></div>
-					<div class="col-sm-12 col-md-12 col-lg-12">
-						<p class="cont">
-							{{eve.eventTabs[i].info}}
-						</p>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div v-html="input | marked" ng-bind-html="xmark(eve.eventTabs[i].info)" class="cont"></div>
 					</div>
 				</div>
 			</div>
 			<div ng-if="!eve.eventTabs.length" class="makeCenter">
-				<h1>Stay tuned for Updates!</h1>
+				<h1>{{ message }}</h1>
 			</div>
 
 		</div>

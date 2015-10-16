@@ -10,6 +10,10 @@
     <span class="bars" id="bar5"></span>
     <span class="bars" id="bar6"></span>
   </div>
+
+  <div id="back-button" ng-click="backButton()" ng-controller="MainController" ng-show="showBackButton" link="/">
+    <span class="glyphicon glyphicon-arrow-left" id="scroll-glyphicon"></span>
+  </div>
 </header>
 <!-- 
 <div style="position:fixed; z-index:300; top:2%; right:2%;">
@@ -58,17 +62,21 @@
 </div>
  -->
  <div class="menu" style="position:fixed; z-index:350;" ng-controller="MainController">
+  <a href="#/about-us"><img src="images/dice.png" class="img-responsive side-menu-dice" alt="shaastra"></a>
   <ul class="mn-list">
     <span id="menuscroll">
-    <li><a href="#/">Home</a></li>
-    <!-- <li><a href="#/login">Log In/Register</a></li> -->
-    <li><a href="#/pre-shaastra">Pre-Shaastra</a></li>
-    <li class="down"><a class="d" href="#/event-list">Events</a></li>
-    <li class="down"><a  class="d" href="#/workshop-list">Workshops</a></li>
-    <li class="down"><a class="d" href="#/lectures">Lectures</a></li>
-    <li><a href="#/sponsors">Sponsors</a></li>
-    <li><a href="#/about-us">About Us</a></li>
-    <li><a href="#/contact-us">Contact Us</a></li>
+      <li><a href="#/">Home</a></li>
+      <!-- <li><a href="#/login">Log In/Register</a></li> -->
+      <li><a href="#/samparks">Pre-Shaastra</a></li>
+      <li class="down"><a class="d" href="#/event-list">Events</a></li>
+      <li class="down"><a class="d" href="#/workshop-category/561567aac8d15f6e1252ebee">Workshops</a></li>
+      <li class="down"><a class="d" href="#/international-summit">International Summit</a></li>
+      <!-- <li class="down"><a class="d" href="#/lectures">Lectures</a></li> -->
+      <li class="down"><a class="d" href="#/shows-and-exhibitions">Shows And Exhibitions</a></li>
+      <!-- <li><a href="#/sponsors">Sponsors</a></li> -->
+      <li><a href="#/social">Social Cause</a></li>
+      <li><a href="#/about-us">About Us</a></li>
+      <li><a href="#/contact-us">Contact Us</a></li>
     </span>
   </ul>
 </div>

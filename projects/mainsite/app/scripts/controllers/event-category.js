@@ -6,86 +6,34 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'scroll'});
 
+		var backButton = $('#back-button');
+		backButton.attr('link', '/event-list');
+
 		$scope.boolFixDiv = false;
 		$scope.message = 'Loading...';
 		var eventCategoryId = $routeParams.eventCategoryId;
 		$scope.eventsJSON = [];
+		$scope.eventList = [];
 		$http.get('http://shaastra.org:8001/api/eventLists/events/' + eventCategoryId)
 			.then(function (response) {
+				$scope.eventList = response.data;
+				response.data.events.sort(function (a, b) {
+					if(a.name < b.name) { return -1; }
+					if(a.name > b.name) { return 1; }
+					return 0;
+				});
 				var num = response.data.events.length;
 				for(var i=0; i<num; i++) {
 					if(response.data.events[i].acceptedByAdmin === true) {
 						response.data.events[i].imageURL = 'http://shaastra.org:8001/api/uploads/' + response.data.events[i].imageid + '/' + response.data.events[i].imagename;
-					} else {
-						response.data.events.splice(i, 1);
+						$scope.eventsJSON.push(response.data.events[i]);
 					}
 				}
-				$scope.eventsJSON = response.data;
 				$scope.message = 'Stay tuned for Updates!';
 			});
 
-		$scope.eventsJSON2 = {
-			eventCategoryName:'Coding Events',
-			eventCategoryImage: 'images/coding.png',
-			events:[{
-		  		name: 'Big Data Challenge',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/268px-IIT_Kharagpur_Logo.svg.png',
-		  		eventURL: ''
-				},
-				{
-		  		name: 'Crypto',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://www.sit.iitd.ac.in/site-assets/images/iitd_logo.png',
-		  		eventURL: ''
-				},
-				{
-		  		name: 'Hackathon',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://www.iitb.ac.in/sites/all/themes/touchm/logo.png',
-		  		eventURL :''
-				},
-				{
-		  		name: 'Hackfest',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1024px-IIT_Madras_Logo.svg.png',
-		  		eventURL: ''
-				},
-				{
-		  		name: 'Online Programming Contest',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://www.iitk.ac.in/rfidlabs/images/logo6.png',
-		  		eventURL: ''
-				},
-				{
-		  		name: 'Reverse Coding',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1024px-IIT_Madras_Logo.svg.png',
-		  		eventURL: ''
-	    	},
-				{
-		  		name: 'Hackfest',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1024px-IIT_Madras_Logo.svg.png',
-		  		eventURL: ''
-				},
-				{
-		  		name: 'Online Programming Contest',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://www.iitk.ac.in/rfidlabs/images/logo6.png',
-		  		eventURL: ''
-				},
-				{
-		  		name: 'Reverse Coding',
-		  		date: '3/Jan, 2015',
-		  		imageURL: 'http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1024px-IIT_Madras_Logo.svg.png',
-		  		eventURL: ''
-	    	}
-			]
-  	};
-
   	$scope.gotoEventDetails = function (index) {
-  		$location.path('event/' + $scope.eventsJSON.events[index]._id);
+  		$location.path('event/' + eventCategoryId + '/' + $scope.eventsJSON[index]._id);
   	};
 
 	  $scope.scrollDown = function (element) {

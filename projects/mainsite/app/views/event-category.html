@@ -4,47 +4,46 @@
 	  <div class="container-fluid category">
 	  	<div class="row">
 	    	<div class="category-wrapper col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-ls-offset-1">
-		  		<img class="img-responsive category-image" id="event-category-image" ng-src="http://shaastra.org:8001/api/uploads/{{eventsJSON.imageid}}/{{eventsJSON.imagename}}">
+		  		<img class="img-responsive category-image" id="event-category-image" ng-src="http://shaastra.org:8001/api/uploads/{{eventList.imageid}}/{{eventList.imagename}}" width="300" height="300">
+			  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
+				  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
+			  	</div>
 				</div>
-	  	</div>
-	  	<div id="scroll-down"  ng-click="scrollDown('event-category-name')">
-		  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
 	  	</div>
 		</div>
 		<div class="container-fluid">
-			<div class="row" ng-if="eventsJSON.events.length">
+			<div class="row">
 	  		<div id="event-category-name" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-						<span ng-bind="eventsJSON.title"></span>
+						<span ng-bind="eventList.title"></span>
 	   	  </div>
 			</div>
 
-			<article ng-if="!eventsJSON.events.length">
+			<article ng-if="!eventsJSON.length">
       	<div class="makeCenter">
         	<h1><b>{{ message }}</b></h1>
       	</div>
     	</article> 
 
-			<div class="row" ng-if="eventsJSON.events.length">
+			<div class="row" ng-if="eventsJSON.length">
 				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in eventsJSON.events track by $index">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in eventsJSON track by $index">
 
 					<div class="card">
 	  	  		<div class="card-front">
-		    			<div class="event-details"> 
+		    			<div class="event-details">
 			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
 			  				<br><br>
-			  				<span id="event-date" ng-bind="event.eventDate"></span>
-						</div>
+			  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
+							</div>
 		  			</div>
-		  			<div class="card-back" ng-style="{'position' : 'relative'}">
-		    			<div class="event-details" ng-style="{'background-image': 'url(http://shaastra.org:8001/api/uploads/{{event.imageid}}/{{event.imagename}})', 'background-size': 'cover', 'background-repeat' : no-repeat, 'z-index': '1', 'position' : 'absolute'}">
-						</div>
-						<div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
+		  			<div class="card-back" ng-style="{'position' : 'relative'}" ng-click="gotoEventDetails($index)">
+		    			<div class="event-details" ng-style="{'background-image': 'url(http://shaastra.org:8001/api/uploads/{{event.imageid}}/{{event.imagename}})', 'background-size': 'cover', 'background-repeat' : no-repeat, 'z-index': '1', 'position' : 'absolute'}"></div>
+							<div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
 			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
 			  				<br><br>
-			  				<span id="event-date" ng-bind="event.eventDate"></span>
-						</div>
-						<button ng-click="gotoEventDetails($index)" class="event-more-button" ng-style="{'z-index' : '2'}">See More</button>
+			  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
+							</div>
+							<button class="event-more-button" ng-style="{'z-index' : '2'}">See More</button>
 		  			</div>
 					</div>
 

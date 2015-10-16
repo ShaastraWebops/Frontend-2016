@@ -1,45 +1,45 @@
 	<div class="container-fluid makeCenter">
 		<h1 class="heading"><b>Contact Us</b></h1>
-		<div class="container-fluid main">
+		<div class="main">
 			<div class="row">
-				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
-					<ul class="rhombus-grid">
-						<li class="rhombus" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
-							<div class="rhombus-front">
-								<span ng-bind="department.name" class="rhombus-text"></span>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="contact-div row" ng-repeat="department in departmentsJSON.departments track by $index">
+						<div class="contact-img-desc"><h2>{{ department.name }}</h2></div>
+						<div ng-class="department.offset">
+							<div class="act-div" ng-class="department.col" ng-repeat="contact in department.contacts track by $index">
+								<img src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
+								<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
 							</div>
-							<div class="rhombus-back">
-							</div>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			
+
 			<div class="row form-and-map">
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<p><h3>Leave us a message</h3></p>
 					<div id="contact-form">
 						<form class="form-group" role="form" novalidate>
-						<div id="name" class="has-feedback">
-								<span class="form-control-feedback glyphicon glyphicon-user input-icon"></span>
+						<div id="cname" class="has-feedback">
+								<!-- <span class="form-control-feedback glyphicon glyphicon-user input-icon hidden-xs hidden-sm"></span> -->
 								<input type="text" class="form-control" placeholder="Name"/>
 						</div>
-						<div id="email" class="has-feedback">
-							<span class="form-control-feedback glyphicon glyphicon-envelope input-icon"></span>
+						<div id="cemail" class="has-feedback">
+							<!-- <span class="form-control-feedback glyphicon glyphicon-envelope input-icon hidden-xs hidden-sm"></span> -->
 							<input type="text" class="form-control" placeholder="Email"/>
 						</div>
-						<div id="mobile" class="has-feedback">
-							<span class="form-control-feedback glyphicon glyphicon-phone input-icon"></span>
+						<div id="cmobile" class="has-feedback">
+							<!-- <span class="form-control-feedback glyphicon glyphicon-phone input-icon hidden-xs hidden-sm"></span> -->
 							<input type="text" class="form-control" placeholder="Mobile (optional)"/>
 						</div>
-						<div id="message">
+						<div id="cmessage">
 							<textarea rows="10" class="form-control" placeholder="Your message..."></textarea>
 						</div>
 						<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
 						</form>
 					</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-init="init_map()">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 small-devices-map" ng-init="init_map()">
 					<div id="map"></div>
 				</div>
 			</div>
@@ -54,23 +54,23 @@
 			</div>
 			<div class="modal-body">
 				<ul class="contact-modal-contents row">
-					<li ng-repeat="contact in department.contacts">
+					<li>
 						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
 							<li>
-								<h4><span ng-bind="contact.personName"></span></h4>
+								<h4><span ng-bind="department.selected.personName"></span></h4>
 							</li>
 							<li>
 								<p>
 									<span class="glyphicon glyphicon-phone"></span>
 									<span><strong>Contact : </strong></span>
-									<span ng-bind="contact.phone" id="contactPhone"></span>
+									<span ng-bind="department.selected.phone" id="contactPhone"></span>
 								</p>
 							</li>
 							<li>
 								<p>
 									<span class="glyphicon glyphicon-envelope"></span>
 									<span><strong>E-Mail : </strong></span>
-									<span ng-bind="contact.mail" id="contactMail"></span>
+									<span ng-bind="department.selected.mail" id="contactMail"></span>
 								</p>
 							</li>
 						</ul>

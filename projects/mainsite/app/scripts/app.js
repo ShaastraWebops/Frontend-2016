@@ -19,8 +19,8 @@ angular
     'ngTouch',
     'ngScrollable',
     'ui.bootstrap',
-    'md.chips.select',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'cgBusy'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);
@@ -48,7 +48,7 @@ angular
         controller: 'eventsCategoryCtrl',
         controllerAs: 'eventsCategory'
       })
-      .when('/event/:eventId', {
+      .when('/event/:eventCategoryId/:eventId', {
         templateUrl: 'views/event-details.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'
@@ -63,7 +63,7 @@ angular
         controller: 'workshopsCategoryCtrl',
         controllerAs: 'workshopsCategory'
       })
-      .when('/workshop/:workshopId', {
+      .when('/workshop/:workshopCategoryId/:workshopId', {
         templateUrl: 'views/workshop-details.html',
         controller: 'WorkshopsCtrl',
         controllerAs: 'workshops'
@@ -113,6 +113,21 @@ angular
         controller: 'socialCtrl',
         controllerAs: 'social'
       })
+      .when('/international-summit', {
+        templateUrl: 'views/international-summit.html',
+        controller: 'internationalSummitCtrl',
+        controllerAs: 'summit'
+      })
+      .when('/samparks', {
+        templateUrl: 'views/sampark-category.html',
+        controller: 'samparksCategoryCtrl',
+        controllerAs: 'samparksCategory'
+      })
+      .when('/samparks/:index/:city', {
+        templateUrl: 'views/sampark-details.html',
+        controller: 'samparksCtrl',
+        controllerAs: 'samparks'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -131,7 +146,7 @@ angular
       // Intercept 401s and redirect you to login
       responseError: function(response) {
         if(response.status === 401) {
-          $location.path('/login');
+          $location.path('/');
           // remove any stale tokens
           $cookieStore.remove('token');
           return $q.reject(response);
@@ -151,6 +166,9 @@ angular
         }
       });
 
+      $rootScope.showBackButton = (next.$$route.originalPath !== '/');
+      $rootScope.showLogos = (next.$$route.originalPath === '/');
+
       if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");
         $('.mn-social').addClass("out");
@@ -158,8 +176,8 @@ angular
         $('.c').removeClass("block");
         $('.o').removeClass("none");
         $('.o').addClass("inblock");
-        $('.o').animate({left:"-=145px"}, 200);
-        $('#backdrop').css("display", "none");        
+        $('.o').animate({left:"-=220px"}, 200);
+        $('#backdrop').css("display", "none");
       } 
 
     });

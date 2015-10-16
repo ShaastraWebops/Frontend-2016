@@ -1,0 +1,98 @@
+	<div class="container-fluid makeCenter">
+		<h1 class="heading"><b>Contact Us</b></h1>
+		<div class="main">
+<!-- 
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
+					<ul class="rhombus-grid">
+						<li class="rhombus" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
+							<div class="rhombus-front">
+								<span ng-bind="department.name" class="rhombus-text"></span>
+							</div>
+							<div class="rhombus-back">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+ -->			
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div ng-repeat="department in departmentsJSON.departments">
+						<div class="contact-img" ng-click="displayModal(department)">
+							<img src="{{department.image}}" alt="" height="250" width="250">
+							<div class="contact-img-desc"><h4>{{ department.contacts.personName }}</h4></div>
+							<div class="contact-img-desc"><h4>({{ department.name }})</h4></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-and-map">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<p><h3>Leave us a message</h3></p>
+					<div id="contact-form">
+						<form class="form-group" role="form" novalidate>
+						<div id="name" class="has-feedback">
+								<span class="form-control-feedback glyphicon glyphicon-user input-icon"></span>
+								<input type="text" class="form-control" placeholder="Name"/>
+						</div>
+						<div id="email" class="has-feedback">
+							<span class="form-control-feedback glyphicon glyphicon-envelope input-icon"></span>
+							<input type="text" class="form-control" placeholder="Email"/>
+						</div>
+						<div id="mobile" class="has-feedback">
+							<span class="form-control-feedback glyphicon glyphicon-phone input-icon"></span>
+							<input type="text" class="form-control" placeholder="Mobile (optional)"/>
+						</div>
+						<div id="message">
+							<textarea rows="10" class="form-control" placeholder="Your message..."></textarea>
+						</div>
+						<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-init="init_map()">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<script type="text/ng-template" id="myModalContent.html">
+			<div class="modal-header">
+				<button type="button" class="close" ng-click="close()">&times;</button>
+				<h2 class="modal-title wrapper" ng-bind="department.name"></h2> 
+			</div>
+			<div class="modal-body">
+				<ul class="contact-modal-contents row">
+					<li>
+						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
+							<li>
+								<h4><span ng-bind="department.contacts.personName"></span></h4>
+							</li>
+							<li>
+								<p>
+									<span class="glyphicon glyphicon-phone"></span>
+									<span><strong>Contact : </strong></span>
+									<span ng-bind="department.contacts.phone" id="contactPhone"></span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span class="glyphicon glyphicon-envelope"></span>
+									<span><strong>E-Mail : </strong></span>
+									<span ng-bind="department.contacts.mail" id="contactMail"></span>
+								</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="close" ng-click="close()">Close</button>
+			</div>
+		</script>
+	</div>

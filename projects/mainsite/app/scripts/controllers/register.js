@@ -1,33 +1,35 @@
 'use strict';
 
 angular.module('shaastra2016App')
-   .directive('autoComplete', function(){
-    return function(scope){
-        scope.$watch('college.name', function(){
+   .directive('autoComplete', function () {
+    return function (scope) {
+      scope.$watch('college.name', function() {
         var suggestions = [];
         var matchTerm = new RegExp(scope.college.name.toUpperCase(), 'g');
-        for(var i=0; i<scope.collegesList.length; i++){
-            var match = scope.collegesList[i].name.toUpperCase().match(matchTerm);
-            if(match && match.length>0){
-                suggestions.push(scope.collegesList[i]);
-            }
-        };
-        scope.collegeSuggestions = suggestions;
-        if(suggestions && suggestions.length>0 && scope.college.name!=''){
-            if(suggestions[0].name.toUpperCase()==scope.college.name.toUpperCase()){
-                scope.suggestCollegeBool = false;
-            }
-            else
-                scope.suggestCollegeBool = true;
+        for(var i=0; i<scope.collegesList.length; i++) {
+          var match = scope.collegesList[i].name.toUpperCase().match(matchTerm);
+          if(match && match.length>0){
+            suggestions.push(scope.collegesList[i]);
+          }
         }
-        else{
+        scope.collegeSuggestions = suggestions;
+        if(suggestions && suggestions.length>0 && scope.college.name!=='') {
+          if(suggestions[0].name.toUpperCase()===scope.college.name.toUpperCase()) {
             scope.suggestCollegeBool = false;
+          } else {
+            scope.suggestCollegeBool = true;
+          }
+        } else {
+          scope.suggestCollegeBool = false;
         }
         console.log(scope.collegesList);
-    });
+      });
     };
-   })
-   .controller('registerCtrl', function ($scope) {
+  })
+  .controller('registerCtrl', function ($scope) {
+
+    var backButton = $('#back-button');
+    backButton.attr('link', '/');
 
     $scope.UserName = "";
     $scope.Password = "";
@@ -39,49 +41,47 @@ angular.module('shaastra2016App')
     $scope.repassword = "";
     $scope.existingCollege = 1;
     
-    $scope.collegesList = [
-    {
-        'id' : 1,
-        'name' : 'Chennai'
+    $scope.collegesList = [{
+      'id' : 1,
+      'name' : 'Chennai'
     },
     {
-        'id' : 2,
-        'name' :'Mumbai'
+      'id' : 2,
+      'name' :'Mumbai'
     },
     {
-        'id' : 3,
-        'name' : 'Delhi'
+      'id' : 3,
+      'name' : 'Delhi'
     },
     {
-        'id' : 4,
-        'name' :'Kanpur'
+      'id' : 4,
+      'name' :'Kanpur'
     },
     {
-        'id' : 5,
-        'name' : 'Kharaghpur'
-    }
-    ];
+      'id' : 5,
+      'name' : 'Kharaghpur'
+    }];
 
-    $scope.toggleNewCollegeDiv = function(){
-        $scope.existingCollege = !$scope.existingCollege;
-        var text = document.getElementById("toggleCollegeText");
-        if($scope.existingCollege){
-        }
-        else{
-            text.innerHTML = "Click here to add college if it is not shown";
-        }
-    }
+    $scope.toggleNewCollegeDiv = function () {
+      $scope.existingCollege = !$scope.existingCollege;
+      var text = document.getElementById("toggleCollegeText");
+      if($scope.existingCollege) {
 
-    $scope.selectSuggestedCollege = function(college){
-        $scope.college = {};
-        $scope.college.name = college.name;
-        $scope.college.id = college.id;
-        $scope.suggestCollegeBool = false;
-    }
+      } else {
+        text.innerHTML = "Click here to add college if it is not shown";
+      }
+    };
 
-    $scope.addCollege = function(){
-        //Make http request to store the details
-    }
+    $scope.selectSuggestedCollege = function (college) {
+      $scope.college = {};
+      $scope.college.name = college.name;
+      $scope.college.id = college.id;
+      $scope.suggestCollegeBool = false;
+    };
+
+    $scope.addCollege = function () {
+      //Make http request to store the details
+    };
 
     // Auth.createUser({
     //   name: '234',

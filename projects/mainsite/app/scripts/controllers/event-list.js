@@ -1,64 +1,45 @@
 /* jshint unused: false */
 
 'use strict';
+// angular.module('shaastra2016App').value('cgBusyDefualts',{
+// 	templateUrl:'loading.html',
+// });
 angular.module('shaastra2016App')
 	.controller('eventListCtrl', function ($scope, $interval, $http, $location) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow': 'hidden'});
 
-		var lists2 = [{
-		    name: "AeroFest",
-		    imgUrl: "images/aerofest.png",
-			},
-			{
-		    name: "B-Events",
-		    imgUrl: "images/bevents.png",
-			},
-			{
-		    name: "Coding",
-		    imgUrl: "images/coding.png",
-			},
-			{
-		    name: "Design And Build",
-		    imgUrl: "images/coding.png",
-			},
-			{
-		    name: "Department Flagship",
-		    imgUrl: "images/Department-Flagship.jpg",
-			},
-			{
-		    name: "Electronic Fest",
-		    imgUrl: "images/Electronics.jpg",
-			},
-			{
-		    name: "Involve",
-		    imgUrl: "images/Involve.jpg",
-			},
-			{
-		    name: "Quizzing",
-		    imgUrl: "images/Quizzing.jpg",
-			},
-			{
-		    name: "Spotlight",
-		    imgUrl: "images/Spotlight.jpg",
-			},
-		];
-		$scope.widthadjust=function(len){
-			len=len*900;//must be vh
-			var styling=angular.element(document.getElementsByClassName('wrap'));
-			styling.css({'width':'len'});
+		var backButton = $('#back-button');
+		backButton.attr('link', '/');
+
+
+		$scope.promise = null;
+		$scope.templateUrl = null;
+		$scope.demo = function () {
+			// $scope.promise = $http.get('http://shaastra.org:8001/api/eventLists/events');
 		};
+
+		// $scope.widthadjust=function(len){
+		// 	len=len*900;//must be vh
+		// 	var styling=angular.element(document.getElementsByClassName('wrap'));
+		// 	styling.css({'width':'len'});
+		// };
 		// this.details = lists;
 		$scope.posX = 0;
 		$scope.posY = 0;
-
+		$scope.templateUrl = 'views/loading.html';
 		$scope.eventList = [];
 		$scope.message = 'Loading...';
 		$http.get('http://shaastra.org:8001/api/eventLists/events')
 			.then(function (response) {
+				response.data.sort(function (a, b) {
+					if(a.title < b.title) { return -1; }
+					if(a.title > b.title) { return 1; }
+					return 0;
+				});
 				$scope.eventList = response.data;
-				$scope.message = 'Stay tuned for Updates!';
+				$scope.message = 'Loading..';
 			});
 
 		$scope.moveX = function (pixels) {
@@ -73,8 +54,11 @@ angular.module('shaastra2016App')
 		};
 
 		$scope.gotoEventList = function (index) {
-			// $location.path('#/event-category/asd');
-			$location.path('event-category/' + $scope.eventList[index]._id);
+			if($scope.eventList[index].title[0] === 'W' || $scope.eventList[index].title[0] === 'w') {
+				$location.path('workshop-category/561567aac8d15f6e1252ebee');
+			} else {
+				$location.path('event-category/' + $scope.eventList[index]._id);
+			}
 		};
 		// $scope.$digest();
 		// $timeout(refresh, 1000);
@@ -86,5 +70,11 @@ angular.module('shaastra2016App')
 		$scope.$on('destroy', function () {
 			$interval.cancel(refresh);
 		});
+
+		$scope.loadScroll = function () {
+			$scope.$broadcast('content.reload');
+		};
+
 	});
+
 

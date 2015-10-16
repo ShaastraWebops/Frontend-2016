@@ -2,39 +2,38 @@
 
 angular.module('shaastra2016App')
   .controller('WorkshopsCtrl', function ($scope, $http, $routeParams) {
-    $scope.tabsTemp = [{ 
-	    	'name': 'About', 
-	    	'data': 'tab one data' 
-    	}, 
-    	{ 
-    		'name': 'Event Format', 
-    		'data': 'tab two data' 
-    	}, 
-    	{ 
-    		'name': 'Problem Statement',
-  			'data': 'tab three data' 
-  		}, 
-  		{ 
-  			'name': 'FAQ', 
-  			'data': 'tab four data' 
-  		}, 
-  		{ 
-  			'name': 'Prize Money', 
-  			'data': 'tab five data' 
-  		}, 
-  		{ 
-  			'name': 'Contact Details', 
-  			'data': 'tab six data' 
-  		}
-		];
+
+    var backButton = $('#back-button');
+    backButton.attr('link', '/workshop-category/' + $routeParams.workshopCategoryId);
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({'overflow-y': 'auto'});
+    
+    $scope.message = 'Loading...';
+    
+    var converter = new showdown.Converter();
+    $scope.xmark = function (b) {
+      return converter.makeHtml(b);
+    };
     
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.workshopId)
       .then(function (response) {
-        if(response.data.eventTabs.length) {
-          // Add contact info here
-          // response.data.eventTabs.push()
+        response.data.eventTabs.sort(function (a, b) {
+          if(a.tabNumber < b.tabNumber) { return -1; }
+          if(a.tabNumber > b.tabNumber) { return 1; }
+          return 0;
+        });
+        var numAssignees = response.data.assignees.length;
+        var contact = {
+          'name': 'Contact Details',
+          'info': '<p><b>For further details, please contact,</b></p>'
+        };
+        for(var i=0; i<numAssignees; i++) {
+          contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
         }
+        response.data.eventTabs.push(contact);
+        $scope.message = 'Stay tuned for Updates!';
         $scope.eve = response.data;
       });
 

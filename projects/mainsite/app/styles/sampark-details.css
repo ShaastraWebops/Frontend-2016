@@ -1,0 +1,66 @@
+@font-face {
+	font-family: 'CGF Locust Resistance';
+	src: url('../styles/fonts/CGFLocustResistance.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/MyriadProRegular.otf');
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #000000; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #ffffff; 
+}
+
+.samparks-ul {
+  list-style-type: disc;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+.samparks-ul li {
+	cursor: default;
+}
+
+.shaastraText {
+	font-family: 'CGF Locust Resistance';
+}
+
+#samparkDetails {
+	margin-top: 0%;
+}
+
+.samparkContent {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.6);
+	min-height: 350px;
+	padding: 50px 100px 50px 100px;
+	text-align: justify;
+}
+.samparkContent p {
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.samparkHeading {
+	font-family: 'Lato';
+	font-size: 10vh;
+	height: 45px;
+	padding-bottom: 3%;
+}
+
+@media only screen and (max-width:767px) {
+	#samparkDetails {
+		margin-top: 5%;
+	}
+}

@@ -1,23 +1,25 @@
-::-webkit-scrollbar {
-    width: 0.5em;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #000000; 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: #ffffff; 
-}
-
 @font-face {
   font-family: 'Lato';
   src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/MyriadProRegular.otf');
 }
 
 .makeCenter {
   text-align: center;
   font-family: 'Lato';
+  font-weight: bolder;
+}
+
+.font-lato {
+  font-family: 'Lato';
+  font-weight: bolder;
+}
+
+.font-myraid {
+  font-family: 'MyraidPro';
   font-weight: bolder;
 }
 
@@ -28,20 +30,20 @@
 .scrollable .scrollable-bar {
   position:absolute;
   box-sizing: border-box;
-  opacity: 1;
+  opacity: 0;
   background-color: #f0f0f0;
   background-color: rgba(0, 0, 0, 0);
   height: 1%;
   margin-left: 8%;
   margin-top:0%;
-  z-index: 199;
+  z-index: 260;
   width: 100%;
   padding: -5px;
   border:2px solid transparent;
 }
 
 .scrollable .scrollable-bar:hover, .scrollable:hover .scrollable-bar ,.scrollable.active .scrollable-bar {
-  opacity:1;
+  opacity: 0;
 }
 
 .scrollable .scrollable-slider {
@@ -51,7 +53,7 @@
 }
 
 .scrollarea:hover .scrollable .scrollable-slider {
-  opacity: 1;
+  opacity: 0;
 }
 
 .scrollable .scrollable-bar-x .scrollable-slider {
@@ -72,7 +74,10 @@ article {
 .scrollarea { 
   width: 101%; 
   height: 90%;
-  margin-top: -10.3%;
+  margin-top: -10%;
+}
+.wrap1{
+  width:100%;
 }
 
 .wrapperz .wrap1 {
@@ -93,27 +98,30 @@ article {
 }
 
 .wrap1 .wrapperz img {
-  width: 100%;
-  height: 62px;
+  width: 101%;
+  height: 65px;
   line-height: 3;
   cursor: pointer;
-  position:relative;
+  position: relative;
   z-index: 0;
   vertical-align: middle;
 }
 
 .wrap img {
   width: 70vh;
-  margin-top: 40%;
   position: relative;
   cursor: pointer;
   height: 200px;
+}
+.wrap figure {
+  margin-top: 40%;
 }
 
 .wrapperz {
   height: auto;
   float: left;
   overflow: hidden;
+  z-index: 260;
 }
 
 .wrap1,.wrap {
@@ -133,7 +141,7 @@ article {
 }
 
 .wrap {
-  /*width:740vh;*/
+  width:740vh;
   padding-left: 32%;
 }
 
@@ -146,7 +154,7 @@ article {
   top: 50%;
   z-index: 350;
   font-weight: bolder;
-  font-size: 2.5vh;
+  font-size: 2.3vh;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -160,6 +168,7 @@ article {
 }
 .wrap1{
   width:100%;
+  z-index: 250;
 }
 .slider {
   width: 105%;
@@ -188,7 +197,7 @@ article {
   -moz-transform : translateY(220%);
   -ms-transform : translateY(220%);
   -o-transform : translateY(220%);
-  transform : translateY(180%);
+  transform : translateY(220%);
 }
 
 .wrap p.event-name {
@@ -202,7 +211,7 @@ article {
   font-size: 4.5vh;
 }
 
-article .glyphicon {
+article .arrow {
  display: inline-block;
   text-align: center;
   background-color: rgba(119,158,203,0.9);
@@ -213,7 +222,7 @@ article .glyphicon {
   z-index: 200;
 }
 
-article .glyphicon:hover {
+article .arrow:hover {
   background-color: rgba(255,105,97,1); 
   cursor: pointer; 
   -webkit-transition: background-color 10ms linear;
@@ -221,6 +230,23 @@ article .glyphicon:hover {
   -ms-transition: background-color 10ms linear;
   -o-transition: background-color 10ms linear;
   transition: background-color 10ms linear;
+}
+
+.wrapperz figure {
+  background: black;
+}
+.wrapperz figure div {
+  opacity: 0.5;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+
+  /*-webkit-backface-visibility: visible;*/
+}
+.wrapperz figure:hover div {
+  opacity: 1;
 }
 
 .wrapperz .dot1,.wrapperz .dot2 {
@@ -234,19 +260,19 @@ article .glyphicon:hover {
 }
 
 #left-arrow {
- position: absolute;
+  position: absolute;
   left: 0.5%;
-  top:38%;
+  top: 38%;
   margin-left: 0.5%;
-  color:white;
+  color: black;
   z-index: 100;
 }
 
 #right-arrow {
   position: absolute;
   left: 92%;
-  top:38%;
-  color:white;
+  top: 38%;
+  color: black;
   z-index: 100;
 }
 /*media queries*/

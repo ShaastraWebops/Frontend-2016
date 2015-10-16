@@ -1,6 +1,10 @@
 'use strict';
 angular.module('shaastra2016App')
 	.controller('dashboardCtrl', function ($scope) { 
+
+		var backButton = $('#back-button');
+		backButton.attr('link', '/');
+
 		$scope.i = 0;
 		$scope.data = function (ch) {
     	$scope.i = ch;
