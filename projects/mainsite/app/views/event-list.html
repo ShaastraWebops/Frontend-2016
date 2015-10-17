@@ -1,32 +1,32 @@
-<div ng-controller="eventListCtrl as eventslist">
+<!-- <div ng-controller="eventListCtrl as eventslist">
   <div ng-mouseenter="loadScroll()" >
     <div id="heading"><b>Events</div>
     <br>
    
       <div class="wrap1" ng-if="eventList.length">
-        <div class="wrapperz" ng-repeat="category in eventList track by $index">
+        <div class="wrapperz" ng-repeat="category in eventList track by $index"> -->
         <!-- <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index"> -->
-          <div class="slider"></div>
+          <!-- div class="slider"></div>
           <img ng-click="gotoEventList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}"/>
           <p class="event-name"><b>{{ category.title }}</b></p>
         </div>
       </div>
     </div>
     <!-- <div  cg-busy="{promise:promise,templateUrl:'views/loading.html'}" ng-init="demo()"></div> -->
-    <article ng-if="!eventList.length">
+   <!--  <article ng-if="!eventList.length">
       <div class="makeCenter">
         <h1><b>{{ message }}</b></h1>
       </div>
     </article>  
     
     <!-- <article ng-show="eventList.length" ng-init="widthadjust(eventList.length)">  -->
-    <article ng-show="eventList.length" > 
+   <!--  <article ng-show="eventList.length" > 
       <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
         <div class="wrap" id="flow" >
           <div class="wrapperz" ng-repeat="category in eventList track by $index">
           <!-- <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index"> -->
-            <div>
-              <figure><div><img ng-click="gotoEventList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}" width="100" height="100"/></div></figure>
+            <!-- <div> -->
+            <!--   <figure><div><img ng-click="gotoEventList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}" width="100" height="100"/></div></figure>
               <div class="dot1"></div>
               <div class="dot2"></div>
               <p class="event-name">{{ category.title }}</p> 
@@ -38,5 +38,58 @@
       <span id="left-arrow" class="glyphicon glyphicon-chevron-left arrow" ng-click="moveX(-440);"></span>
       <span  id="right-arrow" class="glyphicon glyphicon-chevron-right arrow" ng-click="moveX(440)"></span>
     </article>
+  </div>
+</div>
+ --> 
+ <div class="event-category">
+  <div ng-controller="eventListCtrl as eventslist" scroll ng-clock>
+
+    <div class="container-fluid category">
+      <div class="row">
+        <div class="category-wrapper col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-ls-offset-1">
+          <img class="img-responsive category-image" id="event-category-image" ng-src="../images/aerofest.png" width="300" height="300">
+          <div id="scroll-down" ng-click="scrollDown('event-category-name')">
+            <span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="event-category-name" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+         <b>EVENTS</b>
+        </div>
+      </div>
+
+      <article ng-if="!eventList.length">
+        <div class="makeCenter">
+          <h1><b>{{ message }}</b></h1>
+        </div>
+      </article> 
+
+      <div class="row" ng-if="eventList.length">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="category in eventList track by $index">
+
+          <div class="card">
+            <div class="card-front">
+              <div class="event-details">
+                <span id="event-name" ng-bind="category.title" ng-style="{'z-index' : '2'}"></span>
+                <br><br>
+              </div>
+            </div>
+            <div class="card-back" ng-style="{'position' : 'relative'}" ng-click="gotoEventList($index)">
+              <div class="event-details" ng-style="{'background-image': 'url(http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}})', 'background-size': 'cover', 'background-repeat' : no-repeat, 'z-index': '1', 'position' : 'absolute'}"></div>
+              <div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
+                <span id="event-name" ng-bind="category.title" ng-style="{'z-index' : '2'}"></span>
+              </div>
+              <button class="event-more-button" ng-style="{'z-index' : '2'}">See More</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

@@ -2,21 +2,24 @@
 		<h1 class="heading"><b>Contact Us</b></h1>
 		<div class="main">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="contact-div row" ng-repeat="department in departmentsJSON.departments track by $index">
-						<div class="contact-img-desc"><h2>{{ department.name }}</h2></div>
-						<div ng-class="department.offset">
-							<div class="act-div" ng-class="department.col" ng-repeat="contact in department.contacts track by $index">
+			<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+					<div class="contact-div" ng-repeat="department in departmentsJSON.departments track by $index">
+							<div class="act-divcol-xs-4 col-sm-4 col-md-4 col-lg-4" ng-class="department.col" ng-repeat="contact in department.contacts track by $index">
+								<div class="contact-img-desc"><h4><b>{{ department.name }}</b></h4></div>
+								<div ng-class="department.offset">
 								<img src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
 								<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="row form-and-map">
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			
+<div class="hidden-xs col-sm-1 col-md-1 col-lg-1"></div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 form-and-map">
+			<div class="row small-devices-map" ng-init="init_map()">
+					<div id="map"></div>
+				</div>
+				<div class="row">
 					<p><h3>Leave us a message</h3></p>
 					<div id="contact-form">
 						<form class="form-group" role="form" novalidate>
@@ -24,24 +27,26 @@
 								<!-- <span class="form-control-feedback glyphicon glyphicon-user input-icon hidden-xs hidden-sm"></span> -->
 								<input type="text" class="form-control" placeholder="Name"/>
 						</div>
+						<br>
 						<div id="cemail" class="has-feedback">
 							<!-- <span class="form-control-feedback glyphicon glyphicon-envelope input-icon hidden-xs hidden-sm"></span> -->
 							<input type="text" class="form-control" placeholder="Email"/>
 						</div>
+						<br>
 						<div id="cmobile" class="has-feedback">
 							<!-- <span class="form-control-feedback glyphicon glyphicon-phone input-icon hidden-xs hidden-sm"></span> -->
 							<input type="text" class="form-control" placeholder="Mobile (optional)"/>
 						</div>
+						<br>
 						<div id="cmessage">
 							<textarea rows="10" class="form-control" placeholder="Your message..."></textarea>
 						</div>
+						<br>
 						<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
 						</form>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 small-devices-map" ng-init="init_map()">
-					<div id="map"></div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

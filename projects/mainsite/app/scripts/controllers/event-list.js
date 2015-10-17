@@ -8,7 +8,7 @@ angular.module('shaastra2016App')
 	.controller('eventListCtrl', function ($scope, $interval, $http, $location) {
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow': 'hidden'});
+    html.css({'overflow-y': 'scroll'});
 
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
