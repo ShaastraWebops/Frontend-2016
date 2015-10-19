@@ -26,6 +26,7 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/angular-cookie/angular-cookie.js',
       'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/intro.js/intro.js',
       'bower_components/angular-intro.js/src/angular-intro.js',

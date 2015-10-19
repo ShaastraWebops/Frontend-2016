@@ -21,7 +21,8 @@ angular
     'ui.bootstrap',
     'LocalStorageModule',
     'cgBusy',
-    'angular-intro'
+    'angular-intro',
+    'ipCookie'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);

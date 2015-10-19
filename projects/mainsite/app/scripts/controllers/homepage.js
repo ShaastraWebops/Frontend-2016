@@ -1,18 +1,18 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope, $timeout) {
+  .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
 
     // guide start
-    $scope.currentStep = 1;
+    $scope.currentStep = ipCookie('myTour') || 1;
     $scope.AfterChangeEvent = function() {
       $scope.currentStep = this._currentStep + 1;
-      // ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
     };
 
     $scope.CompletedEvent = function() {
       $scope.currentStep = this._currentStep + 2;
-      // ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
     };
 
     if($scope.currentStep < 3){
