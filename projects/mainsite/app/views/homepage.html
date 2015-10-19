@@ -1,6 +1,9 @@
-  <div class="container home">
+<div class="container home" ng-intro-options="IntroOptions" ng-intro-method="CallMe" 
+  ng-intro-onafterchange="AfterChangeEvent"
+  ng-intro-oncomplete="CompletedEvent"
+  ng-intro-autostart="ShouldAutoStart">
 
-    <div class="container">
+  <div class="container">
 
     <ul class="nav nav-pills nav-justified nav-bar">
       <li class="active"><a href="#">Item 1</a></li>
@@ -13,86 +16,86 @@
       <li class="nav-item"><a href="#">Item 8</a></li>
     </ul>
 
-    </div>
+  </div>
 
-    <div class="container hexagons-container">
-      <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
-    </div>  
-
-    <div class="container main">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-      </div>
-      <hr class="row separator">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-      </div>
-      <hr class="row separator">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-      </div>
-      <hr class="row separator">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-      </div>
-      <hr class="row separator">
-    </div>
-
-    <div class="bottom-links container">
-      <div class="row">
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 1</a></li>
-            <li><a href="#" class="link">Link 2</a></li>
-            <li><a href="#" class="link">Link 3</a></li>
-            <li><a href="#" class="link">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 5</a></li>
-            <li><a href="#" class="link">Link 6</a></li>
-            <li><a href="#" class="link">Link 7</a></li>
-            <li><a href="#" class="link">Link 8</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 9</a></li>
-            <li><a href="#" class="link">Link 10</a></li>
-            <li><a href="#" class="link">Link 11</a></li>
-            <li><a href="#" class="link">Link 12</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 13</a></li>
-            <li><a href="#" class="link">Link 14</a></li>
-            <li><a href="#" class="link">Link 15</a></li>
-            <li><a href="#" class="link">Link 16</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
+  <div id="hex-div" class="container hexagons-container">
+    <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
   </div>  
+
+  <div id="main-div" class="container main">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
+      </div>
+    </div>
+    <hr class="row separator">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+    </div>
+    <hr class="row separator">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
+      </div>
+    </div>
+    <hr class="row separator">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+       <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+    </div>
+    <hr class="row separator">
+  </div>
+
+  <div class="bottom-links container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 1</a></li>
+          <li><a href="#" class="link">Link 2</a></li>
+          <li><a href="#" class="link">Link 3</a></li>
+          <li><a href="#" class="link">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 5</a></li>
+          <li><a href="#" class="link">Link 6</a></li>
+          <li><a href="#" class="link">Link 7</a></li>
+          <li><a href="#" class="link">Link 8</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 9</a></li>
+          <li><a href="#" class="link">Link 10</a></li>
+          <li><a href="#" class="link">Link 11</a></li>
+          <li><a href="#" class="link">Link 12</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 13</a></li>
+          <li><a href="#" class="link">Link 14</a></li>
+          <li><a href="#" class="link">Link 15</a></li>
+          <li><a href="#" class="link">Link 16</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>  
