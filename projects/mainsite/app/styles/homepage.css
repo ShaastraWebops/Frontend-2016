@@ -475,15 +475,12 @@
 
 #top-hex{
 	z-index: 3;
-	background-color: #000;
 }
 #middle-hex{
 	z-index: 2;
-	background-color: #22264b;
 }
 #bottom-hex{
 	z-index: 1;
-	background-color: #000;
 }
 #shaastra-info{
 	background-color: #173e43;
@@ -558,19 +555,25 @@
 	margin-bottom: 5%;
 	display: flex;
 }
-.hexagon{
-	width: 500px;
-	height: 500px;
+.clip-svg{
+	width: 0;
+	height: 0;
+}
+.polygon-each-img-wrap > img{
+	max-width: 100%;
+	height: auto;
+}
+.polygon-clip-hexagon {
 	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	-moz-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	-ms-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	-o-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.polygon-each-img-wrap{
+	width: 400px;
+	height: 400px;
 	position: absolute;
-	border: none;
 	margin-left: 350px;
-	visibility: hidden;
 	text-align: center;
+	visibility: hidden;
 }
 .hex-initial-anim
 {

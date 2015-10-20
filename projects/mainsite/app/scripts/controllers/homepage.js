@@ -30,7 +30,7 @@ $(window).on('load', function(){
   $("#top-hex").addClass("hex-initial-anim");
   $("#middle-hex").addClass("hex-initial-anim");
   $("#bottom-hex").addClass("hex-initial-anim");
-  $(".hexagon").css("visibility","visible");
+  $(".polygon-each-img-wrap").css("visibility","visible");
   
   $("#top-hex").one(animationEvent1, function(event){
     $("#top-hex").removeClass("hex-initial-anim");
