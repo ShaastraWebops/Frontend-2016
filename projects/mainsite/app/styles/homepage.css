@@ -561,14 +561,15 @@
 }
 .polygon-each-img-wrap > img{
 	max-width: 100%;
-	height: auto;
+	height: 400px;
+	width: 350px;
 }
 .polygon-clip-hexagon {
 	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .polygon-each-img-wrap{
-	width: 400px;
+	width: 350px;
 	height: 400px;
 	position: absolute;
 	margin-left: 350px;
