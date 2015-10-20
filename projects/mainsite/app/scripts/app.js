@@ -12,7 +12,6 @@ angular
   .module('shaastra2016App', [
     'ngAnimate',
     'ngCookies',
-    'ngFx',
     'ngMessages',
     'ngResource',
     'ngRoute',
