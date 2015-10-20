@@ -473,15 +473,146 @@
 
 /* CSS for new home page starts */
 
+#top-hex{
+	z-index: 3;
+}
+#middle-hex{
+	z-index: 2;
+}
+#bottom-hex{
+	z-index: 1;
+}
+#shaastra-info{
+	background-color: #0B3861;
+	width: 100%;
+	height: 5%;
+	padding-left: 10%;
+	margin-top: 0;
+	margin-bottom: 2%;
+	margin-right: 0;
+}
+#info-title{
+	font-size: 2.7em;
+	margin-bottom: 0px;
+}
+#info-desc{
+	font-size: 1.6em;
+	margin-top: 0px;
+}
+#makers-title{
+	font-size: 2.7em;
+}
+#makers-desc{
+	font-size: 1.3em;
+}
+#makers-footer{
+	font-size: 2em;
+}
+@keyframes hex-animation {
+  from {
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -ms-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+  transform:rotate(0deg);
+  }
+  to {
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  transform:rotate(360deg);
+  }
+}
+@keyframes hex-initial-animation {
+  from {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);   
+      -moz-transform: scale(0);
+      transform: scale(0);
+  }
+  to {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);   
+      -moz-transform: scale(1);
+      transform: scale(1);
+  }
+}
 .nav-bar{
 	width: 100%;
 	margin-top: 1%;
 	margin-bottom: 5%;
+	color: #000;
 }
 .hexagons-container{
+	height: 500px;
+	width: 100%;
+	margin-bottom: 5%;
+	display: flex;
+}
+.hexagon{
+	width: 500px;
+	height: 500px;
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	background-color: #000;
+	position: absolute;
+	border: none;
+	margin-left: 350px;
+	visibility: hidden;
 	text-align: center;
-	margin-top: 2%;
-	margin-bottom: 4%;
+}
+.hex-initial-anim
+{
+	-webkit-animation-duration: 400ms;
+	-webkit-animation-timing-function: linear;
+    -webkit-animation-name:"hex-initial-animation";
+    -moz-animation-duration: 400ms;
+    -moz-animation-timing-function: linear;
+    -moz-animation-name:"hex-initial-animation";
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-name:"hex-initial-animation";
+}
+.middle-hex-anim{
+	-webkit-animation-duration: 25s;
+	-webkit-animation-name:"hex-animation";
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-direction: reverse;
+	-moz-animation-duration: 25s;
+	-moz-animation-name:"hex-animation";
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-delay: 0s;
+	-moz-animation-direction: reverse;
+	animation-duration: 25s;
+	animation-timing-function: linear;
+	animation-name:"hex-animation";
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-direction: reverse;
+}
+.bottom-hex-anim{
+	-webkit-animation-duration: 25s;
+	-webkit-animation-name:"hex-animation";
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-direction: normal;
+	-moz-animation-duration: 25s;
+	-moz-animation-name:"hex-animation";
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-delay: 0s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-direction: normal;
+	animation-duration: 25s;
+	animation-timing-function: linear;
+	animation-name:"hex-animation";
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-direction: normal;
 }
 .bottom-links{
 	background-color: #000;
@@ -502,11 +633,27 @@
 	width: 100%;
 	text-align: center;
 }
+.main{
+	color: #0B3861;
+	text-align: center;
+}
 .separator{
 	height: 1px;
 	width: 100%;
 	color: #000;
 	background-color: #000;
 }
+.info-text{
+	color: #fff;
+}
+.dept-div{
+	background-color: #0B3861;
+	width: 100%;
+	text-align: center;
+}
+.dept-nav{
+	width: 60%;
+}
+
 
 /* CSS for new home page ends */

@@ -1,5 +1,53 @@
 'use strict';
 
+$(window).on('load', function(){
+  function whichAnimationEvent(element){
+    var t, el;
+    if(element==1)
+      el = document.getElementById("top-hex");
+    else if(element==2)
+      el = document.getElementById("middle-hex");
+    else if(element==3)
+      el = document.getElementById("bottom-hex");
+    var animations = {
+      "animation"      : "animationend",
+      "OAnimation"     : "oAnimationEnd",
+      "MozAnimation"   : "animationend",
+      "WebkitAnimation": "webkitAnimationEnd"
+    }
+
+    for (t in animations){
+      if (el.style[t] !== undefined){
+        return animations[t];
+      }
+    }
+  }
+
+  var animationEvent1 = whichAnimationEvent(1);
+  var animationEvent2 = whichAnimationEvent(2);
+  var animationEvent3 = whichAnimationEvent(3);
+
+  $("#top-hex").addClass("hex-initial-anim");
+  $("#middle-hex").addClass("hex-initial-anim");
+  $("#bottom-hex").addClass("hex-initial-anim");
+  $(".hexagon").css("visibility","visible");
+  
+  $("#top-hex").one(animationEvent1, function(event){
+    $("#top-hex").removeClass("hex-initial-anim");
+  });
+ 
+  $("#middle-hex").one(animationEvent2, function(event){
+    $("#middle-hex").removeClass("hex-initial-anim");
+    $("#middle-hex").addClass("middle-hex-anim");
+  });
+  
+  $("#bottom-hex").one(animationEvent2, function(event){
+    $("#bottom-hex").removeClass("hex-initial-anim");
+    $("#bottom-hex").addClass("bottom-hex-anim");
+  });
+
+});
+
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
 
@@ -164,6 +212,17 @@ angular.module('shaastra2016App')
     });
 
 });
+
+//rotating hexagons directive
+angular.module('shaastra2016App')
+  .directive('rotateHex', function($animate){
+    return function(scope, element){
+    $animate.animate(element,'fx-rotate-clock')
+      .then(function(){
+        console.log("Rotated");
+      })
+    };
+  });
  
 //tooltip Directive
 angular.module('shaastra2016App')
