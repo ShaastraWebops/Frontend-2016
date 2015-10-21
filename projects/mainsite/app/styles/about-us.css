@@ -28,7 +28,7 @@
 }
 
 #aboutUs {
-	margin-top: 0%;
+	margin-top: 5%;
 }
 #aboutUs h3 {
 	font-size: 3vh;
@@ -43,8 +43,9 @@
 }
 
 .aboutUsHeading {
-	font-family: 'Lato';
-	font-size: 10vh;
+	font-family: 'MyriadPro';
+	font-variant: small-caps;
+	font-size: 8vh;
 	height: 45px;
 	padding-bottom: 3%;
 }

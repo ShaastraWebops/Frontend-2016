@@ -30,7 +30,11 @@ ul {
   list-style-type: none;
 }
 .heading {
-  font-size: 10vh;
+  position: relative;
+  left: -15%;
+  font-size: 8vh;
+  font-variant: small-caps;
+  font-family: 'MyriadPro';
   margin-top: 3%;
 }
 .wrapper{
