@@ -42,6 +42,8 @@
 .home-top-nav {
 	font-weight: bolder;
 	font-size: 1.2em;
+	padding-left: 2%;
+	text-align: center;
 }
 .home-top-nav li > a {
 	padding: 0;

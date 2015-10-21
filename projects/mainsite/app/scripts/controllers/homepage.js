@@ -1,6 +1,10 @@
 'use strict';
 
-$(window).on('load', function(){
+/*$(window).on('load', function(){
+  console.log("Inside window.load");
+});*/
+
+function animateHexagons(){
   function whichAnimationEvent(element){
     var t, el;
     if(element==1)
@@ -26,31 +30,36 @@ $(window).on('load', function(){
   var animationEvent1 = whichAnimationEvent(1);
   var animationEvent2 = whichAnimationEvent(2);
   var animationEvent3 = whichAnimationEvent(3);
-
-  $("#top-hex").addClass("hex-initial-anim");
-  $("#middle-hex").addClass("hex-initial-anim");
-  $("#bottom-hex").addClass("hex-initial-anim");
+  if(sessionStorage.homePageLoaded!=1){
+   $("#top-hex").addClass("hex-initial-anim");
+   $("#middle-hex").addClass("hex-initial-anim");
+   $("#bottom-hex").addClass("hex-initial-anim");
+   $("#top-hex").one(animationEvent1, function(event){
+     $("#top-hex").removeClass("hex-initial-anim");
+   });
+   
+   $("#middle-hex").one(animationEvent2, function(event){
+     $("#middle-hex").removeClass("hex-initial-anim");
+     $("#middle-hex").addClass("middle-hex-anim");
+   });
+   
+   $("#bottom-hex").one(animationEvent2, function(event){
+     $("#bottom-hex").removeClass("hex-initial-anim");
+     $("#bottom-hex").addClass("bottom-hex-anim");
+   });
+   sessionStorage.homePageLoaded = 1;
+  }
+  else{
+    $("#middle-hex").addClass("middle-hex-anim");
+    $("#bottom-hex").addClass("bottom-hex-anim");
+  }
   $(".polygon-each-img-wrap").css("visibility","visible");
   
-  $("#top-hex").one(animationEvent1, function(event){
-    $("#top-hex").removeClass("hex-initial-anim");
-  });
- 
-  $("#middle-hex").one(animationEvent2, function(event){
-    $("#middle-hex").removeClass("hex-initial-anim");
-    $("#middle-hex").addClass("middle-hex-anim");
-  });
-  
-  $("#bottom-hex").one(animationEvent2, function(event){
-    $("#bottom-hex").removeClass("hex-initial-anim");
-    $("#bottom-hex").addClass("bottom-hex-anim");
-  });
-
-});
+}
 
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
-
+    animateHexagons();
     var svgMargin = document.documentElement.clientWidth*0.36;
     $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     window.addEventListener("resize", resizeFunction);
