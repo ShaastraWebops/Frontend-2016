@@ -145,7 +145,7 @@
 .polygon-each-img-wrap > img{
 	max-width: 100%;
 	height: 400px;
-	width: 350px;
+	width: 400px;
 }
 .polygon-clip-hexagon {
 	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -282,6 +282,14 @@
 .footer-nav-item > a{
 	color: #fff;
 	font-size: 1.8em;
+}
+
+.hex-images-div {
+	position: absolute;
+	left: 32%;
+}
+.hex-images {
+	/*width: 50%;*/
 }
 
 /* CSS for new home page ends */
