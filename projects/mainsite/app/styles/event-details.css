@@ -20,6 +20,7 @@
 }
 .evhead {
 	font-variant: small-caps;
+	font-weight: bolder;
 	font-family: 'MyraidPro';
 	font-size: 30px;
 	z-index: 1;
@@ -47,7 +48,7 @@ a[event-nav-hyperlink] {
 
 .event-nav-xs {
 	font-variant: small-caps;
-	background-color: blue;
+	background-color: #173e43;
 	color: white;
 	height: 35px;
 	font-family: 'Lato';
@@ -68,7 +69,7 @@ a[event-nav-hyperlink] {
 	vertical-align: middle;
 	font-variant: small-caps;
 	z-index: 1;
-	background-color: blue;
+	background-color: #173e43;
 	color: white;
 	width: 100%;
 	height: auto;
@@ -79,14 +80,15 @@ a[event-nav-hyperlink] {
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
 	table-layout: fixed;
+	padding-right: 20%;
 }
 
 .event-nav:hover {
-	color: black;
+	color: #a3a3a3;
 }
 
 .event-nav-selected {
-	color: black;
+	color: #a3a3a3;
 }
 
 #event-nav-box {
