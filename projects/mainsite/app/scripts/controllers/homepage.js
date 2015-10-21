@@ -60,13 +60,13 @@ function animateHexagons(){
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
     animateHexagons();
-    var svgMargin = document.documentElement.clientWidth*0.36;
-    $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
-    window.addEventListener("resize", resizeFunction);
-    function resizeFunction () {
-      var svgMargin = document.documentElement.clientWidth*0.36;
-      $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
-    }
+    // var svgMargin = document.documentElement.clientWidth*0.36;
+    // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
+    // window.addEventListener("resize", resizeFunction);
+    // function resizeFunction () {
+    //   var svgMargin = document.documentElement.clientWidth*0.36;
+    //   $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
+    // }
 
     // guide start
     $scope.currentStep = ipCookie('myTour') || 1;
