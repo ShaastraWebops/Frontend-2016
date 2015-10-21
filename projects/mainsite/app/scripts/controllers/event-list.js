@@ -5,7 +5,7 @@
 // 	templateUrl:'loading.html',
 // });
 angular.module('shaastra2016App')
-	.controller('eventListCtrl', function ($scope, $interval, $http, $location) {
+	.controller('eventListCtrl', function ($scope, $interval, $http, $location, $anchorScroll) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({'overflow-y': 'scroll'});
