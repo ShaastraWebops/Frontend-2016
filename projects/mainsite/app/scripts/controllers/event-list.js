@@ -52,7 +52,12 @@ angular.module('shaastra2016App')
 		$scope.updateDOM = function() {
 			$scope.$broadcast('content.reload');
 		};
-
+  	$scope.scrollDown = function (element) {
+			var temp = $location.hash();
+			$location.hash(element);
+			$anchorScroll();
+			$location.hash(temp);
+		};
 		$scope.gotoEventList = function (index) {
 			if($scope.eventList[index].title[0] === 'W' || $scope.eventList[index].title[0] === 'w') {
 				$location.path('workshop-category/561567aac8d15f6e1252ebee');
