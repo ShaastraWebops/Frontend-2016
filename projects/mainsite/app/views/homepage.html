@@ -1,98 +1,148 @@
-  <div class="container home">
+<div class="container home" ng-intro-options="IntroOptions" ng-intro-method="CallMe" 
+  ng-intro-onafterchange="AfterChangeEvent"
+  ng-intro-oncomplete="CompletedEvent"
+  ng-intro-autostart="ShouldAutoStart">
 
-    <div class="container">
+  <div class="container top-nav-container">
 
-    <ul class="nav nav-pills nav-justified nav-bar">
-      <li class="active"><a href="#">Item 1</a></li>
-      <li class="nav-item"><a href="#">Item 2</a></li>
-      <li class="nav-item"><a href="#">Item 3</a></li>
-      <li class="nav-item"><a href="#">Item 4</a></li>
-      <li class="nav-item"><a href="#">Item 5</a></li>
-      <li class="nav-item"><a href="#">Item 6</a></li>
-      <li class="nav-item"><a href="#">Item 7</a></li>
-      <li class="nav-item"><a href="#">Item 8</a></li>
+    <ul class="nav nav-justified nav-bar home-top-nav">
+      <li class="nav-item"><a href="#">EVENTS</a></li>
+      <li class="nav-item"><a href="#">WORKSHOPS</a></li>
+      <li class="nav-item"><a href="#">SHOWS AND EXHIBITIONS</a></li>
+      <li class="nav-item"><a href="#">PRE-SHAASTRA ACTIVITIES</a></li>
+      <li class="nav-item"><a href="#">INTERNATIONAL SUMMIT</a></li>
+      <li class="nav-item"><a href="#">SOCIAL CAUSE</a></li>
+      <li class="nav-item"><a href="#">LECTURES</a></li>
     </ul>
 
-    </div>
+  </div>
 
-    <div class="container hexagons-container">
-      <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
-    </div>  
-
-    <div class="container main">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+  <div id="hex-div" class="container hexagons-container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <div class="hexagon" id="bottom-hex"></div>
+        <div class="hexagon" id="middle-hex"></div>
+        <div class="hexagon" id="top-hex"></div> -->
+        <svg class="clip-svg polygon-clip-hexagon">
+          <defs>
+            <clipPath id="polygon-clip-hexagon" clipPathUnits="objectBoundingBox">
+              <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
+            </clipPath>
+          </defs>
+        </svg>
+        <div class="polygon-each-img-wrap" id="bottom-hex">
+          <img src="http://karenmenezes.com/shapes-polygon/image.jpg" class="polygon-clip-hexagon">
         </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
+        <div class="polygon-each-img-wrap" id="middle-hex">
+          <img src="http://karenmenezes.com/shapes-polygon/image.jpg" class="polygon-clip-hexagon">
         </div>
-      </div>
-      <hr class="row separator">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-      </div>
-      <hr class="row separator">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-      </div>
-      <hr class="row separator">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <p>The book that you're reading, the game that you're playing or the movie that you're watching – now all of these take centre stage with the new immersive mode, which automatically hides everything except what you really want to see. Just swipe the edge of the screen to bring back your status bar and navigation buttons.</p>
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-         <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
-        </div>
-      </div>
-      <hr class="row separator">
-    </div>
-
-    <div class="bottom-links container">
-      <div class="row">
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 1</a></li>
-            <li><a href="#" class="link">Link 2</a></li>
-            <li><a href="#" class="link">Link 3</a></li>
-            <li><a href="#" class="link">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 5</a></li>
-            <li><a href="#" class="link">Link 6</a></li>
-            <li><a href="#" class="link">Link 7</a></li>
-            <li><a href="#" class="link">Link 8</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 9</a></li>
-            <li><a href="#" class="link">Link 10</a></li>
-            <li><a href="#" class="link">Link 11</a></li>
-            <li><a href="#" class="link">Link 12</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-          <ul>
-            <li><a href="#" class="link">Link 13</a></li>
-            <li><a href="#" class="link">Link 14</a></li>
-            <li><a href="#" class="link">Link 15</a></li>
-            <li><a href="#" class="link">Link 16</a></li>
-          </ul>
+        <div class="polygon-each-img-wrap" id="top-hex">
+          <img src="http://karenmenezes.com/shapes-polygon/image.jpg" class="polygon-clip-hexagon">
         </div>
       </div>
     </div>
-
   </div>  
+
+  <div class="container-fluid" id="shaastra-info">
+    <p class="info-text" id="info-title">Shaastra 2016</p>
+    <p class="info-text" id="info-desc">The annual technical festival of IIT MADRAS</p>
+  </div>
+
+  <div id="main-div" class="container-fluid homepage-main">
+    <div class="row main-center">
+      <p id="makers-title">THE MAKERS HAVE ARRIVED!</p>
+      <p id="makers-desc">This January, at Shaastra, thousands of like minded people will gather to witness one of India's biggest Maker events.
+    </div>
+    <div class="row homepage-makers-tab">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-12">
+       <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+          <p class="homepage-makers-tab-title">DIY CULTURE</p>
+          <p class="homepage-makers-tab-desc">With courses ranging from beginner to advanced, we've got what you need to stand out in a talent pool. Our real-world approach to projects helps you solidify the skills needed to survive in the modern job market.</p>
+        </div>
+      </div>
+    </div>
+    <hr class="separator">
+    <div class="row homepage-makers-tab">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-12">
+        <p class="homepage-makers-tab-title">INSPIRE, INNOVATE AND LEARN</p>
+        <p class="homepage-makers-tab-desc">With courses ranging from beginner to advanced, we've got what you need to stand out in a talent pool. Our real-world approach to projects helps you solidify the skills needed to survive in the modern job market.</p>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+        <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+    </div>
+    <hr class="separator">
+    <div class="row homepage-makers-tab">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-12">
+        <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+        <p class="homepage-makers-tab-title">FROM WOOD CRAFTING TO ROCKET SCIENCE</p>
+        <p class="homepage-makers-tab-desc">With courses ranging from beginner to advanced, we've got what you need to stand out in a talent pool. Our real-world approach to projects helps you solidify the skills needed to survive in the modern job market.</p>
+      </div>
+    </div>
+    <hr class="separator">
+    <div class="row homepage-makers-tab">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-12">
+        <p class="homepage-makers-tab-title">DEVELOPING MAKER SPACES</p>
+        <p class="homepage-makers-tab-desc">With courses ranging from beginner to advanced, we've got what you need to stand out in a talent pool. Our real-world approach to projects helps you solidify the skills needed to survive in the modern job market.</p>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+        <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="main-images">
+      </div>
+    </div>
+    <div class="row main-center">
+      <h2 id="makers-footer">COME LIVE THE MAKER IN YOU!</h2>
+    </div>
+  </div>
+
+  <div class="container footer-div">
+    <div class="row footer-nav">
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 footer-nav-item"><a href="#"><strong>ABOUT US</strong></a></div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 footer-nav-item"><a href="#"><strong>HOSPITALITY</strong></a></div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 footer-nav-item"><a href="#"><strong>SPONSORS</strong></a></div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 footer-nav-item"><a href="#"><strong>CONTACT US</strong></a></div>
+    </div>
+  </div>
+
+  <div class="bottom-links container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 1</a></li>
+          <li><a href="#" class="link">Link 2</a></li>
+          <li><a href="#" class="link">Link 3</a></li>
+          <li><a href="#" class="link">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 5</a></li>
+          <li><a href="#" class="link">Link 6</a></li>
+          <li><a href="#" class="link">Link 7</a></li>
+          <li><a href="#" class="link">Link 8</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 9</a></li>
+          <li><a href="#" class="link">Link 10</a></li>
+          <li><a href="#" class="link">Link 11</a></li>
+          <li><a href="#" class="link">Link 12</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+        <ul>
+          <li><a href="#" class="link">Link 13</a></li>
+          <li><a href="#" class="link">Link 14</a></li>
+          <li><a href="#" class="link">Link 15</a></li>
+          <li><a href="#" class="link">Link 16</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>  
