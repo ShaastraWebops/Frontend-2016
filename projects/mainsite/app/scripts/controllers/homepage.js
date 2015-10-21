@@ -51,6 +51,14 @@ $(window).on('load', function(){
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
 
+    var svgMargin = document.documentElement.clientWidth*0.36;
+    $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
+    window.addEventListener("resize", resizeFunction);
+    function resizeFunction () {
+      var svgMargin = document.documentElement.clientWidth*0.36;
+      $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
+    }
+
     // guide start
     $scope.currentStep = ipCookie('myTour') || 1;
     $scope.AfterChangeEvent = function() {
