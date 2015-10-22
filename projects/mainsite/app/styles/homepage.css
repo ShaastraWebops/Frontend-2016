@@ -154,7 +154,7 @@
 	cursor: pointer;
 }
 .nav-item:hover a {
-	color: #173e43;
+	color: #e1e1e1;
 }
 .hexagons-container{
 	height: 500px;
