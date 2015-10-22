@@ -14,7 +14,8 @@
 .home {
 	padding: 0;
 	width: 100%;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #bgstyle {
