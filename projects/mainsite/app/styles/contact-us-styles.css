@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'CGF Locust Resistance';
+  src: url('../styles/fonts/CGFLocustResistance.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
+}
+
 ::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -33,8 +46,8 @@ ul {
   position: relative;
   left: -15%;
   font-size: 8vh;
-  font-variant: small-caps;
   font-family: 'MyriadPro';
+  font-variant: small-caps;
   margin-top: 3%;
 }
 .wrapper{

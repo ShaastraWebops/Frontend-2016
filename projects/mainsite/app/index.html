@@ -36,7 +36,7 @@
 
     <!-- Add your site or application content here -->
     <div id="bgstyle">
-      <img id="bgimg" src="images/background.jpg" alt="" image-cache-directive/>
+      <img ng-if="showBackgroundImage" id="bgimg" src="images/background.jpg" alt="" image-cache-directive/>
     </div>
 
     <div ng-include="'views/top-nav.html'"></div>

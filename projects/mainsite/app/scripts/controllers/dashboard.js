@@ -5,6 +5,12 @@ angular.module('shaastra2016App')
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 
+    var html = angular.element(document.getElementById('body'));
+    html.css({
+      'overflow-y': 'auto',
+      'background-color': '#f3f3f3'
+    });
+
 		$scope.i = 0;
 		$scope.data = function (ch) {
     	$scope.i = ch;

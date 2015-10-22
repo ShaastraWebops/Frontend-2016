@@ -29,9 +29,15 @@ angular.module('shaastra2016App')
   .controller('registerCtrl', function ($scope, $http) {
 
     var backButton = $('#back-button');
-    var n = 0;
     backButton.attr('link', '/');
 
+    var html = angular.element(document.getElementById('body'));
+    html.css({
+      'overflow-y': 'auto',
+      'background-color': '#f3f3f3'
+    });
+
+    var n = 0;
     $scope.UserName = "";
     $scope.Password = "";
     $scope.email = "";

@@ -6,7 +6,10 @@ angular.module('shaastra2016App')
 	.controller('contactUsCtrl', function ($scope, $modal) {
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow-y': 'scroll'});
+    html.css({
+    	'overflow-y': 'scroll',
+    	'background-color': '#f3f3f3'
+  	});
 
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');

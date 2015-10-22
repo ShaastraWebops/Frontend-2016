@@ -5,7 +5,10 @@ angular.module('shaastra2016App')
 	.controller('workshopListCtrl', function ($scope, $interval, $http, $location) {
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow': 'hidden'});
+    html.css({
+    	'overflow-y': 'hidden',
+    	'background-color': '#f3f3f3'
+  	});
 
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');

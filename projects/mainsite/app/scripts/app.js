@@ -170,6 +170,7 @@ angular
       $rootScope.showBackButton = (next.$$route.originalPath !== '/');
       $rootScope.showLogos = (next.$$route.originalPath === '/');
       $rootScope.showFooter = (next.$$route.originalPath !== '/');
+      $rootScope.showBackgroundImage = (next.$$route.originalPath === '/');
 
       if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");

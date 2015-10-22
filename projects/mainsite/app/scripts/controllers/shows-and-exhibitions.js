@@ -7,7 +7,10 @@ angular.module('shaastra2016App')
 		backButton.attr('link', '/');
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow-y': 'auto'});
+    html.css({
+      'overflow-y': 'auto',
+      'background-color': '#f3f3f3'
+    });
 
     $scope.tabs = [{ 
       'name': 'Envisage', 

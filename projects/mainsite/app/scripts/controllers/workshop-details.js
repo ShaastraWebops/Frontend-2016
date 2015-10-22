@@ -7,7 +7,10 @@ angular.module('shaastra2016App')
     backButton.attr('link', '/workshop-category/' + $routeParams.workshopCategoryId);
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow-y': 'auto'});
+    html.css({
+      'overflow-y': 'auto',
+      'background-color': '#f3f3f3'
+    });
     
     $scope.message = 'Loading...';
     
