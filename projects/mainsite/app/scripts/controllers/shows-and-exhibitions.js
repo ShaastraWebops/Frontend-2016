@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('showsExhibitonsCtrl', function ($scope) {
+  .controller('showsExhibitonsCtrl', function ($scope, $anchorScroll, $location) {
 
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
@@ -35,6 +35,13 @@ angular.module('shaastra2016App')
     $scope.i = 0;
     $scope.info = function (ch) {
     	$scope.i = ch;
+    };
+
+    $scope.scrollDown = function (element) {
+      var temp = $location.hash();
+      $location.hash(element);
+      $anchorScroll();
+      $location.hash(temp);
     };
 
   });
