@@ -37,7 +37,7 @@ div.contact-img-desc {
   text-align: center;
   font-weight: 900;
   font-size: 3vh;
-  min-height: 35px;
+  min-height: 40px;
 }
 
 ul {
@@ -54,7 +54,7 @@ ul {
 .wrapper{
   text-align: center;
 }
-.main{
+.contact-main{
 	margin-top: 0px;
 	margin-left: 100px;
 	margin-right: 100px;
