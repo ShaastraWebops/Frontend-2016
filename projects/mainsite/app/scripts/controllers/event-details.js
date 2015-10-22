@@ -9,6 +9,7 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto', 
+      'overflow-x': 'hidden', 
       'background-color': '#f3f3f3'
     });
     
