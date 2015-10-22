@@ -32,9 +32,10 @@
 	position: fixed;
 	background-color: #173e43;
 	width: 100%;
-	/*padding-top: 1%;*/
-	/*padding-bottom: 1%;*/
 	z-index: 250;
+	font-family: 'Feather';
+	font-size: 1.3em;
+	letter-spacing: 2px;
 	/*-webkit-box-shadow: 0px 5px 5px -1px #888;*/
 	/*-moz-box-shadow: 0px 5px 5px -1px #888;*/
 	/*box-shadow: 0px 5px 5px -1px #888;*/
@@ -305,6 +306,9 @@
 }
 .footer-nav{
 	width: 100%;
+	font-family: 'Feather';
+	font-size: 1.3em;
+	letter-spacing: 2px;
 	height: auto !important;
 	padding-left: 20%;
 	padding-right: 20%;
@@ -323,6 +327,10 @@
 }
 .bottom-links a:hover {
 	color: #fff;
+}
+.bottom-links a {
+	font-family: 'Proxima'; 
+	font-size: 1.2em;
 }
 .hex-images-div {
 	position: absolute;

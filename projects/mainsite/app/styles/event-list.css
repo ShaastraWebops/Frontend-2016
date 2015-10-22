@@ -2,20 +2,14 @@
   font-family: 'Proxima';
   src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
 }
+@font-face {
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
+}
 
 .makeCenter {
   text-align: center;
-  font-family: 'Lato';
-  font-weight: bolder;
-}
-
-.font-lato {
-  font-family: 'Lato';
-  font-weight: bolder;
-}
-
-.font-myraid {
-  font-family: 'MyraidPro';
+  font-family: 'Proxima';
   font-weight: bolder;
 }
 
@@ -132,7 +126,7 @@ article {
   height: 45px;
   font-size: 10vh;
   line-height: 1;
-  font-family: 'Lato';
+  font-family: 'Feather';
   text-align: center;
 }
 

@@ -36,18 +36,12 @@
 }
 
 #scroll-down {
-  /*margin-top: 20px;*/
-  /*margin-bottom: 50px;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
   margin: 0 auto;
   height: 50px;
   width: 50px;
   top: 85%;
   left: 48%;
   background-color: white;
-  /*border-color: #000;*/
-  /*border-style: solid;*/
   text-align: center;
   cursor: pointer;
   position: absolute;
@@ -56,7 +50,6 @@
 
 #scroll-glyphicon {
   color: #000;
-  /*margin-top: 15px;*/
   cursor: pointer;
   min-height: 50px;
   line-height: 50px;
@@ -70,23 +63,26 @@
   line-height: 70px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 2em;
-  font-family: 'MyraidPro';
-  font-variant: small-caps;	
+  font-size: 3em;
+  font-family: 'Feather';
+  font-variant: small-caps;
+  letter-spacing: 2px;	
 }
 
 #event-name {
-  font-size: 1.7em;
-  font-family: 'MyraidPro';
+  font-size: 2em;
+  font-family: 'Feather';
   font-variant: small-caps;
   color: #fff;
+  letter-spacing: 2px;
 }
 
 #event-date {
-  font-size: 1.7em;
-  font-family: 'MyraidPro';
+  font-size: 2em;
+  font-family: 'Feather';
   font-variant: small-caps;
   color: #fff;
+  letter-spacing: 2px;
 }
 
 .events {
