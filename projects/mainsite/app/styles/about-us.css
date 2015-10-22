@@ -30,15 +30,11 @@
 .aboutUs-heading-top {
 	margin-top: 5%;
 }
-#aboutUs {
-	/*margin-top: 5%;*/
-}
 #aboutUs h3 {
 	font-size: 3vh;
 }
 
 .aboutUsContent {
-	position: absolute;
 	background-color: rgba(255, 255, 255, 0.6);
 	min-height: 350px;
 	padding: 50px 100px 50px 100px;

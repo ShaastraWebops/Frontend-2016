@@ -28,28 +28,31 @@
 				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 events" ng-repeat="event in workshopsJSON track by $index">
 
-					<div class="card">
-	  	  		<div class="card-front">
-		    			<div class="event-details"> 
-			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
-			  				<br><br>
-			  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
-							</div>
-		  			</div>
-		  			<div class="card-back" ng-style="{'position' : 'relative'}" ng-click="gotoWorkshopDetails($index)">
-		    			<div class="event-details" ng-style="{'background-image': 'url(http://shaastra.org:8001/api/uploads/{{event.imageid}}/{{event.imagename}})', 'background-size': 'cover', 'background-repeat' : no-repeat, 'z-index': '1', 'position' : 'absolute'}"></div>
-							<div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
-			  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
-			  				<br><br>
-			  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
-							</div>
-							<button class="event-more-button" ng-style="{'z-index' : '2'}">See More</button>
-		  			</div>
-					</div>
+						<div class="card">
+		  	  		<div class="card-front">
+			    			<div class="event-details"> 
+				  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
+				  				<br><br>
+				  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
+								</div>
+			  			</div>
+			  			<div class="card-back" ng-style="{'position' : 'relative'}" ng-click="gotoWorkshopDetails($index)">
+			    			<div class="event-details" ng-style="{'background-image': 'url(http://shaastra.org:8001/api/uploads/{{event.imageid}}/{{event.imagename}})', 'background-size': 'cover', 'background-repeat' : no-repeat, 'z-index': '1', 'position' : 'absolute'}"></div>
+								<div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
+				  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
+				  				<br><br>
+				  				<span id="event-date" ng-bind="event.eventDate | date:'mediumDate'"></span>
+								</div>
+								<button class="event-more-button" ng-style="{'z-index' : '2'}">See More</button>
+			  			</div>
+						</div>
 
+					</div>
 				</div>
 			</div>
-		</div>
 
+		</div>
 	</div>
 </div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

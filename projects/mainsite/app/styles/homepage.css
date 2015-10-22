@@ -290,7 +290,7 @@
 }
 .footer-div{
 	background-color: #014864;
-	height: auto;
+	height: auto !important;
 	width: 100%;
 	text-align: center;
 	font-weight: bolder;
@@ -298,12 +298,9 @@
 }
 .footer-nav{
 	width: 100%;
-	height: auto ! important;
-	/*padding-top: 2%;*/
-	/*padding-bottom: 2%;*/
+	height: auto !important;
 	padding-left: 20%;
 	padding-right: 20%;
-	/*display: inline-block;*/
 }
 .footer-nav-item > a{
 	color: #fff;
@@ -323,9 +320,6 @@
 .hex-images-div {
 	position: absolute;
 	left: 32%;
-}
-.hex-images {
-	/*width: 50%;*/
 }
 
 /* CSS for new home page ends */
