@@ -15,14 +15,15 @@
 }
 
 .category-image {
-  height: auto;
   width: 100%;
-  max-height: 550px;
+  height: auto;
+  /*height: 500px;*/
 }
 
 .category-wrapper {
   text-align: center;
   position: relative;
+  padding: 0;
 }
 
 #scroll-down {
