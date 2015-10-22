@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'MyraidPro';
-  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
+  font-family: 'Proxima';
+  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
 }
 
 ::-webkit-scrollbar {
@@ -21,16 +21,17 @@
 .evhead {
 	font-variant: small-caps;
 	font-weight: bolder;
-	font-family: 'MyraidPro';
-	font-size: 30px;
+	font-family: 'Feather';
+	font-size: 3em;
 	z-index: 1;
 	position: relative;
+	letter-spacing: 2px;
 }
 
 .evcontent {
 	background-color: rgba(255, 255, 255, 0.6);
 	z-index: 1;
-	font-family: 'MyraidPro';
+	font-family: 'Proxima';
 	position: relative;
 	width: 100%;
 	min-height: 350px;
@@ -51,7 +52,7 @@ a[event-nav-hyperlink] {
 	background-color: #173e43;
 	color: white;
 	height: 35px;
-	font-family: 'Lato';
+	font-family: 'Feather';
 	margin: 1%;
 	line-height: 35px;
 	font-size: 25px;
@@ -74,13 +75,14 @@ a[event-nav-hyperlink] {
 	width: 100%;
 	height: auto;
 	line-height: 35px;
-	font-family: 'Lato';
-	font-size: 23px;
+	font-family: 'Feather';
+	font-size: 2em;
 	text-align: right;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
 	table-layout: fixed;
 	padding-right: 20%;
+	letter-spacing: 2px;
 }
 
 .event-nav:hover {
@@ -92,14 +94,14 @@ a[event-nav-hyperlink] {
 }
 
 #event-nav-box {
-	font-family: 'Lato';
+	font-family: 'Feather';
 }
 
 @media all and (max-width: 767px) {
 	.event-nav-xs {
-		font-size: 15px;
+		font-size: 2em;
 		border-radius: 5px 5px 5px 5px;
-
+		letter-spacing: 2px;
 	}
 	.evcontent {
 		padding: 10px 5px 10px 5px;

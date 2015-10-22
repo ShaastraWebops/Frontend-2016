@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
+}
+@font-face {
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
+}
+
 ::-webkit-scrollbar {
     width: 0.5em;
 }

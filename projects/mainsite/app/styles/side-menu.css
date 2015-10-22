@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
+}
+@font-face {
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
+}
+
 ::-webkit-scrollbar {
     width: 0.5em;
 }
@@ -7,11 +16,7 @@
     background: #000000; 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: #ffffff; 
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
+  background: #ffffff; 
 }
 
 html {
@@ -34,7 +39,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0em 0em 0em 0em;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .menu li {
@@ -82,7 +87,7 @@ body {
   padding: 0.5em 0em 0.5em 0.2em;
   color: white !important;
   text-decoration: none !important;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Proxima';
   font-variant: small-caps;
 }
 
@@ -475,7 +480,7 @@ ul li #you:hover {
 /*top menu*/
 .top-menu {
   margin-right: 0%;
-  font-family: 'Lato';
+  font-family: 'Proxima';
   font-weight: bolder;
 }
 

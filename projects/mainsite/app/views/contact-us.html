@@ -84,7 +84,7 @@
 	</div> -->
   
 <div class="container-fluid makeCenter aboutUs-heading-top">
-	<h1 class="heading"><b style="font-family:'MyraidPro'">Contact Us</b></h1>
+	<h1 class="heading"><b style="font-family:'Feather';">Contact Us</b></h1>
 	<div class="contact-main">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -105,7 +105,7 @@
 					<div id="map"></div>
 				</div>
 				<div class="row">
-					<p><h3>Leave us a message</h3></p>
+					<p><h1 style="font-family:'Feather';">Leave us a message</h1></p>
 					<div id="contact-form">
 						<form class="form-group" role="form" novalidate>
 							<div id="cname" class="has-feedback">
@@ -140,28 +140,28 @@
 		<script type="text/ng-template" id="myModalContent.html">
 			<div class="modal-header">
 				<button type="button" class="close" ng-click="close()">&times;</button>
-				<h2 class="modal-title wrapper" ng-bind="department.name"></h2> 
+				<h1 class="modal-title wrapper" ng-bind="department.name"></h1> 
 			</div>
 			<div class="modal-body">
 				<ul class="contact-modal-contents row">
 					<li>
 						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
 							<li>
-								<h4><span ng-bind="department.selected.personName"></span></h4>
+								<h3><span ng-bind="department.selected.personName"></span></h3>
 							</li>
 							<li>
-								<p>
+								<h4>
 									<span class="glyphicon glyphicon-phone"></span>
 									<span><strong>Contact : </strong></span>
 									<span ng-bind="department.selected.phone" id="contactPhone"></span>
-								</p>
+								</h4>
 							</li>
 							<li>
-								<p>
+								<h4>
 									<span class="glyphicon glyphicon-envelope"></span>
 									<span><strong>E-Mail : </strong></span>
 									<span ng-bind="department.selected.mail" id="contactMail"></span>
-								</p>
+								</h4>
 							</li>
 						</ul>
 					</li>

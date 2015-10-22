@@ -1,14 +1,10 @@
 @font-face {
-	font-family: 'CGF Locust Resistance';
-	src: url('../styles/fonts/CGFLocustResistance.ttf') format('truetype');
+  font-family: 'Proxima';
+  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('../styles/fonts/LatoLight.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'MyraidPro';
-  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
 }
 
 ::-webkit-scrollbar {
@@ -32,10 +28,6 @@
 	cursor: default;
 }
 
-.shaastraText {
-	font-family: 'CGF Locust Resistance';
-}
-
 #samparkDetails {
 	margin-top: 0%;
 }
@@ -45,6 +37,7 @@
 	min-height: 350px;
 	padding: 50px 100px 50px 100px;
 	text-align: justify;
+	font-family: 'Proxima';
 }
 .samparkContent p {
 	font-size: 1.5em;
@@ -52,7 +45,7 @@
 }
 
 .samparkHeading {
-	font-family: 'Lato';
+	font-family: 'Feather';
 	font-size: 10vh;
 	height: 45px;
 	padding-bottom: 3%;
