@@ -137,6 +137,7 @@
 	color: #262626;
 	/*display: table-cell;*/
 	vertical-align: middle;
+	padding: 0 5px 0 5px;
 }
 .nav-item > a:hover, a:visited, a:link, a:active {
 	text-decoration: none;
