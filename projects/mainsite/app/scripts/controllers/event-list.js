@@ -13,7 +13,6 @@ angular.module('shaastra2016App')
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 
-
 		$scope.promise = null;
 		$scope.templateUrl = null;
 		$scope.demo = function () {
@@ -64,20 +63,6 @@ angular.module('shaastra2016App')
 			} else {
 				$location.path('event-category/' + $scope.eventList[index]._id);
 			}
-		};
-		// $scope.$digest();
-		// $timeout(refresh, 1000);
-		var i = 0;
-		var refresh = $interval(function (i) {
-			$scope.$broadcast('content.reload');
-			i += 5;
-		}, 100*i);
-		$scope.$on('destroy', function () {
-			$interval.cancel(refresh);
-		});
-
-		$scope.loadScroll = function () {
-			$scope.$broadcast('content.reload');
 		};
 
 	});

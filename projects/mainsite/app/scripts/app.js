@@ -17,7 +17,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngScrollable',
     'ui.bootstrap',
     'LocalStorageModule',
     'cgBusy',

@@ -1,48 +1,5 @@
-<!-- <div ng-controller="eventListCtrl as eventslist">
-  <div ng-mouseenter="loadScroll()" >
-    <div id="heading"><b>Events</div>
-    <br>
-   
-      <div class="wrap1" ng-if="eventList.length">
-        <div class="wrapperz" ng-repeat="category in eventList track by $index"> -->
-        <!-- <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index"> -->
-          <!-- div class="slider"></div>
-          <img ng-click="gotoEventList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}"/>
-          <p class="event-name"><b>{{ category.title }}</b></p>
-        </div>
-      </div>
-    </div>
-    <!-- <div  cg-busy="{promise:promise,templateUrl:'views/loading.html'}" ng-init="demo()"></div> -->
-   <!--  <article ng-if="!eventList.length">
-      <div class="makeCenter">
-        <h1><b>{{ message }}</b></h1>
-      </div>
-    </article>  
-    
-    <!-- <article ng-show="eventList.length" ng-init="widthadjust(eventList.length)">  -->
-   <!--  <article ng-show="eventList.length" > 
-      <div ng-scrollable="{scrollX:'top', scrollY:'none'}" class="scrollarea" spy-x="posX" spy-y="posY">
-        <div class="wrap" id="flow" >
-          <div class="wrapperz" ng-repeat="category in eventList track by $index">
-          <!-- <div class="wrapperz" ng-repeat="category in eventList | orderBy: 'title' track by $index"> -->
-            <!-- <div> -->
-            <!--   <figure><div><img ng-click="gotoEventList($index)" ng-src="http://shaastra.org:8001/api/uploads/{{category.imageid}}/{{category.imagename}}" width="100" height="100"/></div></figure>
-              <div class="dot1"></div>
-              <div class="dot2"></div>
-              <p class="event-name">{{ category.title }}</p> 
-            </div>
-          </div>
-        </div>
-      </div>
-                          
-      <span id="left-arrow" class="glyphicon glyphicon-chevron-left arrow" ng-click="moveX(-440);"></span>
-      <span  id="right-arrow" class="glyphicon glyphicon-chevron-right arrow" ng-click="moveX(440)"></span>
-    </article>
-  </div>
-</div>
- --> 
  <div class="event-category">
-  <div ng-controller="eventListCtrl as eventslist" scroll ng-clock>
+  <div ng-controller="eventListCtrl as eventslist">
 
     <div class="container-fluid category">
       <div class="row">
