@@ -30,13 +30,14 @@ div.contact-div img {
   border: 1px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 div.contact-img-desc {
   text-align: center;
   font-weight: 900;
   font-size: 3vh;
+  min-height: 35px;
 }
 
 ul {
