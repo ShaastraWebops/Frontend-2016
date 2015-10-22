@@ -498,7 +498,7 @@ input[type=search]:focus {
   outline: none;
 }
 
-.glyphicon {
+#back-glyphicon {
   margin-left: 5px;
 }
 

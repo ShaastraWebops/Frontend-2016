@@ -47,8 +47,10 @@
 
 #scroll-glyphicon {
   color: #000;
-  margin-top: 15px;
+  /*margin-top: 15px;*/
   cursor: pointer;
+  min-height: 50px;
+  line-height: 50px;
 }
 
 #event-category-name {
