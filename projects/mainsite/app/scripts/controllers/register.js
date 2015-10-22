@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-   .directive('autoComplete', function () {
+   .directive('autoCompleteone', function () {
     return function (scope) {
       scope.$watch('college.name', function() {
         var suggestions = [];
@@ -26,9 +26,10 @@ angular.module('shaastra2016App')
       });
     };
   })
-  .controller('registerCtrl', function ($scope) {
+  .controller('registerCtrl', function ($scope, $http) {
 
     var backButton = $('#back-button');
+    var n = 0;
     backButton.attr('link', '/');
 
     $scope.UserName = "";
@@ -40,7 +41,8 @@ angular.module('shaastra2016App')
     $scope.collegeSuggestions = [];
     $scope.repassword = "";
     $scope.existingCollege = 1;
-    
+
+
     $scope.collegesList = [{
       'id' : 1,
       'name' : 'Chennai'
@@ -77,6 +79,53 @@ angular.module('shaastra2016App')
       $scope.college.name = college.name;
       $scope.college.id = college.id;
       $scope.suggestCollegeBool = false;
+    };
+
+    $scope.highlight = function(event){
+
+      var keyCode = event.which || event.keyCode;
+      var i = document.getElementById("col-sug").childNodes.length;
+      var c = document.getElementById("col-sug").childNodes;
+      if(keyCode==38 || keyCode==40 || keyCode===13){
+        event.preventDefault();
+    }
+    else if(keyCode===39 || keyCode===37){
+    }
+    else{
+      c[n].style.backgroundColor = "#ffffff";
+      n=0;
+    }
+      if (keyCode === 38 && n!==0) {
+        if(n===i || (n+1)===i){
+          n=n-2;
+          c[n].style.backgroundColor = "#E2E2E2";
+      }
+        else{
+          n=n-2;
+          c[n+2].style.backgroundColor = "#ffffff";
+          c[n].style.backgroundColor = "#E2E2E2";
+        }
+      }
+      else if(keyCode === 40 && (n+4)<=i){
+        if(n===0){
+          n=n+2;
+          c[n].style.backgroundColor = "#E2E2E2";
+      }
+        else{
+          n=n+2;
+          c[n-2].style.backgroundColor = "#ffffff";
+          c[n].style.backgroundColor = "#E2E2E2";
+        }
+      }
+
+      else if(keyCode === 13 ){
+        //document.getElementById("col-in").value = c[n].firstChild.nextSibling.innerHTML;
+        $scope.college = {};
+        $scope.college.name = c[n].firstChild.nextSibling.innerHTML;
+        $scope.college.id = n/2;
+        $scope.suggestCollegeBool = false;
+        n=0;
+      }
     };
 
     $scope.addCollege = function () {
