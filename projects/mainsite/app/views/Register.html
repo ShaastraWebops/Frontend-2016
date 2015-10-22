@@ -1,4 +1,4 @@
-<div class="container" ng-app="shaastra2016App" ng-controller="loginCtrl">
+<div class="container">
 	<center>
 		<div>
 		<div  class="btn-group" role="group">
@@ -17,11 +17,15 @@
 		<br>
 
 		<div id="college" class="input-group">
-			<input type="text" ng-model="college.name" class="form-control" placeholder="Enter your college" auto-complete>
+			<input type="text" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" placeholder="Enter your college" auto-completeone>
+
+			 <!--input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control"-->
+
+
 			<div id="college-suggestions" class="container-fluid" ng-if="suggestCollegeBool">
-			<ul>
+			<ul id="col-sug">
 				<li ng-repeat="college in collegeSuggestions" ng-click="selectSuggestedCollege(college)" class="col-sug-ele">
-					<p ng-bind="college.name"></p>
+					<p ng-bind="college.name" class="col-sug-nam"></p>
 				</li>
 			</ul>
 			</div>
