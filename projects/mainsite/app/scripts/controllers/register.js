@@ -119,8 +119,12 @@ angular.module('shaastra2016App')
       }
 
       else if(keyCode === 13 ){
-        document.getElementById("col-in").value = c[n].firstChild.nextSibling.innerHTML;
-        
+        //document.getElementById("col-in").value = c[n].firstChild.nextSibling.innerHTML;
+        $scope.college = {};
+        $scope.college.name = c[n].firstChild.nextSibling.innerHTML;
+        $scope.college.id = n/2;
+        $scope.suggestCollegeBool = false;
+        n=0;
       }
     };
 
