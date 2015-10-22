@@ -40,16 +40,6 @@ article .arrow {
   z-index: 200;
 }
 
-article .arrow:hover {
-  background-color: rgba(255,105,97,1); 
-  cursor: pointer; 
-  -webkit-transition: background-color 10ms linear;
-  -moz-transition: background-color 10ms linear;
-  -ms-transition: background-color 10ms linear;
-  -o-transition: background-color 10ms linear;
-  transition: background-color 10ms linear;
-}
-
 /*media queries*/
 @media all and (max-width:750px) {
   #heading {
