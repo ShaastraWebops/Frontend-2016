@@ -7,18 +7,22 @@
 function animateHexagons(){
   function whichAnimationEvent(element){
     var t, el;
-    if(element==1)
+    if(element===1) {
       el = document.getElementById("top-hex");
-    else if(element==2)
+    }
+    else if(element===2) {
       el = document.getElementById("middle-hex");
-    else if(element==3)
+    }
+    else if(element===3) {
       el = document.getElementById("bottom-hex");
+    }
+    
     var animations = {
       "animation"      : "animationend",
       "OAnimation"     : "oAnimationEnd",
       "MozAnimation"   : "animationend",
       "WebkitAnimation": "webkitAnimationEnd"
-    }
+    };
 
     for (t in animations){
       if (el.style[t] !== undefined){
@@ -30,7 +34,8 @@ function animateHexagons(){
   var animationEvent1 = whichAnimationEvent(1);
   var animationEvent2 = whichAnimationEvent(2);
   var animationEvent3 = whichAnimationEvent(3);
-  if(sessionStorage.homePageLoaded!=1){
+  
+  if(sessionStorage.homePageLoaded!==1){
    $("#top-hex").addClass("hex-initial-anim");
    $("#middle-hex").addClass("hex-initial-anim");
    $("#bottom-hex").addClass("hex-initial-anim");
@@ -114,7 +119,10 @@ angular.module('shaastra2016App')
     $scope.showTooltip = true;
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow': 'scroll'});
+    html.css({
+      'overflow-y': 'scroll',
+      'overflow-x': 'hidden'
+    });
 
     var backButton = $('#back-button');
     backButton.attr('link', '/');
@@ -128,6 +136,6 @@ angular.module('shaastra2016App')
     $animate.animate(element,'fx-rotate-clock')
       .then(function(){
         console.log("Rotated");
-      })
+      });
     };
   });

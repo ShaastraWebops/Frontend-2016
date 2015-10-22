@@ -86,7 +86,7 @@ angular.module('shaastra2016App')
       var keyCode = event.which || event.keyCode;
       var i = document.getElementById("col-sug").childNodes.length;
       var c = document.getElementById("col-sug").childNodes;
-      if(keyCode==38 || keyCode==40 || keyCode===13){
+      if(keyCode===38 || keyCode===40 || keyCode===13){
         event.preventDefault();
     }
     else if(keyCode===39 || keyCode===37){
