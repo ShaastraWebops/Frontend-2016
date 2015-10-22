@@ -294,17 +294,27 @@
 .footer-nav{
 	width: 100%;
 	height: 100%;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	/*padding-top: 2%;*/
+	/*padding-bottom: 2%;*/
 	padding-left: 20%;
 	padding-right: 20%;
-	display: inline-block;
+	/*display: inline-block;*/
 }
 .footer-nav-item > a{
 	color: #fff;
 	font-size: 1.8em;
 }
-
+.footer-nav-item:hover {
+	background-color: #003144;
+	cursor: pointer;
+}
+.footer-nav-item {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.bottom-links a:hover {
+	color: #fff;
+}
 .hex-images-div {
 	position: absolute;
 	left: 32%;
