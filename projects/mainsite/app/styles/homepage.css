@@ -34,7 +34,7 @@
 /* CSS for new home page starts */
 .top-nav-container {
 	position: fixed;
-	background-color: #dadbf0;
+	background-color: #22264b;
 	width: 100%;
 	/*padding-top: 1%;*/
 	/*padding-bottom: 1%;*/
@@ -45,7 +45,7 @@
 }
 .home-top-nav {
 	font-weight: bolder;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	padding-left: 3%;
 	text-align: center;
 }
@@ -135,7 +135,7 @@
 	/*margin-bottom: 5%;*/
 }
 .nav-item > a{
-	color: #262626;
+	color: #fff;
 	/*display: table-cell;*/
 	vertical-align: middle;
 	padding: 0 5px 0 5px;
@@ -144,15 +144,17 @@
 	text-decoration: none;
 }
 .nav-item {
-	padding-top: 1%;
-	padding-bottom: 1%;
-	min-height: 80px;
+	padding-top: 5px;
+	/*padding-bottom: 5px;*/
+	min-height: 65px;
 	padding-left: 0;
 	padding-right: 0;
 }
 .nav-item:hover {
-	background-color: #b5c7c6;
 	cursor: pointer;
+}
+.nav-item:hover a {
+	color: #173e43;
 }
 .hexagons-container{
 	height: 500px;
