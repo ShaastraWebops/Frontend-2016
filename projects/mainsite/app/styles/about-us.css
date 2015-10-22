@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: 'MyraidPro';
-  src: url('../styles/fonts/MyriadProRegular.otf');
+  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +43,7 @@
 }
 
 .aboutUsHeading {
-	font-family: 'MyriadPro';
+	font-family: 'MyraidPro';
 	font-variant: small-caps;
 	font-size: 8vh;
 	height: 45px;
