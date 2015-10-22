@@ -64,6 +64,7 @@ body {
 #back-button span {
   font-size: 1.5em;
   margin: 0 0;
+  color: #fff;
 }
 
 #menuscroll li:hover { 
@@ -345,16 +346,25 @@ ul li #you:hover {
   transition-delay: 0ms;
 }
 
-/*#bar5 {
+#bar1 {
+  background-color: #fff;
+}
+#bar2 {
+  background-color: #fff;
+}
+#bar3 {
+  background-color: #fff;
+}
+#bar4 {
+  background-color: #fff;
+}
+#bar5 {
   background-color: #fff;
 }
 #bar6 {
   background-color: #fff;
 }
-*/
-.bars {
-  background-color: #fff;
-}
+
 #cmnbars{
   position: absolute;
   padding: 5px;
