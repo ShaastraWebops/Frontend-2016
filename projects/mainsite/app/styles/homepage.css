@@ -248,17 +248,24 @@
 }
 .bottom-links{
 	background-color: #252839;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 	height: 35%;
 	width: 100%;
-	text-align: center;
+	text-align: left;
 }
 .link{
 	/*margin-top: 1%;*/
 	/*margin-bottom: 1%;*/
 	font-size: 1.2em;
+	font-family: 'Proxima'; 
 	color: #fff;
+}
+.link-heading {
+	font-size: 1.3em;
+	font-weight: bolder;
+	text-transform: uppercase; 
+	font-family: 'MyraidPro';
 }
 .main-images{
 	height: 100%;
@@ -334,8 +341,11 @@
 	color: #fff;
 }
 .bottom-links a {
-	font-family: 'Proxima'; 
 	font-size: 1.2em;
+}
+.bottom-links p {
+	margin-top: 10%;
+	margin-bottom: 3%;
 }
 .hex-images-div {
 	position: absolute;
