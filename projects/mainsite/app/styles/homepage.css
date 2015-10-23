@@ -170,14 +170,12 @@ a:hover, a:active, a:focus {
 }
 .nav-bar{
 	width: 100%;
-	/*margin-top: 1%;*/
-	/*margin-bottom: 5%;*/
 }
 .nav-item > a{
 	color: #fff;
-	/*display: table-cell;*/
-	vertical-align: middle;
-	padding: 0 5px 0 5px;
+}
+.nav-item > p {
+	color: #fff;
 }
 .nav-item > a:hover, a:visited, a:link, a:active {
 	text-decoration: none;
@@ -185,8 +183,6 @@ a:hover, a:active, a:focus {
 .nav-item {
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
-	/*padding-bottom: 5px;*/
-	/*min-height: 60px;*/
 	padding-left: 0;
 	padding-right: 0;
 }

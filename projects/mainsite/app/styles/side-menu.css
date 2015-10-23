@@ -105,11 +105,17 @@ body {
 }
 
 .account a {
-  color: black !important;
+  color: white !important;
   text-decoration: none !important;
   font-weight: bold;
+  padding-right: 5px;
 }
-
+.account:hover a {
+  color: #e1e1e1 !important;
+}
+.account.ac {
+  padding-right: 5px;
+}
 .side-menu-dice {
   width: 130px;
   margin-left: 19%;
