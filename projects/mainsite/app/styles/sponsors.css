@@ -1,0 +1,19 @@
+table#makecenter 
+{ margin-left:auto; margin-right:auto; }
+#sp{
+text-align:center;
+}
+.font_spons{
+	font-size: 0.7em;
+}
+.tab_spons{
+	font-size: 0.5em;
+	margin-left:15%;
+	top: 10%;
+}
+.spons_img{
+	width: 80%;
+	height: 80%;
+}
+
+
