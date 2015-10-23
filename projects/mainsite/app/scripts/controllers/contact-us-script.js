@@ -21,7 +21,7 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
 			  contacts: [{
-		  		image: "shivaprasad.jpg",
+		  		image: "images/core-team/shivaprasad.jpg",
 			 		personName: "Shivaprasad T R",
 			 		phone: "9176014050",
 			 		mail: "shiva@shaastra.org"
@@ -33,13 +33,13 @@ angular.module('shaastra2016App')
 		    offset: "col-lg-offset-1 col-md-offset-1",
 		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
 		 	  contacts: [{
-		  		image: "bhagyesh.jpg",
+		  		image: "images/core-team/bhagyesh.jpg",
 		 			personName: "Bhagyesh Chaturvedi",
 		 			phone: "9884182442",
 		 			mail: "bhagyesh@shaastra.org"
 		 		},
 		 		{
-		  		image: "naman.jpg",
+		  		image: "images/core-team/naman.jpg",
 		 			personName: "Naman Garg",
 		 			phone: "9092603977",
 		 			mail: "naman@shaastra.org"
@@ -51,19 +51,19 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-4 col-md-4 col-sm-4 col-xs-12",
 			  contacts: [{
-		  		image: "sid.jpg",
+		  		image: "images/core-team/sid.jpg",
 			 		personName: "Siddharth Ahuja",
 			 		phone: "8695108319",
 			 		mail: "sid@shaastra.org"
 			 	},
 			 	{
-		  		image: "bala.jpg",
+		  		image: "images/core-team/bala.jpg",
 			 		personName: "TK Balasaravanan",
 			 		phone: "9840892717",
 			 		mail: "bala@shaastra.org"
 			 	},
 			 	{
-		  		image: "ajinkya.jpg",
+		  		image: "images/core-team/ajinkya.jpg",
 			 		personName: "Ajinkya",
 			 		phone: "9087863454",
 			 		mail: "ajinkya@shaastra.org"
@@ -81,7 +81,7 @@ angular.module('shaastra2016App')
 			 	// 	mail: "ravi@shaastra.org"
 			 	// },
 			 	// {
-		  		image: "pavan.jpg",
+		  		image: "images/core-team/pavan.jpg",
 			 		personName: "Botcha Pavana Kumar",
 			 		phone: "9092006577",
 			 		mail: "pavan@shaastra.org"
@@ -93,13 +93,13 @@ angular.module('shaastra2016App')
 		    offset: "col-lg-offset-1 col-md-offset-1",
 		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
 			  contacts: [{
-		  		image: "jha.jpg",
+		  		image: "images/core-team/jha.jpg",
 			 		personName: "Amit Kumar Jha",
 			 		phone: "9677161556",
 			 		mail: "amit@shaastra.org"
 			 	},
 			 	{
-		  		image: "geo.jpg",
+		  		image: "images/core-team/geo.jpg",
 			 		personName: "Geo Davis",
 			 		phone: "7845657286",
 			 		mail: "geo@shaastra.org"
@@ -111,19 +111,19 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-4 col-md-4 col-sm-4 col-xs-12",
 			  contacts: [{
-		  		image: "bhavik.jpg",
+		  		image: "images/core-team/bhavik.jpg",
 			 		personName: "Bhavik Rasyara",
 			 		phone: "8939317150",
 			 		mail: "bhavik@shaastra.org"
 			 	},
 			 	{
-		  		image: "shashanka.jpg",
+		  		image: "images/core-team/shashanka.jpg",
 			 		personName: "Shashanka Rao",
 			 		phone: "9498098063",
 			 		mail: "shashanka@shaastra.org"
 			 	},
 			 	{
-		  		image: "kurup.jpg",
+		  		image: "images/core-team/kurup.jpg",
 			 		personName: "Mahesh Kurup U",
 			 		phone: "9444443592",
 			 		mail: "kurup@shaastra.org"
@@ -135,7 +135,7 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
 			  contacts: [{
-		  		image: "animesh.jpg",
+		  		image: "images/core-team/animesh.jpg",
 			 		personName: "Animesh Bagora",
 			 		phone: "9884299639",
 			 		mail: "animesh.bagora@shaastra.org"
@@ -147,13 +147,13 @@ angular.module('shaastra2016App')
 		    offset: "col-lg-offset-1 col-md-offset-1",
 		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
 			  contacts: [{
-		  		image: "saurabh.jpg",
+		  		image: "images/core-team/saurabh.jpg",
 			 		personName: "Saurabh Awatade",
 			 		phone: "9043808645",
 			 		mail: "saurabh@shaastra.org"
 			 	},
 			 	{
-		  		image: "tejaswin.jpg",
+		  		image: "images/core-team/tejaswin.jpg",
 			 		personName: "Tejaswin P",
 			 		phone: "8056112645",
 			 		mail: "tejaswin@shaastra.org"
@@ -171,7 +171,7 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
 			  contacts: [{
-		  		image: "sachin.jpg",
+		  		image: "images/core-team/sachin.jpg",
 			 		personName: "Sachin Arakeri",
 			 		phone: "8056102482",
 			 		mail: "sachin@shaastra.org"
@@ -183,13 +183,13 @@ angular.module('shaastra2016App')
 		    offset: "col-lg-offset-1 col-md-offset-1",
 		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
 			 	contacts: [{
-		  		image: "vedant.jpg",
+		  		image: "images/core-team/vedant.jpg",
 			 		personName: "Vedant Agrawal",
 			 		phone: "9884299316",
 			 		mail: "vedantagr@shaastra.org"
 			 	},
 			 	{
-		  		image: "ayesha.jpg",
+		  		image: "images/core-team/ayesha.jpg",
 			 		personName: "Ayesha",
 			 		phone: "9566533966",
 			 		mail: "ayesha@shaastra.org"
@@ -201,7 +201,7 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
 			  contacts: [{
-		  		image: "yashwanth.jpg",
+		  		image: "images/core-team/yashwanth.jpg",
 			 		personName: "Yashwanth I",
 			 		phone: "8056070391",
 			 		mail: "yashwanth.envi@shaastra.org"
@@ -213,7 +213,7 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
 			  contacts: [{
-		  		image: "chinni.jpg",
+		  		image: "images/core-team/chinni.jpg",
 			 		personName: "Chinni Chaitanya",
 			 		phone: "9003106573",
 			 		mail: "chinni@shaastra.org"

@@ -92,7 +92,7 @@
 					<div class="contact-div col-xs-4 col-sm-6 col-md-4 col-lg-4" ng-repeat="contact in department.contacts track by $index">
 						<div class="contact-img-desc"><h4><b>{{ department.name }}</b></h4></div>
 						<div>
-							<img src="images/{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
+							<img src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
 							<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
 						</div>
 					</div>
