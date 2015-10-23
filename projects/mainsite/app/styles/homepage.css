@@ -37,9 +37,8 @@
 	background-color: #173e43;
 	width: 100%;
 	z-index: 250;
-	font-family: 'Feather';
-	font-size: 1.3em;
-	letter-spacing: 2px;
+	font-family: 'MyraidPro';
+	font-size: 1.1em;
 	/*-webkit-box-shadow: 0px 5px 5px -1px #888;*/
 	/*-moz-box-shadow: 0px 5px 5px -1px #888;*/
 	/*box-shadow: 0px 5px 5px -1px #888;*/
@@ -312,9 +311,8 @@
 }
 .footer-nav{
 	width: 100%;
-	font-family: 'Feather';
-	font-size: 1.3em;
-	letter-spacing: 2px;
+	font-family: 'MyraidPro';
+	font-size: 1.1em;
 	height: auto !important;
 	padding-left: 20%;
 	padding-right: 20%;
