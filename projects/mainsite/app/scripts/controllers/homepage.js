@@ -152,6 +152,9 @@ angular.module('shaastra2016App')
     var backButton = $('#back-button');
     backButton.attr('link', '/');
 
+    var hamburgerMenu = $('#omnbars');
+    hamburgerMenu.css({'top': '20px'});
+
     $scope.scrollDown = function (element) {
       var temp = $location.hash();
       $location.hash(element);

@@ -1,19 +1,8 @@
-<header style="position:fixed; z-index:350; background-color:red; width:100%;">
-  <div id="omnbars" class="o inblock" ng-controller="MainController">
-    <span class="bars" id="bar1"></span>
-    <span class="bars" id="bar2"></span>
-    <span class="bars" id="bar3"></span>
-    <span class="bars" id="bar4"></span>
-  </div>
-  
-  <div id="cmnbars" class="c none" ng-controller="MainController">
-    <span class="bars" id="bar5"></span>
-    <span class="bars" id="bar6"></span>
-  </div>
-
-  <div id="back-button" ng-click="backButton()" ng-controller="MainController" ng-show="showBackButton" link="/">
-    <span class="glyphicon glyphicon-arrow-left" id="back-glyphicon"></span>
-  </div>
+<header style="position:fixed; z-index:350; width:100%;">
+    <div id="cmnbars" class="c none" ng-controller="MainController">
+      <span class="bars" id="bar5"></span>
+      <span class="bars" id="bar6"></span>
+    </div>
 </header>
 <!-- 
 <div style="position:fixed; z-index:300; top:2%; right:2%;">
@@ -63,6 +52,18 @@
  -->
 
 <div class="container top-nav-container" ng-controller="MainController">
+  <div id="hamburger-menu">
+    <div id="omnbars" class="o inblock">
+      <span class="bars" id="bar1"></span>
+      <span class="bars" id="bar2"></span>
+      <span class="bars" id="bar3"></span>
+      <span class="bars" id="bar4"></span>
+    </div>
+  </div>
+
+  <div id="back-button" ng-click="backButton()" ng-controller="MainController" ng-show="showBackButton" link="/">
+    <span class="glyphicon glyphicon-arrow-left" id="back-glyphicon"></span>
+  </div>
 
   <div class="row nav-bar home-top-nav">
     <div id="top-nav-events" ng-click="gotoLink('/event-list')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/event-list">EVENTS</a></div>
@@ -82,7 +83,7 @@
 </div>
 
 <div class="menu" style="position:fixed; z-index:350;" ng-controller="MainController">
-  <a href="#/about-us"><img src="images/dice.png" class="img-responsive side-menu-dice" alt="shaastra"></a>
+  <a href="#/"><img src="images/dice.png" class="img-responsive side-menu-dice" alt="shaastra"></a>
   <ul class="mn-list">
     <span id="menuscroll">
       <li><a href="#/">Home</a></li>
