@@ -129,6 +129,11 @@ angular
         controller: 'samparksCtrl',
         controllerAs: 'samparks'
       })
+      .when('/hospitality', {
+        templateUrl: 'views/hospitality.html',
+        controller: 'hospiCtrl',
+        controllerAs: 'hospi'
+      })
       .otherwise({
         redirectTo: '/'
       });
