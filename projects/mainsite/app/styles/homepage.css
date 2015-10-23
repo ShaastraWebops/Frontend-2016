@@ -18,6 +18,25 @@ a:hover, a:active, a:focus {
 	outline: 0;
 }
 
+#home-scroll-down {
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  left: 90%;
+  top: 70%;
+  background-color: #173e43;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+}
+#home-scroll-glyphicon {
+  color: white;
+  cursor: pointer;
+  min-height: 50px;
+  line-height: 50px;	
+}
+
 .home {
 	padding: 0;
 	width: 100%;
