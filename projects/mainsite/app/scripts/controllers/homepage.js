@@ -168,6 +168,10 @@ angular.module('shaastra2016App')
       $location.hash(temp);
     };
 
+    $scope.gotoLink = function (link) {
+      $location.url(link);
+    };
+
 });
 
 //rotating hexagons directive

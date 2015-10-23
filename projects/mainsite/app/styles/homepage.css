@@ -56,6 +56,9 @@ a:hover, a:active, a:focus {
 }
 
 /* CSS for new home page starts */
+#hex-div {
+	z-index: 230;
+}
 .top-nav-container {
 	position: fixed;
 	background-color: #173e43;
