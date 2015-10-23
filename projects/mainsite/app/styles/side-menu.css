@@ -206,9 +206,9 @@ footer {
   font-family: 'MyraidPro';
   font-size: 1.5em;
 }
-
 .logo-links-ul {
   display: table-row;
+  float: right;
 }
 
 .logo-links-ul li a {
