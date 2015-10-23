@@ -221,7 +221,7 @@ ul li a i {
   display: table-row;
 }
 
-.mn-social li a {
+.mn-social a {
   display: table;
   background: #ffffff;
   width: 30px;
@@ -546,4 +546,17 @@ input[type=search]:focus {
   z-index: 250;
   top: 0;
   left: 0;
+}
+
+.home-shortcuts{
+  padding-top: 2.6%;
+  width: 100%;
+  font-family: 'MyraidPro';
+  font-size: 1.1em;
+  height: auto !important;
+  text-align: center;
+}
+
+.home-shortcuts a{
+  color: #000;
 }
