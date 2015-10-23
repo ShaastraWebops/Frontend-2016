@@ -194,10 +194,10 @@ a:hover, a:active, a:focus {
 	color: #e1e1e1;
 }
 .hexagons-container{
-	height: 500px;
+	height: 450px;
 	width: 100%;
 	display: flex;
-	margin-top: 10%;
+	margin-top: 9%;
 }
 .clip-svg{
 	width: 0;
