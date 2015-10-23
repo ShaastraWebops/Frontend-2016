@@ -172,6 +172,13 @@ angular
       $rootScope.showFooter = (next.$$route.originalPath !== '/');
       $rootScope.showBackgroundImage = (next.$$route.originalPath === '/');
 
+      var hamburger = $('#omnbars');
+      if(!$rootScope.showBackButton) {
+        hamburger.css({'top': '20px'});
+      } else {
+        hamburger.css({'top': '10px'});
+      }
+
       if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");
         $('.mn-social').addClass("out");
