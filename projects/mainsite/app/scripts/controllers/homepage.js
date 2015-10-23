@@ -63,7 +63,7 @@ function animateHexagons(){
 }
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
+  .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
     animateHexagons();
 
     // var svgMargin = document.documentElement.clientWidth*0.36;
@@ -151,6 +151,13 @@ angular.module('shaastra2016App')
 
     var backButton = $('#back-button');
     backButton.attr('link', '/');
+
+    $scope.scrollDown = function (element) {
+      var temp = $location.hash();
+      $location.hash(element);
+      $anchorScroll();
+      $location.hash(temp);
+    };
 
 });
 
