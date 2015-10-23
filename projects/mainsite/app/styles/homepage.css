@@ -323,8 +323,10 @@
 	font-size: 1.1em;
 }
 .footer-nav-item:hover {
-	background-color: #003144;
 	cursor: pointer;
+}
+.footer-nav-item:hover a {
+	color: #e1e1e1;
 }
 .footer-nav-item {
 	padding-top: 2%;
