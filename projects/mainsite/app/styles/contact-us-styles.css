@@ -142,10 +142,10 @@ ul {
   padding-left: 5px;
 }
 
-@media only screen and (max-width:490px) {
+@media only screen and (max-width:900px) {
   div.contact-div img {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
   }
   div.contact-img-desc {
     text-align: center;
@@ -156,5 +156,29 @@ ul {
     margin-top: 20%;
     margin-left: -20%;
     margin-bottom: 20%;
+  }
+}
+
+@media only screen and (max-width:700px) {
+  div.contact-div img {
+    width: 80px;
+    height: 80px;
+  }
+  div.contact-img-desc {
+    min-height: 70px;
+    text-align: bottom;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width:650px) {
+  div.contact-div img {
+    width: 80px;
+    height: 80px;
+  }
+  div.contact-img-desc {
+    min-height: 90px;
+    text-align: bottom;
+    margin: 0;
   }
 }
