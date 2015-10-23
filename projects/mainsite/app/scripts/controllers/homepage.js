@@ -75,7 +75,7 @@ angular.module('shaastra2016App')
     // }
 
     // guide start
-    $scope.currentStep = ipCookie('myTour') || 0;
+    $scope.currentStep = ipCookie('myTour') || 1;
     $scope.AfterChangeEvent = function() {
       $scope.currentStep = this._currentStep + 1;
       ipCookie('myTour', $scope.currentStep, { expires: 3000 });
@@ -86,18 +86,12 @@ angular.module('shaastra2016App')
       ipCookie('myTour', $scope.currentStep, { expires: 3000 });
     };
 
-    if($scope.currentStep < 8){
+    if($scope.currentStep < 7){
       $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
     }
 
     $scope.IntroOptions = {
       steps:[
-        {
-          step : 0,
-          element: document.querySelector('#this-div-is-not-there'),
-          intro: "Shaastra's attempt to give back to society and to create impact in the fields of education and literacy, this time through Pledge-A-Book 2.0 - To know more, click on Social Cause.",
-          position: 'top'
-        },
         {
           step : 1,
           element: document.querySelector('#top-nav-events'),
@@ -136,8 +130,8 @@ angular.module('shaastra2016App')
         },
         {
           step : 7,
-          element: document.querySelector('#this-div-is-not-there'),
-          intro: "Shaastra's attempt to give back to society and to create impact in the fields of education and literacy, this time through Pledge-A-Book 2.0 - To know more, click on Social Cause.",
+          element: document.querySelector('#xxx'),
+          intro: "Like, Share, Follow, Tweet. Thank you.",
           position: 'top'
         }
       ],
