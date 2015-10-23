@@ -25,8 +25,8 @@ angular.module('shaastra2016App')
 
     $scope.gotoLink = function (link) {
       $location.url(link);
-    }
-  
+    };
+
 });
   
 //directive

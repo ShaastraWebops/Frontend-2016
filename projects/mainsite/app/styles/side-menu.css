@@ -38,6 +38,12 @@ body {
   overflow: hidden;
 }
 
+/* guide styles start */
+.introjs-helperLayer {
+  background-color: rgba(128,128,128,.9);
+}
+/* guide styles end */
+
 /*menu*/
 .menu ul {
   list-style-type: none;
