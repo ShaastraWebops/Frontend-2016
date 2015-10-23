@@ -85,16 +85,6 @@ a:hover, a:active, a:focus {
 #bottom-hex{
 	z-index: 1;
 }
-.mn-homepage-sponsTab {
-  display: table-row;
-  vertical-align: bottom;
-  height: 1.2em;	
-}
-.homepage-sponsTab {
-  display: inline-block;
-  display: -moz-inline-stack;
-  *display: inline;
-}
 
 #shaastra-info{
 	background-color: #173e43;
