@@ -74,48 +74,48 @@ angular.module('shaastra2016App')
     //   $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // }
 
-    // guide start
-    $scope.currentStep = ipCookie('myTour') || 1;
-    $scope.AfterChangeEvent = function() {
-      $scope.currentStep = this._currentStep + 1;
-      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
-    };
+    // // guide start
+    // $scope.currentStep = ipCookie('myTour') || 1;
+    // $scope.AfterChangeEvent = function() {
+    //   $scope.currentStep = this._currentStep + 1;
+    //   ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+    // };
 
-    $scope.CompletedEvent = function() {
-      $scope.currentStep = this._currentStep + 2;
-      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
-    };
+    // $scope.CompletedEvent = function() {
+    //   $scope.currentStep = this._currentStep + 2;
+    //   ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+    // };
 
-    if($scope.currentStep < 3){
-      $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
-    }
+    // if($scope.currentStep < 3){
+    //   $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
+    // }
 
-    $scope.IntroOptions = {
-      steps:[
-        {
-          step : 1,
-          element: document.querySelector('#hex-div'),
-          intro: "Hello there! Welcome to Shaastra",
-          position: 'down'
-        },
-        {
-          step : 2,
-          element: document.querySelector('#main-div'),
-          intro: "Shaastra",
-          position: 'top'
-        }
-      ],
-      showStepNumbers: false,
-      exitOnOverlayClick: true,
-      exitOnEsc: true,
-      nextLabel: '<strong>NEXT!</strong>',
-      prevLabel: '<span style="color:green">Previous</span>',
-      skipLabel: 'Stop Tour',
-      doneLabel: 'Okay'
-    };
+    // $scope.IntroOptions = {
+    //   steps:[
+    //     {
+    //       step : 1,
+    //       element: document.querySelector('#hex-div'),
+    //       intro: "Hello there! Welcome to Shaastra",
+    //       position: 'down'
+    //     },
+    //     {
+    //       step : 2,
+    //       element: document.querySelector('#main-div'),
+    //       intro: "Shaastra",
+    //       position: 'top'
+    //     }
+    //   ],
+    //   showStepNumbers: false,
+    //   exitOnOverlayClick: true,
+    //   exitOnEsc: true,
+    //   nextLabel: '<strong>NEXT!</strong>',
+    //   prevLabel: '<span style="color:green">Previous</span>',
+    //   skipLabel: 'Stop Tour',
+    //   doneLabel: 'Okay'
+    // };
 
-    $scope.ShouldAutoStart = false;
-    // guide end
+    // $scope.ShouldAutoStart = false;
+    // // guide end
 
     $scope.showTooltip = true;
 
