@@ -38,6 +38,12 @@ body {
   overflow: hidden;
 }
 
+/* guide styles start */
+.introjs-helperLayer {
+  background-color: rgba(128,128,128,.9);
+}
+/* guide styles end */
+
 /*menu*/
 .menu ul {
   list-style-type: none;
@@ -69,6 +75,9 @@ body {
   line-height: 2em;
   padding: 0 0;
 }
+#back-button:hover {
+  cursor: pointer;
+}
 
 #back-button span {
   font-size: 1.5em;
@@ -96,11 +105,17 @@ body {
 }
 
 .account a {
-  color: black !important;
+  color: white !important;
   text-decoration: none !important;
   font-weight: bold;
+  padding-right: 5px;
 }
-
+.account:hover a {
+  color: #e1e1e1 !important;
+}
+.account.ac {
+  padding-right: 5px;
+}
 .side-menu-dice {
   width: 130px;
   margin-left: 19%;

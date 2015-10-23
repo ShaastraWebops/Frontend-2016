@@ -119,10 +119,10 @@ ul {
   right: 43%;
   vertical-align: center;
 
-  background-color: #5c88e2;
+  background-color: #173e43;
 }
 .input-icon {
-  background-color: #5c88e2;
+  background-color: #173e43;
   color: #fff;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -131,7 +131,7 @@ ul {
 #map {
   height: 350px;
   width: 350px;
-  border: 10px solid #5c88e2;
+  border: 10px solid #173e43;
   overflow: hidden;
   border-radius: 1000px;
   position: fixed;

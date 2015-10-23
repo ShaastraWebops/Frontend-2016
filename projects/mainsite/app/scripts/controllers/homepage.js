@@ -63,7 +63,7 @@ function animateHexagons(){
 }
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
+  .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
     animateHexagons();
 
     // var svgMargin = document.documentElement.clientWidth*0.36;
@@ -74,48 +74,72 @@ angular.module('shaastra2016App')
     //   $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // }
 
-    // // guide start
-    // $scope.currentStep = ipCookie('myTour') || 1;
-    // $scope.AfterChangeEvent = function() {
-    //   $scope.currentStep = this._currentStep + 1;
-    //   ipCookie('myTour', $scope.currentStep, { expires: 3000 });
-    // };
+    // guide start
+    $scope.currentStep = ipCookie('myTour') || 1;
+    $scope.AfterChangeEvent = function() {
+      $scope.currentStep = this._currentStep + 1;
+      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+    };
 
-    // $scope.CompletedEvent = function() {
-    //   $scope.currentStep = this._currentStep + 2;
-    //   ipCookie('myTour', $scope.currentStep, { expires: 3000 });
-    // };
+    $scope.CompletedEvent = function() {
+      $scope.currentStep = this._currentStep + 2;
+      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+    };
 
-    // if($scope.currentStep < 3){
-    //   $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
-    // }
+    if($scope.currentStep < 6){
+      $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
+    }
 
-    // $scope.IntroOptions = {
-    //   steps:[
-    //     {
-    //       step : 1,
-    //       element: document.querySelector('#hex-div'),
-    //       intro: "Hello there! Welcome to Shaastra",
-    //       position: 'down'
-    //     },
-    //     {
-    //       step : 2,
-    //       element: document.querySelector('#main-div'),
-    //       intro: "Shaastra",
-    //       position: 'top'
-    //     }
-    //   ],
-    //   showStepNumbers: false,
-    //   exitOnOverlayClick: true,
-    //   exitOnEsc: true,
-    //   nextLabel: '<strong>NEXT!</strong>',
-    //   prevLabel: '<span style="color:green">Previous</span>',
-    //   skipLabel: 'Stop Tour',
-    //   doneLabel: 'Okay'
-    // };
+    $scope.IntroOptions = {
+      steps:[
+        {
+          step : 1,
+          element: document.querySelector('#top-nav-events'),
+          intro: "Compete against the best teams around the country and emerge victorious to win loads cash prizes, internships and other career opportunities. To know more, click on Events.​",
+          position: 'down'
+        },
+        {
+          step : 2,
+          element: document.querySelector('#top-nav-workshops'),
+          intro: "At Shaastra 2016, you can develop valuable technical skills by attending our workshops where you can learn to apply sophisticated concepts like 3D Design, Systems Biology, Network Analysis and Computational Neuroscience. To know more, click on Workshops.",
+          position: 'down'
+        },
+        {
+          step : 3,
+          element: document.querySelector('#top-nav-shows'),
+          intro: "Relish the confluence of Science, Technology and Entertainment in the fun packed shows and savour the variety of our displays and exhibitions at Shaastra 2016. To know more, click on Shows and Exhibitions.",
+          position: 'down'
+        },
+        {
+          step : 4,
+          element: document.querySelector('#top-nav-preShaastra'),
+          intro: "In attempt to give a glimpse of Shaastra, we come to your own city! To know more about our mini-Shaastras, click on Pre-Shaastra Activities.",
+          position: 'down'
+        },
+        {
+          step : 5,
+          element: document.querySelector('#top-nav-summit'),
+          intro: "Create new things, inspire discoveries, uncover ideas and make a difference with makers. To know more, click on International Summit.",
+          position: 'down'
+        },
+        {
+          step : 6,
+          element: document.querySelector('#top-nav-social'),
+          intro: "Shaastra's attempt to give back to society and to create impact in the fields of education and literacy, this time through Pledge-A-Book 2.0 - To know more, click on Social Cause.",
+          position: 'down'
+        }
+      ],
+      showStepNumbers: false,
+      exitOnOverlayClick: true,
+      exitOnEsc: true,
+      nextLabel: '<strong>NEXT!</strong>',
+      prevLabel: '<span style="color:green">Previous</span>',
+      skipLabel: 'Stop Tour',
+      doneLabel: 'Okay'
+    };
 
-    // $scope.ShouldAutoStart = false;
-    // // guide end
+    $scope.ShouldAutoStart = false;
+    // guide end
 
     $scope.showTooltip = true;
 
@@ -127,6 +151,13 @@ angular.module('shaastra2016App')
 
     var backButton = $('#back-button');
     backButton.attr('link', '/');
+
+    $scope.scrollDown = function (element) {
+      var temp = $location.hash();
+      $location.hash(element);
+      $anchorScroll();
+      $location.hash(temp);
+    };
 
 });
 
