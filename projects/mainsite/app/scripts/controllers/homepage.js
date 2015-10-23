@@ -130,7 +130,7 @@ angular.module('shaastra2016App')
         },
         {
           step : 7,
-          element: document.querySelector('#xxx'),
+          element: document.querySelector('#homepage-bottom-nav-tour'),
           intro: "Like, Share, Follow, Tweet. Thank you.",
           position: 'top'
         }
