@@ -549,10 +549,11 @@ input[type=search]:focus {
 }
 
 .home-shortcuts{
-  padding-top: 2.6%;
+  padding-top: 2.5%;
   width: 100%;
   font-family: 'MyraidPro';
-  font-size: 1.1em;
+  font-size: 1.3em;
+  font-weight: bolder;
   height: auto !important;
   text-align: center;
 }
