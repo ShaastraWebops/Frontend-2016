@@ -201,6 +201,12 @@ footer {
   left: -1%;
 }
 
+.home-logos-saarang{
+  color: #000;
+  font-family: 'MyraidPro';
+  font-size: 1.5em;
+}
+
 .logo-links-ul {
   display: table-row;
 }
