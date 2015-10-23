@@ -65,6 +65,7 @@ function animateHexagons(){
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie) {
     animateHexagons();
+
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // window.addEventListener("resize", resizeFunction);
