@@ -22,6 +22,10 @@ angular.module('shaastra2016App')
       var loc = $('#back-button').attr('link');
       $location.path(loc);
     };
+
+    $scope.gotoLink = function (link) {
+      $location.url(link);
+    }
   
 });
   

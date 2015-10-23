@@ -11,6 +11,13 @@
   src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
 }
 
+a {
+	outline: 0;
+}
+a:hover, a:active, a:focus {
+	outline: 0;
+}
+
 .home {
 	padding: 0;
 	width: 100%;
