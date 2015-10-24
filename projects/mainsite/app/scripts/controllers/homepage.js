@@ -77,7 +77,7 @@ angular.module('shaastra2016App')
     // guide start
     $scope.currentStep = ipCookie('myTour') || 1;
     $scope.AfterChangeEvent = function() {
-      $scope.currentStep = this._currentStep + 1;
+      $scope.currentStep = this._currentStep + 0;
       ipCookie('myTour', $scope.currentStep, { expires: 3000 });
     };
 
@@ -92,6 +92,12 @@ angular.module('shaastra2016App')
 
     $scope.IntroOptions = {
       steps:[
+        {
+          step : 0,
+          element: document.querySelector('#shaastra-homepage'),
+          intro: "Hello there! Welcome to Shaastra 2016.",
+          position: 'down'
+        },
         {
           step : 1,
           element: document.querySelector('#top-nav-events'),
