@@ -42,7 +42,7 @@ angular.module('shaastra2016App')
     },
     {
       id: 3,
-      title: 'Co-Sponsor',
+      title: 'Co Sponsor',
       path: [{
         image: 'images/sponsors/Co-Sponsor/boeing.jpg',
         link: 'http://www.boeing.com'
@@ -78,7 +78,7 @@ angular.module('shaastra2016App')
     },
     {
       id: 6,
-      title: 'Event-Sponsor',
+      title: 'Event Sponsor',
       path: [{
         image: 'images/sponsors/Event-Sponsor/amadasoft.png',
         link: 'http://www.amadasoft.co'
@@ -102,6 +102,158 @@ angular.module('shaastra2016App')
       path: [{
         image: 'images/sponsors/Big-Data-Sponsor/cdac.png',
         link: 'http://www.cdac.in'        
+      }]
+    },
+    {
+      id: 8,
+      title: 'Literature Sponsor',
+      path: [{
+        image: 'images/sponsors/Literature-Sponsor/faro.png',
+        link: 'http://www.faro.com'        
+      }]
+    },
+    {
+      id: 9,
+      title: 'Eye Care Sponsor',
+      path: [{
+        image: 'images/sponsors/Eye-Care-Sponsor/essilorindia.jpg',
+        link: 'http://www.essilorindia.com'        
+      }]
+    },
+    {
+      id: 10,
+      title: 'Gifting Sponsor',
+      path: [{
+        image: 'images/sponsors/Gifting-Sponsor/giftxoxo.jpg',
+        link: 'http://www.giftxoxo.com'        
+      }]
+    },
+    {
+      id: 11,
+      title: 'Education Sponsor',
+      path: [{
+        image: 'images/sponsors/Education-Sponsor/campusfrance.jpg',
+        link: 'http://www.campusfrance.org'
+      },
+      {
+        image: 'images/sponsors/Education-Sponsor/educationau-incanada.jpg',
+        link: 'http://www.educationau-incanada.ca'        
+      }]
+    },
+    {
+      id: 12,
+      title: 'Financial Learning Sponsor',
+      path: [{
+        image: 'images/sponsors/Financial-Learning-Sponsor/icicidirect.png',
+        link: 'http://www.icicidirect.com'        
+      }]
+    },
+    {
+      id: 13,
+      title: 'Prize Sponsor',
+      path: [{
+        image: 'images/sponsors/Prize-Sponsor/hachetteindia.jpg',
+        link: 'http://www.hachetteindia.com'
+      },
+      {
+        image: 'images/sponsors/Prize-Sponsor/zebronics.jpg',
+        link: 'http://www.zebronics.com'        
+      }]
+    },
+    {
+      id: 14,
+      title: 'Regenerative Solutions Sponsor',
+      path: [{
+        image: 'images/sponsors/Regenerative-Solutions-Sponsor/regrow.png',
+        link: 'http://www.regrow.in'
+      }]
+    },
+    {
+      id: 15,
+      title: 'Creativity Partner',
+      path: [{
+        image: 'images/sponsors/Creativity-Partner/bbgr.jpg',
+        link: 'http://www.bbgr.com'
+      }]
+    },
+    {
+      id: 16,
+      title: 'Jotting Sponsor',
+      path: [{
+        image: 'images/sponsors/Jotting-Sponsor/lincpen.jpg',
+        link: 'http://www.lincpen.com'
+      }]
+    },
+    {
+      id: 17,
+      title: 'Stationery Sponsor',
+      path: [{
+        image: 'images/sponsors/Stationery-Sponsor/mycopie.png',
+        link: 'http://www.mycopie.com'
+      }]
+    },
+    {
+      id: 18,
+      title: 'Depository Sponsor',
+      path: [{
+        image: 'images/sponsors/Depository-Sponsor/nsdl.jpg',
+        link: 'http://www.nsdl.co.in'
+      }]
+    },
+    {
+      id: 19,
+      title: 'Data Mining Sponsor',
+      path: [{
+        image: 'images/sponsors/Data-Mining-Sponsor/flutura.jpg',
+        link: 'http://www.flutura.com'
+      }]
+    },
+    {
+      id: 20,
+      title: 'Science Sponsor',
+      path: [{
+        image: 'images/sponsors/Science-Sponsor/functionspace.png',
+        link: 'http://www.functionspace.org'
+      }]
+    },
+    {
+      id: 21,
+      title: 'Workshop Sponsor',
+      path: [{
+        image: 'images/sponsors/Workshop-Sponsor/frugal-labs.png',
+        link: 'http://www.frugal-labs.com'
+      },
+      {
+        image: 'images/sponsors/Workshop-Sponsor/innovianstechnologies.png',
+        link: 'www.innovianstechnologies.com'        
+      },
+      {
+        image: 'images/sponsors/Workshop-Sponsor/prigma.png',
+        link: 'http://www.prigma.co.in'        
+      }]
+    },
+    {
+      id: 22,
+      title: 'Media Sponsor',
+      path: [{
+        image: 'images/sponsors/Media-Sponsor/clubfm.jpg',
+        link: 'http://www.clubfm.in'
+      }]
+    },
+    {
+      id: 21,
+      title: 'Online Media Sponsor',
+      path: [{
+        image: 'images/sponsors/Online-Media-Sponsor/allevents.png',
+        link: 'http://www.allevents.in'
+      },
+      {
+        image: 'images/sponsors/Online-Media-Sponsor/festpav.png',
+        link: 'www.festpav.com'        
+      },
+      {
+        image: 'images/sponsors/Online-Media-Sponsor/thecollegefever.jpg',
+        link: 'http://www.thecollegefever.com'        
       }]
     }];
 
