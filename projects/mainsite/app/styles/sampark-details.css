@@ -42,6 +42,8 @@
 	padding: 50px 100px 50px 100px;
 	text-align: justify;
 	font-family: 'Proxima';
+	margin-bottom: 5%;
+	margin-top: 5%;
 }
 .samparkContent p {
 	font-size: 1.5em;

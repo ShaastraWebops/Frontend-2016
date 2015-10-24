@@ -201,8 +201,14 @@ footer {
   left: -1%;
 }
 
+.home-logos-saarang{
+  color: #000;
+  font-family: 'MyraidPro';
+  font-size: 1.5em;
+}
 .logo-links-ul {
   display: table-row;
+  float: right;
 }
 
 .logo-links-ul li a {
@@ -221,7 +227,7 @@ ul li a i {
   display: table-row;
 }
 
-.mn-social li a {
+.mn-social a {
   display: table;
   background: #ffffff;
   width: 30px;
@@ -546,4 +552,18 @@ input[type=search]:focus {
   z-index: 250;
   top: 0;
   left: 0;
+}
+
+.home-shortcuts{
+  padding-top: 2.5%;
+  width: 100%;
+  font-family: 'MyraidPro';
+  font-size: 1.3em;
+  font-weight: bolder;
+  height: auto !important;
+  text-align: center;
+}
+
+.home-shortcuts a{
+  color: #000;
 }

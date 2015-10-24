@@ -56,6 +56,9 @@ a:hover, a:active, a:focus {
 }
 
 /* CSS for new home page starts */
+#hex-div {
+	z-index: 230;
+}
 .top-nav-container {
 	position: fixed;
 	background-color: #173e43;
@@ -314,6 +317,16 @@ a:hover, a:active, a:focus {
 .homepage-makers-tab {
 	padding-top: 5%;
 	padding-bottom: 5%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 }
 .separator{
 	height: 3px;

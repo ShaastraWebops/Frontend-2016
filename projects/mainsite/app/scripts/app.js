@@ -129,6 +129,11 @@ angular
         controller: 'samparksCtrl',
         controllerAs: 'samparks'
       })
+      .when('/hospitality', {
+        templateUrl: 'views/hospitality.html',
+        controller: 'hospiCtrl',
+        controllerAs: 'hospi'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -171,6 +176,13 @@ angular
       $rootScope.showLogos = (next.$$route.originalPath === '/');
       $rootScope.showFooter = (next.$$route.originalPath !== '/');
       $rootScope.showBackgroundImage = (next.$$route.originalPath === '/');
+
+      var hamburger = $('#omnbars');
+      if(!$rootScope.showBackButton) {
+        hamburger.css({'top': '20px'});
+      } else {
+        hamburger.css({'top': '10px'});
+      }
 
       if($('.menu').hasClass('mnopen')) {
         $('.down .list').removeClass("clicked");

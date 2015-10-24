@@ -20,7 +20,7 @@
 
   <div id="hex-div" class="container hexagons-container">
     <div class="row">
-      <div class="">
+      <div>
         <!-- <div class="hexagon" id="bottom-hex"></div>
         <div class="hexagon" id="middle-hex"></div>
         <div class="hexagon" id="top-hex"></div> -->
@@ -43,13 +43,13 @@
         </div>
  -->
         <div class="hex-images-div" id="bottom-hex">
-          <img class="img-responsive hex-images" src="images/shaastra-bottom-hex.png">
+          <img class="img-responsive hex-images" src="images/homepage/shaastra-bottom-hex.png">
         </div>
         <div class="hex-images-div" id="middle-hex">
-          <img class="img-responsive hex-images" src="images/shaastra-middle-hex.png">
+          <img class="img-responsive hex-images" src="images/homepage/shaastra-middle-hex.png">
         </div>
         <div class="hex-images-div" id="top-hex">
-          <img class="img-responsive hex-images" src="images/shaastra-top-hex.png">
+          <img class="img-responsive hex-images" src="images/homepage/shaastra-top-hex.png">
         </div>      
       </div>
     </div>
@@ -59,14 +59,14 @@
     <span class="glyphicon glyphicon-chevron-down" id="home-scroll-glyphicon"></span>
   </div>
 
-  <div style="z-index:240; width:100%; padding:0% 2% 0% 2%">
+  <!-- <div style="z-index:240; width:100%; padding:0% 2% 0% 2%">
     <div style="float:left; padding-top:2%">
-      <ul class="out mn-social"><!-- 
-         --><li class="social"><a id="fb" target="_blank" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
-         --><li class="social"><a id="tw" target="_blank" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
-         --><li class="social"><a id="you" target="_blank" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
-         --><li class="social"><a id="li" target="_blank" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
-         --></ul>
+      <ul class="out mn-social">
+      <li class="social"><a id="fb" target="_blank" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li>
+      <li class="social"><a id="tw" target="_blank" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li>
+         <li class="social"><a id="you" target="_blank" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li> 
+         <li class="social"><a id="li" target="_blank" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li>
+         </ul>
     </div>
     <div id="iitm-logos" style="float:right;" ng-if="showLogos">
       <ul class="logo-links-ul">
@@ -75,6 +75,57 @@
       </ul>
     </div>
     <div style="clear:both;"></div>
+  </div> -->
+
+  <div class="container" style="z-index:240; width:100%; padding-right:0;">
+    <div id="homepage-bottom-nav-tour" class="row">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 out mn-social" style="padding-top:3%;">
+        <ul style="padding-left:1%;">
+          <li class="social">
+            <a id="fb" target="_blank" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a>
+          </li>
+          <li class="social">
+            <a id="tw" target="_blank" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a>
+          </li>
+          <li class="social">  
+            <a id="you" target="_blank" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a>
+          </li>
+          <li class="social">
+            <a id="li" target="_blank" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="padding-top:2%;">
+        <div class="container home-shortcuts">
+          <div class="row">
+           <div ng-click="gotoLink('/about-us')" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+             <a href="#/about-us">ABOUT US</a>
+           </div>
+           <div ng-click="gotoLink('/hospitality')" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+             <a href="#/hospitality">HOSPITALITY</a>
+           </div>
+           <div ng-click="gotoLink('/sponsors')" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+             <a href="#/sponsors">SPONSORS</a>
+           </div>
+           <div ng-click="gotoLink('/contact-us')" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="#/contact-us">CONTACT US</a>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="logo-links-ul" id="iitm-logos" ng-if="showLogos">
+          <ul class="logo-links-ul">
+            <li class="logo-links-li"><a target="_blank" href="http://saarang.org"><img src="images/logos/saarang.png" alt="saarang" height="50" width="90"></a></li>
+            <li class="logo-links-li"><a target="_blank" href="#/about-us"><img src="images/logos/iso-black.png" alt="iso" height="70" width="70"></a></li>
+            <li class="logo-links-li"><a target="_blank" href="http://www.iitm.ac.in"><img src="images/logos/iitm-black.png" alt="iitm-logo" height="70" width="60"></a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="container-fluid" id="shaastra-info">
@@ -88,14 +139,12 @@
       <p id="makers-desc">This January, at Shaastra, thousands of like minded people will gather to witness one of India's biggest Maker events.
     </div>
     <div class="row homepage-makers-tab">
-      <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
-       <img src="images/do-it-yourself.jpg" class="main-images">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <img src="images/homepage/do-it-yourself.jpg" class="main-images">
       </div>
-      <div class="row">
-        <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
-          <p class="homepage-makers-tab-title">DO-IT-YOURSELF, DON'T CALL THE GUY</p>
-          <p class="homepage-makers-tab-desc">This is the underlying principle the maker community thrives on. Come to Shaastra this January and realise how every problem can be solved with your bare hands. And don’t forget to bring the spirit to create!</p>
-        </div>
+      <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <p class="homepage-makers-tab-title">DO-IT-YOURSELF, DON'T CALL THE GUY</p>
+        <p class="homepage-makers-tab-desc">This is the underlying principle the maker community thrives on. Come to Shaastra this January and realise how every problem can be solved with your bare hands. And don’t forget to bring the spirit to create!</p>
       </div>
     </div>
     <hr class="separator">
@@ -106,13 +155,13 @@
         <p class="homepage-makers-tab-desc">In Shaastra's maker summit, students from various backgrounds including engineering, arts and sciences, come together, thereby contributing to a bright minded gathering of tech enthusiasts, crafters, engineers, authors and artists to innovate and create products across a wide range of topics.</p>
       </div>
       <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
-        <img src="images/maker-space.jpg" class="main-images">
+        <img src="images/homepage/maker-space.jpg" class="main-images">
       </div>
     </div>
     <hr class="separator">
     <div class="row homepage-makers-tab">
       <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
-        <img src="images/Maker-fare.jpg" class="main-images">
+        <img src="images/homepage/Maker-fare.jpg" class="main-images">
       </div>
       <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
         <p class="homepage-makers-tab-title">FROM PASSIVE USERS TO ACTIVE CREATORS</p>
@@ -130,7 +179,7 @@
         <p class="homepage-makers-tab-desc">You are a maker.</p>
       </div>
       <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
-        <img src="images/paper-plane-to-quadrotor.jpg" class="main-images">
+        <img src="images/homepage/paper-plane-to-quadrotor.jpg" class="main-images">
       </div>
     </div>
     <div class="row main-center">

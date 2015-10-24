@@ -22,13 +22,13 @@ angular.module('shaastra2016App')
   	{ 
       'id': 2,
   		'name': 'Trichy', 
-      'image': 'images/Trichy.jpg',
+      'image': 'images/sampark/Trichy.jpg',
   		'eventDate': "" 
   	},
     { 
       'id': 3,
       'name': 'Coimbatore', 
-      'image': 'images/Coimbatore.jpg',
+      'image': 'images/sampark/Coimbatore.jpg',
       'eventDate': "" 
     },
     { 
@@ -49,13 +49,13 @@ angular.module('shaastra2016App')
     { 
       'id': 7,
       'name': 'Hyderabad', 
-      'image': 'images/Hyderabad.jpg',
+      'image': 'images/sampark/Hyderabad.jpg',
       'eventDate': "" 
     },
     { 
       'id': 8,
       'name': 'Pune', 
-      'image': 'images/Pune.jpg',
+      'image': 'images/sampark/Pune.jpg',
       'eventDate': "" 
     },
     { 

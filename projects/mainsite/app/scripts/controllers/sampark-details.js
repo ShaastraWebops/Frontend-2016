@@ -25,13 +25,13 @@ angular.module('shaastra2016App')
     { 
       'id': 2,
       'name': 'Trichy', 
-      'image': 'images/Trichy.jpg',
+      'image': 'images/sampark/Trichy.jpg',
       'info': "<p>Shaastra is coming to Trichy very soon with the this year’s editon of Sampark at NIT Trichy. Workshops,events and lot more! Engineers out there, switch over to your tech-gears and get ready for an exhilarating 2-day event.</p><p>Stay tuned for updates on details of the events.!</p>" 
     },
     { 
       'id': 3,
       'name': 'Coimbatore', 
-      'image': 'images/Coimbatore.jpg',
+      'image': 'images/sampark/Coimbatore.jpg',
       'info': "<p>Sampark is coming soon to Coimbatore with workshops and events to weave the threads of technology. Stay tuned for updates!</p>" 
     },
     { 
@@ -52,13 +52,13 @@ angular.module('shaastra2016App')
     { 
       'id': 7,
       'name': 'Hyderabad', 
-      'image': 'images/Hyderabad.jpg',
+      'image': 'images/sampark/Hyderabad.jpg',
       'info': "<p>Sampark Hyderabad was held on the 3rd and 4th of October at Vasavi Engineering College. Students from the city of Char Minar came to fortify their technical skills by attending the wide range of events and workshops. The Envisage exhibits from Shaastra were there to amaze people. The events included were,</p><ul class='samparks-ul'><li>Embedded Systems and Robotics by Codex</li><li>PCB design workshop</li><li>Line follower Robot workshop</li><li>Poster Presentation</li><li>How Things Work Quiz</li><li>Reverse Coding</li></ul>" 
     },
     { 
       'id': 8,
       'name': 'Pune', 
-      'image': 'images/Pune.jpg',
+      'image': 'images/sampark/Pune.jpg',
       'info': "<h2>Shaastra comes to Oxford of the East</h2><p>On 11th September , Pune experienced technical extravaganza organized by Shaastra, the technical festival of IIT Madras. Being one of the biggest technical festival, Shaastra has a mission to empower youth with technology, which it has been successfully accomplishing since its inception.</p><p>Sampark is a venture by Shaastra that aims to increase awareness about role of technology in betterment of human lives. Hosting plethora of events like lectures, workshops and various competitions, the events organized give wild card entry to the winners to the finals of respective events which will be conducted in first week of January as a part of Shaastra.</p><p>Pune Sampark was one of the series of Samparks that will happen all over India. It was organized in collaboration with Meteor, Sinhgad college’s fest in Pune. It was highly successful in terms of quantity and quality of the participants. With footfall of 1600+ , Pune witnessed  various events like manual robotics workshop, how things work quiz and puzzle champ quiz.</p><p>The participants were very3 enthusiastic about the event and it was a jammed packed event. There were participants from cities as long as Mumbai, Nashik and Kolhapur for the event. One participant from Nashik said, <b><i>We specifically came to be a part of the event and we are very happy with it. We will come next year as well with better preparation.</i></b></p><p>Shaastra thanks Pune for such enthusiastic response and promises to be back next year with even better Sampark.</p>" 
     },
     { 

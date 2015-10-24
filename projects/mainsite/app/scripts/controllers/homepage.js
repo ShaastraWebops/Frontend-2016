@@ -86,7 +86,7 @@ angular.module('shaastra2016App')
       ipCookie('myTour', $scope.currentStep, { expires: 3000 });
     };
 
-    if($scope.currentStep < 6){
+    if($scope.currentStep < 7){
       $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
     }
 
@@ -127,6 +127,12 @@ angular.module('shaastra2016App')
           element: document.querySelector('#top-nav-social'),
           intro: "Shaastra's attempt to give back to society and to create impact in the fields of education and literacy, this time through Pledge-A-Book 2.0 - To know more, click on Social Cause.",
           position: 'down'
+        },
+        {
+          step : 7,
+          element: document.querySelector('#homepage-bottom-nav-tour'),
+          intro: "Like, Share, Follow, Tweet. Thank you.",
+          position: 'top'
         }
       ],
       showStepNumbers: false,
@@ -152,11 +158,18 @@ angular.module('shaastra2016App')
     var backButton = $('#back-button');
     backButton.attr('link', '/');
 
+    var hamburgerMenu = $('#omnbars');
+    hamburgerMenu.css({'top': '20px'});
+
     $scope.scrollDown = function (element) {
       var temp = $location.hash();
       $location.hash(element);
       $anchorScroll();
       $location.hash(temp);
+    };
+
+    $scope.gotoLink = function (link) {
+      $location.url(link);
     };
 
 });
