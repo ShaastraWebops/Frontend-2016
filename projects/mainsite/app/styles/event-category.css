@@ -114,6 +114,7 @@
   perspective:600;
   color: #fff;
   overflow: hidden;
+  cursor: pointer;
   -webkit-transform-style:preserve-3d;
   -moz-transform-style:preserve-3d;
   -o-transform-style:preserve-3d;
