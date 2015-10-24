@@ -11,29 +11,28 @@ angular.module('shaastra2016App')
       'overflow-y': 'auto',
       'background-color': '#f3f3f3'
     });
-$scope.tab_2016=false;
-$scope.tab_2015=true;
-$scope.tab_2014=false;
 
-$scope.show2015 = function (){
-  $scope.tab_2015 = true;
-  $scope.tab_2016= false;
-  $scope.tab_2014=false;
-  
-}
+    $scope.tab_2016 = false;
+    $scope.tab_2015 = true;
+    $scope.tab_2014 = false;
 
-$scope.show2016 = function (){
-  $scope.tab_2016 = true;
-  $scope.tab_2015 = false;
-  $scope.tab_2014=false; 
-  
-}
-$scope.show2014 = function (){
-  $scope.tab_2016 = false;
-  $scope.tab_2015 = false; 
-   $scope.tab_2014 = true; 
-  
-}
+    $scope.show2015 = function () {
+      $scope.tab_2015 = true;
+      $scope.tab_2016 = false;
+      $scope.tab_2014 = false;
+    };
+
+    $scope.show2016 = function () {
+      $scope.tab_2016 = true;
+      $scope.tab_2015 = false;
+      $scope.tab_2014 = false; 
+    };
+
+    $scope.show2014 = function () {
+      $scope.tab_2016 = false;
+      $scope.tab_2015 = false; 
+       $scope.tab_2014 = true; 
+    };
 
     $scope.sponsTitle = "Shaastra 2015 Sponsors";
 
