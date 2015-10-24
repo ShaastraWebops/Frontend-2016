@@ -394,4 +394,58 @@ a:hover, a:active, a:focus {
 	left: 32%;
 }
 
+.home-top-nav-new {
+	font-weight: bolder;
+	font-size: 1.1em;
+	padding-left: 3%;
+	text-align: center;
+	height: auto !important;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	/*cross browser*/
+/*	display: -ms-flexbox;
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	-webkit-align-content: space-around;
+	-ms-flex-line-pack: distribute;
+*/}
+.home-top-nav-new li > a {
+	padding: 0;
+}
+.nav-bar-new {
+	width: 100%;
+}
+.nav-item-new > a{
+	color: #fff;
+}
+.nav-item-new > p {
+	color: #fff;
+}
+.nav-item-new > a:hover, a:visited, a:link, a:active {
+	text-decoration: none;
+}
+.nav-item-new {
+	padding-left: 0;
+	padding-right: 0;
+}
+.nav-item-new:hover {
+	cursor: pointer;
+}
+.nav-item:hover a {
+	color: #e1e1e1;
+}
+
 /* CSS for new home page ends */
