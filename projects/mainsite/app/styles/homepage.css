@@ -70,7 +70,7 @@ a:hover, a:active, a:focus {
 	/*-moz-box-shadow: 0px 5px 5px -1px #888;*/
 	/*box-shadow: 0px 5px 5px -1px #888;*/
 }
-.home-top-nav {
+/*.home-top-nav {
 	font-weight: bolder;
 	font-size: 1.1em;
 	padding-left: 3%;
@@ -80,6 +80,7 @@ a:hover, a:active, a:focus {
 .home-top-nav li > a {
 	padding: 0;
 }
+*/
 #top-hex{
 	z-index: 3;
 }
@@ -171,7 +172,7 @@ a:hover, a:active, a:focus {
     transform: scale(1);
   }
 }
-.nav-bar{
+/*.nav-bar{
 	width: 100%;
 }
 .nav-item > a{
@@ -195,6 +196,7 @@ a:hover, a:active, a:focus {
 .nav-item:hover a {
 	color: #e1e1e1;
 }
+*/
 .hexagons-container{
 	height: 450px;
 	width: 100%;
@@ -444,7 +446,7 @@ a:hover, a:active, a:focus {
 .nav-item-new:hover {
 	cursor: pointer;
 }
-.nav-item:hover a {
+.nav-item-new:hover a {
 	color: #e1e1e1;
 }
 
