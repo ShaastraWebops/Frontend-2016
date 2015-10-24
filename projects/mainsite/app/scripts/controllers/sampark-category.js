@@ -16,6 +16,7 @@ angular.module('shaastra2016App')
 
     $scope.samparksJSON = [{ 
       'id': 1,
+      'completed': true,
     	'name': 'Madurai', 
     	'eventDate': "" 
   	}, 
@@ -33,8 +34,9 @@ angular.module('shaastra2016App')
     },
     { 
       'id': 4,
+      'completed': true,
       'name': 'Cochin', 
-      'eventDate': "" 
+      'eventDate': ""
     },
     { 
       'id': 5,
@@ -48,19 +50,23 @@ angular.module('shaastra2016App')
     },
     { 
       'id': 7,
+      'completed': true,
       'name': 'Hyderabad', 
       'image': 'images/sampark/Hyderabad.jpg',
       'eventDate': "" 
     },
     { 
       'id': 8,
+      'completed': true,
       'name': 'Pune', 
       'image': 'images/sampark/Pune.jpg',
       'eventDate': "" 
     },
     { 
       'id': 7,
+      'completed': true,
       'name': 'Chennai', 
+      'status': 'Completed',
       'eventDate': "" 
     }];
 
