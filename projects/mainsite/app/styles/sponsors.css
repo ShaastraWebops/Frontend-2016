@@ -49,6 +49,24 @@ table #makecenter {
 }
 
 .spons-title {
-	font-family: 'Feather';
-	font-size: 3em;
+	font-family: 'MyraidPro';
+	font-size: 2em;
+}
+
+.spons-container-top {
+	padding-top: 6%;
+	padding-bottom: 5%;
+}
+
+.spons-heading {
+	padding-bottom: 5%;
+}
+
+.spons-row {
+	margin: 2% 0;
+}
+.spons-row img {
+	margin: 2%;
+	max-width: 500px;
+	max-width: 500px;
 }
