@@ -11,29 +11,28 @@ angular.module('shaastra2016App')
       'overflow-y': 'auto',
       'background-color': '#f3f3f3'
     });
-$scope.tab_2016=false;
-$scope.tab_2015=true;
-$scope.tab_2014=false;
 
-$scope.show2015 = function (){
-  $scope.tab_2015 = true;
-  $scope.tab_2016= false;
-  $scope.tab_2014=false;
-  
-}
+    $scope.tab_2016 = false;
+    $scope.tab_2015 = true;
+    $scope.tab_2014 = false;
 
-$scope.show2016 = function (){
-  $scope.tab_2016 = true;
-  $scope.tab_2015 = false;
-  $scope.tab_2014=false; 
-  
-}
-$scope.show2014 = function (){
-  $scope.tab_2016 = false;
-  $scope.tab_2015 = false; 
-   $scope.tab_2014 = true; 
-  
-}
+    $scope.show2015 = function () {
+      $scope.tab_2015 = true;
+      $scope.tab_2016 = false;
+      $scope.tab_2014 = false;
+    };
+
+    $scope.show2016 = function () {
+      $scope.tab_2016 = true;
+      $scope.tab_2015 = false;
+      $scope.tab_2014 = false; 
+    };
+
+    $scope.show2014 = function () {
+      $scope.tab_2016 = false;
+      $scope.tab_2015 = false; 
+       $scope.tab_2014 = true; 
+    };
 
     $scope.sponsTitle = "Shaastra 2015 Sponsors";
 
@@ -44,9 +43,7 @@ $scope.show2014 = function (){
       title: 'Presenting Sponsor',
       path: [{
         image1: 'images/sponsors/Presenting-Sponsor/hindu.jpg',
-        link1: 'http://www.thehindu.com',
-         image2: 'images/logo_thehindu.jpg',
-        link2: 'http://www.thehindu.com',
+        link1: 'http://www.thehindu.com'
       }]
     },
     {
@@ -54,9 +51,7 @@ $scope.show2014 = function (){
       title: 'Associate Sponsor',
       path: [{
         image1: 'images/sponsors/Associate-Sponsor/paypal.jpg',
-        link1: 'http://www.paypal.com',
-        image2: 'images/logo_thehindu.jpg',
-        link2: 'http://www.thehindu.com',
+        link1: 'http://www.paypal.com'
       }]
     },
     {
@@ -64,9 +59,7 @@ $scope.show2014 = function (){
       title: 'Research Sponsor',
       path: [{
         image1: 'images/sponsors/Research-Sponsor/general-electric.jpg',
-        link1: 'http://www.ge.com' ,
-        image2: 'images/logo_thehindu.jpg',
-        link2: 'http://www.thehindu.com',       
+        link1: 'http://www.ge.com'
       }]
     },
     {
@@ -74,28 +67,19 @@ $scope.show2014 = function (){
       title: 'Co Sponsor',
       path: [{
         image1: 'images/sponsors/Co-Sponsor/boeing.jpg',
-        link1: 'http://www.boeing.com',
-         
-         image2:'',
-          link2:'',
+        link1: 'http://www.boeing.com'
       },
       {
         image1: 'images/sponsors/Co-Sponsor/eaton.jpg',
-        link1: 'http://www.eaton.in'  ,
-         image2:'',
-          link2:'',      
+        link1: 'http://www.eaton.in'
       },
       {
         image1: 'images/sponsors/Co-Sponsor/honeywell.png',
-        link1: 'http://www.honeywell.com' ,
-         image2:'',
-          link2:'',             
+        link1: 'http://www.honeywell.com'
       },
       {
         image1: 'images/sponsors/Co-Sponsor/vmware.jpg',
-        link1: 'http://www.vmware.com' ,
-         image2:'',
-          link2:'',             
+        link1: 'http://www.vmware.com'
       }]
     },
     {
@@ -103,9 +87,7 @@ $scope.show2014 = function (){
       title: 'IDP Sponsor',
       path: [{
         image1: 'images/sponsors/IDP-Sponsor/cerner.jpg',
-        link1: 'http://www.cerner.com',
-         image2:'',
-          link2:'',      
+        link1: 'http://www.cerner.com'
       }]
     },
     {
@@ -113,9 +95,7 @@ $scope.show2014 = function (){
       title: 'Hospitality Sponsor',
       path: [{
         image1: 'images/sponsors/Hospitality-Sponsor/sbi.jpg',
-        link1: 'http://www.sbi.co.in',
-         image2:'',
-          link2:'',      
+        link1: 'http://www.sbi.co.in'
       }]
     },
     {
@@ -123,28 +103,19 @@ $scope.show2014 = function (){
       title: 'Event Sponsor',
       path: [{
         image1: 'images/sponsors/Event-Sponsor/amadasoft.png',
-        link1: 'http://www.amadasoft.co',
-         image2:'',
-          link2:'',   
-
+        link1: 'http://www.amadasoft.co'
       },
       {
         image1: 'images/sponsors/Event-Sponsor/microsoft.jpg',
-        link1: 'http://www.microsoft.com' ,
-         image2:'',
-          link2:'',          
+        link1: 'http://www.microsoft.com'
       },
       {
         image1: 'images/sponsors/Event-Sponsor/murugappa.jpg',
-        link1: 'www.murugappa.com' ,
-         image2:'',
-          link2:'',          
+        link1: 'www.murugappa.com'
       },
       {
         image1: 'images/sponsors/Event-Sponsor/nptel.png',
-        link1: 'http://www.nptel.ac.in',
-         image2:'',
-          link2:'',           
+        link1: 'http://www.nptel.ac.in'
       }]
     },
     {
@@ -152,9 +123,7 @@ $scope.show2014 = function (){
       title: 'Big Data Sponsor',
       path: [{
         image1: 'images/sponsors/Big-Data-Sponsor/cdac.png',
-        link1: 'http://www.cdac.in' ,
-         image2:'',
-          link2:'',          
+        link1: 'http://www.cdac.in'
       }]
     },
     {
@@ -162,9 +131,7 @@ $scope.show2014 = function (){
       title: 'Literature Sponsor',
       path: [{
         image1: 'images/sponsors/Literature-Sponsor/faro.png',
-        link1: 'http://www.faro.com' ,
-         image2:'',
-          link2:'',          
+        link1: 'http://www.faro.com'
       }]
     },
     {
@@ -172,9 +139,7 @@ $scope.show2014 = function (){
       title: 'Eye Care Sponsor',
       path: [{
         image1: 'images/sponsors/Eye-Care-Sponsor/essilorindia.jpg',
-        link1: 'http://www.essilorindia.com',
-         image2:'',
-          link2:'',           
+        link1: 'http://www.essilorindia.com'
       }]
     },
     {
@@ -182,9 +147,7 @@ $scope.show2014 = function (){
       title: 'Gifting Sponsor',
       path: [{
         image1: 'images/sponsors/Gifting-Sponsor/giftxoxo.jpg',
-        link1: 'http://www.giftxoxo.com' ,
-         image2:'',
-          link2:'',          
+        link1: 'http://www.giftxoxo.com'
       }]
     },
     {
@@ -192,15 +155,11 @@ $scope.show2014 = function (){
       title: 'Education Sponsor',
       path: [{
         image1: 'images/sponsors/Education-Sponsor/campusfrance.jpg',
-        link1: 'http://www.campusfrance.org',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.campusfrance.org'
       },
       {
         image1: 'images/sponsors/Education-Sponsor/educationau-incanada.jpg',
-        link1: 'http://www.educationau-incanada.ca' ,
-         image2:'',
-          link2:'',          
+        link1: 'http://www.educationau-incanada.ca'
       }]
     },
     {
@@ -208,9 +167,7 @@ $scope.show2014 = function (){
       title: 'Financial Learning Sponsor',
       path: [{
         image1: 'images/sponsors/Financial-Learning-Sponsor/icicidirect.png',
-        link1: 'http://www.icicidirect.com' ,
-         image2:'',
-          link2:'',          
+        link1: 'http://www.icicidirect.com'
       }]
     },
     {
@@ -218,15 +175,11 @@ $scope.show2014 = function (){
       title: 'Prize Sponsor',
       path: [{
         image1: 'images/sponsors/Prize-Sponsor/hachetteindia.jpg',
-        link1: 'http://www.hachetteindia.com',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.hachetteindia.com'
       },
       {
         image1: 'images/sponsors/Prize-Sponsor/zebronics.jpg',
-        link1: 'http://www.zebronics.com',
-         image2:'',
-          link2:'',           
+        link1: 'http://www.zebronics.com'
       }]
     },
     {
@@ -234,9 +187,7 @@ $scope.show2014 = function (){
       title: 'Regenerative Solutions Sponsor',
       path: [{
         image1: 'images/sponsors/Regenerative-Solutions-Sponsor/regrow.png',
-        link1: 'http://www.regrow.in',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.regrow.in'
       }]
     },
     {
@@ -244,9 +195,7 @@ $scope.show2014 = function (){
       title: 'Creativity Partner',
       path: [{
         image1: 'images/sponsors/Creativity-Partner/bbgr.jpg',
-        link1: 'http://www.bbgr.com',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.bbgr.com'
       }]
     },
     {
@@ -254,9 +203,7 @@ $scope.show2014 = function (){
       title: 'Jotting Sponsor',
       path: [{
         image1: 'images/sponsors/Jotting-Sponsor/lincpen.jpg',
-        link1: 'http://www.lincpen.com',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.lincpen.com'
       }]
     },
     {
@@ -264,9 +211,7 @@ $scope.show2014 = function (){
       title: 'Stationery Sponsor',
       path: [{
         image1: 'images/sponsors/Stationery-Sponsor/mycopie.png',
-        link1: 'http://www.mycopie.com',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.mycopie.com'
       }]
     },
     {
@@ -274,9 +219,7 @@ $scope.show2014 = function (){
       title: 'Depository Sponsor',
       path: [{
         image1: 'images/sponsors/Depository-Sponsor/nsdl.jpg',
-        link1: 'http://www.nsdl.co.in',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.nsdl.co.in'
       }]
     },
     {
@@ -284,9 +227,7 @@ $scope.show2014 = function (){
       title: 'Data Mining Sponsor',
       path: [{
         image1: 'images/sponsors/Data-Mining-Sponsor/flutura.jpg',
-        link1: 'http://www.flutura.com',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.flutura.com'
       }]
     },
     {
@@ -294,9 +235,7 @@ $scope.show2014 = function (){
       title: 'Science Sponsor',
       path: [{
         image1: 'images/sponsors/Science-Sponsor/functionspace.png',
-        link1: 'http://www.functionspace.org',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.functionspace.org'
       }]
     },
     {
@@ -304,21 +243,15 @@ $scope.show2014 = function (){
       title: 'Workshop Sponsor',
       path: [{
         image1: 'images/sponsors/Workshop-Sponsor/frugal-labs.png',
-        link1: 'http://www.frugal-labs.com',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.frugal-labs.com'
       },
       {
         image1: 'images/sponsors/Workshop-Sponsor/innovianstechnologies.png',
-        link1: 'www.innovianstechnologies.com',
-         image2:'',
-          link2:'',           
+        link1: 'www.innovianstechnologies.com'
       },
       {
         image1: 'images/sponsors/Workshop-Sponsor/prigma.png',
-        link1: 'http://www.prigma.co.in',
-         image2:'',
-          link2:'',         
+        link1: 'http://www.prigma.co.in'
       }]
     },
     {
@@ -326,9 +259,7 @@ $scope.show2014 = function (){
       title: 'Media Sponsor',
       path: [{
         image1: 'images/sponsors/Media-Sponsor/clubfm.jpg',
-        link1: 'http://www.clubfm.in',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.clubfm.in'
       }]
     },
     {
@@ -336,21 +267,15 @@ $scope.show2014 = function (){
       title: 'Online Media Sponsor',
       path: [{
         image1: 'images/sponsors/Online-Media-Sponsor/allevents.png',
-        link1: 'http://www.allevents.in',
-         image2:'',
-          link2:'',   
+        link1: 'http://www.allevents.in'
       },
       {
         image1: 'images/sponsors/Online-Media-Sponsor/festpav.png',
-        link1: 'www.festpav.com' ,
-         image2:'',
-          link2:'',          
+        link1: 'www.festpav.com'
       },
       {
         image1: 'images/sponsors/Online-Media-Sponsor/thecollegefever.jpg',
-        link1: 'http://www.thecollegefever.com',
-         image2:'',
-          link2:'',           
+        link1: 'http://www.thecollegefever.com'
       }]
     }];
 
