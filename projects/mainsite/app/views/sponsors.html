@@ -1,147 +1,62 @@
-<div ng-controller="sponsorsCtrl">
+<div ng-controller="sponsorsCtrl" class="aboutUs-heading-top">
+  <div id="heading" class="spons_heading"><b>{{sponsTitle}}</b></div>
 
-<br><br><br>
-  <div id="heading" class="spons_heading"><b>SHAASTRA  &nbsp2016: &nbsp SPONSORS</div>
-<p>
-  <button type="button" class="btn btn-default btn-sm" ng-click=""><div class="heading"><div class="tab_spons">SPONSORS 2015</div></div></button></p><p>
-    <button type="button" class="btn btn-default btn-sm" ng-click=""><div class="heading"><div class="tab_spons">SPONSORS 2016</div></div></button></p>
-  <article>
-    <table id="makecenter"><tr>
-     	<td id="sp" class="col-sm-2"><a class="spons-name" target="_blank" href="#" >Bhavik Rasyara</a><br>
-     	 +91-8939317150<br>
-     	<a target="_blank" href="#">bhavik@shaastra.org</a>
-     	</td>
+  <p><button type="button" class="btn btn-default btn-sm" ng-click=""><div class="heading"><div class="tab_spons">SPONSORS 2015</div></div></button></p>
+  <p><button type="button" class="btn btn-default btn-sm" ng-click=""><div class="heading"><div class="tab_spons">SPONSORS 2016</div></div></button></p>
+  
+  <div class="container-fluid makeCenter">
+    <div class="row">
+      <div class="col-lg-offset-3 col-lg-2 col-md-offset-3 col-md-2 col-sm-4 col-xs-4">
+        <h3 class="spons-name">Bhavik Rasyara</h3>
+        <h4>+91-8939317150</h4>
+        <h4><a target="_blank" href="mailto:bhavik@shaastra.org">bhavik@shaastra.org</a></h4>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+        <h3 class="spons-name">Shashanka Rao</h3>
+        <h4>+91-8939317150</h4>
+        <h4><a target="_blank" href="mailto:bhavik@shaastra.org">shashanka@shaastra.org</a></h4>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+        <h3 class="spons-name">Mahesh Kurup</h3>
+        <h4>+91-8939317150</h4>
+        <h4><a target="_blank" href="mailto:bhavik@shaastra.org">kurup@shaastra.org</a></h4>
+      </div>
+    </div>
+  </div>  
 
-     	<td id="sp" class="col-sm-2"><a class="spons-name" target="_blank" href="#">Shashanka Rao</a><br>+91-9498098063
-     	<br>
-     	<a target="_blank" href="#">shashanka@shaastra.org</a>
-     	</td>
+  <div class="container-fluid makeCenter">
+    <div class="row" ng-repeat="category in sponsors track by $index">
 
-     	<td id="sp" class="col-sm-2"><a class="spons-name" target="_blank" href="#" >Mahesh Kurup</a><br>
-     	+91-9444443592<br>
-     	<a target="_blank" href="#"> kurup@shaastra.org</a>
-     	</td>
-     </tr>
-    </table>
+      <div ng-if="category.path.length === 1">
+        <h1 class="spons-title">{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-12">
+          <a target="_blank" ng-href="{{sponsor.link}}"><img class"img-responsive" width="300" height="100" ng-src="{{sponsor.image}}" alt="{{sponsor.image}}"></a>
+        </div>
+      </div>
 
-    <br><br><br>
+      <div ng-if="category.path.length === 2">
+        <h1 class="spons-title">{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <a target="_blank" target="_blank" ng-href="{{sponsor.link}}"><img class"img-responsive" width="300" height="100" ng-src="{{sponsor.image}}" alt="{{sponsor.image}}"></a>
+        </div>
+      </div>
 
-    <table id="makecenter"><tr class="heading"><td><div class="font_spons">PRESENTING SPONSOR</div>
-    <a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a>
-    </td></tr>
-    </table>
+      <div ng-if="category.path.length === 3">
+        <h1 class="spons-title">{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a target="_blank" ng-href="{{sponsor.link}}"><img class"img-responsive" width="300" height="100" ng-src="{{sponsor.image}}" alt="{{sponsor.image}}"></a>
+        </div>
+      </div>
 
-    <br><br><br>
+      <div ng-if="category.path.length === 4">
+        <h1 class="spons-title">{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <a target="_blank" ng-href="{{sponsor.link}}"><img class"img-responsive" width="300" height="100" ng-src="{{sponsor.image}}" alt="{{sponsor.image}}"></a>
+        </div>
+      </div>
 
-    <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">ASSOCIATE SPONSOR </div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6" ><div class="font_spons">RESEARCH SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>	
-    	</tr>
-    </table>
-
-   
-
-<br><br>
-     <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">IDP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6"><div class="font_spons">HOSPITALITY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-<br><br>
-     <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">PRIZE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6"><div class="font_spons">PRIZE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-    <br><br>
-     <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">WEBHOSTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6"><div class="font_spons">WEBHOSTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-     <br><br>
-
-     <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-   
-    	</tr>
-    </table>
-    <br><br>
-
-  <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table><br><br>
- <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">BIG DATA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">LITERATURE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EYE CARE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">GIFTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-    <br><br>
- <table id="makecenter">
-   	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">FINANCIAL LEARNING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-     
-    <br><br><table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-4"><div class="font_spons">DEPOSITORY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">DATA MINING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">SCIENCE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    
-    	</tr>
-    </table>
-     <br><br>
-  <table id="makecenter">
-    	<tr class="heading">
-    		
-    		<td class="col-xs-3"><div class="font_spons">CREATIVITY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">JOTTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">STATIONERY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">REGENERATIVE SOLUTIONS SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-
- <br><br>
-  <table id="makecenter">
-    	<tr class="heading">
-    		
-    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-
-<br><br><table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">MEDIA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">ONLINE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">ONLINE MEDIA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">ONLINE MEDIA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    
-    	</tr>
-    </table>
-
-  </article>  
+    </div>
+  </div>
   
 </div>
 
