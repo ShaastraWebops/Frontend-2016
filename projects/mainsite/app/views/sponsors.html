@@ -1,23 +1,27 @@
 <div ng-controller="sponsorsCtrl">
 
 <br><br><br>
-  <div id="heading" class="spons_heading"><b>SHAASTRA  &nbsp2016: &nbsp SPONSORS</div>
+  <div id="heading" ng-show="tab_2016" ><p class="spons_heading"><b>SHAASTRA  &nbsp2016: &nbsp SPONSORS</p></div>
+   <div id="heading" ng-show="tab_2015"><p class="spons_heading"><b>SHAASTRA  &nbsp2015: &nbsp SPONSORS</p></div>
+  
+ <div class="spon_tab">
 <p>
-  <button type="button" class="btn btn-default btn-sm" ng-click=""><div class="heading"><div class="tab_spons">SPONSORS 2015</div></div></button></p><p>
-    <button type="button" class="btn btn-default btn-sm" ng-click=""><div class="heading"><div class="tab_spons">SPONSORS 2016</div></div></button></p>
+  <button type="button" class="btn btn-default btn-sm" ng-click="show2015()"><div class="heading"><div class="subtab_spons">SPONSORS 2015</div></div></button></p><p class=".spon_tab" >
+    <button type="button" class="btn btn-default btn-sm" ng-click="show2016()"><div class="heading"><div class="subtab_spons">SPONSORS 2016</div></div></button></p></div>
   <article>
+  
     <table id="makecenter"><tr>
-     	<td id="sp" class="col-sm-2"><a class="spons-name" target="_blank" href="#" >Bhavik Rasyara</a><br>
+     	<td id="sp" class="col-sm-3"><a class="spons-name" target="_blank" href="#" >Bhavik Rasyara</a><br>
      	 +91-8939317150<br>
      	<a target="_blank" href="#">bhavik@shaastra.org</a>
      	</td>
 
-     	<td id="sp" class="col-sm-2"><a class="spons-name" target="_blank" href="#">Shashanka Rao</a><br>+91-9498098063
+     	<td id="sp" class="col-sm-3"><a class="spons-name" target="_blank" href="#">Shashanka Rao</a><br>+91-9498098063
      	<br>
      	<a target="_blank" href="#">shashanka@shaastra.org</a>
      	</td>
 
-     	<td id="sp" class="col-sm-2"><a class="spons-name" target="_blank" href="#" >Mahesh Kurup</a><br>
+     	<td id="sp" class="col-sm-3"><a class="spons-name" target="_blank" href="#" >Mahesh Kurup</a><br>
      	+91-9444443592<br>
      	<a target="_blank" href="#"> kurup@shaastra.org</a>
      	</td>
@@ -27,7 +31,8 @@
     <br><br><br>
 
     <table id="makecenter"><tr class="heading"><td><div class="font_spons">PRESENTING SPONSOR</div>
-    <a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a>
+    <a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/logo_thehindu.jpg"></a></div>
     </td></tr>
     </table>
 
@@ -35,8 +40,15 @@
 
     <table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">ASSOCIATE SPONSOR </div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6" ><div class="font_spons">RESEARCH SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>	
+    		<td class="col-xs-6"><div class="font_spons">ASSOCIATE SPONSOR </div> <a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/paypal_2014_logo_detail.png"></a></div>
+    		</td>
+
+    		<td class="col-xs-6" ><div class="font_spons">RESEARCH SPONSOR</div>
+
+<a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.ge.com.jpg"></a></div>
+    		</td>	
     	</tr>
     </table>
 
@@ -45,98 +57,134 @@
 <br><br>
      <table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">IDP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6"><div class="font_spons">HOSPITALITY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-6"><div class="font_spons">IDP SPONSOR</div>
+
+<a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.cerner.com.jpg"></a></div>
+    		</td>
+    		<td class="col-xs-6"><div class="font_spons">HOSPITALITY SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.sbi.co.in.jpg"></a></div></td>
     	</tr>
     </table>
 <br><br>
      <table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">PRIZE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6"><div class="font_spons">PRIZE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-6"><div class="font_spons">PRIZE SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.hachetteindia.com.jpg"></a></div></td>
+    		<td class="col-xs-6"><div class="font_spons">PRIZE SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.zebronics.com.jpg"></a></div></td>
     	</tr>
     </table>
     <br><br>
      <table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-6"><div class="font_spons">WEBHOSTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-6"><div class="font_spons">WEBHOSTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-6"><div class="font_spons">WEBHOSTING SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/znetlivelogo-white1.jpg"></a></div></td>
+    		<td class="col-xs-6"><div class="font_spons">WEBHOSTING SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/znetlivelogo1.jpg"></a></div></td>
     	</tr>
     </table>
      <br><br>
-
-     <table id="makecenter">
+<br><br><table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-   
-    	</tr>
-    </table>
-    <br><br>
-
-  <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table><br><br>
- <table id="makecenter">
-    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">BIG DATA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">LITERATURE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EYE CARE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">GIFTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-4"><div class="font_spons">DEPOSITORY SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.nsdl.co.in.jpg"></a></div></td>
+    		<td class="col-xs-4"><div class="font_spons">DATA MINING SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.flutura.com.jpg"></a></div></td>
+    		<td class="col-xs-4"><div class="font_spons">SCIENCE SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/shaastramiddle-hex.png"></a></div></td>
+    
     	</tr>
     </table>
     <br><br>
  <table id="makecenter">
    	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">FINANCIAL LEARNING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-4"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.campusfrance.org.jpg"></a></div></td>
+    		<td class="col-xs-4"><div class="font_spons">EDUCATION SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.educationau-incanada.ca.jpg"></a></div></td>
+    		
+    		<td class="col-xs-4"><div class="font_spons">FINANCIAL LEARNING SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/content.icicidirect.com^newsitecontent^Home^Home.asp.png"></a></div></td>
     	</tr>
     </table>
-     
-    <br><br><table id="makecenter">
+    <br><br>
+  <table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-4"><div class="font_spons">DEPOSITORY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">DATA MINING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">SCIENCE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    
+    		
+    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.frugal-labs.com.png"></a></div></td>
+    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.innovianstechnologies.com.png"></a></div></td>
+    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.prigma.co.in.png"></a></div></td>
+    	</tr>
+    </table><br><br>
+     <table id="makecenter">
+    	<tr class="heading">
+    	<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.boeing.com.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.eaton.in.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.honeywell.com.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">CO SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.vmware.com^in.jpg"></a></div></td>	
     	</tr>
     </table>
+    <br><br>
+
+  <table id="makecenter">
+    	<tr class="heading">
+    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.amadasoft.co.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.microsoft.com.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.murugappa.com.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">EVENT SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.nptel.ac.in.png"></a></div></td>
+    	</tr>
+    </table><br><br>
+ <table id="makecenter">
+    	<tr class="heading">
+    		<td class="col-xs-3"><div class="font_spons">BIG DATA SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.cdac.in.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">LITERATURE SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.faro.com^en-in^home.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">EYE CARE SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.essilorindia.com.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">GIFTING SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.giftxoxo.com.jpg"></a></div></td>
+    	</tr>
+    </table>
+    
      <br><br>
   <table id="makecenter">
     	<tr class="heading">
     		
-    		<td class="col-xs-3"><div class="font_spons">CREATIVITY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">JOTTING SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">STATIONERY SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">REGENERATIVE SOLUTIONS SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-3"><div class="font_spons">CREATIVITY SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.bbgr.com.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">JOTTING SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.lincpen.com.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">STATIONERY SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.mycopie.com.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">REGENERATIVE SOLUTIONS SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.regrow.in.png"></a></div></td>
     	</tr>
     </table>
 
- <br><br>
-  <table id="makecenter">
-    	<tr class="heading">
-    		
-    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-4"><div class="font_spons">WORKSHOP SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    	</tr>
-    </table>
-
+ 
 <br><br><table id="makecenter">
     	<tr class="heading">
-    		<td class="col-xs-3"><div class="font_spons">MEDIA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">ONLINE SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">ONLINE MEDIA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
-    		<td class="col-xs-3"><div class="font_spons">ONLINE MEDIA SPONSOR</div><a href="#" target="_blank"><img class="spons_img" src="/images/220px-Pringles.svg.png"></a></td>
+    		<td class="col-xs-3"><div class="font_spons">MEDIA SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/clubfm.in.jpg"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">ONLINE SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.allevents.in.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">ONLINE MEDIA SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.festpav.com.png"></a></div></td>
+    		<td class="col-xs-3"><div class="font_spons">ONLINE MEDIA SPONSOR</div><a href="#" target="_blank"><div class="spons_imgwrap"><img class="spons_img" ng-show="tab_2016" src="/images/220px-Pringles.svg.png"></div></a><div class="spons_imgwrap">
+     <a href="#" target="_blank"><img class="spons_img" ng-show="tab_2015" src="/images/www.thecollegefever.com.jpg"></a></div></td>
     
     	</tr>
     </table>

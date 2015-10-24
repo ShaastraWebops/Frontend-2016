@@ -1,19 +1,31 @@
-table#makecenter 
+#makecenter 
 { margin-left:auto; margin-right:auto; }
 #sp{
 text-align:center;
 }
 .font_spons{
 	font-size: 0.7em;
+	text-align: center;
 }
-.tab_spons{
+.subtab_spons{
+	z-index: 200;
 	font-size: 0.5em;
-	margin-left:15%;
-	top: 10%;
+	margin-left:15%;}
+ .spon_tab  {top:30%;
+ 	z-index: 300;
+position: absolute;
+}
+.spons_heading{
+	margin-top: 0%;
 }
 .spons_img{
-	width: 80%;
-	height: 80%;
+	width: 250px;
+	height: 250px;
+overflow: hidden;
 }
-
+.spons_imgwrap{
+	width:100%;
+	height:auto; ;
+    
+}
 
