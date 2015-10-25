@@ -31,13 +31,6 @@
 	position: relative;
 	letter-spacing: 2px;
 }
-.marq{
-	background: blue;
-	display:table-column;
-	height: 10px;
-	width:100px;
-}
-
 
 .evcontent {
 	background-color: rgba(255, 255, 255, 0.6);
