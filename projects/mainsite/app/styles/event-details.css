@@ -32,6 +32,14 @@
 	letter-spacing: 2px;
 }
 
+.dot{
+	display: inline-block;
+	border-radius: 0.5em;
+	background: black;
+	height: 0.5em;
+	width: 0.5em;
+}
+
 .evcontent {
 	background-color: rgba(255, 255, 255, 0.6);
 	z-index: 1;
