@@ -6,20 +6,6 @@ angular.module('shaastra2016App')
     var backButton = $('#back-button');
     backButton.attr('link', '/event-category/' + $routeParams.eventCategoryId);
 
-    //$scope.mark = ["mark1" , "mark2", "mark3"];
-    var a = ["Wind", "Rain", "Fire"];
-    $scope.m = function(){
-      /*var n = '<marquee>'
-      for( var i= 0; i<=2 ;i++)
-      {
-      n +=  a[i] + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";
-      }
-      n += '</marquee>';*/
-      var j = a.join(' &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="dot"></span>&emsp;');
-      //document.getElementById("mark").innerHTML = n;
-      document.getElementById("markin").innerHTML ='<span class="dot"></span>&emsp;' + j;
-
-    } 
 
     var html = angular.element(document.getElementById('body'));
     html.css({
@@ -35,6 +21,7 @@ angular.module('shaastra2016App')
       return converter.makeHtml(b);
     };
 
+    var notifs = [];
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.eventId)
       .then(function (response) {
@@ -44,6 +31,7 @@ angular.module('shaastra2016App')
           return 0;
         });
         var numAssignees = response.data.assignees.length;
+        var numNotifs = response.data.marqueeNotifs.length;
         var contact = {
           'name': 'Contact Details',
           'info': '<p><b>For further details, please contact,</b></p>'
@@ -51,6 +39,13 @@ angular.module('shaastra2016App')
         for(var i=0; i<numAssignees; i++) {
           contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
         }
+        // for marquee notifs start
+        for(i=0; i<numNotifs; i++) {
+          notifs.push(response.data.marqueeNotifs[i].info);
+        }
+        var notifHtml = notifs.join(' &emsp;&emsp;&emsp;&emsp;&emsp;<span class="dot"></span>&emsp;');
+        document.getElementById("markin").innerHTML ='<span class="dot"></span>&emsp;' + notifHtml;
+        // for marquee notifs end
         response.data.eventTabs.push(contact);
         $scope.message = 'Stay tuned for Updates!';
         $scope.eve = response.data;
@@ -59,7 +54,7 @@ angular.module('shaastra2016App')
     $scope.i = 0;
     
     $scope.info = function (ch) {
-    	$scope.i = ch;
+      $scope.i = ch;
     };
   
   });
