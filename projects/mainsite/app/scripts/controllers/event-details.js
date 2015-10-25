@@ -9,16 +9,15 @@ angular.module('shaastra2016App')
     //$scope.mark = ["mark1" , "mark2", "mark3"];
     var a = ["Wind", "Rain", "Fire"];
     $scope.m = function(){
-      var n = '<marquee>'
+      /*var n = '<marquee>'
       for( var i= 0; i<=2 ;i++)
       {
       n +=  a[i] + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";
       }
-      n += '</marquee>';
-      var j = a.join(' &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;');
+      n += '</marquee>';*/
+      var j = a.join(' &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="dot"></span>&emsp;');
       //document.getElementById("mark").innerHTML = n;
-      document.getElementById("markin").innerHTML = j;
-
+      document.getElementById("markin").innerHTML ='<span class="dot"></span>&emsp;' + j;
 
     } 
 
