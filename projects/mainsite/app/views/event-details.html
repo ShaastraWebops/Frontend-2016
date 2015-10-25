@@ -7,6 +7,12 @@
 				<span>{{eve.name}}</span>
 			</div>
 
+			<div class="marquee" id="mark" ng-init="m()">
+
+			<marquee>asdasdasdasda SD</marquee>
+
+			</div>
+
 			<div ng-if="eve.eventTabs.length" class="row">
 				<div class="col-xs-6 hidden-sm hidden-md hidden-lg" ng-repeat="x in eve.eventTabs track by $index">
 					<a event-nav-hyperlink href="" ng-click="info($index)">

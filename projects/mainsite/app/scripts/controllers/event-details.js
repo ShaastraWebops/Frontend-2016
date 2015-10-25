@@ -6,6 +6,22 @@ angular.module('shaastra2016App')
     var backButton = $('#back-button');
     backButton.attr('link', '/event-category/' + $routeParams.eventCategoryId);
 
+    //$scope.mark = ["mark1" , "mark2", "mark3"];
+    var a = ["\tWind\t", "\tRain\t", "\tFire\t"];
+    $scope.m = function(){
+      var n = '<marquee>'
+      for( var i= 0; i<=2 ;i++)
+      {
+      n +=  a[i] + "\t";
+      }
+      n += '</marquee>';
+      var j = a.join(' ');
+      document.getElementById("mark").innerHTML = n;
+      //document.getElementById("mark").innerHTML = j;
+
+
+    } 
+
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto', 
