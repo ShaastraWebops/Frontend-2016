@@ -44,7 +44,9 @@ angular.module('shaastra2016App')
           notifs.push(response.data.marqueeNotifs[i].info);
         }
         var notifHtml = notifs.join(' &emsp;&emsp;&emsp;&emsp;&emsp;<span class="dot"></span>&emsp;');
-        document.getElementById("markin").innerHTML ='<span class="dot"></span>&emsp;' + notifHtml;
+        if(numNotifs > 0) {
+          document.getElementById("markin").innerHTML ='<span class="dot"></span>&emsp;' + notifHtml;
+        }
         // for marquee notifs end
         response.data.eventTabs.push(contact);
         $scope.message = 'Stay tuned for Updates!';
