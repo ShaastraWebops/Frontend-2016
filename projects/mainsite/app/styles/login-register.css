@@ -29,6 +29,14 @@
   width: 300px;   
   min-width: 300px;
   margin-top: 50px;
+  font-family: 'Proxima';
+}
+#name{
+  position: relative; 
+  top: 25%;
+  height: 10%;
+  margin-top: 30px;
+  font-family: 'Proxima';
 }
 #password{
   position: relative;
@@ -36,12 +44,14 @@
   height: 10%;
   width: 300px;
   min-width: 300px;
+  font-family: 'Proxima';
 }
 #college{
   position: relative;
   margin-top: 2%;
   width: 350px;
   min-width: 350px;
+  font-family: 'Proxima';
 }
 #college-suggestions{
   position: absolute;
@@ -58,6 +68,7 @@
   padding-bottom: 0px;
   text-align: left;
   background-color: #ffffff;
+  font-family: 'Proxima';
 }
 #col-sug{
   margin:0;
@@ -86,6 +97,7 @@
   top: 2%;
   width: 350px;
   min-width: 350px;
+  padding-left: 0px;
 }
 #repassword{
   position: relative;
@@ -93,22 +105,37 @@
   width: 350px;
   min-width: 350px;
 }
+#setpassword{
+  position: relative;
+  margin-top: 2%;
+  font-family: 'Proxima';
+}
 #btndownl{
   position: relative;
   bottom: 48%;
   width: 150px;
   min-width: 150px; 
-  margin-top: 30px;   
+  margin-top: 30px;  
+  margin-bottom: 30px; 
+  font-family: 'Proxima';
 }
 #btndownr{
   position: relative;
   bottom: 48%;
   width: 150px;
   min-width: 150px; 
-  margin-top: 30px;  
+  margin-top: 10px;  
+  margin-bottom: 20px;
+  font-family: 'Proxima';
 }
 #tab{
   position: relative;
   width: 80px;
   margin-top: 100px;
+  font-family: 'Proxima';
+}
+#toggleCollegeText{
+  color: blue;
+  cursor: pointer;
+  font-family: 'Proxima';
 }

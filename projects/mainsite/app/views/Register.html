@@ -3,18 +3,79 @@
 		<div>
 		<div  class="btn-group" role="group">
 		  <a href="#/login" id="tab" type="button" class="btn btn-default">Login</a>
-		  <a href="#/register"id="tab" type="button" class="btn btn-primary">Register</a>
+		  <a href="#/register"id="tab" type="button" style="background-color:#173e43" class="btn btn-primary">Register</a>
 		</div>
 
 		</div>
-		<div id="username"class="input-group">
+		<!-- <div id="username"class="input-group">
 		  <span class="input-group-addon" id="sizing-addon2"><img src="images/human.png" alt="at" height="20px" width="20px"></img></span>
-		  <input type="text" ng-model="UserName" class="form-control" placeholder="User name or email or shaastra id" aria-describedby="sizing-addon2">
+		  <input type="text" ng-model="name" class="form-control" placeholder="First Name" aria-describedby="sizing-addon2">
 
 		<div id="password"class="input-group">
-		  <input type="text" ng-model="Password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+		  <input type="text" ng-model="secondName" class="form-control" placeholder="Second Name" aria-describedby="sizing-addon2">
 		</div></div>
-		<br>
+		<br> -->
+		<div id="setpassword" class="row">
+			<div class="col-lg-offset-3 col-lg-3 col-xs-12">
+			<div class="input-group">
+			  <span class="input-group-addon" id="sizing-addon2"><img src="images/human.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="text" class="form-control" ng-model="name" placeholder="Enter your First Name" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+
+			<div class="col-lg-3 col-xs-12">
+			<div class="input-group">
+			  <span class="input-group-addon" id="sizing-addon2"><img src="images/human.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="text" class="form-control" ng-model="secondName" placeholder="Enter your Second Name" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+		</div>
+
+		<div id="setpassword" class="row">
+			<div class="col-lg-offset-3 col-lg-3 col-xs-12">
+			<div class="input-group">
+			  <span class="input-group-addon"><img src="images/lock.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="Password" class="form-control" ng-model="password" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+
+			<div class="col-lg-3 col-xs-12">
+			<div class="input-group">
+			  <span class="input-group-addon"><img src="images/lock.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="Password" class="form-control" ng-model="confirmPassword" placeholder="Confirm Password" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+		</div>
+
+		<div id="setpassword" class="row">
+			<div class="col-lg-offset-3 col-lg-4 col-xs-12">
+			<div class="input-group">
+			  <span class="input-group-addon"><img src="images/at.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="text"  ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+
+			<div class="col-lg-2 col-xs-12">	
+			<div class="input-group">
+			  <span class="input-group-addon"><img src="images/at.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="text"  ng-model="phoneNumber" class="form-control" placeholder="mobile number" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+		</div>
+
+		<div id="setpassword" class="row">
+			<div class="col-lg-offset-3 col-lg-2 col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon"><img src="images/at.png" alt="at" height="20px" width="20px"></img></span>
+			  <input type="text"  ng-model="age" class="form-control" placeholder="Enter your Age" aria-describedby="sizing-addon2">
+			</div>
+			</div>
+
+			<div class="col-lg-2 col-xs-6" style="margin-top:5px;font-family:'Proxima'">
+			<label class="radio-inline"><input type="radio" ng-model="gender" value="male">Male</label>
+			<label class="radio-inline"><input type="radio" ng-model="gender" value="female">Female</label>	
+			</div>
+		</div>
 
 		<div id="college" class="input-group">
 			<input type="text" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" placeholder="Enter your college" auto-completeone>
@@ -29,25 +90,32 @@
 				</li>
 			</ul>
 			</div>
-			<p ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here to add college if it is not shown</p>
+			<p>
+			<span ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here</span> to add college if it is not shown</p>
 			<div ng-hide="existingCollege">
-				<input type="text" ng-model="college.name" id="college" class="form-control" placeholder="Enter your college">
-				<button class="btn btn-success" ng-click="addCollege()">Add</button>
+				<div id="setpassword" class="row">
+					<div class="col-lg-9 col-xs-12">
+					<input type="text" ng-model="college.name" class="form-control" placeholder="Enter your college">
+					</div>
+					<div class="col-lg-2 col-xs-12">
+					<button class="btn btn-success" ng-click="addCollege()" style="background-color:#1e1e1e">Add</button>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div id="email" class="input-group">
+		<!-- <div id="email" class="input-group">
 		  <span class="input-group-addon"><img src="images/at.png" alt="at" height="20px" width="20px"></img></span>
 		  <input type="text"  ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
-		</div>
+		</div> -->
 
-		<div id="repassword" class="input-group">
+		<!-- <div id="repassword" class="input-group">
 		  <span class="input-group-addon"><img src="images/lock.png" alt="at" height="20px" width="20px"></img></span>
 		  <input type="Password" class="form-control" ng-model="repassword" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2">
 		</div>
-		<br>
+		<br> -->
 
-		<a id="btndownr" class="btn btn-md btn-primary">Register</a>
+		<a id="btndownr" style="background-color:#173e43" class="btn btn-md btn-primary">Register</a>
 	</center>
 </div>
 
