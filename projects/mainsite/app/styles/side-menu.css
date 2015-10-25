@@ -563,7 +563,12 @@ input[type=search]:focus {
   height: auto !important;
   text-align: center;
 }
-
 .home-shortcuts a{
   color: #000;
+}
+.home-shortcuts-tab:hover a {
+  color: #505050;
+}
+.home-shortcuts-tab:hover {
+  cursor: pointer;
 }

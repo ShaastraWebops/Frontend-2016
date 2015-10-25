@@ -64,14 +64,30 @@
   <div id="back-button" ng-click="backButton()" ng-controller="MainController" ng-show="showBackButton" link="/">
     <span class="glyphicon glyphicon-arrow-left" id="back-glyphicon"></span>
   </div>
-
-  <div class="row nav-bar home-top-nav">
+<!-- 
+  <div style="display: none;" class="row nav-bar home-top-nav">
     <div id="top-nav-events" ng-click="gotoLink('/event-list')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/event-list">EVENTS</a></div>
     <div id="top-nav-workshops" ng-click="gotoLink('/workshop-category/561567aac8d15f6e1252ebee')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/workshop-category/561567aac8d15f6e1252ebee">WORKSHOPS</a></div>
     <div id="top-nav-shows" ng-click="gotoLink('/shows-and-exhibitions')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/shows-and-exhibitions">SHOWS AND EXHIBITIONS</a></div>
     <div id="top-nav-preShaastra" ng-click="gotoLink('/samparks')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/samparks">PRE-SHAASTRA ACTIVITIES</a></div>
     <div id="top-nav-summit" ng-click="gotoLink('/international-summit')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/international-summit">INTERNATIONAL SUMMIT</a></div>
     <div id="top-nav-social" ng-click="gotoLink('/social')" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item"><a href="/#/social">PLEDGE-A-BOOK</a></div>
+    
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-item"><a href="#">LECTURES</a></div>
+      
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-item">
+      <p ng-hide="isLoggedIn()" class="account"><span class="ac">Account</span><a id="login" ng-href="#/login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
+      <p ng-show="isLoggedIn()" class="account"><span class="ac">Hello {{ getCurrentUser().name }}</span><a id="login" ng-click="logout()" class="none ai">Log out</a><span class="glyphicon glyphicon-user"></span></p>    
+    </div>
+  </div>
+ -->
+  <div class="row nav-bar-new home-top-nav-new">
+    <div id="top-nav-events" ng-click="gotoLink('/event-list')" class="nav-item-new"><a href="/#/event-list">EVENTS</a></div>
+    <div id="top-nav-workshops" ng-click="gotoLink('/workshop-category/561567aac8d15f6e1252ebee')" class="nav-item-new"><a href="/#/workshop-category/561567aac8d15f6e1252ebee">WORKSHOPS</a></div>
+    <div id="top-nav-shows" ng-click="gotoLink('/shows-and-exhibitions')" class="nav-item-new"><a href="/#/shows-and-exhibitions">SHOWS AND EXHIBITIONS</a></div>
+    <div id="top-nav-preShaastra" ng-click="gotoLink('/samparks')" class="nav-item-new"><a href="/#/samparks">PRE-SHAASTRA ACTIVITIES</a></div>
+    <div id="top-nav-summit" ng-click="gotoLink('/international-summit')" class="nav-item-new"><a href="/#/international-summit">INTERNATIONAL SUMMIT</a></div>
+    <div id="top-nav-social" ng-click="gotoLink('/social')" class="nav-item-new"><a href="/#/social">PLEDGE-A-BOOK</a></div>
     <!-- <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-item"><a href="#">LECTURES</a></div> -->
   <!--     
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-item">
@@ -80,6 +96,7 @@
     </div>
  -->  
   </div>
+
 </div>
 
 <div class="menu" style="position:fixed; z-index:350;" ng-controller="MainController">

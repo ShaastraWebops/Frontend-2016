@@ -38,14 +38,18 @@ angular.module('shaastra2016App')
     });
 
     var n = 0;
-    $scope.UserName = "";
-    $scope.Password = "";
+    $scope.name = "";
+    $scope.secondName = "";
+    $scope.password = "";
+    $scope.confirmPassword = "";
     $scope.email = "";
+    $scope.phoneNumber = "";
+    $scope.age = "";
+    $scope.gender = "";
     $scope.college = {};
     $scope.college.name = "";
     $scope.college.id = "";
     $scope.collegeSuggestions = [];
-    $scope.repassword = "";
     $scope.existingCollege = 1;
 
 
@@ -76,7 +80,7 @@ angular.module('shaastra2016App')
       if($scope.existingCollege) {
 
       } else {
-        text.innerHTML = "Click here to add college if it is not shown";
+        text.innerHTML = "Click here";
       }
     };
 

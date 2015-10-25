@@ -25,7 +25,7 @@
 						<div class="card">
 		  	  		<div class="card-front">
 			    			<div class="event-details">
-				  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
+				  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span><span ng-if="event.completed===true" class="glyphicon glyphicon-ok-circle"></span>
 				  				<br><br>
 				  				<span id="event-date" ng-bind="event.eventDate"></span>
 								</div>
@@ -33,7 +33,7 @@
 			  			<div class="card-back" ng-style="{'position' : 'relative'}" ng-click="gotoSamparkDetails($index)">
 			    			<div class="event-details" ng-style="{'background-image': 'url({{event.image}})', 'background-size': 'cover', 'background-repeat' : no-repeat, 'z-index': '1', 'position' : 'absolute'}"></div>
 								<div class="event-details" ng-style="{'background-color': '#5E610B', 'z-index': '2', 'height' : '100%', 'width' : '100%', 'position' : 'absolute', 'opacity' : '0.9'}"> 
-				  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span>
+				  				<span id="event-name" ng-bind="event.name" ng-style="{'z-index' : '2'}"></span><span ng-if="event.completed===true" class="glyphicon glyphicon-ok-circle"></span>
 				  				<br><br>
 				  				<span id="event-date" ng-bind="event.eventDate"></span>
 								</div>

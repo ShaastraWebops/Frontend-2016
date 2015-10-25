@@ -76,6 +76,7 @@ angular.module('shaastra2016App')
 
     // guide start
     $scope.currentStep = ipCookie('myTour') || 1;
+    $scope.firstDone = ipCookie('firstDone') || 0;
     $scope.AfterChangeEvent = function() {
       $scope.currentStep = this._currentStep + 0;
       ipCookie('myTour', $scope.currentStep, { expires: 3000 });
@@ -86,9 +87,10 @@ angular.module('shaastra2016App')
       ipCookie('myTour', $scope.currentStep, { expires: 3000 });
     };
 
-    if($scope.currentStep < 7){
+    if($scope.currentStep < 7 && !$scope.firstDone) {
       $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
     }
+    ipCookie('firstDone', 1, { expires: 8620000 });
 
     $scope.IntroOptions = {
       steps:[
