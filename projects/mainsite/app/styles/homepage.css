@@ -383,6 +383,7 @@ a:hover, a:active, a:focus {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	-webkit-flex-align: center;
 	-ms-flex-align: center;
