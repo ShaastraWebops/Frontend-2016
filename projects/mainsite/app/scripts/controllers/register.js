@@ -147,32 +147,35 @@ angular.module('shaastra2016App')
 
     $scope.registerUser = function(){
       $scope.submitted = true;
-      Auth.createUser({
-        name: $scope.name,
-        secondName: $scope.secondName,
-        password: $scope.password,
-        email: $scope.email,
-        phoneNumber: $scope.phoneNumber,
-        age: $scope.age,
-        city: $scope.city,
-        gender: $scope.gender,
-        college: $scope.college.name,
-        schoolStudent: $scope.schoolStudent
-      })
-      .then( function() {
-        // Account created, redirect to dashboard
-        $location.url('/dashboard');
-      })
-      .catch( function(err) {
-        err = err.data;
-        $scope.errors = {};
+      
+      if(form.$valid) {
+        Auth.createUser({
+          name: $scope.name,
+          secondName: $scope.secondName,
+          password: $scope.password,
+          email: $scope.email,
+          phoneNumber: $scope.phoneNumber,
+          age: $scope.age,
+          city: $scope.city,
+          gender: $scope.gender,
+          college: $scope.college.name,
+          schoolStudent: $scope.schoolStudent
+        })
+        .then( function() {
+          // Account created, redirect to dashboard
+          $location.url('/dashboard');
+        })
+        .catch( function(err) {
+          err = err.data;
+          $scope.errors = {};
 
-      // Update validity of form fields that match the mongoose errors
-      // angular.forEach(err.errors, function(error, field) {
-      //   form[field].$setValidity('mongoose', false);
-      //   $scope.errors[field] = error.message;
-      // });
-      });
+        // Update validity of form fields that match the mongoose errors
+        // angular.forEach(err.errors, function(error, field) {
+        //   form[field].$setValidity('mongoose', false);
+        //   $scope.errors[field] = error.message;
+        // });
+        });
+      }
     };
 
 });
