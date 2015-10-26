@@ -519,8 +519,8 @@ a:hover, a:active, a:focus {
 }
 
 @media screen and (max-width: 950px) {
-	#home-scroll-down {
-
+	#blinkDiv {
+		position: static;
 	}
   .home-top-nav-new {
   	padding-left: 7% 
@@ -563,9 +563,8 @@ a:hover, a:active, a:focus {
   	left: 2%;
   }
 	#home-scroll-down {
-		/*display: none;*/
 		top: 65%;
 		left: 85%;
-	}  
+	}
 }
 /* CSS for new home page ends */
