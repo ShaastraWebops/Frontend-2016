@@ -465,7 +465,7 @@ a:hover, a:active, a:focus {
 	padding-bottom: 1.5%;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
 	align-content: space-around;
@@ -508,5 +508,28 @@ a:hover, a:active, a:focus {
 .nav-item-new:hover a {
 	color: #e1e1e1;
 }
+
+@media screen and (max-width: 950px) {
+  .home-top-nav-new {
+  	padding-left: 7% 
+	}	
+}
+@media screen and (max-width: 650px) {
+  .home-top-nav-new {
+    display: none;
+  }
+  #bar1 {
+  	background-color: black;
+  }
+  #bar2 {
+  	background-color: black;
+  }
+  #bar3 {
+  	background-color: black;
+  }
+  #bar4 {
+  	background-color: black;
+  }
+} 
 
 /* CSS for new home page ends */
