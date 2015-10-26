@@ -512,11 +512,26 @@ a:hover, a:active, a:focus {
 @media screen and (max-width: 950px) {
   .home-top-nav-new {
   	padding-left: 7% 
-	}	
+	}
+	#hex-div {
+		margin-left: 0%;
+	}
+	.hexagons-container {
+		margin-top: 16%;
+	}
+  .hex-images-div {
+  	left: 20%;
+  }
 }
 @media screen and (max-width: 650px) {
   .home-top-nav-new {
     display: none;
+  }
+	.hexagons-container {
+		margin-top: 10%;
+	}
+  .hex-images-div {
+  	left: 10%;
   }
   #bar1 {
   	background-color: black;
@@ -531,5 +546,10 @@ a:hover, a:active, a:focus {
   	background-color: black;
   }
 } 
-
+@media screen and (max-width: 500px) {
+  .hex-images-div {
+  	left: 2%;
+  	/*display: none;*/
+  }
+}
 /* CSS for new home page ends */
