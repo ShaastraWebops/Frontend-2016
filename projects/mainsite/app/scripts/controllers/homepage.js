@@ -64,12 +64,12 @@ function animateHexagons(){
 
 var demo = ["Registrations will open soon"];
 var a = 0;
-function changeText(){
+function changeText() {
   var blinkText = document.getElementById("blinkText");
   blinkText.innerHTML = demo[a];
-  a+=1;
-  if(a == demo.length){
-    a=0;
+  a += 1;
+  if(a === demo.length){
+    a = 0;
   }
 }
 

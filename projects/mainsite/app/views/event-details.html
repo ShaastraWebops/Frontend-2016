@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="marquee" id="mark">	 	 
-				<marquee id="markin"></marquee>
+				<marquee id="markin" v-html="input | marked" ng-bind-html="marquee"></marquee>
 			</div>
 
 			<div ng-if="eve.eventTabs.length" class="row">
