@@ -26,7 +26,7 @@ angular.module('shaastra2016App')
       });
     };
   })
-  .controller('registerCtrl', function ($scope, $http, Auth) {
+  .controller('registerCtrl', function ($scope, $http, Auth, $location) {
 
     var backButton = $('#back-button');
     backButton.attr('link', '/');
@@ -170,6 +170,6 @@ angular.module('shaastra2016App')
       //   $scope.errors[field] = error.message;
       // });
       });
-    }
+    };
 
 });

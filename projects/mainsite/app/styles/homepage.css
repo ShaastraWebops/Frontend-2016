@@ -31,7 +31,6 @@ a:hover, a:active, a:focus {
 	animation: blinkAnim 2s infinite;
 	animation-timing-function: linear;
 }
-
 @-webkit-keyframes blinkAnim {
   0% {
     opacity:0;
@@ -383,6 +382,7 @@ a:hover, a:active, a:focus {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	-webkit-flex-align: center;
 	-ms-flex-align: center;
@@ -409,47 +409,6 @@ a:hover, a:active, a:focus {
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
-.footer-div{
-	background-color: #014864;
-	height: auto !important;
-	width: 100%;
-	text-align: center;
-	font-weight: bolder;
-	position: static;
-}
-.footer-nav{
-	width: 100%;
-	height: 100%;
-	font-family: 'MyraidPro';
-	font-size: 1.1em;
-	height: auto !important;
-	/*padding-left: 20%;*/
-	/*padding-right: 20%;*/
-}
-.footer-nav-item > a{
-	color: #fff;
-	font-size: 1.1em;
-}
-.footer-nav-item:hover {
-	cursor: pointer;
-}
-.footer-nav-item:hover a {
-	color: #e1e1e1;
-}
-.footer-nav-item {
-	padding-top: 2%;
-	padding-bottom: 2%;
-}
-.bottom-links a:hover {
-	color: #fff;
-}
-.bottom-links a {
-	font-size: 1.2em;
-}
-.bottom-links p {
-	margin-top: 10%;
-	margin-bottom: 3%;
-}
 .hex-images-div {
 	position: absolute;
 	left: 32%;
@@ -465,7 +424,7 @@ a:hover, a:active, a:focus {
 	padding-bottom: 1.5%;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
 	align-content: space-around;
@@ -509,4 +468,103 @@ a:hover, a:active, a:focus {
 	color: #e1e1e1;
 }
 
+.footer-no-padding {
+	padding: 0;
+}
+.footer-div{
+	background-color: #014864;
+	height: auto !important;
+	width: 100%;
+	text-align: center;
+	font-weight: bolder;
+	position: static;
+
+	margin: 0;
+
+	padding-top: 2%;
+	padding-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+}
+.footer-nav{
+	width: 100%;
+	height: 100%;
+	font-family: 'MyraidPro';
+	font-size: 1.1em;
+	height: auto !important;
+}
+.footer-nav-item > a{
+	color: #fff;
+	font-size: 1.1em;
+}
+.footer-nav-item:hover {
+	cursor: pointer;
+}
+.footer-nav-item:hover a {
+	color: #e1e1e1;
+}
+.bottom-links a:hover {
+	color: #fff;
+}
+.bottom-links a {
+	font-size: 1.2em;
+}
+.bottom-links p {
+	margin-top: 10%;
+	margin-bottom: 3%;
+}
+
+@media screen and (max-width: 950px) {
+	#blinkDiv {
+		position: static;
+	}
+  .home-top-nav-new {
+  	padding-left: 7% 
+	}
+	#hex-div {
+		margin-left: 0%;
+	}
+	.hexagons-container {
+		margin-top: 16%;
+	}
+  .hex-images-div {
+  	left: 20%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .home-top-nav-new {
+    display: none;
+  }
+	.hexagons-container {
+		margin-top: 10%;
+	}
+  .hex-images-div {
+  	left: 10%;
+  }
+  #bar1 {
+  	background-color: black;
+  }
+  #bar2 {
+  	background-color: black;
+  }
+  #bar3 {
+  	background-color: black;
+  }
+  #bar4 {
+  	background-color: black;
+  }
+} 
+@media screen and (max-width: 500px) {
+  .hex-images-div {
+  	left: 2%;
+  }
+	#home-scroll-down {
+		top: 65%;
+		left: 85%;
+	}
+}
 /* CSS for new home page ends */
