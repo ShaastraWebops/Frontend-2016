@@ -47,7 +47,7 @@ angular.module('shaastra2016App')
 
     	$scope.membersAdded = "You";
     	$scope.newTeamMember = "";
-    	$scope.members_Added = ["You"];
+    	$scope.members_Added = [];
 
     	$scope.addTeamMember = function() {
     		if($scope.newTeamMember !== "") {
@@ -58,7 +58,13 @@ angular.module('shaastra2016App')
     		}
     	};
     	$scope.createNewTeam = function() {
-
+    		$http.post('http://localhost:8001/api/teams', {
+    			teamMembers: $scope.members_Added,
+    			teamName: $scope.teamName
+    		})
+    			.then(function (response){
+    				console.log(response);
+    			})
     	};
 
 		$scope.myItems = [];

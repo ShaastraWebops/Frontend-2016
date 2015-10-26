@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-  .controller('loginCtrl', function ($scope, Auth) {
+  .controller('loginCtrl', function ($scope, Auth, $http, $location) {
 
     var backButton = $('#back-button');
     backButton.attr('link', '/');
@@ -31,6 +31,6 @@ angular.module('shaastra2016App')
             console.log(err);
             // $scope.errors.other = err.message;
         });
-    }
+    };
 
 });
