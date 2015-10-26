@@ -2,8 +2,8 @@
 	<center>
 		<div>
 		<div  class="btn-group" role="group">
-		  <a href="#/login" id="tab" type="button" class="btn btn-default">Login</a>
-		  <a href="#/register"id="tab" type="button" style="background-color:#173e43" class="btn btn-primary">Register</a>
+		  <a href="#/login" id="tab1" type="button" class="btn btn-default">Login</a>
+		  <a href="#/register"id="tab2" type="button" class="btn btn-primary">Register</a>
 		</div>
 		</div>
 		<form class="form" name="form" ng-submit="submit()" >
@@ -111,7 +111,6 @@
 
 			 <!--input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control"-->
 
-
 			<div id="college-suggestions" class="container-fluid" ng-if="suggestCollegeBool">
 			<ul id="col-sug">
 				<li ng-repeat="college in collegeSuggestions" ng-click="selectSuggestedCollege(college)" class="col-sug-ele">
@@ -133,7 +132,7 @@
 					<input type="text" ng-model="college.name" class="form-control" placeholder="Enter your school/college">
 					</div>
 					<div class="col-lg-2 col-xs-12">
-					<button class="btn btn-success" ng-click="addCollege()" style="background-color:#1e1e1e">Add</button>
+					<button class="btn btn-success" ng-click="addCollege()" style="background-color:#1e1e1e;border-width:0px">Add</button>
 					</div>
 				</div>
 			</div>

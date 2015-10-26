@@ -35,6 +35,12 @@
 	font-size: 1.5em;
     font-family: 'Proxima';
 }
+#topHead
+{
+	text-align:center;
+	font-size: 3.5em;
+    font-family: 'Feather';
+}
 #teamName
 {
 	font-size: 1.5em;
@@ -53,11 +59,13 @@
   position: relative;
   margin-top: 7%;
   font-family: 'Proxima';
+  border-width: 0px;
 }
 #registerTeam{
   position: relative;
   margin-top: 4%;
   font-family: 'Proxima';
+  border-width: 0px;
 }
 #teamCheck{
 	font-size: 15px;
