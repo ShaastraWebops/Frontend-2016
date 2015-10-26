@@ -29,17 +29,19 @@ angular.module('shaastra2016App')
           if(a.tabNumber > b.tabNumber) { return 1; }
           return 0;
         });
-        var numAssignees = response.data.assignees.length;
-        var numNotifs = response.data.marqueeNotifs.length;
-        var contact = {
-          'name': 'Contact Details',
-          'info': '<p><b>For further details, please contact,</b></p>'
-        };
-        for(var i=0; i<numAssignees; i++) {
-          contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
-        }
+        // var numAssignees = response.data.assignees.length;
+        // var contact = {
+        //   'name': 'Contact Details',
+        //   'info': '<p><b>For further details, please contact,</b></p>'
+        // };
+        // for(var i=0; i<numAssignees; i++) {
+        //   contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
+        // }
+        // response.data.eventTabs.push(contact);
+
         // for marquee notifs start
-        for(i=0; i<numNotifs; i++) {
+        var numNotifs = response.data.marqueeNotifs.length;
+        for(var i=0; i<numNotifs; i++) {
           notifs.push(response.data.marqueeNotifs[i].info);
         }
         var notifHtml = notifs.join(' &emsp;&emsp;&emsp;&emsp;&emsp;<span class="dot"></span>&emsp;');
@@ -47,7 +49,6 @@ angular.module('shaastra2016App')
           document.getElementById("markin").innerHTML ='<span class="dot"></span>&emsp;' + notifHtml;
         }
         // for marquee notifs end
-        response.data.eventTabs.push(contact);
         $scope.message = 'Stay tuned for Updates!';
         $scope.eve = response.data;
       });
