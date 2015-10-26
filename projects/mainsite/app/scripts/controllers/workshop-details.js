@@ -9,6 +9,7 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto',
+      'overflow-x': 'hidden', 
       'background-color': '#f3f3f3'
     });
     
@@ -19,6 +20,7 @@ angular.module('shaastra2016App')
       return converter.makeHtml(b);
     };
     
+    var notifs = [];
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.workshopId)
       .then(function (response) {
@@ -27,15 +29,28 @@ angular.module('shaastra2016App')
           if(a.tabNumber > b.tabNumber) { return 1; }
           return 0;
         });
-        var numAssignees = response.data.assignees.length;
-        var contact = {
-          'name': 'Contact Details',
-          'info': '<p><b>For further details, please contact,</b></p>'
-        };
-        for(var i=0; i<numAssignees; i++) {
-          contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
+        // var numAssignees = response.data.assignees.length;
+        // var contact = {
+        //   'name': 'Contact Details',
+        //   'info': '<p><b>For further details, please contact,</b></p>'
+        // };
+        // for(var i=0; i<numAssignees; i++) {
+        //   contact.info += '<p>' + response.data.assignees[i].name + ' - ' + response.data.assignees[i].phoneNumber + '</p>';
+        // }
+        // response.data.eventTabs.push(contact);
+
+        // for marquee notifs start
+        $scope.marquee = '';
+        var numNotifs = response.data.marqueeNotifs.length;
+        for(var i=0; i<numNotifs; i++) {
+          notifs.push(response.data.marqueeNotifs[i].info);
         }
-        response.data.eventTabs.push(contact);
+        var notifHtml = notifs.join(' &emsp;&emsp;&emsp;&emsp;&emsp;<span class="dot"></span>&emsp;');
+        notifHtml = '<span class="dot"></span>&emsp;' + notifHtml;
+        if(numNotifs > 0) {
+          $scope.marquee = notifHtml;
+        }
+        // for marquee notifs end
         $scope.message = 'Stay tuned for Updates!';
         $scope.eve = response.data;
       });
