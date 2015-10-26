@@ -26,7 +26,7 @@ angular.module('shaastra2016App')
       });
     };
   })
-  .controller('registerCtrl', function ($scope, $http) {
+  .controller('registerCtrl', function ($scope, $http, Auth) {
 
     var backButton = $('#back-button');
     backButton.attr('link', '/');
@@ -51,6 +51,8 @@ angular.module('shaastra2016App')
     $scope.college.id = "";
     $scope.collegeSuggestions = [];
     $scope.existingCollege = 1;
+    $scope.schoolStudent = false;
+    $scope.submitted = false;
 
 
     $scope.collegesList = [{
@@ -142,28 +144,32 @@ angular.module('shaastra2016App')
       //Make http request to store the details
     };
 
-    // Auth.createUser({
-    //   name: '234',
-    //   email: 'abc@abc.c',
-    //   password: 'abcabc',
-    //   city: 'hys',
-    //   phoneNumber: '9090909090',
-    //   age: '31',
-    //   gender: 1
-    // })
-    // .then( function() {
-    //   // Account created, redirect to dashboard
-    //   $location.url('#/dashboard');
-    // })
-    // .catch( function(err) {
-    //   err = err.data;
-    //   $scope.errors = {};
+    $scope.registerUser = function(){
+      Auth.createUser({
+        name: $scope.name,
+        secondName: $scope.secondName,
+        password: $scope.password,
+        email: $scope.email,
+        phoneNumber: $scope.phoneNumber,
+        age: $scope.age,
+        gender: $scope.gender,
+        college: $scope.college.name,
+        schoolStudent: $scope.schoolStudent
+      })
+      .then( function() {
+        // Account created, redirect to dashboard
+        $location.url('/dashboard');
+      })
+      .catch( function(err) {
+        err = err.data;
+        $scope.errors = {};
 
-    //   // Update validity of form fields that match the mongoose errors
-    //   // angular.forEach(err.errors, function(error, field) {
-    //   //   form[field].$setValidity('mongoose', false);
-    //   //   $scope.errors[field] = error.message;
-    //   // });
-    // });
+      // Update validity of form fields that match the mongoose errors
+      // angular.forEach(err.errors, function(error, field) {
+      //   form[field].$setValidity('mongoose', false);
+      //   $scope.errors[field] = error.message;
+      // });
+      });
+    }
 
 });
