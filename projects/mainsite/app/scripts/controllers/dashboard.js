@@ -16,6 +16,24 @@ angular.module('shaastra2016App')
     	$scope.i = ch;
     };
 
+    	$scope.all_events = ["event1","event2","event3"];
+    	$scope.sortedTeams = ["Team1","Team2","Team3"];
+    	$scope.membersAdded = "You";
+    	$scope.newTeamMember = "";
+    	$scope.members_Added = ["You"];
+
+    	$scope.addTeamMember = function() {
+    		if($scope.newTeamMember !== "") {
+    			$scope.membersAdded = $scope.membersAdded + "," + $scope.newTeamMember ;
+    			$scope.members_Added.push($scope.newTeamMember);
+    			console.log($scope.members_Added);
+    			$scope.newTeamMember = "";
+    		}
+    	};
+    	$scope.createNewTeam = function() {
+
+    	};
+
 		$scope.myItems = [];
 		$scope.events = {
 			eventsList:[{

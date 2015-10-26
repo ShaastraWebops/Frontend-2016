@@ -24,7 +24,7 @@
 }
 .topdiv
 {
-	margin-top:35px;
+	margin-top: 5%;
 	overflow:scroll;
 }
 #list{
@@ -33,10 +33,40 @@
 #hding
 {
 	font-size: 1.5em;
+    font-family: 'Proxima';
 }
 #teamName
 {
 	font-size: 1.5em;
+}
+#teamDetails
+{
+	position: relative;
+	margin-top: 15%;
+}
+#setnewTeam{
+  position: relative;
+  margin-top: 2%;
+  font-family: 'Proxima';
+}
+#createnewTeam{
+  position: relative;
+  margin-top: 7%;
+  font-family: 'Proxima';
+}
+#registerTeam{
+  position: relative;
+  margin-top: 4%;
+  font-family: 'Proxima';
+}
+#teamCheck{
+	font-size: 15px;
+    font-family: 'Proxima';
+}
+#teamReq{
+	margin-top: 0px;
+	font-size: 15px;
+    font-family: 'Proxima';
 }
 #recommend
 {

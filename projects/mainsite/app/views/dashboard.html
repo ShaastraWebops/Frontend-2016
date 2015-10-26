@@ -1,5 +1,37 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
-	<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1" class="list">
+	<h1 style="text-align:center">Your Dashboard</h1>
+	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1" class="list">
+		<div class="container col-md-12 col-sm-12">
+			<div class="jumbotron">
+		  <label for="sel1"><div class="panel-heading" id="hding">Register for the Event</div></label>
+			  <div class="form-group" ng-class="{ 'has-success': form.event.$valid && submitted,
+	                                            'has-error': form.event.$invalid && submitted }">
+	            <!-- <label>Select the Event</label> -->
+	        <select class="form-control" name="event" ng-model="eventSelected">
+	          <option value="" selected disabled>Select the Event</option>
+	          <option ng-repeat="event in all_events" value="{{ event }}">{{ event }}</option>
+	        </select>
+	          <span class="help-block" ng-show="form.event.$error.required && submitted">
+	            An event is required
+	          </span>
+	          </div>  
+		  <h3 id="teamReq">Team Reqiurement:</h3>
+		  	<div class="form-group" ng-class="{ 'has-success': form.team.$valid && submitted,
+	                                            'has-error': form.team.$invalid && submitted }">
+	            <!-- <label>Choose Team Name</label> -->
+	        <select class="form-control" name="team" ng-model="teamSelected">
+	          <option value="" selected disabled>Choose Team Name</option>
+	          <option ng-repeat="team in sortedTeams" value="{{ team }}">{{ team }}</option>
+	        </select>
+	          <span class="help-block" ng-show="form.team.$error.required && submitted">
+	            An team is required
+	          </span>
+	          </div>  
+			<center>
+			<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()" style="background-color:#173e43">Register for Event</button>
+			</center>
+		</div>
+
 		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
    	<table class="table table-striped">
 			<tbody>
@@ -11,7 +43,7 @@
 			</tbody>
     </table>
 
-    <label for="sel1"><div class="panel-heading" id="hding">Team</div></label>
+    <label for="sel1"><div class="panel-heading" id="hding">Teams Created</div></label>
    	<table class="table">
 			<tbody>
 				<tr ng-repeat="event in events.eventsList track by $index">
@@ -21,9 +53,29 @@
 				</tr>
 			</tbody>
     </table>
+    	</div>
 	</div>
   
-	<div class="col-md-5 col-sm-4 col-md-offset-2 col-sm-offset-2" id="teamDetails">
+	<div class="col-md-5 col-sm-4 col-md-offset-1 col-sm-offset-1">
+		<div class="container col-md-12 col-sm-12">
+		 <div class="jumbotron">
+		  <label for="sel1"><div class="panel-heading" id="hding">Create Team</div></label>
+		  <input type="text" ng-model="teamName" class="form-control" placeholder="Enter Team Name">  
+		  <h3 id="teamCheck">{{ membersAdded }} will be added to the team</h3>
+		  <div id="setnewTeam" class="row">
+				<div class="col-md-9 col-sm-12">
+					<input type="text" ng-model="newTeamMember" class="form-control" placeholder="Enter ShaastraID of member to add">
+				</div>
+				<div class="col-md-2 col-sm-12">
+					<button class="btn btn-success" ng-click="addTeamMember()" style="background-color:#1e1e1e">Add</button>
+				</div>
+			</div>
+			<center>
+			<button id="createnewTeam" class="btn btn-success" ng-click="createNewTeam()" style="background-color:#173e43">Create Team</button>
+			</center>
+		</div>
+
+		<div id="teamDetails">
 		<div class="panel panel-default fonts" style="">
 			<span style="margin-left:3%">{{events.eventsList[i].teamname}}</span>
 		</div>
@@ -34,8 +86,10 @@
 			</div>
 		</div>
 			<button id="contact-submit-btn" class="btn btn-primary">Add Member</button>
-</div>
-  <div  class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="place" >
+		</div>
+		</div>
+	</div>
+  <!-- <div  class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="place" >
   	<label for="sel1"><div class="panel-heading" id="hding">Recommended</div></label>
   	<div id="scroll">
 			<ul>
@@ -44,5 +98,5 @@
 				</li>
 			</ul>
 		</div>
-  </div>
+  </div> -->
 </div>
