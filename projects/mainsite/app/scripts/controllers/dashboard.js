@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-	.controller('dashboardCtrl', function ($scope) { 
+	.controller('dashboardCtrl', function ($scope, $http) { 
 
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
@@ -16,8 +16,35 @@ angular.module('shaastra2016App')
     	$scope.i = ch;
     };
 
-    	$scope.all_events = ["event1","event2","event3"];
-    	$scope.sortedTeams = ["Team1","Team2","Team3"];
+    $scope.all_events = [];
+    $scope.teamRequire = "";
+    $scope.singleMember = false;
+    $scope.showDate = false;
+    $scope.eventDate = null;
+    $scope.sortedTeams = [];
+    $scope.sortedTeams = ["Team1","Team2","Team3"];
+    $scope.teamName = "";
+
+    $http.get('http://shaastra.org:8001/api/events')
+      .then(function (response) {
+        $scope.all_events = response.data;
+        console.log($scope.all_events);
+      });
+
+      $scope.showTeamRequire = function() {
+      	$scope.showDate = true;
+      	var currentEvent = JSON.parse($scope.eventSelected);
+      	$scope.eventDate = currentEvent.eventDate;
+      	if(currentEvent.maxTeamMembers !== 1) {
+      		$scope.teamRequire = currentEvent.minTeamMembers + " - " + currentEvent.maxTeamMembers+ " members";
+      		$scope.singleMember = false;
+      	}
+      	else {
+      		$scope.teamRequire = "Individual Registration";
+      		$scope.singleMember = true;
+      	}
+      };
+
     	$scope.membersAdded = "You";
     	$scope.newTeamMember = "";
     	$scope.members_Added = ["You"];
