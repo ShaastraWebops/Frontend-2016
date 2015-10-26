@@ -19,8 +19,9 @@ angular.module('shaastra2016App')
       login: function(user, callback) {
         var cb = callback || angular.noop;
         var deferred = $q.defer();
+        console.log(user);
 
-        $http.post('http://shaastra.org:8001/auth/local', {
+        $http.post('http://localhost:8001/auth/local', {
           email: user.email,
           password: user.password
         }).
