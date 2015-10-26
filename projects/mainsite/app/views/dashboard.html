@@ -16,7 +16,7 @@
 	          </span>
 	          </div>  
 		  <h3 id="teamReq"><b>Team Requirement:</b> {{ teamRequire }}</h3>
-		  <h3 id="teamReq"><b>Event Date:</b> {{ eventDate | date:"mediumDate" }}</h3>
+		  <h3 id="teamReq" ng-show="showDate"><b>Event Date:</b> {{ eventDate | date:"mediumDate" }}</h3>
 		  	<div class="form-group" ng-class="{ 'has-success': form.team.$valid && submitted,
 	                                            'has-error': form.team.$invalid && submitted }">
 	            <!-- <label>Choose Team Name</label> -->
@@ -29,7 +29,7 @@
 	          </span>
 	          </div>  
 			<center>
-			<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()" style="background-color:#173e43">Register for Event</button>
+			<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register for Event</button>
 			</center>
 		</div>
 
@@ -68,11 +68,11 @@
 					<input type="text" ng-model="newTeamMember" class="form-control" placeholder="Enter ShaastraID of member to add">
 				</div>
 				<div class="col-md-2 col-sm-12">
-					<button class="btn btn-success" ng-click="addTeamMember()" style="background-color:#1e1e1e;border-width:0px">Add</button>
+					<button id="addMember" class="btn btn-success" ng-click="addTeamMember()">Add</button>
 				</div>
 			</div>
 			<center>
-			<button id="createnewTeam" class="btn btn-success" ng-click="createNewTeam()" style="background-color:#173e43">Create Team</button>
+			<button id="createnewTeam" class="btn btn-success" ng-click="createNewTeam()">Create Team</button>
 			</center>
 		</div>
 
