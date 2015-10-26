@@ -62,9 +62,21 @@ function animateHexagons(){
   
 }
 
+var demo = ["Registrations will open soon"];
+var a = 0;
+function changeText(){
+  var blinkText = document.getElementById("blinkText");
+  blinkText.innerHTML = demo[a];
+  a+=1;
+  if(a == demo.length){
+    a=0;
+  }
+}
+
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
     animateHexagons();
+    setInterval(changeText, 2000);
 
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});

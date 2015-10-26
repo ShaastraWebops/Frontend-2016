@@ -18,6 +18,26 @@ a:hover, a:active, a:focus {
 	outline: 0;
 }
 
+#blinkDiv{
+	position: absolute;
+	top: 80%;
+	left: 2%;
+	-webkit-animation: blinkAnim 2s infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes blinkAnim{
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
 #home-scroll-down {
   margin: 0 auto;
   height: 50px;
