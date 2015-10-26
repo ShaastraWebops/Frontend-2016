@@ -1,5 +1,5 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
-	<h1 style="text-align:center">Your Dashboard</h1>
+	<h1 id="topHead">Your Dashboard</h1>
 	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1" class="list">
 		<div class="container col-md-12 col-sm-12">
 			<div class="jumbotron">
@@ -7,24 +7,25 @@
 			  <div class="form-group" ng-class="{ 'has-success': form.event.$valid && submitted,
 	                                            'has-error': form.event.$invalid && submitted }">
 	            <!-- <label>Select the Event</label> -->
-	        <select class="form-control" name="event" ng-model="eventSelected">
+	        <select class="form-control" name="event" ng-model="eventSelected" ng-change="showTeamRequire()">
 	          <option value="" selected disabled>Select the Event</option>
-	          <option ng-repeat="event in all_events" value="{{ event }}">{{ event }}</option>
+	          <option ng-repeat="event in all_events track by $index" value="{{ event }}">{{ event.name }}</option>
 	        </select>
 	          <span class="help-block" ng-show="form.event.$error.required && submitted">
 	            An event is required
 	          </span>
 	          </div>  
-		  <h3 id="teamReq">Team Reqiurement:</h3>
+		  <h3 id="teamReq"><b>Team Requirement:</b> {{ teamRequire }}</h3>
+		  <h3 id="teamReq"><b>Event Date:</b> {{ eventDate | date:"mediumDate" }}</h3>
 		  	<div class="form-group" ng-class="{ 'has-success': form.team.$valid && submitted,
 	                                            'has-error': form.team.$invalid && submitted }">
 	            <!-- <label>Choose Team Name</label> -->
-	        <select class="form-control" name="team" ng-model="teamSelected">
+	        <select class="form-control" name="team" ng-model="teamSelected" ng-hide="singleMember">
 	          <option value="" selected disabled>Choose Team Name</option>
 	          <option ng-repeat="team in sortedTeams" value="{{ team }}">{{ team }}</option>
 	        </select>
 	          <span class="help-block" ng-show="form.team.$error.required && submitted">
-	            An team is required
+	            A team is required
 	          </span>
 	          </div>  
 			<center>
@@ -67,7 +68,7 @@
 					<input type="text" ng-model="newTeamMember" class="form-control" placeholder="Enter ShaastraID of member to add">
 				</div>
 				<div class="col-md-2 col-sm-12">
-					<button class="btn btn-success" ng-click="addTeamMember()" style="background-color:#1e1e1e">Add</button>
+					<button class="btn btn-success" ng-click="addTeamMember()" style="background-color:#1e1e1e;border-width:0px">Add</button>
 				</div>
 			</div>
 			<center>
