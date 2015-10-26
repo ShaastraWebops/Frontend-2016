@@ -147,8 +147,9 @@ angular.module('shaastra2016App')
 
     $scope.registerUser = function(){
       $scope.submitted = true;
-      
+
       if(form.$valid) {
+        console.log('asd');
         Auth.createUser({
           name: $scope.name,
           secondName: $scope.secondName,

@@ -6,14 +6,14 @@
 		  <a href="#/register"id="tab2" type="button" class="btn btn-primary">Register</a>
 		</div>
 		</div>
-		<form class="form" name="form" ng-submit="submit()" >
+		<form class="form" name="form" ng-submit="submit()" novalidate>
 		<div id="setpassword" class="row">
 			<div class="col-lg-offset-3 col-lg-3 col-xs-12">
 			   <div id="validation" class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span></span>
-			  <input type="text" name="name" class="form-control" ng-model="name" placeholder="Enter your First Name" aria-describedby="sizing-addon2">
+			  <input type="text" name="name" class="form-control" ng-model="name" placeholder="Enter your First Name" aria-describedby="sizing-addon2" required>
 				</div>
 			  <span class="help-block" ng-show="form.name.$error.required && submitted">
             		First name is required
@@ -26,7 +26,7 @@
                                             'has-error': form.secondName.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span></span>
-			  <input type="text" class="form-control" ng-model="secondName" placeholder="Enter your Second Name" aria-describedby="sizing-addon2">
+			  <input type="text" name="secondName" class="form-control" ng-model="secondName" placeholder="Enter your Second Name" aria-describedby="sizing-addon2" required>
 				</div>
 			  <span class="help-block" ng-show="form.secondName.$error.required && submitted">
             		Second name is required
@@ -41,7 +41,7 @@
                                             'has-error': form.password.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-lock" height="20px" width="20px" alt="lock_image"></span></span>
-			  <input type="Password" class="form-control" ng-model="password" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2">
+			  <input type="Password" name="password" class="form-control" ng-model="password" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2" required>
 				</div>
 			  <span class="help-block" ng-show="form.password.$error.required && submitted">
             		Password is required
@@ -54,7 +54,7 @@
                                           'has-error': form.confirmPassword.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-lock" height="20px" width="20px" alt="lock_image"></span></span>
-			  <input type="Password" class="form-control" ng-model="confirmPassword" placeholder="Confirm Password" aria-describedby="sizing-addon2">
+			  <input type="Password" name="confirmPassword" class="form-control" ng-model="confirmPassword" placeholder="Confirm Password" aria-describedby="sizing-addon2" required>
 				</div>
 			  <span class="help-block" ng-show="form.confirmPassword.$error.required && submitted">
             		Re-Type your password
@@ -69,7 +69,7 @@
                                           'has-error': form.email.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope" height="20px" width="20px" alt="mail_image"></span></span>
-			  <input type="text"  ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
+			  <input type="text" name="email" ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2" required>
 				</div>
 			  <span class="help-block" ng-show="form.email.$error.required && submitted">
             		E-mail is required
@@ -82,7 +82,7 @@
                                           'has-error': form.phoneNumber.$invalid && submitted }">
 			<div class="input-group">
 			 <span class="input-group-addon"><span class="glyphicon glyphicon-phone" height="20px" width="20px" alt="phone_image"></span></span>
-			  <input type="text"  ng-model="phoneNumber" class="form-control" placeholder="mobile number" aria-describedby="sizing-addon2">
+			  <input type="text" name="phoneNumber" ng-model="phoneNumber" class="form-control" placeholder="mobile number" aria-describedby="sizing-addon2" required>
 				</div>
 			  <span class="help-block" ng-show="form.phoneNumber.$error.required && submitted">
             		Phone Number is required
@@ -97,7 +97,7 @@
                                           'has-error': form.city.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-home" height="20px" width="20px" alt="city_image"></span></span>
-			  <input type="text"  ng-model="city" class="form-control" placeholder="Enter your City" aria-describedby="sizing-addon2">
+			  <input type="text" name="city" ng-model="city" class="form-control" placeholder="Enter your City" aria-describedby="sizing-addon2" required>
 			</div>
 			<span class="help-block" ng-show="form.city.$error.required && submitted">
             		City is required
@@ -110,7 +110,7 @@
                                           'has-error': form.age.$invalid && submitted }">
 			<div class="input-group">
 			  <span class="input-group-addon"><span class="glyphicon glyphicon-tasks" height="20px" width="20px" alt="age_image"></span></span>
-			  <input type="text"  ng-model="age" class="form-control" placeholder="Enter your Age" aria-describedby="sizing-addon2">
+			  <input type="text" name="age" ng-model="age" class="form-control" placeholder="Enter your Age" aria-describedby="sizing-addon2" required>
 			</div>
 			<span class="help-block" ng-show="form.age.$error.required && submitted">
             		Age is required
@@ -128,7 +128,7 @@
 		   <div class="col-lg-offset-3 col-lg-3 col-xs-12">
 			<div id="validation" class="form-group" ng-class="{ 'has-success': form.college.$valid && submitted,
                                           'has-error': form.college.$invalid && submitted }">
-			<input type="text" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" placeholder="Enter your school/college" auto-completeone>
+			<input type="text" name="college" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" required placeholder="Enter your school/college" auto-completeone>
 
 			 <!--input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control"-->
 
