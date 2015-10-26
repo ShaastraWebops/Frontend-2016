@@ -45,8 +45,9 @@ angular.module('shaastra2016App')
     $scope.email = "";
     $scope.phoneNumber = "";
     $scope.age = "";
-    $scope.gender = "";
+    $scope.gender = true;
     $scope.college = {};
+    $scope.city = "";
     $scope.college.name = "";
     $scope.college.id = "";
     $scope.collegeSuggestions = [];
@@ -145,6 +146,7 @@ angular.module('shaastra2016App')
     };
 
     $scope.registerUser = function(){
+      $scope.submitted = true;
       Auth.createUser({
         name: $scope.name,
         secondName: $scope.secondName,
@@ -152,6 +154,7 @@ angular.module('shaastra2016App')
         email: $scope.email,
         phoneNumber: $scope.phoneNumber,
         age: $scope.age,
+        city: $scope.city,
         gender: $scope.gender,
         college: $scope.college.name,
         schoolStudent: $scope.schoolStudent

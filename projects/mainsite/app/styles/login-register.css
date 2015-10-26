@@ -48,7 +48,7 @@
 }
 #college{
   position: relative;
-  margin-top: 2%;
+  margin-top: 20px;
   width: 350px;
   min-width: 350px;
   font-family: 'Proxima';
@@ -110,6 +110,17 @@
   margin-top: 2%;
   font-family: 'Proxima';
 }
+#validation{
+  margin-bottom: 0px;
+}
+#addMember{
+  background-color:#1e1e1e;
+  border-width: 0px;
+}
+#selectGender{
+  margin-top:5px;
+  font-family: 'Proxima';
+}
 #btndownl{
   position: relative;
   bottom: 48%;
@@ -118,6 +129,7 @@
   margin-top: 30px;  
   margin-bottom: 30px; 
   font-family: 'Proxima';
+  background-color:#173e43;
 }
 #btndownr{
   position: relative;
@@ -127,6 +139,7 @@
   margin-top: 10px;  
   margin-bottom: 20px;
   font-family: 'Proxima';
+  background-color:#173e43;
 }
 #tab1{
   position: relative;
@@ -140,6 +153,9 @@
   margin-top: 100px;
   font-family: 'Proxima';
   background-color:#173e43;
+}
+#textCollege{
+  font-family: 'Proxima';
 }
 #toggleCollegeText{
   color: blue;
