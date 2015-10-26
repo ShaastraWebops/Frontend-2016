@@ -31,7 +31,6 @@ a:hover, a:active, a:focus {
 	animation: blinkAnim 2s infinite;
 	animation-timing-function: linear;
 }
-
 @-webkit-keyframes blinkAnim {
   0% {
     opacity:0;
