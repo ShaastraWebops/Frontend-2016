@@ -62,9 +62,9 @@ angular.module('shaastra2016App')
     			teamMembers: $scope.members_Added,
     			teamName: $scope.teamName
     		})
-    			.then(function (response){
-    				console.log(response);
-    			})
+  			.then(function (response){
+  				console.log(response);
+  			});
     	};
 
 		$scope.myItems = [];

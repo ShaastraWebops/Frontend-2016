@@ -35,7 +35,7 @@
 							</div>
 						</div>
 						<br>
-						<p class="cont" ng-bind-html="xmark(tabs[i].info)">
+						<p class="cont" v-html="input | marked" ng-bind-html="tabs[i].info">
 							{{tabs[i].info}}
 						</p>
 					</div>

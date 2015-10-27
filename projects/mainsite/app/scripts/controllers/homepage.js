@@ -67,7 +67,6 @@ angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
     animateHexagons();
 
-    setInterval(changeText, 2000);
     var demo = ["Registrations will open soon"];
     var a = 0;
     function changeText() {
@@ -80,6 +79,7 @@ angular.module('shaastra2016App')
         }
       }
     }
+    setInterval(changeText, 2000);
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // window.addEventListener("resize", resizeFunction);

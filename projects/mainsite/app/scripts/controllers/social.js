@@ -14,13 +14,14 @@ angular.module('shaastra2016App')
 		backButton.attr('link', '/');
 
     $scope.message = "hello";
+    
     var converter = new showdown.Converter(); 
-      $scope.xmark = function (b) {
+    $scope.xmark = function (b) {
       return converter.makeHtml(b);
     };
     $scope.tabs = [{ 
     	'name': 'Pledge-A-Book', 
-    	'info': "Pledge-A-Book campaign is Shaastra's attempt to give back to society and to create impact in the fields of education and literacy. This campaign aims to collect books which are donated by patrons of Shaastra, and use these books to set up libraries for underprivileged students.  The campaign was flagged off by renowned science writer Mr. Anil Ananthaswamy. Since then, there have been several collection drives within the campus, including one at the Terry Fox Run Chennai, all of which have received a great response.Shaastra has already confirmed associations with well-known NGO the Indian Development Foundation, and Avanti Fellows, and other associations are in the pipeline. The books collected through the campaign are being used to set up libraries for underprivileged students at IDF's Bal Gurukuls, as well as at Avanti Fellows' Learning Centres.  The Pledge-A-Book campaign is our humble attempt at bringing change and helping design the dreams of the young. We would appreciate your support in this initiative. Join us, and help be the change!"
+    	'info': "Pledge-A-Book campaign is Shaastra's attempt to give back to society and to create impact in the fields of education and literacy. This campaign aims to collect books which are donated by patrons of Shaastra, and use these books to set up libraries for underprivileged students.  The campaign was flagged off by renowned science writer Mr. Anil Ananthaswamy. Since then, there have been several collection drives within the campus, including one at the Terry Fox Run Chennai, all of which have received a great response.Shaastra has already confirmed associations with well-known NGO the Indian Development Foundation, and Avanti Fellows, and other associations are in the pipeline. The books collected through the campaign are being used to set up libraries for underprivileged students at IDF's Bal Gurukuls, as well as at Avanti Fellows' Learning Centres.  The Pledge-A-Book campaign is our humble attempt at bringing change and helping design the dreams of the young. We would appreciate your support in this initiative. Join us, and help be the change! <br>Visit us at <a target='_blank' href='http://shaastra.org/pledgeabook/'>http://shaastra.org/pledgeabook/</a>"
   	}, 
   	{ 
   		'name': 'The Past', 
