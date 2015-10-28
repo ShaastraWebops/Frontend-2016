@@ -128,17 +128,23 @@
 		   <div class="col-lg-offset-3 col-lg-3 col-xs-12">
 			<div id="validation" class="form-group" ng-class="{ 'has-success': form.college.$valid && submitted,
                                           'has-error': form.college.$invalid && submitted }">
-			<input type="text" name="college" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" required placeholder="Enter your school/college" auto-completeone>
+			<!-- <input type="text" name="college" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" required placeholder="Enter your school/college" auto-completeone> -->
+
+			<input type="text" name="college" ng-model="college.name" class="form-control" required placeholder="Enter your school/college" list="colleges" autocomplete="off">
+
+		  <datalist id="colleges">
+		    <option ng-repeat="x in college_list" value="{{ x }}">
+		  </datalist>
 
 			 <!--input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control"-->
 
-			<div id="college-suggestions" class="container-fluid" ng-if="suggestCollegeBool">
+			<!-- <div id="college-suggestions" class="container-fluid" ng-if="suggestCollegeBool">
 			<ul id="col-sug">
 				<li ng-repeat="college in collegeSuggestions" ng-click="selectSuggestedCollege(college)" class="col-sug-ele">
 					<p ng-bind="college.name" class="col-sug-nam"></p>
 				</li>
 			</ul>
-			</div>
+			</div> -->
 			<span class="help-block" ng-show="form.college.$error.required && submitted">
             		College/School is required
           		</span>

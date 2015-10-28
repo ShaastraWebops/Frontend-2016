@@ -77,6 +77,8 @@ angular.module('shaastra2016App')
       'name' : 'Kharaghpur'
     }];
 
+    $scope.college_list = ["IITM", "Delhi IIT", "Bombay IIT", "Hyd IIT"];
+
     $scope.toggleNewCollegeDiv = function () {
       $scope.existingCollege = !$scope.existingCollege;
       var text = document.getElementById("toggleCollegeText");
