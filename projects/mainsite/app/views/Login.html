@@ -4,19 +4,22 @@
 		  <a href="#/login" id="tab2" type="button" class="btn btn-primary">Login</a>
 		  <a href="#/register" id="tab1" type="button" class="btn btn-default">Register</a>
 		</div>
+	</div>
 
-		</div>
-		<div id= "username"class="input-group">
-		  <span class="input-group-addon"><span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span></span>
-		  <input type="text" ng-model="UserName" class="form-control" placeholder="User name or email or shaastra id" aria-describedby="sizing-addon2">
+	<div id= "username"class="input-group">
+	  <span class="input-group-addon">
+	  	<span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span>
+	  </span>
+	  <input type="text" ng-model="UserName" class="form-control" placeholder="User name or email or shaastra id" aria-describedby="sizing-addon2">
 
 		<div id= "password"class="input-group">
-		  <input type="text" ng-model="Password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
-		</div></div>
-		<br>
-
-		<a id="btndownl" ng-click="loginUser()" class="btn btn-md btn-primary">Login</a>
+	  	<input type="text" ng-model="Password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+		</div>
 	</div>
+		
+	<br>
+
+	<a id="btndownl" ng-click="loginUser()" class="btn btn-md btn-primary">Login</a>
 </center>
 
 <div ng-include="'views/sticky-footer.html'"></div>
