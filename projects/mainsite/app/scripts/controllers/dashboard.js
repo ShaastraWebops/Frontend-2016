@@ -16,10 +16,10 @@ angular.module('shaastra2016App')
     	$scope.i = ch;
     };
 
-      Auth.isLoggedInAsync(function(loggedIn) {
-      	$scope.user = Auth.getCurrentUser();
-      	console.log($scope.user);
-      });
+    Auth.isLoggedInAsync(function (loggedIn) {
+    	$scope.user = Auth.getCurrentUser();
+    	console.log($scope.user);
+    });
 
 
     $scope.teamBlockMessage = '';
@@ -75,7 +75,7 @@ angular.module('shaastra2016App')
     		}
     	};
     	$scope.createNewTeam = function() {
-    		$scope.teamCreateMessage = " -- Working..."
+    		$scope.teamCreateMessage = " -- Working...";
     		$http.post('http://localhost:8001/api/teams', {
     			teamMembers: $scope.members_Added,
     			teamName: $scope.teamName
@@ -83,12 +83,12 @@ angular.module('shaastra2016App')
   			.then(function (response){
   				console.log(response);
 	  			if(response.status === 201) {
-   					 $scope.teamName = "";
-    				 $scope.members_Added = [];
-    				 $scope.newTeamMember = "";
-   					 $scope.membersAdded = "You";
-   					 $scope.teamCreateMessage = '';
-   					 $scope.all_teams.push(response.data);
+   					$scope.teamName = "";
+    				$scope.members_Added = [];
+    				$scope.newTeamMember = "";
+   					$scope.membersAdded = "You";
+   					$scope.teamCreateMessage = '';
+   					$scope.all_teams.push(response.data);
 	  			} else {
 	  				$scope.teamCreateMessage = 'Some error occurred!';
 	  			}
