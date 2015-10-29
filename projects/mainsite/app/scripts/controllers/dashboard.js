@@ -39,6 +39,11 @@ angular.module('shaastra2016App')
     // $http.get('http://shaastra.org:8001/api/events')
     $http.get('http://localhost:8001/api/events')
       .then(function (response) {
+      	response.data.sort(function (a, b) {
+					if(a.name < b.name) { return -1; }
+					if(a.name > b.name) { return 1; }
+					return 0;
+      	});
         $scope.all_events = response.data;
         console.log($scope.all_events);
       });
