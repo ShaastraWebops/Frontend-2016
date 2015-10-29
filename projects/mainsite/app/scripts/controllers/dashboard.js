@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-	.controller('dashboardCtrl', function ($scope, $http) { 
+	.controller('dashboardCtrl', function ($scope, $http, Auth) { 
 
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
@@ -16,7 +16,18 @@ angular.module('shaastra2016App')
     	$scope.i = ch;
     };
 
+      Auth.isLoggedInAsync(function(loggedIn) {
+      	$scope.user = Auth.getCurrentUser();
+      	console.log($scope.user);
+      });
+
+
+    $scope.teamBlockMessage = '';
+    $scope.teamCreateMessage = '';
+
     $scope.all_events = [];
+    $scope.all_teams = [];
+    $scope.teamsCreated = [];
     $scope.teamRequire = "";
     $scope.singleMember = false;
     $scope.showDate = false;
@@ -25,7 +36,8 @@ angular.module('shaastra2016App')
     $scope.sortedTeams = ["Team1","Team2","Team3"];
     $scope.teamName = "";
 
-    $http.get('http://shaastra.org:8001/api/events')
+    // $http.get('http://shaastra.org:8001/api/events')
+    $http.get('http://localhost:8001/api/events')
       .then(function (response) {
         $scope.all_events = response.data;
         console.log($scope.all_events);
@@ -58,12 +70,23 @@ angular.module('shaastra2016App')
     		}
     	};
     	$scope.createNewTeam = function() {
+    		$scope.teamCreateMessage = " -- Working..."
     		$http.post('http://localhost:8001/api/teams', {
     			teamMembers: $scope.members_Added,
     			teamName: $scope.teamName
     		})
   			.then(function (response){
   				console.log(response);
+	  			if(response.status === 201) {
+   					 $scope.teamName = "";
+    				 $scope.members_Added = [];
+    				 $scope.newTeamMember = "";
+   					 $scope.membersAdded = "You";
+   					 $scope.teamCreateMessage = '';
+   					 $scope.all_teams.push(response.data);
+	  			} else {
+	  				$scope.teamCreateMessage = 'Some error occurred!';
+	  			}
   			});
     	};
 
@@ -99,11 +122,29 @@ angular.module('shaastra2016App')
 			]
 		};
 
-	$scope.unregister = function (idx) {
-		console.log("hello");
-		if(idx !== -1) {
-			$scope.events.eventsList.splice(idx, 1);
-		}
+		$http.get('http://localhost:8001/api/teams')
+      .then(function (response) {
+        $scope.all_teams = response.data;
+        console.log($scope.all_teams);
+      });
+
+
+
+	$scope.leaveTeam = function (index) {
+		$scope.teamBlockMessage = ' -- Working...';
+		var teamId = $scope.all_teams[index]._id;
+		$http.post('http://localhost:8001/api/teams/leave/'+ teamId)
+		.then(function (response) {
+			console.log(response);
+			if(response.status === 200) {
+				$scope.teamBlockMessage = '';
+				$scope.all_teams.splice(index,1);
+			} else {
+				$scope.teamBlockMessage = 'Some error occurred!';
+			}
+		});
+
+
 	};
 
 	$scope.lists=[{

@@ -38,17 +38,17 @@ angular.module('shaastra2016App')
     });
 
     var n = 0;
-    $scope.name = "";
-    $scope.secondName = "";
-    $scope.password = "";
-    $scope.confirmPassword = "";
-    $scope.email = "";
-    $scope.phoneNumber = "";
-    $scope.age = "";
+    $scope.name = "asfs";
+    $scope.secondName = "asfag";
+    $scope.password = "1234567";
+    $scope.confirmPassword = "1234567";
+    $scope.email = "abc@def.com";
+    $scope.phoneNumber = "1234567890";
+    $scope.age = "15";
     $scope.gender = true;
     $scope.college = {};
-    $scope.city = "";
-    $scope.college.name = "";
+    $scope.city = "Chennai";
+    $scope.college.name = "Chennai";
     $scope.college.id = "";
     $scope.collegeSuggestions = [];
     $scope.existingCollege = 1;
@@ -150,8 +150,8 @@ angular.module('shaastra2016App')
     $scope.registerUser = function(){
       $scope.submitted = true;
 
-      if(form.$valid) {
-        console.log('asd');
+      // if(form.$valid) {
+        // console.log('asd');
         Auth.createUser({
           name: $scope.name,
           secondName: $scope.secondName,
@@ -178,7 +178,7 @@ angular.module('shaastra2016App')
         //   $scope.errors[field] = error.message;
         // });
         });
-      }
+      // }
     };
 
 });

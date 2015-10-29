@@ -44,7 +44,7 @@
 			</tbody>
     </table>
 
-    <label for="sel1"><div class="panel-heading" id="hding">Teams Created</div></label>
+    <!-- <label for="sel1"><div class="panel-heading" id="hding">Teams Created</div></label>
    	<table class="table">
 			<tbody>
 				<tr ng-repeat="event in events.eventsList track by $index">
@@ -53,14 +53,26 @@
 					<td><a href="" ng-click="unregister($index)" class="fontNormal">leave</a></td>
 				</tr>
 			</tbody>
+    </table> -->
+
+    <label for="sel1"><div class="panel-heading" id="hding">Teams Created {{teamBlockMessage}}</div></label>
+   	<table class="table">
+			<tbody>
+				<tr ng-repeat="team in all_teams track by $index" ng-if="team.selfTeam===false">
+					<!-- <th scope="row">{{$index}}</th> -->
+					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{ team.teamName }}</div></a></td>
+					<td><a href="" ng-click="leaveTeam($index)" ng-if="!team.teamLeader===user._id" class="fontNormal">leave</a></td>
+				</tr>
+			</tbody>
     </table>
+
     	</div>
 	</div>
   
 	<div class="col-md-5 col-sm-4 col-md-offset-1 col-sm-offset-1">
 		<div class="container col-md-12 col-sm-12">
 		 <div class="jumbotron">
-		  <label for="sel1"><div class="panel-heading" id="hding">Create Team</div></label>
+		  <label for="sel1"><div class="panel-heading" id="hding">Create Team {{ teamCreateMessage }}</div></label>
 		  <input type="text" ng-model="teamName" class="form-control" placeholder="Enter Team Name">  
 		  <h3 id="teamCheck">{{ membersAdded }} will be added to the team</h3>
 		  <div id="setnewTeam" class="row">
@@ -78,12 +90,12 @@
 
 		<div id="teamDetails">
 		<div class="panel panel-default fonts" style="">
-			<span style="margin-left:3%">{{events.eventsList[i].teamname}}</span>
+			<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
 		</div>
 		<div class="panel-body fontNormal">
-			Event : {{events.eventsList[i].eventName}}
+			Events Registered : <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered">{{ event.name }}</li></ul>
 			<div>
-				Team  : <ul style="margin-left:14%"><li ng-repeat="teammate in events.eventsList[i].teammembers">{{teammate}}</li></ul>
+				Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers">{{ teammate.name }}</li></ul>
 			</div>
 		</div>
 			<button id="contact-submit-btn" class="btn btn-primary">Add Member</button>
