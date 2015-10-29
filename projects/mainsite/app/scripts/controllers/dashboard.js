@@ -33,8 +33,10 @@ angular.module('shaastra2016App')
     $scope.showDate = false;
     $scope.eventDate = null;
     $scope.sortedTeams = [];
-    $scope.sortedTeams = ["Team1","Team2","Team3"];
+    // $scope.sortedTeams = ["Team1","Team2","Team3"];
     $scope.teamName = "";
+    $scope.teamSelected = '';
+    $scope.eventSelected = '';
 
     // $http.get('http://shaastra.org:8001/api/events')
     $http.get('http://localhost:8001/api/events')
@@ -47,6 +49,31 @@ angular.module('shaastra2016App')
         $scope.all_events = response.data;
         console.log($scope.all_events);
       });
+
+		$http.get('http://localhost:8001/api/teams')
+      .then(function (response) {
+        $scope.all_teams = response.data;
+        console.log($scope.all_teams);
+      });
+
+      $scope.registerEvent = function() {
+      	if($scope.eventSelected !== '' && $scope.teamSelected !== '') {
+      		var currentEvent = JSON.parse($scope.eventSelected);
+      		var currentTeam = JSON.parse($scope.teamSelected);
+      		var sendBody = {
+      			eventRegistered: currentEvent._id,
+      			team: currentTeam._id
+      		} 
+      		$http.post('http://localhost:8001/api/registrations', sendBody)
+      			.then(function (response) {
+      				// console.log(response);
+      				if(response.status === 204) {
+      					$scope.eventSelected = '';
+      					$scope.teamSelected = '';
+      				}
+      			});
+      	} 
+      };
 
       $scope.showTeamRequire = function() {
       	$scope.showDate = true;
@@ -127,11 +154,6 @@ angular.module('shaastra2016App')
 			]
 		};
 
-		$http.get('http://localhost:8001/api/teams')
-      .then(function (response) {
-        $scope.all_teams = response.data;
-        console.log($scope.all_teams);
-      });
 
 
 

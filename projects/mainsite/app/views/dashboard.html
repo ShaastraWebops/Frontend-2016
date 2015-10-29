@@ -22,7 +22,7 @@
 	            <!-- <label>Choose Team Name</label> -->
 	        <select class="form-control" name="team" ng-model="teamSelected" ng-hide="singleMember">
 	          <option value="" selected disabled>Choose Team Name</option>
-	          <option ng-repeat="team in sortedTeams" value="{{ team }}">{{ team }}</option>
+	          <option ng-repeat="team in all_teams" value="{{ team }}">{{ team.teamName }}</option>
 	        </select>
 	          <span class="help-block" ng-show="form.team.$error.required && submitted">
 	            A team is required
