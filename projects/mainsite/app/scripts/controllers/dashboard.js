@@ -25,7 +25,7 @@ angular.module('shaastra2016App')
     $scope.teamBlockMessage = '';
     $scope.teamCreateMessage = '';
 
-    $scope.eventsRgistered = [];
+    // $scope.eventsRgistered = [];
     $scope.all_events = [];
     $scope.all_teams = [];
     $scope.teamsCreated = [];
@@ -54,15 +54,15 @@ angular.module('shaastra2016App')
 		$http.get('http://localhost:8001/api/teams')
       .then(function (response) {
         $scope.all_teams = response.data;
-        var numTeams = response.data.length;
-        var numRegistrations = 0;
-        for(var i=0; i<numTeams; i++) {
-          numRegistrations = $scope.all_teams[i].eventsRegistered.length;
-          for(var j=0; j<numRegistrations; j++) {
-            $scope.eventsRgistered.push(response.data[i].eventsRegistered[j]);
-          }
-        }
-        console.log($scope.eventsRgistered);
+        // var numTeams = response.data.length;
+        // var numRegistrations = 0;
+        // for(var i=0; i<numTeams; i++) {
+        //   numRegistrations = $scope.all_teams[i].eventsRegistered.length;
+        //   for(var j=0; j<numRegistrations; j++) {
+        //     $scope.eventsRgistered.push(response.data[i].eventsRegistered[j]);
+        //   }
+        // }
+        // console.log($scope.eventsRgistered);
         console.log($scope.all_teams);
       });
 
@@ -83,6 +83,19 @@ angular.module('shaastra2016App')
       				}
       			});
       	} 
+      };
+
+      $scope.unregisterEvent = function (team, event) {
+        var sendBody = {
+          teamId: team,
+          eventId: event
+        };
+        $http.delete('http://localhost:8001/api/registrations', sendBody)
+          .then(function (response) {
+            if(response.status === 204) {
+              $scope.eventsRgistered.splice(index, 1);
+            }
+          });
       };
 
       $scope.showTeamRequire = function() {

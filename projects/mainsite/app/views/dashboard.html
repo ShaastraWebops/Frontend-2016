@@ -32,18 +32,18 @@
 			<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register for Event</button>
 			</center>
 		</div>
-
+<!-- 
 		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
    	<table class="table table-striped">
 			<tbody>
 				<tr ng-repeat="event in eventsRgistered track by $index">
-					<!-- <th scope="row">{{$index+1}}</th> -->
+					<th scope="row">{{$index+1}}</th>
 					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.name}}</div></a></td>
-					<td><a href="" ng-click="unregister($index)" class="fontNormal">unregister</a></td>
+					<td><a href="" ng-click="unregisterEvent($index)" class="fontNormal">unregister</a></td>
 				</tr>
 			</tbody>
     </table>
-
+ -->
     <!-- <label for="sel1"><div class="panel-heading" id="hding">Teams Created</div></label>
    	<table class="table">
 			<tbody>
@@ -88,18 +88,17 @@
 			</center>
 		</div>
 
-		<div id="teamDetails">
-		<div class="panel panel-default fonts" style="">
-			<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
-		</div>
-		<div class="panel-body fontNormal">
-			Events Registered : <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered">{{ event.name }}</li></ul>
-			<div>
-				Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers">{{ teammate.name }}</li></ul>
+			<div id="teamDetails">
+				<div class="panel panel-default fonts" style="">
+					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
+				</div>
+				<div class="panel-body fontNormal">
+					Events Registered : <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-click="unregisterEvent(all_teams[i]._id, event._id)">Unregister</button> </p></li></ul>
+					<div>
+						Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers track by $index">{{ teammate.name }}</li></ul>
+					</div>
+				</div>
 			</div>
-		</div>
-			<button id="contact-submit-btn" class="btn btn-primary">Add Member</button>
-		</div>
 		</div>
 	</div>
   <!-- <div  class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="place" >
