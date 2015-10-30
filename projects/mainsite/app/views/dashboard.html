@@ -1,5 +1,15 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
 	<h1 id="topHead">Your Dashboard</h1>
+
+	<div class="container col-md-offset-4 col-md-4 col-sm-12">
+		 <div id="userDetail" class="jumbotron">
+		  <label for="sel1"><div class="panel-heading" id="hding2">User Details</div></label>
+		  <h3 id="teamReq"><b>Name:</b> {{ user.name }}</h3>
+		  <h3 id="teamReq"><b>Email ID:</b> {{ user.email }}</h3>
+		  <h3 id="teamReq"><b>Shaastra ID:</b> {{ user.festID }}</h3>
+		</div>
+	</div>
+
 	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1" class="list">
 		<div class="container col-md-12 col-sm-12">
 			<div class="jumbotron">

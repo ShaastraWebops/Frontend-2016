@@ -49,6 +49,16 @@
 {
 	position: relative;
 }
+#userDetail{
+	padding: 15px;
+	padding-left: 48px;
+}
+#hding2{
+	font-size: 1.5em;
+ 	font-family: 'Proxima';
+	padding-bottom: 2px;
+	padding-left: 10px;
+}
 #setnewTeam{
   position: relative;
   margin-top: 2%;
