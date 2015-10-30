@@ -76,12 +76,12 @@ angular.module('shaastra2016App')
       		} 
       		$http.post('http://localhost:8001/api/registrations', sendBody)
       			.then(function (response) {
-      				// console.log(response);
+      				console.log(response);
               if(response.status === 204) {
                 var numTeams = $scope.all_teams.length;
                 for(var i=0; i<numTeams; i++) {
                   if($scope.all_teams[i]._id === currentTeam._id) {
-                    $scope.all_teams[i] = response.data;
+                    $scope.all_teams[i].eventsRegistered.push(currentEvent);
                   }
                 } 
       					$scope.eventSelected = '';
