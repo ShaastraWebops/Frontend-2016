@@ -33,13 +33,13 @@
 #hding
 {
 	font-size: 1.5em;
-    font-family: 'Proxima';
+  font-family: 'Proxima';
 }
 #topHead
 {
 	text-align:center;
 	font-size: 3.5em;
-    font-family: 'Feather';
+  font-family: 'Feather';
 }
 #teamName
 {
@@ -48,7 +48,6 @@
 #teamDetails
 {
 	position: relative;
-	margin-top: 15%;
 }
 #setnewTeam{
   position: relative;

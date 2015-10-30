@@ -61,7 +61,8 @@
 				<tr ng-repeat="team in all_teams track by $index" ng-if="team.selfTeam===false">
 					<!-- <th scope="row">{{$index}}</th> -->
 					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{ team.teamName }}</div></a></td>
-					<td><a href="" ng-click="leaveTeam($index)" ng-if="!team.teamLeader===user._id" class="fontNormal">leave</a></td>
+					<td><button class="btn btn-warning" ng-click="leaveTeam($index)" ng-if="!(team.teamLeader._id===user._id)" class="fontNormal">Leave team</button></td>
+					<td><button class="btn btn-danger" ng-click="leaveTeam($index)" ng-if="(team.teamLeader._id===user._id)" class="fontNormal">Delete team</button></td>
 				</tr>
 			</tbody>
     </table>
@@ -89,6 +90,7 @@
 		</div>
 
 			<div id="teamDetails">
+				<label for="sel1"><div class="panel-heading" id="hding">Selected team details</div></label>
 				<div class="panel panel-default fonts" style="">
 					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
 				</div>
