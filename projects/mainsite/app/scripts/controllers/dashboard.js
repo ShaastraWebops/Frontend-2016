@@ -179,25 +179,30 @@ angular.module('shaastra2016App')
 			]
 		};
 
-
-
-
 	$scope.leaveTeam = function (index) {
 		$scope.teamBlockMessage = ' -- Working...';
 		var teamId = $scope.all_teams[index]._id;
 		$http.post('http://localhost:8001/api/teams/leave/'+ teamId)
-		.then(function (response) {
-			console.log(response);
-			if(response.status === 200) {
-				$scope.teamBlockMessage = '';
-				$scope.all_teams.splice(index,1);
-			} else {
-				$scope.teamBlockMessage = 'Some error occurred!';
-			}
-		});
-
-
+		  .then(function (response) {
+  			console.log(response);
+  			if(response.status === 200) {
+  				$scope.teamBlockMessage = '';
+  				$scope.all_teams.splice(index, 1);
+  			} else {
+  				$scope.teamBlockMessage = 'Some error occurred!';
+  			}
+  		});
 	};
+
+  $scope.deleteTeam = function (index) {
+    var teamId = $scope.all_teams[index]._id;
+    $http.delete('http://localhost:8001/api/teams/' + teamId)
+      .then(function (response) {
+        if(response.status === 204) {
+          $scope.all_teams.splice(index, 1);
+        }
+      });
+  };
 
 	$scope.lists=[{
 	    name: "AeroFest",
