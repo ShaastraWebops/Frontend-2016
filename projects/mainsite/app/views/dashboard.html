@@ -29,7 +29,7 @@
 	          </span>
 	          </div>  
 			<center>
-			<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register for Event</button>
+				<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register for Event</button>
 			</center>
 		</div>
 <!-- 
@@ -93,7 +93,7 @@
 					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
 				</div>
 				<div class="panel-body fontNormal">
-					Events Registered : <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-click="unregisterEvent(all_teams[i]._id, event._id)">Unregister</button> </p></li></ul>
+					Events Registered : <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-click="unregisterEvent(all_teams[i], event, $index, i)">Unregister</button> </p></li></ul>
 					<div>
 						Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers track by $index">{{ teammate.name }}</li></ul>
 					</div>

@@ -77,7 +77,13 @@ angular.module('shaastra2016App')
       		$http.post('http://localhost:8001/api/registrations', sendBody)
       			.then(function (response) {
       				// console.log(response);
-      				if(response.status === 204) {
+              if(response.status === 204) {
+                var numTeams = $scope.all_teams.length;
+                for(var i=0; i<numTeams; i++) {
+                  if($scope.all_teams[i]._id === currentTeam._id) {
+                    $scope.all_teams[i] = response.data;
+                  }
+                } 
       					$scope.eventSelected = '';
       					$scope.teamSelected = '';
       				}
@@ -85,15 +91,11 @@ angular.module('shaastra2016App')
       	} 
       };
 
-      $scope.unregisterEvent = function (team, event) {
-        var sendBody = {
-          teamId: team,
-          eventId: event
-        };
-        $http.delete('http://localhost:8001/api/registrations', sendBody)
+      $scope.unregisterEvent = function (team, event, eventIndex, teamIndex) {
+        $http.delete('http://localhost:8001/api/registrations/' + team._id + '/' + event._id)
           .then(function (response) {
             if(response.status === 204) {
-              $scope.eventsRgistered.splice(index, 1);
+              $scope.all_teams[teamIndex].eventsRegistered.splice(eventIndex, 1);
             }
           });
       };
