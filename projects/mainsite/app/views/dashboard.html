@@ -3,7 +3,7 @@
 	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1" class="list">
 		<div class="container col-md-12 col-sm-12">
 			<div class="jumbotron">
-		  <label for="sel1"><div class="panel-heading" id="hding">Register for the Event</div></label>
+		  <label for="sel1"><div class="panel-heading" id="hding">Register for an Event or Workshop {{ eventRegisterMessage }}</div></label>
 			  <div class="form-group" ng-class="{ 'has-success': form.event.$valid && submitted,
 	                                            'has-error': form.event.$invalid && submitted }">
 	            <!-- <label>Select the Event</label> -->
@@ -29,7 +29,7 @@
 	          </span>
 	          </div>  
 			<center>
-				<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register for Event</button>
+				<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register</button>
 			</center>
 		</div>
 <!-- 
@@ -91,7 +91,7 @@
 		</div>
 
 			<div id="teamDetails">
-				<label for="sel1"><div class="panel-heading" id="hding">Selected team details</div></label>
+				<label for="sel1"><div class="panel-heading" id="hding">Selected team details {{ eventUnRegisterMessage }}</div></label>
 				<div class="panel panel-default fonts" style="">
 					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
 				</div>
@@ -115,3 +115,5 @@
 		</div>
   </div> -->
 </div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

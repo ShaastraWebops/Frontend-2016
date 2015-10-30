@@ -24,7 +24,8 @@ angular.module('shaastra2016App')
 
     $scope.teamBlockMessage = '';
     $scope.teamCreateMessage = '';
-
+    $scope.eventUnRegisterMessage = '';
+    $scope.eventRegisterMessage = '';
     // $scope.eventsRgistered = [];
     $scope.all_events = [];
     $scope.all_teams = [];
@@ -67,7 +68,8 @@ angular.module('shaastra2016App')
       });
 
       $scope.registerEvent = function() {
-      	if($scope.eventSelected !== '' && $scope.teamSelected !== '') {
+        if($scope.eventSelected !== '' && $scope.teamSelected !== '') {
+          $scope.eventRegisterMessage = ' -- Working...';
       		var currentEvent = JSON.parse($scope.eventSelected);
       		var currentTeam = JSON.parse($scope.teamSelected);
       		var sendBody = {
@@ -78,6 +80,7 @@ angular.module('shaastra2016App')
       			.then(function (response) {
       				console.log(response);
               if(response.status === 204) {
+                $scope.eventRegisterMessage = '';
                 var numTeams = $scope.all_teams.length;
                 for(var i=0; i<numTeams; i++) {
                   if($scope.all_teams[i]._id === currentTeam._id) {
@@ -88,14 +91,20 @@ angular.module('shaastra2016App')
       					$scope.teamSelected = '';
       				}
       			});
-      	} 
+      	} else {
+          alert("Please select a team and an event");
+        } 
       };
 
       $scope.unregisterEvent = function (team, event, eventIndex, teamIndex) {
+        $scope.eventUnRegisterMessage = ' -- Working...';
         $http.delete('http://localhost:8001/api/registrations/' + team._id + '/' + event._id)
           .then(function (response) {
             if(response.status === 204) {
+              $scope.eventUnRegisterMessage = '';
               $scope.all_teams[teamIndex].eventsRegistered.splice(eventIndex, 1);
+            } else {
+              $scope.eventUnRegisterMessage = 'Some error occurred';
             }
           });
       };
@@ -195,11 +204,15 @@ angular.module('shaastra2016App')
 	};
 
   $scope.deleteTeam = function (index) {
+    $scope.teamBlockMessage = ' -- Working...';
     var teamId = $scope.all_teams[index]._id;
     $http.delete('http://localhost:8001/api/teams/' + teamId)
       .then(function (response) {
         if(response.status === 204) {
+          $scope.teamBlockMessage = '';
           $scope.all_teams.splice(index, 1);
+        } else {
+          $scope.teamBlockMessage = 'Some error occurred';
         }
       });
   };
