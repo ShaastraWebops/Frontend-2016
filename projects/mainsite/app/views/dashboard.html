@@ -36,9 +36,9 @@
 		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
    	<table class="table table-striped">
 			<tbody>
-				<tr ng-repeat="event in events.eventsList track by $index">
-					<th scope="row">{{$index+1}}</th>
-					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.eventName}}</div></a></td>
+				<tr ng-repeat="event in eventsRgistered track by $index">
+					<!-- <th scope="row">{{$index+1}}</th> -->
+					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.name}}</div></a></td>
 					<td><a href="" ng-click="unregister($index)" class="fontNormal">unregister</a></td>
 				</tr>
 			</tbody>

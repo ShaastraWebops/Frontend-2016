@@ -25,6 +25,7 @@ angular.module('shaastra2016App')
     $scope.teamBlockMessage = '';
     $scope.teamCreateMessage = '';
 
+    $scope.eventsRgistered = [];
     $scope.all_events = [];
     $scope.all_teams = [];
     $scope.teamsCreated = [];
@@ -53,6 +54,15 @@ angular.module('shaastra2016App')
 		$http.get('http://localhost:8001/api/teams')
       .then(function (response) {
         $scope.all_teams = response.data;
+        var numTeams = response.data.length;
+        var numRegistrations = 0;
+        for(var i=0; i<numTeams; i++) {
+          numRegistrations = $scope.all_teams[i].eventsRegistered.length;
+          for(var j=0; j<numRegistrations; j++) {
+            $scope.eventsRgistered.push(response.data[i].eventsRegistered[j]);
+          }
+        }
+        console.log($scope.eventsRgistered);
         console.log($scope.all_teams);
       });
 
