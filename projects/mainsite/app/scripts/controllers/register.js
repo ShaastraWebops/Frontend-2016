@@ -40,16 +40,16 @@ angular.module('shaastra2016App')
     $scope.addCollegeMessage = '';
 
     var n = 0;
-    $scope.name = "asfs";
-    $scope.secondName = "asfag";
-    $scope.password = "1234567";
-    $scope.confirmPassword = "1234567";
-    $scope.email = "abc@def.com";
-    $scope.phoneNumber = "1234567890";
-    $scope.age = "15";
+    $scope.name = "";
+    $scope.secondName = "";
+    $scope.password = "";
+    $scope.confirmPassword = "";
+    $scope.email = "";
+    $scope.phoneNumber = "";
+    $scope.age = "";
     $scope.gender = true;
     $scope.college = {};
-    $scope.city = "Chennai";
+    $scope.city = "";
     $scope.collegeSelected = '';
     // $scope.college.name = "Chennai";
     // $scope.college.id = "";

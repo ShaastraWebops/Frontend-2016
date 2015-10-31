@@ -56,7 +56,7 @@
 				</div>
 
 				<div class="col-lg-3 col-xs-12">
-				  <div id="validation" class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && submitted,
+				  <div id="validation" class="form-group" ng-class="{ 'has-success': (password === confirmPassword && form.confirmPassword.$valid && form.password.$valid && submitted),
 	                                          								'has-error': form.confirmPassword.$invalid && submitted }">
 						<div class="input-group">
 						  <span class="input-group-addon">
@@ -64,8 +64,8 @@
 						  </span>
 						  <input type="Password" name="confirmPassword" class="form-control" ng-model="confirmPassword" placeholder="Confirm Password" aria-describedby="sizing-addon2" required>
 						</div>
-					  <span class="help-block" ng-show="form.confirmPassword.$error.required && submitted">
-		      		Re-Type your password
+					  <span class="help-block" ng-show="(password != confirmPassword || form.password.$invalid || form.confirmPassword.$error.required) && submitted">
+		      		Passwords do not match
 		    		</span>
 					</div>
 				</div>
@@ -79,9 +79,9 @@
 						  <span class="input-group-addon">
 						  	<span class="glyphicon glyphicon-envelope" height="20px" width="20px" alt="mail_image"></span>
 						  </span>
-						  <input type="text" name="email" ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2" required>
+						  <input type="text" name="email" ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" required>
 						</div>
-					  <span class="help-block" ng-show="form.email.$error.required && submitted">
+					  <span class="help-block" ng-show="(form.email.$error.pattern || form.email.$error.required) && submitted">
 		      		E-mail is required
 		    		</span>
 					</div>
@@ -94,10 +94,10 @@
 							<span class="input-group-addon">
 							 	<span class="glyphicon glyphicon-phone" height="20px" width="20px" alt="phone_image"></span>
 							</span>
-						  <input type="text" name="phoneNumber" ng-model="phoneNumber" class="form-control" placeholder="mobile number" aria-describedby="sizing-addon2" required>
+						  <input type="text" name="phoneNumber" ng-model="phoneNumber" class="form-control" placeholder="mobile number" aria-describedby="sizing-addon2" ng-pattern="/^\d{10}$/" required>
 						</div>
-					  <span class="help-block" ng-show="form.phoneNumber.$error.required && submitted">
-		      		Phone Number is required
+					  <span class="help-block" ng-show="(form.phoneNumber.$error.pattern || form.phoneNumber.$error.required) && submitted">
+		      		Phone Number is required and must be 10 digits
 		    		</span>
 					</div>
 				</div>
@@ -126,17 +126,17 @@
 						  <span class="input-group-addon">
 						  	<span class="glyphicon glyphicon-tasks" height="20px" width="20px" alt="age_image"></span>
 						  </span>
-						  <input type="text" name="age" ng-model="age" class="form-control" placeholder="Enter your Age" aria-describedby="sizing-addon2" required>
+						  <input type="text" name="age" ng-model="age" class="form-control" placeholder="Enter your Age" aria-describedby="sizing-addon2" ng-pattern="/^\d+$/" required>
 						</div>
-						<span class="help-block" ng-show="form.age.$error.required && submitted">
+						<span class="help-block" ng-show="(form.age.$error.pattern || form.age.$error.required) && submitted">
 		      		Age is required
 		    		</span>
         	</div>
 				</div>
 
 				<div id="selectGender" class="col-lg-2 col-xs-6">
-				<label class="radio-inline"><input type="radio" ng-model="gender" value="male">Male</label>
-				<label class="radio-inline"><input type="radio" ng-model="gender" value="female">Female</label>	
+					<label class="radio-inline"><input type="radio" ng-model="gender" value="true">Male</label>
+					<label class="radio-inline"><input type="radio" ng-model="gender" value="false">Female</label>	
 				</div>
 			</div>
 
