@@ -448,7 +448,7 @@ a:hover, a:active, a:focus {
 .nav-bar-new {
 	width: 100%;
 }
-.nav-item-new > a{
+.nav-item-new > a, .user-icon {
 	color: #fff;
 }
 .nav-item-new > p {
@@ -465,6 +465,9 @@ a:hover, a:active, a:focus {
 	cursor: pointer;
 }
 .nav-item-new:hover a {
+	color: #e1e1e1;
+}
+.nav-item-new:hover .user-icon {
 	color: #e1e1e1;
 }
 
