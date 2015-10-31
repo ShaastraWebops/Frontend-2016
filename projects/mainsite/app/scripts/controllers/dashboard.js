@@ -35,7 +35,6 @@ angular.module('shaastra2016App')
     $scope.showDate = false;
     $scope.eventDate = null;
     $scope.sortedTeams = [];
-    // $scope.sortedTeams = ["Team1","Team2","Team3"];
     $scope.teamName = "";
     $scope.teamSelected = '';
     $scope.eventSelected = '';
@@ -121,6 +120,14 @@ angular.module('shaastra2016App')
       $scope.showTeamRequire = function() {
       	$scope.showDate = true;
       	var currentEvent = JSON.parse($scope.eventSelected);
+
+        var numTeams = $scope.all_teams.length;
+        for(var i=0; i<numTeams; i++) {
+          if($scope.all_teams[i].teamMembers.length >= currentEvent.minTeamMembers && $scope.all_teams[i].teamMembers.length <= currentEvent.maxTeamMembers) {
+            $scope.sortedTeams.push($scope.all_teams[i]);
+          }
+        }
+
       	$scope.eventDate = currentEvent.eventDate;
       	if(currentEvent.maxTeamMembers !== 1) {
       		$scope.teamRequire = currentEvent.minTeamMembers + " - " + currentEvent.maxTeamMembers+ " members";
