@@ -54,7 +54,7 @@
 					<div class="row">
 						<div class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-repeat="x in makersTabs track by $index">
 							<a event-nav-hyperlink href="" ng-click="info($index)">
-								<div class="event-nav-xs" ng-click="changeTab($index)" ng-class="{'event-nav-selected':(i === $index)}">
+								<div class="event-nav-xs" ng-click="changeTab($index)" ng-class="{'event-nav-selected':(tab === $index)}">
 									{{x}}
 								</div>
 							</a>
@@ -67,52 +67,54 @@
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div ng-if="tab===0" class="cont">
 									<div class="row">
-										Welcome to the IIT Madras Maker Summit 2016! The 4 day extravaganza set to change your perceptions and broaden your horizons from the 2nd to 5th of January 2016.
+										Welcome to the IIT Madras Maker Summit 2016! The 4 day extravaganza from 2nd to 5th of Jan set to change your perceptions and broaden your horizons.
 									</div><br>
 									<div class="row">
-									 	The theme for this year's symposium is "Makers". The beautiful experience of the Maker culture is set to blow your mind off. Our subtle message is, “Anyone can be maker”. Makers are techies, artists, creators, entrepreneurs. You.Are.A.Maker
+									 	We, at the Summit, believe that <i>Anyone can be maker</i>. A computer hacker, origami artist, a storyteller, a designer, an arduino enthusiast, whoever you may be - <b>You. Are. A. Maker</b>. 
 									</div><br>
 									<div class="row">
-									 	The summit would include a panel discussion on the Maker culture in India, a keynote lecture, 2 unique workshops, a product design challenge including mentoring sessions for intense debate and discussion on the tracks – Transmedia storytelling, Life Hacks and Make a Difference.
+									 	Witness a potpourri of events including  Lectures, a Panel Discussion,  unique Workshops and a Product Design Challenge.  Be a part of mentoring sessions with the experienced in the field, debate, discuss and innovate on any of the verticals – Transmedia Storytelling, Life Hacks and Social Technology. 
 									</div><br>
 									<div class="row">
-									 	In addition to the huge cultural exchange between the international and Indian students and the tremendous learning curve made possible due to a diverse set of participants, the IITM Summit promises to be a great experience for all.
+									 	Network with like minded enthusiasts from different streams of education. Hear it from the experienced, learn it from the best.  We promise to offer you a great experience.
 									</div><br>
 									<div class="row">
-									 	Join us this January and be part of our Maker summit!
+									 	Mark your calendars and join us this January to be part of our Maker Summit!
 									</div>
 								</div>
 								<div ng-if="tab===1" class="cont">
 									<div class="row">
 								    <b><p>Panel Discussion</p></b>
-										<p>The growing Maker culture in India</p>
-										<p>The primary focus is on the developing Maker culture in India, where this movement is headed and what the opportunities available for young innovators and makers are. With a diverse panel of speakers from tech and non-tech backgrounds, the discussion will target the concept of interdisciplinary makers. The participants will have an exclusive opportunity to witness such a gathering of some of the most experienced makers.</p>
-									</div>
+										<p>From Backyards to Makerspaces: The rise of the Maker Culture </p>
+										<p>Lo behold  the world where ideas find fruition within hours. What made this possible? Listen to our diverse panel of speakers talk about the hot and trending in the Maker movement. The participants will have an exclusive opportunity to witness the confluence of some of the most experienced makers around the globe. Just be there! </p>
+									</div><br>
 									<div class="row">
 										<b><p>Make-a-thon</p></b>
-										<p>The most interesting part of Maker Summit 2016. Get ready to join hands with other like-minded makers to observe, brainstorm and create a prototype from scratch. Participants have 4 days of time, basic workshop & makerspace facilities and a specific amount of resources to come up with something interesting, exciting and useful. Mentoring sessions will be arranged every day to help the participants and guide them through the exciting journey of surveying, ideating, designing and innovating. Exciting prizes and exclusive access to Makerspaces to be awarded to the winners. Stay tuned to our FB page to see the prizes in stock.</p>
-									</div>
+										<p>The most exciting part of Maker Summit 2016! Get ready to join hands with like-minded makers with different skill-sets.</p>
+										<p>Participants will have 4 days to work in teams, to come up with something inspiring and creative. Basic workshop/ makerspace facilities and necessary resources shall be provided. The teams will also have access to mentoring sessions with experts in the field to guide them through the journey of ideating, designing and creating. <b>Exciting prizes</b> to be awarded to the winners. Stay tuned to our <a target="_blank" href="https://www.facebook.com/Shaastra/">FB page</a> to see the prizes that await you.</p>
+									</div><br>
 									<div class="row">
-										<b><p>Workshops</p></b>
-										<p>Maker summit 2016 provides an opportunity to acquire a unique set of skills, through our workshop sessions.</p>
-										<p>1) 3D printing workshop: Ever seen a design on a software, come to life in just a couple of minutes. Ever tried printing a Bob, the minion figure? We at the Maker Summit provide the perfect chance to learn this simple yet necessary skill.</p>
-										<p>2) Laser cutting: Wouldn’t it be cool if one can cut a Batrang from a steel plate using a Laser? That is exactly what the participants will learn at our Laser cutting workshop.</p>
+										<b><p>Hands-on Workshops</p></b>
+										<p>Maker summit 2016 provides you an opportunity to get your hands dirty and acquire a unique set of skills, through our workshop sessions.</p>
+										<p><span class="midot"><b>&middot;</b></span> <b>3D printing -</b> Have you ever wished your designs on a software came to life? Ever wanted to  be a part of the  Next Big Thing in the Maker movement?  Here’s the chance to learn this simple, exciting skill.</p>
+										<p><span class="midot"><b>&middot;</b></span> <b>Laser Cutting -</b> How cool would it be to make your own Batrang or Minion from a steel plate! Learn to laser cut and engrave your designs on beautiful flat sheet materials.</p>
+										<p><span class="midot"><b>&middot;</b></span> <b>Mozilla Maker Party -</b> Maker parties help you explore the web and make your own space on it. It's a celebration of making and learning on the web. As a part of this workshop, we will have associated hands-on activities like making models, brainstorming around it. Get ready to use tools like the Thimble and Webmaker!</p>
 									</div>
 								</div>
 								<div ng-if="tab===2" class="cont">
 									<div class="row">
 										<b><p>Transmedia storytelling</p></b>
-										<p>The story experience is more than just reading a book, and can be told through various other media, such as games, events, cinema, television and nowadays, virtual reality. Define the story's purpose: ranging from educating the public about hygiene to creating a virtual pet and take the project forward through the storyboarding, film editing till prototyping of a product that may one day become the most exciting thing in the world.</p>
+										<p>Get a chance to create immersive story worlds with multiple media platforms! This vertical would involve defining the story's purpose (could range from hygiene education for kids to creating a virtual pet) and taking it forward through storyboards and film editing. Build a prototype that could turn out to be next exciting thing in the world.</p>
 									</div>
 									<br>
 									<div class="row">
 										<b><p>Life Hacks</p></b>
-										<p>The potential for coming up with simple yet effective solutions for day-to-day issues, is immense. The development of a sensor based tap to save water, portable mobile phone charger and intelligent personal assistant in cell phones to prevent accidents are a few revolutionizing hacks. Explore various avenues after undertaking a complete market survey as part of this track.</p>
+										<p>Come up with simple yet effective solutions for day-to-day hitches. Developing a sensor based tap to save water, portable mobile phone chargers, intelligent personal assistant in cell phones that prevent accidents and what not. Look around. Is there something you can fix? Come over!</p>
 									</div>
 									<br>
 									<div class="row">
-										<b><p>Make a difference</p></b>
-										<p>The world as we know is plagued with thousands of problems. Extending an arm to help those who need it, is a huge responsibility. As students with problem solving skills and logic, we can make a difference and touch as many lives as possible. The primary focus will be on assistive technology.</p>
+										<b><p>Social Technology Projects</p></b>
+										<p>Yes, there is a Pandora box of social problems. What can you do to help? Find inspiring uses to technology and sciences. Primary focus of this vertical will be assistive technology. Create something that benefits people around you, be it in terms of education, health, culture or quality of life.</p>
 									</div>
 								</div>
 								<div ng-if="tab===3" class="cont">
@@ -130,19 +132,19 @@
 										<b><p>Day 1</p></b>
 										<p><span class="midot"><b>&middot;</b></span> Panel Discussion</p>
 										<p><span class="midot"><b>&middot;</b></span> Ice breaking session</p>
-										<p><span class="midot"><b>&middot;</b></span> Mentoring session – How to identify the problem</p>
+										<p><span class="midot"><b>&middot;</b></span> Mentoring session 1</p>
 									</div>
 									<br>
 									<div class="row">
 										<b><p>Day 2</p></b>
 										<p><span class="midot"><b>&middot;</b></span> Workshop sessions</p>
-										<p><span class="midot"><b>&middot;</b></span> Mentoring Sessions – How to approach the problem</p>
+										<p><span class="midot"><b>&middot;</b></span> Mentoring Sessions 2</p>
 										<p><span class="midot"><b>&middot;</b></span> Mozilla Maker Party</p>
 									</div>
 									<br>
 									<div class="row">
 										<b><p>Day 3</p></b>
-										<p><span class="midot"><b>&middot;</b></span> Mentoring sessions – Designing solutions to the problem</p>
+										<p><span class="midot"><b>&middot;</b></span> Mentoring sessions 3</p>
 										<p><span class="midot"><b>&middot;</b></span> Keynote Lecture</p>
 									</div>
 									<br>
@@ -189,7 +191,7 @@
 								<br><br><br><br>
 								<div class="row" id="event-nav-box" ng-repeat="x in makersTabs track by $index">
 									<a event-nav-hyperlink href="" ng-click="info($index)">
-										<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(i === $index)}" ng-click="changeTab($index)">
+										<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(tab === $index)}" ng-click="changeTab($index)">
 											<span id="event-nav-span">{{x}}</span>
 										</div>
 									</a>
