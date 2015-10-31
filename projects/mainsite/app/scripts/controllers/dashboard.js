@@ -54,16 +54,14 @@ angular.module('shaastra2016App')
 
 		$http.get('http://localhost:8001/api/teams')
       .then(function (response) {
+        var numTeams = response.data.length;
+        for(var i=0; i<numTeams; i++) {
+          if(response.data[i].selfTeam===true) {
+            response.data[i].teamName += ' - Individual Participation';
+          }
+        }
         $scope.all_teams = response.data;
-        // var numTeams = response.data.length;
-        // var numRegistrations = 0;
-        // for(var i=0; i<numTeams; i++) {
-        //   numRegistrations = $scope.all_teams[i].eventsRegistered.length;
-        //   for(var j=0; j<numRegistrations; j++) {
-        //     $scope.eventsRgistered.push(response.data[i].eventsRegistered[j]);
-        //   }
-        // }
-        // console.log($scope.eventsRgistered);
+        
         console.log($scope.all_teams);
       });
 
@@ -93,6 +91,9 @@ angular.module('shaastra2016App')
                 } 
       					$scope.eventSelected = '';
       					$scope.teamSelected = '';
+                $scope.singleMember = false;
+                $scope.teamRequire = "";
+                $scope.eventDate = null;
       				}
       			});
       	} else {

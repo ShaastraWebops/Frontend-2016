@@ -58,7 +58,8 @@ angular.module('shaastra2016App')
     $scope.schoolStudent = false;
     $scope.submitted = false;
 
-    $http.get('http://shaastra.org:8001/api/colleges')
+    // $http.get('http://shaastra.org:8001/api/colleges')
+    $http.get('http://localhost:8001/api/colleges')
       .then(function (response) {
         $scope.college_list = response.data;
       });

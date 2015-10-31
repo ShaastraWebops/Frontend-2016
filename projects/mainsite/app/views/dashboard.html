@@ -4,9 +4,9 @@
 	<div class="container col-md-offset-4 col-md-4 col-sm-12">
 		 <div id="userDetail" class="jumbotron">
 		  <label for="sel1"><div class="panel-heading" id="hding2">User Details</div></label>
-		  <h3 id="teamReq"><b>Name:</b> {{ user.name }}</h3>
-		  <h3 id="teamReq"><b>Email ID:</b> {{ user.email }}</h3>
-		  <h3 id="teamReq"><b>Shaastra ID:</b> {{ user.festID }}</h3>
+		  <h3 id="teamReq"><b>Name -</b> {{ user.name }}</h3>
+		  <h3 id="teamReq"><b>Email ID -</b> {{ user.email }}</h3>
+		  <h3 id="teamReq"><b>Shaastra ID -</b> {{ user.festID }}</h3>
 		</div>
 	</div>
 
@@ -70,7 +70,7 @@
 			<tbody>
 				<tr ng-repeat="team in all_teams track by $index">
 					<!-- <th scope="row">{{$index}}</th> -->
-					<td ><div><div ng-class="{'event-nav-selected':(i === $index)}" class="fontNormal">{{ team.teamName }}</div></div></td>
+					<td><div><div ng-class="{'event-nav-selected':(i === $index)}" class="fontNormal">{{ team.teamName }}</div></div></td>
 					<td><button ng-click="data($index)" class="btn btn-warning" ng-click="leaveTeam($index)"><span class="fontNormal">View team details</span>  <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></button></td>
 					<td><button class="btn btn-warning" ng-click="leaveTeam($index)" ng-if="!(team.teamLeader._id===user._id)"><span class="fontNormal">Leave team</span></button></td>
 					<td><button class="btn btn-danger" ng-click="deleteTeam($index)" ng-if="(team.teamLeader._id===user._id && team.selfTeam===false)"><span class="fontNormal">Delete team</span></button></td>
@@ -106,7 +106,7 @@
 					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
 				</div>
 				<div class="panel-body fontNormal">
-					Events Registered : <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-click="unregisterEvent(all_teams[i], event, $index, i)">Unregister</button> </p></li></ul>
+					Events Registered : <p style="margin-left:14%" ng-if="(all_teams[i].eventsRegistered.length==0)">No events are registered with this team</p> <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-click="unregisterEvent(all_teams[i], event, $index, i)">Unregister</button> </p></li></ul>
 					<div>
 						Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers track by $index">{{ teammate.name }}</li></ul>
 					</div>
