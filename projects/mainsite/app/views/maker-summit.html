@@ -75,16 +75,38 @@
 									tracks
 								</div>
 								<div ng-if="tab===3" class="cont">
-									speakers
+									<div class="row">
+										Stay tuned for further updates!
+									</div>
 								</div>
 								<div ng-if="tab===4" class="cont">
-									registration
+									<div class="row">
+										Stay tuned for further updates!
+									</div>
 								</div>
 								<div ng-if="tab===5" class="cont">
 									schedule
 								</div>
 								<div ng-if="tab===6" class="cont">
-									contact us
+									<div class="row">
+										<b>Vedant Agarwal</b> - vedantagr@shaastra.org
+									</div>
+									<br>
+									<div class="row">
+										<b>Ayesha</b> - ayesha@shaastra.org
+									</div>
+									<br>
+									<div class="row">
+										<b>Ramprashanth</b> - +91-8754443260
+									</div>
+									<br>
+									<div class="row">
+										<b>Gouri Ram</b> - +91-7708415998
+									</div>
+									<br>
+									<div class="row">
+										<b>Shruti Shivakumar</b> - +91-9791264935
+									</div>
 								</div>
 							</div>
 						</div>
@@ -100,7 +122,7 @@
 						<div class="col-sm-4 col-md-4 col-lg-4"></div>
 						<div class="col-sm-8 col-md-8 col-lg-8">
 							<div class="row">
-								<br><br><br><br><br>
+								<br><br><br><br>
 								<div class="row" id="event-nav-box" ng-repeat="x in makersTabs track by $index">
 									<a event-nav-hyperlink href="" ng-click="info($index)">
 										<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(i === $index)}" ng-click="changeTab($index)">
