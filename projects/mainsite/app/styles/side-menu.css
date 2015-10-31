@@ -97,7 +97,7 @@ body {
 
 .menu a {
   display: block;
-  padding: 0.5em 0em 0.5em 0.2em;
+  padding: 0.4em 0em 0.4em 0.2em;
   color: white !important;
   text-decoration: none !important;
   font-family: 'Proxima';
@@ -119,7 +119,7 @@ body {
 .side-menu-dice {
   width: 130px;
   margin-left: 19%;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .menu {
@@ -571,4 +571,9 @@ input[type=search]:focus {
 }
 .home-shortcuts-tab:hover {
   cursor: pointer;
+}
+@media screen and (min-width: 651px) {
+  #side-nav-logout {
+    display: none;
+  }
 }

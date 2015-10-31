@@ -109,8 +109,8 @@
     <span id="menuscroll">
       <li><a href="#/">Home</a></li>
       <li ng-hide="isLoggedIn()"><a href="#/login">Log In/Register</a></li>
-      <li ng-show="isLoggedIn()"><a href="#/dashboard">Your Dashboard</a></li>
-      <li ng-show="isLoggedIn()"><a ng-click="logout()">Logout</a></li>
+      <li ng-show="isLoggedIn()"><a href="#/dashboard">Dashboard</a></li>
+      <li id="side-nav-logout" ng-show="isLoggedIn()"><a ng-click="logout()">Logout</a></li>
       <li><a href="#/samparks">Pre-Shaastra</a></li>
       <li class="down"><a class="d" href="#/event-list">Events</a></li>
       <li class="down"><a class="d" href="#/workshop-category/561567aac8d15f6e1252ebee">Workshops</a></li>
