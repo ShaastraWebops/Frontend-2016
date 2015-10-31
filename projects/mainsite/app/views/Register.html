@@ -146,12 +146,18 @@
 	                                          								'has-error': form.college.$invalid && submitted }">
 				<!-- <input type="text" name="college" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" required placeholder="Enter your school/college" auto-completeone> -->
 
+		        <select class="form-control" name="college" ng-model="collegeSelected">
+		          <option value="" selected disabled>Choose College/School/Institution Name</option>
+		          <option ng-repeat="college in college_list" value="{{ college._id }}">{{ college.collegeName }}</option>
+		        </select>
+
+<!-- 
 						<input type="text" name="college" ng-model="college.name" class="form-control" required placeholder="Enter your school/college" list="colleges" autocomplete="off">
 
 					  <datalist id="colleges">
-					    <option ng-repeat="x in college_list" value="{{ x._id }}">{{x.collegeName}}</option>
+					    <option ng-repeat="x in college_list" value="{{ x.collegeName }}">{{x.collegeName}}</option>
 					  </datalist>
-
+ -->
 				 <!--input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control"-->
 
 				<!-- <div id="college-suggestions" class="container-fluid" ng-if="suggestCollegeBool">
@@ -162,7 +168,7 @@
 				</ul>
 				</div> -->
 						<span class="help-block" ng-show="form.college.$error.required && submitted">
-		      		College/School is required
+		      		College/School/Institution is required
 		    		</span>
 	      	</div>
       	</div>
@@ -173,12 +179,12 @@
 				</div>
 			</div>
 				<p id="textCollege">
-					<span ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here</span> to add school/college if it is not shown
+					<span ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here</span> to add school/college/institution if it is not shown
 				</p>
 				<div id="college" ng-hide="existingCollege">
 					<div id="setpassword" class="row">
 						<div class="col-lg-9 col-xs-12">
-							<input type="text" ng-model="college.name" class="form-control" placeholder="Enter your school/college">
+							<input type="text" ng-model="newCollegeName" class="form-control" placeholder="Enter your school/college">
 						</div>
 						<div class="col-lg-2 col-xs-12">
 							<button id="addMember" class="btn btn-success" ng-click="addCollege()">Add</button>

@@ -37,6 +37,8 @@ angular.module('shaastra2016App')
       'background-color': '#f3f3f3'
     });
 
+    $scope.addCollegeMessage = '';
+
     var n = 0;
     $scope.name = "asfs";
     $scope.secondName = "asfag";
@@ -48,51 +50,18 @@ angular.module('shaastra2016App')
     $scope.gender = true;
     $scope.college = {};
     $scope.city = "Chennai";
-    $scope.college.name = "Chennai";
-    $scope.college.id = "";
+    $scope.collegeSelected = '';
+    // $scope.college.name = "Chennai";
+    // $scope.college.id = "";
     $scope.collegeSuggestions = [];
     $scope.existingCollege = 1;
     $scope.schoolStudent = false;
     $scope.submitted = false;
 
-
-    $scope.collegesList = [{
-      'id' : 1,
-      'name' : 'Chennai'
-    },
-    {
-      'id' : 2,
-      'name' :'Mumbai'
-    },
-    {
-      'id' : 3,
-      'name' : 'Delhi'
-    },
-    {
-      'id' : 4,
-      'name' :'Kanpur'
-    },
-    {
-      'id' : 5,
-      'name' : 'Kharaghpur'
-    }];
-
-    $scope.college_list = [{
-        collegeName: "IITM",
-        _id: 12121 
-      },
-      {
-        collegeName: "Delhi IIT",
-        _id: 12122 
-      },
-      {
-        collegeName: "Bombay IIT",
-        _id: 12123 
-      },
-      {
-        collegeName: "Hyd IIT",
-        _id: 12124 
-    }];
+    $http.get('http://shaastra.org:8001/api/colleges')
+      .then(function (response) {
+        $scope.college_list = response.data;
+      });
 
     $scope.toggleNewCollegeDiv = function () {
       $scope.existingCollege = !$scope.existingCollege;
@@ -104,62 +73,75 @@ angular.module('shaastra2016App')
       }
     };
 
-    $scope.selectSuggestedCollege = function (college) {
-      $scope.college = {};
-      $scope.college.name = college.name;
-      $scope.college.id = college.id;
-      $scope.suggestCollegeBool = false;
-    };
+    // $scope.selectSuggestedCollege = function (college) {
+    //   $scope.college = {};
+    //   $scope.college.name = college.name;
+    //   $scope.college.id = college.id;
+    //   $scope.suggestCollegeBool = false;
+    // };
 
-    $scope.highlight = function(event){
+    // $scope.highlight = function(event){
 
-      var keyCode = event.which || event.keyCode;
-      var i = document.getElementById("col-sug").childNodes.length;
-      var c = document.getElementById("col-sug").childNodes;
-      if(keyCode===38 || keyCode===40 || keyCode===13){
-        event.preventDefault();
-    }
-    else if(keyCode===39 || keyCode===37){
-    }
-    else{
-      c[n].style.backgroundColor = "#ffffff";
-      n=0;
-    }
-      if (keyCode === 38 && n!==0) {
-        if(n===i || (n+1)===i){
-          n=n-2;
-          c[n].style.backgroundColor = "#E2E2E2";
-      }
-        else{
-          n=n-2;
-          c[n+2].style.backgroundColor = "#ffffff";
-          c[n].style.backgroundColor = "#E2E2E2";
-        }
-      }
-      else if(keyCode === 40 && (n+4)<=i){
-        if(n===0){
-          n=n+2;
-          c[n].style.backgroundColor = "#E2E2E2";
-      }
-        else{
-          n=n+2;
-          c[n-2].style.backgroundColor = "#ffffff";
-          c[n].style.backgroundColor = "#E2E2E2";
-        }
-      }
+    //   var keyCode = event.which || event.keyCode;
+    //   var i = document.getElementById("col-sug").childNodes.length;
+    //   var c = document.getElementById("col-sug").childNodes;
+    //   if(keyCode===38 || keyCode===40 || keyCode===13){
+    //     event.preventDefault();
+    // }
+    // else if(keyCode===39 || keyCode===37){
+    // }
+    // else{
+    //   c[n].style.backgroundColor = "#ffffff";
+    //   n=0;
+    // }
+    //   if (keyCode === 38 && n!==0) {
+    //     if(n===i || (n+1)===i){
+    //       n=n-2;
+    //       c[n].style.backgroundColor = "#E2E2E2";
+    //   }
+    //     else{
+    //       n=n-2;
+    //       c[n+2].style.backgroundColor = "#ffffff";
+    //       c[n].style.backgroundColor = "#E2E2E2";
+    //     }
+    //   }
+    //   else if(keyCode === 40 && (n+4)<=i){
+    //     if(n===0){
+    //       n=n+2;
+    //       c[n].style.backgroundColor = "#E2E2E2";
+    //   }
+    //     else{
+    //       n=n+2;
+    //       c[n-2].style.backgroundColor = "#ffffff";
+    //       c[n].style.backgroundColor = "#E2E2E2";
+    //     }
+    //   }
 
-      else if(keyCode === 13 ){
-        //document.getElementById("col-in").value = c[n].firstChild.nextSibling.innerHTML;
-        $scope.college = {};
-        $scope.college.name = c[n].firstChild.nextSibling.innerHTML;
-        $scope.college.id = n/2;
-        $scope.suggestCollegeBool = false;
-        n=0;
-      }
-    };
+    //   else if(keyCode === 13 ){
+    //     //document.getElementById("col-in").value = c[n].firstChild.nextSibling.innerHTML;
+    //     $scope.college = {};
+    //     $scope.college.name = c[n].firstChild.nextSibling.innerHTML;
+    //     $scope.college.id = n/2;
+    //     $scope.suggestCollegeBool = false;
+    //     n=0;
+    //   }
+    // };
 
     $scope.addCollege = function () {
-      //Make http request to store the details
+      if($scope.newCollegeName !== '') {
+        $scope.addCollegeMessage = ' -- Working...';
+        $http.post('http://localhost:8001/api/colleges', { collegeName: $scope.newCollegeName })
+          .then(function (response) {
+            if(response.status === 201) {
+              $scope.addCollegeMessage = '';
+              $scope.college_list.push(response.data);
+            } else {
+              $scope.addCollegeMessage = 'Some error occurred';
+            }
+          });
+      } else {
+        alert('Please enter college name');
+      }
     };
 
     $scope.registerUser = function(){
@@ -176,7 +158,7 @@ angular.module('shaastra2016App')
           age: $scope.age,
           city: $scope.city,
           gender: $scope.gender,
-          college: $scope.college.name,
+          college: $scope.collegeSelected,
           schoolStudent: $scope.schoolStudent
         })
         .then( function() {
