@@ -137,14 +137,17 @@ angular.module('shaastra2016App')
     	$scope.members_Added = [];
 
     	$scope.addTeamMember = function() {
-    		if($scope.newTeamMember !== "") {
+    		if($scope.newTeamMember !== "" && $scope.user.festID !== $scope.newTeamMember.toUpperCase()) {
     			$scope.membersAdded = $scope.membersAdded + "," + $scope.newTeamMember ;
     			$scope.members_Added.push($scope.newTeamMember);
     			console.log($scope.members_Added);
     			$scope.newTeamMember = "";
-    		}
+    		} else {
+          $scope.newTeamMember = "";
+        }
     	};
     	$scope.createNewTeam = function() {
+       if($scope.teamName !== '' && $scope.members_Added.length !== 0) {
     		$scope.teamCreateMessage = " -- Working...";
     		$http.post('http://localhost:8001/api/teams', {
     			teamMembers: $scope.members_Added,
@@ -164,6 +167,9 @@ angular.module('shaastra2016App')
 	  				$scope.teamCreateMessage = 'Some error occurred!';
 	  			}
   			});
+       } else {
+          alert("Please select a team name and add members"); 
+       }
     	};
 
 		$scope.myItems = [];

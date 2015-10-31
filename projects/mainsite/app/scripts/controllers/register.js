@@ -59,6 +59,7 @@ angular.module('shaastra2016App')
     $scope.submitted = false;
     $scope.disableRegister = false;
     $scope.wantAccomodation = false;
+    $scope.userRegisterMessage = '';
 
     // $http.get('http://shaastra.org:8001/api/colleges')
     $http.get('http://localhost:8001/api/colleges')
@@ -149,8 +150,8 @@ angular.module('shaastra2016App')
 
     $scope.registerUser = function(){
       $scope.submitted = true;
-      $scope.userRegisterMessage = " -- Working...";
       if($scope.form.$valid && ($scope.password === $scope.confirmPassword)) {
+      $scope.userRegisterMessage = " -- Working...";
         $scope.disableRegister = true;
         Auth.createUser({
           name: $scope.name,

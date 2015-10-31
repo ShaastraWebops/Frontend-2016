@@ -106,7 +106,7 @@
 					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
 				</div>
 				<div class="panel-body fontNormal">
-					Events Registered : <p style="margin-left:14%" ng-if="(all_teams[i].eventsRegistered.length==0)">No events are registered with this team</p> <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-if="(req.user._id===all_teams[i].teamLeader._id || req.user._id===all_teams[i].teamLeader)" ng-click="unregisterEvent(all_teams[i], event, $index, i)">Unregister</button> </p></li></ul>
+					Events Registered : <p style="margin-left:14%" ng-if="(all_teams[i].eventsRegistered.length==0)">No events are registered with this team</p> <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-if="(user._id===all_teams[i].teamLeader._id || user._id===all_teams[i].teamLeader)" ng-click="unregisterEvent(all_teams[i], event, $index, i)">Unregister</button> </p></li></ul>
 					<div>
 						Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers track by $index">{{ teammate.name }}<span ng-if="(teammate._id===all_teams[i].teamLeader._id || teammate._id===all_teams[i].teamLeader)"> (Team Leader)</span></li></ul>
 					</div>
