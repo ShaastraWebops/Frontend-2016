@@ -5,7 +5,7 @@ angular.module('shaastra2016App')
 
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.getCurrentUser = Auth.getCurrentUser;
-    
+
     $scope.logout = function () {
       Auth.logout();
       $location.path('/login');

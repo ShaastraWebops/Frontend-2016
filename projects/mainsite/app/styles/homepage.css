@@ -464,6 +464,10 @@ a:hover, a:active, a:focus {
 .nav-item-new:hover {
 	cursor: pointer;
 }
+#userSelect {
+	font-size: 1.2em;
+	padding: 10px;
+}
 .nav-item-new:hover a {
 	color: #e1e1e1;
 }
