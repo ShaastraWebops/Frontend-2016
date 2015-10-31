@@ -12,7 +12,7 @@
 			</div>
 
 			<div ng-if="eve.eventTabs.length" class="row">
-				<div class="col-xs-6 hidden-sm hidden-md hidden-lg" ng-repeat="x in eve.eventTabs track by $index">
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-repeat="x in eve.eventTabs track by $index">
 					<a event-nav-hyperlink href="" ng-click="info($index)">
 						<div class="event-nav-xs" ng-class="{'event-nav-selected':(i === $index)}">
 							{{x.name}}

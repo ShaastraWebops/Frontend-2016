@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('internationalSummitCtrl', function ($scope, $location, $anchorScroll) {
+  .controller('makersSummitCtrl', function ($scope, $location, $anchorScroll) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({
