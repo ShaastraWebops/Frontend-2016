@@ -69,10 +69,11 @@ angular.module('shaastra2016App')
         if($scope.eventSelected !== '' && ($scope.teamSelected !== '' || $scope.singleMember === true)) {
           $scope.eventRegisterMessage = ' -- Working...';
       		var currentEvent = JSON.parse($scope.eventSelected);
+          var currentTeam = {};
           if($scope.singleMember === false) {
-      		  var currentTeam = JSON.parse($scope.teamSelected);
+      		  currentTeam = JSON.parse($scope.teamSelected);
           } else {
-            var currentTeam = $scope.user.selfTeam;
+            currentTeam = $scope.user.selfTeam;
           }
       		var sendBody = {
       			eventRegistered: currentEvent._id,
