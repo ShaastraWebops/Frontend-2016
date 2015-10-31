@@ -4,9 +4,6 @@ angular.module('shaastra2016App')
   .controller("MainController", function ($scope, $location, Auth) {
 
     $scope.isLoggedIn = Auth.isLoggedIn;
-    $scope.isAdmin = Auth.isAdmin;
-    $scope.isCore = Auth.isCore;
-    $scope.isSuperCoord = Auth.isSuperCoord;
     $scope.getCurrentUser = Auth.getCurrentUser;
     
     $scope.logout = function () {
