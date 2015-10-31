@@ -136,9 +136,18 @@
 
 				<div id="selectGender" class="col-lg-2 col-xs-6">
 					<label class="radio-inline"><input type="radio" ng-model="gender" value="true">Male</label>
-					<label class="radio-inline"><input type="radio" ng-model="gender" value="false">Female</label>	
+					<label class="radio-inline"><input type="radio" ng-model="gender" value="false">Female</label>
+					<div class="col-lg-12 col-xs-12">
+					<span>(Default will be male)</span>
+					</div>	
 				</div>
 			</div>
+
+				<div class="checkbox col-lg-offset-4 col-lg-4 col-xs-12">
+			    <label>
+			      <input type="checkbox" ng-model="wantAccomodation"> Want Accomodation (Tick if yes)
+			    </label>
+				</div>
 
 			<div id="setpassword" class="row">
 			  <div class="col-lg-offset-3 col-lg-3 col-xs-12">
@@ -146,8 +155,8 @@
 	                                          								'has-error': form.college.$invalid && submitted }">
 				<!-- <input type="text" name="college" ng-model="college.name" ng-keydown="highlight($event)" id="col-in" class="form-control" required placeholder="Enter your school/college" auto-completeone> -->
 
-		        <select class="form-control" name="college" ng-model="collegeSelected">
-		          <option value="" selected disabled>Choose College/School/Institution Name</option>
+		        <select class="form-control" required name="college" ng-model="collegeSelected">
+		          <option value="" selected disabled>Choose College/School/Work</option>
 		          <option ng-repeat="college in college_list" value="{{ college._id }}">{{ college.collegeName }}</option>
 		        </select>
 
@@ -168,7 +177,7 @@
 				</ul>
 				</div> -->
 						<span class="help-block" ng-show="form.college.$error.required && submitted">
-		      		College/School/Institution is required
+		      		College/School/Work is required
 		    		</span>
 	      	</div>
       	</div>
@@ -179,7 +188,7 @@
 				</div>
 			</div>
 				<p id="textCollege">
-					<span ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here</span> to add school/college/institution if it is not shown
+					<span ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here</span> to add school/college/Work if it is not shown
 				</p>
 				<div id="college" ng-hide="existingCollege">
 					<div id="setpassword" class="row">
@@ -192,7 +201,8 @@
 					</div>
 				</div>
 
-			<a id="btndownr" class="btn btn-md btn-primary" ng-click="registerUser()">Register</a>
+
+			<a id="btndownr" class="btn btn-md btn-primary" ng-disabled="disableRegister" ng-click="registerUser()">Register</a>
 		</form>
 	</center>
 </div>
