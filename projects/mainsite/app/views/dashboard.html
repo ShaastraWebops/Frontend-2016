@@ -72,8 +72,8 @@
 					<!-- <th scope="row">{{$index}}</th> -->
 					<td><div><div ng-class="{'event-nav-selected':(i === $index)}" class="fontNormal">{{ team.teamName }}</div></div></td>
 					<td><button ng-click="data($index)" class="btn btn-warning" ng-click="leaveTeam($index)"><span class="fontNormal">View team details</span>  <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></button></td>
-					<td><button class="btn btn-warning" ng-click="leaveTeam($index)" ng-if="!(team.teamLeader._id===user._id)"><span class="fontNormal">Leave team</span></button></td>
-					<td><button class="btn btn-danger" ng-click="deleteTeam($index)" ng-if="(team.teamLeader._id===user._id && team.selfTeam===false)"><span class="fontNormal">Delete team</span></button></td>
+					<td><button class="btn btn-warning" ng-click="leaveTeam($index)" ng-if="!(team.teamLeader._id===user._id || team.teamLeader===user._id)"><span class="fontNormal">Leave team</span></button></td>
+					<td><button class="btn btn-danger" ng-click="deleteTeam($index)" ng-if="((team.teamLeader._id===user._id || team.teamLeader===user._id) && team.selfTeam===false)"><span class="fontNormal">Delete team</span></button></td>
 				</tr>
 			</tbody>
     </table>

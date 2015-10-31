@@ -158,6 +158,7 @@ angular.module('shaastra2016App')
     				$scope.newTeamMember = "";
    					$scope.membersAdded = "You";
    					$scope.teamCreateMessage = '';
+            console.log(response.data);
    					$scope.all_teams.push(response.data);
 	  			} else {
 	  				$scope.teamCreateMessage = 'Some error occurred!';
