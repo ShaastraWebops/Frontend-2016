@@ -1,16 +1,15 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
 	<h1 id="topHead">Your Dashboard</h1>
 
-	<div class="container col-md-offset-4 col-md-4 col-sm-12">
-		 <div id="userDetail" class="jumbotron">
-		  <label for="sel1"><div class="panel-heading" id="hding2">User Details</div></label>
-		  <h3 id="teamReq"><b>Name -</b> {{ user.name }}</h3>
-		  <h3 id="teamReq"><b>Email ID -</b> {{ user.email }}</h3>
-		  <h3 id="teamReq"><b>Shaastra ID -</b> {{ user.festID }}</h3>
+	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1">
+		<div class="container col-md-12 col-sm-12">
+			<div id="userDetail" class="jumbotron">
+			  <label for="sel1"><div class="panel-heading" id="hding2">User Details</div></label>
+			  <h3 id="teamReq"><b>Name -</b> {{ user.name }}</h3>
+			  <h3 id="teamReq"><b>Email ID -</b> {{ user.email }}</h3>
+			  <h3 id="teamReq"><b>Shaastra ID -</b> {{ user.festID }}</h3>
+			</div>
 		</div>
-	</div>
-
-	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1" class="list">
 		<div class="container col-md-12 col-sm-12">
 			<div class="jumbotron">
 		  <label for="sel1"><div class="panel-heading" id="hding">Register for an Event or Workshop {{ eventRegisterMessage }}</div></label>
@@ -42,28 +41,6 @@
 				<button id="registerTeam" class="btn btn-success" ng-click="registerEvent()">Register</button>
 			</center>
 		</div>
-<!-- 
-		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
-   	<table class="table table-striped">
-			<tbody>
-				<tr ng-repeat="event in eventsRgistered track by $index">
-					<th scope="row">{{$index+1}}</th>
-					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.name}}</div></a></td>
-					<td><a href="" ng-click="unregisterEvent($index)" class="fontNormal">unregister</a></td>
-				</tr>
-			</tbody>
-    </table>
- -->
-    <!-- <label for="sel1"><div class="panel-heading" id="hding">Teams Created</div></label>
-   	<table class="table">
-			<tbody>
-				<tr ng-repeat="event in events.eventsList track by $index">
-					<th scope="row">{{$index+1}}</th>
-					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.teamname}}</div></a></td>
-					<td><a href="" ng-click="unregister($index)" class="fontNormal">leave</a></td>
-				</tr>
-			</tbody>
-    </table> -->
 
     <label for="sel1"><div class="panel-heading" id="hding">Teams Created {{teamBlockMessage}}</div></label>
    	<table class="table">
@@ -82,6 +59,14 @@
 	</div>
   
 	<div class="col-md-5 col-sm-4 col-md-offset-1 col-sm-offset-1">
+		<div class="container col-md-12 col-sm-12">
+			 <div id="userDetail" class="jumbotron">
+			  <label for="sel1"><div class="panel-heading" id="hding2">Instructions</div></label>
+			  <h3 id="teamReq"><span class="midot"><b>&middot;</b></span> If you are creating the team, you will be the team leader</h3>
+			  <h3 id="teamReq"><span class="midot"><b>&middot;</b></span> Any one of the team member's can regiser for an event</h3>
+			  <h3 id="teamReq"><span class="midot"><b>&middot;</b></span> Only team leader can unregister for a registered event</h3>
+			</div>
+		</div>
 		<div class="container col-md-12 col-sm-12">
 		 <div class="jumbotron">
 		  <label for="sel1"><div class="panel-heading" id="hding">Create Team {{ teamCreateMessage }}</div></label>
