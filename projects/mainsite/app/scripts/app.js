@@ -115,9 +115,9 @@ angular
         controller: 'socialCtrl',
         controllerAs: 'social'
       })
-      .when('/international-summit', {
-        templateUrl: 'views/international-summit.html',
-        controller: 'internationalSummitCtrl',
+      .when('/makers-summit', {
+        templateUrl: 'views/makers-summit.html',
+        controller: 'makersSummitCtrl',
         controllerAs: 'summit'
       })
       .when('/samparks', {
