@@ -147,8 +147,8 @@ angular.module('shaastra2016App')
     $scope.registerUser = function(){
       $scope.submitted = true;
 
-      // if(form.$valid) {
-        // console.log('asd');
+      if($scope.form.$valid) {
+        console.log('asd');
         Auth.createUser({
           name: $scope.name,
           secondName: $scope.secondName,
@@ -175,7 +175,7 @@ angular.module('shaastra2016App')
         //   $scope.errors[field] = error.message;
         // });
         });
-      // }
+      }
     };
 
 });
