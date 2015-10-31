@@ -158,18 +158,6 @@ angular.module('shaastra2016App')
       },
 
       /**
-       * Check if a user is an admin
-       *
-       * @return {Boolean}
-       */
-      isAdmin: function() {
-        return currentUser.role === 'admin';
-      },
-      hasRoleCore: function() {
-        return currentUser.role === 'core' || currentUser.role === 'admin';
-      },
-
-      /**
        * Get auth token
        */
       getToken: function() {
