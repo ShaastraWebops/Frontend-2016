@@ -75,7 +75,7 @@ angular.module('shaastra2016App')
       		var sendBody = {
       			eventRegistered: currentEvent._id,
       			team: currentTeam._id
-      		} 
+      		};
       		$http.post('http://localhost:8001/api/registrations', sendBody)
       			.then(function (response) {
       				console.log(response);
@@ -97,7 +97,7 @@ angular.module('shaastra2016App')
       };
 
       $scope.unregisterEvent = function (team, event, eventIndex, teamIndex) {
-        var result = confirm("Are you sure you want to Unregister?");
+        var result = confirm("Are you sure you want to Unregister? Only team-leader can unregister to an event and this action cannot be undone!");
         if(result) {
           $scope.eventUnRegisterMessage = ' -- Working...';
           $http.delete('http://localhost:8001/api/registrations/' + team._id + '/' + event._id)
@@ -192,7 +192,7 @@ angular.module('shaastra2016App')
 		};
 
 	$scope.leaveTeam = function (index) {
-    var result = confirm("Are you sure you want to Leave Team?");
+    var result = confirm("Are you sure you want to Leave Team? This action cannot be undone!");
     if(result) {
   		$scope.teamBlockMessage = ' -- Working...';
   		var teamId = $scope.all_teams[index]._id;
@@ -210,7 +210,7 @@ angular.module('shaastra2016App')
 	};
 
   $scope.deleteTeam = function (index) {
-    var result = confirm("Are you sure you want to Delete Team?");
+    var result = confirm("Are you sure you want to Delete Team? Only team-leader can delete the team and this action cannot be undone!");
     if(result) {
       $scope.teamBlockMessage = ' -- Working...';
       var teamId = $scope.all_teams[index]._id;
