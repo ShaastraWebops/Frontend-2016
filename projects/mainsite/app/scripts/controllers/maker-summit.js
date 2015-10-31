@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('makersSummitCtrl', function ($scope, $location, $anchorScroll) {
+  .controller('makerSummitCtrl', function ($scope, $location, $anchorScroll) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({
@@ -17,6 +17,13 @@ angular.module('shaastra2016App')
       $location.hash(element);
       $anchorScroll();
       $location.hash(temp);
+    };
+
+    $scope.makersTabs = ['Home', 'Event', 'Tracks', 'Speakers', 'Registration', 'Schedule', 'Contact Us'];
+    $scope.tab = 0;
+
+    $scope.changeTab = function (index) {
+      $scope.tab = index;
     };
 
   });
