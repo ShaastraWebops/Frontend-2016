@@ -62,7 +62,7 @@ angular.module('shaastra2016App')
     $scope.userRegisterMessage = '';
 
     // $http.get('http://shaastra.org:8001/api/colleges')
-    $http.get('http://localhost:8001/api/colleges')
+    $http.get('http://shaastra.org:8001/api/colleges')
       .then(function (response) {
         $scope.college_list = response.data;
       });
@@ -134,7 +134,7 @@ angular.module('shaastra2016App')
     $scope.addCollege = function () {
       if($scope.newCollegeName !== '') {
         $scope.addCollegeMessage = ' -- Working...';
-        $http.post('http://localhost:8001/api/colleges', { collegeName: $scope.newCollegeName })
+        $http.post('http://shaastra.org:8001/api/colleges', { collegeName: $scope.newCollegeName })
           .then(function (response) {
             if(response.status === 201) {
               $scope.addCollegeMessage = '';

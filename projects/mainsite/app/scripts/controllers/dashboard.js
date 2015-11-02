@@ -18,7 +18,6 @@ angular.module('shaastra2016App')
 
     Auth.isLoggedInAsync(function (loggedIn) {
     	$scope.user = Auth.getCurrentUser();
-    	console.log($scope.user);
     });
 
 
@@ -40,7 +39,7 @@ angular.module('shaastra2016App')
     $scope.eventSelected = '';
 
     // $http.get('http://shaastra.org:8001/api/events')
-    $http.get('http://localhost:8001/api/events')
+    $http.get('http://shaastra.org:8001/api/events')
       .then(function (response) {
       	response.data.sort(function (a, b) {
 					if(a.name < b.name) { return -1; }
@@ -48,10 +47,9 @@ angular.module('shaastra2016App')
 					return 0;
       	});
         $scope.all_events = response.data;
-        console.log($scope.all_events);
       });
 
-		$http.get('http://localhost:8001/api/teams')
+		$http.get('http://shaastra.org:8001/api/teams')
       .then(function (response) {
         var numTeams = response.data.length;
         for(var i=0; i<numTeams; i++) {
@@ -60,8 +58,6 @@ angular.module('shaastra2016App')
           }
         }
         $scope.all_teams = response.data;
-        
-        console.log($scope.all_teams);
       });
 
       $scope.registerEvent = function() {
@@ -78,9 +74,8 @@ angular.module('shaastra2016App')
       			eventRegistered: currentEvent._id,
       			team: currentTeam._id
       		};
-      		$http.post('http://localhost:8001/api/registrations', sendBody)
+      		$http.post('http://shaastra.org:8001/api/registrations', sendBody)
       			.then(function (response) {
-      				console.log(response);
               if(response.status === 204) {
                 $scope.eventRegisterMessage = '';
                 var numTeams = $scope.all_teams.length;
@@ -105,7 +100,7 @@ angular.module('shaastra2016App')
         var result = confirm("Are you sure you want to Unregister? Only team-leader can unregister to an event and this action cannot be undone!");
         if(result) {
           $scope.eventUnRegisterMessage = ' -- Working...';
-          $http.delete('http://localhost:8001/api/registrations/' + team._id + '/' + event._id)
+          $http.delete('http://shaastra.org:8001/api/registrations/' + team._id + '/' + event._id)
             .then(function (response) {
               if(response.status === 204) {
                 $scope.eventUnRegisterMessage = '';
@@ -145,9 +140,8 @@ angular.module('shaastra2016App')
 
     	$scope.addTeamMember = function() {
     		if($scope.newTeamMember !== "" && $scope.user.festID !== $scope.newTeamMember.toUpperCase()) {
-    			$scope.membersAdded = $scope.membersAdded + "," + $scope.newTeamMember ;
+    			$scope.membersAdded = $scope.membersAdded + " , " + $scope.newTeamMember ;
     			$scope.members_Added.push($scope.newTeamMember);
-    			console.log($scope.members_Added);
     			$scope.newTeamMember = "";
     		} else {
           $scope.newTeamMember = "";
@@ -156,19 +150,17 @@ angular.module('shaastra2016App')
     	$scope.createNewTeam = function() {
        if($scope.teamName !== '' && $scope.members_Added.length !== 0) {
     		$scope.teamCreateMessage = " -- Working...";
-    		$http.post('http://localhost:8001/api/teams', {
+    		$http.post('http://shaastra.org:8001/api/teams', {
     			teamMembers: $scope.members_Added,
     			teamName: $scope.teamName
     		})
   			.then(function (response){
-  				console.log(response);
 	  			if(response.status === 201) {
    					$scope.teamName = "";
     				$scope.members_Added = [];
     				$scope.newTeamMember = "";
    					$scope.membersAdded = "You";
    					$scope.teamCreateMessage = '';
-            console.log(response.data);
    					$scope.all_teams.push(response.data);
 	  			} else {
 	  				$scope.teamCreateMessage = 'Some error occurred!';
@@ -179,46 +171,13 @@ angular.module('shaastra2016App')
        }
     	};
 
-		$scope.myItems = [];
-		$scope.events = {
-			eventsList:[{
-					eventName:"Manual Robotics",
-					teamname:"SuperBot",
-					teammembers:[
-						'fgsgdbjds',
-						'djkhgushdj',
-						'ojfksakf'
-					]
-				},
-				{
-					eventName:"Autonomous Robotics",
-					teamname:"Super1Bot",
-					teammembers:[
-						'gfsbjbv',
-						'djgbjsd',
-					]
-				},
-				{
-					eventName:"eventName",
-					teamname:"teamname",
-					teammembers:[
-						'teamvmember1',
-						'teammdember1',
-						'tedammember1',
-						'teammembeer1',
-					]
-				}
-			]
-		};
-
 	$scope.leaveTeam = function (index) {
     var result = confirm("Are you sure you want to Leave Team? This action cannot be undone!");
     if(result) {
   		$scope.teamBlockMessage = ' -- Working...';
   		var teamId = $scope.all_teams[index]._id;
-  		$http.post('http://localhost:8001/api/teams/leave/'+ teamId)
+  		$http.post('http://shaastra.org:8001/api/teams/leave/'+ teamId)
   		  .then(function (response) {
-    			console.log(response);
     			if(response.status === 200) {
     				$scope.teamBlockMessage = '';
     				$scope.all_teams.splice(index, 1);
@@ -234,7 +193,7 @@ angular.module('shaastra2016App')
     if(result) {
       $scope.teamBlockMessage = ' -- Working...';
       var teamId = $scope.all_teams[index]._id;
-      $http.delete('http://localhost:8001/api/teams/' + teamId)
+      $http.delete('http://shaastra.org:8001/api/teams/' + teamId)
         .then(function (response) {
           if(response.status === 204) {
             $scope.teamBlockMessage = '';
@@ -245,43 +204,5 @@ angular.module('shaastra2016App')
         });
     }
   };
-
-	$scope.lists=[{
-	    name: "AeroFest",
-  	  imgUrl: "images/aerofest.png",
-		},
-		{
-	    name: "B-Events",
-	    imgUrl: "images/bevents.png",
-		},
-		{
-	    name: "Coding",
-	    imgUrl: "images/coding.png",
-		},
-		{
-	    name: "Design And Build",
-	    imgUrl: "images/coding.png",
-		},
-		{
-	    name: "Department Flagship",
-	    imgUrl: "images/Department-Flagship.jpg",
-		},
-		{
-	    name: "Electronic Fest",
-	    imgUrl: "images/Electronics.jpg",
-		},
-		{
-	    name: "Involve",
-	    imgUrl: "images/Involve.jpg",
-		},
-		{
-	    name: "Quizzing",
-	    imgUrl: "images/Quizzing.jpg",
-		},
-		{
-	    name: "Spotlight",
-	    imgUrl: "images/Spotlight.jpg",
-		}
-	];
 
 });

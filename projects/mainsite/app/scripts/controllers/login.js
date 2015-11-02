@@ -22,10 +22,10 @@ angular.module('shaastra2016App')
         .then( function() {
             // Logged in, redirect to home
             $location.path('/dashboard');
-            $http.get('http://localhost.org:8001/api/users/me')
-            .then(function (response) {
-                console.log(response.data);
-            });
+            // $http.get('http://localhost.org:8001/api/users/me')
+            // .then(function (response) {
+            //     console.log(response.data);
+            // });
         })
         .catch( function (err) {
             console.log(err);
