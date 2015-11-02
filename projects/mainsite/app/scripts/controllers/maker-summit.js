@@ -20,7 +20,7 @@ angular.module('shaastra2016App')
     };
 
     $scope.makersTabs = ['Home', 'Event', 'Tracks', 'Speakers', 'Registration', 'Schedule', 'Contact Us'];
-    $scope.tab = 3;
+    $scope.tab = 0;
 
     $scope.changeTab = function (index) {
       $scope.tab = index;
