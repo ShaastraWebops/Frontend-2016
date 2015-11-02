@@ -32,6 +32,10 @@
 	letter-spacing: 2px;
 }
 
+.marquee {
+	font-size: 1.2em;
+}
+
 .dot{
 	display: inline-block;
 	border-radius: 0.5em;
