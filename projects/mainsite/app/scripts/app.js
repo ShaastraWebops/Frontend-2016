@@ -82,7 +82,8 @@ angular
       .when('/dashboard', {
         templateUrl: 'views/dashboard.html',
         controller: 'dashboardCtrl',
-        controllerAs: 'dashboard'
+        controllerAs: 'dashboard',
+        authenticate: true
       })
       .when('/lectures', {
         templateUrl: 'views/lectures.html',
@@ -109,7 +110,6 @@ angular
         controller: 'sponsorsCtrl',
         controllerAs: 'sponsors'
       })
-     
       .when('/social', {
         templateUrl: 'views/social.html',
         controller: 'socialCtrl',

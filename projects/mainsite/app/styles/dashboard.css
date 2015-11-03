@@ -22,6 +22,11 @@
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: #ffffff; 
 }
+
+.team-details-btn {
+	background-color: #991108;
+	color: white;
+}
 .topdiv
 {
 	margin-top: 5%;
