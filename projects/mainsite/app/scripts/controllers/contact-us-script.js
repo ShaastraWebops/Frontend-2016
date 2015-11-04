@@ -107,7 +107,7 @@ angular.module('shaastra2016App')
 			},
 			{
 				id: 5,
-			  name: "Sponsorship & Public Relations",
+			  name: "Sponsorship & PR",
 		    offset: "",
 		    col: "col-lg-4 col-md-4 col-sm-4 col-xs-12",
 			  contacts: [{
