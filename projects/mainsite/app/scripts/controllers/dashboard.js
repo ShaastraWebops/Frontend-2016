@@ -41,6 +41,15 @@ angular.module('shaastra2016App')
     // $http.get('http://shaastra.org:8001/api/events')
     $http.get('http://shaastra.org:8001/api/events')
       .then(function (response) {
+        var numEvents = response.data.length;
+        for(var i=0; i<numEvents; i++) {
+          if(response.data[i].isEvent && !response.data[i].isWorkshop) {
+            response.data[i].name = 'Event | ' + response.data[i].name;
+          }
+          if(!response.data[i].isEvent && response.data[i].isWorkshop) {
+            response.data[i].name = 'Workshop | ' + response.data[i].name;
+          }
+        }
       	response.data.sort(function (a, b) {
 					if(a.name < b.name) { return -1; }
 					if(a.name > b.name) { return 1; }

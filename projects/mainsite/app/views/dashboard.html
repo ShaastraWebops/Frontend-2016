@@ -17,7 +17,7 @@
 	                                            'has-error': form.event.$invalid && submitted }">
 	            <!-- <label>Select the Event</label> -->
 	        <select class="form-control" name="event" ng-model="eventSelected" ng-change="showTeamRequire()">
-	          <option value="" selected disabled>Select the Event</option>
+	          <option value="" selected disabled>Select the Event or Workshop</option>
 	          <option ng-repeat="event in all_events track by $index" value="{{ event }}">{{ event.name }}</option>
 	        </select>
 	          <span class="help-block" ng-show="form.event.$error.required && submitted">

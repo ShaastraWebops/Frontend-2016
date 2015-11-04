@@ -28,7 +28,9 @@ angular.module('shaastra2016App')
             // });
         })
         .catch( function (err) {
-            console.log(err);
+            alert('Please enter correct credentials');
+            // console.log(err);
+            $location.path('/login');
             // $scope.errors.other = err.message;
         });
     };
