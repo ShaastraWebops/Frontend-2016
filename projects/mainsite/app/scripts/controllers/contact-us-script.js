@@ -29,22 +29,22 @@ angular.module('shaastra2016App')
 			}, 
 			{
 				id: 1,
-		    name: "Concept & Design",
+			  name: "Student Relations",
 		    offset: "col-lg-offset-1 col-md-offset-1",
 		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
-		 	  contacts: [{
-		  		image: "images/core-team/bhagyesh.jpg",
-		 			personName: "Bhagyesh Chaturvedi",
-		 			phone: "9884182442",
-		 			mail: "bhagyesh@shaastra.org"
-		 		},
-		 		{
-		  		image: "images/core-team/naman.jpg",
-		 			personName: "Naman Garg",
-		 			phone: "9092603977",
-		 			mail: "naman@shaastra.org"
-		 		}]
-		 	},
+			  contacts: [{
+		  		image: "images/core-team/saurabh.jpg",
+			 		personName: "Saurabh Awatade",
+			 		phone: "9043808645",
+			 		mail: "saurabh@shaastra.org"
+			 	},
+			 	{
+		  		image: "images/core-team/tejaswin.jpg",
+			 		personName: "Tejaswin P",
+			 		phone: "8056112645",
+			 		mail: "tejaswin@shaastra.org"
+			 	}]
+			},
 			{
 				id: 2, 
 			  name: "Events",
@@ -71,6 +71,24 @@ angular.module('shaastra2016App')
 			},
 			{
 				id: 3,
+			 	name: "Evolve",
+		    offset: "col-lg-offset-1 col-md-offset-1",
+		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
+			 	contacts: [{
+		  		image: "images/core-team/vedant.jpg",
+			 		personName: "Vedant Agrawal",
+			 		phone: "9884299316",
+			 		mail: "vedantagr@shaastra.org"
+			 	},
+			 	{
+		  		image: "images/core-team/ayesha.jpg",
+			 		personName: "Ayesha",
+			 		phone: "9566533966",
+			 		mail: "ayesha@shaastra.org"
+			 	}]
+			},
+			{
+				id: 4,
 			  name: "Finance",
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
@@ -85,24 +103,6 @@ angular.module('shaastra2016App')
 			 		personName: "Botcha Pavana Kumar",
 			 		phone: "9092006577",
 			 		mail: "pavan@shaastra.org"
-			 	}]
-			},
-			{
-				id: 4,
-			  name: "Facilities",
-		    offset: "col-lg-offset-1 col-md-offset-1",
-		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
-			  contacts: [{
-		  		image: "images/core-team/jha.jpg",
-			 		personName: "Amit Kumar Jha",
-			 		phone: "9677161556",
-			 		mail: "amit@shaastra.org"
-			 	},
-			 	{
-		  		image: "images/core-team/geo.jpg",
-			 		personName: "Geo Davis",
-			 		phone: "7845657286",
-			 		mail: "geo@shaastra.org"
 			 	}]
 			},
 			{
@@ -131,6 +131,24 @@ angular.module('shaastra2016App')
 			},
 			{
 				id: 6,
+			  name: "Facilities",
+		    offset: "col-lg-offset-1 col-md-offset-1",
+		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
+			  contacts: [{
+		  		image: "images/core-team/jha.jpg",
+			 		personName: "Amit Kumar Jha",
+			 		phone: "9677161556",
+			 		mail: "amit@shaastra.org"
+			 	},
+			 	{
+		  		image: "images/core-team/geo.jpg",
+			 		personName: "Geo Davis",
+			 		phone: "7845657286",
+			 		mail: "geo@shaastra.org"
+			 	}]
+			},
+			{
+				id: 7,
 			  name: "Shows and Exhibitions",
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
@@ -139,30 +157,6 @@ angular.module('shaastra2016App')
 			 		personName: "Animesh Bagora",
 			 		phone: "9884299639",
 			 		mail: "animesh.bagora@shaastra.org"
-			 	}]
-			},
-			{
-				id: 7,
-			  name: "Student Relations",
-		    offset: "col-lg-offset-1 col-md-offset-1",
-		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
-			  contacts: [{
-		  		image: "images/core-team/saurabh.jpg",
-			 		personName: "Saurabh Awatade",
-			 		phone: "9043808645",
-			 		mail: "saurabh@shaastra.org"
-			 	},
-			 	{
-		  		image: "images/core-team/tejaswin.jpg",
-			 		personName: "Tejaswin P",
-			 		phone: "8056112645",
-			 		mail: "tejaswin@shaastra.org"
-			 	// },
-			 	// {
-		  	// 	image: "neha.jpg",
-			 	// 	personName: "Neha Agarwal",
-			 	// 	phone: "8754508380",
-			 	// 	mail: "nehaag@shaastra.org"
 			 	}]
 			},
 			{
@@ -179,24 +173,6 @@ angular.module('shaastra2016App')
 			},
 			{
 				id: 9,
-			 	name: "Evolve",
-		    offset: "col-lg-offset-1 col-md-offset-1",
-		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
-			 	contacts: [{
-		  		image: "images/core-team/vedant.jpg",
-			 		personName: "Vedant Agrawal",
-			 		phone: "9884299316",
-			 		mail: "vedantagr@shaastra.org"
-			 	},
-			 	{
-		  		image: "images/core-team/ayesha.jpg",
-			 		personName: "Ayesha",
-			 		phone: "9566533966",
-			 		mail: "ayesha@shaastra.org"
-			 	}]
-			},
-			{
-				id: 10,
 			  name: "Envisage",
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
@@ -207,6 +183,24 @@ angular.module('shaastra2016App')
 			 		mail: "yashwanth.envi@shaastra.org"
 			 	}]
 			},
+			{
+				id: 10,
+		    name: "Concept & Design",
+		    offset: "col-lg-offset-1 col-md-offset-1",
+		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
+		 	  contacts: [{
+		  		image: "images/core-team/bhagyesh.jpg",
+		 			personName: "Bhagyesh Chaturvedi",
+		 			phone: "9884182442",
+		 			mail: "bhagyesh@shaastra.org"
+		 		},
+		 		{
+		  		image: "images/core-team/naman.jpg",
+		 			personName: "Naman Garg",
+		 			phone: "9092603977",
+		 			mail: "naman@shaastra.org"
+		 		}]
+		 	},
 			{
 				id: 11,
 			  name: "Web and Mobile Operations",
