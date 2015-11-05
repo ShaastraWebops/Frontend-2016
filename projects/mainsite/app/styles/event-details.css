@@ -32,6 +32,14 @@
 	letter-spacing: 2px;
 }
 
+.register-event {
+	font-family: 'Feather';
+	letter-spacing: 2px;
+	font-size: 2em;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
 .marquee {
 	font-size: 1.2em;
 }
