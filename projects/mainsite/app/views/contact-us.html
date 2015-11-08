@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
 				<div class="contact-div" ng-repeat="department in departmentsJSON.departments track by $index">
-					<div class="contact-div col-xs-4 col-sm-6 col-md-4 col-lg-4" ng-repeat="contact in department.contacts track by $index">
+					<div class="contact-div col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="contact in department.contacts track by $index">
 						<div class="contact-img-desc"><h4><b>{{ department.name }}</b></h4></div>
 						<div>
 							<img ng-src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
