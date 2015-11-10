@@ -28,25 +28,7 @@ angular.module('shaastra2016App')
 			  }]
 			}, 
 			{
-				id: 1,
-			  name: "Student Relations",
-		    offset: "col-lg-offset-1 col-md-offset-1",
-		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
-			  contacts: [{
-		  		image: "images/core-team/saurabh.jpg",
-			 		personName: "Saurabh Awatade",
-			 		phone: "9043808645",
-			 		mail: "saurabh@shaastra.org"
-			 	},
-			 	{
-		  		image: "images/core-team/tejaswin.jpg",
-			 		personName: "Tejaswin P",
-			 		phone: "8056112645",
-			 		mail: "tejaswin@shaastra.org"
-			 	}]
-			},
-			{
-				id: 2, 
+				id: 1, 
 			  name: "Events",
 		    offset: "",
 		    col: "col-lg-4 col-md-4 col-sm-4 col-xs-12",
@@ -67,6 +49,24 @@ angular.module('shaastra2016App')
 			 		personName: "Ajinkya",
 			 		phone: "9087863454",
 			 		mail: "ajinkya@shaastra.org"
+			 	}]
+			},
+			{
+				id: 2,
+			  name: "Student Relations",
+		    offset: "col-lg-offset-1 col-md-offset-1",
+		    col: "col-lg-5 col-md-5 col-sm-6 col-xs-12",
+			  contacts: [{
+		  		image: "images/core-team/saurabh.jpg",
+			 		personName: "Saurabh Awatade",
+			 		phone: "9043808645",
+			 		mail: "saurabh@shaastra.org"
+			 	},
+			 	{
+		  		image: "images/core-team/tejaswin.jpg",
+			 		personName: "Tejaswin P",
+			 		phone: "8056112645",
+			 		mail: "tejaswin@shaastra.org"
 			 	}]
 			},
 			{
