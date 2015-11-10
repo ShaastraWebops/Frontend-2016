@@ -93,12 +93,12 @@ angular.module('shaastra2016App')
 		    offset: "",
 		    col: "col-lg-12 col-md-12 col-sm-12 col-xs-12",
 			  contacts: [{
-		  	// 	image: "ravi.jpg",
-			 	// 	personName: "Ravi Kumar G.D",
-			 	// 	phone: "9043814198",
-			 	// 	mail: "ravi@shaastra.org"
-			 	// },
-			 	// {
+		  		image: "images/core-team/ravi.jpg",
+			 		personName: "Ravi Kumar G.D",
+			 		phone: "9043814198",
+			 		mail: "ravi@shaastra.org"
+			 	},
+			 	{
 		  		image: "images/core-team/pavan.jpg",
 			 		personName: "Botcha Pavana Kumar",
 			 		phone: "9092006577",
