@@ -46,6 +46,7 @@
 	font-size: 8vh;
 	height: 45px;
 	padding-bottom: 3%;
+	letter-spacing: 2px;
 }
 
 @media only screen and (max-width:767px) {
