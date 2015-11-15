@@ -22,6 +22,9 @@
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: #ffffff; 
 }
+.checkbox {
+  z-index: 100;
+}
 #username{
   position: relative; 
   top: 25%;
