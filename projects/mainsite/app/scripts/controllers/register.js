@@ -31,8 +31,10 @@ angular.module('shaastra2016App')
     $scope.schoolStudent = false;
     $scope.submitted = false;
     $scope.disableRegister = false;
+    $scope.disableAddCollege = false;
     $scope.wantAccomodation = false;
     $scope.userRegisterMessage = '';
+    $scope.addCollegeMessage = '';
 
     $http.get('http://shaastra.org:8001/api/colleges')
       .then(function (response) {
@@ -50,6 +52,7 @@ angular.module('shaastra2016App')
     };
 
     $scope.addCollege = function () {
+    $scope.disableAddCollege = true;
       if($scope.newCollegeName !== '') {
         $scope.addCollegeMessage = ' -- Working...';
         $http.post('http://shaastra.org:8001/api/colleges', { collegeName: $scope.newCollegeName })

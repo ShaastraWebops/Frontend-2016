@@ -178,7 +178,8 @@
 							<input type="text" ng-model="newCollegeName" class="form-control" placeholder="Enter your school/college">
 						</div>
 						<div class="col-lg-2 col-xs-12">
-							<button id="addMember" class="btn btn-success" ng-click="addCollege()">Add</button>
+							<button id="addMember" class="btn btn-success" ng-disabled="disableRegister" ng-click="addCollege()">Add</button>
+							<span id="hding">{{ addCollegeMessage }}</span>
 						</div>
 					</div>
 				</div>

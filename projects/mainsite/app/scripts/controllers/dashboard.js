@@ -37,6 +37,10 @@ angular.module('shaastra2016App')
     $scope.teamName = "";
     $scope.teamSelected = '';
     $scope.eventSelected = '';
+    $scope.disableRegisterEvent = false;
+    $scope.disableDeleteTeam = false;
+    $scope.disableCreateTeam = false;
+    $scope.disableUnregisterEvent = false;
 
     // $http.get('http://shaastra.org:8001/api/events')
     $http.get('http://shaastra.org:8001/api/events')
@@ -70,6 +74,7 @@ angular.module('shaastra2016App')
       });
 
       $scope.registerEvent = function() {
+        $scope.disableRegisterEvent = true;
         if($scope.eventSelected !== '' && ($scope.teamSelected !== '' || $scope.singleMember === true)) {
           $scope.eventRegisterMessage = ' -- Working...';
       		var currentEvent = JSON.parse($scope.eventSelected);
@@ -86,6 +91,7 @@ angular.module('shaastra2016App')
       		$http.post('http://shaastra.org:8001/api/registrations', sendBody)
       			.then(function (response) {
               if(response.status === 204) {
+                $scope.disableRegisterEvent = false;
                 $scope.eventRegisterMessage = '';
                 var numTeams = $scope.all_teams.length;
                 for(var i=0; i<numTeams; i++) {
@@ -101,20 +107,24 @@ angular.module('shaastra2016App')
       				}
       			});
       	} else {
+          $scope.disableRegisterEvent = false;
           alert("Please select a team and an event");
         } 
       };
 
       $scope.unregisterEvent = function (team, event, eventIndex, teamIndex) {
+        $scope.disableUnregisterEvent = true;
         var result = confirm("Are you sure you want to Unregister? Only team-leader can unregister to an event and this action cannot be undone!");
         if(result) {
           $scope.eventUnRegisterMessage = ' -- Working...';
           $http.delete('http://shaastra.org:8001/api/registrations/' + team._id + '/' + event._id)
             .then(function (response) {
               if(response.status === 204) {
+                $scope.disableUnregisterEvent = false;
                 $scope.eventUnRegisterMessage = '';
                 $scope.all_teams[teamIndex].eventsRegistered.splice(eventIndex, 1);
               } else {
+                $scope.disableUnregisterEvent = false;
                 $scope.eventUnRegisterMessage = 'Some error occurred';
               }
             });
@@ -157,6 +167,7 @@ angular.module('shaastra2016App')
         }
     	};
     	$scope.createNewTeam = function() {
+        $scope.disableCreateTeam = true;
        if($scope.teamName !== '' && $scope.members_Added.length !== 0) {
     		$scope.teamCreateMessage = " -- Working...";
     		$http.post('http://shaastra.org:8001/api/teams', {
@@ -165,6 +176,7 @@ angular.module('shaastra2016App')
     		})
   			.then(function (response){
 	  			if(response.status === 201) {
+            $scope.disableCreateTeam = false;
    					$scope.teamName = "";
     				$scope.members_Added = [];
     				$scope.newTeamMember = "";
@@ -172,15 +184,18 @@ angular.module('shaastra2016App')
    					$scope.teamCreateMessage = '';
    					$scope.all_teams.push(response.data);
 	  			} else {
+            $scope.disableCreateTeam = false;
 	  				$scope.teamCreateMessage = 'Some error occurred!';
 	  			}
   			});
        } else {
+          $scope.disableCreateTeam = false;
           alert("Please select a team name and add members"); 
        }
     	};
 
 	$scope.leaveTeam = function (index) {
+    $scope.disableDeleteTeam = true;
     var result = confirm("Are you sure you want to Leave Team? This action cannot be undone!");
     if(result) {
   		$scope.teamBlockMessage = ' -- Working...';
@@ -188,9 +203,11 @@ angular.module('shaastra2016App')
   		$http.post('http://shaastra.org:8001/api/teams/leave/'+ teamId)
   		  .then(function (response) {
     			if(response.status === 200) {
+            $scope.disableDeleteTeam = false;
     				$scope.teamBlockMessage = '';
     				$scope.all_teams.splice(index, 1);
     			} else {
+            $scope.disableDeleteTeam = false;
     				$scope.teamBlockMessage = 'Some error occurred!';
     			}
     		});
@@ -198,6 +215,7 @@ angular.module('shaastra2016App')
 	};
 
   $scope.deleteTeam = function (index) {
+    $scope.disableDeleteTeam = true;
     var result = confirm("Are you sure you want to Delete Team? Only team-leader can delete the team and this action cannot be undone!");
     if(result) {
       $scope.teamBlockMessage = ' -- Working...';
@@ -205,9 +223,11 @@ angular.module('shaastra2016App')
       $http.delete('http://shaastra.org:8001/api/teams/' + teamId)
         .then(function (response) {
           if(response.status === 204) {
+            $scope.disableDeleteTeam = false;
             $scope.teamBlockMessage = '';
             $scope.all_teams.splice(index, 1);
           } else {
+            $scope.disableDeleteTeam = false;
             $scope.teamBlockMessage = 'Some error occurred';
           }
         });
