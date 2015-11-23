@@ -135,6 +135,11 @@ angular
         controller: 'hospiCtrl',
         controllerAs: 'hospi'
       })
+      .when('/shaastra-fellowship', {
+        templateUrl: 'views/sis-fellowship.html',
+        controller: 'sisFellowshipCtrl',
+        controllerAs: 'sis'
+      })
       .otherwise({
         redirectTo: '/'
       });
