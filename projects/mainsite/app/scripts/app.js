@@ -145,6 +145,11 @@ angular
         controller: 'forgotPasswordCtrl',
         controllerAs: 'forgoPass'
       })
+      .when('/reset-password', {
+        templateUrl: 'views/reset-password.html',
+        controller: 'resetPasswordCtrl',
+        controllerAs: 'resetPass'
+      })
       .otherwise({
         redirectTo: '/'
       });

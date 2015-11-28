@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('forgotPasswordCtrl', function ($scope) {
+  .controller('forgotPasswordCtrl', function ($scope, $http) {
 
     var html = angular.element(document.getElementById('body'));
     html.css({
@@ -17,7 +17,7 @@ angular.module('shaastra2016App')
 
     $scope.forgotPassword = function(form) {
       $scope.submitted = true;
-        $scope.message = 'Working...'
+        $scope.message = 'Working...';
 
       if(form.$valid) {
         $http.post('/api/users/forgotPassword', { email: $scope.resetEmail })
