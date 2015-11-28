@@ -140,6 +140,11 @@ angular
         controller: 'sisFellowshipCtrl',
         controllerAs: 'sis'
       })
+      .when('/forgot-password', {
+        templateUrl: 'views/forgot-password.html',
+        controller: 'forgotPasswordCtrl',
+        controllerAs: 'forgoPass'
+      })
       .otherwise({
         redirectTo: '/'
       });
