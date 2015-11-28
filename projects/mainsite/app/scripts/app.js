@@ -145,7 +145,7 @@ angular
         controller: 'forgotPasswordCtrl',
         controllerAs: 'forgoPass'
       })
-      .when('/reset-password', {
+      .when('/reset-password/:token', {
         templateUrl: 'views/reset-password.html',
         controller: 'resetPasswordCtrl',
         controllerAs: 'resetPass'
