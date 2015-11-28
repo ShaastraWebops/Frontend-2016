@@ -20,7 +20,7 @@ angular.module('shaastra2016App')
       $scope.submitted = true;
       $scope.message = 'Working...';
 
-      $http.post('http://shaastra.org:8001/api/users/resetPassword/' + $routeParams.token, { newPassword: $scope.newPassword })
+      $http.post('http://localhost:8001/api/users/resetPassword/' + $routeParams.token, { newPassword: $scope.newPassword })
         .success(function (message) {
           $scope.message = '';
           $window.alert('Successfully changed');

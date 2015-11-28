@@ -20,7 +20,7 @@ angular.module('shaastra2016App')
         $scope.message = 'Working...';
 
       if(form.$valid) {
-        $http.post('http://shaastra.org:8001/api/users/forgotPassword', { email: $scope.resetEmail })
+        $http.post('http://localhost:8001/api/users/forgotPassword', { email: $scope.resetEmail })
           .success(function (message) {
             $scope.message = 'Sent a mail to ' + $scope.resetEmail + ' with further information';
               $scope.resetEmail = '';
