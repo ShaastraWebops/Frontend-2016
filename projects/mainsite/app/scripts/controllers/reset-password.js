@@ -13,6 +13,8 @@ angular.module('shaastra2016App')
 		backButton.attr('link', '/');
 
     $scope.message = '';
+    $scope.newPassword = '';
+    $scope.confirmNewPassword = '';
 
     $scope.reset = function() {
       $scope.submitted = true;
