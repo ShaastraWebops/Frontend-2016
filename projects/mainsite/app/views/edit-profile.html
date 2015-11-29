@@ -1,0 +1,83 @@
+<div class="editProfile-jumbotorn">
+  <div class="container-fluid makeCenter">
+    <div class="row aboutUsHeading"><b>Edit Your Details</b></div>
+  </div>
+  <div id="editProfile-div2" class="col-sm-offset-4 col-sm-4">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+        <form class="form" name="form" ng-submit="updateProfile(form)" novalidate>
+
+          <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                              'has-error': form.name.$invalid && submitted }">
+            <label>First name</label>
+
+            <input type="text" name="name" class="form-control" ng-model="user.name"
+              required>
+            <span class="help-block" ng-show="form.name.$error.required && submitted">
+              First name is required
+            </span>
+            <span class="help-block" ng-show="form.name.$error.mongoose">
+              {{ errors.name }}
+            </span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.secondName.$valid && submitted,
+                                              'has-error': form.secondName.$invalid && submitted }">
+            <label>Second name</label>
+
+            <input type="text" name="secondName" class="form-control" ng-model="user.secondName"
+              required>
+            <span class="help-block" ng-show="form.secondName.$error.required && submitted">
+              Second name is required
+            </span>
+            <span class="help-block" ng-show="form.secondName.$error.mongoose">
+              {{ errors.name }}
+            </span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
+                                              'has-error': form.email.$invalid && submitted }">
+            <label>Email</label>
+
+            <input type="text" name="email" class="form-control" ng-model="user.email"
+              required
+              ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i">
+            <span class="help-block" ng-show="(form.email.$error.required || form.email.$error.pattern) && submitted">
+              Enter valid email id
+            </span>
+            <span class="help-block" ng-show="form.email.$error.mongoose">
+              {{ errors.name }}
+            </span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.phoneNumber.$valid && submitted,
+                                              'has-error': form.phoneNumber.$invalid && submitted }">
+            <label>Mobile Number</label>
+
+            <input type="text" name="phoneNumber" class="form-control" ng-model="user.phoneNumber"
+              ng-pattern="/^\d{10}$/"
+              required>
+            <span class="help-block">Do not include 0 or +91 before your 10 digit number</span>
+            <span class="help-block" 
+               ng-show="(form.phoneNumber.$error.pattern || form.phoneNumber.$error.required) && submitted">
+              Phone Number must be of 10 digits
+            </span>
+            <span class="help-block" ng-show="form.phoneNumber.$error.mongoose">
+              {{ errors.phoneNumber }}
+            </span>          
+          </div>
+
+          <div>
+            <button class="btn btn-primary btn-login btndownl" type="submit">Save Changes</button>
+            <span><b>{{ message }}</b></span>
+          </div>
+
+        </form>
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

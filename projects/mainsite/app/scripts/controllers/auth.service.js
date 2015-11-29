@@ -104,16 +104,16 @@ angular.module('shaastra2016App')
        * @param  {Function} callback [description]
        * @return {[type]}            [description]
        */
-      // updateProfile: function(user, callback) {
-      //   var cb = callback || angular.noop;
-      //   return User.updateProfile({ id: currentUser._id }, {
-      //     userUpdate: user
-      //   }, function(user) {
-      //     return cb(user);
-      //   }, function(err) {
-      //     return cb(err);          
-      //   }).$promise;
-      // },
+      updateProfile: function(user, callback) {
+        var cb = callback || angular.noop;
+        return User.updateProfile({ id: currentUser._id }, {
+          userUpdate: user
+        }, function(user) {
+          return cb(user);
+        }, function(err) {
+          return cb(err);          
+        }).$promise;
+      },
 
       /**
        * Gets all available info on authenticated user

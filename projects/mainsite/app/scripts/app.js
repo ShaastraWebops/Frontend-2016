@@ -150,6 +150,12 @@ angular
         controller: 'resetPasswordCtrl',
         controllerAs: 'resetPass'
       })
+      .when('/edit-profile', {
+        templateUrl: 'views/edit-profile.html',
+        controller: 'editProfileCtrl',
+        controllerAs: 'editProfile',
+        authenticate: true
+      })
       .otherwise({
         redirectTo: '/'
       });
