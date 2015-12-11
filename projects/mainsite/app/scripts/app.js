@@ -154,7 +154,7 @@ angular
         templateUrl: 'views/edit-profile.html',
         controller: 'editProfileCtrl',
         controllerAs: 'editProfile',
-        authenticate: true
+        authenticate: false
       })
       .otherwise({
         redirectTo: '/'

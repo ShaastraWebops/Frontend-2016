@@ -28,6 +28,7 @@ angular.module('shaastra2016App')
           secondName: $scope.user.secondName,
           email: $scope.user.email,
           phoneNumber: $scope.user.phoneNumber,
+          wantAccomodation: $scope.user.wantAccomodation 
         })
         .then( function (response) {
           if(response.$resolved && response.$promise.$$state.status) {
