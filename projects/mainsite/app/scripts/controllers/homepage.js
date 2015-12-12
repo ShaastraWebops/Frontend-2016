@@ -67,7 +67,7 @@ angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
     animateHexagons();
 
-    var demo = ["Registrations have been opened!!!", "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>"];
+    var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", "Registrations have been opened!!!", "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>"];
     var a = 0;
     function changeText() {
       var blinkText = document.getElementById("blinkText");
