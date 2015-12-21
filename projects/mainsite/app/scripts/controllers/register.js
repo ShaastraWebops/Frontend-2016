@@ -52,19 +52,22 @@ angular.module('shaastra2016App')
     };
 
     $scope.addCollege = function () {
-    $scope.disableAddCollege = true;
+      $scope.disableAddCollege = true;
       if($scope.newCollegeName !== '') {
         $scope.addCollegeMessage = ' -- Working...';
         $http.post('http://shaastra.org:8001/api/colleges', { collegeName: $scope.newCollegeName })
           .then(function (response) {
             if(response.status === 201) {
+              $scope.disableAddCollege = false;
               $scope.addCollegeMessage = '';
               $scope.college_list.push(response.data);
             } else {
+              $scope.disableAddCollege = false;
               $scope.addCollegeMessage = 'Some error occurred';
             }
           });
       } else {
+        $scope.disableAddCollege = false;
         alert('Please enter college name');
       }
     };
