@@ -1,24 +1,27 @@
 <div ng-controller="sponsorsCtrl" class="spons-container-top">
-  <div id="heading" ng-show="tab_2016"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2016 &nbsp; SPONSORS</b></p></div>
-  <div id="heading" ng-show="tab_2015"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2015 &nbsp; SPONSORS</b></p></div>
+  <div class="container spons-heading-div">
+    <div class="row">
+      <div id="heading" ng-show="tab_2016"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2016 &nbsp; SPONSORS</b></p></div>
+      <div id="heading" ng-show="tab_2015"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2015 &nbsp; SPONSORS</b></p></div>
+    </div>
+  </div>
 
-  <p><button type="button" class="btn btn-default btn-sm" ng-click="show2016()"><div class="heading"><div class="tab-spons">SPONSORS 2016</div></div></button></p>
-  <p><button type="button" class="btn btn-default btn-sm" ng-click="show2015()"><div class="heading"><div class="tab-spons">SPONSORS 2015</div></div></button></p>
-  
+  <p><button type="button" class="btn btn-default btn-sm" ng-class="{'spons-button-selected' : tab_2016}" ng-click="show2016()"><div class="heading"><div class="tab-spons">SPONSORS 2016</div></div></button></p>
+  <p><button type="button" class="btn btn-default btn-sm" ng-class="{'spons-button-selected' : tab_2015}" ng-click="show2015()"><div class="heading"><div class="tab-spons">SPONSORS 2015</div></div></button></p>
 
   <div class="container makeCenter">
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
         <h3 class="spons-name"><b>Bhavik Rasyara</h3>
         <h4>+91-8939317150</h4>
         <h4><a target="_blank" href="mailto:bhavik@shaastra.org">bhavik@shaastra.org</a></h4>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
         <h3 class="spons-name"><b>Shashanka Rao</h3>
         <h4>+91-9498098063</h4>
         <h4><a target="_blank" href="mailto:bhavik@shaastra.org">shashanka@shaastra.org</a></h4>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
         <h3 class="spons-name"><b>Mahesh Kurup</h3>
         <h4>+91-9444443592</h4>
         <h4><a target="_blank" href="mailto:bhavik@shaastra.org">kurup@shaastra.org</a></h4>
@@ -40,7 +43,7 @@
 
       <div ng-if="category.path.length === 2">
         <h1 class="spons-title"><b>{{ category.title }}</h1>
-        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
           <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
 
