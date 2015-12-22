@@ -9,7 +9,8 @@ angular.module('shaastra2016App')
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto',
-      'background-color': '#f3f3f3'
+      // 'background-color': '#f3f3f3'
+      'background-color': '#fff'
     });
 
     $scope.tab_2016 = true;
