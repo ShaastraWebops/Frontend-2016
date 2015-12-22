@@ -20,6 +20,7 @@ angular.module('shaastra2016App')
     	$scope.user = Auth.getCurrentUser();
     });
 
+    $scope.currentDate = new Date(Date.now());
 
     $scope.teamBlockMessage = '';
     $scope.teamCreateMessage = '';
@@ -65,9 +66,15 @@ angular.module('shaastra2016App')
 		$http.get('http://shaastra.org:8001/api/teams')
       .then(function (response) {
         var numTeams = response.data.length;
+        var numTeamEvents = 0;
         for(var i=0; i<numTeams; i++) {
           if(response.data[i].selfTeam===true) {
             response.data[i].teamName += ' - Individual Participation';
+          }
+          numTeamEvents = response.data[i].eventsRegistered.length;
+          for(var j=0; j<numTeamEvents; j++) {
+            response.data[i].eventsRegistered[j].startReg = new Date(response.data[i].eventsRegistered[j].startReg);
+            response.data[i].eventsRegistered[j].endReg = new Date(response.data[i].eventsRegistered[j].endReg);
           }
         }
         $scope.all_teams = response.data;
