@@ -6,7 +6,6 @@ angular.module('shaastra2016App')
     var backButton = $('#back-button');
     backButton.attr('link', '/event-category/' + $routeParams.eventCategoryId);
 
-
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto', 
@@ -20,6 +19,9 @@ angular.module('shaastra2016App')
     $scope.xmark = function (b) {
       return converter.makeHtml(b);
     };
+
+    $scope.showRegister = false;
+    $scope.currentDate = new Date(Date.now());
 
     var notifs = [];
     $scope.eve = [];
@@ -53,7 +55,14 @@ angular.module('shaastra2016App')
         }
         // for marquee notifs end
         $scope.message = 'Stay tuned for Updates!';
+        response.data.startReg = new Date(response.data.startReg);
+        response.data.endReg = new Date(response.data.endReg);
         $scope.eve = response.data;
+        if(response.data.startReg<= $scope.currentDate && response.data.endReg>= $scope.currentDate) {
+          $scope.showRegister = true;
+        } else {
+          $scope.showRegister = false;
+        }
       });
 
     $scope.i = 0;

@@ -20,6 +20,8 @@ angular.module('shaastra2016App')
       return converter.makeHtml(b);
     };
     
+    $scope.showRegister = false;
+
     var notifs = [];
     $scope.eve = [];
     $http.get('http://shaastra.org:8001/api/events/showWeb/' + $routeParams.workshopId)
@@ -52,7 +54,14 @@ angular.module('shaastra2016App')
         }
         // for marquee notifs end
         $scope.message = 'Stay tuned for Updates!';
+        response.data.startReg = new Date(response.data.startReg);
+        response.data.endReg = new Date(response.data.endReg);
         $scope.eve = response.data;
+        if(response.data.startReg<= $scope.currentDate && response.data.endReg>= $scope.currentDate) {
+          $scope.showRegister = true;
+        } else {
+          $scope.showRegister = false;
+        }
       });
 
     $scope.i = 0;
