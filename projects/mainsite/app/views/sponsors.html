@@ -1,15 +1,13 @@
 <div ng-controller="sponsorsCtrl" class="spons-container-top">
   <div id="heading" ng-show="tab_2016"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2016 &nbsp; SPONSORS</b></p></div>
-  <div id="heading" class="spons-heading" ng-show="tab_2015"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2015 &nbsp; SPONSORS</b></p></div>
+  <div id="heading" ng-show="tab_2015"><p class="spons-heading"><b>SHAASTRA  &nbsp; 2015 &nbsp; SPONSORS</b></p></div>
 
-  <p><button type="button" class="btn btn-default btn-sm" ng-click="show2015()"><div class="heading"><div class="tab-spons">SPONSORS 2015</div></div></button></p>
   <p><button type="button" class="btn btn-default btn-sm" ng-click="show2016()"><div class="heading"><div class="tab-spons">SPONSORS 2016</div></div></button></p>
+  <p><button type="button" class="btn btn-default btn-sm" ng-click="show2015()"><div class="heading"><div class="tab-spons">SPONSORS 2015</div></div></button></p>
   
-  <div id="heading" ng-show="tab_2016" class="spons-heading">Stay Tuned For Updates</div>
 
   <div class="container makeCenter">
-
-    <div ng-show="tab_2015" class="row">
+    <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <h3 class="spons-name"><b>Bhavik Rasyara</h3>
         <h4>+91-8939317150</h4>
@@ -27,9 +25,51 @@
       </div>
     </div>
   </div>  
+  
+  <div ng-show="tab_2016" class="container makeCenter">
+    <div class="row spons-row" ng-repeat="category in sponsors2016 track by $index">
+
+      <div ng-if="category.path.length === 1">
+        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-12">
+
+          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+
+        </div>
+      </div>
+
+      <div ng-if="category.path.length === 2">
+        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+
+        </div>
+      </div>
+
+      <div ng-if="category.path.length === 3">
+        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+
+        </div>
+      </div>
+
+      <div ng-if="category.path.length >= 4">
+        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <div ng-show="tab_2015" class="container makeCenter">
-    <div class="row spons-row" ng-repeat="category in sponsors track by $index">
+    <div class="row spons-row" ng-repeat="category in sponsors2015 track by $index">
 
       <div ng-if="category.path.length === 1">
         <h1 class="spons-title"><b>{{ category.title }}</h1>
@@ -45,7 +85,7 @@
         <h1 class="spons-title"><b>{{ category.title }}</h1>
         <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <a ng-show="tab_2015" target="_blank" target="_blank" href="{{sponsor.link1}}"><img width="300" height="100" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
-           <a target="_blank" ng-show="tab_2016" href="{{sponsor.link2}}"><img width="300" height="100" ng-src="{{sponsor.image2}}" alt="{{sponsor.image2}}"></a>
+          <a target="_blank" ng-show="tab_2016" href="{{sponsor.link2}}"><img width="300" height="100" ng-src="{{sponsor.image2}}" alt="{{sponsor.image2}}"></a>
         </div>
       </div>
 
@@ -53,7 +93,7 @@
         <h1 class="spons-title"><b>{{ category.title }}</h1>
         <div ng-repeat="sponsor in category.path" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <a ng-show="tab_2015" target="_blank" href="{{sponsor.link1}}"><img width="300" height="100" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
-           <a target="_blank" ng-show="tab_2016" href="{{sponsor.link2}}"><img width="300" height="100" ng-src="{{sponsor.image2}}" alt="{{sponsor.image2}}"></a>
+          <a target="_blank" ng-show="tab_2016" href="{{sponsor.link2}}"><img width="300" height="100" ng-src="{{sponsor.image2}}" alt="{{sponsor.image2}}"></a>
         </div>
       </div>
 
@@ -61,7 +101,7 @@
         <h1 class="spons-title"><b>{{ category.title }}</h1>
         <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <a ng-show="tab_2015" target="_blank" href="{{sponsor.link1}}"><img width="300" height="100" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
-           <a target="_blank" ng-show="tab_2016" href="{{sponsor.link2}}"><img width="300" height="100" ng-src="{{sponsor.image2}}" alt="{{sponsor.image2}}"></a>
+          <a target="_blank" ng-show="tab_2016" href="{{sponsor.link2}}"><img width="300" height="100" ng-src="{{sponsor.image2}}" alt="{{sponsor.image2}}"></a>
         </div>
       </div>
 
