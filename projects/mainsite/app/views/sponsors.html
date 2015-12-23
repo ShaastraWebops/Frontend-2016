@@ -28,8 +28,11 @@
       </div>
     </div>
   </div>  
-  
-  <div ng-show="tab_2016" class="container makeCenter">
+
+  <div ng-if="tab_2016" class="row makeCenter">
+    <h1>Stay tuned for Updates!</h1>
+  </div>
+  <div ng-if="0" class="container makeCenter">
     <div class="row spons-row" ng-repeat="category in sponsors2016 track by $index">
 
       <div ng-if="category.path.length === 1">
@@ -63,7 +66,7 @@
     </div>
   </div>
 
-  <div ng-show="tab_2015" class="container makeCenter">
+  <div ng-if="tab_2015" class="container makeCenter">
     <div class="row spons-row" ng-repeat="category in sponsors2015 track by $index">
 
       <div ng-if="category.path.length === 1">
