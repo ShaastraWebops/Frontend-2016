@@ -40,7 +40,10 @@ div.contact-img-desc {
   font-family: 'Proxima';
 }
 
-ul {
+ul.contact-modal-contents {
+  list-style-type: none;
+}
+ul.ul-inside-contact {
   list-style-type: none;
 }
 .heading {

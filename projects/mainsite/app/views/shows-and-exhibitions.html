@@ -1,72 +1,156 @@
 <div class="container-fluid category">
-	<div class="row">
-  	<div class="category-wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  		<img class="img-responsive category-image" id="event-category-image" ng-src="images/misc/shows-and-exhibitions.jpg">
-	  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
-		  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
-	  	</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="category-wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <img class="img-responsive category-image" id="event-category-image" ng-src="images/misc/shows-and-exhibitions.jpg">
+      <div id="scroll-down" ng-click="scrollDown('event-category-name')">
+        <span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="container-fluid">
-	<div class="row">
-		<div id="event-category-name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<span>Shows and Exhibitions</span>
- 	  </div>
-	</div>
+  <div class="row">
+    <div id="event-category-name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <span>Shows and Exhibitions</span>
+    </div>
+  </div>
 </div>
-<div id="aboutUs" class="container-fluid font-myraid">
-  <div>
-  	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 aboutUsContent">
-  		<div class="row">
-  			<h2>Past performances</h2>
-  		</div>
-	    <div class="row">
-        <h3><b>Envisage</b></h3>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
-          <iframe width="100%" height="500" frameborder="0" 
-            src="http://www.youtube.com/embed/b2CQ6udTHE8">
-          </iframe>
+  <div id="aboutUs" class="container-fluid font-myraid">
+    <div class="container-fluid" id="cf">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
+          <div><br><br></div>
+          
+          <div class="row">
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-repeat="x in showsTabs track by $index">
+              <a event-nav-hyperlink href="" ng-click="info($index)">
+                <div class="event-nav-xs" ng-click="changeTab($index)" ng-class="{'event-nav-selected':(tab === $index)}">
+                  {{x}}
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="evcontent">
+            <div class="row">
+              <div class="hidden-xs"><br><br></div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row shows-maker-heading">
+                  <h1><b>{{ showsTabs[tab] }}</b></h1>
+                </div>
+                <div ng-if="tab===0" class="cont">
+                  <div class="row">
+                    Tech and Innovation Fair at Shaastra 2016, IIT Madras is one of the best opportunities for tech enthusiasts to witness and experience cutting-edge technology and innovations that have taken place around the world.
+                  </div><br>
+                  <div class="row">
+                    The platform hosts the projects and exhibitions with novel ideas developed by the students across the globe. The developers get to exhibit their distinctive products to the eminent scientists, brilliant academicians and interact with the best brains of India. 
+                  </div><br>
+                  <div class="row">
+                    Shaastra, IIT Madras hosts this fair aimed at promoting innovation in the world. As a part of it you can participate and exhibit your project or product to 30,000+ audience.
+                  </div><br>
+                  <div class="row">
+                    <h3><b>Policy for participation in the Tech and Innovation Fair'16 - </b></h3>
+                    <p>The exhibit must be original or developed by you. The top exhibits would be selected and given an opportunity to be a part of exhibitions at Shaastra 2016, IIT Madras. The best exhibits will be given incentives and prizes.</p>
+                    <p>In case your exhibit has a patent, please attach patent details in the mail.</p>
+                    <p>There is no fees for registration. Shaastra sponsors only two participants for each project. Any extra participants have to pay for their arrangements. Anyone can be a part of the project. The person need not be pursuing any studies to be a part of the Tech and Innovation Fair'16.</p>
+                    <p>The final selections will be done by IIT Madras.</p>
+                  </div>
+                  <div class="row">
+                    <h3><b>Registration process to participate in Tech and Innovation Fair'16, IIT Madras - </b></h3>
+                    <ul>
+                      <li>Open <a target="_blank" href="https://docs.google.com/document/d/1ABlQwVfeVP2s8ofsPniCcrwqh3lAJ4GghiL37tqcnGo/edit?usp=sharing">this</a> link and find the details to be submitted for registration</li>
+                      <li>Write all the details in a google document and share it with <a target="_blank" href="mailto:exhibitions@shaastra.org">exhibitions@shaastra.org</a></li>
+                      <li>Name the document in the following format "<b>TAIF'16_&lt;Project Name&gt;</b>" and put the subject as "<b>Tech and Innovation Fair 2016</b>"</li>
+                      <li>The final selection list will be intimated to you by email if you’re selected. In case of multiple submissions your project might not get selected</li>
+                      <li>The right of selection solely rests with IIT Madras and in case of any discrepancies the organizer's decision is final</li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <h3><b>In case of any queries, feel free to contact us at - </b></h3>
+                    <ul>
+                      <li><b>Nithin Gudisa</b> - +91-9003101274</li>
+                      <li><b>Nivedita Manepalli</b> - +91-9940557095</li>
+                    </ul>
+                  </div>
+                </div>
+                <div ng-if="tab===1" class="cont">
+                  <div class="row">
+                    <h3><b>Envisage</b></h3>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
+                      <iframe width="100%" height="500" frameborder="0" 
+                        src="http://www.youtube.com/embed/b2CQ6udTHE8">
+                      </iframe>
+                    </div>
+                    <h3>A novel techno cultural show specializing in designing your dreams in the field of science and technology.  It is a marvel of awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. Being the only student organized event of its kind in the whole country, it gives a new meaning to your idea of entertainment and turning projects into a memory you will long cherish!</h3>
+                    <h3>The work of science can be enigmatic. Have your sight deceived by animations shown using just a strip of LEDs. It was a new groundbreaking performance.</h3>
+                    <h3>This year it is going be even BIGGER &amp; BETTER!  Join us at Shaastra 2016 and get ready to share the awe!</h3>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
+                      <img class="img-responsive" src="images/misc/shows-envisage.jpg" alt="shows-envisage">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <h3><b>Air show</b></h3>
+                    <h3>One of the biggest RC flying shows in the country, with planes and helicopters all twisting and twirling and fliers using the sky as the canvas for their masterpieces. Previous editions of Shaastra have witnessed some of world's best aero modellers like Wolfgang Krahofer, Gernot Bruckmann from Austria and 14 years old Jase Dussia from USA. Shaastra Air Show never failed in leaving its spectators in wonder!</h3>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 shows">
+                      <img class="img-responsive" src="images/misc/shows-airshow-one.jpg" alt="shows-airshow-one">
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 shows">
+                      <img class="img-responsive" src="images/misc/shows-airshow-two.jpg" alt="shows-airshow-two">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <h3><b>Laser show</b></h3>
+                    <h3>A technological extravaganza of sheer brilliance with dazzling lights and spectacular illusions, which drives the audience into a fun-filled experience. Laser show, Shaastra 2015 was witnessed and cherished by a huge crowd. Here is a glance of the laser show at Shaastra 2015…</h3>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 shows">
+                      <img class="img-responsive" src="images/misc/shows-lasershow-one.jpg" alt="shows-lasershow-one">
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 shows">
+                      <img class="img-responsive" src="images/misc/shows-lasershow-two.jpg" alt="shows-lasershow-two">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <h3><b>Exhibits</b></h3>
+                    <h3>A perfect place to witness the marvels of technology.</h3>
+                    <h3>Breaking the boundaries and igniting innovation, Exhibitions has always provided an opportunity for the young minds to witness the achievements in technology. Shaastra is one of the best places where you can see and experience a broad spectrum of modern technology. This is the ideal platform for the tech enthusiasts to gain exposure and interact with the experts who has brought these breathtaking exhibits into existence.</h3>
+                    <h3>Shaastra 2015 had witnessed awe-inspiring exhibits, of which The Arjun tank was a master piece in the field of defense technology.</h3>
+                    <h3>Shaastra 2016 is the year of international exhibitions at IIT Madras. Stay tuned...!</h3>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
+                      <img class="img-responsive" src="images/misc/shows-exhibits.jpg" alt="shows-envisage">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-if="!eve.eventTabs.length" class="makeCenter">
+            <h1>{{ message }}</h1>
+          </div>
+
         </div>
-        <h3>A novel techno cultural show specializing in designing your dreams in the field of science and technology.  It is a marvel of awesomeness as the transcendental fusion of art and technology pleasures your visual senses and stupefies you with audio effects. Being the only student organized event of its kind in the whole country, it gives a new meaning to your idea of entertainment and turning projects into a memory you will long cherish!</h3>
-        <h3>The work of science can be enigmatic. Have your sight deceived by animations shown using just a strip of LEDs. It was a new groundbreaking performance.</h3>
-        <h3>This year it is going be even BIGGER &amp; BETTER!  Join us at Shaastra 2016 and get ready to share the awe!</h3>
-      	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
-      		<img class="img-responsive" src="images/misc/shows-envisage.jpg" alt="shows-envisage">
-    		</div>
-	    </div>
-	    <div class="row">
-      	<h3><b>Air show</b></h3>
-      	<h3>One of the biggest RC flying shows in the country, with planes and helicopters all twisting and twirling and fliers using the sky as the canvas for their masterpieces. Previous editions of Shaastra have witnessed some of world's best aero modellers like Wolfgang Krahofer, Gernot Bruckmann from Austria and 14 years old Jase Dussia from USA. Shaastra Air Show never failed in leaving its spectators in wonder!</h3>
-      	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 shows">
-      		<img class="img-responsive" src="images/misc/shows-airshow-one.jpg" alt="shows-airshow-one">
-    		</div>
-    		<div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 shows">
-      		<img class="img-responsive" src="images/misc/shows-airshow-two.jpg" alt="shows-airshow-two">
-    		</div>
-	    </div>
-	    <div class="row">
-      	<h3><b>Laser show</b></h3>
-      	<h3>A technological extravaganza of sheer brilliance with dazzling lights and spectacular illusions, which drives the audience into a fun-filled experience. Laser show, Shaastra 2015 was witnessed and cherished by a huge crowd. Here is a glance of the laser show at Shaastra 2015…</h3>
-      	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 shows">
-      		<img class="img-responsive" src="images/misc/shows-lasershow-one.jpg" alt="shows-lasershow-one">
-    		</div>
-    		<div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 shows">
-      		<img class="img-responsive" src="images/misc/shows-lasershow-two.jpg" alt="shows-lasershow-two">
-    		</div>
-	    </div>
-	    <div class="row">
-      	<h3><b>Exhibits</b></h3>
-      	<h3>A perfect place to witness the marvels of technology.</h3>
-      	<h3>Breaking the boundaries and igniting innovation, Exhibitions has always provided an opportunity for the young minds to witness the achievements in technology. Shaastra is one of the best places where you can see and experience a broad spectrum of modern technology. This is the ideal platform for the tech enthusiasts to gain exposure and interact with the experts who has brought these breathtaking exhibits into existence.</h3>
-      	<h3>Shaastra 2015 had witnessed awe-inspiring exhibits, of which The Arjun tank was a master piece in the field of defense technology.</h3>
-      	<h3>Shaastra 2016 is the year of international exhibitions at IIT Madras. Stay tuned...!</h3>
-      	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
-      		<img class="img-responsive" src="images/misc/shows-exhibits.jpg" alt="shows-envisage">
-    		</div>
-	    </div>
-  	</div>
-  </div>  
+        
+        <div class="hidden-xs col-sm-3 col-md-3 col-lg-3">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="row">
+                <br><br><br><br>
+                <div class="row" id="event-nav-box" ng-repeat="x in showsTabs track by $index">
+                  <a event-nav-hyperlink href="" ng-click="info($index)">
+                    <div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(tab === $index)}" ng-click="changeTab($index)">
+                      <span id="event-nav-span">{{x}}</span>
+                    </div>
+                  </a>
+                  <div class="col-sm-12 col-md-12 col-lg-12"><br></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
 </div>
 
 <div ng-include="'views/sticky-footer.html'"></div>
