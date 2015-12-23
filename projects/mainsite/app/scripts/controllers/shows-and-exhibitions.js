@@ -12,7 +12,7 @@ angular.module('shaastra2016App')
       'background-color': '#f3f3f3'
     });
 
-    $scope.showsTabs = ['Shaastra 2016 Exhibitions', 'Past Performances'];
+    $scope.showsTabs = ["Tech and Innovation Fair", "Past Performances"];
     $scope.tab = 0;
 
     $scope.changeTab = function (index) {
