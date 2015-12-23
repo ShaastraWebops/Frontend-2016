@@ -67,7 +67,10 @@ angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
     animateHexagons();
 
-    var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", "Registrations have been opened!!!", "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>"];
+    var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", 
+                "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
+                "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
+                "Registrations have been opened!!!"];
     var a = 0;
     function changeText() {
       var blinkText = document.getElementById("blinkText");
@@ -79,7 +82,7 @@ angular.module('shaastra2016App')
         }
       }
     }
-    setInterval(changeText, 2000);
+    setInterval(changeText, 3000);
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // window.addEventListener("resize", resizeFunction);
