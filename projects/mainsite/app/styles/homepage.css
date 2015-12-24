@@ -92,7 +92,11 @@ a:hover, a:active, a:focus {
   color: white;
   cursor: pointer;
   min-height: 50px;
-  line-height: 50px;	
+  line-height: 50px;
+  -webkit-animation: slideDown 1s linear infinite;
+  -moz-animation: slideDown 1s linear infinite;
+  -o-animation: slideDown 1s linear infinite;
+  animation: slideDown 1s linear infinite;  
 }
 
 .home {
