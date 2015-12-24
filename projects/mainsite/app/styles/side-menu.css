@@ -12,12 +12,12 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0.5em;
+  width: 0.5em;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #000000; 
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: #ffffff; 
@@ -75,14 +75,35 @@ body {
   line-height: 2em;
   padding: 0 0;
 }
-#back-button:hover {
-  cursor: pointer;
-}
-
 #back-button span {
   font-size: 1.5em;
   margin: 0 0;
   color: #fff;
+}
+#back-button:hover {
+  cursor: pointer;
+}
+#back-button:hover #back-glyphicon {
+  -webkit-animation: slideLeft 1s ease-in infinite;
+  -moz-animation: slideLeft 1s ease-in infinite;
+  -o-animation: slideLeft 1s ease-in infinite;
+  animation: slideLeft 1s ease-in infinite;
+}
+@-webkit-keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+@-moz-keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+@-o-keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+@keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
 }
 
 #menuscroll li:hover { 
@@ -527,10 +548,6 @@ input[type=search] {
 
 input[type=search]:focus {
   outline: none;
-}
-
-#back-glyphicon {
-  margin-left: 5px;
 }
 
 .gliphicon-search {
