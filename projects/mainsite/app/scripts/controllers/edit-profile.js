@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('editProfileCtrl', function ($scope, $http, Auth) {
 
+    $scope.pageClass = 'page-editProfile';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
     	'overflow-y': 'auto',

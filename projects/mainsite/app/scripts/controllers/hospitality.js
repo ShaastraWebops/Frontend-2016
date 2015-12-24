@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('hospiCtrl', function ($scope) {
 
+    $scope.pageClass = 'page-hospitality';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
     	'overflow-y': 'auto',

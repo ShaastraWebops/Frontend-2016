@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('WorkshopsCtrl', function ($scope, $http, $routeParams) {
 
+    $scope.pageClass = 'page-workshopDetails';
+
     var backButton = $('#back-button');
     backButton.attr('link', '/workshop-category/' + $routeParams.workshopCategoryId);
 

@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('showsExhibitonsCtrl', function ($scope, $anchorScroll, $location) {
 
+    $scope.pageClass = 'page-showsAndExhibitions';
+
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 

@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('preShaastraCtrl', function ($scope) {
 
+    $scope.pageClass = 'page-preShaastra';
+
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 

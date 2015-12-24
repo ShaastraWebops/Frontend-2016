@@ -2,6 +2,8 @@
 angular.module('shaastra2016App')
   .controller('loginCtrl', function ($scope, Auth, $http, $location) {
 
+    $scope.pageClass = 'page-login';
+
     var backButton = $('#back-button');
     backButton.attr('link', '/');
 

@@ -2,6 +2,8 @@
 angular.module('shaastra2016App')
 	.controller('dashboardCtrl', function ($scope, $http, Auth) { 
 
+    $scope.pageClass = 'page-dashboard';
+
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 

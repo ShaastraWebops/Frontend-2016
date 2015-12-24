@@ -7,6 +7,8 @@
 angular.module('shaastra2016App')
 	.controller('eventListCtrl', function ($scope, $interval, $http, $location, $anchorScroll) {
 
+    $scope.pageClass = 'page-eventList';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto',

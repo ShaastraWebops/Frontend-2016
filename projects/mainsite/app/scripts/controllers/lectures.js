@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('lecturesCtrl', function ($scope) {
 
+    $scope.pageClass = 'page-lectures';
+
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 

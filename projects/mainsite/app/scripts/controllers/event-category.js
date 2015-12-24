@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
 	.controller('eventsCategoryCtrl', function ($scope, $rootScope, $location, $anchorScroll, $window, $http, $routeParams) {
 
+    $scope.pageClass = 'page-eventCategory';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto',

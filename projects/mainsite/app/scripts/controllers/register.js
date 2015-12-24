@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('registerCtrl', function ($scope, $http, Auth, $location) {
 
+    $scope.pageClass = 'page-registration';
+
     var backButton = $('#back-button');
     backButton.attr('link', '/');
 

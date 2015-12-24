@@ -1,37 +1,225 @@
-.main-view.ng-leave,
-.main-view.ng-enter {
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+@font-face {
+  font-family: 'Proxima';
+  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
 }
-.main-view.ng-enter-active {
-    opacity: 1;
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
+@font-face {
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
 }
-.main-view.ng-enter {
-    opacity: 0;
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
 }
-.main-view.ng-leave {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+
+::-webkit-scrollbar {
+  width: 0.5em;
 }
-.main-view.ng-leave-active {
-    opacity: 0;
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #ffffff; 
+}
+
+.page-home.ng-enter,
+.page-makerSummit.ng-enter,
+.page-showsAndExhibitions.ng-enter, 
+.page-contactUs.ng-enter,
+.page-editProfile.ng-enter,
+.page-aboutUs.ng-enter,
+.page-lectures.ng-enter,
+.page-dashboard.ng-enter,
+.page-hospitality.ng-enter,
+.page-login.ng-enter,
+.page-registration.ng-enter,
+.page-preShaastra.ng-enter,
+.page-samparkCategory.ng-enter,
+.page-samparkDetails.ng-enter,
+.page-sisFellowship.ng-enter,
+.page-social.ng-enter,
+.page-sponsors.ng-enter,
+.page-eventList.ng-enter,
+.page-eventCategory.ng-enter,
+.page-eventDetails.ng-enter,
+.page-workshopList.ng-enter,
+.page-workshopCategory.ng-enter,
+.page-workshopDetails.ng-enter,
+.page-home.ng-leave,
+.page-makerSummit.ng-leave,
+.page-showsAndExhibitions.ng-leave,
+.page-contactUs.ng-leave,
+.page-editProfile.ng-leave,
+.page-aboutUs.ng-leave,
+.page-lectures.ng-leave,
+.page-dashboard.ng-leave,
+.page-hospitality.ng-leave,
+.page-login.ng-leave,
+.page-registration.ng-leave,
+.page-preShaastra.ng-leave,
+.page-samparkCategory.ng-leave,
+.page-samparkDetails.ng-leave,
+.page-sisFellowship.ng-leave,
+.page-social.ng-leave,
+.page-sponsors.ng-leave,
+.page-eventList.ng-leave,
+.page-eventCategory.ng-leave,
+.page-eventDetails.ng-leave,
+.page-workshopList.ng-leave,
+.page-workshopCategory.ng-leave,
+.page-workshopDetails.ng-leave {
+  -webkit-transform-origin: center 15%;
+  -moz-transform-origin: center 15%;
+  -o-transform-origin: center 15%;
+  transform-origin: center 15%;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.page-home.ng-enter,
+.page-makerSummit.ng-enter,
+.page-showsAndExhibitions.ng-enter, 
+.page-contactUs.ng-enter,
+.page-editProfile.ng-enter,
+.page-aboutUs.ng-enter,
+.page-lectures.ng-enter,
+.page-dashboard.ng-enter,
+.page-hospitality.ng-enter,
+.page-login.ng-enter,
+.page-registration.ng-enter,
+.page-preShaastra.ng-enter,
+.page-samparkCategory.ng-enter,
+.page-samparkDetails.ng-enter,
+.page-sisFellowship.ng-enter,
+.page-social.ng-enter,
+.page-sponsors.ng-enter,
+.page-eventList.ng-enter,
+.page-eventCategory.ng-enter,
+.page-eventDetails.ng-enter,
+.page-workshopList.ng-enter,
+.page-workshopCategory.ng-enter,
+.page-workshopDetails.ng-enter {
+  -webkit-transform-origin: center 15%;
+  -moz-transform-origin: center 15%;
+  -o-transform-origin: center 15%;
+  transform-origin: center 15%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.page-home.ng-enter-active,
+.page-makerSummit.ng-enter-active,
+.page-showsAndExhibitions.ng-enter-active, 
+.page-contactUs.ng-enter-active,
+.page-editProfile.ng-enter-active,
+.page-aboutUs.ng-enter-active,
+.page-lectures.ng-enter-active,
+.page-dashboard.ng-enter-active,
+.page-hospitality.ng-enter-active,
+.page-login.ng-enter-active,
+.page-registration.ng-enter-active,
+.page-preShaastra.ng-enter-active,
+.page-samparkCategory.ng-enter-active,
+.page-samparkDetails.ng-enter-active,
+.page-sisFellowship.ng-enter-active,
+.page-social.ng-enter-active,
+.page-sponsors.ng-enter-active,
+.page-eventList.ng-enter-active,
+.page-eventCategory.ng-enter-active,
+.page-eventDetails.ng-enter-active,
+.page-workshopList.ng-enter-active,
+.page-workshopCategory.ng-enter-active,
+.page-workshopDetails.ng-enter-active {
+  -webkit-transform-origin: center 15%;
+  -moz-transform-origin: center 15%;
+  -o-transform-origin: center 15%;
+  transform-origin: center 15%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.page-home.ng-leave,
+.page-makerSummit.ng-leave,
+.page-showsAndExhibitions.ng-leave,
+.page-contactUs.ng-leave,
+.page-editProfile.ng-leave,
+.page-aboutUs.ng-leave,
+.page-lectures.ng-leave,
+.page-dashboard.ng-leave,
+.page-hospitality.ng-leave,
+.page-login.ng-leave,
+.page-registration.ng-leave,
+.page-preShaastra.ng-leave,
+.page-samparkCategory.ng-leave,
+.page-samparkDetails.ng-leave,
+.page-sisFellowship.ng-leave,
+.page-social.ng-leave,
+.page-sponsors.ng-leave,
+.page-eventList.ng-leave,
+.page-eventCategory.ng-leave,
+.page-eventDetails.ng-leave,
+.page-workshopList.ng-leave,
+.page-workshopCategory.ng-leave,
+.page-workshopDetails.ng-leave {
+  -webkit-transform-origin: center 15%;
+  -moz-transform-origin: center 15%;
+  -o-transform-origin: center 15%;
+  transform-origin: center 15%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.page-home.ng-leave-active,
+.page-makerSummit.ng-leave-active,
+.page-showsAndExhibitions.ng-leave-active,
+.page-contactUs.ng-leave-active,
+.page-editProfile.ng-leave-active,
+.page-aboutUs.ng-leave-active,
+.page-lectures.ng-leave-active,
+.page-dashboard.ng-leave-active,
+.page-hospitality.ng-leave-active,
+.page-login.ng-leave-active,
+.page-registration.ng-leave-active,
+.page-preShaastra.ng-leave-active,
+.page-samparkCategory.ng-leave-active,
+.page-samparkDetails.ng-leave-active,
+.page-sisFellowship.ng-leave-active,
+.page-social.ng-leave-active,
+.page-sponsors.ng-leave-active,
+.page-eventList.ng-leave-active,
+.page-eventCategory.ng-leave-active,
+.page-eventDetails.ng-leave-active,
+.page-workshopList.ng-leave-active,
+.page-workshopCategory.ng-leave-active,
+.page-workshopDetails.ng-leave-active {
+  -webkit-transform-origin: center 15%;
+  -moz-transform-origin: center 15%;
+  -o-transform-origin: center 15%;
+  transform-origin: center 15%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
 }
 
 /*        
-.main-view.ng-leave { 
+.page-view.ng-leave { 
     -webkit-transition: all 0.8s ease-in-out;
     transition: all 0.8s ease-in-out;  
 }
 @-webkit-keyframes ngLeaveAnim {
-    from { transform: scale(1); -webkit-transform-origin: center top; opacity: 1; }
-    to { transform: scale(0.5); -webkit-transform-origin: center top; opacity: 0; }
+    from { transform: scale(1); -webkit-transform-origin: 15% center; opacity: 1; }
+    to { transform: scale(0.5); -webkit-transform-origin: 15% center; opacity: 0; }
 }
 @-moz-keyframes ngLeaveAnim {
     from { transform: scale(1, 1, 1); opacity: 1; }
@@ -42,16 +230,16 @@
     to { transform: scale(1, 1, 0.8); opacity: 0; }
 }
 @keyframes ngLeaveAnim {
-    from { transform: scale(1); transform-origin: center top; opacity: 1; }
-    to { transform: scale(0.5); transform-origin: center top; opacity: 0; }
+    from { transform: scale(1); transform-origin: 15% center; opacity: 1; }
+    to { transform: scale(0.5); transform-origin: 15% center; opacity: 0; }
 }
-.main-view.ng-enter { 
+.page-view.ng-enter { 
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;  
 }
 @-webkit-keyframes ngEnterAnim {
-    from { transform: scale(0.5); -webkit-transform-origin: center top; opacity: 0; }
-    to { transform: scale(1); -webkit-transform-origin: center top; opacity: 1; }
+    from { transform: scale(0.5); -webkit-transform-origin: 15% center; opacity: 0; }
+    to { transform: scale(1); -webkit-transform-origin: 15% center; opacity: 1; }
 }
 @-moz-keyframes ngEnterAnim {
     from { transform: scale(1); opacity: 0; }
@@ -62,7 +250,7 @@
     to { transform: scale(1); opacity: 1; }
 }
 @keyframes ngEnterAnim {
-    from { transform: scale(0.5); transform-origin: center top; opacity: 0; }
-    to { transform: scale(1); transform-origin: center top; opacity: 1; }
+    from { transform: scale(0.5); transform-origin: 15% center; opacity: 0; }
+    to { transform: scale(1); transform-origin: 15% center; opacity: 1; }
 }
 */

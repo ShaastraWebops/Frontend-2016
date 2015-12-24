@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('socialCtrl', function ($scope) {
 
+    $scope.pageClass = 'page-social';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow-y': 'auto',

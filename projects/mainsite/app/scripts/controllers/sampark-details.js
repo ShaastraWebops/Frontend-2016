@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('samparksCtrl', function ($scope, $routeParams) {
 
+    $scope.pageClass = 'page-samparkDetails';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow': 'auto',

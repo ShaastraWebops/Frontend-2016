@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('sponsorsCtrl', function ($scope) {
 
+    $scope.pageClass = 'page-sponsors';
+
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 

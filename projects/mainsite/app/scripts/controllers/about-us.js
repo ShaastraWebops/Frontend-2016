@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('aboutUsCtrl', function ($scope) {
 
+    $scope.pageClass = 'page-aboutUs';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
     	'overflow-y': 'auto',

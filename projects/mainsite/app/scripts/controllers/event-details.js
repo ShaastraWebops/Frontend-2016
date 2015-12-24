@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('EventsCtrl', function ($scope, $http, $routeParams) {
 
+    $scope.pageClass = 'page-eventDetails';
+
     var backButton = $('#back-button');
     backButton.attr('link', '/event-category/' + $routeParams.eventCategoryId);
 

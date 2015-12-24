@@ -1,28 +1,3 @@
-@font-face {
-  font-family: 'Proxima';
-  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
-}
-@font-face {
-  font-family: 'Feather';
-  src: url('../styles/fonts/Feather.ttf') format("truetype");
-}
-@font-face {
-  font-family: 'MyraidPro';
-  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
-}
-
-::-webkit-scrollbar {
-  width: 0.5em;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #000000; 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: #ffffff; 
-}
-
 div.contact-div img {
   display: inline;
   margin: 5px;

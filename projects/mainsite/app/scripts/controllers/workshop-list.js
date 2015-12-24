@@ -4,6 +4,8 @@
 angular.module('shaastra2016App')
 	.controller('workshopListCtrl', function ($scope, $interval, $http, $location) {
 
+    $scope.pageClass = 'page-workshopList';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
     	'overflow-y': 'hidden',

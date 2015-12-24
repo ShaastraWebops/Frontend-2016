@@ -5,6 +5,8 @@
 angular.module('shaastra2016App')
 	.controller('contactUsCtrl', function ($scope, $modal) {
 
+		$scope.pageClass = 'page-contactUs';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
     	'overflow-y': 'scroll',

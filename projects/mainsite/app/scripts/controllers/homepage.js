@@ -62,11 +62,12 @@ function animateHexagons(){
   
 }
 
-
 angular.module('shaastra2016App')
   .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
-    animateHexagons();
 
+    $scope.pageClass = 'page-home';
+
+    animateHexagons();
     var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", 
                 "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
                 "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",

@@ -3,6 +3,8 @@
 angular.module('shaastra2016App')
   .controller('sisFellowshipCtrl', function ($scope, $location, $anchorScroll) {
 
+    $scope.pageClass = 'page-sisFellowship';
+
     var html = angular.element(document.getElementById('body'));
     html.css({
       'overflow': 'auto',
