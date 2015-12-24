@@ -18,6 +18,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/side-menu.css">
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/edit-profile.css">
@@ -37,30 +38,6 @@
     <link rel="stylesheet" href="styles/event-list.css">
     <link rel="stylesheet" href="styles/dashboard.css">
     <!-- endbuild -->
-    <style>
-        .ng-leave { 
-            -webkit-animation:scaleAndFade 1s ease 1;
-            -moz-animation:scaleAndFade 1s ease 1;
-            -o-animation:scaleAndFade 1s ease 1;
-            animation:scaleAndFade 1s ease 1;  
-        }
-        @-webkit-keyframes scaleAndFade {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1); opacity: 0.1; }
-        }
-        @-moz-keyframes scaleAndFade {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1); opacity: 0.1; }
-        }
-        @-o-keyframes scaleAndFade {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1); opacity: 0.1; }
-        }
-        @keyframes scaleAndFade {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1); opacity: 0.1; }
-        }
-    </style>
   </head>
   <body ng-app="shaastra2016App" id="body">
     <!--[if lte IE 8]>
@@ -75,6 +52,7 @@
     <div ng-include="'views/top-nav.html'"></div>
     
     <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
+      <!-- <div ng-view="" autoscroll="true" class="main-view"></div> -->
       <div ng-view="" autoscroll="true"></div>
       <div id="backdrop"></div>
 

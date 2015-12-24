@@ -1,0 +1,68 @@
+.main-view.ng-leave,
+.main-view.ng-enter {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.main-view.ng-enter-active {
+    opacity: 1;
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+}
+.main-view.ng-enter {
+    opacity: 0;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.main-view.ng-leave {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.main-view.ng-leave-active {
+    opacity: 0;
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+}
+
+/*        
+.main-view.ng-leave { 
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;  
+}
+@-webkit-keyframes ngLeaveAnim {
+    from { transform: scale(1); -webkit-transform-origin: center top; opacity: 1; }
+    to { transform: scale(0.5); -webkit-transform-origin: center top; opacity: 0; }
+}
+@-moz-keyframes ngLeaveAnim {
+    from { transform: scale(1, 1, 1); opacity: 1; }
+    to { transform: scale(1, 1, 0.8); opacity: 0; }
+}
+@-o-keyframes ngLeaveAnim {
+    from { transform: scale(1, 1, 1); opacity: 1; }
+    to { transform: scale(1, 1, 0.8); opacity: 0; }
+}
+@keyframes ngLeaveAnim {
+    from { transform: scale(1); transform-origin: center top; opacity: 1; }
+    to { transform: scale(0.5); transform-origin: center top; opacity: 0; }
+}
+.main-view.ng-enter { 
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;  
+}
+@-webkit-keyframes ngEnterAnim {
+    from { transform: scale(0.5); -webkit-transform-origin: center top; opacity: 0; }
+    to { transform: scale(1); -webkit-transform-origin: center top; opacity: 1; }
+}
+@-moz-keyframes ngEnterAnim {
+    from { transform: scale(1); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@-o-keyframes ngEnterAnim {
+    from { transform: scale(1); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes ngEnterAnim {
+    from { transform: scale(0.5); transform-origin: center top; opacity: 0; }
+    to { transform: scale(1); transform-origin: center top; opacity: 1; }
+}
+*/
