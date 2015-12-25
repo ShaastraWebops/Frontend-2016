@@ -1,6 +1,17 @@
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
 	<h1 id="topHead">Your Dashboard</h1>
 
+	<div id="sis-fellowship" class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<div class="jumbotron">
+			<h3 ng-if="!user.interestedInShaastraFellowship && !sisFellowshipWorking"><b>Click <a href="" ng-click="sisFellowship()">here</a> to register for</b></h3>
+			<h3 ng-if="sisFellowshipWorking"><b>Working ...</b></h3>
+			<h3 ng-if="user.interestedInShaastraFellowship"><b>Thank you for your interest in</b></h3>
+			<div class="shaastra-fellowship-div" ng-click="goto('/shaastra-fellowship')">
+				<h3><b><img src="images/logos/shaastra-fellowship-icon.png" width="75" alt="shaastra-fellowship-icon">Shaastra Fellowship Programme</b></h3>
+			</div>
+		</div>
+	</div>
+
 	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1">
 		<div class="container col-md-12 col-sm-12">
 			<div id="userDetail" class="jumbotron">

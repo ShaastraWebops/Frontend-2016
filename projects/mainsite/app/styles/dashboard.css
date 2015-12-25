@@ -1,86 +1,90 @@
+.shaastra-fellowship-div {
+	background-color: #173e43;
+	color: #ffffff;
+	cursor: pointer;
+}
+#sis-fellowship {
+	font-family: 'Proxima';
+	text-align: center;
+}
 .team-details-btn {
 	background-color: #991108;
 	color: white;
 }
-.topdiv
-{
+.topdiv {
 	margin-top: 5%;
 }
-#list{
+#list {
 	margin-top:5%;
 }
-#hding
-{
+#hding {
 	font-size: 1.5em;
   font-family: 'Proxima';
 }
-#topHead
-{
+#topHead {
 	text-align:center;
 	font-size: 3.5em;
   font-family: 'Feather';
 }
-#teamName
-{
+#teamName {
 	font-size: 1.5em;
 }
-#teamDetails
-{
+#teamDetails {
 	position: relative;
 }
-#userDetail{
+#userDetail {
 	padding: 15px;
 	padding-left: 48px;
 }
-#hding2{
+#hding2 {
 	font-size: 1.5em;
  	font-family: 'Proxima';
 	padding-bottom: 2px;
 	padding-left: 10px;
 }
-#setnewTeam{
+#setnewTeam {
   position: relative;
   margin-top: 2%;
   font-family: 'Proxima';
 }
-#addMember{
-	background-color:#1e1e1e;
-    border-width: 0px;
+#addMember {
+	background-color: #1e1e1e;
+  border-width: 0px;
 }
-#createnewTeam{
+#createnewTeam {
   position: relative;
   margin-top: 7%;
   font-family: 'Proxima';
   border-width: 0px;
-  background-color:#173e43;
+  background-color : #173e43;
 }
-#registerTeam{
+#registerTeam {
   position: relative;
   margin-top: 4%;
   font-family: 'Proxima';
   border-width: 0px;
-  background-color:#173e43;
+  background-color: #173e43;
 }
-#teamCheck{
+#teamCheck {
 	font-size: 15px;
-    font-family: 'Proxima';
+  font-family: 'Proxima';
 }
-#teamReq{
+#teamReq {
 	margin-top: 0px;
 	font-size: 15px;
-    font-family: 'Proxima';
+  font-family: 'Proxima';
 }
-#recommend
-{
+#recommend {
 	font-size: 1.5em;
 	margin-top: 15%;
 	display: table-row;
 }
-.fonts{
+.fonts {
 	font-size:1.5em;
 }
-.fontNormal{
-	font-size:1.2em;}
+.fontNormal {
+	font-size:1.2em;
+}
 #scroll {
 	background:#5c88e2;
 	border:2px solid #000;

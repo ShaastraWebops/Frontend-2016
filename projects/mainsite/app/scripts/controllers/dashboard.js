@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-	.controller('dashboardCtrl', function ($scope, $http, Auth) { 
+	.controller('dashboardCtrl', function ($scope, $http, Auth, $location) { 
 
     $scope.pageClass = 'page-dashboard';
 
@@ -44,6 +44,7 @@ angular.module('shaastra2016App')
     $scope.disableDeleteTeam = false;
     $scope.disableCreateTeam = false;
     $scope.disableUnregisterEvent = false;
+    $scope.sisFellowshipWorking = false;
 
     // $http.get('http://shaastra.org:8001/api/events')
     $http.get('http://shaastra.org:8001/api/events')
@@ -81,6 +82,26 @@ angular.module('shaastra2016App')
         }
         $scope.all_teams = response.data;
       });
+
+      $scope.sisFellowship = function() {
+        $scope.sisFellowshipWorking = true;
+        $http.post('http://shaastra.org:8001/api/users/sisFellowship')
+          .then(function (response) {
+            if(response.status === 200) {
+              $scope.user.interestedInShaastraFellowship = true;
+              $scope.sisFellowshipWorking = false;
+              alert('Successfully registered for Shaastra Fellowship');
+            } else {
+              $scope.user.interestedInShaastraFellowship = false;
+              $scope.sisFellowshipWorking = false;
+              alert('Some error has occurred');
+            }
+          });
+      };
+
+      $scope.goto = function(link) {
+        $location.path(link);
+      };
 
       $scope.registerEvent = function() {
         $scope.disableRegisterEvent = true;
