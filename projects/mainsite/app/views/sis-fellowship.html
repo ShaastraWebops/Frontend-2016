@@ -13,7 +13,11 @@
 						</div>
 					</div>
 					<div class="row makeCenter">
-						<h2><b>Welcome to Shaastra-IITM Summer (SIS) fellowships</b></h2>
+						<h1><b>Welcome to Shaastra-IITM Summer (SIS) fellowships</b></h1>
+						<h2 ng-if="!logged"><b>(<a target="_blank" href="/#/login">Login</a> to register for this</b>)</h2>
+						<h2 ng-if="!user.interestedInShaastraFellowship && !sisFellowshipWorking && logged"><b>(Click <a href="" ng-click="sisFellowship()">here</a> to register</b>)</h2>
+						<h2 ng-if="sisFellowshipWorking"><b>(Working ...)</b></h2>
+						<h2 ng-if="user.interestedInShaastraFellowship"><b>(Thank you for your interest)</b></h2>
 					</div><br>
 					<div class="row">
 						<p>Want an Internship at IITM ? Here's a chance for you to get one by winning an event in Shaastra.</p>
