@@ -39,6 +39,7 @@ module.exports = function(config) {
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/md-chips-select/md-chips-select.js',
       'bower_components/ng-scrollable/min/ng-scrollable.min.js',
+      'bower_components/flipclock/compiled/flipclock.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

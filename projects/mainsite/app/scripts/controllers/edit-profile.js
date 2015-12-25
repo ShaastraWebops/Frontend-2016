@@ -47,7 +47,7 @@ angular.module('shaastra2016App')
           err = err.data;
           $scope.errors = {};
 
-          console.log(err)
+          console.log(err);
           // Update validity of form fields that match the mongoose errors
           // angular.forEach(err.errors, function (error, field) {
           //   form[field].$setValidity('mongoose', false);

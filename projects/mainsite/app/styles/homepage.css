@@ -5,6 +5,21 @@ a:hover, a:active, a:focus {
 	outline: 0;
 }
 
+/*Changing the default plugin value! Beware!!*/
+.flip-clock-label {
+	font-size: 2em;
+}
+#home-countdown-div {
+	position: absolute;
+	top: 45%;
+	left: -20%;
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.6);
+	-o-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
 #blinkDiv{
 	position: absolute;
 	top: 80%;

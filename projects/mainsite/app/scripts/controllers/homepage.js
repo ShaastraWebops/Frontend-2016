@@ -59,7 +59,16 @@ function animateHexagons(){
     $("#bottom-hex").addClass("bottom-hex-anim");
   }
   $(".polygon-each-img-wrap").css("visibility","visible");
-  
+}
+
+function startCountdown () {
+  var currentTime = new Date();
+  var shaastraStartDate = new Date("2016", "00", "23");
+  var diffS = (shaastraStartDate-currentTime)/1000;
+  var clock = $('#home-countdown-div').FlipClock(diffS, {
+    clockFace: 'DailyCounter',
+    countdown: true
+  });
 }
 
 angular.module('shaastra2016App')
@@ -68,6 +77,8 @@ angular.module('shaastra2016App')
     $scope.pageClass = 'page-home';
 
     animateHexagons();
+    startCountdown();
+
     var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", 
                 "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
                 "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
