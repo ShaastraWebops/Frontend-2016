@@ -240,7 +240,7 @@ angular
         $rootScope.searchEvents = localStorageService.get('events');
         $rootScope.canSearch = true;
         $rootScope.searchMessage = '';
-        $http.get('http://shaastra.org:8001/api/events')
+        $http.get('http://shaastra.org:8001/api/events/forSearch')
           .then(function (response) {
             if(response.data.length != 0) {
               $rootScope.searchEvents = response.data;
@@ -249,7 +249,7 @@ angular
             }
           });          
       } else {
-        $http.get('http://shaastra.org:8001/api/events')
+        $http.get('http://shaastra.org:8001/api/events/forSearch')
           .then(function (response) {
             $rootScope.canSearch = true;
             $rootScope.searchMessage = '';
@@ -258,7 +258,7 @@ angular
           });          
       }
     } else {
-      $http.get('http://shaastra.org:8001/api/events')
+      $http.get('http://shaastra.org:8001/api/events/forSearch')
         .then(function (response) {
           $rootScope.canSearch = true;
           $rootScope.searchMessage = '';
