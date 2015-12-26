@@ -195,6 +195,8 @@ angular
         }
       });
 
+      $rootScope.url = $location.absUrl();
+
       $rootScope.showBackButton = (next.$$route.originalPath !== '/');
       $rootScope.showLogos = (next.$$route.originalPath === '/');
       $rootScope.showFooter = (next.$$route.originalPath !== '/');
