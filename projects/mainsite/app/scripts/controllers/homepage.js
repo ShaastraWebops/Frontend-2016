@@ -103,6 +103,10 @@ angular.module('shaastra2016App')
     //   var svgMargin = document.documentElement.clientWidth*0.36;
     //   $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // }
+    
+    $scope.alertfn = function() {
+      alert('inview');
+    };
 
     // guide start
     $scope.currentStep = ipCookie('myTour') || 1;

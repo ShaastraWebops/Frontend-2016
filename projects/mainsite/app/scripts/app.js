@@ -22,11 +22,18 @@ angular
     'cgBusy',
     'angular-intro',
     'ipCookie',
-    'updateMeta'
+    'updateMeta',
+    'angular-inview'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
+  })
+  .config(function (localStorageServiceProvider) {
+    localStorageServiceProvider
+      .setPrefix('Shaastra2016')
+      .setStorageType('localStorage')
+      .setNotify(true, true);
   })
   .config(function ($routeProvider) {
     $routeProvider
@@ -222,6 +229,42 @@ angular
 
     });
   })
+  .run(function ($rootScope, $http, localStorageService) {
+
+    $rootScope.searchEvents = [];
+    $rootScope.searchMessage = 'Please wait, the search is not yet ready';
+    $rootScope.canSearch = false;
+
+    if(localStorageService.isSupported) {
+      if(localStorageService.get('events')) {
+        $rootScope.searchEvents = localStorageService.get('events');
+        $rootScope.canSearch = true;
+        $rootScope.searchMessage = '';
+        $http.get('http://shaastra.org:8001/api/events')
+          .then(function (response) {
+            $rootScope.searchEvents = response.data;
+            localStorageService.remove('events');
+            localStorageService.set('events', response.data);
+          });          
+      } else {
+        $http.get('http://shaastra.org:8001/api/events')
+          .then(function (response) {
+            $rootScope.canSearch = true;
+            $rootScope.searchMessage = '';
+            $rootScope.searchEvents = response.data;
+            localStorageService.set('events', response.data);
+          });          
+      }
+    } else {
+      $http.get('http://shaastra.org:8001/api/events')
+        .then(function (response) {
+          $rootScope.canSearch = true;
+          $rootScope.searchMessage = '';
+          $rootScope.searchEvents = response.data;
+        });          
+    }
+  })
+  // For Google Analytics
   .run(function ($location) {
     !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
     (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),

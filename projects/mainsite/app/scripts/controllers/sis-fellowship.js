@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('sisFellowshipCtrl', function ($scope, $location, $anchorScroll, Auth) {
+  .controller('sisFellowshipCtrl', function ($scope, $location, $anchorScroll, Auth, $http) {
 
     $scope.pageClass = 'page-sisFellowship';
 

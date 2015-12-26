@@ -61,7 +61,23 @@
     <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
       <!-- <div ng-view="" autoscroll="true" class="{{ pageClass }}"></div> -->
       <div ng-view="" autoscroll="true"></div>
-      <div id="backdrop"></div>
+
+      <div id="backdrop">
+        <div id="search-backdrop">
+            <input type="text" id="search-input" ng-model="searchText" placeholder="Search events and workshops" autocomplete="off" />
+            <div ng-if="!canSearch" id="search-message">{{ searchMessage }}</div>
+            <div id="search-display" class="col-xs-12" ng-show="canSearch && searchText">
+                <div class="search-display-wrapper" ng-repeat="item in searchEvents | filter:searchText">
+                    <a class="search-element col-sm-2 col-xs-6 template">
+                        <div class="wrapper">
+                            <span class="head">{{item.name}}</span>
+                            <img class="img" ng-src="http://shaastra.org:8001/api/uploads/{{item.imageid}}/{{item.imagename}}"/>
+                        </div>
+                    </a>
+                </div>
+            </div>            
+        </div>
+      </div>
 
       <footer ng-if="false" style="position:absolute; z-index:240; width:100%; padding:0% 2% 0% 36px;">
         <div style="float:left; padding-top:2%">
@@ -114,6 +130,7 @@
     <script src="bower_components/ng-scrollable/min/ng-scrollable.min.js"></script>
     <script src="bower_components/flipclock/compiled/flipclock.js"></script>
     <script src="bower_components/angular-update-meta/dist/update-meta.js"></script>
+    <script src="bower_components/angular-inview/angular-inview.js"></script>
     <!-- endbower -->
     <script src="bower_components/showdown/dist/showdown.min.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
