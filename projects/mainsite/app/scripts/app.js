@@ -21,7 +21,8 @@ angular
     'LocalStorageModule',
     'cgBusy',
     'angular-intro',
-    'ipCookie'
+    'ipCookie',
+    'updateMeta'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);
