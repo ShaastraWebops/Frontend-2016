@@ -11,8 +11,8 @@ a:hover, a:active, a:focus {
 }
 #home-countdown-div {
 	position: absolute;
-	top: 45%;
-	left: -20%;
+	top: 12%;
+	left: -18%;
 	-webkit-transform: scale(0.6);
 	-moz-transform: scale(0.6);
 	-ms-transform: scale(0.6);
@@ -547,6 +547,11 @@ a:hover, a:active, a:focus {
   .hex-images-div {
   	left: 20%;
   }
+}
+@media screen and (max-width: 800px) {
+	#home-countdown-div {
+		display: none;
+	}
 }
 @media screen and (max-width: 650px) {
   .home-top-nav-new {

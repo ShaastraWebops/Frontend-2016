@@ -67,7 +67,8 @@ function startCountdown () {
   var diffS = (shaastraStartDate-currentTime)/1000;
   var clock = $('#home-countdown-div').FlipClock(diffS, {
     clockFace: 'DailyCounter',
-    countdown: true
+    countdown: true,
+    showSeconds: false
   });
 }
 
