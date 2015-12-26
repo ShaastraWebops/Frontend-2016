@@ -225,7 +225,7 @@ angular
         $('.o').addClass("inblock");
         $('.o').animate({left:"-=220px"}, 200);
         $('#backdrop').css("display", "none");
-      } 
+      }
 
     });
   })
@@ -242,9 +242,11 @@ angular
         $rootScope.searchMessage = '';
         $http.get('http://shaastra.org:8001/api/events')
           .then(function (response) {
-            $rootScope.searchEvents = response.data;
-            localStorageService.remove('events');
-            localStorageService.set('events', response.data);
+            if(response.data.length != 0) {
+              $rootScope.searchEvents = response.data;
+              localStorageService.remove('events');
+              localStorageService.set('events', response.data);
+            }
           });          
       } else {
         $http.get('http://shaastra.org:8001/api/events')
