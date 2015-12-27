@@ -375,6 +375,11 @@
 }
 .main-center {
 	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 0%; 
+}
+.main-center-footer {
+	text-align: center;
 	padding-top: 5%;
 	padding-bottom: 5%; 
 }

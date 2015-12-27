@@ -69,10 +69,10 @@
 .page-workshopList.ng-leave,
 .page-workshopCategory.ng-leave,
 .page-workshopDetails.ng-leave {
-  -webkit-transform-origin: center 15%;
-  -moz-transform-origin: center 15%;
-  -o-transform-origin: center 15%;
-  transform-origin: center 15%;
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
   -webkit-transition: all 0.8s ease-in-out;
   -moz-transition: all 0.8s ease-in-out;
   -o-transition: all 0.8s ease-in-out;
@@ -102,10 +102,10 @@
 .page-workshopList.ng-enter,
 .page-workshopCategory.ng-enter,
 .page-workshopDetails.ng-enter {
-  -webkit-transform-origin: center 15%;
-  -moz-transform-origin: center 15%;
-  -o-transform-origin: center 15%;
-  transform-origin: center 15%;
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
   opacity: 0;
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -135,15 +135,15 @@
 .page-workshopList.ng-enter-active,
 .page-workshopCategory.ng-enter-active,
 .page-workshopDetails.ng-enter-active {
-  -webkit-transform-origin: center 15%;
-  -moz-transform-origin: center 15%;
-  -o-transform-origin: center 15%;
-  transform-origin: center 15%;
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  opacity: 1.5;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
 }
 .page-home.ng-leave,
 .page-makerSummit.ng-leave,
@@ -168,15 +168,15 @@
 .page-workshopList.ng-leave,
 .page-workshopCategory.ng-leave,
 .page-workshopDetails.ng-leave {
-  -webkit-transform-origin: center 15%;
-  -moz-transform-origin: center 15%;
-  -o-transform-origin: center 15%;
-  transform-origin: center 15%;
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  opacity: 1.5;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
 }
 .page-home.ng-leave-active,
 .page-makerSummit.ng-leave-active,
@@ -201,10 +201,10 @@
 .page-workshopList.ng-leave-active,
 .page-workshopCategory.ng-leave-active,
 .page-workshopDetails.ng-leave-active {
-  -webkit-transform-origin: center 15%;
-  -moz-transform-origin: center 15%;
-  -o-transform-origin: center 15%;
-  transform-origin: center 15%;
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
   opacity: 0;
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -228,30 +228,30 @@ a:hover, a:active, a:focus {
   visibility: hidden;
 }
 .animLeft.ng-hide-remove {
-  -webkit-animation: bounceInLeft 0.7s; 
-  -moz-animation: bounceInLeft 0.7s;
-  -ms-animation: bounceInLeft 0.7s;
-  -o-animation: bounceInLeft 0.7s;
-  animation: bounceInLeft 0.7s;
+  -webkit-animation: bounceInLeft 1.5s; 
+  -moz-animation: bounceInLeft 1.5s;
+  -ms-animation: bounceInLeft 1.5s;
+  -o-animation: bounceInLeft 1.5s;
+  animation: bounceInLeft 1.5s;
 }
 .animRight.ng-hide-remove {
-  -webkit-animation: bounceInRight 0.7s;    
-  -moz-animation: bounceInRight 0.7s;
-  -ms-animation: bounceInRight 0.7s;
-  -o-animation: bounceInRight 0.7s;
-  animation: bounceInRight 0.7s;
+  -webkit-animation: bounceInRight 1.5s;    
+  -moz-animation: bounceInRight 1.5s;
+  -ms-animation: bounceInRight 1.5s;
+  -o-animation: bounceInRight 1.5s;
+  animation: bounceInRight 1.5s;
 }
 .zoomInClass.ng-hide-remove {
-  -webkit-animation: zoomIn 0.7s; 
-  -moz-animation: zoomIn 0.7s;
-  -ms-animation: zoomIn 0.7s;
-  -o-animation: zoomIn 0.7s;
-  animation: zoomIn 0.7s;
+  -webkit-animation: zoomIn 1s; 
+  -moz-animation: zoomIn 1s;
+  -ms-animation: zoomIn 1s;
+  -o-animation: zoomIn 1s;
+  animation: zoomIn 1s;
 }
 .fadeInClass.ng-hide-remove {
-  -webkit-animation: fadeIn 0.7s; 
-  -moz-animation: fadeIn 0.7s;
-  -ms-animation: fadeIn 0.7s;
-  -o-animation: fadeIn 0.7s;
-  animation: fadeIn 0.7s;
+  -webkit-animation: fadeIn 1s; 
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
