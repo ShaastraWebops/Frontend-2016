@@ -22,7 +22,7 @@
 ::-webkit-scrollbar-thumb:window-inactive {
   background: #ffffff; 
 }
-
+/*
 .page-home.ng-enter,
 .page-makerSummit.ng-enter,
 .page-showsAndExhibitions.ng-enter, 
@@ -211,46 +211,47 @@
   -o-transform: scale(0.5);
   transform: scale(0.5);
 }
-
-/*        
-.page-view.ng-leave { 
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;  
-}
-@-webkit-keyframes ngLeaveAnim {
-    from { transform: scale(1); -webkit-transform-origin: 15% center; opacity: 1; }
-    to { transform: scale(0.5); -webkit-transform-origin: 15% center; opacity: 0; }
-}
-@-moz-keyframes ngLeaveAnim {
-    from { transform: scale(1, 1, 1); opacity: 1; }
-    to { transform: scale(1, 1, 0.8); opacity: 0; }
-}
-@-o-keyframes ngLeaveAnim {
-    from { transform: scale(1, 1, 1); opacity: 1; }
-    to { transform: scale(1, 1, 0.8); opacity: 0; }
-}
-@keyframes ngLeaveAnim {
-    from { transform: scale(1); transform-origin: 15% center; opacity: 1; }
-    to { transform: scale(0.5); transform-origin: 15% center; opacity: 0; }
-}
-.page-view.ng-enter { 
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;  
-}
-@-webkit-keyframes ngEnterAnim {
-    from { transform: scale(0.5); -webkit-transform-origin: 15% center; opacity: 0; }
-    to { transform: scale(1); -webkit-transform-origin: 15% center; opacity: 1; }
-}
-@-moz-keyframes ngEnterAnim {
-    from { transform: scale(1); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-@-o-keyframes ngEnterAnim {
-    from { transform: scale(1); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-@keyframes ngEnterAnim {
-    from { transform: scale(0.5); transform-origin: 15% center; opacity: 0; }
-    to { transform: scale(1); transform-origin: 15% center; opacity: 1; }
-}
 */
+
+a {
+  outline: 0;
+}
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+.animLeft.ng-hide,
+.animRight.ng-hide,
+.zoomInClass.ng-hide,
+.fadeInClass.ng-hide {
+  display: block!important;
+  visibility: hidden;
+}
+.animLeft.ng-hide-remove {
+  -webkit-animation: bounceInLeft 0.7s; 
+  -moz-animation: bounceInLeft 0.7s;
+  -ms-animation: bounceInLeft 0.7s;
+  -o-animation: bounceInLeft 0.7s;
+  animation: bounceInLeft 0.7s;
+}
+.animRight.ng-hide-remove {
+  -webkit-animation: bounceInRight 0.7s;    
+  -moz-animation: bounceInRight 0.7s;
+  -ms-animation: bounceInRight 0.7s;
+  -o-animation: bounceInRight 0.7s;
+  animation: bounceInRight 0.7s;
+}
+.zoomInClass.ng-hide-remove {
+  -webkit-animation: zoomIn 0.7s; 
+  -moz-animation: zoomIn 0.7s;
+  -ms-animation: zoomIn 0.7s;
+  -o-animation: zoomIn 0.7s;
+  animation: zoomIn 0.7s;
+}
+.fadeInClass.ng-hide-remove {
+  -webkit-animation: fadeIn 0.7s; 
+  -moz-animation: fadeIn 0.7s;
+  -ms-animation: fadeIn 0.7s;
+  -o-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}

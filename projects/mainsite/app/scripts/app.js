@@ -23,7 +23,8 @@ angular
     'angular-intro',
     'ipCookie',
     'updateMeta',
-    'angular-inview'
+    'angular-inview',
+    'scroll-animate-directive'    
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);
