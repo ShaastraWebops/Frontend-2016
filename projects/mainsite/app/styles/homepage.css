@@ -2,6 +2,9 @@
 .flip-clock-label {
 	font-size: 2em;
 }
+.flip-clock-wrapper ul li a div div.inn {
+	color: #ffffff;
+}
 #home-countdown-div {
 	position: absolute;
 	top: 12%;
