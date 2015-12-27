@@ -17,13 +17,11 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap',
     'LocalStorageModule',
     'cgBusy',
     'angular-intro',
     'ipCookie',
     'updateMeta',
-    'angular-inview',
     'scroll-animate-directive'    
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
