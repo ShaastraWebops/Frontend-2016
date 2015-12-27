@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url('../styles/fonts/ProximaNovaRegular.otf') format("opentype");
+}
+@font-face {
+  font-family: 'Feather';
+  src: url('../styles/fonts/Feather.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'MyraidPro';
+  src: url('../styles/fonts/MyriadProRegular.otf') format("opentype");
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #ffffff; 
+}
+/*
+.page-home.ng-enter,
+.page-makerSummit.ng-enter,
+.page-showsAndExhibitions.ng-enter, 
+.page-contactUs.ng-enter,
+.page-editProfile.ng-enter,
+.page-aboutUs.ng-enter,
+.page-lectures.ng-enter,
+.page-dashboard.ng-enter,
+.page-hospitality.ng-enter,
+.page-login.ng-enter,
+.page-registration.ng-enter,
+.page-preShaastra.ng-enter,
+.page-samparkCategory.ng-enter,
+.page-samparkDetails.ng-enter,
+.page-sisFellowship.ng-enter,
+.page-social.ng-enter,
+.page-sponsors.ng-enter,
+.page-eventList.ng-enter,
+.page-eventCategory.ng-enter,
+.page-eventDetails.ng-enter,
+.page-workshopList.ng-enter,
+.page-workshopCategory.ng-enter,
+.page-workshopDetails.ng-enter,
+.page-home.ng-leave,
+.page-makerSummit.ng-leave,
+.page-showsAndExhibitions.ng-leave,
+.page-contactUs.ng-leave,
+.page-editProfile.ng-leave,
+.page-aboutUs.ng-leave,
+.page-lectures.ng-leave,
+.page-dashboard.ng-leave,
+.page-hospitality.ng-leave,
+.page-login.ng-leave,
+.page-registration.ng-leave,
+.page-preShaastra.ng-leave,
+.page-samparkCategory.ng-leave,
+.page-samparkDetails.ng-leave,
+.page-sisFellowship.ng-leave,
+.page-social.ng-leave,
+.page-sponsors.ng-leave,
+.page-eventList.ng-leave,
+.page-eventCategory.ng-leave,
+.page-eventDetails.ng-leave,
+.page-workshopList.ng-leave,
+.page-workshopCategory.ng-leave,
+.page-workshopDetails.ng-leave {
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.page-home.ng-enter,
+.page-makerSummit.ng-enter,
+.page-showsAndExhibitions.ng-enter, 
+.page-contactUs.ng-enter,
+.page-editProfile.ng-enter,
+.page-aboutUs.ng-enter,
+.page-lectures.ng-enter,
+.page-dashboard.ng-enter,
+.page-hospitality.ng-enter,
+.page-login.ng-enter,
+.page-registration.ng-enter,
+.page-preShaastra.ng-enter,
+.page-samparkCategory.ng-enter,
+.page-samparkDetails.ng-enter,
+.page-sisFellowship.ng-enter,
+.page-social.ng-enter,
+.page-sponsors.ng-enter,
+.page-eventList.ng-enter,
+.page-eventCategory.ng-enter,
+.page-eventDetails.ng-enter,
+.page-workshopList.ng-enter,
+.page-workshopCategory.ng-enter,
+.page-workshopDetails.ng-enter {
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.page-home.ng-enter-active,
+.page-makerSummit.ng-enter-active,
+.page-showsAndExhibitions.ng-enter-active, 
+.page-contactUs.ng-enter-active,
+.page-editProfile.ng-enter-active,
+.page-aboutUs.ng-enter-active,
+.page-lectures.ng-enter-active,
+.page-dashboard.ng-enter-active,
+.page-hospitality.ng-enter-active,
+.page-login.ng-enter-active,
+.page-registration.ng-enter-active,
+.page-preShaastra.ng-enter-active,
+.page-samparkCategory.ng-enter-active,
+.page-samparkDetails.ng-enter-active,
+.page-sisFellowship.ng-enter-active,
+.page-social.ng-enter-active,
+.page-sponsors.ng-enter-active,
+.page-eventList.ng-enter-active,
+.page-eventCategory.ng-enter-active,
+.page-eventDetails.ng-enter-active,
+.page-workshopList.ng-enter-active,
+.page-workshopCategory.ng-enter-active,
+.page-workshopDetails.ng-enter-active {
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  opacity: 1.5;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.page-home.ng-leave,
+.page-makerSummit.ng-leave,
+.page-showsAndExhibitions.ng-leave,
+.page-contactUs.ng-leave,
+.page-editProfile.ng-leave,
+.page-aboutUs.ng-leave,
+.page-lectures.ng-leave,
+.page-dashboard.ng-leave,
+.page-hospitality.ng-leave,
+.page-login.ng-leave,
+.page-registration.ng-leave,
+.page-preShaastra.ng-leave,
+.page-samparkCategory.ng-leave,
+.page-samparkDetails.ng-leave,
+.page-sisFellowship.ng-leave,
+.page-social.ng-leave,
+.page-sponsors.ng-leave,
+.page-eventList.ng-leave,
+.page-eventCategory.ng-leave,
+.page-eventDetails.ng-leave,
+.page-workshopList.ng-leave,
+.page-workshopCategory.ng-leave,
+.page-workshopDetails.ng-leave {
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  opacity: 1.5;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.page-home.ng-leave-active,
+.page-makerSummit.ng-leave-active,
+.page-showsAndExhibitions.ng-leave-active,
+.page-contactUs.ng-leave-active,
+.page-editProfile.ng-leave-active,
+.page-aboutUs.ng-leave-active,
+.page-lectures.ng-leave-active,
+.page-dashboard.ng-leave-active,
+.page-hospitality.ng-leave-active,
+.page-login.ng-leave-active,
+.page-registration.ng-leave-active,
+.page-preShaastra.ng-leave-active,
+.page-samparkCategory.ng-leave-active,
+.page-samparkDetails.ng-leave-active,
+.page-sisFellowship.ng-leave-active,
+.page-social.ng-leave-active,
+.page-sponsors.ng-leave-active,
+.page-eventList.ng-leave-active,
+.page-eventCategory.ng-leave-active,
+.page-eventDetails.ng-leave-active,
+.page-workshopList.ng-leave-active,
+.page-workshopCategory.ng-leave-active,
+.page-workshopDetails.ng-leave-active {
+  -webkit-transform-origin: center 1.55%;
+  -moz-transform-origin: center 1.55%;
+  -o-transform-origin: center 1.55%;
+  transform-origin: center 1.55%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+}
+*/
+
+a {
+  outline: 0;
+}
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+.animLeft.ng-hide,
+.animRight.ng-hide,
+.zoomInClass.ng-hide,
+.fadeInClass.ng-hide {
+  display: block!important;
+  visibility: hidden;
+}
+.animLeft.ng-hide-remove {
+  -webkit-animation: bounceInLeft 1.5s; 
+  -moz-animation: bounceInLeft 1.5s;
+  -ms-animation: bounceInLeft 1.5s;
+  -o-animation: bounceInLeft 1.5s;
+  animation: bounceInLeft 1.5s;
+}
+.animRight.ng-hide-remove {
+  -webkit-animation: bounceInRight 1.5s;    
+  -moz-animation: bounceInRight 1.5s;
+  -ms-animation: bounceInRight 1.5s;
+  -o-animation: bounceInRight 1.5s;
+  animation: bounceInRight 1.5s;
+}
+.zoomInClass.ng-hide-remove {
+  -webkit-animation: zoomIn 1s; 
+  -moz-animation: zoomIn 1s;
+  -ms-animation: zoomIn 1s;
+  -o-animation: zoomIn 1s;
+  animation: zoomIn 1s;
+}
+.fadeInClass.ng-hide-remove {
+  -webkit-animation: fadeIn 1s; 
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}

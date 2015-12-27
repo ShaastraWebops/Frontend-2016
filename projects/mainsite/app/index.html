@@ -2,23 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title>Shaastra 2016 | IIT Madras Techfest | Chennai</title>
+    <meta name="description" content="Shaastra is the annual technical festival of Indian Institute of Technology Madras, Chennai, India and the first ISO certified festival of its kind to be held from January 23rd to 26th 2016">
+    <meta name="keywords" content="Shaastra 2016 home, shaastra, spirit of engineering, the spirit of engineering, spirit of engg, the spirit of engg, engineering techfest, engineering technical festival, iso-certificate fest, iso fest, iso 9001-2008 fest, student run festival, iitm fest, chennai fest, iit madras fest, chennai festival, iitm festival, iit madras festival, iitm techfest, iit madras, iit madras techfest, iit madras technical festival, shaastra iit madras, indian institute of technology madras chennai tech fest, fellowship, shaastra fellowship, iitm fellowship, shaastra iitm fellowship, shaastra iit madras fellowship, iitm internship, iitm shaastra internship, chennai techfest internship, chennai technical festival internship, iitm technical festival, shaastra chennai, iitm chennai techfest, chennai techfest, chennai technical festival, chennai tech, pledge-a-book, pledge a book, sampark, pre-shaastra, pre shaastra, social campaign, envisage, air show, laser show, exhibits, lectures, speakers, tech and innovation fair, tech, iitm chennai technical festival, events, workshops, maker fest, maker community, shaastra-aerofest, shaastra-b-events, shaastra-coding, shaastra-department-flagship, shaastra-design-and-build, shaastra-electronics-fest, shaastra-involve, shaastra-quizzing, shaastra-spotlight, shaastra-workshops, shaastra-events, shaastra-makers">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Shaastra" />
+    <meta property="og:title" content="Shaastra 2016 | IIT Madras Techfest | Chennai" />
+    <meta property="og:url" content="http://www.shaastra.org/#/" />
+    <meta property="og:description" content="Shaastra is the annual technical festival of Indian Institute of Technology Madras, Chennai, India and the first ISO certified festival of its kind to be held from January 23rd to 26th 2016" />
     <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="NOODP">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/intro.js/introjs.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/ng-scrollable/min/ng-scrollable.min.css" />
+    <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/animate.min.css">
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/side-menu.css">
     <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/edit-profile.css">
+    <link rel="stylesheet" href="styles/reset-password.css">
+    <link rel="stylesheet" href="styles/forgot-password.css">
+    <link rel="stylesheet" href="styles/hospitality.css">
+    <link rel="stylesheet" href="styles/sis-fellowship.css">
+    <link rel="stylesheet" href="styles/maker-summit.css">
+    <link rel="stylesheet" href="styles/about-us.css">
+    <link rel="stylesheet" href="styles/sampark-details.css">
     <link rel="stylesheet" href="styles/event-details.css">
     <link rel="stylesheet" href="styles/contact-us-styles.css">
+    <link rel="stylesheet" href="styles/shows-and-exhibitions.css">
+    <link rel="stylesheet" href="styles/sponsors.css">
     <link rel="stylesheet" href="styles/login-register.css">
     <link rel="stylesheet" href="styles/event-category.css">
     <link rel="stylesheet" href="styles/event-list.css">
@@ -31,132 +53,62 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<!--     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+    <div id="bgstyle">
+      <img ng-if="showBackgroundImage" id="bgimg" src="images/homepage/background.jpg" alt="shaastra-homepage-background" image-cache-directive/>
+    </div>
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+    <div ng-include="'views/top-nav.html'"></div>
+    
+    <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
+      <!-- <div ng-view="" autoscroll="true" class="{{ pageClass }}"></div> -->
+      <div ng-view="" autoscroll="true"></div>
 
-            <a class="navbar-brand" href="#/">shaastra2016</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Main</a></li>
-              <li><a ng-href="#/homePage">Home Page</a></li>
-              <li><a ng-href="#/home">Home</a></li>
-              <li><a ng-href="#/events">Events</a></li>
-              <li><a ng-href="#/loginRegister">Login/Register</a></li>
-              <li><a ng-href="#/contactUs">Contact Us</a></li>
-            </ul>
-          </div>
+      <div id="backdrop">
+        <div id="search-backdrop">
+            <input type="text" id="search-input" ng-model="searchText" placeholder="Search events and workshops" autocomplete="off" />
+            <div ng-if="!canSearch" id="search-message">{{ searchMessage }}</div>
+            <div id="search-display" class="col-xs-12" ng-show="canSearch && searchText">
+                <div class="search-display-wrapper" ng-repeat="item in sorted=(searchEvents | filter:searchText) track by $index">
+                    <a target="_blank" ng-href="/#/{{(item.eventCategory[0]=='561567aac8d15f6e1252ebee') ? 'workshop':'event'}}/{{item.eventCategory[0]}}/{{item._id}}" class="search-element col-sm-2 col-xs-6 template">
+                        <div class="wrapper">
+                            <span class="head">{{item.name}}</span>
+                            <img class="img" alt="{{item.name}}-image" ng-src="http://shaastra.org:8001/api/uploads/{{item.imageid}}/{{item.imagename}}"/>
+                        </div>
+                    </a>
+                </div>
+                <div ng-if="!sorted.length" id="search-message">Your query didn't match any event (or) workshop</div>
+            </div>            
         </div>
       </div>
+
+      <footer ng-if="false" style="position:absolute; z-index:240; width:100%; padding:0% 2% 0% 36px;">
+        <div style="float:left; padding-top:2%">
+          <ul class="out mn-social"><!-- 
+             --><li class="social"><a id="fb" target="_blank" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
+             --><li class="social"><a id="tw" target="_blank" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
+             --><li class="social"><a id="you" target="_blank" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
+             --><li class="social"><a id="li" target="_blank" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
+           --></ul>
+        </div>
+        <div id="iitm-logos" style="float:right;" ng-if="showLogos">
+          <ul class="logo-links-ul">
+            <li class="logo-links-li"><a href="#/about-us"><img src="images/logos/iso-black.png" alt="iso" height="70" width="70"></a></li>
+            <li class="logo-links-li"><a target="_blank" href="http://www.iitm.ac.in"><img src="images/logos/iitm-black.png" alt="iitm-logo" height="70" width="60"></a></li>
+          </ul>
+        </div>
+        <div style="clear:both;"></div>
+      </footer>
     </div>
-
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
- -->
-<!--     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div> -->
-
-
-  <!--backgrnd image-->
-  <div id="bgstyle">
-    <img id="bgimg" src="images/background.jpg" alt="" />
-  </div>
-
-  <header style="position:fixed; z-index:350; background-color:red; width:100%;">
-    <div id="omnbars" class="o inblock" ng-controller="MainController">
-      <span class="bars" id="bar1"></span>
-      <span class="bars" id="bar2"></span>
-      <span class="bars" id="bar3"></span>
-      <span class="bars" id="bar4"></span>
-    </div>
-    
-    <div id="cmnbars" class="c none" ng-controller="MainController">
-      <span class="bars" id="bar5"></span>
-      <span class="bars" id="bar6"></span>
-    </div>
-  </header>
-
-  <div style="position:fixed; z-index:300; top:2%; right:2%;">
-    <header>
-      <div class="top-menu" ng-controller="MainController">
-        <p class="search"><span class="s scl">Search</span><span class="scl glyphicon glyphicon-search"></span><span class="inp"><input class="none si" type="search" name="Search"><span class="none si sic glyphicon glyphicon-remove"></span></span></p>
-        <p class="account"><span class="ac">Account</span><a id="login" ng-href="#/login" class="none ai">Login/Register</a><span class="glyphicon glyphicon-user"></span></p>
-      </div>
-    </header>
-  </div>
-
-  <div class="menu" style="position:fixed; z-index:350;" ng-controller="MainController">
-    <ul class="mn-list">
-      <span id="menuscroll">
-      <li><a href="#/">Home</a></li>
-      <li><a href="#/login">Log In/Register</a></li>
-      <li><a href="#/preShaastra">Pre-Shaastra</a></li>
-      <li class="down"><a class="d" href="#/event-list">Events<span class="fa fa-caret-right"></span></a>
-        <ul class="list">
-          <li><a href="#">Aero</a></li>
-          <li><a href="#">Aero</a></li>
-          <li><a href="#">Aero</a></li>
-        </ul>
-      </li>
-      <li class="down"><a class="d" href="#">Workshops<span class="fa fa-caret-right"></span></a>
-        <ul class="list">
-          <li><a href="#">Aero</a></li>
-          <li><a href="#">Aero</a></li>
-          <li><a href="#">Aero</a></li>
-        </ul>
-      </li>
-      <li class="down"><a class="d" href="#">Lectures<span class="fa fa-caret-right"></span></a>
-        <ul class="list">
-          <li><a href="#">Aero</a></li>
-          <li><a href="#">Aero</a></li>
-          <li><a href="#">Aero</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Sponsors</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#/contactUs">Contact Us</a></li>
-      </span>
-    </ul>
-  </div>
-  
-  <div id="main-container" style="position:absolute; width:100%; height:100%;"> 
-    <div ng-view=""></div>
-  </div>
-  <div id="backdrop"></div>
-
-  <footer style="position:fixed; z-index:350; width:100%;">
-    <ul class="out mn-social"><!-- 
-       --><li class="social"><a id="fb" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
-       --><li class="social"><a id="tw" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
-       --><li class="social"><a id="you" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
-       --><li class="social"><a id="li" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
-     --></ul>
-  </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
-      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-      (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-      r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-      }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      // !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+      // (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+      // r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+      // }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-XXXXX-X');
-      ga('send', 'pageview');
+      // ga('create', 'UA-68796703-1', 'auto');
+      // ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -165,7 +117,10 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-cookie/angular-cookie.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/intro.js/intro.js"></script>
+    <script src="bower_components/angular-intro.js/src/angular-intro.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -175,24 +130,49 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/md-chips-select/md-chips-select.js"></script>
     <script src="bower_components/ng-scrollable/min/ng-scrollable.min.js"></script>
+    <script src="bower_components/flipclock/compiled/flipclock.js"></script>
+    <script src="bower_components/angular-update-meta/dist/update-meta.js"></script>
+    <script src="bower_components/angular-inview/angular-inview.js"></script>
     <!-- endbower -->
+    <script src="bower_components/showdown/dist/showdown.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="bower_components/angular-busy/dist/angular-busy.min.js"></script>
     <!-- endbuild -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/scroll-animate-directive.js"></script>
         <script src="scripts/controllers/side-menu.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/homepage.js"></script>
+        <script src="scripts/controllers/edit-profile.js"></script>
+        <script src="scripts/controllers/hospitality.js"></script>
+        <script src="scripts/controllers/reset-password.js"></script>
+        <script src="scripts/controllers/forgot-password.js"></script>
+        <script src="scripts/controllers/sis-fellowship.js"></script>
+        <script src="scripts/controllers/sampark-details.js"></script>
         <script src="scripts/controllers/event-details.js"></script>
+        <script src="scripts/controllers/workshop-details.js"></script>
         <script src="scripts/controllers/contact-us-script.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/register.js"></script>
         <script src="scripts/controllers/event-list.js"></script>
+        <script src="scripts/controllers/workshop-list.js"></script>
+        <script src="scripts/controllers/sampark-category.js"></script>
         <script src="scripts/controllers/event-category.js"></script>
+        <script src="scripts/controllers/workshop-category.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
+        <script src="scripts/controllers/sponsors.js"></script>
+        <script src="scripts/controllers/shows-and-exhibitions.js"></script>
+        <script src="scripts/controllers/pre-shaastra.js"></script>
+        <script src="scripts/controllers/lectures.js"></script>
+        <script src="scripts/controllers/social.js"></script>
+        <script src="scripts/controllers/maker-summit.js"></script>
+        <script src="scripts/controllers/about-us.js"></script>
         <script src="scripts/controllers/user.service.js"></script>
         <script src="scripts/controllers/auth.service.js"></script>
+        <script src="scripts/controllers/image-cache-directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

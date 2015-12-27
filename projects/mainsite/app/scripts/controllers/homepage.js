@@ -1,317 +1,228 @@
 'use strict';
 
+/*$(window).on('load', function(){
+  console.log("Inside window.load");
+});*/
+
+function animateHexagons(){
+  function whichAnimationEvent(element){
+    var t, el;
+    if(element===1) {
+      el = document.getElementById("top-hex");
+    }
+    else if(element===2) {
+      el = document.getElementById("middle-hex");
+    }
+    else if(element===3) {
+      el = document.getElementById("bottom-hex");
+    }
+    
+    var animations = {
+      "animation"      : "animationend",
+      "OAnimation"     : "oAnimationEnd",
+      "MozAnimation"   : "animationend",
+      "WebkitAnimation": "webkitAnimationEnd"
+    };
+
+    for (t in animations){
+      if (el.style[t] !== undefined){
+        return animations[t];
+      }
+    }
+  }
+
+  var animationEvent1 = whichAnimationEvent(1);
+  var animationEvent2 = whichAnimationEvent(2);
+  var animationEvent3 = whichAnimationEvent(3);
+  
+  if(sessionStorage.homePageLoaded!==1){
+   $("#top-hex").addClass("hex-initial-anim");
+   $("#middle-hex").addClass("hex-initial-anim");
+   $("#bottom-hex").addClass("hex-initial-anim");
+   $("#top-hex").one(animationEvent1, function(event){
+     $("#top-hex").removeClass("hex-initial-anim");
+   });
+   
+   $("#middle-hex").one(animationEvent2, function(event){
+     $("#middle-hex").removeClass("hex-initial-anim");
+     $("#middle-hex").addClass("middle-hex-anim");
+   });
+   
+   $("#bottom-hex").one(animationEvent2, function(event){
+     $("#bottom-hex").removeClass("hex-initial-anim");
+     $("#bottom-hex").addClass("bottom-hex-anim");
+   });
+   sessionStorage.homePageLoaded = 1;
+  }
+  else{
+    $("#middle-hex").addClass("middle-hex-anim");
+    $("#bottom-hex").addClass("bottom-hex-anim");
+  }
+  $(".polygon-each-img-wrap").css("visibility","visible");
+}
+
+function startCountdown () {
+  var currentTime = new Date();
+  var shaastraStartDate = new Date("2016", "00", "23");
+  var diffS = (shaastraStartDate-currentTime)/1000;
+  var clock = $('#home-countdown-div').FlipClock(diffS, {
+    clockFace: 'DailyCounter',
+    countdown: true,
+    showSeconds: false
+  });
+}
+
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope) {
+  .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
+
+    $scope.pageClass = 'page-home';
+
+    animateHexagons();
+    startCountdown();
+
+    var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", 
+                "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
+                "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
+                "Registrations have been opened!!!"];
+    var a = 0;
+    function changeText() {
+      var blinkText = document.getElementById("blinkText");
+      if(blinkText !== null) {
+        blinkText.innerHTML = demo[a];
+        a += 1;
+        if(a === demo.length) {
+          a = 0;
+        }
+      }
+    }
+    setInterval(changeText, 3000);
+    // var svgMargin = document.documentElement.clientWidth*0.36;
+    // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
+    // window.addEventListener("resize", resizeFunction);
+    // function resizeFunction () {
+    //   var svgMargin = document.documentElement.clientWidth*0.36;
+    //   $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
+    // }
+    
+    $scope.alertfn = function() {
+      alert('inview');
+    };
+
+    // guide start
+    $scope.currentStep = ipCookie('myTour') || 1;
+    $scope.firstDone = ipCookie('firstDone') || 0;
+    $scope.AfterChangeEvent = function() {
+      $scope.currentStep = this._currentStep + 0;
+      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+    };
+
+    $scope.CompletedEvent = function() {
+      $scope.currentStep = this._currentStep + 2;
+      ipCookie('myTour', $scope.currentStep, { expires: 3000 });
+    };
+
+    if($scope.currentStep < 7 && !$scope.firstDone) {
+      $timeout( function(){$scope.CallMe($scope.currentStep);}, 1000);
+    }
+    ipCookie('firstDone', 1, { expires: 8620000 });
+
+    $scope.IntroOptions = {
+      steps:[
+        {
+          step : 0,
+          element: document.querySelector('#shaastra-homepage'),
+          intro: "Hello there! Welcome to Shaastra 2016.",
+          position: 'down'
+        },
+        {
+          step : 1,
+          element: document.querySelector('#top-nav-events'),
+          intro: "Compete against the best teams around the country and emerge victorious to win loads cash prizes, internships and other career opportunities. To know more, click on Events.​",
+          position: 'down'
+        },
+        {
+          step : 2,
+          element: document.querySelector('#top-nav-workshops'),
+          intro: "At Shaastra 2016, you can develop valuable technical skills by attending our workshops where you can learn to apply sophisticated concepts like 3D Design, Systems Biology, Network Analysis and Computational Neuroscience. To know more, click on Workshops.",
+          position: 'down'
+        },
+        {
+          step : 3,
+          element: document.querySelector('#top-nav-shows'),
+          intro: "Relish the confluence of Science, Technology and Entertainment in the fun packed shows and savour the variety of our displays and exhibitions at Shaastra 2016. To know more, click on Shows and Exhibitions.",
+          position: 'down'
+        },
+        {
+          step : 4,
+          element: document.querySelector('#top-nav-preShaastra'),
+          intro: "In attempt to give a glimpse of Shaastra, we come to your own city! To know more about our mini-Shaastras, click on Pre-Shaastra Activities.",
+          position: 'down'
+        },
+        {
+          step : 5,
+          element: document.querySelector('#top-nav-summit'),
+          intro: "Create new things, inspire discoveries, uncover ideas and make a difference with makers. To know more, click on International Summit.",
+          position: 'down'
+        },
+        {
+          step : 6,
+          element: document.querySelector('#top-nav-social'),
+          intro: "Shaastra's attempt to give back to society and to create impact in the fields of education and literacy, this time through Pledge-A-Book 2.0 - To know more, click on Social Cause.",
+          position: 'down'
+        },
+        {
+          step : 7,
+          element: document.querySelector('#homepage-bottom-nav-tour'),
+          intro: "Like, Share, Follow, Tweet. Thank you.",
+          position: 'top'
+        }
+      ],
+      showStepNumbers: false,
+      exitOnOverlayClick: true,
+      exitOnEsc: true,
+      nextLabel: '<strong>NEXT!</strong>',
+      prevLabel: '<span style="color:green">Previous</span>',
+      skipLabel: 'Stop Tour',
+      doneLabel: 'Okay'
+    };
+
+    $scope.ShouldAutoStart = false;
+    // guide end
+
+    $scope.showTooltip = true;
 
     var html = angular.element(document.getElementById('body'));
-    html.css({'overflow': 'hidden'});
-
-    $scope.name = "events";
-
-    var top1 = angular.element(document.getElementsByClassName('.top-1'));
-    var top2 = angular.element(document.getElementsByClassName('.top-2'));
-    var mid1 = angular.element(document.getElementsByClassName('.mid-1'));
-    var shaastrabox = angular.element(document.getElementsByClassName('.shaastrabox'));
-    var mid2 = angular.element(document.getElementsByClassName('.mid-2'));
-    var botm1 = angular.element(document.getElementsByClassName('.botm11'));
-    var botm2 = angular.element(document.getElementsByClassName('.botm-2'));
-
-    // var elemboxright = angular.element(document.getElementsByClassName('.elemboxright'));
-    // var elemboxleft = angular.element(document.getElementsByClassName('.elemboxleft'));
-    
-    // var container = angular.element(document.getElementsByClassName('.container'));
-
-    // var invisiblebox1 = angular.element(document.getElementsByClassName('.invisiblebox1'));
-    // var invisiblebox2 = angular.element(document.getElementsByClassName('.invisiblebox2'));
-
-    // var lefthand = angular.element(document.getElementById('#lefthand'));
-    // var righthand = angular.element(document.getElementById('#righthand'));
-
-    // var mainContainer = angular.element(document.getElementById('#main-container'));
-
-    top1.click(function () {
-      $scope.name = "events";
-    });
-    top2.click(function () {
-      $scope.name = "shows";
-    });
-    mid1.click(function () {
-      $scope.name = "workshops";
-    });
-    shaastrabox.click(function () {
-      $scope.name = "contact-us";
-    });
-    mid2.click(function () {
-      $scope.name = "lectures";
-    });
-    botm1.click(function () {
-      $scope.name = "social";
-    });
-    botm2.click(function () {
-      $scope.name = "pre-shaastra";
+    html.css({
+      'overflow-y': 'scroll',
+      'overflow-x': 'hidden'
     });
 
-    // $(".top-1").click(function(){
-    //   $scope.name = "events";
-    // });
-    // $(".top-2").click(function(){
-    //   $scope.name = "shows";
-    // });
-    // $(".mid-1").click(function(){
-    //   $scope.name = "workshops";
-    // });
-    // $(".shaastrabox").click(function(){
-    //   $scope.name = "contact-us";
-    // });
-    // $(".mid-2").click(function(){
-    //   $scope.name = "lectures";
-    // });
-    // $(".botm-1").click(function(){
-    //   $scope.name = "social";
-    // });
-    // $(".botm-2").click(function(){
-    //   $scope.name = "pre-shaastra";
-    // });
-    
-    $scope.mouseDown=$("#main-container").mousedown(function (e) {
-      if(e.clientX<=$('.invisiblebox2').offset().left) {
-        $("#righthand").attr("src", "images/handr1.png");
-      } else {
-        $("#lefthand").attr("src", "images/handl1.png");
-      }
-    });
-    
-    $scope.mouseUp=$("#main-container").mouseup(function (e) {
-      if(e.clientX<=$('.invisiblebox1').offset().left) {
-        $("#righthand").attr("src","images/handr.png");
-      } else {
-        $("#lefthand").attr("src","images/handl.png");
-      } 
-    });
+    var backButton = $('#back-button');
+    backButton.attr('link', '/');
 
-    /*$scope.mouseDownR=$(".elemboxright").mousedown(function(){
-    ("#lefthand").attr("src","images/handl1.png")
-     });
-    $scope.mouseUpL=$(".elemboxleft").mouseup(function(){
-    $("#righthand").attr("src","images/handr.png")
-     });*/
-/*    $scope.mouseUpR=$(".elemboxright").mouseup(function(){
-    ("#lefthand").attr("src","images/handl.png")
-     });*/
+    var hamburgerMenu = $('#omnbars');
+    hamburgerMenu.css({'top': '20px'});
 
-    $(".elemboxleft").click(function () {
-      var elem = $(this);
-      elem.css({
-        top: $(".container").height() / 2 - elem.width() / 4 ,
-        left: $(".container").width() / 2 - elem.width() / 2,
-        zIndex: 500 
-      });
-      $("#righthand").animate({
-        top: $(".container").height() / 2 ,
-        left: $(".container").width() / 2 - elem.width() / 2
-      }, function () {
-          $("#righthand").animate({
-            top: "-=" + elem.height()/2,
-            left: "-=" + elem.width()/2
-          });
-          $("#lefthand").animate({
-            top: $(".container").height()/2 + elem.height() / 2,
-            left: $(".container").width()/2 + elem.width() / 2
-          }, function () {
-              elem.css ({
-                "width" : "100%",
-                "height" : "100%",
-                "top": "0",
-                "left" : "0",
-                "line-height": elem.height()/12,
-                "font-size" : "8vh"
-              });
-              $("#righthand").animate({
-                top: 0,
-                left: -157
-              }, function () {
-                  $('#righthand').css({
-                    "position" : "static"
-                  });
-                });
-                $("#lefthand").animate({
-                  top: $(".container").height(),
-                  left: $(".container").width()
-                }, function () {
-                    $('#lefthand').css({
-                      "position" : "static"
-                    });
-                    $(location).attr('href','https://www.google.co.in/');
-                    console.log($scope.name);
-                  });
-            });
-        });
-    });
+    $scope.scrollDown = function (element) {
+      var temp = $location.hash();
+      $location.hash(element);
+      $anchorScroll();
+      $location.hash(temp);
+    };
 
-    $(".elemboxright").click(function () {
-      var elem = $(this);
-      elem.css({
-        top: $(".container").height() / 2 - elem.width() / 4 ,
-        right: $(".container").width() / 2 - elem.width() / 2,
-        zIndex: 500 
-      });
-      $("#lefthand").animate({
-        top: $(".container").height() / 2 ,
-        left: $(".container").width() / 2 - elem.width() / 2
-      }, function () {
-          $("#righthand").animate({
-            top: $(".container").height() / 2 - elem.height() / 2,
-            left: $(".container").width() / 2 - elem.width()
-          });
-          $("#lefthand").animate({
-            top: $(".container").height()/2 + elem.height() / 2,
-            left: $(".container").width() / 2 + elem.width() / 2
-          }, function () {
-              elem.css ({
-                "width" : "100%",
-                "height" : "100%",
-                "top": "0",
-                "right" : "0",
-                "line-height": elem.height()/12,
-                "font-size" : "8vh"
-              });
-              $("#righthand").animate({
-                top: 0,
-                left: -157
-               }, function () {
-                  $('#righthand').css({
-                    "position" : "static"
-                  });
-                });
-                $("#lefthand").animate({
-                  top: $(".container").height(),
-                  left: $(".container").width()
-                }, function () {
-                    $('#lefthand').css({
-                      "position" : "static"
-                    });
-                    $(location).attr('href','https://www.google.com/');
-                    console.log($scope.name);
-                });
-            });
-        });
-    });
-
-    $(".shaastrabox").click(function () {
-      var elem = $(this);
-        $("#righthand").animate({
-          top: $(".container").height() / 2 - elem.height() / 2,
-          left: $(".container").width() / 2 - elem.width()
-        });
-        $("#lefthand").animate({
-          top: $(".container").height()/2 + elem.height() / 2,
-          left: $(".container").width() / 2 + elem.width() / 2
-        }, function () {
-            elem.css ({
-              "width" : "100%",
-              "height" : "100%",
-              "top": "0",
-              "left" : "0",
-              "margin-left": "0"
-            });
-            $(".text1").css({
-              "top" : "-5vh",
-              "left" : "51%",
-              "transform" : "translate(-50%)",
-              "font-size" : "4vh" 
-            });
-            $(".text2").css({
-              "top" : "65%",
-              "left" : "35%",
-              "font-size" : "5vh"
-            });
-            $(".number").css({
-              "top" : "52.9%",
-              "left" : "57%",
-              "font-size" : "5vh"
-            });
-            $(".underline").css({
-              "top" : "71%",
-              "left" : "50%",
-              "width" : "50vh",
-              "transform" : "translate(-50%)"
-            });
-            $(".text3").css({
-              "top" : "63%",
-              "left" : "50%",
-              "font-size" : "2vh",
-              "transform" : "translate(-50%)"
-            });
-            $("#righthand").animate({
-              top: 0,
-              left: -157
-            }, function () {
-                $('#righthand').css({
-                  "position" : "static"
-                });
-              });
-              $("#lefthand").animate({
-                top: $(".container").height(),
-                left: $(".container").width()
-              }, function () {
-                  $('#lefthand').css({
-                    "position" : "static"
-                  });
-                  $(location).attr('href','https://www.google.com/');
-                  console.log($scope.name);
-                });
-          });
-    });
+    $scope.gotoLink = function (link) {
+      $location.url(link);
+    };
 
 });
- 
-//tooltip Directive
+
+//rotating hexagons directive
 angular.module('shaastra2016App')
-  .directive('tooltip', function () {
-    return {
-      restrict: 'A',
-      link: function () {
-        var rightHand;
-        var leftHand;
-        var x = 0;
-        var y = 0;
-        
-        rightHand = document.getElementById("righthand");
-        leftHand = document.getElementById("lefthand");
-                
-        $(".invisiblebox2,.elemboxright").mousemove(function (e) {
-          x = (e.clientX-$('.invisiblebox1').offset().left),
-          y = (e.clientY-$('.invisiblebox1').offset().top);
-
-          //position according to mouse position
-          leftHand.style.top = (y + 0) + 'px';
-          leftHand.style.left = (x  + 0) + 'px';
-          // leftHand.style.top.animationTimingFunction = "linear";
-          // leftHand.style.left.animationTimingFunction = "linear";
-        }); 
-        
-        $(".invisiblebox1,.elemboxleft").mousemove(function (e) {
-
-          x = (e.pageX-$('.invisiblebox1').offset().left),
-          y = (e.pageY-$('.invisiblebox1').offset().top);
-
-          //position according to mouse position
-          rightHand.style.top = (y  + 0) + 'px';
-          rightHand.style.left = (x - 155) +'px';
-        });
-
-        //moving back hand to it's original place
-        $(".invisiblebox2,.elemboxright").mousemove(function () {
-          rightHand.style.top = "25%";
-          rightHand.style.left = "18%";
-        });
-
-        $(".invisiblebox1,.elemboxleft").mousemove(function () {
-          leftHand.style.top = "47%";
-          leftHand.style.left = "75%";
-        });
-
-        //red dot to appear
-      }
+  .directive('rotateHex', function($animate){
+    return function(scope, element){
+    $animate.animate(element,'fx-rotate-clock')
+      .then(function(){
+        console.log("Rotated");
+      });
     };
   });

@@ -1,32 +1,198 @@
-<div class="container" ng-app="shaastra2016App" ng-controller="loginCtrl">
+<update-title title="Register | Shaastra 2016"></update-title>
+<update-meta property="og:title" content="Register | Shaastra 2016"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
+
+<div class="container">
 	<center>
 		<div>
-		<div  class="btn-group" role="group">
-		  <a href="#/login" id="tab" type="button" class="btn btn-default">Login</a>
-		  <a href="#/register"id="tab" type="button" class="btn btn-primary">Register</a>
+			<div class="btn-group" role="group">
+			  <a href="#/login" id="tab1" type="button" class="btn btn-default">Login</a>
+			  <a href="#/register"id="tab2" type="button" class="btn btn-primary">Register</a>
+			</div>
 		</div>
+		<form class="form" name="form" novalidate>
+			<div id="setpassword" class="row">
+				<div class="col-lg-offset-3 col-lg-3 col-xs-12">
+				  <div id="validation" class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+	                                            							'has-error': form.name.$invalid && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span>
+						  </span>
+						  <input type="text" name="name" class="form-control" ng-model="name" placeholder="Enter your First Name" aria-describedby="sizing-addon2" required>
+						</div>
+					  <span class="help-block" ng-show="form.name.$error.required && submitted">
+	        		First name is required
+	      		</span>
+					</div>
+				</div>
 
-		</div>
-		<div id="username"class="input-group">
-		  <span class="input-group-addon" id="sizing-addon2"><img src="images/human.png" alt="at" height="20px" width="20px"></img></span>
-		  <input type="text" ng-model="UserName" class="form-control" placeholder="User name or email or shaastra id" aria-describedby="sizing-addon2">
+				<div class="col-lg-3 col-xs-12">
+				  <div id="validation" class="form-group" ng-class="{ 'has-success': form.secondName.$valid && submitted,
+	                                            							'has-error': form.secondName.$invalid && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span>
+						  </span>
+						  <input type="text" name="secondName" class="form-control" ng-model="secondName" placeholder="Enter your Second Name" aria-describedby="sizing-addon2" required>
+						</div>
+					  <span class="help-block" ng-show="form.secondName.$error.required && submitted">
+	        		Second name is required
+	      		</span>
+					</div>
+				</div>
+			</div>
 
-		<div id="password"class="input-group">
-		  <input type="text" ng-model="Password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
-		</div></div>
-		<br>
+			<div id="setpassword" class="row">
+				<div class="col-lg-offset-3 col-lg-3 col-xs-12">
+			    <div id="validation" class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
+                                            								'has-error': form.password.$invalid && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-lock" height="20px" width="20px" alt="lock_image"></span>
+						  </span>
+						  <input type="Password" name="password" class="form-control" ng-model="password" placeholder="Enter Password" aria-describedby="sizing-addon2" required>
+						</div>
+					  <span class="help-block" ng-show="form.password.$error.required && submitted">
+		      		Password is required
+		    		</span>
+					</div>
+				</div>
 
-		<div id="email" class="input-group">
-		  <span class="input-group-addon"><img src="images/at.png" alt="at" height="20px" width="20px"></img></span>
-		  <input type="text"  ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2">
-		</div>
+				<div class="col-lg-3 col-xs-12">
+				  <div id="validation" class="form-group" ng-class="{ 'has-success': (password === confirmPassword && form.confirmPassword.$valid && form.password.$valid && submitted),
+	                                          								'has-error': (password !== confirmPassword || form.confirmPassword.$invalid || form.password.$invalid) && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-lock" height="20px" width="20px" alt="lock_image"></span>
+						  </span>
+						  <input type="Password" name="confirmPassword" class="form-control" ng-model="confirmPassword" placeholder="Confirm Password" aria-describedby="sizing-addon2" required>
+						</div>
+					  <span class="help-block" ng-show="(password != confirmPassword || form.password.$invalid || form.confirmPassword.$error.required) && submitted">
+		      		Passwords do not match
+		    		</span>
+					</div>
+				</div>
+			</div>
 
-		<div id="repassword" class="input-group">
-		  <span class="input-group-addon"><img src="images/lock.png" alt="at" height="20px" width="20px"></img></span>
-		  <input type="Password" class="form-control" ng-model="repassword" placeholder="Password-atleast 6 characters" aria-describedby="sizing-addon2">
-		</div>
-		<br>
+			<div id="setpassword" class="row">
+				<div class="col-lg-offset-3 col-lg-4 col-xs-12">
+				  <div id="validation" class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
+	                                          								'has-error': form.email.$invalid && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-envelope" height="20px" width="20px" alt="mail_image"></span>
+						  </span>
+						  <input type="text" name="email" ng-model="email" class="form-control" placeholder="Enter a valid Email id" aria-describedby="sizing-addon2" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" required>
+						</div>
+					  <span class="help-block" ng-show="(form.email.$error.pattern || form.email.$error.required) && submitted">
+		      		E-mail is required
+		    		</span>
+					</div>
+					</div>
 
-		<a id="btndownr" class="btn btn-md btn-primary">Register</a>
+				<div class="col-lg-2 col-xs-12">	
+					<div id="validation" class="form-group" ng-class="{ 'has-success': form.phoneNumber.$valid && submitted,
+	                                          								'has-error': form.phoneNumber.$invalid && submitted }">
+						<div class="input-group">
+							<span class="input-group-addon">
+							 	<span class="glyphicon glyphicon-phone" height="20px" width="20px" alt="phone_image"></span>
+							</span>
+						  <input type="text" name="phoneNumber" ng-model="phoneNumber" class="form-control" placeholder="mobile number" aria-describedby="sizing-addon2" ng-pattern="/^\d{10}$/" required>
+						</div>
+					  <span class="help-block" ng-show="(form.phoneNumber.$error.pattern || form.phoneNumber.$error.required) && submitted">
+		      		Phone Number is required and must be 10 digits
+		    		</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="setpassword" class="row">
+				<div class="col-lg-offset-3 col-lg-2 col-xs-6">
+					<div id="validation" class="form-group" ng-class="{ 'has-success': form.city.$valid && submitted,
+		                                          							'has-error': form.city.$invalid && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-home" height="20px" width="20px" alt="city_image"></span>
+						  </span>
+						  <input type="text" name="city" ng-model="city" class="form-control" placeholder="Enter your City" aria-describedby="sizing-addon2" required>
+						</div>
+						<span class="help-block" ng-show="form.city.$error.required && submitted">
+		      		City is required
+		    		</span>
+        	</div>
+				</div>
+
+				<div class="col-lg-2 col-xs-6">
+					<div id="validation" class="form-group" ng-class="{ 'has-success': form.age.$valid && submitted,
+	                                          								'has-error': form.age.$invalid && submitted }">
+						<div class="input-group">
+						  <span class="input-group-addon">
+						  	<span class="glyphicon glyphicon-tasks" height="20px" width="20px" alt="age_image"></span>
+						  </span>
+						  <input type="text" name="age" ng-model="age" class="form-control" placeholder="Enter your Age" aria-describedby="sizing-addon2" ng-pattern="/^\d+$/" required>
+						</div>
+						<span class="help-block" ng-show="(form.age.$error.pattern || form.age.$error.required) && submitted">
+		      		Age is required
+		    		</span>
+        	</div>
+				</div>
+
+				<div id="selectGender" class="col-lg-2 col-xs-6">
+					<label class="radio-inline"><input type="radio" ng-model="gender" value="true">Male</label>
+					<label class="radio-inline"><input type="radio" ng-model="gender" value="false">Female</label>
+					<div class="col-lg-12 col-xs-12">
+					<span>(Default will be male)</span>
+					</div>	
+				</div>
+			</div>
+
+			<div class="checkbox col-lg-offset-4 col-lg-4 col-xs-12">
+		    <label>
+		      <input type="checkbox" ng-model="wantAccomodation"> Want Accomodation (Tick if yes)
+		    </label>
+			</div>
+
+			<div id="setpassword" class="row">
+			  <div class="col-lg-offset-3 col-lg-3 col-xs-12">
+					<div id="validation" class="form-group" ng-class="{ 'has-success': form.college.$valid && submitted,
+	                                          								'has-error': form.college.$invalid && submitted }">
+
+		        <select class="form-control" required name="college" ng-model="collegeSelected">
+		          <option value="" selected disabled>Choose College/School/Work</option>
+		          <option ng-repeat="college in college_list" value="{{ college._id }}">{{ college.collegeName }}</option>
+		        </select>
+						<span class="help-block" ng-show="form.college.$error.required && submitted">
+		      		College/School/Work is required
+		    		</span>
+	      	</div>
+      	</div>
+				<div class="checkbox col-lg-3 col-xs-12">
+			    <label>
+			      <input type="checkbox" ng-model="schoolStudent"> School Student (Tick if yes)
+			    </label>
+				</div>
+			</div>
+<!-- 
+				<p id="textCollege">
+					<span ng-click="toggleNewCollegeDiv()" id="toggleCollegeText">Click here</span> to add school/college/Work if it is not shown
+				</p>
+				<div id="college" ng-hide="existingCollege">
+					<div id="setpassword" class="row">
+						<div class="col-lg-9 col-xs-12">
+							<input type="text" ng-model="newCollegeName" class="form-control" placeholder="Enter your school/college">
+						</div>
+						<div class="col-lg-2 col-xs-12">
+							<button id="addMember" class="btn btn-success" ng-disabled="disableAddCollege" ng-click="addCollege()">Add</button>
+							<span id="hding">{{ addCollegeMessage }}</span>
+						</div>
+					</div>
+				</div>
+ -->
+			<a id="btndownr" class="btn btn-md btn-primary" ng-disabled="disableRegister" ng-click="registerUser()">Register</a>
+			<span id="hding">{{ userRegisterMessage }}</span>
+		</form>
 	</center>
 </div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

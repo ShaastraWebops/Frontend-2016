@@ -1,21 +1,40 @@
 'use strict';
 angular.module('shaastra2016App')
-  .controller('loginCtrl', function ($scope, Auth, $location) {
+  .controller('loginCtrl', function ($scope, Auth, $http, $location) {
+
+    $scope.pageClass = 'page-login';
+
+    var backButton = $('#back-button');
+    backButton.attr('link', '/');
+
+    var html = angular.element(document.getElementById('body'));
+    html.css({
+      'overflow-y': 'auto',
+      'background-color': '#f3f3f3'
+    });
+
     $scope.UserName = "";
     $scope.Password = "";
 
+    $scope.loginUser = function(){
         Auth.login({
-          email: 'abc@abc.c',
-          password: 'abcabc'
+            email: $scope.UserName,
+            password: $scope.Password
         })
         .then( function() {
-        	console.log('sdasd');
-          // Logged in, redirect to home
-          $location.path('#/dashboard');
+            // Logged in, redirect to home
+            $location.path('/dashboard');
+            // $http.get('http://localhost.org:8001/api/users/me')
+            // .then(function (response) {
+            //     console.log(response.data);
+            // });
         })
-        .catch( function(err) {
-          console.log(err);
-          // $scope.errors.other = err.message;
+        .catch( function (err) {
+            alert('Please enter correct credentials');
+            // console.log(err);
+            $location.path('/login');
+            // $scope.errors.other = err.message;
         });
+    };
 
 });

@@ -1,0 +1,16 @@
+.shows img {
+	max-height: 400px;
+	display: block;
+	margin: auto;
+}
+
+.shows-maker-heading {
+	font-family: 'Feather';
+	text-align: center;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+.shows-maker-heading h1 {
+	font-size: 3.5em;
+	letter-spacing: 2px;
+}

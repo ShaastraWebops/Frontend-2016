@@ -1,20 +1,31 @@
+<update-title title="Login | Shaastra 2016"></update-title>
+<update-meta property="og:title" content="Login | Shaastra 2016"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
+
 <center>
 	<div>
 		<div class="btn-group" role="group">
-		  <a href="#/login" id="tab" type="button" class="btn btn-primary">Login</a>
-		  <a href="#/register" id="tab" type="button" class="btn btn-default">Register</a>
+		  <a href="#/login" id="tab2" type="button" class="btn btn-primary">Login</a>
+		  <a href="#/register" id="tab1" type="button" class="btn btn-default">Register</a>
 		</div>
+	</div>
 
-		</div>
-		<div id= "username"class="input-group">
-		  <span class="input-group-addon" id="sizing-addon2"><img src="images/human.png" alt="at" height="20px" width="20px"></img></span>
-		  <input type="text" ng-model="UserName" class="form-control" placeholder="User name or email or shaastra id" aria-describedby="sizing-addon2">
+	<div id= "username"class="input-group">
+	  <span class="input-group-addon">
+	  	<span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span>
+	  </span>
+	  <input type="text" ng-model="UserName" class="form-control" placeholder="Enter email id" aria-describedby="sizing-addon2">
 
 		<div id= "password"class="input-group">
-		  <input type="text" ng-model="Password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
-		</div></div>
-		<br>
-
-		<a id="btndownl" class="btn btn-md btn-primary">Login</a>
+	  	<input type="password" ng-model="Password" class="form-control" placeholder="Enter password" aria-describedby="sizing-addon2">
+		</div>
 	</div>
+		
+	<br>
+
+	<a ng-click="loginUser()" class="btn btn-md btn-primary btndownl">Login</a>
+  <a class="btn btn-md btn-primary btndownl" href="#/forgot-password">Forgot Password ?</a>
+
 </center>
+
+<div ng-include="'views/sticky-footer.html'"></div>

@@ -1,0 +1,8 @@
+.makecenter{
+vertical-align:center;
+}
+#sp{
+text-align:center;
+}
+
+

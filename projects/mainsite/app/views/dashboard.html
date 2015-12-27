@@ -1,45 +1,120 @@
-<!-- <div class="container-fluid " style="overflow:scroll"> -->
+<update-title title="Dashboard | Shaastra 2016"></update-title>
+<update-meta property="og:title" content="Dashboard | Shaastra 2016"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
+
 <div id="row" ng-controller="dashboardCtrl as dashboard" class="topdiv" >
-	<div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1" class="list">
-		<label for="sel1"><div class="panel-heading" id="hding">Events Registered</div></label>
-   	<table class="table table-striped">
-			<tbody>
-				<tr ng-repeat="event in events.eventsList track by $index">
-					<th scope="row">{{$index+1}}</th>
-					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.eventName}}</div></a></td>
-					<td><div ng-click="unregister($index)" class="fontNormal btn btn-primary">unregister</div></td>
-				</tr>
-			</tbody>
-    </table>
+	<h1 id="topHead">Your Dashboard</h1>
 
-    <label for="sel1"><div class="panel-heading" id="hding">Team</div></label>
-   	<table class="table">
-			<tbody>
-				<tr ng-repeat="event in events.eventsList track by $index">
-					<th scope="row">{{$index+1}}</th>
-					<td ><a href="" ng-click="data($index)"><div ng-class="{'event-nav-selected':(i === $index)} " class="fontNormal">{{event.teamname}}</div></a></td>
-					<td><div  ng-click="unregister($index)" class="fontNormal btn btn-primary">leave</div></td>
-				</tr>
-			</tbody>
-    </table>
-	</div>
-  
-<!-- ////////////////////////////////////////////////// -->
-
-	<div class="col-md-5 col-sm-4 col-md-offset-2 col-sm-offset-2" id="teamDetails">
-		<div class="panel panel-default fonts" style="">
-			<span style="margin-left:3%">{{events.eventsList[i].teamname}}</span>
-		</div>
-		<div class="panel-body fontNormal">
-			Event : {{events.eventsList[i].eventName}}
-			<div>
-				Team  : <ul style="margin-left:14%"><li ng-repeat="teammate in events.eventsList[i].teammembers">{{teammate}}</li></ul>
+	<div id="sis-fellowship" class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<div class="jumbotron">
+			<h3 ng-if="!user.interestedInShaastraFellowship && !sisFellowshipWorking"><b>Click <a href="" ng-click="sisFellowship()">here</a> to register for</b></h3>
+			<h3 ng-if="sisFellowshipWorking"><b>Working ...</b></h3>
+			<h3 ng-if="user.interestedInShaastraFellowship"><b>Thank you for your interest in</b></h3>
+			<div class="shaastra-fellowship-div" ng-click="goto('/shaastra-fellowship')">
+				<h3><b><img src="images/logos/shaastra-fellowship-icon.png" width="75" alt="shaastra-fellowship-icon">Shaastra Fellowship Programme</b></h3>
 			</div>
 		</div>
-			<button id="contact-submit-btn" class="btn btn-primary">Add Member</button>
-</div>
-	<!-- ///////////////////////////////////////////////////////////// -->
-  <div  class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="place" >
+	</div>
+
+	<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1">
+		<div class="container col-md-12 col-sm-12">
+			<div id="userDetail" class="jumbotron">
+			  <label for="sel1"><div class="panel-heading" id="hding2">User Details <span>(Edit your details <a target="_blank" href="#/edit-profile">here</a>)</span></div></label>
+			  <h3 id="teamReq"><b>Name -</b> {{ user.name }} {{ user.secondName }}</h3>
+			  <h3 id="teamReq"><b>Email ID -</b> {{ user.email }}</h3>
+			  <h3 id="teamReq"><b>Shaastra ID -</b> {{ user.festID }}</h3>
+			</div>
+		</div>
+		<div class="container col-md-12 col-sm-12">
+			<div class="jumbotron">
+		  <label for="sel1"><div class="panel-heading" id="hding">Register for an Event or Workshop {{ eventRegisterMessage }}</div></label>
+			  <div class="form-group" ng-class="{ 'has-success': form.event.$valid && submitted,
+	                                            'has-error': form.event.$invalid && submitted }">
+	            <!-- <label>Select the Event</label> -->
+	        <select class="form-control" name="event" ng-model="eventSelected" ng-change="showTeamRequire()">
+	          <option value="" selected disabled>----- Select the Event or Workshop -----</option>
+	          <option ng-repeat="event in all_events track by $index" value="{{ event }}">{{ event.name }}</option>
+	        </select>
+	          <span class="help-block" ng-show="form.event.$error.required && submitted">
+	            An event is required
+	          </span>
+	          </div>  
+		  <h3 id="teamReq"><b>Team Requirement:</b> {{ teamRequire }}</h3>
+		  <h3 id="teamReq" ng-show="showDate"><b>Event Date:</b> {{ eventDate | date:"mediumDate" }}</h3>
+		  	<div class="form-group" ng-class="{ 'has-success': form.team.$valid && submitted,
+	                                            'has-error': form.team.$invalid && submitted }">
+	            <!-- <label>Choose Team Name</label> -->
+	        <select class="form-control" name="team" ng-model="teamSelected" ng-hide="singleMember">
+	          <option value="" selected disabled>----- Choose Team Name -----</option>
+	          <option ng-repeat="team in sortedTeams" value="{{ team }}">{{ team.teamName }}</option>
+	        </select>
+	          <span class="help-block" ng-show="form.team.$error.required && submitted">
+	            A team is required
+	          </span>
+	          </div>  
+			<center>
+				<button id="registerTeam" class="btn btn-success" ng-disabled="disableRegisterEvent" ng-click="registerEvent()">Register</button>
+			</center>
+		</div>
+
+    <label for="sel1"><div class="panel-heading" id="hding">Teams Created {{teamBlockMessage}}</div></label>
+   	<table class="table">
+			<tbody>
+				<tr ng-repeat="team in all_teams track by $index">
+					<!-- <th scope="row">{{$index}}</th> -->
+					<td><div><div ng-class="{'event-nav-selected':(i === $index)}" class="fontNormal">{{ team.teamName }}</div></div></td>
+					<td><button ng-click="data($index)" class="btn team-details-btn"><span class="fontNormal">View team details</span>  <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></button></td>
+					<td ng-if="!(team.teamLeader._id===user._id || team.teamLeader===user._id)"><button class="btn btn-warning" ng-disabled="disableDeleteTeam" ng-click="leaveTeam($index)"><span class="fontNormal">Leave team</span></button></td>
+					<td ng-if="((team.teamLeader._id===user._id || team.teamLeader===user._id) && team.selfTeam===false)"><button ng-disabled="disableDeleteTeam" class="btn btn-danger" ng-click="deleteTeam($index)"><span class="fontNormal">Delete team</span></button></td>
+				</tr>
+			</tbody>
+    </table>
+
+    	</div>
+	</div>
+  
+	<div class="col-md-5 col-sm-4 col-md-offset-1 col-sm-offset-1">
+		<div class="container col-md-12 col-sm-12">
+			 <div id="userDetail" class="jumbotron">
+			  <label for="sel1"><div class="panel-heading" id="hding2">Instructions</div></label>
+			  <h3 id="teamReq"><span class="midot"><b>&middot;</b></span> If you are creating the team, you will be the team leader</h3>
+			  <h3 id="teamReq"><span class="midot"><b>&middot;</b></span> Any one of the team member's can regiser for an event</h3>
+			  <h3 id="teamReq"><span class="midot"><b>&middot;</b></span> Only team leader can unregister for a registered event</h3>
+			</div>
+		</div>
+		<div class="container col-md-12 col-sm-12">
+		 <div class="jumbotron">
+		  <label for="sel1"><div class="panel-heading" id="hding">Create Team {{ teamCreateMessage }}</div></label>
+		  <input type="text" ng-model="teamName" class="form-control" placeholder="Enter Team Name">  
+		  <h3 id="teamCheck">{{ membersAdded }} will be added to the team</h3>
+		  <div id="setnewTeam" class="row">
+				<div class="col-md-9 col-sm-12">
+					<input type="text" ng-model="newTeamMember" class="form-control" placeholder="Enter ShaastraID of member to add">
+				</div>
+				<div class="col-md-2 col-sm-12">
+					<button id="addMember" class="btn btn-success" ng-click="addTeamMember()">Add</button>
+				</div>
+			</div>
+			<center>
+			<button id="createnewTeam" class="btn btn-success" ng-disabled="disableCreateTeam" ng-click="createNewTeam()">Create Team</button>
+			</center>
+		</div>
+
+			<div id="teamDetails">
+				<label for="sel1"><div class="panel-heading" id="hding">Selected team details {{ eventUnRegisterMessage }}</div></label>
+				<div class="panel panel-default fonts" style="">
+					<span style="margin-left:3%">{{all_teams[i].teamName}}</span>
+				</div>
+				<div class="panel-body fontNormal">
+					Events Registered : <p style="margin-left:14%" ng-if="(all_teams[i].eventsRegistered.length==0)">No events are registered with this team</p> <ul style="margin-left:14%"><li ng-repeat="event in all_teams[i].eventsRegistered track by $index"><p>{{ event.name }} - <button class="btn btn-danger" ng-if="(user._id===all_teams[i].teamLeader._id || user._id===all_teams[i].teamLeader)&&(event.startReg<=currentDate && event.endReg>=currentDate)" ng-disabled="disableUnregisterEvent" ng-click="unregisterEvent(all_teams[i], event, $index, i)">Unregister</button> </p></li></ul>
+					<div>
+						Team Members : <ul style="margin-left:14%"><li ng-repeat="teammate in all_teams[i].teamMembers track by $index">{{ teammate.name }}<span ng-if="(teammate._id===all_teams[i].teamLeader._id || teammate._id===all_teams[i].teamLeader)"> (Team Leader)</span></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <!-- <div  class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1" id="place" >
   	<label for="sel1"><div class="panel-heading" id="hding">Recommended</div></label>
   	<div id="scroll">
 			<ul>
@@ -48,6 +123,7 @@
 				</li>
 			</ul>
 		</div>
-  </div>
+  </div> -->
 </div>
-<!-- </div> -->
+
+<div ng-include="'views/sticky-footer.html'"></div>

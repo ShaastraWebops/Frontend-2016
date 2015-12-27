@@ -1,0 +1,72 @@
+<header style="position:fixed; z-index:350; width:100%;">
+  <div id="cmnbars" class="c none" ng-controller="MainController">
+    <span class="bars" id="bar5"></span>
+    <span class="bars" id="bar6"></span>
+  </div>
+</header>
+
+<div class="container top-nav-container" ng-controller="MainController">
+  <div id="hamburger-menu">
+    <div id="omnbars" class="o inblock">
+      <span class="bars" id="bar1"></span>
+      <span class="bars" id="bar2"></span>
+      <span class="bars" id="bar3"></span>
+      <span class="bars" id="bar4"></span>
+    </div>
+  </div>
+
+  <div id="back-button" ng-click="backButton()" ng-controller="MainController" ng-show="showBackButton" link="/">
+    <span class="glyphicon glyphicon-arrow-left" id="back-glyphicon"></span>
+  </div>
+
+  <div class="row nav-bar-new home-top-nav-new">
+    <div id="top-nav-events" ng-click="gotoLink('/event-list')" class="nav-item-new"><a href="/#/event-list">EVENTS</a></div>
+    <div id="top-nav-workshops" ng-click="gotoLink('/workshop-category/561567aac8d15f6e1252ebee')" class="nav-item-new"><a href="/#/workshop-category/561567aac8d15f6e1252ebee">WORKSHOPS</a></div>
+    <div id="top-nav-shows" ng-click="gotoLink('/shows-and-exhibitions')" class="nav-item-new"><a href="/#/shows-and-exhibitions">SHOWS AND EXHIBITIONS</a></div>
+    <div id="top-nav-preShaastra" ng-click="gotoLink('/samparks')" class="nav-item-new"><a href="/#/samparks">PRE-SHAASTRA ACTIVITIES</a></div>
+    <div id="top-nav-summit" ng-click="gotoLink('/maker-summit')" class="nav-item-new"><a href="/#/maker-summit">MAKER SUMMIT</a></div>
+    <div id="top-nav-social" ng-click="gotoLink('/social')" class="nav-item-new"><a href="/#/social">PLEDGE-A-BOOK</a></div>
+      
+    <div class="nav-item">
+      <div ng-hide="isLoggedIn()" class="nav-item-new"><a id="login" ng-href="#/login" class="ai">Login/Register</a><span class="glyphicon glyphicon-user user-icon"></span></div>
+      <div ng-show="isLoggedIn()" class="nav-item-new dropdown"><a class="ai dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello {{ getCurrentUser().name }} <span class="glyphicon glyphicon-user user-icon"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a id="userSelect" href="#/dashboard"><span>Dashboard</span></a></li>
+          <li><a id="userSelect" ng-click="logout()"><span>Logout</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="menu" style="position:fixed; z-index:350;" ng-controller="MainController">
+  <a href="#/"><img src="images/logos/dice.png" class="img-responsive side-menu-dice" alt="shaastra"></a>
+  <ul class="mn-list">
+    <span id="menuscroll">
+      <li><a href="#/">Home</a></li>
+      <li ng-hide="isLoggedIn()"><a href="#/login">Log In/Register</a></li>
+      <li ng-show="isLoggedIn()"><a href="#/dashboard">Dashboard</a></li>
+      <li id="side-nav-logout" ng-show="isLoggedIn()"><a ng-click="logout()">Logout</a></li>
+      <li><a href="#/samparks">Pre-Shaastra</a></li>
+      <li class="down"><a class="d" href="#/event-list">Events</a></li>
+      <li class="down"><a class="d" href="#/workshop-category/561567aac8d15f6e1252ebee">Workshops</a></li>
+      <li class="down"><a class="d" href="#/maker-summit">Maker Summit</a></li>
+      <!-- <li class="down"><a class="d" href="#/lectures">Lectures</a></li> -->
+      <li class="down"><a class="d" href="#/shows-and-exhibitions">Shows And Exhibitions</a></li>
+      <li><a href="#/sponsors">Sponsors</a></li>
+      <li><a href="#/social">Pledge-A-Book</a></li>
+      <li><a href="#/about-us">About Us</a></li>
+      <li><a href="#/contact-us">Contact Us</a></li>
+    </span>
+  </ul>
+  <footer style="position:absolute; z-index:350; width:100%; padding:0% 2% 0% 36px;">
+    <div style="float:left; padding-top:2%">
+      <ul class="out mn-social"><!-- 
+         --><li class="social"><a id="fb" target="_blank" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a></li><!-- 
+         --><li class="social"><a id="tw" target="_blank" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a></li><!-- 
+         --><li class="social"><a id="you" target="_blank" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a></li><!-- 
+         --><li class="social"><a id="li" target="_blank" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a></li><!-- 
+       --></ul>
+    </div>
+  </footer>  
+</div>

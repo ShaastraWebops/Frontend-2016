@@ -1,75 +1,159 @@
-  <img id="lefthand" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" src="images/handl.png"/>
-  
-  <img src="images/robotbody.png" class="robo"/>
-  <img id="righthand" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" src="images/handr.png"/>
+<update-title title="Shaastra 2016 | IIT Madras Techfest | Chennai"></update-title>
+<update-meta property="og:title" content="Shaastra 2016 | IIT Madras Techfest | Chennai"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
 
-   
-  <div class="invisiblebox1" tooltip> </div>
-  <div class="invisiblebox2" tooltip> </div>
-  
-  <div class="container home">
+<div class="container home"
+  ng-intro-options="IntroOptions" ng-intro-method="CallMe" 
+  ng-intro-onafterchange="AfterChangeEvent"
+  ng-intro-oncomplete="CompletedEvent"
+  ng-intro-autostart="ShouldAutoStart">
 
-    <div class="small-screen-heading">SHAASTRA 2016</div>
-
-    <div class="elemboxleft top-1">
-      <p>Events</p>
-      <svg class="svg-lines" width="60" height="10" xmlns="http://www.w3.org/2000/svg">
-        <path class="path1" d="M40,0 l-40,0" />
-        <path class="path2" d="M40,0 l40,0" />
-      </svg>
-    </div>
-
-   <div  class="elemboxright top-2">
-     <p>Shows and Exhibition</p>
-     <svg class="svg-lines" width="60" height="10" xmlns="http://www.w3.org/2000/svg">
-        <path class="path1" d="M40,0 l-40,0" />
-        <path class="path2" d="M40,0 l40,0" />
-      </svg>
-   </div>
-  
-    <div class="elemboxleft mid-1">
-     <p>Workshops</p>
-     <svg class="svg-lines" width="60" height="10" xmlns="http://www.w3.org/2000/svg">
-        <path class="path1" d="M40,0 l-40,0" />
-        <path class="path2" d="M40,0 l40,0" />
-      </svg>
-    </div>
-
-    <div class="shaastrabox">
-      <p class="text1">
-        <span class="shaastra-blue">
-          <a href=""><b>iit madras</b></a>
-        </span>presents
-      </p>
-      <img class="dice" src="images/diceimage.png"></img>
-      <span class="text2">
-        SHAASTRA <span class="number">2016</span>
-      </span>
-      <div class="underline"> </div>
-      <p class="text3">THE SPIRIT OF ENGINEERING</p>
-    </div>
- 
-    <div class="elemboxright mid-2">
-      <p>Lectures</p>
-      <svg class="svg-lines" width="60" height="10" xmlns="http://www.w3.org/2000/svg">
-        <path class="path1" d="M40,0 l-40,0" />
-        <path class="path2" d="M40,0 l40,0" />
-      </svg>
-    </div>
-
-    <div class="elemboxleft botm-1">
-      <p>Social Cause</p>
-      <svg class="svg-lines" width="60" height="10" xmlns="http://www.w3.org/2000/svg">
-        <path class="path1" d="M40,0 l-40,0" />
-        <path class="path2" d="M40,0 l40,0" />
-      </svg>
-    </div>
-
-    <div  class="elemboxright botm-2">
-      <p>Pre-Shaastra Activities</p>
-      <svg class="svg-lines" width="60" height="10" xmlns="http://www.w3.org/2000/svg">
-        <path class="path1" d="M40,0 l-40,0" />
-        <path class="path2" d="M40,0 l40,0" />
-      </svg>
+  <div id="hex-div" class="container-fluid hexagons-container">
+    <div class="row">
+      <div class="hexagon-div">
+        <div class="hex-images-div" id="bottom-hex">
+          <img class="img-responsive hex-images" alt="top-hex" src="images/homepage/shaastra-bottom-hex.png">
+        </div>
+        <div class="hex-images-div" id="middle-hex">
+          <img class="img-responsive hex-images"  alt="middle-hex" src="images/homepage/shaastra-middle-hex.png">
+        </div>
+        <div class="hex-images-div" id="top-hex">
+          <img class="img-responsive hex-images" alt="bottom-hex" src="images/homepage/shaastra-top-hex.png">
+        </div>      
+        <div id="shaastra-homepage" style="width:0; height:0; z-index:0; position:absolute; top:50%; left:50%;"></div>
+      </div>
     </div>
   </div>  
+
+  <div class="container">
+    <div id="blinkDiv">
+      <h4 id="blinkText">Shaastra-2016 is from 23rd January to 26th January 2016</h4>
+    </div>
+  </div>    
+
+  <div id="home-countdown-div"></div>
+
+  <div id="home-scroll-down" ng-click="scrollDown('shaastra-info')">
+    <span class="glyphicon glyphicon-chevron-down" id="home-scroll-glyphicon"></span>
+  </div>
+
+  <div class="container" style="z-index:240; width:100%; padding-right:0;">
+    <div id="homepage-bottom-nav-tour" class="row">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 out mn-social" style="padding-top:3%;">
+        <ul style="padding-left:1%;">
+          <li class="social">
+            <a id="fb" target="_blank" href="https://www.facebook.com/Shaastra"><i class="fa fa-facebook"><span></span></i></a>
+          </li>
+          <li class="social">
+            <a id="tw" target="_blank" href="https://twitter.com/ShaastraIITM"><i class="fa fa-twitter"><span></span></i></a>
+          </li>
+          <li class="social">  
+            <a id="you" target="_blank" href="https://www.youtube.com/user/iitmshaastra"><i class="fa fa-youtube-play"><span></span></i></a>
+          </li>
+          <li class="social">
+            <a id="li" target="_blank" href="https://www.linkedin.com/company/shaastra-iit-madras"><i class="fa fa-linkedin"><span></span></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="padding-top:2%;">
+        <div class="container home-shortcuts">
+          <div class="row">
+           <div ng-click="gotoLink('/hospitality')" class="home-shortcuts-tab col-xs-12 col-sm-6 col-md-3 col-lg-3">
+             <a href="#/hospitality">HOSPITALITY</a>
+           </div>
+           <div ng-click="gotoLink('/shaastra-fellowship')" class="home-shortcuts-tab col-xs-12 col-sm-6 col-md-3 col-lg-3">
+             <a href="#/shaastra-fellowship">SHAASTRA FELLOWSHIP</a>
+           </div>
+           <div ng-click="gotoLink('/sponsors')" class="home-shortcuts-tab col-xs-12 col-sm-6 col-md-3 col-lg-3">
+             <a href="#/sponsors">SPONSORS</a>
+           </div>
+           <div ng-click="gotoLink('/about-us')" class="home-shortcuts-tab col-xs-12 col-sm-6 col-md-3 col-lg-3">
+             <a href="#/about-us">ABOUT US</a>
+           </div>
+           <div ng-click="gotoLink('/contact-us')" class="home-shortcuts-tab col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a href="#/contact-us">CONTACT US</a>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="logo-links-ul" id="iitm-logos" ng-if="showLogos">
+          <ul class="logo-links-ul">
+            <li class="logo-links-li"><a target="_blank" href="http://saarang.org"><img src="images/logos/saarang.png" alt="saarang" height="50" width="90"></a></li>
+            <li class="logo-links-li"><a target="_blank" href="#/about-us"><img src="images/logos/iso-black.png" alt="iso" height="70" width="70"></a></li>
+            <li class="logo-links-li"><a target="_blank" href="http://www.iitm.ac.in"><img src="images/logos/iitm-black.png" alt="iitm-logo" height="70" width="60"></a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="shaastra-info">
+    <div class="zoomInClass" ani-view>
+      <h1 class="info-text" id="info-title">Shaastra 2016</h1>
+      <p class="info-text" id="info-desc">The annual technical festival of IIT MADRAS</p>
+    </div>
+  </div>
+
+  <div id="main-div" class="container-fluid homepage-main">
+    <div class="row main-center zoomInClass" ani-view>
+      <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+        <p id="makers-title">THE MAKERS HAVE ARRIVED!</p>
+        <p id="makers-desc">This January, at Shaastra, thousands of like minded people will gather to witness one of India's biggest Maker events.
+      </div>
+    </div>
+    <div class="row homepage-makers-tab animRight" ani-view>
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <img alt="shaastra-do-it-yourself" src="images/homepage/do-it-yourself.jpg" class="main-images">
+      </div>
+      <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <p class="homepage-makers-tab-title">DO-IT-YOURSELF, DON'T CALL THE GUY</p>
+        <p class="homepage-makers-tab-desc">This is the underlying principle the maker community thrives on. Come to Shaastra this January and realise how every problem can be solved with your bare hands. And don’t forget to bring the spirit to create!</p>
+      </div>
+    </div>
+    <hr class="separator">
+    <div class="row homepage-makers-tab animLeft" ani-view>
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <p class="homepage-makers-tab-title">UNITING MAKER BODIES</p>
+        <p class="homepage-makers-tab-desc">Makerspaces are DIY places where people join together to create, invent and share knowledge.This Shaastra come visit our own makerspace - The Centre for Innovation (a.k.a The CΦ).</p>
+        <p class="homepage-makers-tab-desc">In Shaastra's maker summit, students from various backgrounds including engineering, arts and sciences, come together, thereby contributing to a bright minded gathering of tech enthusiasts, crafters, engineers, authors and artists to innovate and create products across a wide range of topics.</p>
+      </div>
+      <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <img alt="shaastra-unite-maker" src="images/homepage/maker-space.jpg" class="main-images">
+      </div>
+    </div>
+    <hr class="separator">
+    <div class="row homepage-makers-tab animRight" ani-view>
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <img alt="shaastra-maker-fare" src="images/homepage/Maker-fare.jpg" class="main-images">
+      </div>
+      <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <p class="homepage-makers-tab-title">FROM PASSIVE USERS TO ACTIVE CREATORS</p>
+        <p class="homepage-makers-tab-desc">Ever wondered how the touch screen on your mobile screen works? When your finger touches the screen, a voltage drop is instantaneously created which instructs the phone to call a particular function. Maybe that’s why you’re not allowed to use your phone in a gas station!</p>
+        <p class="homepage-makers-tab-desc">In Shaastra 2016, you will not only witness some of the coolest forms of technology but will also add on and give it your own personal "touch".</p>
+      </div>
+    </div>
+    <hr class="separator">
+    <div class="row homepage-makers-tab animLeft" ani-view>
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <p class="homepage-makers-tab-title">PAPER PLANES TO QUADCOPTERS</p>
+        <p class="homepage-makers-tab-desc">Right from an origami throne maker to a quadcopter drone maker - Makers are a diverse bunch.</p>
+        <p class="homepage-makers-tab-desc">Creators. Innovators. Entrepreneurs. Designers. Dreamers.</p>
+        <p class="homepage-makers-tab-desc">Everyone is a maker.</p>
+        <p class="homepage-makers-tab-desc">You are a maker.</p>
+      </div>
+      <div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 col-lg-5 col-md-5 col-sm-5 col-xs-10">
+        <img alt="shaastra-paper-plane-to-quadrotor" src="images/homepage/paper-plane-to-quadrotor.jpg" class="main-images">
+      </div>
+    </div>
+    <div class="row main-center-footer zoomInClass" ani-view>
+      <h2 id="makers-footer">COME LIVE THE MAKER IN YOU!</h2>
+    </div>
+  </div>
+
+</div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

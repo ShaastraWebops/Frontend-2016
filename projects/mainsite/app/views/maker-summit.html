@@ -1,0 +1,320 @@
+<update-title title="Maker Summit | Shaastra 2016"></update-title>
+<update-meta property="og:title" content="Maker Summit | Shaastra 2016"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
+
+<div class="container-fluid category">
+	<div class="row">
+  	<div class="category-wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  		<img class="img-responsive category-image" id="event-category-image" ng-src="images/misc/maker-summit.jpg">
+	  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
+		  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
+	  	</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div id="event-category-name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<span>Maker Summit</span>
+ 	  </div>
+	</div>
+</div>
+  <div id="aboutUs" class="container-fluid font-myraid">
+		<div class="container-fluid" id="cf">
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
+					<div><br><br></div>
+					
+					<div class="row">
+						<div class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-repeat="x in makersTabs track by $index">
+							<a event-nav-hyperlink href="" ng-click="info($index)">
+								<div class="event-nav-xs" ng-click="changeTab($index)" ng-class="{'event-nav-selected':(tab === $index)}">
+									{{x}}
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="evcontent">
+						<div class="row">
+							<div class="hidden-xs"><br><br></div>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row shows-maker-heading">
+                  <h1><b>{{ makersTabs[tab] }}</b></h1>
+                </div>
+								<div ng-if="tab===0" class="cont">
+									<div class="row">
+		   							<iframe width="100%" height="500" frameborder="0" 
+											src="http://www.youtube.com/embed/yARggf4sG6I">
+										</iframe>
+									</div>
+									<div class="row">
+										Welcome to the IIT Madras Maker Summit 2016! The 4 day extravaganza from 2nd to 5th of Jan set to change your perceptions and broaden your horizons.
+									</div><br>
+									<div class="row">
+									 	We, at the Summit, believe that <i>Anyone can be maker</i>. A computer hacker, origami artist, a storyteller, a designer, an arduino enthusiast, whoever you may be - <b>You. Are. A. Maker</b>. 
+									</div><br>
+									<div class="row">
+									 	Witness a potpourri of events including  Lectures, a Panel Discussion,  unique Workshops and a Product Design Challenge.  Be a part of mentoring sessions with the experienced in the field, debate, discuss and innovate on any of the verticals – Transmedia Storytelling, Life Hacks and Social Technology. 
+									</div><br>
+									<div class="row">
+									 	Network with like minded enthusiasts from different streams of education. Hear it from the experienced, learn it from the best.  We promise to offer you a great experience.
+									</div><br>
+									<div class="row">
+									 	Mark your calendars and join us this January to be part of our Maker Summit!
+									</div>
+								</div>
+								<div ng-if="tab===1" class="cont">
+									<div class="row">
+								    <b><p>Panel Discussion</p></b>
+										<p>From Backyards to Makerspaces: The rise of the Maker Culture </p>
+										<p>Lo behold  the world where ideas find fruition within hours. What made this possible? Listen to our diverse panel of speakers talk about the hot and trending in the Maker movement. The participants will have an exclusive opportunity to witness the confluence of some of the most experienced makers around the globe. Just be there! </p>
+									</div><br>
+									<div class="row">
+										<b><p>Make-a-thon</p></b>
+										<p>The most exciting part of Maker Summit 2016! Get ready to join hands with like-minded makers with different skill-sets.</p>
+										<p>Participants will have 4 days to work in teams, to come up with something inspiring and creative. Basic workshop/ makerspace facilities and necessary resources shall be provided. The teams will also have access to mentoring sessions with experts in the field to guide them through the journey of ideating, designing and creating. <b>Exciting prizes</b> to be awarded to the winners. Stay tuned to our <a target="_blank" href="https://www.facebook.com/Shaastra/">FB page</a> to see the prizes that await you.</p>
+									</div><br>
+									<div class="row">
+										<b><p>Hands-on Workshops</p></b>
+										<p>Maker summit 2016 provides you an opportunity to get your hands dirty and acquire a unique set of skills, through our workshop sessions.</p>
+										<p><span class="midot"><b>&middot;</b></span> <b>3D printing -</b> Have you ever wished your designs on a software came to life? Ever wanted to  be a part of the  Next Big Thing in the Maker movement?  Here’s the chance to learn this simple, exciting skill.</p>
+										<p><span class="midot"><b>&middot;</b></span> <b>Laser Cutting -</b> How cool would it be to make your own Batrang or Minion from a steel plate! Learn to laser cut and engrave your designs on beautiful flat sheet materials.</p>
+										<p><span class="midot"><b>&middot;</b></span> <b>Mozilla Maker Party -</b> Maker parties help you explore the web and make your own space on it. It's a celebration of making and learning on the web. As a part of this workshop, we will have associated hands-on activities like making models, brainstorming around it. Get ready to use tools like the Thimble and Webmaker!</p>
+									</div>
+								</div>
+								<div ng-if="tab===2" class="cont">
+									<div class="row">
+										<b><p>Transmedia storytelling</p></b>
+										<p>Get a chance to create immersive story worlds with multiple media platforms! This vertical would involve defining the story's purpose (could range from hygiene education for kids to creating a virtual pet) and taking it forward through storyboards and film editing. Build a prototype that could turn out to be next exciting thing in the world.</p>
+									</div>
+									<br>
+									<div class="row">
+										<b><p>Life Hacks</p></b>
+										<p>Come up with simple yet effective solutions for day-to-day hitches. Developing a sensor based tap to save water, portable mobile phone chargers, intelligent personal assistant in cell phones that prevent accidents and what not. Look around. Is there something you can fix? Come over!</p>
+									</div>
+									<br>
+									<div class="row">
+										<b><p>Social Technology Projects</p></b>
+										<p>Yes, there is a Pandora box of social problems. What can you do to help? Find inspiring uses to technology and sciences. Primary focus of this vertical will be assistive technology. Create something that benefits people around you, be it in terms of education, health, culture or quality of life.</p>
+									</div>
+								</div>
+								<div ng-if="tab===3" class="cont">
+									<div class="row">
+										<div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+											<img class="img-responsive" src="images/misc/anirudh-sharma.png" alt="anirudh-sharma-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Anirudh Sharma</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>A maker from childhood, mashing up disciplines like  sensors, magic, lights, fashion, engineering, aesthetics, glitch art, music, cultures etc, Anirudh is a graduate from the "Fluid Interface Group at MIT Media Lab". His current interests lie in the fields of wearable computing, augmented reality, stereoscopic/projected interfaces, and machine learning. A MIT TR35 –‘Innovator of year’ award, Anirudh co-led the <a target="_blank" href="http://india.media.mit.edu/">MIT Media Lab India Initiative</a> for last two years, where he worked on creating innovation ecosystem in India, bringing together engineers, designers, scientists, artists on a common platform.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+											<img class="img-responsive" src="images/misc/asrao.jpg" alt="subbarao-aynampudi-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Subbarao Aynampudi</b></h3>
+										<h3><b>President, Indian Innovators Association</b></h3>
+										<h3><a target="_blank" href="http://www.indiainvents.blogspot.in/">www.indiainvents.blogspot.in</a></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>Mr. Aynampudi has had a long run with innovation in India. As a personality who has mentored hundreds of innovators and evaluated over a thousand ideas, we are honoured to have him as a panellist for the Maker Summit.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<img class="img-responsive" src="images/misc/pavan-kumar.jpg" alt="pavan-kumar-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Pavan Kumar</b></h3>
+										<h3><b>Founder/CEO of Workbench Projects</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>Mr. Kumar has his Masters in Mechanical Engineering with a thesis in Design Process and Optimization from Clemson University, USA. He has extensive work experience on industrial grade rapid prototyping Machines which he acquired while working for 3D Systems, USA. After returning to India in 2012 he worked for an educational products and services company as Head of Products and Communication to develop one of the company's flagship product called <i>'NumberNagar'</i>, a specially designed cross-disciplinary math activity centre for school children between Grade 3-8 across all school boards.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<img class="img-responsive" src="images/misc/vaibhav.jpg" alt="vaibhav-chhabra-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Vaibhav Chhabra</b></h3>
+										<h3><b>Founder, Maker's Asylum</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>Vaibhav Chhabra is a mechanical engineer by profession but a carpenter by passion. A graduate from Boston University, Vaibhav began <i>'Makers Asylum'</i>. He essentially coupled his degree with his passion to create the first community Makerspace in India. He is also an instructor at MIT REDX, MIT Media Lab's health teach lab in India. His latest venture Jugaad Magazine hopes to spread the word about frugal and mainstream innovation in India to the world.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<img class="img-responsive" src="images/misc/meghna_bhutoria.jpg" alt="meghna_bhutoria-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Meghna Bhutoria</b></h3>
+										<h3><b>CEO, Co Founder, MakersLoft</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>A passionate Maker from Bengal, who is deeply committed to the Maker Movement in India. She found MakersLoft - the first and only makerspace in Kolkata in her effort to revive the city. Meghna is a seasoned business woman with 15yrs of experience in internet startups, FMCG, semiconductor, agri-chemicals, and agri-biotechnology industries. She has lived and worked in India, USA, Switzerland and has an MBA from INSEAD, France.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<img class="img-responsive" src="images/misc/abhinav-das.jpg" alt="meghna_bhutoria-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Abhinav Das</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>Abhinav Das is an innovator, based out of Delhi. His previous startup, Evomo which is in short for Evolving Mobility was incubated at NID Ahmedabad where he was working on ultra-low cost vehicles for rural areas to replace illegal, unsafe and polluting transport contraptions like Jugaads. A mechanical engineer by education, a diehard motorsports enthusiast, Abhinav has worked at different Research & Development positions in the automotive industry. He has also been a World Economic Forum’s Global Shaper from the city of Ahmedabad. Whenever faced with crisis he quotes star wars and kung-fu panda to motivate himself and his team.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<img class="img-responsive" src="images/misc/vikraman.jpg" alt="vikraman-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Vikraman</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>Vikraman serves as Vice President at IKP Knowledge Park (IKP), managing IKP-EDEN<sup>TM</sup>, IKP's Engineering, Design, and Entrepreneurship Network, India's largest prototyping center and incubator for hardware product companies. He also manages challenge grants and innovation grants for IKP in partnership with the Bill and Melinda Gates Foundation, United States Agency for International Development (USAID), Department for International Development (DFID), and the Department of Biotechnoloigy, Govt of India. The grant programs amount to nearly INR 100 Crore of committed funds, and IKP has funded over 80 companies in the past 4 years.</p>
+										<p>He worked for Strand Life Sciences in India as a software engineer, developing algorithms for the gene expression software, and in the US as part of the business development team. He holds a dual degree in electrical engineering from IIT-Madras, and a Masters in Engineering Management from Duke University.</p>
+									</div>
+    							<hr class="separator">
+									<div class="row">
+										<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<img class="img-responsive" src="images/misc/nirmal-kumar.jpg" alt="nirmal-kumar-image">
+										</div>
+									</div>
+									<div class="row makeCenter">
+										<h3><b>Nirmalkumar Sathiamurthi</b></h3>
+									</div>
+									<div class="row" style="text-align: center;">
+										<p>He is an avid Maker excited by the endless possibilities in IOT, machine learning and AR/VR space. He founded Insane Labs, an Augmented Reality based Digital platform, in 2011. He is also the Co Founder of Makerspace Chennai and is instrumental in building the Maker community here. Currently, he is a Product Manager at Mad Street Den, an AI and Computer Vision based startup in Chennai. Technology and entrepreneurship are his major interests.</p>
+									</div>
+								</div>
+								<div ng-if="tab===4" class="cont">
+									<div class="row makeCenter">
+										<h2>Welcome to Maker Summit Registration!</h2>
+									</div><br>
+									<div class="row">
+										<p>Registration involves two stages:</p>
+										<br>
+										<p><b>Stage-1:</b></p>
+										<p><span class="midot"><b>&middot;</b></span> Participants must fill the registration form to apply for the Maker Summit</p>
+										<p><span class="midot"><b>&middot;</b></span> Please find the form <a target="_blank" href="https://docs.google.com/forms/d/1oJ-f3NIJPWAp6rP4N3pqvpmg5OtqIWvcSP_7DfNLRrA/viewform">here</a></p>
+										<p><span class="midot"><b>&middot;</b></span> Deadlines close 5th December. Hurry!</p>
+										<br>
+										<p><b>Stage-2:</b></p>
+										<p><span class="midot"><b>&middot;</b></span> Selected participants will be informed via mail/phone</p>
+										<p><span class="midot"><b>&middot;</b></span> Once shortlisted, the participant will be required to pay a nominal registration fee (through online banking)</p>
+										<br>
+										<p><b>Registration fee structure:</b></p>
+										<p><span class="midot"><b>&middot;</b></span> IITM students - <b>Rs. 500</b></p>
+										<p><span class="midot"><b>&middot;</b></span> Indian participants - <b>Rs. 1000</b></p>
+										<p><span class="midot"><b>&middot;</b></span> Foreign participants - <b>Rs. 2000</b></p>
+										<br>
+										<p><b>Note:</b></p>
+										<p><span class="midot"><b>&middot;</b></span> The fee includes the cost of the summit and the Shaastra passport</p>
+										<p><span class="midot"><b>&middot;</b></span> The Panel Discussion is open to anyone with a Shaastra passport</p>
+										<p><span class="midot"><b>&middot;</b></span> Selected participants shall be intimated by mail</p>
+										<p><span class="midot"><b>&middot;</b></span> The registration fee will be transferred through online banking to the Shaastra account. Selected participants shall be instructed as to how to go about the process</p>
+										<p><span class="midot"><b>&middot;</b></span> Have queries? Drop us a line at <a target="_blank" href="mailto:vedantagr@shaastra.org">vedantagr@shaastra.org</a></p>
+									</div>
+								</div>
+								<div ng-if="tab===5" class="cont">
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<b><p>Day 1</p></b>
+											<p><span class="midot"><b>&middot;</b></span> Panel Discussion</p>
+											<p><span class="midot"><b>&middot;</b></span> Ice breaking session</p>
+											<p><span class="midot"><b>&middot;</b></span> Mentoring session 1</p>
+											<p><span class="midot"><b>&middot;</b></span><b> Problem Identification and Ground survey - </b>Interact with people, crack your heads and rack your brains to identify a problem that is worth solving. Points will be awarded for relatability to the track, the depth and number of inputs considered</p>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<b><p>Day 2</p></b>
+											<p><span class="midot"><b>&middot;</b></span> Workshop sessions</p>
+											<p><span class="midot"><b>&middot;</b></span> Mentoring Sessions 2</p>
+											<p><span class="midot"><b>&middot;</b></span> Mozilla Maker Party</p>
+											<p><span class="midot"><b>&middot;</b></span><b> Solution Ideation - </b>Time to brainstorm and apply your "maker" skills to come up with a cool and classy solution to your problem with the limited resources available. Brownies to feasible and creative solutions</p>
+										</div>
+									</div>
+									<br>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<b><p>Day 3</p></b>
+											<p><span class="midot"><b>&middot;</b></span> Mentoring sessions 3</p>
+											<p><span class="midot"><b>&middot;</b></span><b> Prototype Definition - </b>Go ahead and start giving shape to your prototype. We need to see something up and running. Fastest Fingers First!</p>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<b><p>Day 4</p></b>
+											<p><span class="midot"><b>&middot;</b></span> Display of projects at Shaastra and announcement of the best projects</p>
+											<p><span class="midot"><b>&middot;</b></span><b> Product Launch - </b>Time to show the world what 4 sleepless nights and 5 insanely crazy and talented makers can achieve. The Maker Summit provides an opportunity for you to display your projects to thousands of students</p>
+										</div>
+									</div>
+								</div>
+								<div ng-if="tab===6" class="cont">
+									<div class="row">
+										<b>Vedant Agarwal</b> - vedantagr@shaastra.org
+									</div>
+									<br>
+									<div class="row">
+										<b>Ayesha</b> - ayesha@shaastra.org
+									</div>
+									<br>
+									<div class="row">
+										<b>Ramprashanth</b> - +91-8754443260
+									</div>
+									<br>
+									<div class="row">
+										<b>Gouri Ram</b> - +91-7708415998
+									</div>
+									<br>
+									<div class="row">
+										<b>Shruti Shivakumar</b> - +91-9791264935
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div ng-if="!eve.eventTabs.length" class="makeCenter">
+						<h1>{{ message }}</h1>
+					</div>
+
+				</div>
+				
+				<div class="hidden-xs col-sm-3 col-md-3 col-lg-3">
+					<div class="row">
+						<div class="col-sm-4 col-md-4 col-lg-4"></div>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<div class="row">
+								<br><br><br><br>
+								<div class="row" id="event-nav-box" ng-repeat="x in makersTabs track by $index">
+									<a event-nav-hyperlink href="" ng-click="info($index)">
+										<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(tab === $index)}" ng-click="changeTab($index)">
+											<span id="event-nav-span">{{x}}</span>
+										</div>
+									</a>
+									<div class="col-sm-12 col-md-12 col-lg-12"><br></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+  </div>
+  
+</div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

@@ -1,6 +1,29 @@
+'use strict';
+
 angular.module('shaastra2016App')
-  .controller("MainController", function() {
-  
+  .controller("MainController", function ($scope, $location, Auth) {
+
+    $scope.isLoggedIn = Auth.isLoggedIn;
+    $scope.getCurrentUser = Auth.getCurrentUser;
+
+    $scope.logout = function () {
+      Auth.logout();
+      $location.path('/login');
+    };
+
+    $scope.isActive = function (route) {
+      return route === $location.path();
+    };
+
+    $scope.backButton = function () {
+      var loc = $('#back-button').attr('link');
+      $location.path(loc);
+    };
+
+    $scope.gotoLink = function (link) {
+      $location.url(link);
+    };
+
 });
   
 //directive
@@ -31,7 +54,7 @@ angular.module('shaastra2016App')
           //$('.menu').show(0);
           $('.c').addClass("block");
           $('.mn-social').removeClass("out");
-          $('.o').animate({left:"+=145px"},0);
+          $('.o').animate({left:"+=220px"},0);
           $('#backdrop').css("display", "block");
         });
       }
@@ -50,7 +73,7 @@ angular.module('shaastra2016App')
           $('.c').removeClass("block");
           $('.o').removeClass("none");
           $('.o').addClass("inblock");
-          $('.o').animate({left:"-=145px"},200);
+          $('.o').animate({left:"-=220px"},200);
           $('#backdrop').css("display", "none");
         });
       }
@@ -78,8 +101,6 @@ angular.module('shaastra2016App')
         $('.sic').click(function() {
           $('.si').hide(200);
           $('.s').show(200);
-          /*$('.s').removeClass("none");
-          $('.si').addClass("none");*/
         });
       }
     };

@@ -13,25 +13,26 @@ body {
   overflow: hidden;
 }
 
+/* guide styles start */
+.introjs-helperLayer {
+  background-color: rgba(128,128,128,.9);
+}
+/* guide styles end */
+
 /*menu*/
-ul {
+.menu ul {
   list-style-type: none;
   padding: 0;
   margin: 0em 0em 0em 0em;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
-li {
+.menu li {
   cursor: pointer;
 }
 
-/*backgrnd*/
-#bgstyle {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.si {
+  background-color: transparent;
 }
 
 #bgimg { 
@@ -39,8 +40,49 @@ li {
   height: 100%;
 }
 
+#back-button {
+  background-color: transparent;
+  position: absolute;
+  top: 35px;
+  width: 40px;
+  left: 2px;
+  text-align: center;
+  line-height: 2em;
+  padding: 0 0;
+}
+#back-button span {
+  font-size: 1.5em;
+  margin: 0 0;
+  color: #fff;
+}
+#back-button:hover {
+  cursor: pointer;
+}
+#back-button:hover #back-glyphicon {
+  -webkit-animation: slideLeft 1s ease-in infinite;
+  -moz-animation: slideLeft 1s ease-in infinite;
+  -o-animation: slideLeft 1s ease-in infinite;
+  animation: slideLeft 1s ease-in infinite;
+}
+@-webkit-keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+@-moz-keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+@-o-keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+@keyframes slideLeft {
+  0% { margin-left: 20px; }
+  100% { margin-left: -20px; }
+}
+
 #menuscroll li:hover { 
-  background: #0033ff;
+  background: #102b2e;
 	color: #ffffff;
 	-webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -51,27 +93,41 @@ li {
 
 .menu a {
   display: block;
-  padding: 0.5em 0em 0.5em 0.2em;
+  padding: 0.4em 0em 0.4em 0.2em;
   color: white !important;
   text-decoration: none !important;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Proxima';
   font-variant: small-caps;
 }
 
 .account a {
-  color: black !important;
+  color: white !important;
   text-decoration: none !important;
   font-weight: bold;
+  padding-right: 5px;
+}
+.account:hover a {
+  color: #e1e1e1 !important;
+}
+.account.ac {
+  /*padding-right: 5px;*/
+}
+.side-menu-dice {
+  width: 130px;
+  margin-left: 19%;
+  margin-top: 15%;
 }
 
 .menu {
   color: #fff;
   display: inline-block;
   height: 100%;
+  background-color: #173e43;
+  /*background-color: #0066ff;*/
   padding: 0 !important;
   max-width: 0;
   overflow: hidden;
-  width: 145px;
+  width: 220px;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -ms-transition: all 0.15s ease;
@@ -80,9 +136,12 @@ li {
 }
 
 #menuscroll {
-  background-color: #0066ff !important;
+  background-color: #173e43 !important;
 }
 
+#menuscroll li {
+  padding-left: 10px;
+}
 .mnopen {
   max-width: 100%;
   -webkit-transition: all 0.5s ease;
@@ -105,12 +164,12 @@ li {
   display : table;
   padding:0 !important;
   z-index: 300;
-  background-color: #0066ff;
+  background-color: #173e43;
 }
 
 .list {
   overflow: hidden;
-  background-color: #0033ff;
+  background-color: #102b2e;
   max-height: 0;
   -webkit-transition: all 0.3s cubic-bezier(.95,.09,.51,.91);
   -moz-transition: all 0.3s cubic-bezier(.95,.09,.51,.91);
@@ -127,30 +186,53 @@ li {
   -o-transition: all 3s ease;
   transition: all 3s ease;
 }
-.sel{
-  background :#0033ff;
+.sel {
+  background :#102b2e;
 } 
 
 /*social*/
 footer {
   position: absolute;
   bottom: 0;
+  left: -1%;
+}
+
+.home-logos-saarang{
+  color: #000;
+  font-family: 'MyraidPro';
+  font-size: 1.5em;
+}
+.logo-links-ul {
+  display: table-row;
+  float: right;
+}
+
+.logo-links-ul li a {
+  display: table;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.logo-links-li {
+  display: inline-block;
+  display: -moz-inline-stack;
+  *display: inline;
 }
 
 ul li a i {
   display: table-row;
 }
 
-.mn-social li a {
+.mn-social a {
   display: table;
   background: #ffffff;
   width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  height: 27px;
+  border-radius: 50%;
   font-size: 20px;
   text-align: center;
-  margin-left:3px;
-  margin-right:3px;
+  margin-left: 3px;
+  margin-right: 3px;
   padding:0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -158,23 +240,6 @@ ul li a i {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/*.mn-social li{
-  background:#ffffff;
- width: 32px;
- height: 32px;
- border-radius: 16px;
- font-size: 20px;
- text-align: center;
- margin-right: 2px;
- margin-left:2px;
- padding:0;
- -webkit-transition:all 0.3s;
-    -moz-transition:all 0.3s;
-    -o-transition:all 0.3s;
-    -ms-transition:all 0.3s;
-    transition:all 0.3s;
-}
-*/
 
 .mn-social {
   display: table-row;
@@ -253,22 +318,6 @@ ul li #you:hover {
 .out li #you {
   background: #dd4b39;
 }
-/*.out li #fb :hover {
-  background:#ffffff;
- color:#3b5998;
-}
-.out li #li :hover{
-  background:#ffffff;
- color:#007bb6;
-} 
-.out li #tw :hover{
-  background:#ffffff;
- color:#00aced;
-} 
-.out li #you :hover{
-  background:#ffffff;
- color:#dd4b39;
-}*/
 
 .fa-caret-right {
   float: right;
@@ -324,12 +373,32 @@ ul li #you:hover {
   transition-delay: 0ms;
 }
 
+#bar1 {
+  background-color: #fff;
+}
+#bar2 {
+  background-color: #fff;
+}
+#bar3 {
+  background-color: #fff;
+}
+#bar4 {
+  background-color: #fff;
+}
+#bar5 {
+  background-color: #fff;
+}
+#bar6 {
+  background-color: #fff;
+}
+
 #cmnbars{
   position: absolute;
   padding: 5px;
   cursor: pointer;
-  top: 2px;
-  left: 145px;
+  top: 0px;
+  height: 30px;
+  left: 220px;
   webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -431,8 +500,9 @@ ul li #you:hover {
 
 /*top menu*/
 .top-menu {
-  font-weight: bold;
   margin-right: 0%;
+  font-family: 'Proxima';
+  font-weight: bolder;
 }
 
 .search {
@@ -455,10 +525,6 @@ input[type=search]:focus {
   outline: none;
 }
 
-.glyphicon {
-  margin-left: 5px;
-}
-
 .gliphicon-search {
   transform: rotateY(180deg);
 }
@@ -473,9 +539,108 @@ input[type=search]:focus {
   width: 100%;
   height: 100%;
   display: none;
-  background-color: white;
-  opacity: 0.5;
+  background-color: black;
+  opacity: 0.9;
   z-index: 250;
   top: 0;
   left: 0;
+}
+#search-backdrop {
+  padding-left: 230px;
+  padding-right: 20px;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+#search-backdrop #search-input {
+  font-size: 2.5em;
+  color: #ffffff;
+  border: .125em solid #737373;
+  border-width: 0 0 3px 0;
+  background-color: transparent;
+  padding: .1em .3em;
+  width: 100%;
+  outline: 0;
+}
+#search-backdrop #search-input:focus {
+  border-color: #173E43;
+  outline: 0;
+  color: #ffffff;
+}
+#search-input {
+  font-size: 3em;
+  width: 100%;
+}
+#search-message {
+  font-size: 1.5em;
+  color: #f55;
+  padding: 20px 50px;
+  text-align: center;
+}
+#search-backdrop #search-display {
+  padding-bottom: 150px;
+  height: 100%;
+}
+#search-backdrop #search-display {
+  overflow-y: scroll;
+}
+#search-backdrop .search-element {
+  cursor: pointer;
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 0;
+}
+#search-backdrop .search-element .wrapper {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  margin: 10px 5px;
+}
+#search-backdrop .search-element .head {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  height: 2.6em;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+#search-backdrop .search-element .wrapper:hover {
+  text-decoration: none;
+  color: #328fa7;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#search-backdrop .search-element .img {
+  width: 100%;
+  padding: 5px;
+  background: url('../images/misc/loading.gif') no-repeat 50% 50%;
+}
+#search-backdrop .img {
+  height: 150px;
+}
+
+.home-shortcuts{
+  padding-top: 2.5%;
+  width: 100%;
+  font-family: 'MyraidPro';
+  font-size: 1.3em;
+  font-weight: bolder;
+  height: auto !important;
+  text-align: center;
+}
+.home-shortcuts a{
+  color: #000;
+}
+.home-shortcuts-tab:hover a {
+  color: #505050;
+}
+.home-shortcuts-tab:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 651px) {
+  #side-nav-logout {
+    display: none;
+  }
 }

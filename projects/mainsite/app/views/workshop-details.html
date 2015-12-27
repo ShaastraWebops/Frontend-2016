@@ -1,0 +1,71 @@
+<update-title title="{{eve.name}} | Workshops | Shaastra 2016"></update-title>
+<update-meta property="og:title" content="{{eve.name}} | Workshops | Shaastra 2016"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
+
+<div class="container-fluid aboutUs-heading-top" id="cf">
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
+			<div><br><br></div>
+			
+			<div class="evhead">
+				<span>{{eve.name}}</span>
+				<span>
+					<a ng-if="eve.paidEvent" href=""><img class="img-responsive pull-right" title="This is paid event/workshop" width="50" src="images/logos/shaastra-paid-event.png" alt="shaastra-paid-event"></a>
+					<a ng-if="eve.shaastraFellowship" target="_blank" href="#/shaastra-fellowship"><img class="img-responsive pull-right" title="Event comes under Shaastra Fellowship" width="75" src="images/logos/shaastra-fellowship-icon.png" alt="shaastra-fellowship-event"></a>
+				</span>
+			</div>
+			<div ng-if="showRegister" class="register-event">
+				<span>[<a target="_blank" href="/#/dashboard">click here</a> to register]</span>
+			</div>
+
+			<div class="marquee" id="mark">	 	 
+				<marquee id="markin" v-html="input | marked" ng-bind-html="marquee"></marquee>
+			</div>
+
+			<div ng-if="eve.eventTabs.length" class="row">
+				<div class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-repeat="x in eve.eventTabs track by $index">
+					<a event-nav-hyperlink href="" ng-click="info($index)">
+						<div class="event-nav-xs" ng-class="{'event-nav-selected':(i === $index)}">
+							{{x.name}}
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div ng-if="eve.eventTabs.length" class="evcontent">
+				<div class="row">
+					<div class="hidden-xs"><br><br></div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div v-html="input | marked" ng-bind-html="xmark(eve.eventTabs[i].info)" class="cont"></div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="!eve.eventTabs.length" class="makeCenter">
+				<h1>{{ message }}</h1>
+			</div>
+
+		</div>
+		
+		<div ng-if="eve.eventTabs.length" class="hidden-xs col-sm-3 col-md-3 col-lg-3">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4"></div>
+				<div class="col-sm-8 col-md-8 col-lg-8">
+					<div class="row">
+						<br><br><br><br><br>
+						<div class="row" id="event-nav-box" ng-repeat="x in eve.eventTabs track by $index">
+							<a event-nav-hyperlink href="" ng-click="info($index)">
+								<div class="col-sm-12 col-md-12 col-lg-12 event-nav" ng-class="{'event-nav-selected':(i === $index)}" ng-click="info($index)">
+									<span id="event-nav-span">{{x.name}}</span>
+								</div>
+							</a>
+							<div class="col-sm-12 col-md-12 col-lg-12"><br></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div ng-include="'views/sticky-footer.html'"></div>

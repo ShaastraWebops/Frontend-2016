@@ -1,0 +1,42 @@
+.tab-spons {
+	font-size: 0.5em;
+}
+
+.spons-button-selected {
+	background-color: #ccc;
+}
+
+.spons-title {
+	font-family: 'MyraidPro';
+	font-size: 2em;
+}
+
+.spons-container-top {
+	padding-top: 6%;
+	padding-bottom: 5%;
+}
+
+.spons-heading {
+	font-size: 1em;	
+}
+
+.spons-row {
+	margin: 2% 0;
+}
+
+.spons-row img {
+	margin: 2%;
+	max-width: 500px;
+	max-width: 500px;
+}
+
+@media screen and (max-width: 650px) {
+	.spons-heading {
+		font-size: 0.6em;
+		margin-left: 10%;
+	}
+	.spons-heading-div {
+		top: 0;
+		margin-top: 0;
+	}
+}

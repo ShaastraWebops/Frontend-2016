@@ -1,0 +1,34 @@
+.aboutUs-heading-top {
+	margin-top: 5%;
+}
+#aboutUs h3 {
+	font-size: 3vh;
+}
+
+.aboutUsContent {
+	background-color: rgba(255, 255, 255, 0.6);
+	min-height: 350px;
+	padding: 50px 100px 50px 100px;
+	text-align: justify;
+	font-family: 'Proxima';
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.aboutUsHeading {
+	font-family: 'Feather';
+	font-variant: small-caps;
+	font-size: 8vh;
+	height: 45px;
+	padding-bottom: 3%;
+	letter-spacing: 2px;
+}
+
+@media only screen and (max-width:767px) {
+	#aboutUs {
+		margin-top: 5%;
+	}
+	.aboutUs-heading-top {
+		margin-top: 12%;
+	}
+}

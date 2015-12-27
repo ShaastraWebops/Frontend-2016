@@ -1,90 +1,58 @@
-<!--<!Doctype html>-->
-<!--<html ng-app="contactUsApp">-->
-<!--<head>-->
-<!--  <script src="..\bower_components\jquery\dist\jquery.min.js"></script>-->
-<!--  <script src="..\bower_components\angular\angular.min.js"></script>-->
-<!--  <script src="https://maps.googleapis.com/maps/api/js"></script>-->
-<!--  <script src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>-->
-<!--  <script src="..\bower_components\ui-bootstrap\src\ui-bootstrap-tpls-0.13.1.js"></script>-->
-<!--  <link rel="stylesheet" href="..\bower_components\bootstrap\dist\css\bootstrap.min.css">-->
-<!--  <link rel="stylesheet" href="..\bower_components\font-awesome\css\font-awesome.min.css">-->
-<!--  <link rel="stylesheet" type="text/css" href="contact-us-styles.css">-->
-<!--  <title>Contact Us</title>-->
-<!--</head>-->
-<!--<body ng-controller="contactUsCtrl" ng-clock ng-init="initialize()">-->
-	<div class="container-fluid">
-		<h1 style="aligh:center">Contact Us</h1>
-		<div class="container-fluid main">
+<update-title title="Contact Us | Shaastra 2016"></update-title>
+<update-meta property="og:title" content="Contact Us | Shaastra 2016"></update-meta>
+<update-meta property="og:url" content="{{url}}"></update-meta>
+
+<div class="container-fluid makeCenter aboutUs-heading-top">
+	<h1 class="heading"><b style="font-family:'Feather';">Contact Us</b></h1>
+	<div class="contact-main">
 		<div class="row">
-			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 wrapper">
-				<ul class="rhombus-grid">
-					<li class="rhombus" ng-repeat="department in departmentsJSON.departments" ng-click="displayModal(department)">
-						<div class="rhombus-front">
-							<span ng-bind="department.name" class="rhombus-text"></span>
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+				<div class="contact-div" ng-repeat="department in departmentsJSON.departments track by $index">
+					<div class="contact-div col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="contact in department.contacts track by $index">
+						<div class="contact-img-desc"><h4><b>{{ department.name }}</b></h4></div>
+						<div>
+							<img ng-src="{{contact.image}}" ng-click="displayModal(department, $index)" alt="shaastra-team-member">
+							<div class="contact-img-desc"><h4>{{ contact.personName }}</h4></div>
 						</div>
-						<div class="rhombus-back">
-						</div>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
-		</div>
-		
-		<div class="row form-and-map">
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			<p><h3>Leave us a message</h3></p>
-			<div id="contact-form">
-				<form class="form-group" role="form" novalidate>
-				<div id="name" class="has-feedback">
-						<span class="form-control-feedback glyphicon glyphicon-user input-icon"></span>
-						<input type="text" class="form-control" placeholder="Name"/>
+
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 map form-and-map">
+				<div class="row small-devices-map" ng-init="init_map()">
+					<div id="map"></div>
 				</div>
-				<div id="email" class="has-feedback">
-					<span class="form-control-feedback glyphicon glyphicon-envelope input-icon"></span>
-					<input type="text" class="form-control" placeholder="Email"/>
-				</div>
-				<div id="mobile" class="has-feedback">
-					<span class="form-control-feedback glyphicon glyphicon-phone input-icon"></span>
-					<input type="text" class="form-control" placeholder="Mobile (optional)"/>
-				</div>
-				<div id="message">
-					<textarea rows="10" class="form-control" placeholder="Your message..."></textarea>
-				</div>
-				<button id="contact-submit-btn" class="btn btn-primary">Submit</button>
-				</form>
+
 			</div>
-		</div>
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" ng-init="init_map()">
-			<div id="map"></div>
-		</div>
-		</div>
 		</div>
 	</div>
+
 	<div>
 		<script type="text/ng-template" id="myModalContent.html">
 			<div class="modal-header">
 				<button type="button" class="close" ng-click="close()">&times;</button>
-				<h2 class="modal-title wrapper" ng-bind="department.name"></h2> 
+				<h1 class="modal-title wrapper" ng-bind="department.name"></h1> 
 			</div>
 			<div class="modal-body">
 				<ul class="contact-modal-contents row">
-					<li ng-repeat="contact in department.contacts">
-						<ul class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
+					<li>
+						<ul class="ul-inside-contact col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
 							<li>
-								<h4><span ng-bind="contact.personName"></span></h4>
+								<h3><span ng-bind="department.selected.personName"></span></h3>
 							</li>
 							<li>
-								<p>
+								<h4>
 									<span class="glyphicon glyphicon-phone"></span>
 									<span><strong>Contact : </strong></span>
-									<span ng-bind="contact.phone" id="contactPhone"></span>
-								</p>
+									<span ng-bind="department.selected.phone" id="contactPhone"></span>
+								</h4>
 							</li>
 							<li>
-								<p>
+								<h4>
 									<span class="glyphicon glyphicon-envelope"></span>
 									<span><strong>E-Mail : </strong></span>
-									<span ng-bind="contact.mail" id="contactMail"></span>
-								</p>
+									<span ng-bind="department.selected.mail" id="contactMail"></span>
+								</h4>
 							</li>
 						</ul>
 					</li>
@@ -95,6 +63,6 @@
 			</div>
 		</script>
 	</div>
-<!--	<script type="text/javascript" src="contact-us-script.js"></script>-->
-<!--</body>-->
-<!--</html>-->
+</div>
+
+<div ng-include="'views/sticky-footer.html'"></div>
