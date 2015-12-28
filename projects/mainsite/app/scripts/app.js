@@ -230,6 +230,7 @@ angular
   })
   .run(function ($rootScope, $http, localStorageService) {
 
+    // For Search start
     $rootScope.searchEvents = [];
     $rootScope.searchMessage = 'Please wait, the search is not yet ready';
     $rootScope.canSearch = false;
@@ -264,6 +265,9 @@ angular
           $rootScope.searchEvents = response.data;
         });          
     }
+    // For search end
+
+    $rootScope.rootLocalstorageSupported = localStorageService.isSupported;
   })
   // For Google Analytics
   .run(function ($location) {

@@ -10,15 +10,21 @@
 		</div>
 	</div>
 
-	<div id= "username"class="input-group">
+	<div id="username" class="input-group">
 	  <span class="input-group-addon">
 	  	<span class="glyphicon glyphicon-user" height="20px" width="20px" alt="user_image"></span>
 	  </span>
 	  <input type="text" ng-model="UserName" class="form-control" placeholder="Enter email id" aria-describedby="sizing-addon2">
 
-		<div id= "password"class="input-group">
+		<div id="password" class="input-group">
 	  	<input type="password" ng-model="Password" class="form-control" placeholder="Enter password" aria-describedby="sizing-addon2">
 		</div>
+	</div>
+
+	<div ng-if="rootLocalstorageSupported" class="checkbox">
+		<label>
+			<input type="checkbox" ng-model="rememberMe" ng-change="toggleRememberMe()"> Remember Me
+		</label>
 	</div>
 		
 	<br>

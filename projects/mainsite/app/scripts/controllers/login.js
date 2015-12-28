@@ -1,6 +1,6 @@
 'use strict';
 angular.module('shaastra2016App')
-  .controller('loginCtrl', function ($scope, Auth, $http, $location) {
+  .controller('loginCtrl', function ($scope, Auth, $http, $location, localStorageService) {
 
     $scope.pageClass = 'page-login';
 
@@ -13,10 +13,37 @@ angular.module('shaastra2016App')
       'background-color': '#f3f3f3'
     });
 
-    $scope.UserName = "";
-    $scope.Password = "";
+    $scope.rememberMe = false;
+    if(localStorageService.isSupported) {
+        if(localStorageService.get('localstorageLoginEmail') && localStorageService.get('localstorageLoginPassword')) {
+            $scope.rememberMe = true;
+            $scope.UserName = localStorageService.get('localstorageLoginEmail');
+            $scope.Password = localStorageService.get('localstorageLoginPassword');
+        } else {
+            $scope.rememberMe = false;
+            $scope.UserName = "";
+            $scope.Password = "";
+        }
+    }
 
-    $scope.loginUser = function(){
+    $scope.toggleRememberMe = function () {
+        $scope.rememberMe = !$scope.rememberMe;
+    };
+
+    $scope.loginUser = function () {
+        if(localStorageService.isSupported) {
+            console.log($scope.rememberMe);
+            if($scope.rememberMe) {
+                localStorageService.remove('localstorageLoginEmail');
+                localStorageService.remove('localstorageLoginPassword');
+                localStorageService.set('localstorageLoginEmail', $scope.UserName);
+                localStorageService.set('localstorageLoginPassword', $scope.Password);
+            } else {
+                localStorageService.remove('localstorageLoginEmail');
+                localStorageService.remove('localstorageLoginPassword');
+            }
+        }
+
         Auth.login({
             email: $scope.UserName,
             password: $scope.Password
