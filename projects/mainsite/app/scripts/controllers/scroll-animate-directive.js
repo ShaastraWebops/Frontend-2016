@@ -36,16 +36,16 @@ angular.module('scroll-animate-directive', [])
                     x: e[0].offsetLeft,
                     y: e[0].offsetTop
                 };
-            }
+            };
             $scope.getViewPortSize = function(w) {
 
                 return {
                     x: Math.max(document.documentElement.clientWidth, w.innerWidth || 0),
                     y: Math.max(document.documentElement.clientHeight, w.innerHeight || 0)
-                }
+                };
 
 
-            }
+            };
         }
     ])
     .directive('aniScroll', function($window) {
@@ -92,7 +92,7 @@ angular.module('scroll-animate-directive', [])
                     var coverage = {
                         x: parseInt(viewport.x + offset.x),
                         y: parseInt(viewport.y + offset.y)
-                    }
+                    };
                     if (coverage.y >= position.y && coverage.x >= position.x) {
                         scope.show = true;
                     } else {
