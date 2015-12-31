@@ -14,7 +14,7 @@ angular.module('shaastra2016App')
       'background-color': '#f3f3f3'
     });
 
-    $scope.showsTabs = ["Tech and Innovation Fair 2016", "Past Performances"];
+    $scope.showsTabs = ["Tech and Innovation Fair 2016", "Vivek Patil", "ADELAIDA", "Yohan Triboulat", "Past Performances"];
     $scope.tab = 0;
 
     $scope.changeTab = function (index) {

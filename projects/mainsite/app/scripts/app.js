@@ -17,6 +17,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ui.bootstrap',
     'LocalStorageModule',
     'cgBusy',
     'angular-intro',
