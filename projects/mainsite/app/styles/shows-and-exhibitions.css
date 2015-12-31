@@ -1,3 +1,9 @@
+/* Editing default bootstrap classes. BEWARE!!*/
+.nav > li > a:hover {
+	color: #a3a3a3;
+	background-color: #173e43;
+}
+
 .shows img {
 	max-height: 400px;
 	display: block;
@@ -22,4 +28,14 @@
 .sub-tab-selected {
 	color: #a3a3a3;
 	background-color: #173e43;
+}
+
+.shows-maker-subHeading {
+	font-family: 'Feather';
+	text-align: center;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+.shows-maker-subHeading h2 {
+	font-size: 2em;
 }
