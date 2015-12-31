@@ -36,5 +36,8 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "resolutions": {
+    "angular": "~1.4.5"
   }
 }

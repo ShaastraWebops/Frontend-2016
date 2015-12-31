@@ -14,11 +14,17 @@ angular.module('shaastra2016App')
       'background-color': '#f3f3f3'
     });
 
-    $scope.showsTabs = ["Tech and Innovation Fair 2016", "Vivek Patil", "ADELAIDA", "Yohan Triboulat", "Past Performances"];
+    $scope.showsTabs = ["Shows", "Exhibitions", "Past Performances"];
     $scope.tab = 0;
+    $scope.subId = 1;
 
     $scope.changeTab = function (index) {
       $scope.tab = index;
+      $scope.subId = 1;
+    };
+
+    $scope.changeSubId = function (id) {
+      $scope.subId = id;
     };
 
     $scope.scrollDown = function (element) {

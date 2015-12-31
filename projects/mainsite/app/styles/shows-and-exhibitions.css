@@ -14,3 +14,12 @@
 	font-size: 3.5em;
 	letter-spacing: 2px;
 }
+.subLink {
+	cursor: pointer;
+	color: white;
+	background-color: #173e43;
+}
+.sub-tab-selected {
+	color: #a3a3a3;
+	background-color: #173e43;
+}
