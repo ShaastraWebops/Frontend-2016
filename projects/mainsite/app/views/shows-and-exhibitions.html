@@ -109,20 +109,12 @@
                   <div class="row">
                     <div class="tabbable">
                         <ul class="nav nav-tabs">
-                          <li class="active"><a class="subLink" ng-click="changeSubId(1)" data-toggle="tab">Exhibitions 2016</a></li>
-                          <li><a class="subLink" ng-click="changeSubId(2)" data-toggle="tab">Tech and Innovation Fair</a></li>
+                          <li class="active"><a class="subLink" ng-click="changeSubId(1)" data-toggle="tab">Tech and Innovation Fair</a></li>
+                          <li><a class="subLink" ng-click="changeSubId(2)" data-toggle="tab">Exhibitions 2016</a></li>
                         </ul>
                     </div>
                     <br>
                     <div ng-if="subId===1" class="cont">
-                      <div class="row shows-maker-subHeading">
-                        <h2><b>Exhibitions</b></h2>
-                      </div>
-                      <div class="row makeCenter">
-                       Will be updated soon
-                     </div>
-                    </div>
-                    <div ng-if="subId===2" class="cont">
                       <div class="row shows-maker-subHeading">
                         <h2><b>Tech and Innovation Fair</b></h2>
                       </div>
@@ -161,6 +153,14 @@
                           <li><b>Nivedita Manepalli</b> - +91-9940557095</li>
                         </ul>
                       </div>
+                    </div>
+                    <div ng-if="subId===2" class="cont">
+                      <div class="row shows-maker-subHeading">
+                        <h2><b>Exhibitions</b></h2>
+                      </div>
+                      <div class="row makeCenter">
+                       Will be updated soon
+                     </div>
                     </div>
                    </div>
                 </div>
