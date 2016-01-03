@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('registerCtrl', function ($scope, $http, Auth, $location) {
+  .controller('registerCtrl', function ($scope, $http, Auth, $location, localStorageService) {
 
     $scope.pageClass = 'page-registration';
 
@@ -38,10 +38,24 @@ angular.module('shaastra2016App')
     $scope.userRegisterMessage = '';
     $scope.addCollegeMessage = '';
 
-    $http.get('http://shaastra.org:8001/api/colleges')
-      .then(function (response) {
-        $scope.college_list = response.data;
-      });
+    // using local storage to store college list
+    if(localStorageService.isSupported) {
+      if(localStorageService.get('localStorageCollegeList')) {
+        $scope.college_list = localStorageService.get('localStorageCollegeList');
+      } else {
+        $http.get('http://shaastra.org:8001/api/colleges')
+          .then(function (response) {
+            $scope.college_list = response.data;
+            localStorageService.set('localStorageCollegeList', response.data);
+          });
+      }
+    } else {
+      $http.get('http://shaastra.org:8001/api/colleges')
+        .then(function (response) {
+          $scope.college_list = response.data;
+        });
+    }
+
 
     $scope.toggleNewCollegeDiv = function () {
       $scope.existingCollege = !$scope.existingCollege;
