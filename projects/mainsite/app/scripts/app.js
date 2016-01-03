@@ -23,7 +23,8 @@ angular
     'angular-intro',
     'ipCookie',
     'updateMeta',
-    'scroll-animate-directive'    
+    'scroll-animate-directive',
+    'toastr' 
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     // $locationProvider.html5Mode(true);
@@ -34,6 +35,38 @@ angular
       .setPrefix('Shaastra2016')
       .setStorageType('localStorage')
       .setNotify(true, true);
+  })
+  .config(function (toastrConfig) {
+    angular.extend(toastrConfig, {
+      // container config
+      autoDismiss: false,
+      containterId: 'toast-container',
+      maxOpened: 0,
+      newestOnTop: true,
+      positionClass: 'toast-bottom-left',
+      preventDuplicates: false,
+      preventOpenDuplicates: false,
+      target: 'body',
+      // toast config
+      allowHtml: true,
+      closeButton: true,
+      extendedTimeOut: 0,
+      iconClasses: {
+        error: 'toast-error',
+        info: 'toast-info',
+        success: 'toast-success',
+        warning: 'toast-warning'
+      },
+      messageClass: 'toast-message',
+      onHidden: null,
+      onShow: null,
+      onTap: null,
+      progressBar: false,
+      tapToDismiss: false,
+      // timeOut: 10000000000,
+      titleClass: 'toast-title',
+      toastClass: 'toast'
+    });
   })
   .config(function ($routeProvider) {
     $routeProvider

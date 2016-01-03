@@ -1,3 +1,8 @@
+/* Changing default plugin value! Beware!!*/
+.toast-bottom-left {
+	top: 75%;
+}
+
 /*Changing the default plugin value! Beware!!*/
 .flip-clock-label {
 	font-size: 2em;

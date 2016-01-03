@@ -73,29 +73,50 @@ function startCountdown () {
 }
 
 angular.module('shaastra2016App')
-  .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll) {
+  .controller("HomeCtrl", function ($scope, $timeout, ipCookie, $location, $anchorScroll, toastr, $interval) {
 
     $scope.pageClass = 'page-home';
 
     animateHexagons();
     startCountdown();
 
-    var demo = ["Shaastra-2016 is from 23rd January to 26th January 2016", 
-                "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
-                "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
-                "Registrations have been opened!!!"];
-    var a = 0;
-    function changeText() {
-      var blinkText = document.getElementById("blinkText");
-      if(blinkText !== null) {
-        blinkText.innerHTML = demo[a];
-        a += 1;
-        if(a === demo.length) {
-          a = 0;
-        }
+    // default notif
+    toastr.info("", "Shaastra-2016 is from 23rd January to 26th January 2016");
+    var homepageNotifs = [
+      {
+        title: "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
+        desc: "",
+        type: "error"
+      },
+      {
+        title: "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
+        desc: "",
+        type: 'warning'
+      },
+      {
+        title: "Registrations have been opened!!!",
+        desc: "<a target='_blank' href='/#/register'>Click here to register</a>",
+        type: "success"
+      },
+      {
+        title: "Shaastra-2016 is from 23rd January to 26th January 2016",
+        desc: "",
+        type: "info"
+      }
+    ];
+
+    var notifCounter = 0;
+    var numNotifs = homepageNotifs.length;
+
+    function changeNotif() {
+      toastr[homepageNotifs[notifCounter].type](homepageNotifs[notifCounter].desc, homepageNotifs[notifCounter].title);
+      notifCounter += 1;
+      if(notifCounter === numNotifs) {
+        notifCounter = 0;
       }
     }
-    setInterval(changeText, 3000);
+    $interval(changeNotif, 5000);
+
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
     // window.addEventListener("resize", resizeFunction);
