@@ -42,65 +42,130 @@
                 <div class="row shows-maker-heading">
                   <h1><b>{{ showsTabs[tab] }}</b></h1>
                 </div>
+
                 <div ng-if="tab===0" class="cont">
                   <div class="row">
-                    Tech and Innovation Fair at Shaastra 2016, IIT Madras is one of the best opportunities for tech enthusiasts to witness and experience cutting-edge technology and innovations that have taken place around the world.
+                    Shows at Shaastra have been an unmatchable mix of technology and entertainment with past performances displaying splendid air show, laser show etc.This year Shaastra goes big bringing world renowned international artists and highly decorated national artist to perform at its stage to mesmerise an audience of over 5000 filling them with the much required adrenaline. After the sun sets, be ready to groove with the tunes spread over these fine entertainers.
                   </div><br>
                   <div class="row">
-                    The platform hosts the projects and exhibitions with novel ideas developed by the students across the globe. The developers get to exhibit their distinctive products to the eminent scientists, brilliant academicians and interact with the best brains of India. 
-                  </div><br>
-                  <div class="row">
-                    Shaastra, IIT Madras hosts this fair aimed at promoting innovation in the world. As a part of it you can participate and exhibit your project or product to 30,000+ audience.
-                  </div><br>
-                  <div class="row">
-                    <h3><b>Policy for participation in the Tech and Innovation Fair'16 - </b></h3>
-                    <p>The exhibit must be original or developed by you. The top exhibits would be selected and given an opportunity to be a part of exhibitions at Shaastra 2016, IIT Madras. The best exhibits will be given incentives and prizes.</p>
-                    <p>In case your exhibit has a patent, please attach patent details in the mail.</p>
-                    <p>There is no fees for registration. Shaastra sponsors only two participants for each project. Any extra participants have to pay for their arrangements. Anyone can be a part of the project. The person need not be pursuing any studies to be a part of the Tech and Innovation Fair'16.</p>
-                    <p>The final selections will be done by IIT Madras.</p>
-                  </div>
-                  <div class="row">
-                    <h3><b>Registration process to participate in Tech and Innovation Fair'16, IIT Madras - </b></h3>
-                    <ul>
-                      <li>Click on <a target="_blank" href="https://docs.google.com/document/d/1ABlQwVfeVP2s8ofsPniCcrwqh3lAJ4GghiL37tqcnGo/export?format=doc">this</a> link to download the format of the file to be submitted</li>
-                      <li>Write all the details in a google document and share it with <a target="_blank" href="mailto:exhibitions@shaastra.org">exhibitions@shaastra.org</a> with commenting rights</li>
-                      <li>Name the document in the following format "<b>TAIF'16_&lt;Project Name&gt;</b>" and put the subject as "<b>Tech and Innovation Fair 2016</b>"</li>
-                      <li>The final selection list will be intimated to you by email if you’re selected. In case of multiple submissions your project might not get selected</li>
-                      <li>The right of selection solely rests with IIT Madras and in case of any discrepancies the organizer's decision is final</li>
-                      <li>Deadline for submission is 8<sup>th</sup> January, 2016</li>
-                    </ul>
-                  </div>
-                  <div class="row">
-                    <h3><b>In case of any queries, feel free to contact us at - </b></h3>
-                    <ul>
-                      <li><b>Nithin Gudisa</b> - +91-9003101274</li>
-                      <li><b>Nivedita Manepalli</b> - +91-9940557095</li>
-                    </ul>
-                  </div>
+                    <div class="tabbable">
+                      <ul class="nav nav-tabs">
+                        <li class="active"><a class="subLink" ng-click="changeSubId(1)" ng-class="{'sub-tab-selected':(subId === 1)}" data-toggle="tab">Light and Sand art</a></li>
+                        <li><a class="subLink" ng-click="changeSubId(2)" data-toggle="tab">Extreme sports show</a></li>
+                        <li><a class="subLink" ng-click="changeSubId(3)" data-toggle="tab">LED and Neon Show</a></li>
+                        <li><a class="subLink" ng-click="changeSubId(4)" data-toggle="tab">Envisage</a></li>
+                      </ul>
+                    </div>
+                    <br>
+                    <div ng-if="subId===1" class="cont">
+                    <div class="row shows-maker-subHeading">
+                      <h2><b>Light and Sand art</b></h2>
+                    </div>
+                     <div class="row">
+                      Experience  India's best sand artist and India's only light painter Vivek patil who rose to fame by performamces in National Television shows <b>"Entertainment Ke Liye Kuchh Bhi Karega"</b> and <b>"India's Got Talent"</b>. His display of immense talent and artistic flamboyance have awed millions in the world. The jaw dropping visuals paralleled with the emotional connect have touched the hearts of many and at Shaastra 2016 he is coming to fill your life with color. Be sure to catch him only at Shaastra 2016.
+                     </div><br>
+                     <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
+                        <iframe width="100%" height="500" frameborder="0" 
+                          src="http://www.youtube.com/embed/xdtUKUjXGUM">
+                        </iframe>
+                      </div>
+                     </div>
+                    </div>
+                    <div ng-if="subId===2" class="cont">
+                      <div class="row shows-maker-subHeading">
+                        <h2><b>Extreme sports Show</b></h2>
+                      </div>
+                      <div class="row">
+                       Bikes, stunts, adventure does this things ring a bell with you? If Yes, Shaastra is here with another international addition world renowned stunt biker Yohan Triboulat. Hailing from France he has made his name by performing in stunt shows all around the globe for over 10 years. So get ready for a jaw dropping performance as Yohan and his bike swing at our custom made set and jump to the beat.
+                     </div>
+                    </div>
+                    <div ng-if="subId===3" class="cont">
+                      <div class="row shows-maker-subHeading">
+                        <h2><b>LED and Neon Show</b></h2>
+                      </div>
+                      <div class="row">
+                       This year Shaastra brings some international flavour with Ukraine's finest entertainers Adelaida bringing one of the world's best LED and Neon shows. Having produced over 1000 performances across the globe at the world's most lavish locations, they are coming to Shaastra just for you. Their zealous show is bound to get you pumping and jumping and raise your energy level over 9000!! Catch them live at Shaastra 2016.
+                     </div>
+                    </div>
+                    <div ng-if="subId===4" class="cont">
+                      <div class="row shows-maker-subHeading">
+                        <h2><b>Envisage</b></h2>
+                      </div>
+                      <div class="row makeCenter">
+                       Will be updated soon
+                     </div>
+                    </div>
+                   </div>
                 </div>
+
                 <div ng-if="tab===1" class="cont">
                   <div class="row">
-                    Experience  India's best sand artist and India's only light painter Vivek patil who rose to fame by performamces in National Television shows <b>"Entertainment Ke Liye Kuchh Bhi Karega"</b> and <b>"India's Got Talent"</b>. His display of immense talent and artistic flamboyance have awed millions in the world. The jaw dropping visuals paralleled with the emotional connect have touched the hearts of many and at Shaastra 2016 he is coming to fill your life with color. Be sure to catch him only at Shaastra 2016.
+                    A perfect place to witness the marvels of technology.
                   </div><br>
                   <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
-                      <iframe width="100%" height="500" frameborder="0" 
-                        src="http://www.youtube.com/embed/xdtUKUjXGUM">
-                      </iframe>
+                    Breaking the boundaries and igniting innovation, Exhibitions has always provided an opportunity for the young minds to witness the achievements in technology. Shaastra is one of the best places where you can see and experience a broad spectrum of modern technology. This is the ideal platform for the tech enthusiasts to gain exposure and interact with the experts who has brought these breathtaking exhibits into existence.
+                  </div><br>
+                  <div class="row">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                          <li class="active"><a class="subLink" ng-click="changeSubId(1)" data-toggle="tab">Tech and Innovation Fair</a></li>
+                          <li><a class="subLink" ng-click="changeSubId(2)" data-toggle="tab">Exhibitions 2016</a></li>
+                        </ul>
                     </div>
-                  </div>
+                    <br>
+                    <div ng-if="subId===1" class="cont">
+                      <div class="row shows-maker-subHeading">
+                        <h2><b>Tech and Innovation Fair</b></h2>
+                      </div>
+                      <div class="row">
+                        Tech and Innovation Fair at Shaastra 2016, IIT Madras is one of the best opportunities for tech enthusiasts to witness and experience cutting-edge technology and innovations that have taken place around the world.
+                      </div><br>
+                      <div class="row">
+                        The platform hosts the projects and exhibitions with novel ideas developed by the students across the globe. The developers get to exhibit their distinctive products to the eminent scientists, brilliant academicians and interact with the best brains of India. 
+                      </div><br>
+                      <div class="row">
+                        Shaastra, IIT Madras hosts this fair aimed at promoting innovation in the world. As a part of it you can participate and exhibit your project or product to 30,000+ audience.
+                        <p><b>Chance to win INR 5000/- as cash prize.</b></p>
+                      </div><br>
+                      <div class="row">
+                        <h3><b>Policy for participation in the Tech and Innovation Fair'16 - </b></h3>
+                        <p>The exhibit must be original or developed by you. The top exhibits would be selected and given an opportunity to be a part of exhibitions at Shaastra 2016, IIT Madras. The best exhibits will be given incentives and prizes.</p>
+                        <p>In case your exhibit has a patent, please attach patent details in the mail.</p>
+                        <p>There is no fees for registration. Shaastra sponsors only two participants for each project. Any extra participants have to pay for their arrangements. Anyone can be a part of the project. The person need not be pursuing any studies to be a part of the Tech and Innovation Fair'16.</p>
+                        <p>The final selections will be done by IIT Madras.</p>
+                      </div>
+                      <div class="row">
+                        <h3><b>Registration process to participate in Tech and Innovation Fair'16, IIT Madras - </b></h3>
+                        <ul>
+                          <li>Click on <a target="_blank" href="https://docs.google.com/document/d/1ABlQwVfeVP2s8ofsPniCcrwqh3lAJ4GghiL37tqcnGo/export?format=doc">this</a> link to download the format of the file to be submitted</li>
+                          <li>Write all the details in a google document and share it with <a target="_blank" href="mailto:exhibitions@shaastra.org">exhibitions@shaastra.org</a> with commenting rights</li>
+                          <li>Name the document in the following format "<b>TAIF'16_&lt;Project Name&gt;</b>" and put the subject as "<b>Tech and Innovation Fair 2016</b>"</li>
+                          <li>The final selection list will be intimated to you by email if you’re selected. In case of multiple submissions your project might not get selected</li>
+                          <li>The right of selection solely rests with IIT Madras and in case of any discrepancies the organizer's decision is final</li>
+                          <li>Deadline for submission is 10<sup>th</sup> January, 2016</li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <h3><b>In case of any queries, feel free to contact us at - </b></h3>
+                        <ul>
+                          <li><b>Nithin Gudisa</b> - +91-9003101274</li>
+                          <li><b>Nivedita Manepalli</b> - +91-9940557095</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div ng-if="subId===2" class="cont">
+                      <div class="row shows-maker-subHeading">
+                        <h2><b>Exhibitions</b></h2>
+                      </div>
+                      <div class="row makeCenter">
+                       Will be updated soon
+                     </div>
+                    </div>
+                   </div>
                 </div>
+                  
                 <div ng-if="tab===2" class="cont">
-                  <div class="row">
-                    This year Shaastra brings some international flavour with Ukraine's finest entertainers Adelaida bringing one of the world's best LED and Neon shows. Having produced over 1000 performances across the globe at the world's most lavish locations, they are coming to Shaastra just for you. Their zealous show is bound to get you pumping and jumping and raise your energy level over 9000!! Catch them live at Shaastra 2016.
-                  </div><br>
-                </div>
-                <div ng-if="tab===3" class="cont">
-                  <div class="row">
-                    Bikes, stunts, adventure does this things ring a bell with you? If Yes, Shaastra is here with another international addition world renowned stunt biker Yohan Triboulat. Hailing from France he has made his name by performing in stunt shows all around the globe for over 10 years. So get ready for a jaw dropping performance as Yohan and his bike swing at our custom made set and jump to the beat.
-                  </div><br>
-                </div>                
-                <div ng-if="tab===4" class="cont">
                   <div class="row">
                     <h3><b>Envisage</b></h3>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
