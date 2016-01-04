@@ -14,7 +14,7 @@ angular.module('shaastra2016App')
       'background-color': '#f3f3f3'
     });
 
-    $scope.showsTabs = ["Shows", "Exhibitions", "Past Performances"];
+    $scope.showsTabs = ["Exhibitions", "Shows", "Past Performances"];
     $scope.tab = 0;
     $scope.subId = 1;
 
