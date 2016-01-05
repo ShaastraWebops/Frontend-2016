@@ -109,6 +109,7 @@ angular.module('shaastra2016App')
     var numNotifs = homepageNotifs.length;
 
     function changeNotif() {
+      toastr.clear();
       toastr[homepageNotifs[notifCounter].type](homepageNotifs[notifCounter].desc, homepageNotifs[notifCounter].title);
       notifCounter += 1;
       if(notifCounter === numNotifs) {
