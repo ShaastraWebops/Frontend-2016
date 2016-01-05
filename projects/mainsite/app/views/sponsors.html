@@ -33,37 +33,37 @@
     </div>
   </div>  
 
-  <div ng-if="tab_2016" class="row makeCenter">
+  <div ng-if="0" class="row makeCenter">
     <h1>Stay tuned for Updates!</h1>
   </div>
-  <div ng-if="0" class="container makeCenter">
+  <div ng-if="tab_2016" class="container makeCenter">
     <div class="row spons-row" ng-repeat="category in sponsors2016 track by $index">
 
       <div ng-if="category.path.length === 1">
-        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <h1 class="spons-title"><b><u>{{ category.title }}</u></b></h1>
         <div ng-repeat="sponsor in category.path" class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-12">
-          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+          <a target="_blank" href="{{sponsor.link1}}"><img ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
         </div>
       </div>
 
       <div ng-if="category.path.length === 2">
-        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <h1 class="spons-title"><b><u>{{ category.title }}</u></b></h1>
         <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+          <a target="_blank" href="{{sponsor.link1}}"><img ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
         </div>
       </div>
 
       <div ng-if="category.path.length === 3">
-        <h1 class="spons-title"><b>{{ category.title }}</h1>
+        <h1 class="spons-title"><b><u>{{ category.title }}</u></b></h1>
         <div ng-repeat="sponsor in category.path" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+          <a target="_blank" href="{{sponsor.link1}}"><img ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
         </div>
       </div>
 
       <div ng-if="category.path.length >= 4">
-        <h1 class="spons-title"><b>{{ category.title }}</h1>
-        <div ng-repeat="sponsor in category.path" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <a target="_blank" href="{{sponsor.link1}}"><img width="300" height="150" ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+        <h1 class="spons-title"><b><u>{{ category.title }}</u></b></h1>
+        <div ng-repeat="sponsor in category.path" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <a target="_blank" href="{{sponsor.link1}}"><img ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
         </div>
       </div>
 
