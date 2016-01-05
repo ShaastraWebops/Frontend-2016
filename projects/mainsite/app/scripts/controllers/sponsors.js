@@ -32,7 +32,7 @@ angular.module('shaastra2016App')
       id: 1,
       title: 'Title Sponsor',
       path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_44,w_217,f_auto/v1452027995/sponsors/2016/Title-Sponsor/caterpillar.png',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,f_auto/v1452031937/sponsors/2016/Title-Sponsor/caterpillar.png',
         link1: 'http://www.caterpillar.com/'
       }]
     },
@@ -48,7 +48,7 @@ angular.module('shaastra2016App')
       id: 3,
       title: 'Stay Partner',
       path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_85,w_188,f_auto/v1452027960/sponsors/2016/Stay-Partner/stayzilla.png',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/v1452031701/sponsors/2016/Stay-Partner/stayzilla.jpg',
         link1: 'http://stayzilla.com/'
       }]
     },
