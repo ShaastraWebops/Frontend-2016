@@ -235,6 +235,12 @@ angular
         }
       });
 
+      if(next.$$route.originalPath !== '/') {
+        $('#toast-container').css('display', 'none');
+      } else {
+        $('#toast-container').css('display', 'initial');
+      }
+
       $rootScope.url = $location.absUrl();
 
       $rootScope.showBackButton = (next.$$route.originalPath !== '/');
