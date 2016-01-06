@@ -2,6 +2,10 @@
 .toast-bottom-left {
 	top: 75%;
 }
+#toast-container {
+	position: absolute;
+	z-index: 99;
+}
 
 /*Changing the default plugin value! Beware!!*/
 .flip-clock-label {

@@ -39,9 +39,9 @@ angular
   .config(function (toastrConfig) {
     angular.extend(toastrConfig, {
       // container config
-      autoDismiss: false,
+      autoDismiss: true,
       containterId: 'toast-container',
-      maxOpened: 0,
+      maxOpened: 1,
       newestOnTop: true,
       positionClass: 'toast-bottom-left',
       preventDuplicates: false,
@@ -63,7 +63,7 @@ angular
       onTap: null,
       progressBar: false,
       tapToDismiss: false,
-      // timeOut: 10000000000,
+      // timeOut: 5000,
       titleClass: 'toast-title',
       toastClass: 'toast'
     });
@@ -234,6 +234,12 @@ angular
           $location.url('/login');
         }
       });
+
+      if(next.$$route.originalPath !== '/') {
+        $('#toast-container').css('display', 'none');
+      } else {
+        $('#toast-container').css('display', 'initial');
+      }
 
       $rootScope.url = $location.absUrl();
 

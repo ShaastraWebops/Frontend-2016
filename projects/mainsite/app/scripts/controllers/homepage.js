@@ -39,16 +39,16 @@ function animateHexagons(){
    $("#top-hex").addClass("hex-initial-anim");
    $("#middle-hex").addClass("hex-initial-anim");
    $("#bottom-hex").addClass("hex-initial-anim");
-   $("#top-hex").one(animationEvent1, function(event){
+   $("#top-hex").one(animationEvent1, function (event){
      $("#top-hex").removeClass("hex-initial-anim");
    });
    
-   $("#middle-hex").one(animationEvent2, function(event){
+   $("#middle-hex").one(animationEvent2, function (event){
      $("#middle-hex").removeClass("hex-initial-anim");
      $("#middle-hex").addClass("middle-hex-anim");
    });
    
-   $("#bottom-hex").one(animationEvent2, function(event){
+   $("#bottom-hex").one(animationEvent2, function (event){
      $("#bottom-hex").removeClass("hex-initial-anim");
      $("#bottom-hex").addClass("bottom-hex-anim");
    });
