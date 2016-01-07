@@ -43,7 +43,7 @@ angular
       containterId: 'toast-container',
       maxOpened: 1,
       newestOnTop: true,
-      positionClass: 'toast-bottom-left',
+      positionClass: 'toast-top-right',
       preventDuplicates: false,
       preventOpenDuplicates: false,
       target: 'body',
