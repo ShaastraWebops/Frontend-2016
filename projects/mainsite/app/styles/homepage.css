@@ -1,6 +1,6 @@
 /* Changing default plugin value! Beware!!*/
-.toast-bottom-left {
-	top: 75%;
+.toast-top-right {
+	top: 15%;
 }
 #toast-container {
 	position: absolute;
