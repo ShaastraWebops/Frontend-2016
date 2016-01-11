@@ -21,8 +21,8 @@ angular.module('shaastra2016App')
       $location.hash(temp);
     };
 
-    $scope.makersTabs = ['Home', 'Event', 'Tracks', 'Speakers', 'Registration', 'Schedule', 'Contact Us'];
-    $scope.tab = 0;
+    $scope.makersTabs = ['Home', 'Event', 'Tracks', 'Speakers', 'Registration', 'Schedule', 'Prizes', 'Contact Us'];
+    $scope.tab = 5;
 
     $scope.changeTab = function (index) {
       $scope.tab = index;

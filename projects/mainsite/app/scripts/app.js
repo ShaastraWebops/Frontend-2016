@@ -309,8 +309,8 @@ angular
 
     $rootScope.rootLocalstorageSupported = localStorageService.isSupported;
   })
-  // For Google Analytics
   .run(function ($location) {
+    // For Google Analytics
     !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
     (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
     r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
@@ -318,5 +318,21 @@ angular
 
     ga('create', 'UA-68796703-1', 'auto');
     ga('send', 'pageview', { page: $location.url() });
+
+    // For Facebook
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1630409340524916',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));      
   });
 
