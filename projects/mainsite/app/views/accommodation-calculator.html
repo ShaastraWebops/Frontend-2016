@@ -13,9 +13,67 @@
   
 	  <article>
 	  	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 aboutUsContent">
-		    <div class="row">
-		    	
+
+				<div class="container-fluid">
+			    <div class="row">
+						<form class="form" name="form" novalidate>
+							<div class="col-lg-8 col-xs-12">	
+								<div id="validation" class="form-group" ng-class="{ 'has-success': form.accomNumber.$valid,
+				                                          								'has-error': form.accomNumber.$invalid }">
+									<label><h3>Enter the number of participants</h3></label>
+									<div class="input-group">
+										<span class="input-group-addon">
+										 	<span class="glyphicon glyphicon-home" height="20px" width="20px" alt="home-icon-image"></span>
+										</span>
+									  <input type="text" name="accomNumber" ng-model="accomNumber" ng-change="changeAccomNum(accomNumber)" class="form-control" placeholder="Enter the number of people for Accommodation" aria-describedby="sizing-addon2" ng-pattern="/^\+?(0|[1-9]\d*)$/" required>
+									</div>
+								  <span class="help-block" ng-show="(form.accomNumber.$error.pattern || form.accomNumber.$error.required)">
+					      		Please enter a vaild positive number
+					    		</span>
+								</div>
+							</div>
+						</form>
+			    </div>
+			    <div class="row">
+			    	<b><h3>Cost per person per day = {{ costPerDay }}</h3></b>
+			    </div>
+				</div>		    
+
+				<br />
+
+		    <div ng-show="accomNumber>0" class="container-fluid">
+		    	<table class="table table-bordered table-hover">
+		    		<thead>
+		    			<tr class="success">
+			    			<th>Sl.No</th>
+			    			<th>Participants</th>
+			    			<th>Check In Time</th>
+			    			<th>Check In Date</th>
+			    			<th>Check Out Time</th>
+			    			<th>Check Out Date</th>
+			    			<th>Number of days stay</th>
+			    			<th>Individual cost</th>
+		    			</tr>
+		    		</thead>
+		    		<tbody>
+		    			<tr ng-repeat="member in members track by $index">
+		    				<th>{{ $index+1 }}</th>
+		    				<th>Person {{ $index+1 }}</th>
+		    				<th><input type="time" name="checkInTime" ng-model="" placeholder="HH:mm:ss" required /></th>
+		    				<th><input type="date" name="checkInDate" ng-model="" placeholder="yyyy-MM-dd" required /></th>
+		    				<th><input type="time" name="checkOutTime" ng-model="" placeholder="HH:mm:ss" required /></th>
+		    				<th><input type="date" name="checkOutDate" ng-model="" placeholder="yyyy-MM-dd" required /></th>
+		    				<th>{{ numDaysOfStay[$index] }}</th>
+		    				<th>{{ individualCost[$index] }}</th>
+		    			</tr>
+		    		</tbody>
+		    	</table>
+					
+					<div class="row">
+						<b><h3>Total Cost = {{ totalCost }}<h3></b>  
+					</div> 	
 		    </div>
+	  	
 	  	</div>
 	  </article>  
   </div>

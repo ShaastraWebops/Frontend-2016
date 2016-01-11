@@ -14,5 +14,19 @@ angular.module('shaastra2016App')
 		var backButton = $('#back-button');
 		backButton.attr('link', '/');
 
-    $scope.message = "hello";
+    $scope.costPerDay = 100;
+    $scope.totalCost = 0;
+    $scope.accomNumber = 0;
+    $scope.members = [];
+    $scope.numDaysOfStay = [];
+    $scope.individualCost = [];
+    $scope.changeAccomNum = function (n) {
+      $scope.members = [];
+      for(var i=0; i<n; i++) {
+        $scope.members.push(i);
+        $scope.numDaysOfStay.push(0);
+        $scope.individualCost.push(0);
+      }
+    };
+
   });
