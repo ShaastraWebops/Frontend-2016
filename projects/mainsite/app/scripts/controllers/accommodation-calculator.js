@@ -84,7 +84,7 @@ angular.module('shaastra2016App')
           $scope.totalCost = $scope.totalCost + $scope.individualCost[i];
         }
       }
-      if ($scope.firstDate[index] != "null" && $scope.secondDate[index] != "null" && $scope.secondDate[index] <= $scope.firstDate[index]) {
+      if ($scope.firstDate[index] != "null" && $scope.secondDate[index] != "null" && $scope.secondDate[index] < $scope.firstDate[index]) {
         $scope.validation[index] = true;
       }
     }
