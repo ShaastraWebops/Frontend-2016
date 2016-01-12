@@ -59,10 +59,12 @@
 		    			<tr ng-repeat="member in members track by $index">
 		    				<th>{{ $index+1 }}</th>
 		    				<th>Person {{ $index+1 }}</th>
-		    				<th><input type="time" name="checkInTime" ng-model="" placeholder="HH:mm:ss" required /></th>
-		    				<th><input type="date" name="checkInDate" ng-model="" placeholder="yyyy-MM-dd" required /></th>
-		    				<th><input type="time" name="checkOutTime" ng-model="" placeholder="HH:mm:ss" required /></th>
-		    				<th><input type="date" name="checkOutDate" ng-model="" placeholder="yyyy-MM-dd" required /></th>
+		    				<!-- <th><input type="time" name="checkInTime" placeholder="HH:mm:ss" required /></th> -->
+		    				<th><select><option ng-repeat="x in selectedTimes">{{x}}</option></select></th>
+		    				<th><input type="date" name="checkInDate" ng-change="addInDate($index, firstDate[$index], accomNumber)" ng-model="firstDate[$index]" placeholder="yyyy-MM-dd" required /></th>
+		    				<!-- <th><input type="time" name="checkOutTime" placeholder="HH:mm:ss" required /></th> -->
+		    				<th><select><option ng-repeat="x in selectedTimes">{{x}}</option></select></th>
+		    				<th><input type="date" name="checkOutDate" ng-change="addOutDate($index, secondDate[$index], accomNumber)" ng-model="secondDate[$index]" placeholder="yyyy-MM-dd" required /><h4 ng-show="validation[$index]">Invalid Date</h4></th>
 		    				<th>{{ numDaysOfStay[$index] }}</th>
 		    				<th>{{ individualCost[$index] }}</th>
 		    			</tr>
