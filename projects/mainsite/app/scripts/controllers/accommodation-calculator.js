@@ -21,6 +21,8 @@ angular.module('shaastra2016App')
     $scope.numDaysOfStay = [];
     $scope.individualCost = [];
     $scope.changeAccomNum = function (n) {
+      $scope.numDaysOfStay = [];
+      $scope.individualCost = [];
       $scope.members = [];
       for(var i=0; i<n; i++) {
         $scope.members.push(i);
