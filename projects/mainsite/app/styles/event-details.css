@@ -15,6 +15,9 @@
 	font-variant: small-caps;
 	font-weight: bolder;
 }
+.register-event a {
+	display: inline-block;
+}
 
 .marquee {
 	font-size: 1.2em;
@@ -67,21 +70,22 @@ a[event-nav-hyperlink] {
 }
 
 .event-nav {
-	display: table-cell;
-	vertical-align: middle;
+	display: inline-block;
+	/*display: table-cell;*/
+	/*vertical-align: middle;*/
 	font-variant: small-caps;
 	z-index: 1;
 	background-color: #173e43;
 	color: white;
 	width: 100%;
-	height: auto;
+	/*height: auto;*/
 	line-height: 35px;
 	font-family: 'Feather';
 	font-size: 2em;
 	text-align: right;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
-	table-layout: fixed;
+	/*table-layout: fixed;*/
 	padding-right: 20%;
 	letter-spacing: 2px;
 }
