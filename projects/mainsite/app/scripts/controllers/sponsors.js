@@ -46,6 +46,13 @@ angular.module('shaastra2016App')
     },
     {
       id: 3,
+      title: 'Print Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_350,fl_lossy,f_auto,q_80/v1452691455/sponsors/2016/Print-Partner/newindianexpress.png',
+        link1: 'http://www.newindianexpress.com'
+      }]
+    },    {
+      id: 4,
       title: 'Stay Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/v1452031701/sponsors/2016/Stay-Partner/stayzilla.jpg',
@@ -53,7 +60,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 4,
+      id: 5,
       title: 'Co Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027724/sponsors/2016/Co-Sponsor/samsung.png',
@@ -65,7 +72,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 5,
+      id: 6,
       title: 'Appathon-Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027706/sponsors/2016/Appathon-Partner/rapidbizzapps.png',
@@ -73,47 +80,35 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 5,
+      id: 7,
       title: 'Event Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_56,w_183,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/boeing.png',
         link1: 'http://www.boeing.com/'
       },
       {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/bosch.jpg',
-        link1: 'http://www.bosch.com/en/com/home/index.php'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/cognizant.jpg',
-        link1: 'http://www.cognizant.com/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/cypress.jpg',
-        link1: 'http://www.cypress.com/'
-      },
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452691844/sponsors/2016/Event-Sponsor/philips.png',
+        link1: 'http://www.philips.co.in'
+      },      
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_575,w_2000/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/mahindra.jpg',
         link1: 'http://www.mahindra.com/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_100,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/nptel.jpg',
-        link1: 'http://nptel.ac.in/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,h_50,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/praxair.jpg',
-        link1: 'http://www.praxair.com/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/entranceindia.png',
-        link1: 'http://www.entranceindia.com/'
       },
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/microsoft.png',
         link1: 'http://www.microsoft.com/en-in/'
       },
       {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/entranceindia.png',
+        link1: 'http://www.entranceindia.com/'
+      },
+      {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/rohm-semiconductor.png',
         link1: 'http://www.rohm.com/web/in/'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/cypress.jpg',
+        link1: 'http://www.cypress.com/'
       },
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_150,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/sap.png',
@@ -122,10 +117,18 @@ angular.module('shaastra2016App')
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/smartedu.jpg',
         link1: 'http://www.smartedu.co.in/'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/cognizant.jpg',
+        link1: 'http://www.cognizant.com/'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_100,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/nptel.jpg',
+        link1: 'http://nptel.ac.in/'
       }]
     },
     {
-      id: 6,
+      id: 7,
       title: 'Workshop Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452028011/sponsors/2016/Workshop-Sponsor/innovians-technologies.png',
@@ -141,7 +144,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 7,
+      id: 8,
       title: 'Amusement Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027445/sponsors/2016/Amusement-Sponsor/playerz.png',
@@ -149,7 +152,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 8,
+      id: 9,
       title: 'Digital Storage Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_35,w_85,fl_lossy,f_auto,q_80/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027746/sponsors/2016/Digital-Storage-Partner/wdlogo.png',
@@ -157,7 +160,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 9,
+      id: 10,
       title: 'Education Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027763/sponsors/2016/Education-Sponsor/educationau-incanada.png',
@@ -165,20 +168,28 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 10,
+      id: 11,
       title: 'Financial Awareness Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027802/sponsors/2016/Financial-Awareness-Partner/icici-cfl.png',
-        link1: 'http://content.icicidirect.com/newsiteContent/FinancialEducation/Classroomofprofit.asp'
+        link1: 'http://content.icicidirect.com/'
       }]
     },
     {
-      id: 10,
+      id: 11,
       title: 'Tech-Soc Case Study Sponsor',
       path: []
     },
     {
-      id: 11,
+      id: 12,
+      title: 'Web Hosting Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452692663/sponsors/2016/Web-Hosting-Partner/bluehost.png',
+        link1: 'http://in.bluehost.com'
+      }]
+    },
+    {
+      id: 13,
       title: 'Pledge-A-Book Website Design Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027942/sponsors/2016/Pledge-A-Book-Website-Design-Partner/niyati.png',
@@ -186,12 +197,23 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 12,
+      id: 14,
       title: 'Cloud Sponsor',
-      path: []
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_150,fl_lossy,f_auto,q_80/v1452692886/sponsors/2016/Cloud-Sponsor/ibm.jpg',
+        link1: 'http://www.ibm.com/'
+      }]
     },
     {
-      id: 13,
+      id: 15,
+      title: 'Pledge-A-Book Logistics Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452693271/sponsors/2016/Pledge-A-Book-Logistics-Partner/cargoji.png',
+        link1: 'http://www.cargoji.com'
+      }]
+    },    
+    {
+      id: 16,
       title: 'Digital App Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452027736/sponsors/2016/Digital-App-Sponsor/news-republic.png',
@@ -199,7 +221,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 14,
+      id: 17,
       title: 'Online Media Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/collegesearch.png',
@@ -222,9 +244,13 @@ angular.module('shaastra2016App')
         link1: 'http://www.knowafest.com/'
       },
       {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452693551/sponsors/2016/Online-Media-Partner/twenty19.png',
+        link1: 'http://twenty19.com'
+      },
+      {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/thecollegefever.png',
         link1: 'http://thecollegefever.com'
-      },
+      },      
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027913/sponsors/2016/Online-Media-Partner/springtide.jpg',
         link1: 'http://stories.springtide.in'
