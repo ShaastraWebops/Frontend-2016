@@ -120,7 +120,7 @@ angular.module('shaastra2016App')
         notifCounter = 0;
       }
     }
-    $interval(changeNotif, 5000);
+    $interval(changeNotif, 7000);
 
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
