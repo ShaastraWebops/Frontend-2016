@@ -63,6 +63,10 @@ angular.module('shaastra2016App')
       id: 5,
       title: 'Co Sponsor',
       path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452696401/sponsors/2016/Co-Sponsor/eaton.jpg',
+        link1: 'http://www.eaton.in'
+      },
+      {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027724/sponsors/2016/Co-Sponsor/samsung.png',
         link1: 'http://www.samsung.com'
       },
