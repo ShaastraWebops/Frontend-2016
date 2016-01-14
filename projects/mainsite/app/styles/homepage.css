@@ -25,62 +25,10 @@
 	transform: scale(0.6);
 }
 
-#blinkDiv{
+#print-partner {
 	position: absolute;
-	top: 80%;
-	left: 2%;
-	-webkit-animation: blinkAnim 2s infinite;
-	-webkit-animation-timing-function: linear;
-	-moz-animation: blinkAnim 2s infinite;
-	-moz-animation-timing-function: linear;
-	-o-animation: blinkAnim 2s infinite;
-	-o-animation-timing-function: linear;
-	animation: blinkAnim 2s infinite;
-	animation-timing-function: linear;
-}
-@-webkit-keyframes blinkAnim {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-@-moz-keyframes blinkAnim {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-@-o-keyframes blinkAnim {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-@keyframes blinkAnim {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
+	top: 70%;
+	left: 3%;
 }
 
 #home-scroll-down {
@@ -499,7 +447,7 @@
 .footer-no-padding {
 	padding: 0;
 }
-.footer-div{
+.footer-div {
 	background-color: #014864;
 	height: auto !important;
 	width: 100%;
@@ -547,9 +495,6 @@
 }
 
 @media screen and (max-width: 950px) {
-	#blinkDiv {
-		position: static;
-	}
   .home-top-nav-new {
   	padding-left: 7% 
 	}
@@ -571,6 +516,9 @@
 @media screen and (max-width: 650px) {
   .home-top-nav-new {
     display: none;
+  }
+  #print-partner {
+  	display: none;
   }
 	.hexagons-container {
 		margin-top: 10%;
