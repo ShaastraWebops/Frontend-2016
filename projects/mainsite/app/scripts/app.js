@@ -197,6 +197,11 @@ angular
         controllerAs: 'editProfile',
         authenticate: true
       })
+      .when('/accommodation-calculator', {
+        templateUrl: 'views/accommodation-calculator.html',
+        controller: 'accomCalcCtrl',
+        controllerAs: 'accomCalc'
+      })
       .otherwise({
         redirectTo: '/'
       });
