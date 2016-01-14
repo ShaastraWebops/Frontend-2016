@@ -171,7 +171,7 @@ angular.module('shaastra2016App')
       id: 11,
       title: 'Digital Storage Partner',
       path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_35,w_85,fl_lossy,f_auto,q_80/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027746/sponsors/2016/Digital-Storage-Partner/wdlogo.png',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/c_scale,w_200,fl_lossy,f_auto,q_80/v1452765834/sponsors/2016/Digital-Storage-Partner/wd.png',
         link1: 'http://support.wdc.com/index.aspx'
       }]
     },
