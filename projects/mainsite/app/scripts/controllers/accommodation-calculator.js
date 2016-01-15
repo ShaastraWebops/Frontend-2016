@@ -15,6 +15,7 @@ angular.module('shaastra2016App')
 		backButton.attr('link', '/');
 
     $scope.costPerDay = 300;
+    $scope.cautionDeposit = 1000;
     $scope.totalCost = 0;
     $scope.accomNumber = 0;
     $scope.members = [];
@@ -56,7 +57,7 @@ angular.module('shaastra2016App')
         $scope.totalCost = 0;
         var timeDiff = Math.abs($scope.secondDate[index] - $scope.firstDate[index]);   
         $scope.numDaysOfStay[index] = Math.ceil((timeDiff / (1000 * 3600 * 24)) + 1);
-        $scope.individualCost[index] = $scope.costPerDay * $scope.numDaysOfStay[index];
+        $scope.individualCost[index] = ($scope.costPerDay * $scope.numDaysOfStay[index]) + 1000;
         for(var i=0; i<n; i++) {
           $scope.totalCost = $scope.totalCost + $scope.individualCost[i];
         }
@@ -79,7 +80,7 @@ angular.module('shaastra2016App')
         $scope.totalCost = 0;
         var timeDiff = Math.abs($scope.secondDate[index] - $scope.firstDate[index]);   
         $scope.numDaysOfStay[index] = Math.ceil((timeDiff / (1000 * 3600 * 24)) + 1);
-        $scope.individualCost[index] = $scope.costPerDay * $scope.numDaysOfStay[index];
+        $scope.individualCost[index] = ($scope.costPerDay * $scope.numDaysOfStay[index]) + 1000;
         for(var i=0; i<n; i++) {
           $scope.totalCost = $scope.totalCost + $scope.individualCost[i];
         }
