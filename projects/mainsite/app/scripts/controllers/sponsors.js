@@ -296,10 +296,6 @@ angular.module('shaastra2016App')
         link1: 'http://www.knowafest.com/'
       },
       {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452693551/sponsors/2016/Online-Media-Partner/twenty19.png',
-        link1: 'http://twenty19.com'
-      },
-      {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/thecollegefever.png',
         link1: 'http://thecollegefever.com'
       },      
