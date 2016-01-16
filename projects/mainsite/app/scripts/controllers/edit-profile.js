@@ -20,6 +20,41 @@ angular.module('shaastra2016App')
       $scope.user = Auth.getCurrentUser();
     });
 
+    $scope.streams = [
+      'Aeronautical / Aerospace Engineering', 
+      'Chemical / Petroleum Engineering',
+      'Civil Engineering',
+      'Commerce',
+      'Computer Science Engineering',
+      'Electrical Engineering / Electronics & Telecommunication',
+      'Humanities',
+      'Information Technology / Information Science',
+      'Mechanical Engineering',
+      'Metallurgical Engineering',
+      'Pure Sciences',
+      'Others'
+    ];
+    $scope.states = [
+      'Andhra Pradesh',
+      'Delhi',
+      'Goa',
+      'Karnataka',
+      'Kerala',
+      'Madhya Pradesh',
+      'Maharashtra',
+      'Pondicherry',
+      'Tamil Nadu',
+      'Telangana',
+      'Other State',
+      'International'
+    ];
+    $scope.degrees = [
+      'Bachelors',
+      'Masters',
+      'PhD',
+      'None'
+    ];
+
     $scope.updateProfile = function(form) {
       $scope.submitted = true;
       $scope.message = 'Working...';
@@ -30,7 +65,11 @@ angular.module('shaastra2016App')
           secondName: $scope.user.secondName,
           email: $scope.user.email,
           phoneNumber: $scope.user.phoneNumber,
-          wantAccomodation: $scope.user.wantAccomodation 
+          city: $scope.user.city,
+          state: $scope.user.state,
+          stream: $scope.user.stream,
+          degree: $scope.user.degree,
+          wantAccomodation: $scope.user.wantAccomodation
         })
         .then( function (response) {
           if(response.$resolved && response.$promise.$$state.status) {
