@@ -131,9 +131,6 @@ angular.module('shaastra2016App')
       if($scope.form.$valid && ($scope.password === $scope.confirmPassword)) {
         $scope.userRegisterMessage = " -- Working...";
         $scope.disableRegister = true;
-        alert($scope.stream);
-        alert($scope.state);
-        alert($scope.degree);
         Auth.createUser({
           name: $scope.name,
           secondName: $scope.secondName,
