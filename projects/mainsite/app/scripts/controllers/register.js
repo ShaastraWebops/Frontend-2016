@@ -16,6 +16,41 @@ angular.module('shaastra2016App')
 
     $scope.addCollegeMessage = '';
 
+    $scope.streams = [
+      'Aeronautical / Aerospace Engineering', 
+      'Chemical / Petroleum Engineering',
+      'Civil Engineering',
+      'Commerce',
+      'Computer Science Engineering',
+      'Electrical Engineering / Electronics & Telecommunication',
+      'Humanities',
+      'Information Technology / Information Science',
+      'Mechanical Engineering',
+      'Metallurgical Engineering',
+      'Pure Sciences',
+      'Others'
+    ];
+    $scope.states = [
+      'Andhra Pradesh',
+      'Delhi',
+      'Goa',
+      'Karnataka',
+      'Kerala',
+      'Madhya Pradesh',
+      'Maharashtra',
+      'Pondicherry',
+      'Tamil Nadu',
+      'Telangana',
+      'Other State',
+      'International'
+    ];
+    $scope.degrees = [
+      'Bachelors',
+      'Masters',
+      'PhD',
+      'None'
+    ];
+
     var n = 0;
     $scope.name = "";
     $scope.secondName = "";
@@ -28,6 +63,9 @@ angular.module('shaastra2016App')
     $scope.college = {};
     $scope.city = "";
     $scope.collegeSelected = '';
+    $scope.state = '';
+    $scope.degree = '';
+    $scope.stream = '';
     $scope.collegeSuggestions = [];
     $scope.existingCollege = 1;
     $scope.schoolStudent = false;
@@ -91,7 +129,7 @@ angular.module('shaastra2016App')
     $scope.registerUser = function(){
       $scope.submitted = true;
       if($scope.form.$valid && ($scope.password === $scope.confirmPassword)) {
-      $scope.userRegisterMessage = " -- Working...";
+        $scope.userRegisterMessage = " -- Working...";
         $scope.disableRegister = true;
         Auth.createUser({
           name: $scope.name,
@@ -101,6 +139,9 @@ angular.module('shaastra2016App')
           phoneNumber: $scope.phoneNumber,
           age: $scope.age,
           city: $scope.city,
+          state: $scope.state,
+          stream: $scope.stream,
+          degree: $scope.degree,
           gender: $scope.gender,
           wantAccomodation: $scope.wantAccomodation,
           college: $scope.collegeSelected,
