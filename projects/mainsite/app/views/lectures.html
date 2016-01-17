@@ -34,11 +34,11 @@
 			  		 <img class="img-responsive speaker-img" src="images/speakers/Bali.png">
 			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Bali-overlay.png"></span>
 			  		</div>
-			  		<div><span class="speaker-img-span2" ng-click="displayModal(2)">
+			  		<div><span class="speaker-img-span6" ng-click="displayModal(2)">
 			  		 <img class="img-responsive speaker-img" src="images/speakers/Ranjini.png">
 			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Ranjini-overlay.png"></span>
 			  		</div>
-			  		<div><span class="speaker-img-span3" ng-click="displayModal(3)">
+			  		<div><span class="speaker-img-span5" ng-click="displayModal(3)">
 			  		 <img class="img-responsive speaker-img" src="images/speakers/Bapna.png">
 			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Bapna-overlay.png"></span>
 			  		</div>
@@ -46,11 +46,11 @@
 			  		 <img class="img-responsive speaker-img" src="images/speakers/Thomas.png">
 			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Thomas-overlay.png"></span>
 			  		</div>
-			  		<div><span class="speaker-img-span5" ng-click="displayModal(5)">
+			  		<div><span class="speaker-img-span2" ng-click="displayModal(5)">
 			  		 <img class="img-responsive speaker-img" src="images/speakers/Lulla.png">
 			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Lulla-overlay.png"></span>
 			  		</div>
-			  		<div><span class="speaker-img-span6" ng-click="displayModal(6)">
+			  		<div><span class="speaker-img-span3" ng-click="displayModal(6)">
 			  		 <img class="img-responsive speaker-img" src="images/speakers/Udayakumar.png">
 			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Udayakumar-overlay.png"></span>
 			  		</div>
@@ -63,14 +63,16 @@
 		<script type="text/ng-template" id="myModalContentLectures.html">
 			<div class="modal-header">
 				<button type="button" class="close" ng-click="close()">&times;</button>
-				<h1 class="modal-title wrapper" ng-bind="speaker.name"></h1> 
+				<h1 class="modal-title wrapper" ng-bind="speaker.name"></h1>
+				<h3 class="modal-title wrapper speaker-designation-feather"><strong><span ng-bind="speaker.designation"></span></strong></h3>
 			</div>
 			<div class="modal-body">
 				<ul class="contact-modal-contents row">
 					<li>
 						<ul class="ul-inside-contact col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
 							<li>
-								<h3 class="speaker-designation-feather"><strong><span ng-bind="speaker.designation"></span></strong></h3>
+								<h3><strong><span ng-bind="speaker.title"></span></strong></h3>
+								<hr>
 							</li>
 							<li>
 								<h4>
