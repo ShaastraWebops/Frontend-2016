@@ -50,7 +50,7 @@ angular.module('shaastra2016App')
     {
       id: 4,
       name: "Dr. Thomas Colacot",
-      bio: "",
+      bio: "Thomas John Colacot is an internationally well respected Scientist, who is currently a Global R & D Manager/Technical Fellow at Johnson Matthey, an international chemical company which was the first one to introduce catalytic convertors in automobiles to prevent environmental pollution and also came up with the well popular and unconventional platinum containing anti-cancer drug, called cisplatin. Dr. Colacot’s work in catalysis was internationally recognized by receiving numerous awards. In 2012 he received RSC’s Applied Catalysis Award by the Royal Society of Chemistry “for exceptional contributions to the development and availability of ligands and catalysts crucial for the advancement of metal-catalysed synthetic organic chemistry.” To our knowledge Thomas is the third Indian and first malayali to receive a RSC award. The Bharataratna award winner Prof. C.N.R. Rao and Bhadma Vibhusan Award Winner Prof. G. Mehta are the earlier RSC award winners. In 2015 he received the prestigious ACS Industry Chemistry Award.",
       dateTime: "26th Jan, 11:00am-12:30pm",
       venue: "Central Lecture Theatre (CLT)",
       designation: "R & D Manager Homogenous Catalysis (Global) at Johnson Matthey"
