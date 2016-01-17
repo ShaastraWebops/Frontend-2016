@@ -11,6 +11,12 @@
 	</div>
    <div id="aboutUs" class="container-fluid font-myraid">
   	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 aboutUsContent">
+  		<div class="row">
+	        <div ng-repeat="sponsor in hospiSponsor" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 col-xs-12">
+	          <center><h1 class="spons-title"><b><u>{{ sponsor.title }}</u></b></h1></center>
+	          <a target="_blank" href="{{sponsor.link1}}"><img ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
+	        </div>
+      	</div>
 	    <div class="row hospi-content">
 	    	<h3>Thanks for reaching out to Shaastra! We sincerely believe that a comfortable stay is instrumental in you gaining the most out of what Shaastra has to offer - be it the scintillating shows, amazing events or an incredible lecture series. Hence we extend our full cooperation in helping you book accommodation during an extended  tenure ( 23<sup>rd</sup> January 2016 to 26<sup>th</sup> January 2016 )</h3>
 	    	<h3>Please contact the Student Relations team through the following numbers for further details or queries - </h3>

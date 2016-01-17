@@ -5,21 +5,103 @@
 <update-meta property="og:image" content="http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_200,w_250,fl_lossy,f_auto,q_80/v1452365698/shaastra-2016/homepage/shaastra-top-hex.png"></update-meta>
 <update-meta property="og:image:secure_url" content="https://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_200,w_250,fl_lossy,f_auto,q_80/v1452365698/shaastra-2016/homepage/shaastra-top-hex.png"></update-meta>
 
-<div class="aboutUs-heading-top">
-  <div class="container-fluid makeCenter">
-		<div class="row aboutUsHeading"><b>Shaastra Lecture Series</b></div>
-	</div>
-   <div id="aboutUs" class="container-fluid font-myraid">
-  
-	  <article>
-	  	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 aboutUsContent">
-		    <div style="text-align: center;" class="row">
-	      	<h1>Stay tuned for Updates!</h1>
-		    </div>   
+<div class="event-category">
+	<div ng-controller="lecturesCtrl" scroll ng-clock>
+
+	  <div class="container-fluid category">
+	  	<div class="row">
+	    	<div class="category-wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		  		<img class="img-responsive category-image" id="event-category-image" src="images/misc/lecture-series.jpg">
+			  	<div id="scroll-down" ng-click="scrollDown('event-category-name')">
+				  	<span class="glyphicon glyphicon-chevron-down" id="scroll-glyphicon"></span>
+			  	</div>
+				</div>
 	  	</div>
-	  </article>  
-  </div>
-  
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+	  		<div id="event-category-name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<span>Lecture Series</span>
+	   	  </div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+	  	<div class="row">
+	    	<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 events-box">
+			  		<img class="img-responsive category-image" id="event-category-image" src="images/misc/SLS-layout.jpg">
+			  		<div><span class="speaker-img-span1" ng-click="displayModal(1)">
+			  		 <img class="img-responsive speaker-img" src="images/speakers/Bali.png">
+			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Bali-overlay.png"></span>
+			  		</div>
+			  		<div><span class="speaker-img-span6" ng-click="displayModal(2)">
+			  		 <img class="img-responsive speaker-img" src="images/speakers/Ranjini.png">
+			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Ranjini-overlay.png"></span>
+			  		</div>
+			  		<div><span class="speaker-img-span5" ng-click="displayModal(3)">
+			  		 <img class="img-responsive speaker-img" src="images/speakers/Bapna.png">
+			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Bapna-overlay.png"></span>
+			  		</div>
+			  		<div><span class="speaker-img-span4" ng-click="displayModal(4)">
+			  		 <img class="img-responsive speaker-img" src="images/speakers/Thomas.png">
+			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Thomas-overlay.png"></span>
+			  		</div>
+			  		<div><span class="speaker-img-span2" ng-click="displayModal(5)">
+			  		 <img class="img-responsive speaker-img" src="images/speakers/Lulla.png">
+			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Lulla-overlay.png"></span>
+			  		</div>
+			  		<div><span class="speaker-img-span3" ng-click="displayModal(6)">
+			  		 <img class="img-responsive speaker-img" src="images/speakers/Udayakumar.png">
+			  		 <img class="img-responsive speaker-overlay" src="images/speakers/Udayakumar-overlay.png"></span>
+			  		</div>
+					</div>
+		  	</div>
+		</div>
+	</div>
+
+	<div>
+		<script type="text/ng-template" id="myModalContentLectures.html">
+			<div class="modal-header">
+				<button type="button" class="close" ng-click="close()">&times;</button>
+				<h1 class="modal-title wrapper" ng-bind="speaker.name"></h1>
+				<h3 class="modal-title wrapper speaker-designation-feather"><strong><span ng-bind="speaker.designation"></span></strong></h3>
+			</div>
+			<div class="modal-body">
+				<ul class="contact-modal-contents row">
+					<li>
+						<ul class="ul-inside-contact col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 wrapper">
+							<li>
+								<h3><strong><span ng-bind="speaker.title"></span></strong></h3>
+								<hr>
+							</li>
+							<li>
+								<h4>
+									<span><strong>Date and Time : </strong></span>
+									<span ng-bind="speaker.dateTime"></span>
+								</h4>
+							</li>
+							<li>
+								<h4>
+									<span><strong>Venue : </strong></span>
+									<span ng-bind="speaker.venue"></span>
+								</h4>
+							</li>
+							<li>
+								<h4>
+									<span><strong>Bio : </strong></span>
+									<span ng-bind="speaker.bio"></span>
+								</h4>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="close" ng-click="close()">Close</button>
+			</div>
+		</script>
+	</div>
+
 </div>
 
 <div ng-include="'views/sticky-footer.html'"></div>

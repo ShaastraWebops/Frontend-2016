@@ -1,0 +1,64 @@
+.speaker-designation-feather {
+  font-family: 'Feather';
+  /*font-size: 1.5em;*/
+  letter-spacing: 1px;
+}
+
+.speaker-img-span1 {
+	position: absolute;
+	/*left: 115px;*/
+	/*top: 330px;*/
+	left: 7%;
+	top: 37%;
+	width: 23%;
+	height: 18%;
+}
+.speaker-img-span2 {
+	position: absolute;
+	left: 22%;
+	top: 10%;
+	width: 23%;
+	height: 18%;
+}
+.speaker-img-span3 {
+	position: absolute;
+	left: 54%;
+	top: 10%;
+	width: 23%;
+	height: 18%;
+}
+.speaker-img-span4 {
+	position: absolute;
+	left: 70%;
+	top: 37%;
+	width: 23%;
+	height: 18%;
+}
+.speaker-img-span5 {
+	position: absolute;
+	left: 54%;
+	top: 64%;
+	width: 23%;
+	height: 18%;
+}
+.speaker-img-span6 {
+	position: absolute;
+	left: 22%;
+	top: 64%;
+	width: 23%;
+	height: 18%;
+}
+.speaker-img {
+   width: 100%;
+   opacity: 1;
+}
+.speaker-overlay {
+   cursor: pointer;
+   position: absolute;
+   top: 0%;
+   width: 100%;
+   opacity: 0;
+}
+span:hover .speaker-overlay {
+  opacity: 1;
+}
