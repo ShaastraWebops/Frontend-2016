@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('shaastra2016App')
-  .controller('lecturesCtrl', function ($scope) {
+  .controller('lecturesCtrl', function ($scope, $location, $anchorScroll) {
 
     $scope.pageClass = 'page-lectures';
 
@@ -15,4 +15,11 @@ angular.module('shaastra2016App')
     });
 
     $scope.message = "hello";
+
+    $scope.scrollDown = function (element) {
+      var temp = $location.hash();
+      $location.hash(element);
+      $anchorScroll();
+      $location.hash(temp);
+    };
   });

@@ -1,0 +1,165 @@
+.speaker-img-div1 {
+	position: absolute;
+	/*left: 115px;*/
+	/*top: 330px;*/
+	left: 10%;
+	top: 29%;
+	/*width: 220px;*/
+	/*height: 200px;*/
+	width: 21%;
+	height: 100%;
+}
+.speaker-img-div2 {
+	position: absolute;
+	left: 40%;
+	top: 68%;
+}
+.speaker-img-div3 {
+	position: absolute;
+	left: 58%;
+	top: 10%;
+}
+.speaker-img-div4 {
+	position: absolute;
+	left: 27%;
+	top: 7%;
+}
+.speaker-img-div5 {
+	position: absolute;
+	left: 14%;
+	top: 58%;
+}
+.speaker-img-div6 {
+	position: absolute;
+	left: 68%;
+	top: 60%;
+}
+.speaker-img-div7 {
+	position: absolute;
+	left: 75%;
+	top: 32%;
+}
+/*.speaker-img1 {
+   height: 190px;
+   width: 23%;
+}*/
+.speaker-img1 {
+   cursor: pointer;
+   width: 100%;
+   opacity: 1;
+}
+.speaker-img-ov1 {
+	cursor: pointer;
+	position: absolute;
+	top: 0%;
+   width: 100%;
+   opacity: 0;
+}
+/*.speaker-img1 {*/
+/*	cursor: pointer;
+   width: 23%;
+   opacity: 1;*/
+/*}*/
+/*.speaker-img-ov1 {*/
+	/*cursor: pointer;
+	position: absolute;
+	top: 0%;
+   width: 23%;
+   opacity: 0;*/
+/*}*/
+/*div.img-list div:hover img.speaker-img1 {
+  opacity: 0;
+}*/
+span:hover .speaker-img-ov1 {
+  opacity: 1;
+}
+.speaker-img2 {
+   width: 35%;
+}
+.speaker-img3 {
+   width: 48%;
+}
+.speaker-img4 {
+   width: 28%;
+}
+.speaker-img5 {
+   width: 22%;
+}
+.speaker-img6 {
+   width: 64%;
+}
+.speaker-img7 {
+   width: 79%;
+}
+
+div.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 199px;
+  position: absolute;
+  /*left: 5%;*/
+  top: 0%;
+  /*width: 12%;*/
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.span-text1 {
+  left: 5%;
+  top: 74%;
+  width: 12%;
+}
+.span-text2 {
+  left: 7%;
+  top: 75%;
+  width: 22%;
+}
+.span-text3 {
+  left: 9%;
+  top: 74%;
+  width: 29%;
+}
+.span-text4 {
+  left: 7%;
+  top: 75%;
+  width: 15%;
+}
+.span-text5 {
+  left: 4%;
+  top: 73%;
+  width: 13%;
+}
+.span-text6 {
+  left: 12%;
+  top: 75%;
+  width: 38%;
+}
+.span-text7 {
+  left: 16%;
+  top: 74%;
+  width: 48%;
+}
+
+.hexagon {
+	width: 223px;
+	-webkit-clip-path: polygon(
+    25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%
+  );
+}
+
+div.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+div.img-list div:hover div.text-content {
+  opacity: 1;
+}
