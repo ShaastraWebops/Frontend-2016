@@ -5,8 +5,8 @@ angular.module('shaastra2016App')
 
     $scope.pageClass = 'page-sponsors';
 
-		var backButton = $('#back-button');
-		backButton.attr('link', '/');
+    var backButton = $('#back-button');
+    backButton.attr('link', '/');
 
     var html = angular.element(document.getElementById('body'));
     html.css({
@@ -339,7 +339,80 @@ angular.module('shaastra2016App')
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452792025/sponsors/2016/Online-Photography-Sponsor/indianinstituteofphotography.jpg',
         link1: 'http://www.indianinstituteofphotography.com'
       }]
-    }];
+    },
+    {
+      id: 27,
+      title:'Anti Virus Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_143,fl_lossy,f_auto,q_80/v1453139126/sponsors/2016/Anti%20Virus%20Sponsor/http___www.indiaantivirus.com.jpg',
+        link1: 'http://www.indiaantivirus.com'
+      }]
+    },
+    {
+      id: 28,
+      title:'Startup Ecosystem Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_147,fl_lossy,f_auto,q_80/v1453139700/sponsors/2016/Startup%20Ecosystem%20Partner/www.businessworld.in.png.jpg',
+        link1: 'http://www.businessworld.in'
+      }]
+    },
+    {
+      id: 29,
+      title:'Event App Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_139,fl_lossy,f_auto,q_80/v1453140030/sponsors/2016/Event-App-Sponsor/www.nearify.com.png.png',
+        link1: 'http://www.nearify.com'
+      }]
+    },
+    {
+      id: 30,
+      title:'Baverage Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_172,fl_lossy,f_auto,q_80/v1453140310/sponsors/2016/Beverage-Partner/www.bisleri.com_.jpg',
+        link1: 'http://www.bisleri.com'
+      }]
+    },
+    {
+      id: 31,
+      title:'Stationery Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_80,fl_lossy,f_auto,q_80/v1453144879/sponsors/2016/Anti%20Virus%20Sponsor/https___mycopie.com_.png',
+        link1: 'https://mycopie.com'
+      }]
+    },
+    {
+      id: 32,
+      title:'Prize Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_50,fl_lossy,f_auto,q_80/v1453141233/sponsors/2016/Prize-Sponsor/http___www.pikeducation.com_.jpg',
+        link1: 'http://www.pikeducation.com'
+      }]
+    },
+    {
+      id: 33,
+      title:'Immerse Magazine Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142030/sponsors/2016/Immerse-Magazine-Partner/www.ge.com.jpg',
+        link1: 'http://www.ge.com'
+      }]
+    },
+    {
+      id: 34,
+      title:'Ride Sharing Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142588/sponsors/2016/Ride-Sharing-Sponsor/http___www.merrytrips.in_.png',
+        link1: 'http://www.merrytrips.in'
+      }]
+    },
+    {
+      id: 35,
+      title:'Offline Media Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142438/sponsors/2016/Offline-Media-Sponsor/http___ns7.tv_ta.png',
+        link1: 'http://ns7.tv'
+      }]
+    }
+    ];
 
     $scope.sponsors2015 = [{
       id: 0,
