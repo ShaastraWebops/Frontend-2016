@@ -1,3 +1,6 @@
+.speaker-modal-window .modal-body {
+	width: 100%;
+}
 .speaker-modal-window .modal-dialog {
 	width: 75%;
 }
