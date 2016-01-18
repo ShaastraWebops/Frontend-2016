@@ -51,11 +51,12 @@ angular.module('shaastra2016App')
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_350,fl_lossy,f_auto,q_80/v1452691455/sponsors/2016/Print-Partner/newindianexpress.png',
         link1: 'http://www.newindianexpress.com'
       }]
-    },    {
+    },
+    {
       id: 4,
       title: 'Stay Partner',
       path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/v1452031701/sponsors/2016/Stay-Partner/stayzilla.jpg',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452031701/sponsors/2016/Stay-Partner/stayzilla.jpg',
         link1: 'http://stayzilla.com/'
       }]
     },
@@ -411,8 +412,7 @@ angular.module('shaastra2016App')
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142438/sponsors/2016/Offline-Media-Sponsor/http___ns7.tv_ta.png',
         link1: 'http://ns7.tv'
       }]
-    }
-    ];
+    }];
 
     $scope.sponsors2015 = [{
       id: 0,
