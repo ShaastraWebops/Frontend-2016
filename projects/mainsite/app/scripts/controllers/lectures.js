@@ -84,6 +84,7 @@ angular.module('shaastra2016App')
       var modalInstance = $modal.open({
         templateUrl: 'myModalContentLectures.html',
           controller: 'ModalInstanceCtrlLectures',
+          windowClass: 'speaker-modal-window',
           resolve: {
             speaker: function () {
               return speaker;
