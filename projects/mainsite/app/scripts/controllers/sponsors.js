@@ -73,6 +73,10 @@ angular.module('shaastra2016App')
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027725/sponsors/2016/Co-Sponsor/vm-ware.png',
         link1: 'http://www.vmware.com'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1453093180/sponsors/2016/Event-Sponsor/salesforce.png',
+        link1: 'http://www.salesforce.com/in/'
       }]
     },
     {
@@ -81,6 +85,14 @@ angular.module('shaastra2016App')
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452784347/sponsors/2016/Innovation-Partner/tcs.jpg',
         link1: 'http://www.tcs.com/research/Pages/default.aspx'
+      }]
+    },
+    {
+      id: 6,
+      title: 'Cloud Computing Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1453093180/sponsors/2016/Event-Sponsor/salesforce.png',
+        link1: 'http://www.salesforce.com/in/'
       }]
     },
     {
@@ -117,6 +129,10 @@ angular.module('shaastra2016App')
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/microsoft.png',
         link1: 'http://www.microsoft.com/en-in/'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1453093180/sponsors/2016/Event-Sponsor/salesforce.png',
+        link1: 'http://www.salesforce.com/in/'
       },
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/entranceindia.png',

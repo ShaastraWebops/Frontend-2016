@@ -66,7 +66,8 @@ angular.module('shaastra2016App')
       bio: "Dr. Kamlesh Lulla’s distinguished career at NASA spans 27 years where he has served as a chief scientist for earth observation for space shuttle and international space station programs and directed training of NASA astronauts in earth observation sciences and earth science payloads. His research involved optical and radar remote sensing, advanced sensor development and image and data processing technologies. He holds two PhD degrees and has served in academia as a tenured university professor and directory of multi-disciplinary research centers for space remote sensing and earth sciences for over 15 years before joining NASA. Dr. Lulla received one of the highest NASA honours, The NASA Exceptional Achievement Medal in 2005. He has received numerous other awards from NASA, the US Government and various universities including the American Institute of Aeronautics and Astronautics (AIAA) and the Asia Pacific American Heritage Associations, Ellison Onizuka Award for his scientific and technical excellence at NASA.",
       dateTime: "24th Jan, 11:00am-12:30pm",
       venue: "Central Lecture Theatre (CLT)",
-      designation: "Chief scientist for astronaut training for Space Shuttle flights for NASA; Director University Research, Collaborations and Partnership Office"
+      designation: "Chief scientist for astronaut training for Space Shuttle flights for NASA",
+      designation2: "Director University Research, Collaborations and Partnership Office"
     },
     {
       id: 6,
@@ -80,10 +81,10 @@ angular.module('shaastra2016App')
 
     $scope.displayModal = function (index) {
       var speaker = speakers[index-1];
-      console.log("Clicked");
       var modalInstance = $modal.open({
         templateUrl: 'myModalContentLectures.html',
           controller: 'ModalInstanceCtrlLectures',
+          windowClass: 'speaker-modal-window',
           resolve: {
             speaker: function () {
               return speaker;
