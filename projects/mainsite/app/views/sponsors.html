@@ -65,7 +65,7 @@
 
       <div ng-if="category.path.length >= 4">
         <h1 class="spons-title"><b><u>{{ category.title }}</u></b></h1>
-        <div ng-repeat="sponsor in category.path" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div ng-repeat="sponsor in category.path" class="row">
           <a target="_blank" href="{{sponsor.link1}}"><img ng-src="{{sponsor.image1}}" alt="{{sponsor.image1}}"></a>
         </div>
       </div>
