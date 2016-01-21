@@ -119,21 +119,14 @@ angular.module('shaastra2016App')
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/microsoft.png',
         link1: 'http://www.microsoft.com/en-in/'
       },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1453093180/sponsors/2016/Event-Sponsor/salesforce.png',
-        link1: 'http://www.salesforce.com/in/'
-      },
+      
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/entranceindia.png',
         link1: 'http://www.entranceindia.com/'
       },
       {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/rohm-semiconductor.png',
-        link1: 'http://www.rohm.com/web/in/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/cypress.jpg',
-        link1: 'http://www.cypress.com/'
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_150,fl_lossy,f_auto,q_80/v1453093180/sponsors/2016/Event-Sponsor/salesforce.png',
+        link1: 'http://www.salesforce.com/in/'
       },
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_150,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/sap.png',
@@ -154,7 +147,15 @@ angular.module('shaastra2016App')
       {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027775/sponsors/2016/Event-Sponsor/praxair.jpg',
         link1: 'http://www.praxair.com/'
-      }]
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/rohm-semiconductor.png',
+        link1: 'http://www.rohm.com/web/in/'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/cypress.jpg',
+        link1: 'http://www.cypress.com/'
+      },]
     },
     {
       id: 6,
@@ -293,15 +294,23 @@ angular.module('shaastra2016App')
         link1: 'http://www.collegesearch.in/colleges/Indian_Institute_of_Technology_(IIT)_Madras'
       },
       {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/dare2compete.png',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_110,fl_lossy,f_auto,q_80/v1453371221/sponsors/2016/Online-Media-Partner/http___fests.info.png',
+        link1: 'http://fests.info'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_110,fl_lossy,f_auto,q_80/v1453371601/sponsors/2016/Online-Media-Partner/http___www.pagalguy.com.png',
+        link1: 'http://www.pagalguy.com'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453371488/sponsors/2016/Online-Media-Partner/electronicsforu.com.jpg',
+        link1: 'http://www.electronicsforu.com'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_110,fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/dare2compete.png',
         link1: 'http://www.dare2compete.com'
       },
       {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/festpav.png',
-        link1: 'http://www.festpav.com/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/fuccha.png',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_110,fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/fuccha.png',
         link1: 'http://www.fuccha.in'
       },
       {
@@ -313,9 +322,21 @@ angular.module('shaastra2016App')
         link1: 'http://thecollegefever.com'
       },      
       {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1453371598/sponsors/2016/Online-Media-Partner/https___www.hook2events.com.jpg',
+        link1: 'http://www.hook2events.com'
+      },
+      {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027913/sponsors/2016/Online-Media-Partner/springtide.jpg',
         link1: 'http://stories.springtide.in'
-      }]      
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/festpav.png',
+        link1: 'http://www.festpav.com/'
+      },
+      {
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1453371593/sponsors/2016/Online-Media-Partner/https___www.buzzintown.com.png',
+        link1: 'http://www.buzzintown.com'
+      },]      
     },
     {
       id: 25,
