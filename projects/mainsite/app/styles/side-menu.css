@@ -270,6 +270,10 @@ ul li a i {
   color: #dd4b39;
 }
 
+.fa-android {
+  color: #689f38;
+}
+
 ul li a:hover i {
   color: #ffffff;
 }
@@ -289,6 +293,10 @@ ul li #you:hover {
   background: #dd4b39;
 } 
 
+ul li #android-fontawesome:hover {
+  background: #689f38;
+} 
+
 /*social icons menu closed*/
 .out .fa-facebook {
   color: #ffffff;
@@ -306,6 +314,10 @@ ul li #you:hover {
  color: #ffffff;
 }
 
+.out .fa-android {
+ color: #ffffff;
+}
+
 .out li #fb {
   background: #3b5998;
 }
@@ -317,6 +329,9 @@ ul li #you:hover {
 } 
 .out li #you {
   background: #dd4b39;
+}
+.out li #android-fontawesome {
+  background: #689f38;
 }
 
 .fa-caret-right {

@@ -84,6 +84,11 @@ angular.module('shaastra2016App')
     toastr.info("", "Shaastra-2016 is from 23rd January to 26th January 2016");
     var homepageNotifs = [
       {
+        title: "Shaastra Android app is <a target='_blank' href='https://play.google.com/store/apps/details?id=com.shaastra.release'>here</a>. Get it now!",
+        desc: "",
+        type: "success"
+      },      
+      {
         title: "Click <a target='_blank' href='https://docs.google.com/forms/d/1bh8dRjWMao0vLZa_R2wtlH4kmurJU8SToOizxwf3LQQ/viewform'>here</a> to share your feedback regarding the Shaastra-2016 website",
         desc: "",
         type: "success"

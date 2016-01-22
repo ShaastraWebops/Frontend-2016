@@ -1,3 +1,20 @@
+.schedule {
+	font-family: 'Proxima';
+	text-align: center;
+	position: absolute;
+  left: 80%;
+  top: 40%;	
+  color: #fff;
+  background-color: #173E43;
+  padding: 15px;
+}
+.schedule a {
+	color: #fff;
+}
+.schedule a:hover {
+	text-decoration: none;
+	color: #e1e1e1;
+}
 /* Changing default plugin value! Beware!!*/
 .toast-top-right {
 	top: 15%;
