@@ -94,6 +94,11 @@ angular.module('shaastra2016App')
         type: "success"
       },
       {
+        title: "Shaastra Junior Quiz has been shifted to BSB 202",
+        desc: "",
+        type: "info"
+      },
+      {
         title: "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
         desc: "",
         type: "error"
