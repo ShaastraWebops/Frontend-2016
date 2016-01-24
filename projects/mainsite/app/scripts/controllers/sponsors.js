@@ -429,6 +429,14 @@ angular.module('shaastra2016App')
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142438/sponsors/2016/Offline-Media-Sponsor/http___ns7.tv_ta.png',
         link1: 'http://ns7.tv'
       }]
+    },
+    {
+      id: 36,
+      title:'Catering Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453620260/sponsors/2016/Catering-Partner/Tharun_s_cafe.jpg',
+        link1: ''
+      }]
     }];
 
     $scope.sponsors2015 = [{
