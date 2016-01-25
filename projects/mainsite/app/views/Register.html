@@ -205,7 +205,7 @@
 		        <select class="form-control" required name="college" ng-model="collegeSelected">
 		          <option value="" selected disabled>Choose College/School/Work</option>
 		          <option ng-repeat="college in college_list" value="{{ college._id }}">{{ college.collegeName }}</option>
-		        </select>
+		        </select>(Choose -none of these- if name is not there in the list)
 						<span class="help-block" ng-show="form.college.$error.required && submitted">
 		      		College/School/Work is required
 		    		</span>
