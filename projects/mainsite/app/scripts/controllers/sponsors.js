@@ -203,10 +203,6 @@ angular.module('shaastra2016App')
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452027763/sponsors/2016/Education-Sponsor/educationau-incanada.png',
         link1: 'http://www.educationau-incanada.ca/'
-      },
-      {
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1452784955/sponsors/2016/Education-Sponsor/campusfrance.jpg',
-        link1: 'http://www.campusfrance.org/en'
       }]
     },
     {
@@ -392,7 +388,7 @@ angular.module('shaastra2016App')
     },
     {
       id: 31,
-      title:'Baverage Partner',
+      title:'Beverage Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_172,fl_lossy,f_auto,q_80/v1453140310/sponsors/2016/Beverage-Partner/www.bisleri.com_.jpg',
         link1: 'http://www.bisleri.com'
@@ -424,22 +420,6 @@ angular.module('shaastra2016App')
     },
     {
       id: 35,
-      title:'Ride Sharing Sponsor',
-      path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142588/sponsors/2016/Ride-Sharing-Sponsor/http___www.merrytrips.in_.png',
-        link1: 'http://www.merrytrips.in'
-      }]
-    },
-    {
-      id: 36,
-      title:'Offline Media Sponsor',
-      path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142438/sponsors/2016/Offline-Media-Sponsor/http___ns7.tv_ta.png',
-        link1: 'http://ns7.tv'
-      }]
-    },
-    {
-      id: 37,
       title:'Catering Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453620260/sponsors/2016/Catering-Partner/Tharun_s_cafe.jpg',
