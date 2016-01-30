@@ -420,6 +420,22 @@ angular.module('shaastra2016App')
     },
     {
       id: 35,
+      title:'Student Discount Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1454178251/sponsors/2016/Student-Discount-Partner/save_pocket_money.com.png',
+        link1: 'http://www.savepocketmoney.com/'
+      }]
+    },
+    {
+      id: 36,
+      title:'Youth Magazine Partner',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1454178803/sponsors/2016/Youth-Magazine-Partner/Youth_incorporated_magazine.png',
+        link1: 'http://youthincmag.com/'
+      }]
+    },
+    {
+      id: 37,
       title:'Catering Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453620260/sponsors/2016/Catering-Partner/Tharun_s_cafe.jpg',
