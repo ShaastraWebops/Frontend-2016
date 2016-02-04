@@ -104,10 +104,6 @@ angular.module('shaastra2016App')
       id: 9,
       title: 'Event Sponsor',
       path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_crop,h_56,w_183,fl_lossy,f_auto,q_80/v1452027776/sponsors/2016/Event-Sponsor/boeing.png',
-        link1: 'http://www.boeing.com/'
-      },
-      {
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452691844/sponsors/2016/Event-Sponsor/philips.png',
         link1: 'http://www.philips.co.in'
       },      

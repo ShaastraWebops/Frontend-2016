@@ -14,6 +14,18 @@
 	  <article>
 	  	<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 samparkContent">
 				<div v-html="input | marked" ng-bind-html="sampark.info"></div>
+				<div ng-if="sampark.id === 10" class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows samparkVideo">
+                        <iframe width="100%" height="500" frameborder="0" 
+                          src="http://www.youtube.com/embed/E7_Bv7zkTOM">
+                        </iframe>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
+                        <iframe width="100%" height="500" frameborder="0" 
+                          src="http://www.youtube.com/embed/tm9WpAMyE_U">
+                        </iframe>
+                      </div>
+                </div>
 				<div ng-if="sampark.image" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shows">
 					<img src="{{sampark.image}}" class="img-responsive">
 				</div>

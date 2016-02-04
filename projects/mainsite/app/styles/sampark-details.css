@@ -11,6 +11,10 @@
 	margin-top: 0%;
 }
 
+.samparkVideo {
+	padding-bottom: 25px;
+}
+
 .samparkContent {
 	background-color: rgba(255, 255, 255, 0.6);
 	min-height: 350px;

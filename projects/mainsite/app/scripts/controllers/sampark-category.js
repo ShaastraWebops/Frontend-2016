@@ -65,9 +65,16 @@ angular.module('shaastra2016App')
       'eventDate': "" 
     },
     { 
-      'id': 7,
+      'id': 9,
       'completed': true,
       'name': 'Chennai', 
+      'status': 'Completed',
+      'eventDate': "" 
+    },
+    { 
+      'id': 10,
+      'completed': true,
+      'name': 'Media Islands', 
       'status': 'Completed',
       'eventDate': "" 
     }];

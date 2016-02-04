@@ -67,6 +67,11 @@ angular.module('shaastra2016App')
       'id': 9,
       'name': 'Chennai', 
       'info': "<h3><b>Data mining workshop</b></h3><p>On 25th September, students from all over Chennai city gathered at MNM Jain Engineering College to become data miners, as part of the data mining workshop conducted by Shaastra.</p><h3><b>Wireless motion controller Workshop</b></h3><p>As part of Sampark, Shaastra conducted a wireless motion controller workshop at SRM University on 25th September. It was attended by budding engineers from all over chennai and proved to be a fun filled educational event.</p>" 
+    },
+    { 
+      'id': 10,
+      'name': 'Media Islands', 
+      'info': ''
     }];
 
     $scope.sampark = allSamparks[$routeParams.index];
