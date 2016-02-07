@@ -89,7 +89,7 @@ angular.module('shaastra2016App')
         type: "info"
       },
       {
-        title: "Shaastra 2016 has been a grand success. Thank you for beign a part of it",
+        title: "Shaastra 2016 has been a grand success. Thank you for being a part of it",
         desc: "",
         type: "success"
       },
