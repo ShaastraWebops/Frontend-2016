@@ -288,6 +288,14 @@ angular.module('shaastra2016App')
     },
     {
       id: 25,
+      title: 'Coding Sponsor',
+      path: [{
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_300,fl_lossy,f_auto,q_80/v1455001808/sponsors/2016/Coding-Sponsor/codechef.png',
+        link1: 'https://www.codechef.com/'
+      }]
+    },
+    {
+      id: 26,
       title: 'Online Media Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/fl_lossy,f_auto,q_80/v1452027818/sponsors/2016/Online-Media-Partner/collegesearch.png',
@@ -339,7 +347,7 @@ angular.module('shaastra2016App')
       },]      
     },
     {
-      id: 26,
+      id: 27,
       title: 'Electronic Merchandise Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_250,fl_lossy,f_auto,q_80/v1452786535/sponsors/2016/Electronic-Merchandise-Partner/skullcandy.jpg',
@@ -347,7 +355,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 27,
+      id: 28,
       title: 'Online Photography Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1452712018/sponsors/2016/Online-Photography-Sponsor/pixelscapes.png',
@@ -359,7 +367,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 28,
+      id: 29,
       title:'Anti Virus Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_143,fl_lossy,f_auto,q_80/v1453139126/sponsors/2016/Anti%20Virus%20Sponsor/http___www.indiaantivirus.com.jpg',
@@ -367,7 +375,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 29,
+      id: 30,
       title:'Startup Ecosystem Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_147,fl_lossy,f_auto,q_80/v1453139700/sponsors/2016/Startup%20Ecosystem%20Partner/www.businessworld.in.png.jpg',
@@ -375,7 +383,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 30,
+      id: 31,
       title:'Event App Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_139,fl_lossy,f_auto,q_80/v1453140030/sponsors/2016/Event-App-Sponsor/www.nearify.com.png.png',
@@ -383,7 +391,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 31,
+      id: 32,
       title:'Beverage Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_172,fl_lossy,f_auto,q_80/v1453140310/sponsors/2016/Beverage-Partner/www.bisleri.com_.jpg',
@@ -391,7 +399,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 32,
+      id: 33,
       title:'Stationery Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_80,fl_lossy,f_auto,q_80/v1453144879/sponsors/2016/Anti%20Virus%20Sponsor/https___mycopie.com_.png',
@@ -399,7 +407,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 33,
+      id: 34,
       title:'Prize Sponsor',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_50,fl_lossy,f_auto,q_80/v1453141233/sponsors/2016/Prize-Sponsor/http___www.pikeducation.com_.jpg',
@@ -407,7 +415,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 34,
+      id: 35,
       title:'Immerse Magazine Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453142030/sponsors/2016/Immerse-Magazine-Partner/www.ge.com.jpg',
@@ -415,7 +423,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 35,
+      id: 36,
       title:'Student Discount Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1454178251/sponsors/2016/Student-Discount-Partner/save_pocket_money.com.png',
@@ -423,7 +431,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 36,
+      id: 37,
       title:'Youth Magazine Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_200,fl_lossy,f_auto,q_80/v1454178803/sponsors/2016/Youth-Magazine-Partner/Youth_incorporated_magazine.png',
@@ -431,7 +439,7 @@ angular.module('shaastra2016App')
       }]
     },
     {
-      id: 37,
+      id: 38,
       title:'Catering Partner',
       path: [{
         image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_150,fl_lossy,f_auto,q_80/v1453620260/sponsors/2016/Catering-Partner/Tharun_s_cafe.jpg',
