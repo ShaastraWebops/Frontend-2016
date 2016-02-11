@@ -81,54 +81,54 @@ angular.module('shaastra2016App')
     startCountdown();
 
     // default notif
-    toastr.info("", "Shaastra-2016 is from 23rd January to 26th January 2016");
-    var homepageNotifs = [
-      {
-        title: "Media Island Schedule is <a target='_blank' href='https://docs.google.com/spreadsheets/d/1doZoVhE_l0z7ipZs7YB2QMO7BWUushDEM7CZ5wlKKe0/edit?usp=sharing'>here</a>",
-        desc: "",
-        type: "info"
-      },
-      {
-        title: "Shaastra 2016 has been a grand success. Thank you for being a part of it",
-        desc: "",
-        type: "success"
-      },
-      {
-        title: "Shaastra Android app is <a target='_blank' href='https://play.google.com/store/apps/details?id=com.shaastra.release'>here</a>. Get it now!",
-        desc: "",
-        type: "success"
-      },      
-      {
-        title: "Click <a target='_blank' href='https://docs.google.com/forms/d/1bh8dRjWMao0vLZa_R2wtlH4kmurJU8SToOizxwf3LQQ/viewform'>here</a> to share your feedback regarding the Shaastra-2016 website",
-        desc: "",
-        type: "success"
-      },
-      {
-        title: "Shaastra Junior Quiz has been shifted to BSB 202",
-        desc: "",
-        type: "info"
-      },
-      {
-        title: "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
-        desc: "",
-        type: "error"
-      },
-      {
-        title: "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
-        desc: "",
-        type: 'warning'
-      },
-      {
-        title: "Registrations have been opened!!!",
-        desc: "<a target='_blank' href='/#/register'>Click here to register</a>",
-        type: "success"
-      },
-      {
-        title: "Shaastra-2016 is from 23rd January to 26th January 2016",
-        desc: "",
-        type: "info"
-      }
-    ];
+    // toastr.info("", "Shaastra-2016 is from 23rd January to 26th January 2016");
+    // var homepageNotifs = [
+    //   {
+    //     title: "Media Island Schedule is <a target='_blank' href='https://docs.google.com/spreadsheets/d/1doZoVhE_l0z7ipZs7YB2QMO7BWUushDEM7CZ5wlKKe0/edit?usp=sharing'>here</a>",
+    //     desc: "",
+    //     type: "info"
+    //   },
+    //   {
+    //     title: "Shaastra 2016 has been a grand success. Thank you for being a part of it",
+    //     desc: "",
+    //     type: "success"
+    //   },
+    //   {
+    //     title: "Shaastra Android app is <a target='_blank' href='https://play.google.com/store/apps/details?id=com.shaastra.release'>here</a>. Get it now!",
+    //     desc: "",
+    //     type: "success"
+    //   },      
+    //   {
+    //     title: "Click <a target='_blank' href='https://docs.google.com/forms/d/1bh8dRjWMao0vLZa_R2wtlH4kmurJU8SToOizxwf3LQQ/viewform'>here</a> to share your feedback regarding the Shaastra-2016 website",
+    //     desc: "",
+    //     type: "success"
+    //   },
+    //   {
+    //     title: "Shaastra Junior Quiz has been shifted to BSB 202",
+    //     desc: "",
+    //     type: "info"
+    //   },
+    //   {
+    //     title: "Click <a target='_blank' href='/#/shows-and-exhibitions'>here</a> to register for Exhibitions",
+    //     desc: "",
+    //     type: "error"
+    //   },
+    //   {
+    //     title: "Checkout <a target='_blank' href='/#/shaastra-fellowship'>Shaastra Fellowship</a>",
+    //     desc: "",
+    //     type: 'warning'
+    //   },
+    //   {
+    //     title: "Registrations have been opened!!!",
+    //     desc: "<a target='_blank' href='/#/register'>Click here to register</a>",
+    //     type: "success"
+    //   },
+    //   {
+    //     title: "Shaastra-2016 is from 23rd January to 26th January 2016",
+    //     desc: "",
+    //     type: "info"
+    //   }
+    // ];
 
     var notifCounter = 0;
     var numNotifs = homepageNotifs.length;

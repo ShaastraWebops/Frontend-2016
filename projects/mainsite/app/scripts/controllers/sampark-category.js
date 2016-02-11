@@ -74,7 +74,7 @@ angular.module('shaastra2016App')
     { 
       'id': 10,
       'completed': true,
-      'name': 'Media Islands', 
+      'name': 'Media Island', 
       'status': 'Completed',
       'eventDate': "" 
     }];

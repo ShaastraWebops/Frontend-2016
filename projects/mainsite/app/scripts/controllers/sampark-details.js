@@ -70,7 +70,7 @@ angular.module('shaastra2016App')
     },
     { 
       'id': 10,
-      'name': 'Media Islands', 
+      'name': 'Media Island', 
       'info': "<p><b>Media Island Schedule is <a target='_blank' href='https://docs.google.com/spreadsheets/d/1doZoVhE_l0z7ipZs7YB2QMO7BWUushDEM7CZ5wlKKe0/edit?usp=sharing'>here</a></b></p>"
     }];
 
