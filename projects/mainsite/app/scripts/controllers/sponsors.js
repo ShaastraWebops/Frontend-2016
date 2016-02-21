@@ -378,7 +378,7 @@ angular.module('shaastra2016App')
       id: 30,
       title:'Startup Ecosystem Partner',
       path: [{
-        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,h_147,fl_lossy,f_auto,q_80/v1453139700/sponsors/2016/Startup%20Ecosystem%20Partner/www.businessworld.in.png.jpg',
+        image1: 'http://res.cloudinary.com/shaastra-org/image/upload/c_scale,w_380,fl_lossy,f_auto,q_80/v1456056602/sponsors/2016/Startup%20Ecosystem%20Partner/businessworld.jpg',
         link1: 'http://www.businessworld.in'
       }]
     },
