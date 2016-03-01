@@ -28,7 +28,7 @@
     <div id="top-nav-summit" ng-click="gotoLink('/maker-summit')" class="nav-item-new"><a href="/#/maker-summit">MAKER SUMMIT</a></div>
     <div id="top-nav-social" ng-click="gotoLink('/social')" class="nav-item-new"><a href="/#/social">PLEDGE-A-BOOK</a></div>
       
-    <div class="nav-item">
+    <!-- <div class="nav-item">
       <div ng-hide="isLoggedIn()" class="nav-item-new"><a id="login" ng-href="#/login" class="ai">Login/Register</a><span class="glyphicon glyphicon-user user-icon"></span></div>
       <div ng-show="isLoggedIn()" class="nav-item-new dropdown"><a class="ai dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello {{ getCurrentUser().name }} <span class="glyphicon glyphicon-user user-icon"></span></a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -36,7 +36,7 @@
           <li><a id="userSelect" ng-click="logout()"><span>Logout</span></a></li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -45,9 +45,9 @@
   <ul class="mn-list">
     <span id="menuscroll">
       <li><a href="#/">Home</a></li>
-      <li ng-hide="isLoggedIn()"><a href="#/login">Log In/Register</a></li>
-      <li ng-show="isLoggedIn()"><a href="#/dashboard">Dashboard</a></li>
-      <li id="side-nav-logout" ng-show="isLoggedIn()"><a ng-click="logout()">Logout</a></li>
+      <!-- <li ng-hide="isLoggedIn()"><a href="#/login">Log In/Register</a></li> -->
+      <!-- <li ng-show="isLoggedIn()"><a href="#/dashboard">Dashboard</a></li> -->
+      <!-- <li id="side-nav-logout" ng-show="isLoggedIn()"><a ng-click="logout()">Logout</a></li> -->
       <li><a href="#/samparks">Pre-Shaastra</a></li>
       <li class="down"><a class="d" href="#/event-list">Events</a></li>
       <li class="down"><a class="d" href="#/workshop-category/561567aac8d15f6e1252ebee">Workshops</a></li>

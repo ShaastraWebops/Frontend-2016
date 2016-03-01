@@ -75,11 +75,11 @@ angular
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
-      .when('/register', {
-        templateUrl: 'views/Register.html',
-        controller: 'registerCtrl',
-        controllerAs: 'register'
-      })      
+      // .when('/register', {
+      //   templateUrl: 'views/Register.html',
+      //   controller: 'registerCtrl',
+      //   controllerAs: 'register'
+      // })      
       .when('/event-list', {
         templateUrl: 'views/event-list.html',
         controller: 'eventListCtrl',
@@ -110,11 +110,11 @@ angular
         controller: 'WorkshopsCtrl',
         controllerAs: 'workshops'
       })
-      .when('/login', {
-        templateUrl: 'views/Login.html',
-        controller: 'loginCtrl',
-        controllerAs: 'login'
-      })
+      // .when('/login', {
+      //   templateUrl: 'views/Login.html',
+      //   controller: 'loginCtrl',
+      //   controllerAs: 'login'
+      // })
       .when('/contact-us', {
         templateUrl: 'views/contact-us.html',
         controller: 'contactUsCtrl',
