@@ -130,17 +130,17 @@ angular.module('shaastra2016App')
     //   }
     // ];
 
-    var notifCounter = 0;
-    var numNotifs = homepageNotifs.length;
+    // var notifCounter = 0;
+    // var numNotifs = homepageNotifs.length;
 
-    function changeNotif() {
-      toastr[homepageNotifs[notifCounter].type](homepageNotifs[notifCounter].desc, homepageNotifs[notifCounter].title);
-      notifCounter += 1;
-      if(notifCounter === numNotifs) {
-        notifCounter = 0;
-      }
-    }
-    $interval(changeNotif, 7000);
+    // function changeNotif() {
+    //   toastr[homepageNotifs[notifCounter].type](homepageNotifs[notifCounter].desc, homepageNotifs[notifCounter].title);
+    //   notifCounter += 1;
+    //   if(notifCounter === numNotifs) {
+    //     notifCounter = 0;
+    //   }
+    // }
+    // $interval(changeNotif, 7000);
 
     // var svgMargin = document.documentElement.clientWidth*0.36;
     // $('.polygon-each-img-wrap').css({'margin-left': svgMargin});
